@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./19-Dictionaries.html">Previous: 19-Dictionaries</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./21-More%20Functions.html">Next: 21-More Functions</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="functions">20 - Functions</h1>
+<p>We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent thereof:</p>
+<ul>
+<li>The ability to format text and print it to the command line</li>
+<li>Assignment of variables and storage in volatile memory</li>
+<li>Receiving user input</li>
+<li>Reading and writing files in persistent memory</li>
+<li>Performing mathematical operations on numbers</li>
+<li>Conditionals (i.e. if, else statements) and logical evaluation</li>
+<li>Both for-loops and while-loops</li>
+<li>The ability to define and manipulate list-like structures (i.e. array or linked structures)</li>
+<li>Functions</li>
+</ul>
+<p>It is this last feature that we have not yet sufficiently explored. This next exercise will introduce what is perhaps the most powerful of the features we have explored so far.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># function_intro.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># define a global variable</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>number_of_sandwiches <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="co"># &#39;def&#39; defines a function</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="kw">def</span> count_sandwiches():</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="ch">\n</span><span class="ss">There are </span><span class="sc">{</span>number_of_sandwiches<span class="sc">}</span><span class="ss"> sandchwiches.&quot;</span>) </span>
+<span id="cb1-9"><a href="#cb1-9"></a></span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="kw">def</span> make_a_sandwich():</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="kw">global</span> number_of_sandwiches</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    number_of_sandwiches <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">A sandwich has been made.&quot;</span>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="bu">print</span>(<span class="ss">f&quot;There are now </span><span class="sc">{</span>number_of_sandwiches<span class="sc">}</span><span class="ss"> sandwiches.&quot;</span>)</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="kw">def</span> eat_a_sandwich():</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="kw">global</span> number_of_sandwiches</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    number_of_sandwiches <span class="op">-=</span> <span class="dv">1</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">You ate a sandwich.&quot;</span>)</span>
+<span id="cb1-22"><a href="#cb1-22"></a>    <span class="bu">print</span>(<span class="ss">f&quot;There are now </span><span class="sc">{</span>number_of_sandwiches<span class="sc">}</span><span class="ss"> sandwiches.&quot;</span>)</span>
+<span id="cb1-23"><a href="#cb1-23"></a></span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="kw">def</span> main():</span>
+<span id="cb1-26"><a href="#cb1-26"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="co">    This is the main function of the program.</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="co">    It will be the main entry point for all</span></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="co">    the functions.</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a>    prompt <span class="op">=</span> <span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="st">Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="st">&quot;count&quot; your sandchwiches or &quot;quit&quot;?</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="st">--&gt; &quot;&quot;&quot;</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a>    running <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-36"><a href="#cb1-36"></a></span>
+<span id="cb1-37"><a href="#cb1-37"></a>    <span class="cf">while</span> running:</span>
+<span id="cb1-38"><a href="#cb1-38"></a>        choice <span class="op">=</span> <span class="bu">input</span>(prompt)</span>
+<span id="cb1-39"><a href="#cb1-39"></a></span>
+<span id="cb1-40"><a href="#cb1-40"></a>        <span class="cf">if</span> <span class="st">&quot;count&quot;</span> <span class="kw">in</span> choice:</span>
+<span id="cb1-41"><a href="#cb1-41"></a>            count_sandwiches()</span>
+<span id="cb1-42"><a href="#cb1-42"></a>            </span>
+<span id="cb1-43"><a href="#cb1-43"></a>        <span class="cf">elif</span> <span class="st">&quot;make&quot;</span> <span class="kw">in</span> choice:</span>
+<span id="cb1-44"><a href="#cb1-44"></a>            make_a_sandwich()</span>
+<span id="cb1-45"><a href="#cb1-45"></a></span>
+<span id="cb1-46"><a href="#cb1-46"></a>        <span class="cf">elif</span> <span class="st">&quot;eat&quot;</span> <span class="kw">in</span> choice:</span>
+<span id="cb1-47"><a href="#cb1-47"></a>            <span class="cf">if</span> number_of_sandwiches <span class="op">&gt;</span> <span class="dv">0</span>:</span>
+<span id="cb1-48"><a href="#cb1-48"></a>                eat_a_sandwich()</span>
+<span id="cb1-49"><a href="#cb1-49"></a>            <span class="cf">else</span>:</span>
+<span id="cb1-50"><a href="#cb1-50"></a>                <span class="bu">print</span>(<span class="st">&quot;There are no sandwiches to eat!&quot;</span>)</span>
+<span id="cb1-51"><a href="#cb1-51"></a></span>
+<span id="cb1-52"><a href="#cb1-52"></a>        <span class="cf">elif</span> <span class="st">&quot;quit&quot;</span> <span class="kw">in</span> choice:</span>
+<span id="cb1-53"><a href="#cb1-53"></a>            running <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a></span>
+<span id="cb1-55"><a href="#cb1-55"></a>        <span class="cf">else</span>:</span>
+<span id="cb1-56"><a href="#cb1-56"></a>            <span class="bu">print</span>(<span class="st">&quot;That isn&#39;t an option.&quot;</span>)</span>
+<span id="cb1-57"><a href="#cb1-57"></a></span>
+<span id="cb1-58"><a href="#cb1-58"></a>main()</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python3 function_intro.py
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; make
+
+A sandwich has been made.
+There are now 1 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; count
+
+There are 1 sandchwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; make
+
+A sandwich has been made.
+There are now 2 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; eat
+
+You ate a sandwich.
+There are now 1 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; eat
+
+You ate a sandwich.
+There are now 0 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; eat
+There are no sandwiches to eat!
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; quit
+$ </code></pre>
+<h3 id="functions-1">Functions</h3>
+<p>Upon finishing this lesson, you should have made your first functions!</p>
+<p>There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a single call to the function. We will explore the basic aspects in this and the next lessons.</p>
+<p>Functions follow the following syntax:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">def</span> function_name(argument1, argument2 ...):</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="op">&lt;</span>statements ...<span class="op">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="op">&lt;</span>statements ...<span class="op">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a>    <span class="op">&lt;</span>statements ...<span class="op">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="co"># code continues unindented</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co"># call the function using</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a>function_name(argument1, argument2)</span>
+<span id="cb3-10"><a href="#cb3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="co"># or if there are no arguments</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a>function_name()</span></code></pre></div>
+<p>We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by <code>&lt;statements ...&gt;</code>). The first example of this was in the <code>count_sandwiches()</code> function. As you saw while executing the script, it simply gets the value of <code>number_of_sandwiches</code> and prints the corresponding text.</p>
+<h3 id="scope">Scope</h3>
+<p>In the second and third functions, <code>make_a_sandwich()</code> and <code>eat_a_sandwich()</code>, you see the statement <code>global number_of_sandwiches</code>. The word <code>global</code> is a keyword in Python that we have not talked about yet and relates to how Python manages variables and memory.</p>
+<p>Up to this, point we have used only global variables. That is, we have had variables that were visible to every part of the program. Consider the following code:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>egg <span class="op">=</span> <span class="st">&quot;Brown&quot;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="kw">def</span> change_color():</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    egg <span class="op">=</span> <span class="st">&quot;White&quot;</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a>change_color()</span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="bu">print</span>(<span class="ss">f&quot;The egg is </span><span class="sc">{</span>egg<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p>Based on this code, which will print?</p>
+<ul>
+<li><code>The egg is White</code></li>
+<li><code>The egg is Brown</code></li>
+</ul>
+<p>If you try this out yourself, you will find that <code>The egg is Brown</code> is printed even though we changed the color of <code>egg</code> with <code>change_color()</code>. This is because of the scope of the <code>egg</code> variable. From Python's point of view, the <code>egg</code> defined on line 1 and the <code>egg</code> defined on line 4 inside the <code>change_color()</code> function are two different variables. The <code>egg</code> defined in the function only works inside the function and ceases to exist once the function ends.</p>
+<p>If we want the <code>egg</code> on line 1 and the <code>egg</code> inside the function to be the same variable we need to tell Python to do that. We do this with the <code>global</code> key word as follows:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>egg <span class="op">=</span> <span class="st">&quot;Brown&quot;</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="kw">def</span> change_color():</span>
+<span id="cb5-4"><a href="#cb5-4"></a>    <span class="kw">global</span> egg</span>
+<span id="cb5-5"><a href="#cb5-5"></a>    egg <span class="op">=</span> <span class="st">&quot;White&quot;</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a></span>
+<span id="cb5-7"><a href="#cb5-7"></a>change_color()</span>
+<span id="cb5-8"><a href="#cb5-8"></a><span class="bu">print</span>(<span class="ss">f&quot;The egg is </span><span class="sc">{</span>egg<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p>The line <code>global egg</code> tells Python to treat the <code>egg</code> variable in the function as the same <code>egg</code> variable defined in the global scope. There are many possible scopes that could exist in a Python program but for now the function scope and the global scope are the most important.</p>
+<p>A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.</p>
+<p>In the case of <code>function_intro.py</code>, you may have noticed that we did not have to use <code>global</code> in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with <code>count_sandwiches()</code>), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in <code>function_intro.py</code> you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Make a function that calculates the <a href="https://en.wikipedia.org/wiki/Factorial">factorial of a number</a> (use a for-loop in your function) using a global variable from the user as your input.</li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./19-Dictionaries.html">Previous: 19-Dictionaries</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./21-More%20Functions.html">Next: 21-More Functions</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

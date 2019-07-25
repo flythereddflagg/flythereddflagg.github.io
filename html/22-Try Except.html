@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./21-More%20Functions.html">Previous: 21-More Functions</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./23-Imports.html">Next: 23-Imports</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="try-except">22 - Try Except</h1>
+<p>Surely you have noticed by now that errors can be common as you program. Well they are more than common. They are practically inevitable. In this lesson we will explore how you can "try" some code without letting it break your program.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># try_except.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>month_names <span class="op">=</span> [</span>
+<span id="cb1-4"><a href="#cb1-4"></a>    <span class="st">&quot;January&quot;</span>,</span>
+<span id="cb1-5"><a href="#cb1-5"></a>    <span class="st">&quot;February&quot;</span>,</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="st">&quot;March&quot;</span>,</span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="st">&quot;April&quot;</span>,</span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="st">&quot;May&quot;</span>,</span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="st">&quot;June&quot;</span>,</span>
+<span id="cb1-10"><a href="#cb1-10"></a>    <span class="st">&quot;July&quot;</span>,</span>
+<span id="cb1-11"><a href="#cb1-11"></a>    <span class="st">&quot;August&quot;</span>,</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="st">&quot;September&quot;</span>,</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="st">&quot;October&quot;</span>,</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="st">&quot;November&quot;</span>,</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="st">&quot;December&quot;</span>]</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a>running <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="cf">while</span> running:</span>
+<span id="cb1-20"><a href="#cb1-20"></a>    date_string <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter a date of the format: MM/DD/YYYY</span><span class="ch">\n</span><span class="st">--&gt; &quot;</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    </span>
+<span id="cb1-22"><a href="#cb1-22"></a>    <span class="cf">try</span>:</span>
+<span id="cb1-23"><a href="#cb1-23"></a>        month, day, year <span class="op">=</span> date_string.split(<span class="st">&quot;/&quot;</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a>        month, day, year <span class="op">=</span> <span class="bu">int</span>(month), <span class="bu">int</span>(day), <span class="bu">int</span>(year)</span>
+<span id="cb1-25"><a href="#cb1-25"></a>        </span>
+<span id="cb1-26"><a href="#cb1-26"></a>        <span class="cf">if</span> day <span class="op">&lt;</span> <span class="dv">1</span> <span class="kw">or</span> day <span class="op">&gt;</span> <span class="dv">31</span>:</span>
+<span id="cb1-27"><a href="#cb1-27"></a>            <span class="cf">raise</span> <span class="pp">Exception</span>(<span class="st">&quot;Invalid day value.&quot;</span>)</span>
+<span id="cb1-28"><a href="#cb1-28"></a>        </span>
+<span id="cb1-29"><a href="#cb1-29"></a>        era <span class="op">=</span> <span class="st">&quot;B.C.&quot;</span> <span class="cf">if</span> year <span class="op">&lt;</span> <span class="dv">0</span> <span class="cf">else</span> <span class="st">&quot;A.D.&quot;</span></span>
+<span id="cb1-30"><a href="#cb1-30"></a>        year <span class="op">=</span> <span class="bu">abs</span>(year)</span>
+<span id="cb1-31"><a href="#cb1-31"></a>        </span>
+<span id="cb1-32"><a href="#cb1-32"></a>        <span class="bu">print</span>(<span class="ss">f&quot;The date you entered was </span><span class="sc">{</span>month_names[month <span class="op">-</span> <span class="dv">1</span>]<span class="sc">}</span><span class="ss">&quot;</span>\</span>
+<span id="cb1-33"><a href="#cb1-33"></a>              <span class="st">&quot; </span><span class="sc">{day}</span><span class="st"> in the year </span><span class="sc">{year}</span><span class="st"> </span><span class="sc">{era}</span><span class="st">&quot;</span>)</span>
+<span id="cb1-34"><a href="#cb1-34"></a>        running <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a>    </span>
+<span id="cb1-36"><a href="#cb1-36"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb1-37"><a href="#cb1-37"></a>        <span class="bu">print</span>(<span class="st">&quot;Invalid Date detected!&quot;</span>)</span>
+<span id="cb1-38"><a href="#cb1-38"></a>        <span class="bu">print</span>(e)</span>
+<span id="cb1-39"><a href="#cb1-39"></a>        </span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python try_except.py
+Enter a date of the format: MM/DD/YYYY
+--&gt; 100/10/1230
+Invalid Date detected!
+list index out of range
+Enter a date of the format: MM/DD/YYYY
+--&gt; 12/200/-30
+Invalid Date detected!
+Invalid day value.
+Enter a date of the format: MM/DD/YYYY
+--&gt; 12/10/-100
+The date you entered was December 10 in the year 100 B.C.
+$</code></pre>
+<h3 id="the-try-except-statement">The <code>try-except</code> Statement</h3>
+<p>Most of the time time in programming, you, the programmer, cannot guarantee that an error will not occur or an exception will not be thrown. You could try to prevent every problem with a series of if statements but that becomes cumbersome and is difficult to cover every eventuality.</p>
+<p>Python deals with this problem with <code>try-except</code> statements. A <code>try</code> statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the <code>try</code> block stops and the <code>except</code> block is executed. If no exceptions are "raised" the the except block is skipped. In <code>try_except.py</code>, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">try</span>:</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    <span class="co"># Block of code you expect may</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a>    <span class="co"># raise an exception</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="cf">except</span>:</span>
+<span id="cb3-5"><a href="#cb3-5"></a>    <span class="co"># this block runs if an exception is raised</span></span></code></pre></div>
+<p>You will notice that we added a part to the except line that reads <code>except Exception as e:</code>. This allows us to capture data about the Exception that was thrown but the <code>Exception</code> covers all exceptions that can be thrown in Python. If you wish to catch a particular exception or multiple types of exceptions you may do so with multiple <code>except</code> blocks as follows:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="cf">try</span>:</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="co"># Block of code you expect may</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>    <span class="co"># raise an exception</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="cf">except</span> <span class="pp">ZeroDivisionError</span>:</span>
+<span id="cb4-5"><a href="#cb4-5"></a>    <span class="co"># this block runs if the </span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>    <span class="co"># try block tries to divide by 0</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="cf">except</span> <span class="pp">TypeError</span>:</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    <span class="co"># this block runs if </span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>    <span class="co"># a type error is raised</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a><span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb4-11"><a href="#cb4-11"></a>    <span class="co"># this block runs for all other exceptions</span></span></code></pre></div>
+<p>Any exception in Python can be handled this way. When writing these statements one should always order them from specific errors to more general errors. This is because Python will execute the first valid <code>except</code> block it comes to. Therefore if you begin your list of except blocks with <code>except Exception:</code> no other <code>except</code> block will ever run.</p>
+<p>These statements allow for writing more secure code that can handle any amount of garbage that is fed to it. Use these judiciously as overuse can clutter your code and silence bugs and issues in your programs.</p>
+<h3 id="raising-exceptions">Raising Exceptions</h3>
+<p>We saw in <code>try_except.py</code> that we can force an exception to be raised with the <code>raise</code> statement. This is a powerful tool as it allows us to throw exceptions with customized messages. These can be very useful in debugging especially if we are careful about where we raise errors and what message we send. In our case we just wanted to send a general error to the user so a general <code>Exception</code> worked just fine here.</p>
+<h3 id="line-continuation">Line Continuation</h3>
+<p>You may have noticed the snippet of code from <code>try_except.py</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">print</span>(<span class="ss">f&quot;The date you entered was </span><span class="sc">{</span>month_names[month <span class="op">-</span> <span class="dv">1</span>]<span class="sc">}</span><span class="ss">&quot;</span>\</span>
+<span id="cb5-2"><a href="#cb5-2"></a>              <span class="ss">f&quot; </span><span class="sc">{</span>day<span class="sc">}</span><span class="ss"> in the year </span><span class="sc">{</span>year<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>era<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<p>The backslash <code>\</code> at the end of the line is called a "line continuation character" and allows us to split long lines of code into multiple lines that are interpreted as one line of code. These are useful when you are trying to limit the length of your lines for ease of reading.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Change the code to catch specific exceptions such as a <code>TypeError</code> and others. Try to do multiple <code>except</code> statements. How does this improve your code's usability?</li>
+<li>Change the code to <code>raise</code> some errors when a date is invalid. Does your message help the user understand what went wrong?</li>
+<li>Experiment with the security of this script. Try to break it or make it produce invalid dates. You may notice some dates that can be written are invalid. Rewrite this script so that it cannot produce an invalid date according to the <a href="https://en.wikipedia.org/wiki/Gregorian_calendar">Gregorian Calendar</a>. (Go as detailed as you like, but at least account for basic leap years and months having different lengths.)</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>What is a <a href="https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions">User-Defined Exception</a> and why would you want to use one?</li>
+<li>What is the <a href="https://docs.python.org/3/tutorial/errors.html#defining-clean-up-actions"><code>finally</code></a> statement for and why would you need it?</li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./21-More%20Functions.html">Previous: 21-More Functions</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./23-Imports.html">Next: 23-Imports</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

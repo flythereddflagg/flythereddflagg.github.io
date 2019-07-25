@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./06-Strings%20and%20the%20Print%20Function.html">Previous: 06-Strings and the Print Function</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./08-Formatted%20Strings.html">Next: 08-Formatted Strings</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="escape-characters">7 - Escape Characters</h1>
+<p>You may ask "What do I do if I need a string to have a mixture of double and single quotes?" For example:</p>
+<pre><code>John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;</code></pre>
+<p>This is where escape characters come in handy. An escape character is a text character that can be represented by a backslash followed by a character or series of characters (e.g. <code>\t</code>, <code>\n</code>, <code>\u03b7</code>). Escape characters make possible the mixing of single and double quotes (among many other things) as you will see in this next exercise.</p>
+<p>Now go back to your text editor and write the following code (again, do NOT copy-paste it). Notice the use of escape characters and try to figure out what each one does.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># esc_chars.py</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="co"># here is an example of the use of escape characters</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># Both of lines do the same thing</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="co"># Why might you prefer one over the other?</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="bu">print</span>(<span class="st">&quot;John&#39;s character says, </span><span class="ch">\&quot;</span><span class="st">I&#39;d like to buy some cheese.</span><span class="ch">\&quot;</span><span class="st">&quot;</span>)</span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="bu">print</span>(<span class="st">&#39;John</span><span class="ch">\&#39;</span><span class="st">s character says, &quot;I</span><span class="ch">\&#39;</span><span class="st">d like to buy some cheese.&quot;&#39;</span>)</span>
+<span id="cb2-8"><a href="#cb2-8"></a></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="co"># here are some more escape character examples</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="co"># notice what all the other escape characters do</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">There once was an old man from Peru&quot;</span>)</span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="bu">print</span>(<span class="st">&quot;who dreamed he was eating his shoe.&quot;</span>)</span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">He woke up in fright,&quot;</span>)</span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">in the middle of the night,&quot;</span>)</span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="bu">print</span>(<span class="st">&quot;and found it was perfectly true!</span><span class="ch">\n\n</span><span class="st">&quot;</span>)</span>
+<span id="cb2-16"><a href="#cb2-16"></a></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="co"># here are a few more new characters and examples</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\t\t</span><span class="st">I have tabbed over here!&quot;</span>)</span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="bu">print</span>(<span class="st">&quot;I am about to do a carriage return!</span><span class="ch">\r</span><span class="st">I did it!--&quot;</span>)</span>
+<span id="cb2-21"><a href="#cb2-21"></a></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="bu">print</span>(<span class="st">&quot;How do you print a backslash? </span><span class="ch">\\</span><span class="st"> like that!&quot;</span>)</span>
+<span id="cb2-23"><a href="#cb2-23"></a></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">I just made a new line! Now I will do another!</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="bu">print</span>(<span class="st">&quot;Here is a greek eta character: </span><span class="ch">\u03b7</span><span class="st">&quot;</span>)</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python esc_chars.py
+John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
+John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
+
+There once was an old man from Peru
+who dreamed he was eating his shoe.
+    He woke up in fright,
+    in the middle of the night,
+and found it was perfectly true!
+
+
+        I have tabbed over here!
+I did it!--to do a carriage return!
+How do you print a backslash? \ like that!
+
+I just made a new line! Now I will do another!
+
+Here is a funny character: η</code></pre>
+<p>If on any of these exercises you do not see the output appear <em>exactly</em> as you saw it in the book, go back and fix it until it does.</p>
+<p><strong>What is happening here?</strong></p>
+<p>Let's examine all the escape characters introduced in this exercise:</p>
+<ul>
+<li><code>\"</code> and <code>\"</code>: These are quote escapes and tell python to treat them as part of the text of the string rather than the beginning or ending of a string. Hence, both times you wrote the mixed quote sentence you could enclose the text with either <code>"</code> or <code>'</code> and print the same string depending on which escapes you used.</li>
+<li><code>\n</code>: This is a newline character and printing it makes a newline on which you can continue to write text. The print statement automatically adds this character to the end of every string. In some languages like C you must explicitly put in this character yourself.</li>
+<li><code>\t</code>: This is the tab character and printing it inserts 4 or 8 spaces depending on the system you are using.</li>
+<li><code>\r</code>: This is the carriage return character and it returns the print cursor to the beginning of the line. Notice how the first part of the printed line is now overwritten with the "I did it!" part.</li>
+<li><code>\\</code>: This is the backslash character and tells python to treat this character as a single backslash. As you can see, the only thing that came out of the print statement was a backslash"</li>
+<li><code>\u03b7</code>: This is called a "Unicode escape character". It follows the format <code>\uhhhh</code> where <code>hhhh</code> references the 4-character hexadecimal code that corresponds to what was printed (in this case, <span class="math inline">\(\eta\)</span>). Using that 4-character hexadecimal code you can express over 65000 characters. If you want to know a character's code simply search on the internet for "Unicode <em>CHARACTER NAME</em>". (e.g. "Unicode eta" for $ \eta $)</li>
+</ul>
+<p>These are not all the potential escape characters. You can learn more about these by doing the exercises under "Hone your skills". For now, understand that these are only a small part of python's printing and display capabilities but what we have covered here are the most useful and used most often in programming.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Look up what hexadecimal is. Why is it used?</li>
+<li>Using the Internet and experimenting in Python, figure out what the following escape characters do.
+<ul>
+<li><code>\a</code></li>
+<li><code>\b</code></li>
+<li><code>\f</code></li>
+<li><code>\N{char}</code></li>
+<li><code>\o**</code></li>
+<li><code>\x**</code></li>
+</ul></li>
+<li>Look up how to make Python print <span class="math inline">\(\epsilon = \gamma c^2\)</span> (those are the greek letters epsilon (<span class="math inline">\(\epsilon\)</span>) and gamma (<span class="math inline">\(\gamma​\)</span>) and the equation reads: "epsilon equals gamma c squared")</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Make Python print out the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations"> Navier-Stokes Equations</a> for a 3-D system in Cartesian coordinates formatted like a normal math equation using escape sequences and print statements.</li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./06-Strings%20and%20the%20Print%20Function.html">Previous: 06-Strings and the Print Function</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./08-Formatted%20Strings.html">Next: 08-Formatted Strings</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./16-File%20Reading%20and%20Writing.html">Previous: 16-File Reading and Writing</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./18-Iterables.html">Next: 18-Iterables</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="loops">17 - Loops</h1>
+<p>We are about to introduce another fundamental aspect of programming that will be used over and over again in programming. We will, as always, introduce the subject in an example script.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># loops.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># we need to print numbers 1 - 5 with each</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># number on its own line so:</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="bu">print</span>(<span class="dv">1</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="bu">print</span>(<span class="dv">2</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="bu">print</span>(<span class="dv">3</span>)</span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="bu">print</span>(<span class="dv">4</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="bu">print</span>(<span class="dv">5</span>)</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># there is a better way of doing this</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a>n <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="cf">while</span> n <span class="op">&lt;=</span> <span class="dv">5</span>:</span>
+<span id="cb1-17"><a href="#cb1-17"></a>    <span class="bu">print</span>(n)</span>
+<span id="cb1-18"><a href="#cb1-18"></a>    n <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a></span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co"># better! that only took 4 lines of code</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="co"># but here is a better way</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-23"><a href="#cb1-23"></a></span>
+<span id="cb1-24"><a href="#cb1-24"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>):</span>
+<span id="cb1-25"><a href="#cb1-25"></a>    <span class="bu">print</span>(n <span class="op">+</span> <span class="dv">1</span>)</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python loops.py
+1
+2
+3
+4
+5
+
+1
+2
+3
+4
+5
+
+1
+2
+3
+4
+5
+$</code></pre>
+<p><strong>What is happening here?</strong></p>
+<p>Here we see the concept of a loop. We just did the same thing (i.e. print numbers 1-5 with each number on its own line) 3 different ways. We will briefly touch on the pros and cons of each way of doing this particular task:</p>
+<ul>
+<li>Writing out each print statement: Never do this. Just don't. Not only is this tedious to do but if you want to do this for 1-10 or 1-1,000,000 the second and third ways require a change to only one variable. This way literally requires 10 or 1,000,000 lines of code respectively. Now that you have seen how terrible this is I will never ask you to do it again. (Remember, the point of programming is to make the computer do the work, not you.)</li>
+<li>A while-loop: The way we have used the while-loop here is not how while-loops should be used. I am only showing it here to introduce the syntax. Again, I have asked you to do it this way once so that we can explore the syntax. After this lesson you should <strong>NEVER</strong> use it this way again. (If you're confused about what "this way" is, don't worry, I'll explain it below.)</li>
+<li>A for-loop: This is, by far, the optimal way to do this particular task. A for-loop is perfect for when you know exactly how many times you want to loop. I will explain while-loops and for-loops below.</li>
+</ul>
+<h3 id="while-loops">while-loops</h3>
+<p>I consider while-loops to generally be more simple than for loops. The while-loop follows the following syntax:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">while</span> truth_expression:</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    do_things1</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    do_things2</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    ...</span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="co"># end of the indented block</span></span></code></pre></div>
+<p>This can be read as "While <code>truth_expression</code> evaluates to <code>True</code>, <code>do_things</code> or else end the loop." The while-loop proceeds as follows:</p>
+<ul>
+<li>The <code>truth_expression</code> is some conditional expression like <code>var &gt; 3</code></li>
+<li>If <code>truth_expression</code> evaluates to <code>True</code>:
+<ul>
+<li>The statements in the indented block are executed in order until the block ends</li>
+<li>The code then returns to the while statement and evaluates the <code>truth_expression</code> again and the process starts over.</li>
+<li>This will repeat until <code>truth_expression</code> evaluates to <code>False</code>.</li>
+</ul></li>
+<li>If at any time <code>truth_expression</code> evaluates to <code>False</code>, the indented block is skipped over and the code continues normally.</li>
+</ul>
+<p><code>truth_expression</code> is sometimes known as the <em>loop exit condition</em>. For the while-loop we did in <code>loops.py</code>, we wanted to loop a particular number of times so we initialized <code>n</code> to <code>1</code> and then incremented <code>n</code> each time before the loop started again.</p>
+<h3 id="for-loops">for-loops</h3>
+<p>The built-in function <code>range</code> produces a range object which is a type of <em>iterable</em>. An iterable is something in code that produces a sequence that can give each value one at a time. It can do this through a number of methods that we will not cover here. In the case of <code>range</code> however, it produces a sequence of integer numbers starting with 0. (Remember: Python counting <em>always</em> starts with 0.) The sequence increments by integers up to but not including the number passed as an argument. (Note: <code>range</code> can be modified to do other things but we will get to that later.) In our case, that means that <code>range(5)</code> produced the sequence: <code>0, 1, 2, 3, 4</code>. This is a common way to say that we want to do something 5 times (as we see the sequence is 5 elements long) or to count up to from 0 to 4. The <code>range</code> function is a common way to do a for-loop but any iterable will do. We will learn more about ranges in the next lesson.</p>
+<p>For-loops follow the following syntax:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="cf">for</span> i <span class="kw">in</span> iterable:</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    do_things1</span>
+<span id="cb4-3"><a href="#cb4-3"></a>    do_things2</span>
+<span id="cb4-4"><a href="#cb4-4"></a>    ...</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co"># end of the indented block</span></span></code></pre></div>
+<p>A for-loop will only repeat as many times as the iterable fed to it allows. (Again in <code>loops.py</code>, this was 5 times.) It also has the feature that, before each time that the loop runs, it defines a variable (which, in the example above, is <code>i</code> but you can name it whatever you want) based on the current element of the iterable. Therefore, <code>i</code> gets redefined for every iteration of the loop based on the next element of <code>iterable</code>.</p>
+<p>Other than that, the statements executed in the indented block are done normally and an un-indentation indicates that the loop block is done and the loop can continue. Once the <code>iterable</code> has run out of values to give to <code>i</code>, the loop terminates and code continues normally.</p>
+<p>In my estimation, for-loops are one of the most powerful features in programming and, as we discussed above, are closely connected with iterables. In the next lesson we will talk more in depth about iterables and how to make and use them.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>For the while loop in <code>loops.py</code>, there are a number of ways we can change the loop exit condition so that the code is technically different but it does the same thing. What are some ways we can change the loop exit condition to do the same thing? How would each of these be better or worse than the original?</li>
+<li>Play around with the code in <code>loops.py</code> and try to change what the <code>range</code> function does in a for-loop. Can you make it start at a number <em>other</em> than 0? Can you make it count by 2s or 3s? Can you make it count down instead of up? (Hint: The documentation <a href="https://docs.python.org/3/library/functions.html#func-range">here</a> should be helpful.)</li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./16-File%20Reading%20and%20Writing.html">Previous: 16-File Reading and Writing</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./18-Iterables.html">Next: 18-Iterables</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

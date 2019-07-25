@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./15-Errors%20Exceptions%20and%20Bugs.html">Previous: 15-Errors Exceptions and Bugs</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./17-Loops.html">Next: 17-Loops</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="file-reading-and-writing">16 - File Reading and Writing</h1>
+<p>When we talked about variables and memory I mentioned that there were three basic parts to the computer. They are:</p>
+<ul>
+<li>The CPU</li>
+<li>The RAM or volatile memory</li>
+<li>The hard drive or persistent memory</li>
+</ul>
+<p>This lesson is an opportunity to interact with the third part, that is the hard drive. We will learn in this lesson how to read and write files from the hard drive.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co">#io_files.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>ext       <span class="op">=</span> <span class="st">&#39;.txt&#39;</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>user_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your name       : &quot;</span>)</span>
+<span id="cb1-5"><a href="#cb1-5"></a>user_age  <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your age        : &quot;</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a>user_job  <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter your occupation : &quot;</span>)</span>
+<span id="cb1-7"><a href="#cb1-7"></a>filename  <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter a valid filename: &quot;</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># let&#39;s print out what we got from the user</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="ch">\n</span><span class="ss">Hello </span><span class="sc">{</span>user_name<span class="sc">}</span><span class="ss">! You are </span><span class="sc">{</span>user_age<span class="sc">}</span><span class="ss"> years old.&quot;</span>)</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="bu">print</span>(<span class="ss">f&quot;You work as a/an </span><span class="sc">{</span>user_job<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="bu">print</span>(<span class="ss">f&quot;</span><span class="ch">\n</span><span class="ss">Saving Your Information to </span><span class="ch">\&quot;</span><span class="sc">{</span>filename <span class="op">+</span> ext<span class="sc">}</span><span class="ch">\&quot;</span><span class="ss">...&quot;</span>, end<span class="op">=</span><span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co"># older/worse way of working with files</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>f <span class="op">=</span> <span class="bu">open</span>(filename <span class="op">+</span> ext , <span class="st">&quot;w&quot;</span>)   <span class="co"># open in write mode &#39;w&#39;</span></span>
+<span id="cb1-16"><a href="#cb1-16"></a>f.write(<span class="st">&quot;name,age,occupation</span><span class="ch">\n</span><span class="st">&quot;</span>) <span class="co"># write headers to file</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>data  <span class="op">=</span> user_name <span class="op">+</span> <span class="st">&quot;,&quot;</span>          <span class="co"># concatenate a string</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>data <span class="op">+=</span> user_age  <span class="op">+</span> <span class="st">&#39;,&#39;</span>  </span>
+<span id="cb1-19"><a href="#cb1-19"></a>data <span class="op">+=</span> user_job  <span class="op">+</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span> </span>
+<span id="cb1-20"><a href="#cb1-20"></a>f.write(data)                    <span class="co"># then write it to the file</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>f.close()                        <span class="co"># save and close the file</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a>    </span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="bu">print</span>(<span class="st">&quot;Done.&quot;</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="co"># newer/better way of working with files</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co"># always use 4 spaces to indent</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="cf">with</span> <span class="bu">open</span>(filename <span class="op">+</span> ext, <span class="st">&#39;r&#39;</span>) <span class="im">as</span> f: <span class="co"># r is for read</span></span>
+<span id="cb1-28"><a href="#cb1-28"></a>    data <span class="op">=</span> f.read()                 </span>
+<span id="cb1-29"><a href="#cb1-29"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Here are your data:</span><span class="ch">\n</span><span class="st">---&quot;</span>)</span>
+<span id="cb1-30"><a href="#cb1-30"></a>    <span class="bu">print</span>(data)</span>
+<span id="cb1-31"><a href="#cb1-31"></a>    <span class="bu">print</span>(<span class="st">&quot;---&quot;</span>)</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python io_files.py
+Enter your name       : Mark
+Enter your age        : 92
+Enter your occupation : Professional Old Guy
+Enter a valid filename: mark_info
+
+Hello Mark! You are 92 years old.
+You work as a/an Professional Old Guy
+
+Saving Your Information to &quot;mark_info.txt&quot;...Done.
+
+Here are your data:
+---
+name,age,occupation
+Mark,92,Professional Old Guy
+
+---
+$</code></pre>
+<p>If you open the file <code>"mark_info.txt"</code> that should have appeared in the same folder you will see the following:</p>
+<pre><code>name,age,occupation
+Mark,92,Professional Old Guy
+</code></pre>
+<p><strong>What is happening here?</strong></p>
+<p>We are writing and reading files here with a special tool called a file object. A file object from Python's point of view is another data type although that is not the most convenient way of understanding it. Without going too much into detail here is what is happening:</p>
+<ul>
+<li>We get some data from the user.</li>
+<li>We organize this data into a table where the rows are separated by newline characters (<code>\n</code>) and the columns are separated in each row by commas (<code>,</code>). We give this table headers and concatenate this string all together using the addition operator.</li>
+<li>We call <code>open</code> on a string containing a filename which returns a file object.</li>
+<li>We feed appropriate method statements to the file object to read, write or save and close the object.</li>
+<li>The file is altered as we alter the object.</li>
+</ul>
+<p>Some of this nomenclature is new. I will now explain some of the newer concepts below.</p>
+<h3 id="objects">Objects</h3>
+<p>In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence over again.</p>
+<p>A type, as I explained before, is a mark that a computer puts on a 'box' or set of 'boxes' in volatile memory. It is a label that lets the computer know how to work with those boxes. An object is those boxes themselves. An object may have a type assigned to it just as you have the label "human" or "homo sapien" assigned to you.</p>
+<p>For example, when you have a string variable, virtually speaking you have a set of boxes in a certain order and each box has a character in it. In addition, you have other boxes that contain the code that makes <code>.format</code> work and everything else the string needs to know how to do what it does. Collectively, all these boxes together in memory are the object. This nomenclature will be used often so it's important to internalize this concept early.</p>
+<h3 id="file-objects-and-methods">File Objects and Methods</h3>
+<p>Now that we have discussed objects lets look specifically at file objects. Lets begin with the <code>open</code> built-in function. The basic usage for the open function has the following form and arguments:</p>
+<ul>
+<li><code>open(filename, mode)</code></li>
+</ul>
+<p>where <code>filename</code> is the name of the file (okay maybe that's obvious) you want to open and <code>mode</code> is the way you want to open the file. The basic ways you can open a file are:</p>
+<ul>
+<li><p><code>'r'</code> for read mode. In this mode the file can only be read (this is sometimes called "read-only" mode). This is the default mode, meaning if you do not give the <code>open</code> function a mode it will assume read mode. Because you are in read mode operations like <code>.write()</code> will throw an error. Also, if the filename you are put into <code>filename</code> doesn't exist that will also throw an error.</p>
+<p>The <code>.read()</code> method returns the entirety of the file as a string. Experiment with this function. What happens when you try to call <code>.read()</code> twice?</p></li>
+<li><p><code>'w'</code> for write mode. Write mode will automatically overwrite whatever was previously in the file. This may also be considered a "write-only" mode, meaning methods like <code>.read()</code> will throw an error. However, unlike read mode, if the filename does not exist, <code>open("filename.txt", 'w')</code> will create a new file with the name "filename.txt".</p></li>
+<li><p><code>'a'</code> for append mode. This mode is like write mode in that methods like <code>.read()</code> will throw an error. It is also like read mode in that if the filename doesn't exist it will also throw an error. It is used to write without truncating and simply appends text to the end of files. However using methods like the ones <a href="https://docs.python.org/3.7/library/io.html#class-hierarchy">here</a>, you can edit files directly. (With that said and depending onthere are better ways to do this that we will cover later.)</p></li>
+</ul>
+<p>There are ways to combine these that you can experiment with in "Hone Your Skills" below.</p>
+<h3 id="with-statements"><code>with</code> Statements</h3>
+<p>To save the changes we made to the file we opened in <code>f = open(filename + ext , "w")</code>, we need to call <code>f.close()</code> on our file object. This ends up being a problem if you forget to call <code>f.close()</code> on the object. A better way to deal with files is with a with statement. To be clear the following code snippet:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>f <span class="op">=</span> <span class="bu">open</span>(filename <span class="op">+</span> ext , <span class="st">&quot;w&quot;</span>)  </span>
+<span id="cb4-2"><a href="#cb4-2"></a>f.write(<span class="st">&quot;name,age,occupation</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a>data  <span class="op">=</span> user_name <span class="op">+</span> <span class="st">&quot;,&quot;</span>         </span>
+<span id="cb4-4"><a href="#cb4-4"></a>data <span class="op">+=</span> user_age  <span class="op">+</span> <span class="st">&#39;,&#39;</span>  </span>
+<span id="cb4-5"><a href="#cb4-5"></a>data <span class="op">+=</span> user_job  <span class="op">+</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span> </span>
+<span id="cb4-6"><a href="#cb4-6"></a>f.write(data)                   </span>
+<span id="cb4-7"><a href="#cb4-7"></a>f.close()                       </span></code></pre></div>
+<p>is equivalent to:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="cf">with</span> <span class="bu">open</span>(filename <span class="op">+</span> ext , <span class="st">&quot;w&quot;</span>) <span class="im">as</span> f:</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    f.write(<span class="st">&quot;name,age,occupation</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb5-3"><a href="#cb5-3"></a>    data  <span class="op">=</span> user_name <span class="op">+</span> <span class="st">&quot;,&quot;</span>  </span>
+<span id="cb5-4"><a href="#cb5-4"></a>    data <span class="op">+=</span> user_age  <span class="op">+</span> <span class="st">&#39;,&#39;</span>  </span>
+<span id="cb5-5"><a href="#cb5-5"></a>    data <span class="op">+=</span> user_job  <span class="op">+</span> <span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span> </span>
+<span id="cb5-6"><a href="#cb5-6"></a>    f.write(data)     </span></code></pre></div>
+<p>Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The <code>with</code> statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a with statement (unless you have a <em>very</em> good reason not to do so).</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<p>Remember to use <code>with</code> statements in all the following exercises.</p>
+<ul>
+<li>Try using the three basic ways of writing files (<code>'r','w','a'</code>). Try to write a paragraph of text to a file, close it and edit it again, putting a line of text at the beginning and end of the file. How would you do this?</li>
+<li>Experiment with the ways of opening a file by trying the combined and other options (e.g. <code>r+</code>, <code>'wb+'</code> etc.) for opening files. You can read about them <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files">here</a>. How do they differ?</li>
+<li>Research the <code>open()</code> function and learn all you can about how it works. The official Python reference is <a href="https://docs.python.org/3.7/library/functions.html#open">here</a>.</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Try to open and read a non-.txt file with Python. Were you able to read it? Research why or why not.</li>
+<li>Read about the complete list of methods for working with files <a href="https://docs.python.org/3.7/library/io.html#class-hierarchy">here</a>. How could you use these methods?</li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./15-Errors%20Exceptions%20and%20Bugs.html">Previous: 15-Errors Exceptions and Bugs</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./17-Loops.html">Next: 17-Loops</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

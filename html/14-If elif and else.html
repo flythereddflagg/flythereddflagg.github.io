@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./13-Logic%20and%20Boolean%20Operators.html">Previous: 13-Logic and Boolean Operators</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./15-Errors%20Exceptions%20and%20Bugs.html">Next: 15-Errors Exceptions and Bugs</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="if-elif-and-else">14 - If, elif and else</h1>
+<p>We will use the concepts of True and False to drive our scripts ability to make decisions. The following exercise will help introduce program decisions and conditionals.</p>
+<p><strong>Note:</strong> This will be the first time we see indented blocks of code. Whenever you see an indented line of code, follow the <a href="https://www.python.org/dev/peps/pep-0008/#code-lay-out">Python standard</a> of always indenting 4 spaces (do <em>not</em> use tabs). Your text editor can and should be configured to insert 4 spaces instead of a tab character <code>\t</code> when the "Tab" key is pressed.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># if_else.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># let&#39;s start with some variables</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># this will tell us to print an error</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># message if necessary</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>error <span class="op">=</span> <span class="va">False</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># this is how much the farmer </span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># needs in revenue to break even</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>break_even <span class="op">=</span> <span class="fl">1000.00</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="co"># these are farming data</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>berry_farmer <span class="op">=</span> <span class="st">&quot;Barry Farmer&quot;</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>wheat_farmer <span class="op">=</span> <span class="st">&quot;Ray Wheatley&quot;</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a></span>
+<span id="cb1-16"><a href="#cb1-16"></a>number_of_berries <span class="op">=</span> <span class="dv">3294</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a>bushels_of_wheat  <span class="op">=</span> <span class="fl">523.45</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a>berry_hired_hands <span class="op">=</span> <span class="dv">34</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>wheat_hired_hands <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a>price_per_bushel <span class="op">=</span> <span class="fl">2.50</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a>price_per_100_berries <span class="op">=</span> <span class="fl">15.23</span></span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="co"># now let&#39;s get the farmer we</span></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co"># want to know about</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a>farmer_name <span class="op">=</span> <span class="bu">input</span>(<span class="st">&quot;Enter the name of the farmer</span><span class="ch">\n\t</span><span class="st">--&gt; &quot;</span>)</span>
+<span id="cb1-28"><a href="#cb1-28"></a></span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="cf">if</span> farmer_name <span class="op">==</span> berry_farmer:</span>
+<span id="cb1-30"><a href="#cb1-30"></a>    produce <span class="op">=</span> <span class="st">&quot;Berries&quot;</span></span>
+<span id="cb1-31"><a href="#cb1-31"></a>    amount  <span class="op">=</span> number_of_berries <span class="op">/</span> <span class="dv">100</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a>    hands   <span class="op">=</span> berry_hired_hands</span>
+<span id="cb1-33"><a href="#cb1-33"></a>    pricing <span class="op">=</span> price_per_100_berries</span>
+<span id="cb1-34"><a href="#cb1-34"></a></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="cf">elif</span> farmer_name <span class="op">==</span> wheat_farmer:</span>
+<span id="cb1-36"><a href="#cb1-36"></a>    produce <span class="op">=</span> <span class="st">&quot;Wheat&quot;</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a>    amount  <span class="op">=</span> bushels_of_wheat</span>
+<span id="cb1-38"><a href="#cb1-38"></a>    hands   <span class="op">=</span> wheat_hired_hands</span>
+<span id="cb1-39"><a href="#cb1-39"></a>    pricing <span class="op">=</span> price_per_bushel</span>
+<span id="cb1-40"><a href="#cb1-40"></a></span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="cf">else</span>:</span>
+<span id="cb1-42"><a href="#cb1-42"></a>    error <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb1-43"><a href="#cb1-43"></a>    </span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="cf">if</span> <span class="kw">not</span> error:</span>
+<span id="cb1-45"><a href="#cb1-45"></a>    revenue <span class="op">=</span> amount <span class="op">*</span> pricing</span>
+<span id="cb1-46"><a href="#cb1-46"></a>    payment_per_hand <span class="op">=</span> revenue <span class="op">/</span> hands</span>
+<span id="cb1-47"><a href="#cb1-47"></a>    </span>
+<span id="cb1-48"><a href="#cb1-48"></a>    <span class="cf">if</span> revenue <span class="op">&lt;</span> break_even:</span>
+<span id="cb1-49"><a href="#cb1-49"></a>        message <span class="op">=</span> <span class="st">&quot;Farm is below break-even point. Sorry&quot;</span></span>
+<span id="cb1-50"><a href="#cb1-50"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-51"><a href="#cb1-51"></a>        message <span class="op">=</span> <span class="st">&quot;Farm is above break-even point. Congratulations!&quot;</span></span>
+<span id="cb1-52"><a href="#cb1-52"></a>    </span>
+<span id="cb1-53"><a href="#cb1-53"></a>    <span class="bu">print</span>(<span class="ss">f&quot;&quot;&quot;</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="ss">        --- Farm Report for </span><span class="sc">{</span>farmer_name<span class="sc">}</span><span class="ss"> ---</span></span>
+<span id="cb1-55"><a href="#cb1-55"></a><span class="ss">    Product for sale               : </span><span class="sc">{</span>produce<span class="sc">:&gt;11}</span></span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="ss">    Price per unit                 : $</span><span class="sc">{</span>pricing<span class="sc">:10.2f}</span></span>
+<span id="cb1-57"><a href="#cb1-57"></a><span class="ss">    Total revenue                  : $</span><span class="sc">{</span>revenue<span class="sc">:10.2f}</span></span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="ss">    Amount owed to each hired hand : $</span><span class="sc">{</span>payment_per_hand<span class="sc">:10.2f}</span></span>
+<span id="cb1-59"><a href="#cb1-59"></a><span class="ss">        </span></span>
+<span id="cb1-60"><a href="#cb1-60"></a><span class="ss">        </span><span class="sc">{</span>message<span class="sc">}</span></span>
+<span id="cb1-61"><a href="#cb1-61"></a><span class="ss">    &quot;&quot;&quot;</span>)</span>
+<span id="cb1-62"><a href="#cb1-62"></a></span>
+<span id="cb1-63"><a href="#cb1-63"></a><span class="cf">else</span>:</span>
+<span id="cb1-64"><a href="#cb1-64"></a>    <span class="bu">print</span>(<span class="ss">f&quot;Farmer name </span><span class="ch">\&quot;</span><span class="sc">{</span>farmer_name<span class="sc">}</span><span class="ch">\&quot;</span><span class="ss"> does not exist in record!&quot;</span>)</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python if_else.py
+Enter the name of the farmer
+    --&gt; Barry Farmer
+
+        --- Farm Report for Barry Farmer ---
+    Product for sale               :     Berries
+    Price per unit                 : $     15.23
+    Total revenue                  : $    501.68
+    Amount owed to each hired hand : $     14.76
+        
+        Farm is below break-even point. Sorry
+        
+$ python if_else.py
+Enter the name of the farmer
+    --&gt; Ray Wheatley
+
+        --- Farm Report for Ray Wheatley ---
+    Product for sale               :       Wheat
+    Price per unit                 : $      2.50
+    Total revenue                  : $   1308.62
+    Amount owed to each hired hand : $     56.90
+        
+        Farm is above break-even point. Congratulations!
+        
+$ python if_else.py
+Enter the name of the farmer
+    --&gt; Gary Hart
+Farmer name &quot;Gary Hart&quot; does not exist in record!
+$</code></pre>
+<p><strong>What is happening Here?</strong></p>
+<p>We are using conditional logic to get data for a pair of farmers. We begin by prompting the user for the farmer's name. We then check the names of the farmers we have data for. If the name does not match any of the farmer's on record we print an error message. (This is the <code>else</code> part on line 63.) The <code>error</code> variable we set earlier in the script will be set to <code>True</code> on line 42 in the case that we do not find the name of any farmer in record.</p>
+<p>Should the name given match a name in our records we prepare the output by setting appropriate variables and then formatting and printing them out in the absence of an error.</p>
+<h3 id="conditionals">Conditionals</h3>
+<p>The section about logical operators introduced us to the idea that everything can be evaluated with a value of <code>True</code> or <code>False</code>. In this section we put that logic to work for us. The conditional or "if" statement in python has the following syntax:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="cf">if</span> Expression1: <span class="co"># don&#39;t forget the colon</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>    do_thing_one() <span class="co"># indent 4 spaces</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="co"># if Expression1 evaluates to False check Expression 2</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="cf">elif</span> Expression2: </span>
+<span id="cb3-6"><a href="#cb3-6"></a>    do_thing_two()</span>
+<span id="cb3-7"><a href="#cb3-7"></a></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="co"># and so on</span></span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="cf">elif</span> Expression3:</span>
+<span id="cb3-10"><a href="#cb3-10"></a>    do_thing_three()</span>
+<span id="cb3-11"><a href="#cb3-11"></a>    </span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="co"># if all previous expressions evaluate to False do the &#39;else&#39; part</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="cf">else</span>:</span>
+<span id="cb3-14"><a href="#cb3-14"></a>    do_thing_three()</span></code></pre></div>
+<p>We will explain the syntax step by step. When Python comes to an <code>if</code> statement, the following is executed:</p>
+<ul>
+<li>Python evaluates whatever is in place for <code>Expression1</code> for a truth value.<br />
+</li>
+<li>If <code>Expression1</code> evaluates to <code>True</code>:
+<ul>
+<li>Everything in the indented block of code under <code>if</code> will be executed.</li>
+<li>Once the block has ended (by un-indenting), the rest of the <code>elif</code> and <code>else</code> blocks of code are skipped.</li>
+</ul></li>
+<li>If <code>Expression1</code> evaluates to <code>False</code>, <code>Expression2</code> is checked for its truth value</li>
+<li>If<code>Expression2</code> evaluates to <code>True</code> :
+<ul>
+<li>Everything in the indented block of code under <code>elif</code> will be executed.</li>
+<li>Once the block has ended (by un-indenting), the rest of the <code>elif</code> and <code>else</code> blocks of code are skipped.</li>
+</ul></li>
+<li>If <code>Expression2</code> evaluates to <code>False</code>, <code>Expression3</code> is checked for its truth value and so on...</li>
+<li>This pattern continues for all the <code>elif</code> expressions.</li>
+<li>Finally, if none of the 'if' or <code>elif</code> expressions evaluate to <code>True</code>, the code under the <code>else</code> is executed.</li>
+</ul>
+<p>Python's conditional syntax allows as many <code>elif</code> statements as the programmer wishes. However, the <code>elif</code> and <code>else</code> parts are not necessary. You may choose to have a conditional block without an <code>else</code> or without an <code>elif</code> part. For coding purposes this is good practice as we will see in the section about errors.</p>
+<h3 id="indented-blocks">Indented Blocks</h3>
+<p>We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make it more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each <code>if</code>, <code>elif</code> or <code>else</code> statement, the code is executed as normal. An indented block is just a way of python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to <code>True</code>. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:</p>
+<ul>
+<li><em>Indented blocks must start with a colon <code>:</code>.</em> A colon tells Python in effect "This is the beginning of a new indented block"</li>
+<li><em>Indent 4 spaces.</em> Four spaces is an accepted convention although Python will technically allow whatever spacing you want as long as you are consistent. Any code you see written will follow the 4 space convention and that is the standard so it is best if you follow suit. If you mix spacings or are inconsistent with this Python will throw a syntax error.</li>
+<li><em>End the block by un-indenting.</em> The only way Python knows that the indented block has ended is when an un-indented line of code is observed.</li>
+<li><em>Nested blocks are allowed.</em> If you want to have an indented block inside an indented block that is fine. the same rules apply in all cases.</li>
+</ul>
+<p>You may not know understand yet why these are so important but as we go along it will be obvious why they exist.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ol>
+<li>Write a script that has several nested <code>if</code> and <code>elif</code> statements. Can you simplify the logic to not need as many nested blocks of code?</li>
+</ol>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ol>
+<li><p>There is a problem in the above script <code>if_else.py</code> that can cause errors if we're not careful. Can you find the problem? How would you fix it?</p>
+<!-- Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the `else` block be deleted. this can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well. --></li>
+</ol>
+<!-- Navigation -->
+<hr />
+<p><a href="./13-Logic%20and%20Boolean%20Operators.html">Previous: 13-Logic and Boolean Operators</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./15-Errors%20Exceptions%20and%20Bugs.html">Next: 15-Errors Exceptions and Bugs</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

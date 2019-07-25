@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./22-Try%20Except.html">Previous: 22-Try Except</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./24-Reading%20Code.html">Next: 24-Reading Code</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="imports">23 - Imports</h1>
+<p>This is the last concept we will cover that I would consider the "basics" of Python and programming in general. Up to now, we have been using only the built-in functionality of Python. This is, in fact, a very limited view of what Python can do. To get the full power and utility of Python, we can use libraries of code that other programmers have written to do all sorts of complex and powerful tasks.</p>
+<p>In this lesson we will introduce many different tools that you may want to use. While going through the exercises in this lesson do not worry about learning everything there is to know about each set of tools. The point of this lesson is to get you familiar with how to get what you need for programming.</p>
+<p>With that said let's start!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># import_practice.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="im">import</span> os</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="im">from</span> math <span class="im">import</span> sin, log, pi</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="im">from</span> random <span class="im">import</span> random</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="im">import</span> csv</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="im">import</span> datetime <span class="im">as</span> dt</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># os example</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="bu">print</span>(<span class="st">&quot;Python doing: ls&quot;</span>)</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="cf">for</span> root, dirs, files <span class="kw">in</span> os.walk(<span class="st">&quot;.&quot;</span>):</span>
+<span id="cb1-12"><a href="#cb1-12"></a>    <span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">20</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>    <span class="bu">print</span>(<span class="st">&quot;Folder Name:&quot;</span>, root, <span class="st">&quot;</span><span class="ch">\n</span><span class="st">----&quot;</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a>    <span class="bu">print</span>(<span class="st">&quot;Sub-folders:&quot;</span>)</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="cf">for</span> directory <span class="kw">in</span> dirs:</span>
+<span id="cb1-16"><a href="#cb1-16"></a>        <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, directory)</span>
+<span id="cb1-17"><a href="#cb1-17"></a>    </span>
+<span id="cb1-18"><a href="#cb1-18"></a>    <span class="bu">print</span>(<span class="st">&quot;---</span><span class="ch">\n</span><span class="st">Files:&quot;</span>)</span>
+<span id="cb1-19"><a href="#cb1-19"></a>    <span class="cf">for</span> <span class="bu">file</span> <span class="kw">in</span> files:</span>
+<span id="cb1-20"><a href="#cb1-20"></a>        <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\t</span><span class="st">&quot;</span>, <span class="bu">file</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a>    <span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="bu">print</span>(<span class="st">&quot;-&quot;</span> <span class="op">*</span> <span class="dv">20</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="co"># math example</span></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="bu">print</span>(<span class="st">&quot;sin(</span><span class="ch">\u03C0</span><span class="st">/2) =&quot;</span>, sin(pi<span class="op">/</span><span class="dv">2</span>))</span>
+<span id="cb1-28"><a href="#cb1-28"></a><span class="bu">print</span>(<span class="st">&quot;ln(23)   =&quot;</span>, <span class="bu">round</span>(log(<span class="dv">24</span>), <span class="dv">2</span>))</span>
+<span id="cb1-29"><a href="#cb1-29"></a></span>
+<span id="cb1-30"><a href="#cb1-30"></a></span>
+<span id="cb1-31"><a href="#cb1-31"></a><span class="co"># random example</span></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="kw">def</span> gen_random_matrix(size):</span>
+<span id="cb1-33"><a href="#cb1-33"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a><span class="co">    Returns a 2D matrix (a.k.a. a list of lists)</span></span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="co">    of shape &quot;size X size&quot; with elements generated </span></span>
+<span id="cb1-36"><a href="#cb1-36"></a><span class="co">    having random values between 0 and 1</span></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb1-38"><a href="#cb1-38"></a>    matrix <span class="op">=</span> []</span>
+<span id="cb1-39"><a href="#cb1-39"></a>    <span class="cf">for</span> row_index <span class="kw">in</span> <span class="bu">range</span>(size):</span>
+<span id="cb1-40"><a href="#cb1-40"></a>        row <span class="op">=</span> []</span>
+<span id="cb1-41"><a href="#cb1-41"></a>        <span class="cf">for</span> element <span class="kw">in</span> <span class="bu">range</span>(size):</span>
+<span id="cb1-42"><a href="#cb1-42"></a>            row.append(random())</span>
+<span id="cb1-43"><a href="#cb1-43"></a>        matrix.append(row)</span>
+<span id="cb1-44"><a href="#cb1-44"></a>    <span class="cf">return</span> matrix</span>
+<span id="cb1-45"><a href="#cb1-45"></a></span>
+<span id="cb1-46"><a href="#cb1-46"></a></span>
+<span id="cb1-47"><a href="#cb1-47"></a><span class="co"># csv example</span></span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&quot;data.csv&quot;</span>, <span class="st">&#39;w&#39;</span>, newline<span class="op">=</span><span class="st">&quot;&quot;</span>) <span class="im">as</span> f:</span>
+<span id="cb1-49"><a href="#cb1-49"></a>    writer <span class="op">=</span> csv.writer(f)</span>
+<span id="cb1-50"><a href="#cb1-50"></a>    writer.writerows(gen_random_matrix(<span class="dv">3</span>))</span>
+<span id="cb1-51"><a href="#cb1-51"></a></span>
+<span id="cb1-52"><a href="#cb1-52"></a></span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="co"># datetime example</span></span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">The exact date and time is:&quot;</span>, dt.datetime.now())</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python import_practice.py
+Python doing: ls
+--------------------
+Folder Name: .
+----
+Sub-folders:
+         .ipynb_checkpoints
+---
+Files:
+         data.csv
+         import_practice.py
+         import_text.py
+         solution_test_1.py
+         test_write.ipynb
+         TOC_tba.html
+         wacky_story.py
+
+--------------------
+Folder Name: .\.ipynb_checkpoints
+----
+Sub-folders:
+---
+Files:
+         test_write-checkpoint.ipynb
+
+--------------------
+sin(π/2) = 1.0
+ln(23)   = 3.18
+
+The exact date and time is: 2019-01-05 12:38:55.442190
+PS C:\Users\Jilly\Documents\Mark\python_book\code_files&gt; python .\
+import_practice.py
+Python doing: ls
+--------------------
+Folder Name: .
+----
+Sub-folders:
+         .ipynb_checkpoints
+---
+Files:
+         data.csv
+         import_practice.py
+         solution_test_1.py
+         test_write.ipynb
+         TOC_tba.html
+         wacky_story.py
+
+--------------------
+Folder Name: .\.ipynb_checkpoints
+----
+Sub-folders:
+---
+Files:
+         test_write-checkpoint.ipynb
+
+--------------------
+sin(π/2) = 1.0
+ln(23)   = 3.18
+
+The exact date and time is: 2019-01-05 12:49:54.332969
+$</code></pre>
+<h3 id="imports-1">Imports</h3>
+<p>The main concept we introduced in this exercise is that of an <code>import</code> statement. These statements are how we use code from another script written in Python. The syntax of an import statement follows two basic forms:</p>
+<ul>
+<li><p><code>import NAME</code></p>
+<p>This statement pulls an object called <code>NAME</code> into your script that contains the entirety of the script called <code>NAME.py</code>. This kind of object is called a module. (Python has rules to keep track of where to look for any module you import.)</p>
+<p>You can then use any of the contents of <code>NAME.py</code> such as functions or objects defined in that module. You use them by the dot notation as we saw in the case of <code>os</code> (i.e. <code>NAME.function_name()</code> or as above with <code>os.walk()</code>).</p></li>
+<li><p><code>from MODULE import NAMES</code></p>
+<p>Sometimes pulling in an entire script is inefficient especially when you want only one or two things from the script. You can pick and choose what you want to use with the <code>from-import</code> style statements. As we saw from the <code>math</code> and <code>random</code> examples, you can then call these functions directly without dot notation. However be aware that if you make a variable or write a function with the same name as these, it will override their definition.</p></li>
+</ul>
+<p>For the line that reads <code>import datetime as dt</code>, the <code>as</code> part of the statement is just changing the name of the function and is practically the same as writing <code>dt = datetime</code>. This is common practice in Python especially for libraries with longer names.</p>
+<h3 id="standard-libraries">Standard Libraries</h3>
+<p>The five libraries we used in <code>import_practice.py</code> are part of the <a href="https://docs.python.org/3/library/">Python Standard Library</a> and can be considered "built-in" to Python. There are well over 200 different modules in Standard Library and to go over each one would be and not very useful. Therefore, this exercise is designed to introduce a few common libraries and get you used to the syntax of importing and using them. But to be thorough, here some brief explanations of each of the libraries we used in this exercise:</p>
+<ul>
+<li><p><code>os</code></p>
+<p><code>os</code> stands for "Operating System". This module allows you to interact with the operating system and the command line to some extent. It contains some file managing tools (e.g. rename or move files, explore the file system etc.) and also some system-specific functionality. There are other modules like <code>sys</code> and <code>subprocess</code> that provide more specific functionality depending on what you need.</p></li>
+<li><p><code>math</code></p>
+<p>This module allows you to access the basic math functions provided by the C standard library. These include but are not limited to trigonometric and hyperbolic functions (e.g. sin, cos, sinh, cosh etc.), exponential and logarithmic functions (e.g. exp, log etc.) and common logical functions you may need.</p></li>
+<li><p><code>random</code></p>
+<p>This provides a large selection of random number generators and functionality related thereto.</p></li>
+<li><p><code>csv</code></p>
+<p>A popular plain-text format for data is the "Comma-Separated Values" format. This is a handy library for working with these files without having to constantly reinvent the wheel. Specifically, it can turn iterables into <code>csv</code> files with minimal coding.</p></li>
+<li><p><code>datetime</code></p>
+<p>A library for working with date and time. The library bases its times on computer times and is a useful feature for getting calendar-like functionality out of your programs. It includes sub modules for both <code>date</code> and <code>time</code> if you happen to be interested in only one of the two.</p></li>
+</ul>
+<p>These are just a surface look at each of these libraries but don't worry too much about learning every library. I have never had occasion to use many of the standard libraries but they are a great starting place for accomplishing complex tasks more easily.</p>
+<h3 id="getting-more-libraries-and-packages">Getting More Libraries and Packages</h3>
+<p>Any package in the Python Standard Library is written and endorsed by the creators and maintainers of Python. However, there is an enormous number of libraries that are written and maintained by thousands of programmers everywhere. These are sometimes called third-party libraries or packages and are available for quick download and installation through a handy software called <code>pip</code> which is built-in to your standard Python 3 installation.</p>
+<p>Let's practice with it here by installing a package called <code>nose</code>. Open your command line and enter</p>
+<p><code>pip install nose</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1"></a>$ <span class="ex">pip</span> install nose</span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="op">&lt;</span><span class="ex">a</span> bunch of text<span class="op">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="ex">Successfully</span> installed nose-1.3.7</span>
+<span id="cb3-4"><a href="#cb3-4"></a>$ </span></code></pre></div>
+<p><code>nose</code> is a package that allows you to write tests for larger programs. If you see something like <code>Successfully installed nose-1.3.7</code> then the package installed correctly.</p>
+<p>Skim the basic commands of pip <a href="https://pip.pypa.io/en/stable/quickstart/">here</a> and use them to install libraries/packages when you need them. We will install more packages later once we get further along.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li><p>The <a href="https://docs.python.org/3/library/">Python Standard Library</a> is a good reference to get an idea of all the things that Python can do without even including third-party libraries and packages. Read the general statement at the beginning of the linked page and browse the index looking for 2 or 3 things that interest you. Begin to experiment with them and see if you can pick up how they work.</p></li>
+<li><p>Consider the following function definition from <code>import_practice.py</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="kw">def</span> gen_random_matrix(size):</span>
+<span id="cb4-2"><a href="#cb4-2"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="co">    Returns a 2D matrix (a.k.a. a list of lists)</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="co">    of shape &quot;size X size&quot; with elements generated </span></span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="co">    having random values between 0 and 1</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>    matrix <span class="op">=</span> []</span>
+<span id="cb4-8"><a href="#cb4-8"></a>    <span class="cf">for</span> row_index <span class="kw">in</span> <span class="bu">range</span>(size):</span>
+<span id="cb4-9"><a href="#cb4-9"></a>        row <span class="op">=</span> []</span>
+<span id="cb4-10"><a href="#cb4-10"></a>        <span class="cf">for</span> element <span class="kw">in</span> <span class="bu">range</span>(size):</span>
+<span id="cb4-11"><a href="#cb4-11"></a>            row.append(random())</span>
+<span id="cb4-12"><a href="#cb4-12"></a>        matrix.append(row)</span>
+<span id="cb4-13"><a href="#cb4-13"></a>    <span class="cf">return</span> matrix</span></code></pre></div>
+<p>It turns out Python has a neat trick called a <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">List Comprehension</a> to turn all that code into one line of code so that it can be written as follows:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> gen_random_matrix(size):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3"></a><span class="co">    Returns a 2D matrix (a.k.a. a list of lists)</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a><span class="co">    of shape &quot;size X size&quot; with elements generated </span></span>
+<span id="cb5-5"><a href="#cb5-5"></a><span class="co">    having random values between 0 and 1</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb5-7"><a href="#cb5-7"></a>    <span class="cf">return</span> <span class="co"># insert line of code here</span></span></code></pre></div>
+<p>After reading about list comprehensions write one line of code that will do the same thing as above and run it to test it.</p></li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./22-Try%20Except.html">Previous: 22-Try Except</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./24-Reading%20Code.html">Next: 24-Reading Code</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

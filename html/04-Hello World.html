@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./03-CLI.html">Previous: 03-CLI</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./05-Comments.html">Next: 05-Comments</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="hello-world">4 - Hello World!</h1>
+<p>If you have completed the two sections successfully you are ready now to begin the actual programming!</p>
+<p>We will begin with the most basic program that actually does something in Python. This is common when you want to begin any programming language. As with all things, beginning in Python is very simple.</p>
+<h4 id="making-your-first-python-source-file">Making your first Python source file</h4>
+<ul>
+<li><p>Start by opening your text editor and opening a new file</p></li>
+<li><p>Pick a folder to keep all your Python learning files in. This could be in your home folder but I like to put it in my "Documents" folder.</p></li>
+<li><p>Use the 'Save as' dialog to save this file in a folder where you want to keep all your Python files</p></li>
+<li><p>Give the file the name <code>hello_world.py</code> and save it</p>
+<p>You will notice the <code>.py</code> part of the filename. This is called an extension and is a way of telling the computer or anyone who looks at the file what kind of file it is. Make sure you name all files you make in Python using this extension.</p>
+<p>Also it is good practice to never use spaces when naming files used in programming. Use underscores instead of spaces. There are reasons for this but just for now trust me when I say that you are avoiding a lot of confusion and problems if you just commit to never using spaces in your filenames when you write code.</p>
+<p><strong>NOTE: I will give you the name of each filename you should be using for each exercise in this book. When you see an octothorpe (<code>#</code>) followed by a filename at the beginning of a code example, it means I want you to make a new file with that name by following the steps above.</strong></p></li>
+<li><p>Type the following <em>exactly</em> as it is written here. Do <em>not</em> copy-paste it.</p></li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># hello_world.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="bu">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</span></code></pre></div>
+<ul>
+<li><p>Go to your terminal and navigate to the folder that holds your Python file.</p></li>
+<li><p>Enter the following command in your terminal:</p></li>
+</ul>
+<pre><code>$ python hello_world.py</code></pre>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python hello_world.py 
+Hello World!
+$ </code></pre>
+<p>If you see the above output, congratulations! You have just written and run your first Python program!</p>
+<p><strong>What is happening here?</strong> Traditionally, displaying "Hello World!" in a console window is the first thing that every programmer generally learns to do in a new language. Later we will get into more detail on how exactly everything works and what is happening on a fundamental level.</p>
+<p>Go back to your Python file and add the following under the first line so the whole file looks like this:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="co"># hello_world.py</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="bu">print</span>(<span class="st">&quot;Hello World!&quot;</span>)</span>
+<span id="cb4-3"><a href="#cb4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="bu">print</span>(<span class="st">&quot;I skipped a line in code!&quot;</span>)</span>
+<span id="cb4-5"><a href="#cb4-5"></a></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="bu">print</span>(<span class="st">&quot;Here is a little song:&quot;</span>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="bu">print</span>(<span class="st">&quot;Twinkle, twinkle little star,&quot;</span>)</span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="bu">print</span>(<span class="st">&quot;How I wonder what you are.&quot;</span>)</span>
+<span id="cb4-9"><a href="#cb4-9"></a><span class="bu">print</span>(<span class="st">&quot;Up above the world so high,&quot;</span>)</span>
+<span id="cb4-10"><a href="#cb4-10"></a></span>
+<span id="cb4-11"><a href="#cb4-11"></a><span class="bu">print</span>(<span class="st">&quot;Like a diamond in the sky&quot;</span>)</span>
+<span id="cb4-12"><a href="#cb4-12"></a><span class="bu">print</span>(<span class="st">&quot;Twinkle, twinkle little star&quot;</span>)</span>
+<span id="cb4-13"><a href="#cb4-13"></a></span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a><span class="bu">print</span>(<span class="st">&quot;How I wonder what you are.&quot;</span>)</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<p>Re-run the code as before and you should see the following:</p>
+<pre><code>$ python hello_world.py 
+Hello World!
+I skipped a line in code!
+Here is a little song:
+Twinkle, twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in the sky
+Twinkle, twinkle little star
+How I wonder what you are.
+$ </code></pre>
+<p>As you can see here, the code runs in order line by line, ignoring any blank lines. This is how any python program works. It starts on line 1 and executes each line of code until it reaches the end of the file.</p>
+<p>Once you see the output appear <em>exactly</em> as it appears above, congratulations! You have completed the first exercise!</p>
+<p>This is the general format for most of the sections in this book. For each section I will have you write some code and then we will go back and try to understand it.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<p>This is the simplest type of program that exists in Python (i.e. simple statements in a ordered list). Now is a good time to get used to some fundamental concepts:</p>
+<ul>
+<li><p><strong>There is no such thing as perfect code</strong></p>
+<p>It is likely that unless you were paying very careful attention to what you were doing that you made a mistake. In which case you may have gotten an error such as the one below</p>
+<p>In this example example, I deleted the last three characters on line 8 and got this message. As you can see, Python tells me exactly where my mistake is and what kind of error it is.</p>
+<p>Take some time and mess with this program. Delete different parts and try to run it and see the kind of errors you get.</p>
+<p>My hope is that you'll get two things out of this: First, don't be afraid to make mistakes (although you of course want to avoid them if you can) and secondly, when an error does happen, this should help you begin to be comfortable with how python reports errors and exceptions. We will cover these in more detail in a later lesson.</p></li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>File <span class="st">&quot;hello_world.py&quot;</span>, line <span class="dv">8</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>    <span class="bu">print</span>(<span class="st">&quot;How I wonder what you are</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="st">                    ^</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a><span class="st">  SyntaxError: EOL while scanning string literal</span></span></code></pre></div>
+<ul>
+<li><p><strong>"Sparse is better than dense"</strong></p>
+<p>From "<a href="https://www.python.org/dev/peps/pep-0020/">Zen of Python</a>" there is a line that says, "Sparse is better than dense". This refers, in part, to the fact that it is often much easier to read code when there is some white space in between lines. When you write code you should be organizing it in your mind and this should reflect in how the code is written.</p>
+<p>Look back at the code that you wrote down from this lesson. Does the spacing make sense? How would you change the spacing to be more consistent? Would you add more lines here or fewer there? Rewrite the code to reflect your mental understanding of the code.</p></li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./03-CLI.html">Previous: 03-CLI</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./05-Comments.html">Next: 05-Comments</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

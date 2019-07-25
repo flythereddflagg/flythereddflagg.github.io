@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./08-Formatted%20Strings.html">Previous: 08-Formatted Strings</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./10-Better%20String%20Formatting.html">Next: 10-Better String Formatting</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="variables-and-memory">9 - Variables and Memory</h1>
+<p>Now we will introduce some concepts that make Python far more powerful. You have the ability to store things in computer memory and the following exercise will demonstrate how to use it.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># vars_and_mem.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># equals sign ( = ) is the assignment operator</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># it says: assign whatever is on the right </span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># to the name on the left</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>first_text <span class="op">=</span> <span class="st">&quot;Here is some text!&quot;</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>more_text <span class="op">=</span> <span class="st">&quot;This is another string of text.&quot;</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{}</span><span class="st"> </span><span class="sc">{}</span><span class="st">&quot;</span>.<span class="bu">format</span>(first_text, more_text))</span>
+<span id="cb1-10"><a href="#cb1-10"></a></span>
+<span id="cb1-11"><a href="#cb1-11"></a>message <span class="op">=</span> <span class="st">&quot;You can print numbers too! Here are some&quot;</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a>number_1 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a>number_2 <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a>number_34 <span class="op">=</span> <span class="fl">25.34</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{}</span><span class="st"> </span><span class="sc">{}</span><span class="st"> </span><span class="sc">{}</span><span class="st"> </span><span class="sc">{}</span><span class="st">&quot;</span>.<span class="bu">format</span>(message, number_1, number_2, number_34))</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co"># now lets do the same thing but assign these names to new values!</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a>message <span class="op">=</span> <span class="st">&quot;Here are some more numbers&quot;</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a>number_1 <span class="op">=</span> <span class="fl">34.1</span></span>
+<span id="cb1-20"><a href="#cb1-20"></a>number_2 <span class="op">=</span> <span class="dv">203</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>number_34 <span class="op">=</span> <span class="fl">3.14159265</span></span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="sc">{}</span><span class="st"> </span><span class="sc">{}</span><span class="st"> </span><span class="sc">{}</span><span class="st"> </span><span class="sc">{}</span><span class="st">&quot;</span>.<span class="bu">format</span>(message, number_1, number_2, number_34))</span></code></pre></div>
+<hr />
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python vars_and_mem.py
+Here is some text! This is another string of text.
+You can print numbers too! Here are some 1 23 25.34
+Here are some more numbers 34.1 203 3.14159265
+$</code></pre>
+<p>You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a <strong>variable</strong>. Here is how the computer works with variables:</p>
+<h3 id="computer-bare-essentials">Computer Bare Essentials</h3>
+<p>I want to begin here by saying a few things about computers that hopefully will help you understand them better.</p>
+<p>Computers, including those that that run everything from your desktop to your phone to your car, basically only do 3 things:</p>
+<ol>
+<li>Store numbers as 1s and 0s in different places</li>
+<li>Move those 1s and 0s between the different storage places</li>
+<li>Combine those 1s and 0s mathematically (i.e. addition and subtraction)</li>
+</ol>
+<p>Of course, computers can do these things at blinding speeds and can be endlessly combined to do all sorts of complex things but these three basics make up all of computing. The programs we have been writing so far do just those things but the details of how this is done is hidden from you but don't be fooled! Nothing more than those three things is happening at any time.</p>
+<h3 id="storing-information">Storing Information</h3>
+<p>One of the most important things you can learn is how memory works on a computer. Storing 1s and 0s is the first thing that a computer must be able to do in order to function.</p>
+<p>For now the most important things you need to understand are these:</p>
+<ul>
+<li>There are three basic parts to the computer that we will interact with constantly. They are:
+<ul>
+<li>The CPU</li>
+<li>The RAM or volatile memory</li>
+<li>The hard drive or persistent memory</li>
+</ul></li>
+<li>CPU stands for central processing unit. Every instruction you write gets executed there.</li>
+<li>RAM stands for Random Access Memory. You will put information relevant to your programs there as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.</li>
+<li>The hard drive is like the RAM except the information you write there stays there until you actively erase it. We will be doing more with the hard drive later</li>
+</ul>
+<p>The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. Boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like</p>
+<p><code>x = 23</code></p>
+<p>you are executing the following:</p>
+<ul>
+<li>Find an appropriate, empty 'box' and write 23 in that box.</li>
+<li>Get the address of the 'box' and associate it with the name 'x'. (This erases any previous associations x may have had before.)</li>
+</ul>
+<p>Anytime x is referenced after that command, the computer looks up the address associated with 'x' and goes directly to the 'box' with that address and replaces 'x' with whatever is in that 'box'.</p>
+<h3 id="more-practice">More Practice</h3>
+<p>The python interpreter will illustrate this better. Go to your terminal and enter <code>python</code> to start the interpreter.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>$ python</span>
+<span id="cb3-2"><a href="#cb3-2"></a>Python <span class="dv">3</span>.<span class="fl">7.0</span> (v3.<span class="fl">7.0</span>:1bf9cc5093, Jun <span class="dv">27</span> <span class="dv">2018</span>, <span class="dv">04</span>:<span class="dv">59</span>:<span class="dv">51</span>) [MSC v<span class="fl">.1914</span> <span class="dv">64</span> bit (AMD64)] on win32</span>
+<span id="cb3-3"><a href="#cb3-3"></a>Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> <span class="kw">or</span> <span class="st">&quot;license&quot;</span> <span class="cf">for</span> more information.</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="op">&gt;&gt;&gt;</span> </span></code></pre></div>
+<p>Run the following commands:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a><span class="op">&gt;&gt;&gt;</span> x <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">type</span>(x)</span>
+<span id="cb4-3"><a href="#cb4-3"></a><span class="op">&lt;</span><span class="kw">class</span> <span class="st">&#39;int&#39;</span><span class="op">&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">id</span>(x)</span>
+<span id="cb4-5"><a href="#cb4-5"></a><span class="dv">140737371887328</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a><span class="op">&gt;&gt;&gt;</span> x</span>
+<span id="cb4-7"><a href="#cb4-7"></a><span class="dv">23</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a><span class="op">&gt;&gt;&gt;</span> exit()</span></code></pre></div>
+<p><code>type</code> , <code>id</code> and <code>exit</code> are other built-in functions like <code>print</code> that provide some useful information about <code>x</code>.</p>
+<p><code>type</code> spits out the type of variable between its parentheses. <code>id</code> spits out the address of the variable in the RAM. This will be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and <code>exit()</code> simply exits the program.</p>
+<h3 id="naming-variables">Naming Variables</h3>
+<p>As a programmer you will have to give names to your variables. Within certain rules you can make up any name you want but the following guides will help you make smart choices about how you name variables.</p>
+<h4 id="naming-rules-in-python">Naming Rules in Python</h4>
+<p>Python follows some rules on what a valid variable name can be. The rules are as follows:</p>
+<ul>
+<li>Names must start with a letter <strong>or</strong> and underscore <code>_</code> (e.g. Spam, eggs, _cheese)</li>
+<li>Names must <strong>only</strong> contain numbers, letters or underscores (i.e. spaces and punctuation are not allowed)</li>
+<li>Names are case sensitive (i.e. Spam, spAm and spam are three different names)</li>
+<li>Names cannot be one of the 35 reserved words in Python. These are listed in the table below. (As a note should you feel the need to use one of these names, you can turn it into a valid variable name by adding leading or trailing underscores e.g. <code>_False</code> or <code>False__</code> or a trailing number e.g. <code>False1</code>)</li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Reserved Words</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>False</td>
+<td>None</td>
+<td>True</td>
+<td>and</td>
+<td>as</td>
+</tr>
+<tr class="even">
+<td>assert</td>
+<td>async</td>
+<td>await</td>
+<td>break</td>
+<td>class</td>
+</tr>
+<tr class="odd">
+<td>continue</td>
+<td>def</td>
+<td>del</td>
+<td>elif</td>
+<td>else</td>
+</tr>
+<tr class="even">
+<td>except</td>
+<td>finally</td>
+<td>for</td>
+<td>from</td>
+<td>global</td>
+</tr>
+<tr class="odd">
+<td>if</td>
+<td>import</td>
+<td>in</td>
+<td>is</td>
+<td>lambda</td>
+</tr>
+<tr class="even">
+<td>nonlocal</td>
+<td>not</td>
+<td>or</td>
+<td>pass</td>
+<td>raise</td>
+</tr>
+<tr class="odd">
+<td>return</td>
+<td>try</td>
+<td>while</td>
+<td>with</td>
+<td>yield</td>
+</tr>
+</tbody>
+</table>
+<h4 id="naming-conventions-and-guidelines">Naming Conventions and Guidelines</h4>
+<p>Within the limits of these rules, you can call your variables any name you want and make them as long or as short as you want. However, there are some conventions you should stick to you make your coding better. The following conventions will help make your code easier to write and fix when something goes wrong. (And trust me, something <em>always</em> goes wrong.):</p>
+<ul>
+<li><p><strong>Use lower case and underscores</strong></p>
+<p>There are two common ways to name a variable. For an example we will consider a variable that will bear a name that can be read as "black knight". The first way is lower case with underscores for spaces: <code>black_knight</code>. The second is often called "camel case": <code>BlackKnight</code>. Obviously you can use all caps (<code>BLACKKNIGHT</code>), no spaces (<code>blackknight</code>), some form abbreviation (<code>blk_knt</code>) or any combination of these. However, the lower case with underscores and camel case are the most common for general use variables.</p>
+<p>When writing Python especially as you are learning, stick to the lower case with underscores. For what we will be doing this will help your code be more readable and clear to you and anyone else reading it.</p>
+<p>Understand however, that this is not a hard and fast rule and should be broken if there is a good reason to do so. We will break this rule later on as we explore more features.</p></li>
+<li><p><strong>Avoid names that conflict with existing names</strong></p>
+<p>When naming you will find that, outside the 35 key words above, when you define a name, it overrides any variable connected to that name before. Therefore the following code:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="bu">print</span> <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb5-2"><a href="#cb5-2"></a><span class="bu">print</span>(<span class="st">&quot;cheese&quot;</span>)</span></code></pre></div>
+<p>will not work because you have changed the meaning of print from that of a function that writes things on the screen to an integer with a value of 2. Try this out for yourself.</p>
+<p>When naming variables always be careful to not use names that are already being used for another purpose.</p></li>
+<li><p><strong>Write descriptive names</strong></p>
+<p>One time while working on someone else's code, I came across a line of code that looked something like this (I have changed it for privacy reasons but the lesson still stands):</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>val <span class="op">=</span> a<span class="op">*</span>cav <span class="op">+</span> b<span class="op">*</span>wtmcls <span class="op">+</span> c<span class="op">*</span>hcpv <span class="op">+</span> d</span></code></pre></div>
+<p>As a chemical engineer, I had some context but could not figure out what this was saying. Initially I could infer the following:</p>
+<ul>
+<li>This was a mathematical statement equivalent to <span class="math inline">\(val = a \cdot cav + b \cdot wtmcls + c\cdot hcpv + d\)</span></li>
+<li>a, b, c and d were constants related to all the other variables and if I could figure out the other 4 variables I could easily figure out a, b, c and d</li>
+<li><code>val</code> was short for 'value'. What value? I couldn't figure it out.</li>
+</ul>
+<p>The other 3 variables? I had no idea what they were.</p>
+<p>After weeks of digging I finally figured out what each of these variables were.</p>
+<ul>
+<li><code>val</code> was a predicted value of viscosity</li>
+<li><code>cav</code> stood for 'compound average value'</li>
+<li><code>wtmcls</code> was the number of 'water molecules' in the compound</li>
+<li><code>hcpv</code> was the 'heat capacity value' for that compound</li>
+</ul>
+<p>Now you don't need to understand what this does exactly but consider how much easier it would have been if the code had been written like this:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1"></a>viscosity_value <span class="op">=</span> a<span class="op">*</span>compound_avg_val <span class="op">+</span> b<span class="op">*</span>h2o_molecules <span class="op">+</span> c<span class="op">*</span>heat_capacity <span class="op">+</span> d </span></code></pre></div>
+<p>I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before.</p>
+<p>This will take practice but it behooves you to write your variable names (and the rest of your code for that matter) descriptively to avoid issues like the one above.</p>
+<p>​</p></li>
+<li><p><strong>Help your reader understand the code without comments</strong></p>
+<p>Ideally you want to write code clearly enough that it is apparent what the code does without needing comments explaining it. Comments are important and I do not want to diminish their importance but this clear writing is better than commenting. Up to now what your code does should be obvious to anyone that can read Python without any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.</p></li>
+</ul>
+<p>Any good programmer knows that the majority of the time we spend coding is actually spent reading and not writing. Python makes it easy for you to write readable code and the first step is write good variable names.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Go to the <a href="https://docs.python.org/3/library/functions.html">Python Built-in Function page</a> and experiment with as many functions in the Python interpreter as you can. What does each of these built in functions do?</li>
+<li>Using the addition operator <code>+</code>, write a program that adds two numbers together and then print the result. (Use three descriptively named variables.)</li>
+<li>Experiment with different names of variables in <code>vars_and_mem.py</code>. How can you make your variables more clear to those reading your code?</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Use the internet to answer the following questions:
+<ul>
+<li>What is binary?</li>
+<li>How are numbers represented as 1s and 0s?</li>
+<li>How are characters represented as 1s and 0s?</li>
+<li>How do computers do addition and subtraction using binary math?</li>
+<li>What is 2's compliment? Why is it used?</li>
+</ul></li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./08-Formatted%20Strings.html">Previous: 08-Formatted Strings</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./10-Better%20String%20Formatting.html">Next: 10-Better String Formatting</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

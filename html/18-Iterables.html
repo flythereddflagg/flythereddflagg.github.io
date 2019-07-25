@@ -1,0 +1,219 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./17-Loops.html">Previous: 17-Loops</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./19-Dictionaries.html">Next: 19-Dictionaries</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="iterables">18 - Iterables</h1>
+<p>The <a href="https://docs.python.org/3/glossary.html#term-iterable">Python Documentation</a> defines an iterable this way:</p>
+<ul>
+<li>Iterable: An object capable of returning its members one at a time.</li>
+</ul>
+<p>Iterables are a powerful way to structure data. In this lesson, we will introduce a common type of iterable called sequenced types and explore how to use them. Note that there are many iterable types that we will not cover here but these (the sequenced types) are the most common. This is the longest exercise you've done so far so don't get complacent. Make sure that it is exactly as it appears here.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># iterables.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="co"># --- strings --- </span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>example_string <span class="op">=</span> <span class="st">&quot;Hello World!&quot;</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="bu">print</span>(<span class="st">&quot;A string:&quot;</span>, example_string)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>) <span class="co"># white space to make output readable</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co"># --- ranges ---</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>example_range <span class="op">=</span> <span class="bu">range</span>(<span class="dv">5</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="bu">print</span>(<span class="st">&quot;A range:&quot;</span>, example_range)</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-12"><a href="#cb1-12"></a></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># --- lists ---</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="co"># brackets initialize a list</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a>example_list <span class="op">=</span> [<span class="st">&quot;tea&quot;</span>, <span class="st">&quot;biscuts&quot;</span>, <span class="st">&quot;crackers&quot;</span>, <span class="st">&quot;kale&quot;</span>]</span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="bu">print</span>(<span class="st">&quot;A list:&quot;</span>, example_list)</span>
+<span id="cb1-17"><a href="#cb1-17"></a></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co"># lists are mutable</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="bu">print</span>(<span class="st">&quot;adding cheese to the list...&quot;</span>)</span>
+<span id="cb1-20"><a href="#cb1-20"></a>example_list.append(<span class="st">&quot;cheese&quot;</span>)</span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="bu">print</span>(example_list)</span>
+<span id="cb1-22"><a href="#cb1-22"></a></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="bu">print</span>(<span class="st">&quot;changing the first element to &#39;Lemon Tea&#39;...&quot;</span>)</span>
+<span id="cb1-24"><a href="#cb1-24"></a>example_list[<span class="dv">0</span>] <span class="op">=</span> <span class="st">&quot;Lemon Tea&quot;</span></span>
+<span id="cb1-25"><a href="#cb1-25"></a><span class="bu">print</span>(example_list)</span>
+<span id="cb1-26"><a href="#cb1-26"></a></span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="bu">print</span>(<span class="st">&quot;popping off the last element...&quot;</span>)</span>
+<span id="cb1-28"><a href="#cb1-28"></a>example_list.pop()</span>
+<span id="cb1-29"><a href="#cb1-29"></a><span class="bu">print</span>(example_list)</span>
+<span id="cb1-30"><a href="#cb1-30"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-31"><a href="#cb1-31"></a></span>
+<span id="cb1-32"><a href="#cb1-32"></a><span class="co"># --- tuples ---</span></span>
+<span id="cb1-33"><a href="#cb1-33"></a><span class="co"># parethesis define a tuple</span></span>
+<span id="cb1-34"><a href="#cb1-34"></a>example_tuple <span class="op">=</span> (<span class="st">&quot;tea&quot;</span>, <span class="st">&quot;biscuts&quot;</span>, <span class="st">&quot;crackers&quot;</span>, <span class="st">&quot;kale&quot;</span>)</span>
+<span id="cb1-35"><a href="#cb1-35"></a><span class="bu">print</span>(<span class="st">&quot;A tuple:&quot;</span>, example_tuple)</span>
+<span id="cb1-36"><a href="#cb1-36"></a></span>
+<span id="cb1-37"><a href="#cb1-37"></a><span class="co"># a comma-separated list can also define a tuple</span></span>
+<span id="cb1-38"><a href="#cb1-38"></a>example_tuple <span class="op">=</span> <span class="st">&quot;biscuts&quot;</span>, <span class="st">&quot;crackers&quot;</span>,  <span class="st">&quot;kale&quot;</span>, <span class="st">&quot;tea&quot;</span></span>
+<span id="cb1-39"><a href="#cb1-39"></a><span class="bu">print</span>(<span class="st">&quot;Another tuple:&quot;</span>, example_tuple)</span>
+<span id="cb1-40"><a href="#cb1-40"></a></span>
+<span id="cb1-41"><a href="#cb1-41"></a><span class="co"># tuples are immutable</span></span>
+<span id="cb1-42"><a href="#cb1-42"></a><span class="co"># notice how this throws an error:</span></span>
+<span id="cb1-43"><a href="#cb1-43"></a><span class="co"># comment it out after you have looked at the error</span></span>
+<span id="cb1-44"><a href="#cb1-44"></a><span class="co"># example_tuple[-1] = &quot;Lemon tea&quot; # throws an error</span></span>
+<span id="cb1-45"><a href="#cb1-45"></a></span>
+<span id="cb1-46"><a href="#cb1-46"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-47"><a href="#cb1-47"></a></span>
+<span id="cb1-48"><a href="#cb1-48"></a><span class="co"># --- Common among iterables ---</span></span>
+<span id="cb1-49"><a href="#cb1-49"></a></span>
+<span id="cb1-50"><a href="#cb1-50"></a><span class="co"># all iterables are subscriptable and sliceable</span></span>
+<span id="cb1-51"><a href="#cb1-51"></a><span class="bu">print</span>(<span class="st">&quot;The last element and&quot;</span>)</span>
+<span id="cb1-52"><a href="#cb1-52"></a><span class="bu">print</span>(<span class="st">&quot;The first two elements of each iterable:&quot;</span>)</span>
+<span id="cb1-53"><a href="#cb1-53"></a><span class="bu">print</span>(<span class="st">&quot;Last:&quot;</span>,     example_string[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb1-54"><a href="#cb1-54"></a><span class="bu">print</span>(<span class="st">&quot;First two:&quot;</span>,example_string[:<span class="dv">2</span>])</span>
+<span id="cb1-55"><a href="#cb1-55"></a><span class="bu">print</span>(<span class="st">&quot;Last:&quot;</span>,     example_range[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb1-56"><a href="#cb1-56"></a><span class="bu">print</span>(<span class="st">&quot;First two:&quot;</span>,example_range[:<span class="dv">2</span>])</span>
+<span id="cb1-57"><a href="#cb1-57"></a><span class="bu">print</span>(<span class="st">&quot;Last:&quot;</span>,     example_list[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb1-58"><a href="#cb1-58"></a><span class="bu">print</span>(<span class="st">&quot;First two:&quot;</span>,example_list[:<span class="dv">2</span>])</span>
+<span id="cb1-59"><a href="#cb1-59"></a><span class="bu">print</span>(<span class="st">&quot;Last:&quot;</span>,     example_tuple[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb1-60"><a href="#cb1-60"></a><span class="bu">print</span>(<span class="st">&quot;First two:&quot;</span>,example_tuple[:<span class="dv">2</span>])</span>
+<span id="cb1-61"><a href="#cb1-61"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-62"><a href="#cb1-62"></a></span>
+<span id="cb1-63"><a href="#cb1-63"></a></span>
+<span id="cb1-64"><a href="#cb1-64"></a><span class="co"># all iterables have a length (len())</span></span>
+<span id="cb1-65"><a href="#cb1-65"></a><span class="bu">print</span>(<span class="st">&quot;length of string: &quot;</span>, <span class="bu">len</span>(example_string))</span>
+<span id="cb1-66"><a href="#cb1-66"></a><span class="bu">print</span>(<span class="st">&quot;length of range:  &quot;</span>, <span class="bu">len</span>(example_range))</span>
+<span id="cb1-67"><a href="#cb1-67"></a><span class="bu">print</span>(<span class="st">&quot;length of list:   &quot;</span>, <span class="bu">len</span>(example_list))</span>
+<span id="cb1-68"><a href="#cb1-68"></a><span class="bu">print</span>(<span class="st">&quot;length of tuple:  &quot;</span>, <span class="bu">len</span>(example_tuple))</span>
+<span id="cb1-69"><a href="#cb1-69"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-70"><a href="#cb1-70"></a></span>
+<span id="cb1-71"><a href="#cb1-71"></a><span class="co"># all iterables can be used to make for-loops</span></span>
+<span id="cb1-72"><a href="#cb1-72"></a><span class="bu">print</span>(<span class="st">&quot;For-loop examples of each:&quot;</span>)</span>
+<span id="cb1-73"><a href="#cb1-73"></a><span class="cf">for</span> character <span class="kw">in</span> example_string:</span>
+<span id="cb1-74"><a href="#cb1-74"></a>    <span class="bu">print</span>(character, end<span class="op">=</span><span class="st">&quot; &quot;</span>)</span>
+<span id="cb1-75"><a href="#cb1-75"></a></span>
+<span id="cb1-76"><a href="#cb1-76"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-77"><a href="#cb1-77"></a>    </span>
+<span id="cb1-78"><a href="#cb1-78"></a><span class="cf">for</span> index_value <span class="kw">in</span> example_range:</span>
+<span id="cb1-79"><a href="#cb1-79"></a>    <span class="bu">print</span>(index_value, end<span class="op">=</span><span class="st">&quot; &quot;</span>)</span>
+<span id="cb1-80"><a href="#cb1-80"></a></span>
+<span id="cb1-81"><a href="#cb1-81"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)   </span>
+<span id="cb1-82"><a href="#cb1-82"></a>    </span>
+<span id="cb1-83"><a href="#cb1-83"></a><span class="cf">for</span> element <span class="kw">in</span> example_list:</span>
+<span id="cb1-84"><a href="#cb1-84"></a>    <span class="bu">print</span>(element, end<span class="op">=</span><span class="st">&quot; &quot;</span>)</span>
+<span id="cb1-85"><a href="#cb1-85"></a></span>
+<span id="cb1-86"><a href="#cb1-86"></a><span class="bu">print</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-87"><a href="#cb1-87"></a>    </span>
+<span id="cb1-88"><a href="#cb1-88"></a><span class="cf">for</span> variable <span class="kw">in</span> example_tuple:</span>
+<span id="cb1-89"><a href="#cb1-89"></a>    <span class="bu">print</span>(variable, end<span class="op">=</span><span class="st">&quot; &quot;</span>)</span>
+<span id="cb1-90"><a href="#cb1-90"></a></span>
+<span id="cb1-91"><a href="#cb1-91"></a><span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>)</span>
+<span id="cb1-92"><a href="#cb1-92"></a></span>
+<span id="cb1-93"><a href="#cb1-93"></a><span class="co"># you can check if something is &#39;in&#39;</span></span>
+<span id="cb1-94"><a href="#cb1-94"></a><span class="co"># a sequence iterable</span></span>
+<span id="cb1-95"><a href="#cb1-95"></a><span class="bu">print</span>(<span class="st">&#39;&quot;Hello&quot; in example_string:&#39;</span>, </span>
+<span id="cb1-96"><a href="#cb1-96"></a>      <span class="st">&quot;Hello&quot;</span> <span class="kw">in</span> example_string)</span>
+<span id="cb1-97"><a href="#cb1-97"></a><span class="bu">print</span>(<span class="st">&#39;3 in example_range:&#39;</span>, </span>
+<span id="cb1-98"><a href="#cb1-98"></a>      <span class="dv">3</span> <span class="kw">in</span> example_range)</span>
+<span id="cb1-99"><a href="#cb1-99"></a><span class="bu">print</span>(<span class="st">&#39;&quot;kale&quot; in example_list:&#39;</span>, </span>
+<span id="cb1-100"><a href="#cb1-100"></a>      <span class="st">&quot;kale&quot;</span> <span class="kw">in</span> example_list)</span>
+<span id="cb1-101"><a href="#cb1-101"></a><span class="bu">print</span>(<span class="st">&#39;&quot;potatoes&quot; in example_tuple:&#39;</span>,</span>
+<span id="cb1-102"><a href="#cb1-102"></a>      <span class="st">&quot;potatoes&quot;</span> <span class="kw">in</span> example_tuple)</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python iterables.py
+A string: Hello World!
+
+A range: range(0, 5)
+
+A list: [&#39;tea&#39;, &#39;biscuts&#39;, &#39;crackers&#39;, &#39;kale&#39;]
+adding cheese to the list...
+[&#39;tea&#39;, &#39;biscuts&#39;, &#39;crackers&#39;, &#39;kale&#39;, &#39;cheese&#39;]
+changing the first element to &#39;Lemon Tea&#39;...
+[&#39;Lemon Tea&#39;, &#39;biscuts&#39;, &#39;crackers&#39;, &#39;kale&#39;, &#39;cheese&#39;]
+popping off the last element...
+[&#39;Lemon Tea&#39;, &#39;biscuts&#39;, &#39;crackers&#39;, &#39;kale&#39;]
+
+A tuple: (&#39;tea&#39;, &#39;biscuts&#39;, &#39;crackers&#39;, &#39;kale&#39;)
+Another tuple: (&#39;biscuts&#39;, &#39;crackers&#39;, &#39;kale&#39;, &#39;tea&#39;)
+
+The last element and
+The first two elements of each iterable:
+Last: !
+First two: He
+Last: 4
+First two: range(0, 2)
+Last: kale
+First two: [&#39;Lemon Tea&#39;, &#39;biscuts&#39;]
+Last: tea
+First two: (&#39;biscuts&#39;, &#39;crackers&#39;)
+
+length of string:  12
+length of range:   5
+length of list:    4
+length of tuple:   4
+
+For-loop examples of each:
+H e l l o   W o r l d ! 
+0 1 2 3 4 
+Lemon Tea biscuts crackers kale 
+biscuts crackers kale tea 
+
+&quot;Hello&quot; in example_string: True
+3 in example_range: True
+&quot;kale&quot; in example_list: True
+&quot;potatoes&quot; in example_tuple: False
+$</code></pre>
+<p><strong>What is happening here?</strong></p>
+<p>We have just dumped a lot of information on you. This is probably the longest script you've written yet. We will go through each step by step. Lets start with each type of iterable.</p>
+<h3 id="string">String</h3>
+<p>We have already covered a lot about strings. It turns out, however, that strings are iterables and have all the properties that we see at the end of the script. We will deal with these in more detail below but just understand that strings have all those common properties.</p>
+<h3 id="range">Range</h3>
+<p>Ranges can be thought of as a very specific subset of a list. The subset is a list of integers with a set pattern. Ranges are most useful in for-loop construction when you want a loop to run a specific number of times. They have other uses but the for-loop case is most common.</p>
+<h3 id="list">List</h3>
+<p>A list is a very powerful sequence type. Unlike a string which must contain only letters and a range which can only contain integers in a specified order, a list is exactly what it sounds like. A list is an object that holds objects or references to objects in a specified order. A list could be a shopping list where the elements are strings:</p>
+<p><code>shopping_list = ["cheese" "milk", "sugar", "eggs"]</code></p>
+<p>or it could be a list of names of a bunch of file objects:</p>
+<p><code>files = [file1, file2, file3]</code></p>
+<p>or it could be a bunch of different types of objects:</p>
+<p><code>objects = [12, 23.5, "Nougat"]</code></p>
+<p>The point is, lists can do many things and can be the structure for many types of data. A common use of lists for example is to define matrices for math:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>matrix_a <span class="op">=</span> [</span>
+<span id="cb3-2"><a href="#cb3-2"></a>    [<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>],</span>
+<span id="cb3-3"><a href="#cb3-3"></a>    [<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">6</span>],</span>
+<span id="cb3-4"><a href="#cb3-4"></a>    [<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">9</span>]]</span></code></pre></div>
+<p>which is just a lists of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.</p>
+<h3 id="tuple">Tuple</h3>
+<p>Tuples are interesting beasts in Python. Without getting into gory details, tuples are like lists that cannot be changed once they are created and are fixed in memory. You may think of them as a "read-only" list. You may rightly ask why they even exist if all they appear to be is a less-useful list. The advantage of tuples is that, because they cannot be changed, the computer can use them more efficiently. However, they do have some uses that can be of interest. (See Hone Your Skills for more on this.)</p>
+<h3 id="subscripts-and-slices">Subscripts and Slices</h3>
+<p>A useful feature all sequenced iterators have is that of subscripting and slicing. It may not be clear what this means however. The following two operations allow us to conveniently work with sequenced iterables.</p>
+<ul>
+<li><p><strong>Subscript</strong></p>
+<p>Suppose we have a list of strings like <code>shopping_list = ["cheese" "milk", "sugar", "eggs"]</code> and we just want to get <code>"sugar"</code> out of the list. We can do that through subscripting. The "subscript" or "get item" operator is the pair of brackets after the name of the iterator (in this case, <code>shopping_list[]</code>). The number that goes between the brackets is the index of the item that is being retrieved. Therefore, if we want to get <code>"sugar"</code> out of the list we can store it in a new variable like this: <code>sugar_item = shopping_list[2]</code>. (Remember that Python indices start with 0 so the third item in the list has an index of 2.)</p></li>
+<li><p><strong>Slice</strong></p>
+<p>Slicing is just like subscripting but instead of getting one element of the list we are getting multiple adjacent elements. The syntax is as follows.</p>
+<p><code>list_name[first_index : second_index]</code></p>
+<p>where <code>first_index</code> is the first included element in the slice and <code>second_element</code> is the first element not included in the slice. Therefore if we write <code>shopping_list[1:3]</code> we get <code>['sugar', 'eggs']</code> back. This is because we are including element <code>1</code> and <code>2</code> but not <code>3</code>. Also, <code>shopping_list[2:3]</code> is not the same as <code>shopping_list[2]</code> but instead, returns the same type of iterable with a length of 1 containing <code>shopping_list[2]</code>.</p>
+<p>If the <code>first_index</code> is omitted, everything from the beginning to the <code>second_index</code> is extracted. Likewise, if <code>second_index</code> is omitted, everything from <code>first_index</code> to the end is extracted.</p></li>
+</ul>
+<h3 id="for-loops-length-and-the-in-operator">For-loops, Length and the <code>in</code> operator</h3>
+<p>Each of the properties that we used in <code>iterables.py</code> that are common to all iterables are both useful and easy to understand given the context we now have.</p>
+<ul>
+<li><strong>For-loops:</strong> Any iterable used in the definition of a for-loop is defined (as in the lesson on loops) as <code>for i in iterable:</code> where <code>i</code> can be called the loop variable. In the case of any sequenced iterable the loop variable takes on the next value in the sequence for each loop.</li>
+<li><strong><code>len()</code>:</strong> This is a built-in function that can find the length of any iterable if it is at all possible. The function has many uses including use for referencing by index instead of element ( i.e. using <code>range(len(iterable))</code> instead of just <code>iterable</code>.)</li>
+<li><strong>The <code>in</code> operator</strong> will return true if the operand on the left exists as one of the elements on the right or if a series of elements exist on the right. And the logic reads just like in English.</li>
+</ul>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Look at documentation on <a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">lists</a>. Lists can do a lot of things, experiment with each method listed in the documentation. What are some different ways you could use a list?</li>
+<li>The three things common to all iterables we did in <code>iterables.py</code> are not the only things you can do to all the sequenced iterables. Look at the <a href="https://docs.python.org/3/library/stdtypes.html#common-sequence-operations">Documentation</a> for operations that can be performed on all the iterables. Experiment with all of these and find out how you could find a delete a particular value from a list using these operations.</li>
+<li>Try putting negative numbers into the subscript operator. Start with <code>-1</code>. What happens? How can you use this to your advantage?</li>
+<li>Look up the documentation on <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">tuples</a> and learn how to pack and unpack variables. How could this be useful?</li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./17-Loops.html">Previous: 17-Loops</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./19-Dictionaries.html">Next: 19-Dictionaries</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./25-Do%20a%20Project.html">Previous: 25-Do a Project</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./27-Inheritance%20and%20Polymorphism.html">Next: 27-Inheritance and Polymorphism</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="objects-and-classes">26 - Objects and Classes</h1>
+<p>Now that you have finished your project you should feel more or less comfortable with the basics of Python. The next thing to learn about is a new paradigm of programming: Object oriented programming!</p>
+<p>There are two shorter exercises in this section as well as some new vocabulary. Ensure that you understand all the terms in <strong>bold</strong> as you go along as these concepts will come up later.</p>
+<h3 id="what-is-object-oriented-programming">What is object oriented programming?</h3>
+<p>In Python, everything is an object. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work. For an example, we will use some list objects in Python. Do the following exercise:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># list_objects.py</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>list_object <span class="op">=</span> []</span>
+<span id="cb1-4"><a href="#cb1-4"></a><span class="co"># this is more or less equivalent to</span></span>
+<span id="cb1-5"><a href="#cb1-5"></a>list_object2 <span class="op">=</span> <span class="bu">list</span>()</span>
+<span id="cb1-6"><a href="#cb1-6"></a></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="bu">print</span>(<span class="st">&quot;Initial objects&quot;</span>, list_object, list_object2)</span>
+<span id="cb1-8"><a href="#cb1-8"></a></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co"># now that we have these objects built </span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="co"># or &quot;initialized&quot; we can call methods on them!</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a>list_object.append(<span class="dv">23</span>)</span>
+<span id="cb1-13"><a href="#cb1-13"></a>list_object2.append(<span class="dv">24</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="bu">print</span>(<span class="st">&quot;Added 1 element to each&quot;</span>, list_object, list_object2)</span>
+<span id="cb1-16"><a href="#cb1-16"></a>list_object.append(<span class="dv">36</span>)</span>
+<span id="cb1-17"><a href="#cb1-17"></a>list_object2.append(<span class="dv">45</span>)</span>
+<span id="cb1-18"><a href="#cb1-18"></a></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="bu">print</span>(<span class="st">&quot;Added another element to each&quot;</span>, list_object, list_object2)</span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="co"># now we will remove both elements of each</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a>list_object.pop()</span>
+<span id="cb1-22"><a href="#cb1-22"></a>list_object2.pop()</span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="bu">print</span>(<span class="st">&quot;Popped off one element&quot;</span>, list_object, list_object2)</span>
+<span id="cb1-24"><a href="#cb1-24"></a></span>
+<span id="cb1-25"><a href="#cb1-25"></a>list_object.pop()</span>
+<span id="cb1-26"><a href="#cb1-26"></a>list_object2.pop()</span>
+<span id="cb1-27"><a href="#cb1-27"></a><span class="bu">print</span>(<span class="st">&quot;Popped off the other&quot;</span>, list_object, list_object2)</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python list_objects.py
+Initial objects [] []
+Added 1 element to each [23] [24]
+Added another element to each [23, 36] [24, 45]
+Popped off one element [23] [24]
+Popped off the other [] []
+$</code></pre>
+<p>From this short exercise you should be able to see the following:</p>
+<ul>
+<li><p><strong>Objects must be called into existence by some function</strong></p>
+<p>You may not see exactly where it happens but when you write <code>x = []</code> you are effectively calling <code>list()</code> and setting it equal to x. You will not see the details of this but they are implemented in the Python code somewhere. The process of calling an object into existence is called <strong>instantiation</strong> and the function that makes it happen is called an <strong>object constructor.</strong> Another way to think about this relationship is that <code>list_object1</code> and <code>list_object2</code> are both <strong>instances</strong> of a <code>list</code> data type.</p></li>
+<li><p><strong>Objects have and can be modified by methods</strong></p>
+<p>You have seen before and in this short exercise that functions may be called with dot syntax (e.g. <code>list_object.pop()</code>). I have mentioned before that these functions are called <strong>methods</strong> and "belong" to the object they are being called from. A method may do anything the programmer wishes but often are used to modify the object or, more specifically, the data or variables that "belong" to the object. The variables that "belong" to the object are called the object's <strong>attributes</strong>.</p></li>
+</ul>
+<h3 id="objects-are-handled-by-reference">Objects are handled by reference</h3>
+<p>Since everything is an object in Python, this may not make much sense until you see the effects of this behavior. In Python when you write code like:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>y <span class="op">=</span> x</span>
+<span id="cb3-3"><a href="#cb3-3"></a>y <span class="op">+=</span> <span class="dv">3</span></span></code></pre></div>
+<p>You would rightly expect that <code>x = 2</code> and <code>y = 5</code>. However should you do something similar with a list:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1"></a>x <span class="op">=</span> [<span class="dv">2</span>]</span>
+<span id="cb4-2"><a href="#cb4-2"></a>y <span class="op">=</span> x</span>
+<span id="cb4-3"><a href="#cb4-3"></a>y[<span class="dv">0</span>] <span class="op">+=</span> <span class="dv">3</span></span></code></pre></div>
+<p>You will find that <code>y[0] = 5</code> <em>and</em> <code>x[0] = 5</code>. This is because you just made two variables <code>x</code> and <code>y</code> that refer to the same object! This is how all objects behave. The variable names act only as a reference. Therefore when you modified one of the variables it changed the object that both variables pointed to. This idea of only replicating a reference to an object is called a <strong>shallow copy</strong> of an object. If you wish to have a distinct <strong>deep copy</strong> of an list object you may use the <code>list.copy()</code> method as follows:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a>x <span class="op">=</span> [<span class="dv">2</span>]</span>
+<span id="cb5-2"><a href="#cb5-2"></a>y <span class="op">=</span> x.copy()</span>
+<span id="cb5-3"><a href="#cb5-3"></a>y[<span class="dv">0</span>] <span class="op">+=</span> <span class="dv">3</span></span></code></pre></div>
+<p>This will return <code>y[0] = 5</code> and <code>x[0] = 2</code>. This may not make a big difference right now, but understanding this upfront will aid your understanding of how objects behave.</p>
+<h3 id="classes">Classes</h3>
+<p>Python has a way for the programmer to define their own objects with unique behavior. These are called classes. The next exercise will help you understand how they work.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a><span class="co"># learn_classes.py</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a></span>
+<span id="cb6-3"><a href="#cb6-3"></a><span class="kw">class</span> Cat():</span>
+<span id="cb6-4"><a href="#cb6-4"></a>    species <span class="op">=</span> <span class="st">&quot;Felis catus&quot;</span></span>
+<span id="cb6-5"><a href="#cb6-5"></a>    </span>
+<span id="cb6-6"><a href="#cb6-6"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name, color, favorite_food):</span>
+<span id="cb6-7"><a href="#cb6-7"></a>        <span class="va">self</span>.name <span class="op">=</span> name</span>
+<span id="cb6-8"><a href="#cb6-8"></a>        <span class="va">self</span>.color <span class="op">=</span> color</span>
+<span id="cb6-9"><a href="#cb6-9"></a>        <span class="va">self</span>.favorite_food <span class="op">=</span> favorite_food</span>
+<span id="cb6-10"><a href="#cb6-10"></a>    </span>
+<span id="cb6-11"><a href="#cb6-11"></a>    </span>
+<span id="cb6-12"><a href="#cb6-12"></a>    <span class="kw">def</span> print_introduction(<span class="va">self</span>):</span>
+<span id="cb6-13"><a href="#cb6-13"></a>        <span class="bu">print</span>(<span class="ss">f&#39;This is </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>name<span class="sc">}</span><span class="ss">. &#39;</span>\</span>
+<span id="cb6-14"><a href="#cb6-14"></a>              <span class="ss">f&#39;He is of the species </span><span class="ch">\&#39;</span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>species<span class="sc">}</span><span class="ch">\&#39;</span><span class="ss">.&#39;</span>)</span>
+<span id="cb6-15"><a href="#cb6-15"></a>        <span class="bu">print</span>(<span class="ss">f&#39;He is a/an </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>color<span class="sc">}</span><span class="ss"> cat. &#39;</span>\</span>
+<span id="cb6-16"><a href="#cb6-16"></a>              <span class="ss">f&#39;He really likes </span><span class="sc">{</span><span class="va">self</span><span class="sc">.</span>favorite_food<span class="sc">}</span><span class="ss">!&#39;</span>)</span>
+<span id="cb6-17"><a href="#cb6-17"></a></span>
+<span id="cb6-18"><a href="#cb6-18"></a></span>
+<span id="cb6-19"><a href="#cb6-19"></a></span>
+<span id="cb6-20"><a href="#cb6-20"></a>cat1 <span class="op">=</span> Cat(<span class="st">&quot;Snowflake&quot;</span>, <span class="st">&quot;White&quot;</span>, <span class="st">&quot;Fish&quot;</span>)</span>
+<span id="cb6-21"><a href="#cb6-21"></a>cat2 <span class="op">=</span> Cat(<span class="st">&quot;Milo&quot;</span>, <span class="st">&quot;Orange&quot;</span>, <span class="st">&quot;Bacon&quot;</span>)</span>
+<span id="cb6-22"><a href="#cb6-22"></a></span>
+<span id="cb6-23"><a href="#cb6-23"></a><span class="cf">for</span> cat <span class="kw">in</span> [cat1, cat2]:</span>
+<span id="cb6-24"><a href="#cb6-24"></a>    cat.print_introduction()</span></code></pre></div>
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python learn_classes.py
+This is Snowflake. He is of the species &#39;Felis catus&#39;.
+He is a/an White cat. He really likes Fish!
+This is Milo. He is of the species &#39;Felis catus&#39;.
+He is a/an Orange cat. He really likes Bacon!
+$</code></pre>
+<p>From this exercise you should see that with the <code>class</code> keyword we are defining a new data type or a "class" of objects. Therefore each object created from the "class" template is also called an <strong>instance</strong> of that class. As I said before, in Python, everything is an object. That means that somewhere in the Python source code there must be some Python <code>class</code> definition (or some equivalent definition) that defines the structure and behavior of all Python objects.</p>
+<h3 id="defining-behavior-and-data-structures">Defining Behavior and Data Structures</h3>
+<p>It may not be obvious right now but, this structure of programming allows you to scale your programs in a very powerful way. In a class, the programmer may define any behavior he/she wants for the class of objects once and may reuse that behavior for every instance of the class. The way that behavior is defined is via <strong>methods</strong> and <strong>attributes</strong>.</p>
+<h4 id="attributes-and-the-self-variable">Attributes and the <code>self</code> variable</h4>
+<p>Any object that is contained by the class or object is considered an attribute of the class or object. This includes functions and the data members inside the class. Functions inside the class are called <strong>methods</strong> and <strong>members</strong> are generally any other objects contained in the class. These are generally referenced in code with the dot syntax (i.e. <code>object_name.attribute_name</code>). However, you may have noticed that inside the class definition you see that they are referenced using the <code>self</code> variable.</p>
+<p><code>self</code> is just a variable that could be named anything but is used by convention in Python. It is a reference to the <strong>instance</strong> of the object that is referring to the attribute. Therefore when you instantiated the cats named "Snowflake" and "Milo" when you called <code>.print_introduction</code> on both of them they produced their respective data types in the print statement. In the class definition, if one simply tried to print <code>name</code> instead of <code>self.name</code>, Python looks for a global variable called name and will throw an error if it cannot find one.</p>
+<h4 id="methods">Methods</h4>
+<p><strong>Methods</strong> are just functions defined in the class definition and operate solely within the context of the class or <strong>instances</strong> of the class. Methods are there to define how a class will behave. In fact, a class can be altered to act in all sorts of useful ways (see <a href="#Advanced-Mastery">Advanced Mastery</a> below). As a matter of good coding practice, methods should alter the class's members or return outputs of the class but should not alter other objects or classes not referred to by the class.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Experiment with how objects are handled by reference. Try doing different things with lists for example. Can you predict what different actions will do to an object?</li>
+<li>Make your own classes and experiment with what you can do. How can this make your programs cleaner? Consider the project you just did in the previous lesson. How could object-oriented programming simplify and improve your code?</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Look up operator overloading in Python and see if you can write some classes that do it. You may want to implement something like how complex numbers should act or numbers with units.</li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./25-Do%20a%20Project.html">Previous: 25-Do a Project</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./27-Inheritance%20and%20Polymorphism.html">Next: 27-Inheritance and Polymorphism</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>

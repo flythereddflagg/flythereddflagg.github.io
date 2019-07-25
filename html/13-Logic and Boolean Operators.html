@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class='typora-export os-windows' >
+<div  id='write'  class = 'is-node'>
+<!-- Navigation -->
+<hr />
+<p><a href="./12-Math%20and%20Data.html">Previous: 12-Math and Data</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./14-If%20elif%20and%20else.html">Next: 14-If elif and else</a></p>
+<hr />
+<!-- End Navigation -->
+<h1 id="logic-and-boolean-operators">13 - Logic and Boolean Operators</h1>
+<p>For this section's exercises there will be a short example that you will work in the Python interpreter instead of a Python script. Enter each command from each exercise complete them.</p>
+<h3 id="true-and-false">True and False</h3>
+<p>One of the most important concepts in programming is that of Boolean logic. On a fundamental level the computer only knows 2 things: 1 and 0, Yes and No, On and Off, True and False. Everything else in a computer must be constructed from these two things. Within this framework the computer can do many things such as make decisions. However to make a decision, the computer must be able to evaluate the truth value of everything. Therefore everything can be evaluated as True or False using the built-in <code>bool</code> function.</p>
+<p>This gives rise to a new data type, the Boolean data type. The Boolean data type can only have two values namely <code>True</code> or <code>False</code>. This makes it among the simplest and most useful of data types. By</p>
+<h4 id="try-this-out-in-the-interpreter">Try this out in the interpreter</h4>
+<p>Go to your python interpreter and try running the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a>$ python3</span>
+<span id="cb1-2"><a href="#cb1-2"></a>Python <span class="dv">3</span>.<span class="fl">6.7</span> (default, Oct <span class="dv">22</span> <span class="dv">2018</span>, <span class="dv">11</span>:<span class="dv">32</span>:<span class="dv">17</span>) </span>
+<span id="cb1-3"><a href="#cb1-3"></a>[GCC <span class="dv">8</span>.<span class="fl">2.0</span>] on linux</span>
+<span id="cb1-4"><a href="#cb1-4"></a>Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> <span class="kw">or</span> <span class="st">&quot;license&quot;</span> <span class="cf">for</span> more information.</span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="va">True</span>)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="va">True</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="va">False</span>)</span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="va">False</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="dv">0</span>)</span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="va">False</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="dv">34</span>)</span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="va">True</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="va">True</span></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="fl">0.0</span>)</span>
+<span id="cb1-16"><a href="#cb1-16"></a><span class="va">False</span></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="fl">0.001</span>)</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="va">True</span></span>
+<span id="cb1-19"><a href="#cb1-19"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="st">&quot;&quot;</span>)</span>
+<span id="cb1-20"><a href="#cb1-20"></a><span class="va">False</span></span>
+<span id="cb1-21"><a href="#cb1-21"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="st">&quot;s&quot;</span>)</span>
+<span id="cb1-22"><a href="#cb1-22"></a><span class="va">True</span></span>
+<span id="cb1-23"><a href="#cb1-23"></a><span class="op">&gt;&gt;&gt;</span> exit()</span>
+<span id="cb1-24"><a href="#cb1-24"></a>$</span></code></pre></div>
+<p>What I hope you get out of this is that, for the three data types we have covered so far, anything that is a non-empty or non-zero value will evaluate to True and empty or zero values will evaluate to False. <code>True</code> and <code>False</code> are both key words in Python to express these boolean concepts. And every data type in Python, by default, will evaluate to one or the other. In the next lesson we will explore how we can use this idea to make decisions.</p>
+<p>Another way to return the truth of something is by using the logical comparison operators.</p>
+<h3 id="comparison-operators">Comparison Operators</h3>
+<p>We will introduce another set of binary operators called comparison operators. For all these operators we will use the example of <code>x &lt;OPERATOR&gt; y</code> to demonstrate the meaning of each operator</p>
+<table>
+<thead>
+<tr class="header">
+<th>Code Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>==</code></td>
+<td>Equal to</td>
+</tr>
+<tr class="even">
+<td><code>!=</code></td>
+<td>Not equal to</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;</code></td>
+<td>Greater than</td>
+</tr>
+<tr class="even">
+<td><code>&lt;</code></td>
+<td>Less than</td>
+</tr>
+<tr class="odd">
+<td><code>&gt;=</code></td>
+<td>Greater than or equal to</td>
+</tr>
+<tr class="even">
+<td><code>&lt;=</code></td>
+<td>Less than or equal to</td>
+</tr>
+</tbody>
+</table>
+<h4 id="try-this-out-in-the-interpreter-1">Try this out in the interpreter</h4>
+<p>A few things to do while doing this exercise:</p>
+<ul>
+<li><p>Note that some of these return errors. Which ones do this and why?</p></li>
+<li><p>Read each line as you write it as such:</p>
+<ul>
+<li>"1 is equal to 2: False"</li>
+<li>"Empty quotes is equal to 0: False"</li>
+<li>etc.</li>
+</ul>
+<p>This will help you learn to think about these logical statements.</p></li>
+</ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>$ python3</span>
+<span id="cb2-2"><a href="#cb2-2"></a>Python <span class="dv">3</span>.<span class="fl">6.7</span> (default, Oct <span class="dv">22</span> <span class="dv">2018</span>, <span class="dv">11</span>:<span class="dv">32</span>:<span class="dv">17</span>) </span>
+<span id="cb2-3"><a href="#cb2-3"></a>[GCC <span class="dv">8</span>.<span class="fl">2.0</span>] on linux</span>
+<span id="cb2-4"><a href="#cb2-4"></a>Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> <span class="kw">or</span> <span class="st">&quot;license&quot;</span> <span class="cf">for</span> more information.</span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="op">==</span> <span class="dv">2</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="va">False</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;&quot;</span> <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a><span class="va">False</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">0</span> <span class="op">==</span> <span class="dv">0</span></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="va">True</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">1.0</span> <span class="op">==</span> <span class="dv">1</span></span>
+<span id="cb2-12"><a href="#cb2-12"></a><span class="va">True</span></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">!=</span> <span class="dv">2</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="va">True</span></span>
+<span id="cb2-15"><a href="#cb2-15"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;&quot;</span> <span class="op">!=</span> <span class="dv">0</span></span>
+<span id="cb2-16"><a href="#cb2-16"></a><span class="va">True</span></span>
+<span id="cb2-17"><a href="#cb2-17"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">0</span> <span class="op">!=</span> <span class="dv">0</span></span>
+<span id="cb2-18"><a href="#cb2-18"></a><span class="va">False</span></span>
+<span id="cb2-19"><a href="#cb2-19"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">&lt;</span> <span class="dv">2</span></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="va">False</span></span>
+<span id="cb2-21"><a href="#cb2-21"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">&gt;=</span><span class="dv">2</span></span>
+<span id="cb2-22"><a href="#cb2-22"></a><span class="va">True</span></span>
+<span id="cb2-23"><a href="#cb2-23"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">3</span> <span class="op">&gt;</span> <span class="dv">3</span></span>
+<span id="cb2-24"><a href="#cb2-24"></a><span class="va">False</span></span>
+<span id="cb2-25"><a href="#cb2-25"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;&quot;</span> <span class="op">==</span> <span class="st">&quot;&quot;</span></span>
+<span id="cb2-26"><a href="#cb2-26"></a><span class="va">True</span></span>
+<span id="cb2-27"><a href="#cb2-27"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;&quot;</span> <span class="op">&gt;</span> <span class="dv">3</span></span>
+<span id="cb2-28"><a href="#cb2-28"></a>Traceback (most recent call last):</span>
+<span id="cb2-29"><a href="#cb2-29"></a>  File <span class="st">&quot;&lt;stdin&gt;&quot;</span>, line <span class="dv">1</span>, <span class="kw">in</span> <span class="op">&lt;</span>module<span class="op">&gt;</span></span>
+<span id="cb2-30"><a href="#cb2-30"></a><span class="pp">TypeError</span>: <span class="st">&#39;&gt;&#39;</span> <span class="kw">not</span> supported between instances of <span class="st">&#39;str&#39;</span> <span class="kw">and</span> <span class="st">&#39;int&#39;</span></span>
+<span id="cb2-31"><a href="#cb2-31"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;&quot;</span> <span class="op">&gt;</span> <span class="st">&quot;23&quot;</span></span>
+<span id="cb2-32"><a href="#cb2-32"></a><span class="va">False</span></span>
+<span id="cb2-33"><a href="#cb2-33"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;&quot;</span> <span class="op">&lt;</span> <span class="st">&quot;23&quot;</span></span>
+<span id="cb2-34"><a href="#cb2-34"></a><span class="va">True</span></span>
+<span id="cb2-35"><a href="#cb2-35"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;23&quot;</span> <span class="op">&lt;</span> <span class="st">&quot;23&quot;</span></span>
+<span id="cb2-36"><a href="#cb2-36"></a><span class="va">False</span></span>
+<span id="cb2-37"><a href="#cb2-37"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;23&quot;</span> <span class="op">==</span> <span class="st">&quot;23&quot;</span></span>
+<span id="cb2-38"><a href="#cb2-38"></a><span class="va">True</span></span>
+<span id="cb2-39"><a href="#cb2-39"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;23&quot;</span> <span class="op">==</span> <span class="st">&quot;24&quot;</span></span>
+<span id="cb2-40"><a href="#cb2-40"></a><span class="va">False</span></span>
+<span id="cb2-41"><a href="#cb2-41"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;23&quot;</span> <span class="op">&gt;</span> <span class="st">&quot;24&quot;</span></span>
+<span id="cb2-42"><a href="#cb2-42"></a><span class="va">False</span></span>
+<span id="cb2-43"><a href="#cb2-43"></a><span class="op">&gt;&gt;&gt;</span> exit()</span>
+<span id="cb2-44"><a href="#cb2-44"></a>$</span></code></pre></div>
+<p>You can see from the results of the above exercise that some types are incompatible with others. Also note that in most cases combining numbers and strings returns a not equal condition.</p>
+<h3 id="logical-operators">Logical operators</h3>
+<p>True and False may be combined using logical operators. This allows many statements to be chained and combined in logical ways. They use the truth value and based on their logic and then return one of the values. In a more useful sense, if you only combine two Boolean values or expressions that evaluate to Boolean values you can pull some logic out of the expression.</p>
+<p>The following is pulled directly from the <a href="https://docs.python.org/3.7/library/stdtypes.html">official Python documentation</a> to help you understand the result of each operator:</p>
+<hr />
+<h4 id="boolean-operations-and-or-not">Boolean Operations — <a href="https://docs.python.org/3.7/reference/expressions.html#and"><code>and</code></a>, <a href="https://docs.python.org/3.7/reference/expressions.html#or"><code>or</code></a>, <a href="https://docs.python.org/3.7/reference/expressions.html#not"><code>not</code></a></h4>
+<p>These are the Boolean operations, ordered by ascending priority:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Operation</th>
+<th>Result</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>x or y</code></td>
+<td>if <em>x</em> is false, then <em>y</em>, else <em>x</em></td>
+<td>(1)</td>
+</tr>
+<tr class="even">
+<td><code>x and y</code></td>
+<td>if <em>x</em> is false, then <em>x</em>, else <em>y</em></td>
+<td>(2)</td>
+</tr>
+<tr class="odd">
+<td><code>not x</code></td>
+<td>if <em>x</em> is false, then <code>True</code>, else <code>False</code></td>
+<td>(3)</td>
+</tr>
+</tbody>
+</table>
+<p>Notes:</p>
+<ol>
+<li>This is a short-circuit operator, so it only evaluates the second argument if the first one is false.</li>
+<li>This is a short-circuit operator, so it only evaluates the second argument if the first one is true.</li>
+<li><code>not</code> has a lower priority than non-Boolean operators, so <code>not a == b</code> is interpreted as <code>not (a == b)</code>, and <code>a == not b</code> is a syntax error.</li>
+</ol>
+<hr />
+<h4 id="try-this-out-in-the-interpreter-2">Try this out in the interpreter</h4>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a>$ python</span>
+<span id="cb3-2"><a href="#cb3-2"></a>Python <span class="dv">3</span>.<span class="fl">7.0</span> (v3.<span class="fl">7.0</span>:1bf9cc5093, Jun <span class="dv">27</span> <span class="dv">2018</span>, <span class="dv">04</span>:<span class="dv">59</span>:<span class="dv">51</span>) [MSC v<span class="fl">.1914</span> <span class="dv">64</span> bit (AMD64)] on win32</span>
+<span id="cb3-3"><a href="#cb3-3"></a>Type <span class="st">&quot;help&quot;</span>, <span class="st">&quot;copyright&quot;</span>, <span class="st">&quot;credits&quot;</span> <span class="kw">or</span> <span class="st">&quot;license&quot;</span> <span class="cf">for</span> more information.</span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">1</span> <span class="kw">and</span> <span class="dv">2</span></span>
+<span id="cb3-5"><a href="#cb3-5"></a><span class="dv">2</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a><span class="op">&gt;&gt;&gt;</span> <span class="dv">2</span> <span class="kw">and</span> <span class="dv">1</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="dv">1</span></span>
+<span id="cb3-8"><a href="#cb3-8"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="dv">2</span>) <span class="kw">and</span> <span class="bu">bool</span>(<span class="dv">1</span>)</span>
+<span id="cb3-9"><a href="#cb3-9"></a><span class="va">True</span></span>
+<span id="cb3-10"><a href="#cb3-10"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> <span class="va">False</span></span>
+<span id="cb3-11"><a href="#cb3-11"></a><span class="va">False</span></span>
+<span id="cb3-12"><a href="#cb3-12"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> <span class="va">True</span></span>
+<span id="cb3-13"><a href="#cb3-13"></a><span class="va">True</span></span>
+<span id="cb3-14"><a href="#cb3-14"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">or</span> <span class="va">False</span></span>
+<span id="cb3-15"><a href="#cb3-15"></a><span class="va">True</span></span>
+<span id="cb3-16"><a href="#cb3-16"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> <span class="va">False</span> <span class="kw">or</span> <span class="va">True</span></span>
+<span id="cb3-17"><a href="#cb3-17"></a><span class="va">True</span></span>
+<span id="cb3-18"><a href="#cb3-18"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> (<span class="va">False</span> <span class="kw">or</span> <span class="va">True</span>)</span>
+<span id="cb3-19"><a href="#cb3-19"></a><span class="va">True</span></span>
+<span id="cb3-20"><a href="#cb3-20"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">or</span> <span class="va">False</span> <span class="kw">or</span> <span class="va">True</span></span>
+<span id="cb3-21"><a href="#cb3-21"></a><span class="va">True</span></span>
+<span id="cb3-22"><a href="#cb3-22"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> <span class="va">False</span> <span class="kw">and</span> <span class="va">True</span></span>
+<span id="cb3-23"><a href="#cb3-23"></a><span class="va">False</span></span>
+<span id="cb3-24"><a href="#cb3-24"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;&quot;</span> <span class="kw">and</span> <span class="dv">4</span></span>
+<span id="cb3-25"><a href="#cb3-25"></a><span class="co">&#39;&#39;</span></span>
+<span id="cb3-26"><a href="#cb3-26"></a><span class="op">&gt;&gt;&gt;</span> <span class="fl">3.14</span> <span class="kw">or</span> <span class="fl">0.0</span></span>
+<span id="cb3-27"><a href="#cb3-27"></a><span class="fl">3.14</span></span>
+<span id="cb3-28"><a href="#cb3-28"></a><span class="op">&gt;&gt;&gt;</span> <span class="bu">bool</span>(<span class="dv">3</span> <span class="kw">and</span> <span class="dv">4</span> <span class="kw">and</span> <span class="dv">0</span>)</span>
+<span id="cb3-29"><a href="#cb3-29"></a><span class="va">False</span></span>
+<span id="cb3-30"><a href="#cb3-30"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;cheese&quot;</span> <span class="kw">or</span> <span class="st">&quot;crackers&quot;</span></span>
+<span id="cb3-31"><a href="#cb3-31"></a><span class="co">&#39;cheese&#39;</span></span>
+<span id="cb3-32"><a href="#cb3-32"></a><span class="op">&gt;&gt;&gt;</span> <span class="st">&quot;cheese&quot;</span> <span class="kw">and</span> <span class="st">&quot;crackers&quot;</span></span>
+<span id="cb3-33"><a href="#cb3-33"></a><span class="co">&#39;crackers&#39;</span></span>
+<span id="cb3-34"><a href="#cb3-34"></a><span class="op">&gt;&gt;&gt;</span> <span class="va">True</span> <span class="kw">and</span> <span class="kw">not</span> <span class="va">False</span></span>
+<span id="cb3-35"><a href="#cb3-35"></a><span class="va">True</span></span>
+<span id="cb3-36"><a href="#cb3-36"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">not</span> <span class="va">True</span> <span class="kw">or</span> <span class="va">False</span></span>
+<span id="cb3-37"><a href="#cb3-37"></a><span class="va">False</span></span>
+<span id="cb3-38"><a href="#cb3-38"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">not</span> <span class="dv">3</span></span>
+<span id="cb3-39"><a href="#cb3-39"></a><span class="va">False</span></span>
+<span id="cb3-40"><a href="#cb3-40"></a><span class="op">&gt;&gt;&gt;</span> <span class="kw">not</span> <span class="dv">0</span></span>
+<span id="cb3-41"><a href="#cb3-41"></a><span class="va">True</span></span>
+<span id="cb3-42"><a href="#cb3-42"></a><span class="op">&gt;&gt;&gt;</span> exit()</span>
+<span id="cb3-43"><a href="#cb3-43"></a>$</span></code></pre></div>
+<p>For all of these operators, memorize their behavior and practice with them</p>
+<!--Potentially take out the results so they have to do it themselves and interpret what the results mean themselves?-->
+<h2 id="hone-your-skills">Hone your skills</h2>
+<ul>
+<li>Make your own table or a set of flash cards for each of these operators and practice predicting the result of many different comparisons, logical statements and uses of the <code>bool</code> function.</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Look at the <a href="https://docs.python.org/3.7/library/stdtypes.html">official Python documentation</a> on built-in types, focusing on the Boolean data type. Or, make your own internet search. Answer the following questions:
+<ul>
+<li>How do the equality operator <code>==</code> and the <code>is</code> operator differ?</li>
+<li>Does order matter in logical operator statements? How can you use this to your advantage?</li>
+<li>For objects that are not numbers or strings, how is the Truth value evaluated? How could you change this evaluation?</li>
+</ul></li>
+</ul>
+<!-- Navigation -->
+<hr />
+<p><a href="./12-Math%20and%20Data.html">Previous: 12-Math and Data</a> | <a href="./00-Table%20of%20Contents.html">Table of Contents</a> | <a href="./14-If%20elif%20and%20else.html">Next: 14-If elif and else</a></p>
+<hr />
+<!-- End Navigation -->
+
+</body>
+</html>
