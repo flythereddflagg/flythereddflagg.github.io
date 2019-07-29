@@ -214,11 +214,11 @@
         
             <li><a class="toctree-l3" href="#building-a-basic-project-structure">Building a Basic Project Structure</a></li>
         
-            <li><a class="toctree-l3" href="#the-apple-package">The apple package</a></li>
+            <li><a class="toctree-l3" href="#the-emails-package">The emails package</a></li>
         
             <li><a class="toctree-l3" href="#make-a-project">Make a project</a></li>
         
-            <li><a class="toctree-l3" href="#testing-with-nose">Testing with nose</a></li>
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
         
         </ul>
     
@@ -266,45 +266,85 @@
 <!-- End Navigation -->
 
 <h1 id="30-packages-and-project-structure">30 - Packages and Project structure</h1>
-<p>This section is low on code but introduces some powerful features of Python that will enable you to scale your code to do large, maintainable projects. Within the next several lessons you will be doing another project. This time your project will be object-oriented. You will use a class structure to do something interesting. You should start thinking about what you want to do right now. So far you have done a project in which you probably made a structure of global variables (i.e. variables that were defined outside of any function or class) and used functions to act on those variables. This project will focus on using the object-oriented features of Python to make the best and most robust piece of software that you can.</p>
+<p>This section is low on code but introduces some powerful features of Python that will enable you to scale your code to do large, maintainable projects. Within the next few lessons you will be doing another project. This time your project will be object-oriented. You will use a class structure to do something interesting. You should start thinking about what you want to do right now. So far you have done a project in which you probably made a structure of global variables (i.e. variables that were defined outside of any function or class) and used functions to act on those variables. This project will focus on using the object-oriented features of Python to make the best and most robust piece of software that you can.</p>
 <p>However, before we can write these larger codes we must learn how to structure projects to  organize our code. The following exercise will walk you through building a basic structure for your project.</p>
 <h3 id="building-a-basic-project-structure">Building a Basic Project Structure</h3>
 <p>Go to your CLI, navigate to a place where you will build your project build the following project structure using the CLI commands you have learned. Enter the following commands:</p>
-<pre><code class="bash">$ mkdir apple
-$ mkdir ./apple/apple ./apple/bin ./apple/docs ./apple/tests
-$ touch ./apple/README.md
-$ touch ./apple/apple/__init__.py ./apple/tests/__init__.py
-$ touch ./apple/bin/placeholder.txt ./apple/docs/placeholder.txt
-$ ls -R ./apple/
+<p>For Linux and Mac:</p>
+<pre><code class="bash">$ mkdir emails
+$ mkdir ./emails/emails ./emails/bin ./emails/docs ./emails/tests
+$ touch ./emails/README.md
+$ touch ./emails/emails/__init__.py ./emails/tests/__init__.py
+$ touch ./emails/bin/placeholder.txt ./emails/docs/placeholder.txt
+$ ls -R ./emails/
+</code></pre>
+
+<p>For windows:</p>
+<pre><code class="powershell">&gt; mkdir emails
+&gt; mkdir ./emails/emails 
+&gt; mkdir ./emails/bin 
+&gt; mkdir ./emails/docs 
+&gt; mkdir ./emails/tests
+&gt; New-Item ./emails/README.md
+&gt; New-Item ./emails/emails/__init__.py 
+&gt; New-Item ./emails/tests/__init__.py
+&gt; New-Item ./emails/bin/placeholder.txt
+&gt; New-Item ./emails/docs/placeholder.txt
+&gt; ls -R ./emails/
 </code></pre>
 
 <p>When you are done your structure should look like this:</p>
-<pre><code>./apple/:
-    apple
+<pre><code>./emails/:
+    emails
     bin
     docs
     tests
     README.md
 
-    ./apple/bin:
+    ./emails/bin:
         placeholder.txt
 
-    ./apple/docs:
+    ./emails/docs:
         placeholder.txt
 
-    ./apple/apple:
+    ./emails/emails:
         __init__.py
 
-    ./apple/tests:
+    ./emails/tests:
         __init__.py
 </code></pre>
 
-<h3 id="the-apple-package">The <code>apple</code> package</h3>
-<p>You have just created project called <code>apple</code> that contains two packages called <code>apple</code> and <code>tests</code>. Both of these packages contain an <code>__init__.py</code> file. This fiile </p>
+<h3 id="the-emails-package">The <code>emails</code> package</h3>
+<p>You have just created project called <code>emails</code> that contains two packages called <code>emails</code> and <code>tests</code>. Both of these packages contain an <code>__init__.py</code> file. This file tells python to treat the folder that contains it as its own module. Therefore, any code in <code>./emails/emails/__init__.py</code> may be imported from emails as: <code>from emails import a_thing</code> where <code>a_thing</code> is any class, function or variable defined inside of the <code>__init__.py</code> script. Other Python scripts may be placed in the folder as well (regardless of the presence of an <code>__init__.py</code> script) and classes functions or variables may be imported as: <code>from emails.module import a_thing</code> where <code>module</code> corresponds to <code>module.py</code> inside the folder. The <code>emails</code> folder is where we want to put all of our Python source code for the project. The <code>tests</code> package is where we can write automated tests for our <code>emails</code> package. We will work mainly with these two folders for this section. </p>
+<p>The other two folders are <code>bin</code> and <code>docs</code> and contain binary or executable files we wish to include with our code and documentation about our code respectively. The structure we have just made is not the only or "correct" way to structure a project but it is a convenient way to start a project. For our purposes it is a good idea not to have an empty folder so we have put a <code>placeholder.txt</code> file in each empty folder.</p>
 <h3 id="make-a-project">Make a project</h3>
-<p>adfs</p>
-<h3 id="testing-with-nose">Testing with nose</h3>
-<p>adsf</p>
+<p>Now that we have our project 'skeleton' in place, copy your working code from the modules section into the <code>emails</code> folder. Because you will run this in the context of the <code>emails</code> package make sure you change the following imports to reflect this. Change:</p>
+<pre><code class="python">from database_manager import DatabaseManager
+</code></pre>
+
+<p>to:</p>
+<pre><code class="python">from emails.database_manager import DatabaseManager
+</code></pre>
+
+<p>This will ensure that you are importing from the right environment. If you are using your modules in a project structure you will need to make sure they are referenced correctly or your project will break.</p>
+<p>Test your project by opening a python prompt in your project's root directory and executing the following commands:</p>
+<pre><code class="python">$ pwd
+.../path/to/project/emails/
+$ python
+Python 3.x.x ...
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; from emails.user_interface import run_ui_test
+&gt;&gt;&gt; run_ui_test()
+</code></pre>
+
+<p>Your project should run as it always has.</p>
+<p>If the above test worked, congradulations! You have yourself a working project! You can add code to the  <code>emails</code> folder or documentation to the <code>docs</code> folder as you see fit. But for our purposes, the real utiltiy of the project structure is the abliity you have to automatically test your project with a little tool called <code>nose</code>.</p>
+<p>This will be covered in the next section.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>if you haven't already, now would be a good time to turn the documentation in your docstrings into a human readable manual. If you are unsure where to start, try using <a href="https://docs.python.org/3.7/library/pydoc.html">pydoc</a> and invoke it by using <code>python -m pydoc</code>. (Enter <code>python --help</code> to get an idea of how this works).</li>
+<li>Begin building your own project! Have an idea you want to see? Start by building a similar project structure as above but replace every instance of <code>emails</code> with the name of your own project. Begin fleshing out what you want to see from this project. </li>
+</ul>
 <!-- Navigation -->
 
 <hr />

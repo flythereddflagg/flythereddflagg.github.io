@@ -136,7 +136,7 @@ building a foundation on which you can move mountains.
 
 ### Learning to feed yourself
 
-I will sometimes have you read [Official Python documentation](https://docs.python.org/3.7/index.html) or visit other websites or resources. I do this for a number of reasons but most importantly, I want you to be able to teach yourself everything this book cannot. It would be my goal that after you read and learn everything in this book, you can put it down and never pick it up again because you have learned how to find answers to your *own* questions. Doing this will make you that much more effective as a programmer and in everything you do. 
+I will sometimes have you read [Official Python documentation](https://docs.python.org/3.7/index.html) or visit other websites or resources. I do this for a number of reasons but most importantly, I want you to be able to teach yourself everything this book cannot. It would be my goal that, after you have read and learned everything in this book, you can put it down and never pick it up again because you have learned how to find answers to your *own* questions. Doing this will make you that much more effective as a programmer and in everything you do. 
 
 **Remember:** Whenever I tell you to search for something on the Internet, remember that the best way to use a search engine is to type "Python" and then write what you are looking for. This will be a boon to your learning as you go along.
 

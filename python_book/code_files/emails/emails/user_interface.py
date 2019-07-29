@@ -1,4 +1,4 @@
-from database_manager import DatabaseManager
+from emails.database_manager import DatabaseManager
 import os
 
 if os.name == 'nt':

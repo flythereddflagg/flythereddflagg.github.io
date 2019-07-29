@@ -207,9 +207,13 @@
     
         <ul>
         
-            <li><a class="toctree-l3" href="#doc-strings">Doc Strings</a></li>
+            <li><a class="toctree-l3" href="#docstrings">Docstrings</a></li>
         
-            <li><a class="toctree-l3" href="#the-help-function">The help function</a></li>
+            <li><a class="toctree-l3" href="#the-help-function">The help function</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone your skills</a></li>
+        
+            <li><a class="toctree-l3" href="#advanced-mastery">Advanced Mastery</a></li>
         
         </ul>
     
@@ -263,8 +267,8 @@
 
 <h1 id="29-comments-and-code-documentation">29 - Comments and Code Documentation</h1>
 <p>As you were implementing the project in the previous section, you were guided by the multi-line comment strings under each class or function label. I put those there to guide you but also to introduce you to a style of commenting and documentation used among professionals. </p>
-<h3 id="doc-strings">Doc Strings</h3>
-<p>The "string literals" or multi-line comments under each labels are recognized by python as documentation strings or "doc strings" for short. You will see these commonly in professional code and you may also use them at the beginning of a module to give general information about the module.</p>
+<h3 id="docstrings">Docstrings</h3>
+<p>The "string literals" or multi-line comments under each labels are recognized by python as documentation strings or "docstrings" for short. You will see these commonly in professional code and you may also use them at the beginning of a module to give general information about the module.</p>
 <p>The following example will set out some use cases. Don't bother to write this out just read and understand it.</p>
 <pre><code class="python">&quot;&quot;&quot;
 file: docstrings.py
@@ -342,7 +346,7 @@ if __name__ == &quot;__main__&quot;:
     #help(Dummy.slide)
 </code></pre>
 
-<h3 id="the-help-function">The <code>help</code> function</h3>
+<h3 id="the-help-function">The <code>help</code> function</h3>
 <p>You will see at the bottom of the <code>docstrings.py</code> script there are several lines commented out. Copy-paste this script into a separate text file and uncomment those lines one by one. What do they do? You will see the docstrings show up as you do. This can also be done in the interactive prompt. Try the following commands and notice the output.</p>
 <pre><code class="python">$ python
 Python 3.x.x ...
@@ -355,6 +359,15 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 
 <p>For more information just type <code>help()</code> into the prompt. This will turn on the interactive help. This functionality is used by Python programmers everywhere to help the user learn the API. If you need information on a class or function you have imported this will give you what you need.</p>
 <p>I have introduced this feature now instead of earlier for a few reasons. Before using the feature, understanding classes and docstrings will help you understand how to use this feature and implement it in your own projects. Therefore from here on out, I expect you to include clear documentation for all your modules, classes and functions.</p>
+<h2 id="hone-your-skills">Hone your skills</h2>
+<ul>
+<li>Go back over some of the scripts and projects you have done so far in the course. Add docstrings to them so they can be used with the <code>help</code> function.</li>
+<li>Look up how you can generate web documentation from your docstrings using tools like <a href="https://docs.python.org/3.7/library/pydoc.html">pydoc</a>, <a href="http://www.sphinx-doc.org/en/master/">sphinx</a> or <a href="https://readthedocs.org/">Read the Docs</a>. See if you can find some other tools to help you do this. (There are many more.)</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Make a full website from the documentation you pull from your docstrings. You do not have to serve it but make it useable for a website format.</li>
+</ul>
 <!-- Navigation -->
 
 <hr />

@@ -11,9 +11,9 @@
 
 As you were implementing the project in the previous section, you were guided by the multi-line comment strings under each class or function label. I put those there to guide you but also to introduce you to a style of commenting and documentation used among professionals. 
 
-### Doc Strings
+### Docstrings
 
-The "string literals" or multi-line comments under each labels are recognized by python as documentation strings or "doc strings" for short. You will see these commonly in professional code and you may also use them at the beginning of a module to give general information about the module.
+The "string literals" or multi-line comments under each labels are recognized by python as documentation strings or "docstrings" for short. You will see these commonly in professional code and you may also use them at the beginning of a module to give general information about the module.
 
 The following example will set out some use cases. Don't bother to write this out just read and understand it.
 
@@ -94,7 +94,7 @@ if __name__ == "__main__":
     #help(Dummy.slide)
 ```
 
-### The `help` function
+### The `help` function
 
 You will see at the bottom of the `docstrings.py` script there are several lines commented out. Copy-paste this script into a separate text file and uncomment those lines one by one. What do they do? You will see the docstrings show up as you do. This can also be done in the interactive prompt. Try the following commands and notice the output.
 
@@ -111,6 +111,15 @@ Type "help", "copyright", "credits" or "license" for more information.
 For more information just type `help()` into the prompt. This will turn on the interactive help. This functionality is used by Python programmers everywhere to help the user learn the API. If you need information on a class or function you have imported this will give you what you need.
 
 I have introduced this feature now instead of earlier for a few reasons. Before using the feature, understanding classes and docstrings will help you understand how to use this feature and implement it in your own projects. Therefore from here on out, I expect you to include clear documentation for all your modules, classes and functions.
+
+## Hone your skills
+
+- Go back over some of the scripts and projects you have done so far in the course. Add docstrings to them so they can be used with the `help` function.
+- Look up how you can generate web documentation from your docstrings using tools like [pydoc](https://docs.python.org/3.7/library/pydoc.html), [sphinx](http://www.sphinx-doc.org/en/master/) or [Read the Docs](https://readthedocs.org/). See if you can find some other tools to help you do this. (There are many more.)
+
+## Advanced Mastery
+
+- Make a full website from the documentation you pull from your docstrings. You do not have to serve it but make it useable for a website format.
 
 <!-- Navigation -->
 
