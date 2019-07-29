@@ -17,6 +17,8 @@ The Redd Python Book is a book I am writing to make a free resource to learn pyt
 
 [Input](https://github.com/flythereddflagg/flythereddflagg.github.io/issues) and [contributions](https://github.com/flythereddflagg/flythereddflagg.github.io/pulls) welcome!
 
+
+
 Go to the [Table of Contents](./00-Table-of-Contents.md) to start reading!
 
 ![](.//media/Cover.png)

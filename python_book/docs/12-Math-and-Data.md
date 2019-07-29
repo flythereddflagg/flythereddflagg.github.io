@@ -79,9 +79,9 @@ This is a demonstration of binary math operators and assignment operators. Both 
 
  `z = (((((z + x - x) * x) ** x) / x) // x) % x`,
 
-`z = (z * x)**x / x // x % x` or
+`z = (z * x)**x / x // x % x` 
 
-$z = modulo(\frac{(zx)^x}{x} // x, x)$
+or $$z = modulo(\frac{(zx)^x}{x} // x, x)$$
 
 We will explain all of this in this lesson.
 
