@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>15. Errors Exceptions and Bugs - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "15. Errors Exceptions and Bugs";
+    var mkdocs_page_input_path = "15-Errors-Exceptions-and-Bugs.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">15. Errors Exceptions and Bugs</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#15-errors-exceptions-and-bugs">15 - Errors, Exceptions and Bugs</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#errors-and-exceptions">Errors and Exceptions</a></li>
+        
+            <li><a class="toctree-l3" href="#bugs-and-debugging">Bugs and debugging</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+            <li><a class="toctree-l3" href="#advanced-mastery">Advanced Mastery</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>15. Errors Exceptions and Bugs</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../14-If-elif-and-else/">Previous: 14-If elif and else</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../16-File-Reading-and-Writing/">Next: 16-File Reading and Writing</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="15-errors-exceptions-and-bugs">15 - Errors, Exceptions and Bugs</h1>
+<p>We are going to "break" Python in a lot of ways in this section. Your assignment for this section is to fix all the problems in the following script. For the purposes of this exercise, here is how you should go about doing this:</p>
+<ul>
+<li>Write out the code exactly as it appears as always</li>
+<li>Try to run it</li>
+<li>Each time it breaks or throws an error, fix the error</li>
+<li>Continue running the script and fixing each error that comes up until the script runs without any errors</li>
+</ul>
+<pre><code class="python"># errors.py
+
+fav_number = input(&quot;Please enter your favorite number: &quot;
+
+fav_number = float(fav_number)
+
+# there is a line of code missing here
+
+# pi is the same as π and should have a value of 3.14
+if fav_number &gt; pi
+    print(&quot;Your number is bigger than pi!&quot;)
+else:
+    print(&quot;Your number is less than or equal to pi!&quot;)
+
+print(&quot;You can print all sorts of &quot;numbers&quot; given by the user.&quot;)
+</code></pre>
+
+<p><strong>Here is what should happen</strong></p>
+<p>This is what should happen as you run it. You should be fixing the problems with the script between each time you attempt to run it.</p>
+<pre><code class="bash">$ python3 errors.py 
+  File &quot;errors.py&quot;, line 5
+    fav_number = float(fav_number)
+             ^
+SyntaxError: invalid syntax
+$ python3 errors.py 
+  File &quot;errors.py&quot;, line 5
+    fav_number = float(fav_number)
+             ^
+SyntaxError: invalid syntax
+$ python3 errors.py 
+  File &quot;errors.py&quot;, line 9
+    if fav_number &lt; pi
+                     ^
+SyntaxError: invalid syntax
+$ python3 errors.py 
+  File &quot;errors.py&quot;, line 14
+    print(&quot;You can print all sorts of &quot;numbers&quot; given by the user.&quot;)
+                                             ^
+SyntaxError: invalid syntax
+$ python3 errors.py 
+  File &quot;errors.py&quot;, line 14
+    print(&quot;You can print all sorts of \&quot;numbers&quot; given by the user.&quot;)
+                                                     ^
+SyntaxError: invalid syntax
+$ python3 errors.py 
+Please enter your favorite number: 23
+Traceback (most recent call last):
+  File &quot;errors.py&quot;, line 9, in &lt;module&gt;
+    if fav_number &lt; pi:
+NameError: name 'pi' is not defined
+$ python3 errors.py 
+Please enter your favorite number: 23
+Your number is less than or equal to pi!
+You can print all sorts of &quot;numbers&quot; given by the user.
+$ python3 errors.py 
+Please enter your favorite number: 23
+Your number is bigger than pi!
+You can print all sorts of &quot;numbers&quot; given by the user.
+$ python3 errors.py 
+Please enter your favorite number: 23d
+Traceback (most recent call last):
+  File &quot;errors.py&quot;, line 5, in &lt;module&gt;
+    fav_number = float(fav_number)
+ValueError: could not convert string to float: '23d'
+$ 
+</code></pre>
+
+<h3 id="errors-and-exceptions">Errors and Exceptions</h3>
+<p>I am using the term "error" loosely here. In reality, there was a time when an error was the computer equivalent of certain death. You see, Python has all sorts of protections and carefully constructed walls up to protect the programmer from him or herself. But it wasn't always this way. Older languages such as C (especially in their earlier years) were perfectly happy to let you crash your entire computer. (It turns out that you could also destroy your hardware too but that's another can of worms we are not getting into here.) From the stand point of these programming languages, an error is a death sentence, at least, for the program in which it occurs. Not to mention, there were potentially a lot of weird side effects from a program that just stopped running unexpectedly.</p>
+<p>To deal with the problems that this caused, languages like C++ introduced the concept of an "exception" in which an error could be caught and handled without breaking the program or computer. In Python, there are no such things as "errors", at least in the sense that is described above. Everything is an exception. This means that Python is a relatively forgiving language. You can put any amount of junk in there and generally it will keep you from causing major problems. In fact as you have seen by now, Python does everything it can to help you understand what went wrong and sometimes even tells you how you can fix it.</p>
+<p>I mentioned in an earlier section that "There is no such thing as perfect code". I mean it. Even when you write the simplest programs there are hundreds if not thousands of little things that have to go right for you to get a desired result. </p>
+<p>And I want you to understand this now as well. You will make mistakes. This doesn't necessarily make you a bad programmer. Mistakes are almost inevitable. What I want you to get from this lesson is to not fear making mistakes and to know how to fix them when you make them. To that end we will now go over the kinds of exceptions and errors you will run into and how they can be fixed.</p>
+<h4 id="syntax-errors">Syntax Errors</h4>
+<p><em>When Python says, "I have no idea what you are saying."</em></p>
+<p>This is the simplest problem to fix and is also the most common mistake  most programmers make. Syntax errors occur when you make mistakes such as forgetting to close parentheses. When you make these mistakes Python cannot even understand what you are telling it to do.</p>
+<p>When you run a command on the CLI like <code>$ python a_script.py</code>, Python first passes over the whole script file scanning for syntax errors. Before running any code Python has to make sure that you're giving it valid Python code to parse and run. Once this is done, it begins executing the script line by line until the file ends or an exception is thrown. Therefore you may have noticed that none of your script ran until you fixed everything that was considered a <code>Syntax Error</code>.  (See "Hone Your Skills" for more on this subject.)</p>
+<h4 id="exceptions">Exceptions</h4>
+<p><em>When Python says, "I know what you're saying but I can't do that."</em></p>
+<p>Once Python starts executing code there are many things that can go wrong. Mostly, these consist of you asking Python to do things it was not designed to do. An obvious example is when you attempt to divide by 0 in Python. You can try this by opening the Python interactive prompt and typing <code>&gt;&gt;&gt; 1/0</code>. This error occurs because you are telling Python "Divide 1 by 0" to which Python replies "I have no idea how to do that," and throws an exception. The programmer has to be aware of what these exceptions mean and how to handle them.  (See "Hone Your Skills" for more on this subject.)</p>
+<h4 id="warnings">Warnings</h4>
+<p><em>Soft exceptions. Python says, "I can do that but you're going to have a bad time."</em></p>
+<p>A warning is like an exception but it doesn't stop the script execution. Generally, you will see warnings when you are getting close to the limits of what Python can do or Python couldn't do <em>exactly</em> what you wanted.</p>
+<p>There are many different Syntax Errors, Exceptions and Warnings that are built in to python. It is a good idea to learn about as many as you can. (See "Hone Your Skills" for more on this subject.)</p>
+<h4 id="logic-errors">Logic errors</h4>
+<p><em>When it's not Python it's you. You are not doing what you think you are doing</em></p>
+<p>Did you notice that I put the wrong comparison operator on the line that says <code>if fav_number &lt; 3.14</code>? You should have realized that the wrong operator was being used and switched it for <code>&gt;</code>. This is an example of a logic error, the hardest kind of error to detect and fix. This is mainly because Python has no idea anything is going wrong. Python is only executing the commands you gave it. If you give Python the wrong commands you cannot expect it to give you the right result.Later on, you will get a chance to make and fix your own logic errors.</p>
+<h4 id="user-errors">User Errors</h4>
+<p><em>You were not prepared for the tidal wave of junk coming your way.</em></p>
+<p>Users are stupid. Repeat that 3 times. Get it tattooed on your forehead. Engrave it in your grave stone. One thing to always remember about using the <code>input</code> function is that when you put that in your code you are asking for your program to be abused. You must be ready to handle the situation whatever that may be. A few examples are when you want a number but the user gives you letters or when you want a certain word but the users gives you that word misspelled.</p>
+<p>With all that said, we will cover how to deal with bad user input in later lessons. But for now just understand that you have no guarantee what your user will provide as input. We saw this in the output for <code>errors.py</code> when the user input <code>23d</code> for their favorite number. The error happened when Python tried to turn the the string <code>"23d"</code>  into a number. Python didn't know what to do with it and threw an exception.</p>
+<h3 id="bugs-and-debugging">Bugs and debugging</h3>
+<p>There is a story that you can read in detail <a href="https://en.wikipedia.org/wiki/Software_bug#Etymology">here</a>. The story goes that in one of the earliest computers a system failure occurred when a moth got stuck inside the computer. Since then, the terms "bugs" and "debugging" are a catch-all terms for exceptions and logic errors in a program and the process of identifying and fixing these errors respectively. Much of what programmers do involves debugging programs. </p>
+<p>As I noted above, the hardest thing to fix is logic errors. Later we will go much more into detail about debugging such errors. However for the purposes of lesson, the above strategy of running and fixing until all the errors disappear is sufficient. Just note for now that this is not the only way nor necessarily the best way of debugging.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Go to the <a href="https://docs.python.org/3/tutorial/errors.html">Python Documentation</a>  on errors and exceptions and learn about as many of them as you can. How can you avoid each type of exception? If you come to one that you don't understand don't worry, you'll understand more as you go along.</li>
+<li>Research defensive programming and test-driven development. How do these practices improve code?</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>
+<p>Research and begin to learn how to use the <a href="https://docs.python.org/3/library/pdb.html">Python Debugger</a>. This will be more useful for more for larger and more complex programs.</p>
+</li>
+<li>
+<p>Research debugging strategies and begin to implement them in your programs.</p>
+</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../14-If-elif-and-else/">Previous: 14-If elif and else</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../16-File-Reading-and-Writing/">Next: 16-File Reading and Writing</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../16-File-Reading-and-Writing/" class="btn btn-neutral float-right" title="16. File Reading and Writing">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../14-If-elif-and-else/" class="btn btn-neutral" title="14. If elif and else"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../14-If-elif-and-else/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../16-File-Reading-and-Writing/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

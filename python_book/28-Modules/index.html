@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>28. Modules - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "28. Modules";
+    var mkdocs_page_input_path = "28-Modules.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">28. Modules</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#28-modules">28 - Modules</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#the-email-database-manager">The Email Database Manager</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+            <li><a class="toctree-l3" href="#advanced-mastery">Advanced Mastery</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>28. Modules</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27-Inheritance and Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29-Comments and Code Documentation</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="28-modules">28 - Modules</h1>
+<p>In this section we will explore how to connect python files together and make them work together. Also included in this section is an opportunity to get used to using classes and do more object oriented  programming.  Each file in Python is sometimes called a module. A module is simply a python file you can import and use its contents. You used some of the standard modules or libraries in <a href="../23-Imports/">the section about imports</a>.</p>
+<p>In this section we will begin learning how to build our own packages or libraries by connecting two modules together. In a later section, we will take what we accomplish here and make a complete (albeit simple) package that could be made into a distributable software. These will also be used in the next sections so <strong>make sure you save these files for later</strong>.</p>
+<h3 id="the-email-database-manager">The Email Database Manager</h3>
+<p>The following are two files that you will copy-paste into separate text files. The names of these files are indicated at the top. These files serve as a sort of skeleton of a project you must complete using all you have learned so far. Take your time and get this project working as well as you possibly can. As always, the more you put into this the more you will get out of the experience. More specific information about the files is given below. Many of the same principles from your first project apply here. </p>
+<p>I have left multi-line comments under each label to guide your implimentation of this project. Do not delete these as these are the subject of the next section.</p>
+<h4 id="the-database-manager-file">The Database Manager File</h4>
+<pre><code class="python"># database_manager.py
+import json
+
+
+class DatabaseManager():
+    &quot;&quot;&quot;
+    Manages all aspects of the database including how and where data are stored.
+    This database is contact list consisting of a collection of names with
+    corresponding phone numbers and email addresses. This may be implimented as a
+    dictionary (which sorts the list automatically) or a list. The exact structure 
+    of the database is up to you but it might be a good idea to find out how others
+    have done first.
+    &quot;&quot;&quot;
+    def __init__(self, filename):
+        &quot;&quot;&quot;
+        Loads the database based on the passed in filename. The database should
+        come from a .json file and be stored in the class as a dictionary. This
+        should call self.load_database() as its last step.
+        &quot;&quot;&quot;
+        pass
+
+
+    def load_database(self):
+        &quot;&quot;&quot;
+        Loads the database from a .json file using Python's built in json 
+        package. If the filename does not exist it should make an empty database
+        and call self.save_database() to write the new database.
+        &quot;&quot;&quot;
+        pass
+
+
+    def save_database(self):
+        &quot;&quot;&quot;
+        Saves the database to a .json file using Python's built-in json package.
+        This should be called any time the database is altered.
+        &quot;&quot;&quot;
+        pass
+
+
+    def add_item(self, entry):
+        &quot;&quot;&quot;
+        Adds and organizes an 'entry' consisting of an name, phone number and 
+        email to the database it then saves the database.
+        &quot;&quot;&quot;
+        pass
+
+
+    def remove_item(self, name):
+        &quot;&quot;&quot;
+        Removes an entry with ID 'name' from the database and then saves 
+        the database.
+        &quot;&quot;&quot;
+        pass
+
+
+    def get_database(self):
+        &quot;&quot;&quot;
+        Returns a reference or a copy of the database in some form to be 
+        used elsewhere.
+        &quot;&quot;&quot;
+        pass
+
+
+    def __repr__(self):
+        &quot;&quot;&quot;
+        Returns a string representation of the database. With this, the database
+        may be printed or otherwise represented.
+        &quot;&quot;&quot;
+        pass
+
+
+
+def test_dbman():
+    &quot;&quot;&quot;
+    A test function to ensure the database class performed as expected
+    &quot;&quot;&quot;
+    pass
+
+
+if __name__ == &quot;__main__&quot;:
+    test_dbman()
+</code></pre>
+
+<p>This file implements a class that will manage the database. The user interface class must have a reference to an instance of this class in the form of a class variable inside the <code>UserInterface</code> object (i.e. <code>self.dbman</code>) so that it can access all its methods. For this exercise you may use any format you wish. However, for this simple example I recommend using JavaScript Object Notation or JSON. I recommend this because Python has an excellent JSON library for storing data and JSON conveniently translates to common python objects such as dictionaries, lists, strings etc. You can learn how to use both the load and save features by looking at the corresponding Python documentation <a href="https://docs.python.org/3/library/json.html#basic-usage">here</a> and reading about <code>json.load()</code> and <code>json.dump()</code>. The documentation strings under each label explain what should be implemented. Feel free to use your own creativity and what you have learned to implement this class. Finally, do not hesitate to add any methods or  make changes to names as you see fit. The <code>test_dbman()</code> function is there to allow you to test the class by itself before using it in the user interface. </p>
+<h4 id="the-user-interface-file">The User Interface File</h4>
+<pre><code class="python"># user_interface.py
+from database_manager import DatabaseManager
+
+
+class UserInterface():
+    &quot;&quot;&quot;
+    Allows the user to access and use the features of the database without 
+    having to know how to program.
+    The user should be allowed to do a few basic things:
+     - view the database
+     - add an entry to the database
+     - remove an entry from the database
+     - export the database to a human-readable text file
+     - exit the program
+
+    Provided the user can do these thing easily and reliably, the program is
+    successful.
+    &quot;&quot;&quot;
+
+    def __init__(self, dbman):
+        &quot;&quot;&quot;
+        sets up the UI and sets the self.dbman = dbman so the database may be
+        accessed.
+        &quot;&quot;&quot;
+        pass
+
+
+    def mainloop(self):
+        &quot;&quot;&quot;
+        Runs the mainloop of the program. This should include the following
+        steps:
+            1 - display information
+            2 - prompt the user for input
+            3 - process the input to get new information to display
+
+        This also must exit the program when the user commands.
+        &quot;&quot;&quot;
+        pass
+
+
+    def display(self):
+        &quot;&quot;&quot;
+        gets and displays information as given by the self.execute function.
+        &quot;&quot;&quot;
+        pass
+
+
+    def get_input(self):
+        &quot;&quot;&quot;
+        Accepts user input by calling the built-in input() function
+        &quot;&quot;&quot;
+        pass
+
+
+    def execute(self):
+        &quot;&quot;&quot;
+        Uses the information form user input to execute the program including
+        accessing self.dbman to use database commands.
+        &quot;&quot;&quot;
+        pass
+
+
+    def export(self, filename):
+        &quot;&quot;&quot;
+        Writes the database to a file pointed to by the variable 'filename'.
+        May use a string representation of the database.
+        &quot;&quot;&quot;
+        pass   
+
+
+def run_ui_test():
+    &quot;&quot;&quot;
+    This runs a UI test if we run it
+    as the main Python program
+    &quot;&quot;&quot;
+    db_manager = DatabaseManager('data.json')
+    ui = UserInterface(db_manager)
+    ui.mainloop()
+
+if __name__ == '__main__':
+    run_ui_test()
+
+</code></pre>
+
+<p>This file uses the <code>DatabaseManager</code> class to access the JSON files in a simple way. The user interface should contain a main-loop structure explained in the <a href="../25-Do-a-Project/">Do a Project</a> section. Try to make the user interface as intuitive and easy to use as possible. Again, the documentation strings under each label explain what should be implemented. Also as above, use your own creativity and what you have learned and add any methods or changes as you see fit. The <code>run_ui_test()</code> function is there to initiate the program. </p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<p>Once you have finished the main objective of this exercise you should have a working database program. Modify the program in the following ways:</p>
+<ul>
+<li>Add user interface features to always display the database on screen or only display it when it makes sense.</li>
+<li>
+<p>Add error messages and make helpful info be printed out when the user gives bad input.</p>
+</li>
+<li>
+<p>Add home and work versions of emails and phone numbers so that multiple emails and phone numbers may be assigned to one person.</p>
+</li>
+<li>Add options to the UI to allow different formats to be exported.</li>
+<li>Make a new type of database and implement it with your existing user interface. For example, this could be a car database using code from the previous sections.</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Look up the <code>curses</code> module in Python and use it to make a more advanced and easy-to-use user interface in the CLI.</li>
+<li>Look up <code>python tkinter</code> and begin learning how to build a non-CLI user interface. Use what you have learned to make a better UI for the database.</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27-Inheritance and Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29-Comments and Code Documentation</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../29-Comments-and-Code-Documentation/" class="btn btn-neutral float-right" title="29. Comments and Code Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../27-Inheritance-and-Polymorphism/" class="btn btn-neutral" title="27. Inheritance and Polymorphism"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../27-Inheritance-and-Polymorphism/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../29-Comments-and-Code-Documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>23. Imports - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "23. Imports";
+    var mkdocs_page_input_path = "23-Imports.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">23. Imports</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#23-imports">23 - Imports</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#imports">Imports</a></li>
+        
+            <li><a class="toctree-l3" href="#standard-libraries">Standard Libraries</a></li>
+        
+            <li><a class="toctree-l3" href="#getting-more-libraries-and-packages">Getting More Libraries and Packages</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>23. Imports</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../22-Try-Except/">Previous: 22-Try Except</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../24-Reading-Code/">Next: 24-Reading Code</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="23-imports">23 - Imports</h1>
+<p>This is the last concept we will cover that I would consider the "basics" of Python and programming in general. Up to now, we have been using only the built-in functionality of Python. This is, in fact, a very limited view of what Python can do. To get the full power and utility of Python, we can use libraries of code that other programmers have written to do all sorts of complex and powerful tasks.</p>
+<p>In this lesson we will introduce many different tools that you may want to use. While going through the exercises in this lesson do not worry about learning everything there is to know about each set of tools. The point of this lesson is to get you familiar with how to get what you need for programming.</p>
+<p>With that said let's start!</p>
+<pre><code class="python"># import_practice.py
+
+import os
+from math import sin, log, pi
+from random import random
+import csv
+import datetime as dt
+
+# os example
+print(&quot;Python doing: ls&quot;)
+for root, dirs, files in os.walk(&quot;.&quot;):
+    print(&quot;-&quot; * 20)
+    print(&quot;Folder Name:&quot;, root, &quot;\n----&quot;)
+    print(&quot;Sub-folders:&quot;)
+    for directory in dirs:
+        print(&quot;\t&quot;, directory)
+
+    print(&quot;---\nFiles:&quot;)
+    for file in files:
+        print(&quot;\t&quot;, file)
+    print(&quot;&quot;)
+
+print(&quot;-&quot; * 20)
+
+
+# math example
+print(&quot;sin(\u03C0/2) =&quot;, sin(pi/2))
+print(&quot;ln(23)   =&quot;, round(log(24), 2))
+
+
+# random example
+def gen_random_matrix(size):
+    &quot;&quot;&quot;
+    Returns a 2D matrix (a.k.a. a list of lists)
+    of shape &quot;size X size&quot; with elements generated 
+    having random values between 0 and 1
+    &quot;&quot;&quot;
+    matrix = []
+    for row_index in range(size):
+        row = []
+        for element in range(size):
+            row.append(random())
+        matrix.append(row)
+    return matrix
+
+
+# csv example
+with open(&quot;data.csv&quot;, 'w', newline=&quot;&quot;) as f:
+    writer = csv.writer(f)
+    writer.writerows(gen_random_matrix(3))
+
+
+# datetime example
+print(&quot;\nThe exact date and time is:&quot;, dt.datetime.now())
+
+</code></pre>
+
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python import_practice.py
+Python doing: ls
+--------------------
+Folder Name: .
+----
+Sub-folders:
+         .ipynb_checkpoints
+---
+Files:
+         data.csv
+         import_practice.py
+         import_text.py
+         solution_test_1.py
+         test_write.ipynb
+         TOC_tba.md
+         wacky_story.py
+
+--------------------
+Folder Name: .\.ipynb_checkpoints
+----
+Sub-folders:
+---
+Files:
+         test_write-checkpoint.ipynb
+
+--------------------
+sin(π/2) = 1.0
+ln(23)   = 3.18
+
+The exact date and time is: 2019-01-05 12:38:55.442190
+PS C:\Users\Jilly\Documents\Mark\python_book\code_files&gt; python .\
+import_practice.py
+Python doing: ls
+--------------------
+Folder Name: .
+----
+Sub-folders:
+         .ipynb_checkpoints
+---
+Files:
+         data.csv
+         import_practice.py
+         solution_test_1.py
+         test_write.ipynb
+         TOC_tba.md
+         wacky_story.py
+
+--------------------
+Folder Name: .\.ipynb_checkpoints
+----
+Sub-folders:
+---
+Files:
+         test_write-checkpoint.ipynb
+
+--------------------
+sin(π/2) = 1.0
+ln(23)   = 3.18
+
+The exact date and time is: 2019-01-05 12:49:54.332969
+$
+</code></pre>
+
+<h3 id="imports">Imports</h3>
+<p>The main concept we introduced in this exercise is that of an <code>import</code> statement. These statements are how we use code from another script written in Python. The syntax of an import statement follows two basic forms:</p>
+<ul>
+<li><code>import NAME</code></li>
+</ul>
+<p>This statement pulls an object called <code>NAME</code> into your script that contains the entirety of the script called   <code>NAME.py</code>. This kind of object is called a module.  (Python has rules to keep track of where to look for any module you import.) </p>
+<p>You can then use any of the contents of <code>NAME.py</code> such as functions or objects defined in that module. You use them by the dot notation as we saw in the case of <code>os</code> (i.e. <code>NAME.function_name()</code> or as above with <code>os.walk()</code>).</p>
+<ul>
+<li><code>from MODULE import NAMES</code></li>
+</ul>
+<p>Sometimes pulling in an entire script is inefficient especially when you want only one or two things from the script. You can pick and choose what you want to use with the <code>from-import</code> style statements.  As we saw from the <code>math</code> and <code>random</code> examples, you can then call these functions directly without dot notation. However be aware that if you make a variable or write a function with the same name as these, it will override their definition.</p>
+<p>For the line that reads <code>import datetime as dt</code>, the <code>as</code> part of the statement is just changing the name of the function and is practically the same as writing <code>dt = datetime</code>.  This is common practice in Python especially for libraries with longer names.</p>
+<h3 id="standard-libraries">Standard Libraries</h3>
+<p>The five libraries we used in <code>import_practice.py</code> are part of the <a href="https://docs.python.org/3/library/">Python Standard Library</a> and can be considered "built-in" to Python. There are well over 200 different modules in Standard Library and to go over each one would be and not very useful. Therefore, this exercise is designed to introduce a few common libraries and get you used to the syntax of importing and using them. But to be thorough, here some brief explanations of each of the libraries we used in this exercise:</p>
+<ul>
+<li><code>os</code></li>
+</ul>
+<p><code>os</code> stands for "Operating System". This module allows you to interact with the operating system and the command line to some extent. It contains some file managing tools (e.g. rename or move files, explore the file system etc.) and also some system-specific functionality. There are other modules like <code>sys</code> and <code>subprocess</code> that provide more specific functionality depending on what you need.</p>
+<ul>
+<li><code>math</code></li>
+</ul>
+<p>This module allows you to access the basic math functions provided by the C standard library. These include but are not limited to trigonometric and hyperbolic functions (e.g. sin, cos, sinh, cosh etc.), exponential and logarithmic functions (e.g. exp, log etc.) and common logical functions you may need.</p>
+<ul>
+<li><code>random</code> </li>
+</ul>
+<p>This provides a large selection of random number generators and functionality related thereto.</p>
+<ul>
+<li><code>csv</code></li>
+</ul>
+<p>A popular plain-text format for data is the "Comma-Separated Values" format. This is a handy library for working with these files without having to constantly reinvent the wheel. Specifically, it can turn iterables into <code>csv</code> files with minimal coding.</p>
+<ul>
+<li><code>datetime</code></li>
+</ul>
+<p>A library for working with date and time. The library bases its times on computer times and is a useful feature for getting calendar-like functionality out of your programs. It includes sub modules for both <code>date</code> and <code>time</code> if you happen to be interested in only one of the two.</p>
+<p>These are just a surface look at each of these libraries but don't worry too much about learning every library. I have never had occasion to use many of the standard libraries but they are a great starting place for accomplishing complex tasks more easily.</p>
+<h3 id="getting-more-libraries-and-packages">Getting More Libraries and Packages</h3>
+<p>Any package in the Python Standard Library is written and endorsed by the creators and maintainers of Python. However, there is an enormous number of libraries that are written and maintained by thousands of programmers everywhere. These are sometimes called third-party libraries or packages and are available for quick download and installation through a handy software called <code>pip</code> which is built-in to your standard Python 3 installation.</p>
+<p>Let's practice with it here by installing a package called <code>nose</code>. Open your command line and enter</p>
+<p><code>pip install nose</code>:</p>
+<pre><code class="bash">$ pip install nose
+&lt;a bunch of text&gt;
+Successfully installed nose-1.3.7
+$ 
+</code></pre>
+
+<p><code>nose</code> is a package that allows you to write tests for larger programs. If you see something like <code>Successfully installed nose-1.3.7</code> then the package installed correctly.</p>
+<p>Skim the basic commands of pip <a href="https://pip.pypa.io/en/stable/quickstart/">here</a> and use them to install libraries/packages when you need them. We will install more packages later once we get further along.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>
+<p>The <a href="https://docs.python.org/3/library/">Python Standard Library</a> is a good reference to get an idea of all the things that Python can do without even including third-party libraries and packages. Read the general statement at the beginning of the linked page and browse the index looking for 2 or 3 things that interest you. Begin to experiment with them and see if you can pick up how they work.</p>
+</li>
+<li>
+<p>Consider the following function definition from  <code>import_practice.py</code>:</p>
+</li>
+</ul>
+<p><code>python
+  def gen_random_matrix(size):
+      """
+      Returns a 2D matrix (a.k.a. a list of lists)
+      of shape "size X size" with elements generated 
+      having random values between 0 and 1
+      """
+      matrix = []
+      for row_index in range(size):
+          row = []
+          for element in range(size):
+              row.append(random())
+          matrix.append(row)
+      return matrix</code></p>
+<p>It turns out Python has a neat trick called a <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">List Comprehension</a> to turn all that code into one line of code so that it can be written as follows:</p>
+<p><code>python
+  def gen_random_matrix(size):
+      """
+      Returns a 2D matrix (a.k.a. a list of lists)
+      of shape "size X size" with elements generated 
+      having random values between 0 and 1
+      """
+      return # insert line of code here</code></p>
+<p>After reading about list comprehensions write one line of code that will do the same thing as above and run it to test it.</p>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../22-Try-Except/">Previous: 22-Try Except</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../24-Reading-Code/">Next: 24-Reading Code</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../24-Reading-Code/" class="btn btn-neutral float-right" title="24. Reading Code">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../22-Try-Except/" class="btn btn-neutral" title="22. Try Except"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../22-Try-Except/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../24-Reading-Code/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

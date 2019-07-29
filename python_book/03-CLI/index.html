@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>3. CLI - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "3. CLI";
+    var mkdocs_page_input_path = "03-CLI.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">3. CLI</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#3-cli">3 - CLI</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#introduction">Introduction</a></li>
+        
+            <li><a class="toctree-l3" href="#open-the-command-line">Open the command line</a></li>
+        
+            <li><a class="toctree-l3" href="#where-am-i-command-pwd">Where am I? (Command: pwd)</a></li>
+        
+            <li><a class="toctree-l3" href="#moving-around-command-cd">Moving Around (Command: cd)</a></li>
+        
+            <li><a class="toctree-l3" href="#working-in-folders-commands-ls-mkdir-and-touch-or-new-item">Working in folders (Commands: ls, mkdir, and touch or New-Item)</a></li>
+        
+            <li><a class="toctree-l3" href="#deleting-files-and-folders-commands-rm-rmdir">Deleting Files and Folders (Commands: rm, rmdir)</a></li>
+        
+            <li><a class="toctree-l3" href="#review">Review</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone your skills</a></li>
+        
+            <li><a class="toctree-l3" href="#advanced-mastery">Advanced mastery</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>3. CLI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../02-Getting-Started/">Previous: 02-Getting Started</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../04-Hello-World/">Next: 04-Hello World</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="3-cli">3 - CLI</h1>
+<h3 id="introduction">Introduction</h3>
+<p>Welcome to the Command Line Interface (CLI)! Before we begin programming we need 
+to understand something about the context and environment that we are working in.</p>
+<p>First, we start with a little nomenclature. Perhaps you have seen a black, white or blue window with nothing but text in it on your computer. This is called the command line or the command line interface. I will refer to it as the "command line" in this lesson. An example of one is shown below:</p>
+<p><img alt="cli" src="../media/cli.png" /></p>
+<p>This interface was at one point the only way to use a computer. Generally speaking, if you wanted to explore files, play a computer game or use any program, this was the way you needed to do it. There were no windowing systems or point-and-click interfaces. The way you did anything was to type commands into the prompt (seen above as the text after the <code>$</code>) and look at the output that resulted. We will be doing something similar in this lesson. To enter any command simply type the command in and press Enter.</p>
+<p>Secondly, you should be familiar with basic terminology relating to file systems. (i.e. words like "folder", "file", "program" and "app"/"application"). I will use the words 'directory' and 'folder' interchangeably. All file systems I have seen start with a "root" folder (usually <code>C:\</code> for Windows and <code>/</code> for OS X and Linux). File systems start at this root folder and have a tree of sub-folders in which all files are organized. We will explore this via the command line and cover how to do basic navigation and commands. The command line is a large and powerful interface so this lesson is by no means comprehensive. It is intended to get you just competent enough to do programming. We will explore more about the command line later.</p>
+<h3 id="open-the-command-line">Open the command line</h3>
+<p>Depending on your operating system (e.g. Microsoft Windows, Apple Mac OS X, Linux) the way to open your command line differs significantly. Once your command line is open however, almost everything else is the same or very similar. I will indicate the differences where this is the case.</p>
+<ul>
+<li><strong>Windows 7/8/10</strong></li>
+<li>From your desktop, press the windows key. (The start menu should pop up.)</li>
+<li>Type in "powershell" into the start menu search bar. (A bunch of options should be displayed)</li>
+<li>Select "Windows PowerShell" from the list of options to open it. (A blue box with some text and a prompt should appear that looks something like this: <code>C:\Users\"YOUR USERNAME"\&gt;</code>)</li>
+<li><strong>Apple Mac OS X</strong></li>
+<li>Open spotlight search by pressing &#8984;+Space. (A spotlight search bar should appear on your screen.)</li>
+<li>Type "terminal" into the search bar. (Options should appear under the search bar.)</li>
+<li>Select the "Terminal" application to open it. (A white box with some text should appear with a prompt that looks something like: <code>"YOUR COMPUTER'S NAME":~ "YOUR USERNAME"$</code>)</li>
+<li><strong>Linux</strong> </li>
+<li>Press <code>ctrl+t</code> or <code>ctrl+alt+t</code>  from your desktop. (A bash window should appear with some text in it and a prompt that looks like: <code>"YOUR USERNAME"@"YOUR COMPUTER'S NAME" ~ $</code> or <code>-bash-4.2$</code> )</li>
+</ul>
+<p>Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the <code>$</code> or the <code>&gt;</code> that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the <code>$</code> or the <code>&gt;</code> as being equivalent. Therefore, when you see something like <code>$ clear</code> written in the book, you should read that as, "Type the text <code>clear</code> into the command line prompt and press enter." </p>
+<p>Once you have successfully opened your command line interface, you may begin the rest of the lesson. The object of this lesson is to practice and become familiar with each of the commands listed below. A summary table at the end of the lesson lists all the commands and what they do.</p>
+<h3 id="where-am-i-command-pwd">Where am I? (Command: <code>pwd</code>)</h3>
+<p>Begin by typing the following in your prompt and pressing Enter:</p>
+<pre><code class="bash">$ pwd
+</code></pre>
+
+<p>'pwd' means 'print working directory'. This command will show you where you are
+in the directory structure of your computer. For example typing this command 
+into the terminal on my linux computer will return <code>/home/mer/</code>, which tells me 
+I am in the 'mer' directory of the 'home' directory of the root directory of my 
+computer. Similarly in Windows, <code>pwd</code> returns <code>C:\Users\&lt;YOURNAME&gt;\</code>. Therefore if you ever get lost while navigating in the terminal, use <code>pwd</code> to 
+figure out where you are.</p>
+<h3 id="moving-around-command-cd">Moving Around (Command: <code>cd</code>)</h3>
+<p>Type the following into your terminal and press Enter:</p>
+<pre><code class="bash">$ cd ~
+</code></pre>
+
+<p><code>cd</code> means 'change directory' and is one of the main ways you will navigate
+the command line. The normal usage of the "change directory" command is of the form: <code>$ cd "NAME OF DIRECTORY"</code> (e.g. <code>cd Documents</code>) but in this case we are using the "home" short cut (<code>~</code>).</p>
+<p>The tilde (<code>~</code>) is a short hand that stands for the 'home' directory. This can take you to slightly different places depending on the operating system you are running, but should be the default starting place for any folders you may wish to navigate. If you
+need to get back home or want to navigate from the home folder as a root
+folder the <code>~</code> will get you there.</p>
+<p>So when you enter `` what you are telling the terminal is this:
+"Take me me to the home folder." Or "Change the working directory to the home folder".</p>
+<h3 id="working-in-folders-commands-ls-mkdir-and-touch-or-new-item">Working in folders (Commands: <code>ls</code>, <code>mkdir</code>, and <code>touch</code> or <code>New-Item</code>)</h3>
+<p>Now that you are in the 'home' folder, enter the following:</p>
+<pre><code class="bash">$ ls
+</code></pre>
+
+<p><code>ls</code> is short hand for "list files and sub-folders in the current directory". 
+Upon entering this command you should see a list of files and directories in
+your home folder.</p>
+<p>Let's make a directory in your home folder. Enter the
+following:</p>
+<pre><code class="bash">$ mkdir peas
+</code></pre>
+
+<p>Now enter the <code>ls</code> command and you will notice a new folder in your home folder
+called 'peas' you made it with the 'make directory' command.</p>
+<p>Let's go in there!</p>
+<pre><code class="bash">$ cd peas
+$ ls
+$ 
+</code></pre>
+
+<p>If you type in the above commands in you will notice that nothing comes up!
+There is nothing in this folder yet so lets make a file to put in this folder! This is bit different for Windows so follow the Windows commands if you are using Windows.</p>
+<ul>
+<li><strong>Command for Mac OS X  or Linux</strong></li>
+</ul>
+<p><code>bash
+  $ touch carrots.py</code></p>
+<ul>
+<li><strong>Command for Windows</strong></li>
+</ul>
+<p>```powershell</p>
+<blockquote>
+<p>New-Item -type file carrots.py
+  ```</p>
+</blockquote>
+<p>You have just created an empty file called <code>carrots.py</code>. The <code>.py</code> part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the <code>.py</code> extension but they are not fundamentally different from plain text files (i.e. files that end in <code>.txt</code>).</p>
+<p>Make another file called <code>cool_beans.txt</code> using the <code>touch</code> command (if you're on Mac OS X  or Linux) or <code>New-Item</code> command (if you're on windows). Go on try it yourself!</p>
+<p>Did you do it? Check that you it worked using the <code>ls</code> command.
+You should see that you have two files in this folder. If you're curious you can
+"print the working directory" and find this folder in your file explorer
+program on your computer. Cool huh?</p>
+<p>Now that we know how to create files and folders we will now learn how to delete them.</p>
+<h3 id="deleting-files-and-folders-commands-rm-rmdir">Deleting Files and Folders (Commands: <code>rm</code>, <code>rmdir</code>)</h3>
+<p>Now that we know how to create files and folders we will now learn how to delete them. Let's delete your files by entering the command:</p>
+<pre><code class="bash">$ rm carrots.py
+</code></pre>
+
+<p><code>rm</code> means "remove". Verify that this has been deleted with <code>ls</code>.</p>
+<p>Now let's delete the other file.</p>
+<pre><code class="bash">$ rm cool_beans.txt
+</code></pre>
+
+<p>When you finish this your directory should once again be empty. You can verify
+this with <code>ls</code>.</p>
+<p>Now...how do we get out of here? You may want to go directly to the home
+directory using</p>
+<pre><code class="bash">$ cd ~
+</code></pre>
+
+<p>but you may not always want to go all the way back to the home directory when
+all you really want is to go to the parent directory. I will now show you the
+way to do this. Simply enter:</p>
+<pre><code class="bash">$ cd ..
+</code></pre>
+
+<p>This is a shorthand for, "change directory to the immediate parent directory"
+in a manner that is known as "relative path reference". In the command line,
+<code>.</code> or <code>./</code> is short hand for "the directory I'm in right now" and <code>..</code> or <code>../</code> means "the immediate parent folder of where I am right now".</p>
+<p>You can verify that you have indeed left the <code>peas</code> directory by using the <code>pwd</code>
+and <code>ls</code> commands. Now it is time to actually delete the directory.</p>
+<pre><code class="bash">$ rmdir peas
+</code></pre>
+
+<p>If you didn't have any errors doing this congratulations! You have finished the
+basic exercises for the command line!</p>
+<h3 id="review">Review</h3>
+<p>Below is a table of all the commands we learned in this lesson and pertinent information about each.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Usage</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pwd</code></td>
+<td><code>$ pwd</code></td>
+<td>"Print Working Directory": Prints the location of the folder you are currently in.</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td><code>$ cd NAME</code></td>
+<td>"Change Directory": Changes your location to that of <code>NAME</code>.  The tilde <code>~</code> refers to the home directory, <code>.</code> refers to the current directory and <code>..</code> refers to the immediate parent directory.</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td><code>$ ls</code></td>
+<td>Lists all files and sub-folders in the current directory.</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td><code>$ mkdir NAME</code></td>
+<td>"Make Directory": Makes a directory in the current directory called <code>NAME</code>.</td>
+</tr>
+<tr>
+<td><code>touch</code></td>
+<td><code>$ touch NAME.EXT</code></td>
+<td>(<strong>Mac and Linux</strong>) Makes a new file in the current directory with a name of <code>NAME</code> and an extension of <code>.ext</code></td>
+</tr>
+<tr>
+<td><code>New-item</code></td>
+<td><code>&gt; New-Item -type file NAME.ext</code></td>
+<td>(<strong>Windows</strong>) Same as <code>touch</code>.</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td><code>$ rm NAME</code></td>
+<td>"Remove": Permanently deletes the file called <code>NAME</code> where <code>NAME</code> includes both the filename and the extension.</td>
+</tr>
+<tr>
+<td><code>rmdir</code></td>
+<td><code>$ rmdir NAME</code></td>
+<td>"Remove Directory": Permanently deletes a directory called <code>NAME</code>. (Only works if the directory is empty.)</td>
+</tr>
+</tbody>
+</table>
+<p>Memorize these commands or keep this cheat sheet with you to help you work in the command line. Once you feel comfortable with these commands then it's time to start programming!</p>
+<h2 id="hone-your-skills">Hone your skills</h2>
+<p>Here are a few questions you should research:</p>
+<ul>
+<li>Normally you have to remove every file in a directory before you can delete 
+    the directory. What is a way you can delete a directory and all its contents
+    using one line of command line code? Why would you <em>not</em> want to do this?</li>
+<li>How could you navigate to the parent directory's parent's parent directory in one line
+    of code?</li>
+<li>Look up commands to 'copy', 'rename' and 'move' files in command
+    line. How would you complete these common tasks in command line?</li>
+<li>Research other common commands in command line and learn them for your benefit. There are many good tutorials to use many powerful commands in the command line.</li>
+</ul>
+<h2 id="advanced-mastery">Advanced mastery</h2>
+<ul>
+<li>Look up 'shell scripting' for your platform (i.e. Windows Command Prompt (cmd) or Windows Powershell,
+ Linux Bash, or OS X Terminal). Begin to learn to shell script on your computer. </li>
+</ul>
+<p>We will cover some basics of shell scripting later of study but
+ beginning to learn shell scripting can be powerful as many of the concepts we will learn apply to shell scripting as well.</p>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../02-Getting-Started/">Previous: 02-Getting Started</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../04-Hello-World/">Next: 04-Hello World</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../04-Hello-World/" class="btn btn-neutral float-right" title="4. Hello World">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../02-Getting-Started/" class="btn btn-neutral" title="2. Getting Started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../02-Getting-Started/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../04-Hello-World/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

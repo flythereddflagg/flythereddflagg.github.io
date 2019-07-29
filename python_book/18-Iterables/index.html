@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>18. Iterables - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "18. Iterables";
+    var mkdocs_page_input_path = "18-Iterables.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">18. Iterables</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#18-iterables">18 - Iterables</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#string">String</a></li>
+        
+            <li><a class="toctree-l3" href="#range">Range</a></li>
+        
+            <li><a class="toctree-l3" href="#list">List</a></li>
+        
+            <li><a class="toctree-l3" href="#tuple">Tuple</a></li>
+        
+            <li><a class="toctree-l3" href="#subscripts-and-slices">Subscripts and Slices</a></li>
+        
+            <li><a class="toctree-l3" href="#for-loops-length-and-the-in-operator">For-loops, Length and the in operator</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>18. Iterables</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../17-Loops/">Previous: 17-Loops</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../19-Dictionaries/">Next: 19-Dictionaries</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="18-iterables">18 - Iterables</h1>
+<p>The <a href="https://docs.python.org/3/glossary.html#term-iterable">Python Documentation</a> defines an iterable this way:</p>
+<ul>
+<li>Iterable: An object capable of returning its members one at a time.</li>
+</ul>
+<p>Iterables are a powerful way to structure data. In this lesson, we will introduce a common type of iterable called sequenced types and explore how to use them. Note that there are many iterable types that we will not cover here but these (the sequenced types) are the most common. This is the longest exercise you've done so far so don't get complacent. Make sure that it is exactly as it appears here.</p>
+<pre><code class="python"># iterables.py
+
+# --- strings --- 
+example_string = &quot;Hello World!&quot;
+print(&quot;A string:&quot;, example_string)
+print(&quot;&quot;) # white space to make output readable
+
+# --- ranges ---
+example_range = range(5)
+print(&quot;A range:&quot;, example_range)
+print(&quot;&quot;)
+
+# --- lists ---
+# brackets initialize a list
+example_list = [&quot;tea&quot;, &quot;biscuts&quot;, &quot;crackers&quot;, &quot;kale&quot;]
+print(&quot;A list:&quot;, example_list)
+
+# lists are mutable
+print(&quot;adding cheese to the list...&quot;)
+example_list.append(&quot;cheese&quot;)
+print(example_list)
+
+print(&quot;changing the first element to 'Lemon Tea'...&quot;)
+example_list[0] = &quot;Lemon Tea&quot;
+print(example_list)
+
+print(&quot;popping off the last element...&quot;)
+example_list.pop()
+print(example_list)
+print(&quot;&quot;)
+
+# --- tuples ---
+# parethesis define a tuple
+example_tuple = (&quot;tea&quot;, &quot;biscuts&quot;, &quot;crackers&quot;, &quot;kale&quot;)
+print(&quot;A tuple:&quot;, example_tuple)
+
+# a comma-separated list can also define a tuple
+example_tuple = &quot;biscuts&quot;, &quot;crackers&quot;,  &quot;kale&quot;, &quot;tea&quot;
+print(&quot;Another tuple:&quot;, example_tuple)
+
+# tuples are immutable
+# notice how this throws an error:
+# comment it out after you have looked at the error
+# example_tuple[-1] = &quot;Lemon tea&quot; # throws an error
+
+print(&quot;&quot;)
+
+# --- Common among iterables ---
+
+# all iterables are subscriptable and sliceable
+print(&quot;The last element and&quot;)
+print(&quot;The first two elements of each iterable:&quot;)
+print(&quot;Last:&quot;,     example_string[-1])
+print(&quot;First two:&quot;,example_string[:2])
+print(&quot;Last:&quot;,     example_range[-1])
+print(&quot;First two:&quot;,example_range[:2])
+print(&quot;Last:&quot;,     example_list[-1])
+print(&quot;First two:&quot;,example_list[:2])
+print(&quot;Last:&quot;,     example_tuple[-1])
+print(&quot;First two:&quot;,example_tuple[:2])
+print(&quot;&quot;)
+
+
+# all iterables have a length (len())
+print(&quot;length of string: &quot;, len(example_string))
+print(&quot;length of range:  &quot;, len(example_range))
+print(&quot;length of list:   &quot;, len(example_list))
+print(&quot;length of tuple:  &quot;, len(example_tuple))
+print(&quot;&quot;)
+
+# all iterables can be used to make for-loops
+print(&quot;For-loop examples of each:&quot;)
+for character in example_string:
+    print(character, end=&quot; &quot;)
+
+print(&quot;&quot;)
+
+for index_value in example_range:
+    print(index_value, end=&quot; &quot;)
+
+print(&quot;&quot;)   
+
+for element in example_list:
+    print(element, end=&quot; &quot;)
+
+print(&quot;&quot;)
+
+for variable in example_tuple:
+    print(variable, end=&quot; &quot;)
+
+print(&quot;\n&quot;)
+
+# you can check if something is 'in'
+# a sequence iterable
+print('&quot;Hello&quot; in example_string:', 
+      &quot;Hello&quot; in example_string)
+print('3 in example_range:', 
+      3 in example_range)
+print('&quot;kale&quot; in example_list:', 
+      &quot;kale&quot; in example_list)
+print('&quot;potatoes&quot; in example_tuple:',
+      &quot;potatoes&quot; in example_tuple)
+</code></pre>
+
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python iterables.py
+A string: Hello World!
+
+A range: range(0, 5)
+
+A list: ['tea', 'biscuts', 'crackers', 'kale']
+adding cheese to the list...
+['tea', 'biscuts', 'crackers', 'kale', 'cheese']
+changing the first element to 'Lemon Tea'...
+['Lemon Tea', 'biscuts', 'crackers', 'kale', 'cheese']
+popping off the last element...
+['Lemon Tea', 'biscuts', 'crackers', 'kale']
+
+A tuple: ('tea', 'biscuts', 'crackers', 'kale')
+Another tuple: ('biscuts', 'crackers', 'kale', 'tea')
+
+The last element and
+The first two elements of each iterable:
+Last: !
+First two: He
+Last: 4
+First two: range(0, 2)
+Last: kale
+First two: ['Lemon Tea', 'biscuts']
+Last: tea
+First two: ('biscuts', 'crackers')
+
+length of string:  12
+length of range:   5
+length of list:    4
+length of tuple:   4
+
+For-loop examples of each:
+H e l l o   W o r l d ! 
+0 1 2 3 4 
+Lemon Tea biscuts crackers kale 
+biscuts crackers kale tea 
+
+&quot;Hello&quot; in example_string: True
+3 in example_range: True
+&quot;kale&quot; in example_list: True
+&quot;potatoes&quot; in example_tuple: False
+$
+</code></pre>
+
+<p><strong>What is happening here?</strong></p>
+<p>We have just dumped a lot of information on you. This is probably the longest script you've written yet. We will go through each step by step. Lets start with each type of iterable.</p>
+<h3 id="string">String</h3>
+<p>We have already covered a lot about strings. It turns out, however, that strings are iterables and have all the properties that we see at the end of the script. We will deal with these in more detail below but just understand that strings have all those common properties.</p>
+<h3 id="range">Range</h3>
+<p>Ranges can be thought of as a very specific subset of a list. The subset is a list of integers with a set pattern. Ranges are most useful in for-loop construction when you want a loop to run a specific number of times. They have other uses but the for-loop case is most common.</p>
+<h3 id="list">List</h3>
+<p>A list is a very powerful sequence type. Unlike a string which must contain only letters and a range which can only contain integers in a specified order, a list is exactly what it sounds like. A list is an object that holds objects or references to objects in a specified order. A list could be a shopping list where the elements are strings:</p>
+<p><code>shopping_list = ["cheese" "milk", "sugar", "eggs"]</code></p>
+<p>or it could be a list of names of a bunch of file objects:</p>
+<p><code>files = [file1, file2, file3]</code></p>
+<p>or it could be a bunch of different types of objects:</p>
+<p><code>objects = [12, 23.5, "Nougat"]</code></p>
+<p>The point is, lists can do many things and can be the structure for many types of data. A common use of lists for example is to define matrices for math:</p>
+<pre><code class="python">matrix_a = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]]
+</code></pre>
+
+<p>which is just a lists of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.</p>
+<h3 id="tuple">Tuple</h3>
+<p>Tuples are interesting beasts in Python. Without getting into gory details, tuples are like lists that cannot be changed once they are created and are fixed in memory. You may think of them as a "read-only" list. You may rightly ask why they even exist if all they appear to be is a less-useful list. The advantage of tuples is that, because they cannot be changed, the computer can use them more efficiently. However, they do have some uses that can be of interest. (See Hone Your Skills for more on this.) </p>
+<h3 id="subscripts-and-slices">Subscripts and Slices</h3>
+<p>A useful feature all sequenced iterators have is that of subscripting and slicing.  It may not be clear what this means however. The following two operations allow us to conveniently work with sequenced iterables. </p>
+<ul>
+<li><strong>Subscript</strong> </li>
+</ul>
+<p>Suppose we have a list of strings like <code>shopping_list = ["cheese" "milk", "sugar", "eggs"]</code> and we just want to get <code>"sugar"</code> out of the list. We can do that through subscripting. The "subscript" or "get item" operator is the pair of brackets after the name of the iterator (in this case, <code>shopping_list[]</code>). The number that goes between the brackets is the index of the item that is being retrieved. Therefore, if we want to get <code>"sugar"</code> out of the list we can store it in a new variable like this: <code>sugar_item = shopping_list[2]</code>. (Remember that Python indices start with 0 so the third item in the list has an index of 2.) </p>
+<ul>
+<li><strong>Slice</strong></li>
+</ul>
+<p>Slicing is just like subscripting but instead of getting one element of the list we are getting multiple adjacent elements. The syntax is as follows.</p>
+<p><code>list_name[first_index : second_index]</code> </p>
+<p>where <code>first_index</code> is the first included element in the slice and <code>second_element</code> is the first element not included in the slice. Therefore if we write <code>shopping_list[1:3]</code> we get <code>['sugar', 'eggs']</code> back. This is because we are including element <code>1</code> and <code>2</code> but not <code>3</code>. Also, <code>shopping_list[2:3]</code> is not the same as <code>shopping_list[2]</code> but instead, returns the same type of iterable with a length of 1 containing <code>shopping_list[2]</code>. </p>
+<p>If the <code>first_index</code> is omitted, everything from the beginning to the <code>second_index</code> is extracted. Likewise, if <code>second_index</code> is omitted, everything from <code>first_index</code> to the end is extracted.</p>
+<h3 id="for-loops-length-and-the-in-operator">For-loops, Length and the <code>in</code> operator</h3>
+<p>Each of the properties that we used in <code>iterables.py</code>  that are common to all iterables are both useful and easy to understand given the context we now have.</p>
+<ul>
+<li><strong>For-loops:</strong> Any iterable used in the definition of a for-loop is defined (as in the lesson on loops) as <code>for i in iterable:</code> where <code>i</code> can be called the loop variable. In the case of any sequenced iterable the loop variable takes on the next value in the sequence for each loop.</li>
+<li><strong><code>len()</code>:</strong> This is a built-in function that can find the length of any iterable if it is at all possible. The function has many uses including use for referencing by index instead of element ( i.e. using <code>range(len(iterable))</code> instead of just <code>iterable</code>.)</li>
+<li><strong>The <code>in</code> operator</strong> will return true if the operand on the left exists as one of the elements on the right or if a series of elements exist on the right. And the logic reads just like in English.</li>
+</ul>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Look at documentation on <a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">lists</a>. Lists can do a lot of things, experiment with each method listed in the documentation. What are some different ways you could use a list?</li>
+<li>The three things common to all iterables we did in <code>iterables.py</code> are not the only things you can do to all the sequenced iterables. Look at the <a href="https://docs.python.org/3/library/stdtypes.html#common-sequence-operations">Documentation</a> for operations that can be performed on all the iterables. Experiment with all of these and find out how you could find a delete a particular value from a list using these operations.</li>
+<li>Try putting negative numbers into the subscript operator. Start with <code>-1</code>. What happens? How can you use this to your advantage?</li>
+<li>Look up the documentation on <a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences">tuples</a> and learn how to pack and unpack variables. How could this be useful?</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../17-Loops/">Previous: 17-Loops</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../19-Dictionaries/">Next: 19-Dictionaries</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../19-Dictionaries/" class="btn btn-neutral float-right" title="19. Dictionaries">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../17-Loops/" class="btn btn-neutral" title="17. Loops"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../17-Loops/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../19-Dictionaries/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

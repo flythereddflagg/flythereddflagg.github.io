@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>4. Hello World - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "4. Hello World";
+    var mkdocs_page_input_path = "04-Hello-World.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">4. Hello World</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#4-hello-world">4 - Hello World!</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#making-your-first-python-source-file">Making your first Python source file</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>4. Hello World</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../03-CLI/">Previous: 03-CLI</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../05-Comments/">Next: 05-Comments</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="4-hello-world">4 - Hello World!</h1>
+<p>If you have completed the two sections successfully you are ready now to begin 
+the actual programming!</p>
+<p>We will begin with the most basic program that actually does something in 
+Python. This is common when you want to begin any programming language. As with
+all things, beginning in Python is very simple.</p>
+<h4 id="making-your-first-python-source-file">Making your first Python source file</h4>
+<ul>
+<li>
+<p>Start by opening your text editor and opening a new file</p>
+</li>
+<li>
+<p>Pick a folder to keep all your Python learning files in. This could be in your home folder but I like to put it in my "Documents" folder.</p>
+</li>
+<li>
+<p>Use the 'Save as' dialog to save this file in a folder where you want to keep all
+   your Python files</p>
+</li>
+<li>
+<p>Give the file the name <code>hello_world.py</code> and save it</p>
+</li>
+</ul>
+<p>You will notice the <code>.py</code> part of the filename. This is called an extension and 
+   is a way of telling the computer or anyone who looks at the file what kind of 
+   file it is. Make sure you name all files you make in Python using this extension.</p>
+<p>Also it is good practice to never use spaces when naming files used in
+   programming. Use underscores instead of spaces. There are reasons for this but 
+   just for now trust me when I say that you are avoiding a lot of confusion and 
+   problems if you just commit to never using spaces in your filenames when you 
+   write code.</p>
+<p><strong>NOTE: I will give you the name of each filename you should be using for each
+   exercise in this book. When you see an octothorpe (<code>#</code>) followed by a filename at the beginning of a code example, it means I want you to make a new file with that name by following the steps above.</strong></p>
+<ul>
+<li>Type the following <em>exactly</em> as it is written here. Do <em>not</em> copy-paste it.</li>
+</ul>
+<pre><code class="python"># hello_world.py
+print(&quot;Hello World!&quot;)
+</code></pre>
+
+<ul>
+<li>
+<p>Go to your terminal and navigate to the folder that holds your Python file.</p>
+</li>
+<li>
+<p>Enter the following command in your terminal:</p>
+</li>
+</ul>
+<pre><code>$ python hello_world.py
+</code></pre>
+
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python hello_world.py 
+Hello World!
+$ 
+</code></pre>
+
+<p>If you see the above output, congratulations! You have just written and run your first Python program!</p>
+<p><strong>What is happening here?</strong> 
+Traditionally, displaying "Hello World!" in a console window is the first thing 
+that every programmer generally learns to do in a new language. Later we will get into more detail on how exactly everything works and what is happening on a fundamental level.</p>
+<p>Go back to your Python file and add the following under the first line so the whole file looks like this:</p>
+<pre><code class="python"># hello_world.py
+print(&quot;Hello World!&quot;)
+
+print(&quot;I skipped a line in code!&quot;)
+
+print(&quot;Here is a little song:&quot;)
+print(&quot;Twinkle, twinkle little star,&quot;)
+print(&quot;How I wonder what you are.&quot;)
+print(&quot;Up above the world so high,&quot;)
+
+print(&quot;Like a diamond in the sky&quot;)
+print(&quot;Twinkle, twinkle little star&quot;)
+
+
+print(&quot;How I wonder what you are.&quot;)
+</code></pre>
+
+<p><strong>Here is what should happen</strong> </p>
+<p>Re-run the code as before and you should see the following:</p>
+<pre><code>$ python hello_world.py 
+Hello World!
+I skipped a line in code!
+Here is a little song:
+Twinkle, twinkle little star,
+How I wonder what you are.
+Up above the world so high,
+Like a diamond in the sky
+Twinkle, twinkle little star
+How I wonder what you are.
+$ 
+</code></pre>
+
+<p>As you can see here, the code runs in order line by line, ignoring any blank lines. This is how any python program works. It starts on line 1 and executes each line of code until it reaches the end of the file. </p>
+<p>Once you see the output appear <em>exactly</em> as it appears above, congratulations! You have completed the first exercise!</p>
+<p>This is the general format for most of the sections in this book. For each section I will have you write some code and then we will go back and try to understand it.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<p>This is the simplest type of program that exists in Python (i.e. simple statements in a ordered list). Now is a good time to get used to some fundamental concepts:</p>
+<ul>
+<li><strong>There is no such thing as perfect code</strong></li>
+</ul>
+<p>It is likely that unless you were paying very careful attention to what you were doing that you made a mistake. In which case you may have gotten an error such as the one below</p>
+<p>In this example example, I deleted the last three characters on line 8 and got this message. As you can see, Python tells me exactly where my mistake is and what kind of error it is. </p>
+<p>Take some time and mess with this program. Delete different parts and try to run it and see the kind of errors you get. </p>
+<p>My hope is that you'll get two things out of this: First, don't be afraid to make mistakes (although you of course want to avoid them if you can) and secondly, when an error does happen, this should help you begin to be comfortable with how python reports errors and exceptions. We will cover these in more detail in a later lesson.</p>
+<pre><code class="python">File &quot;hello_world.py&quot;, line 8
+    print(&quot;How I wonder what you are
+                    ^
+  SyntaxError: EOL while scanning string literal
+</code></pre>
+
+<ul>
+<li><strong>"Sparse is better than dense"</strong></li>
+</ul>
+<p>From "<a href="https://www.python.org/dev/peps/pep-0020/">Zen of Python</a>" there is a line that says, "Sparse is better than dense". This refers, in part, to the fact that it is often much easier to read code when there is some white space in between lines. When you write code you should be organizing it in your mind and this should reflect in how the code is written.</p>
+<p>Look back at the code that you wrote down from this lesson. Does the spacing make sense? How would you change the spacing to be more consistent? Would you add more lines here or fewer there? Rewrite the code to reflect your mental understanding of the code.</p>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../03-CLI/">Previous: 03-CLI</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../05-Comments/">Next: 05-Comments</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../05-Comments/" class="btn btn-neutral float-right" title="5. Comments">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../03-CLI/" class="btn btn-neutral" title="3. CLI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../03-CLI/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../05-Comments/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>21. More Functions - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "21. More Functions";
+    var mkdocs_page_input_path = "21-More-Functions.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">21. More Functions</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#21-more-functions">21 - More Functions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#parameters-and-arguments">Parameters and Arguments</a></li>
+        
+            <li><a class="toctree-l3" href="#default-values-for-parameters">Default Values for Parameters</a></li>
+        
+            <li><a class="toctree-l3" href="#returns-and-the-none-type">Returns and the None type</a></li>
+        
+            <li><a class="toctree-l3" href="#recursion">Recursion</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone your Skills</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>21. More Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../20-Functions/">Previous: 20-Functions</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../22-Try-Except/">Next: 22-Try Except</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="21-more-functions">21 - More Functions</h1>
+<p>There are three more concepts tied to functions that we must understand before moving on. They are each demonstrated in the following exercise:</p>
+<pre><code class="python"># more_functions.py
+
+# params and returns
+def quadratic_formula(a, b, c):
+    &quot;&quot;&quot;
+    Calculates the roots of f(x) given a, b, c where
+    f(x) = a * x**2 + b * x + c
+    Returns the solution as a tuple.
+    Returns None if the solutions are imaginary 
+    &quot;&quot;&quot;
+    discriminant = b**2 - 4*a*c
+
+    if discriminant &lt; 0:
+        return None
+
+    root1 = (-b - discriminant**0.5) / 2 / a
+    root2 = (-b + discriminant**0.5) / 2 / a
+
+    return root1, root2
+
+
+imaginary_solution = quadratic_formula(1, 2, 3)
+real_solution = quadratic_formula(1, -2, -3)
+print(&quot;Imaginary Solution is:&quot;, imaginary_solution)
+print(&quot;Real Solution is:&quot;,      real_solution)
+
+
+# default params
+def print_a_number(number=1):
+    print(f&quot;Your number is: {number}&quot;)  
+
+print_a_number(3)
+print_a_number()
+
+# recursion
+def factorial(number):
+    &quot;&quot;&quot;
+    Returns the factorial of a number
+    It first turns it into an integer
+    before calculating its factorial
+    &quot;&quot;&quot;
+    number = abs(int(number))
+    if number &lt;= 0:
+        return 1
+    return number * factorial(number - 1)
+
+print(&quot;4!   =&quot;, factorial(4))
+print(&quot;2.5! =&quot;, factorial(2.5))
+</code></pre>
+
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ more_functions.py
+Imaginary Solution is: None
+Real Solution is: (-1.0, 3.0)
+Your number is: 3
+Your number is: 1
+4!   = 24
+2.5! = 2
+$
+</code></pre>
+
+<h3 id="parameters-and-arguments">Parameters and Arguments</h3>
+<p>Parameters are related to arguments. Many times these two terms are used interchangeably. To clarify, a parameter is the variable name that is used in the definition of a function. Whereas, an argument is what actually gets passed into the function call as seen here:</p>
+<pre><code class="python">def function_name(parameter):
+    parameter += 3
+    print(parameter)
+
+# now we call the function
+function_name(argument)
+</code></pre>
+
+<p>Following this logic, the argument replaces the parameter while the function code executes. You have worked with arguments since the first Python program you ran. The simple statement <code>print("Hello World!")</code> is just you calling the Python function named <code>print</code> and passing in the string <code>"Hello World!"</code> as an argument. Somewhere in the Python core code, there is a <code>print</code> function defined in a similar manner that executes all the details of printing text out to the command line.</p>
+<h3 id="default-values-for-parameters">Default Values for Parameters</h3>
+<p>We saw in line 29 the following line of code: <code>def print_a_number(number=1):</code>. This function definition supplied a default value for the <code>number</code> parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value.</p>
+<h3 id="returns-and-the-none-type">Returns and the None type</h3>
+<p>You may have found that functions in Python have some practical similarities with mathematical functions. Just as a mathematical function f(x) will evaluate to a number when a value of x is supplied, a Python function that returns a value will evaluate to whatever value is returned. There are a few things to understand about the return statement:</p>
+<ul>
+<li>Any time a <code>return</code> statement is reached in Python, the expression after the word <code>return</code> is evaluated and the function call takes on the value of that evaluation. Therefore, if you have a return statement such as <code>return 2*3 + 4</code> the function will evaluate to <code>10</code>.  This is shown below:</li>
+</ul>
+<p>```python
+  def get_10():
+    return 2*3 + 4</p>
+<p>x = get_10()
+  # x now has a value of 10
+  ```</p>
+<ul>
+<li>A function always ends after a <code>return</code> statement regardless of where the statement occurs in the code. Therefore, return is often used to end a function code early if necessary. We saw this on line 13 - 14 in <code>more_functions.py</code> where it says:</li>
+</ul>
+<p><code>python
+      if discriminant &lt; 0:
+          return None</code></p>
+<p>This will end the function if it is found that the solution will be imaginary.</p>
+<ul>
+<li>
+<p>Functions that have no <code>return</code> statement return a special data type called <code>None</code> by default. The <code>None</code> data type is basically Python's way of saying this data is nothing or void. Therefore when we explicit returned <code>None</code>  we could have also just written <code>return</code> . Both cases would be saying, if the solution will be imaginary return nothing!</p>
+</li>
+<li>
+<p>It is possible to return multiple values (as seen in  <code>more_functions.py</code>  in the <code>quadratic_formula</code> function). As you saw above, they will simply be returned as a tuple.</p>
+</li>
+</ul>
+<p>Return statements are crucial for effective functions and it is a good idea to experiment with what you can return in a function. </p>
+<h3 id="recursion">Recursion</h3>
+<p>Recursion is the idea that a function or some process can reference itself. A great explanation of recursion as a concept can be found on <a href="https://en.wikipedia.org/wiki/Recursion">Wikipedia</a>. We saw this with the factorial example. In mathematics, a factorial is a number being multiplied by all the positive integers below it and is symbolized by an exclamtion mark. So the factorial of 4 = 4! = 4 * 3 * 2 * 1. In this case we could do a loop to accomplish this but to demonstrate this principle we can do it with recursion. We set up a base case to end the recursion:</p>
+<pre><code class="python">    if number &lt;= 0:
+        return 1
+</code></pre>
+
+<p>Then we have the function call itself with a small adjustment:</p>
+<pre><code class="python">    return number * factorial(number - 1)
+</code></pre>
+
+<p>And the function starts over again. This continues until the base case has been reached.</p>
+<h2 id="hone-your-skills">Hone your Skills</h2>
+<ul>
+<li>Try to write a recursive function that acts like a for-loop or a while-loop. Can you do it? What are the pros and cons of doing this?</li>
+<li>Write a function that returns multiple value and then try to unpack those into variables (see "Hone Your Skills" in the section on Iterables for more on how to do this.)</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../20-Functions/">Previous: 20-Functions</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../22-Try-Except/">Next: 22-Try Except</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../22-Try-Except/" class="btn btn-neutral float-right" title="22. Try Except">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../20-Functions/" class="btn btn-neutral" title="20. Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../20-Functions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../22-Try-Except/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

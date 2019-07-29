@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>9. Variables and Memory - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "9. Variables and Memory";
+    var mkdocs_page_input_path = "09-Variables-and-Memory.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">9. Variables and Memory</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#9-variables-and-memory">9 - Variables and Memory</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#computer-bare-essentials">Computer Bare Essentials</a></li>
+        
+            <li><a class="toctree-l3" href="#storing-information">Storing Information</a></li>
+        
+            <li><a class="toctree-l3" href="#more-practice">More Practice</a></li>
+        
+            <li><a class="toctree-l3" href="#naming-variables">Naming Variables</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+            <li><a class="toctree-l3" href="#advanced-mastery">Advanced Mastery</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>9. Variables and Memory</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../08-Formatted-Strings/">Previous: 08-Formatted Strings</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../10-Better-String-Formatting/">Next: 10-Better String Formatting</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="9-variables-and-memory">9 - Variables and Memory</h1>
+<p>Now we will introduce some concepts that make Python far more powerful. You have the ability to store things in computer memory and the following exercise will demonstrate how to use it.</p>
+<pre><code class="python"># vars_and_mem.py
+
+# equals sign ( = ) is the assignment operator
+# it says: assign whatever is on the right 
+# to the name on the left
+first_text = &quot;Here is some text!&quot;
+more_text = &quot;This is another string of text.&quot;
+
+print(&quot;{} {}&quot;.format(first_text, more_text))
+
+message = &quot;You can print numbers too! Here are some&quot;
+number_1 = 1
+number_2 = 23
+number_34 = 25.34
+print(&quot;{} {} {} {}&quot;.format(message, number_1, number_2, number_34))
+
+# now lets do the same thing but assign these names to new values!
+message = &quot;Here are some more numbers&quot;
+number_1 = 34.1
+number_2 = 203
+number_34 = 3.14159265
+print(&quot;{} {} {} {}&quot;.format(message, number_1, number_2, number_34))
+</code></pre>
+
+<hr />
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python vars_and_mem.py
+Here is some text! This is another string of text.
+You can print numbers too! Here are some 1 23 25.34
+Here are some more numbers 34.1 203 3.14159265
+$
+</code></pre>
+
+<p>You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a <strong>variable</strong>. Here is how the computer works with variables: </p>
+<h3 id="computer-bare-essentials">Computer Bare Essentials</h3>
+<p>I want to begin here by saying a few things about computers that hopefully will help you understand them better.</p>
+<p>Computers, including those that that run everything from your desktop to your phone to your car, basically only do 3 things:</p>
+<ol>
+<li>Store numbers as 1s and 0s in different places</li>
+<li>Move those 1s and 0s between the different storage places</li>
+<li>Combine those 1s and 0s mathematically (i.e. addition and subtraction)</li>
+</ol>
+<p>Of course, computers can do these things at blinding speeds and can be endlessly combined to do all sorts of complex things but these three basics make up all of computing. The programs we have been writing so far do just those things but the details of how this is done is hidden from you but don't be fooled! Nothing more than those three things is happening at any time.</p>
+<h3 id="storing-information">Storing Information</h3>
+<p>One of the most important things you can learn is how memory works on a computer. Storing 1s and 0s is the first thing that a computer must be able to do in order to function.</p>
+<p>For now the most important things you need to understand are these:</p>
+<ul>
+<li>There are three basic parts to the computer that we will interact with constantly. They are:</li>
+<li>The CPU</li>
+<li>The RAM or volatile memory</li>
+<li>The hard drive or persistent memory</li>
+<li>CPU stands for central processing unit. Every instruction you write gets executed there.</li>
+<li>RAM stands for Random Access Memory. You will put information relevant to your programs there as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.</li>
+<li>The hard drive is like the RAM except the information you write there stays there until you actively erase it. We will be doing more with the hard drive later</li>
+</ul>
+<p>The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. Boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like</p>
+<p><code>x = 23</code> </p>
+<p>you are executing the following:</p>
+<ul>
+<li>Find an appropriate, empty 'box' and write 23 in that box.</li>
+<li>Get the address of the 'box' and associate it with the name 'x'. (This erases any previous associations x may have had before.)</li>
+</ul>
+<p>Anytime x is referenced after that command, the computer looks up the address associated with 'x' and goes directly to the 'box' with that address and replaces 'x' with whatever is in that 'box'.</p>
+<h3 id="more-practice">More Practice</h3>
+<p>The python interpreter will illustrate this better. Go to your terminal and enter <code>python</code> to start the interpreter.</p>
+<pre><code class="python">$ python
+Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
+&gt;&gt;&gt; 
+</code></pre>
+
+<p>Run the following commands:</p>
+<pre><code class="python">&gt;&gt;&gt; x = 23
+&gt;&gt;&gt; type(x)
+&lt;class 'int'&gt;
+&gt;&gt;&gt; id(x)
+140737371887328
+&gt;&gt;&gt; x
+23
+&gt;&gt;&gt; exit()
+</code></pre>
+
+<p><code>type</code> , <code>id</code>  and <code>exit</code> are other built-in functions like <code>print</code> that provide some useful information about <code>x</code>. </p>
+<p><code>type</code> spits out the type of variable between its parentheses.  <code>id</code> spits out the address of the variable in the RAM. This will be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and <code>exit()</code> simply exits the program.</p>
+<h3 id="naming-variables">Naming Variables</h3>
+<p>As a programmer you will have to give names to your variables. Within certain rules you can make up any name you want but the following guides will help you make smart choices about how you name variables.</p>
+<h4 id="naming-rules-in-python">Naming Rules in Python</h4>
+<p>Python follows some rules on what a valid variable name can be. The rules are as follows:</p>
+<ul>
+<li>Names must start with a letter <strong>or</strong> and underscore <code>_</code> (e.g. Spam, eggs, _cheese)</li>
+<li>Names must <strong>only</strong> contain numbers, letters or underscores (i.e. spaces and punctuation are not allowed)</li>
+<li>Names are case sensitive (i.e. Spam, spAm and spam are three different names)</li>
+<li>Names cannot be one of the 35 reserved words in Python. These are listed in the table below. (As a note should you feel the need to use one of these names, you can turn it into a valid variable name by adding leading or trailing underscores e.g. <code>_False</code> or <code>False__</code>  or a trailing number e.g. <code>False1</code>)</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Reserved Words</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>False</td>
+<td>None</td>
+<td>True</td>
+<td>and</td>
+<td>as</td>
+</tr>
+<tr>
+<td>assert</td>
+<td>async</td>
+<td>await</td>
+<td>break</td>
+<td>class</td>
+</tr>
+<tr>
+<td>continue</td>
+<td>def</td>
+<td>del</td>
+<td>elif</td>
+<td>else</td>
+</tr>
+<tr>
+<td>except</td>
+<td>finally</td>
+<td>for</td>
+<td>from</td>
+<td>global</td>
+</tr>
+<tr>
+<td>if</td>
+<td>import</td>
+<td>in</td>
+<td>is</td>
+<td>lambda</td>
+</tr>
+<tr>
+<td>nonlocal</td>
+<td>not</td>
+<td>or</td>
+<td>pass</td>
+<td>raise</td>
+</tr>
+<tr>
+<td>return</td>
+<td>try</td>
+<td>while</td>
+<td>with</td>
+<td>yield</td>
+</tr>
+</tbody>
+</table>
+<h4 id="naming-conventions-and-guidelines">Naming Conventions and Guidelines</h4>
+<p>Within the limits of these rules, you can call your variables any name you want and make them as long or as short as you want. However, there are some conventions you should stick to you make your coding better. The following conventions will help make your code easier to write and fix when something goes wrong. (And trust me, something <em>always</em> goes wrong.):</p>
+<ul>
+<li><strong>Use lower case and underscores</strong></li>
+</ul>
+<p>There are two common ways to name a variable. For an example we will consider a variable that will bear a name that can be read as "black knight". The first way is lower case with underscores for spaces: <code>black_knight</code>. The second is often called "camel case": <code>BlackKnight</code>. Obviously you can use all caps (<code>BLACKKNIGHT</code>), no spaces (<code>blackknight</code>), some form abbreviation (<code>blk_knt</code>)  or any combination of these. However, the lower case with underscores and camel case are the most common for general use variables. </p>
+<p>When writing Python especially as you are learning, stick to the lower case with underscores. For what we will be doing this will help your code be more readable and clear to you and anyone else reading it. </p>
+<p>Understand however, that this is not a hard and fast rule and should be broken if there is a good reason to do so. We will break this rule later on as we explore more features.</p>
+<ul>
+<li><strong>Avoid names that conflict with existing names</strong></li>
+</ul>
+<p>When naming you will find that, outside the 35 key words above, when you define a name, it overrides any variable connected to that name before. Therefore the following code:</p>
+<p><code>python
+  print = 2
+  print("cheese")</code></p>
+<p>will not work because you have changed the meaning of print from that of a function that writes things on the screen to an integer with a value of 2. Try this out for yourself.</p>
+<p>When naming variables always be careful to not use names that are already being used for another purpose. </p>
+<ul>
+<li><strong>Write descriptive names</strong></li>
+</ul>
+<p>One time while working on someone else's code, I came across a line of code that looked something like this (I have changed it for privacy reasons but the lesson still stands):</p>
+<p><code>python
+  val = a*cav + b*wtmcls + c*hcpv + d</code></p>
+<p>As a chemical engineer, I had some context but could not figure out what this was saying. Initially I could infer the following:</p>
+<ul>
+<li>This was a mathematical statement equivalent to $val = a \cdot cav + b \cdot wtmcls + c\cdot hcpv + d$</li>
+<li>a, b, c and d were constants related to all the other variables and if I could figure out the other 4 variables I could easily figure out a, b, c and d</li>
+<li><code>val</code> was short for 'value'. What value? I couldn't figure it out.</li>
+</ul>
+<p>The other 3 variables? I had no idea what they were.</p>
+<p>After weeks of digging I finally figured out what each of these variables were.</p>
+<ul>
+<li><code>val</code> was a predicted value of viscosity</li>
+<li><code>cav</code> stood for 'compound average value'</li>
+<li><code>wtmcls</code> was the number of 'water molecules' in the compound</li>
+<li><code>hcpv</code> was the 'heat capacity value' for that compound</li>
+</ul>
+<p>Now you don't need to understand what this does exactly but consider how much easier it would have been if the code had been written like this:</p>
+<p><code>python
+  viscosity_value = a*compound_avg_val + b*h2o_molecules + c*heat_capacity + d</code></p>
+<p>I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before.</p>
+<p>This will take practice but it behooves you to write your variable names (and the rest of your code for that matter) descriptively to avoid issues like the one above. </p>
+<p>​ </p>
+<ul>
+<li><strong>Help your reader understand the code without comments</strong></li>
+</ul>
+<p>Ideally you want to write code clearly enough that it is apparent what the code does without needing comments explaining it. Comments are important and I do not want to diminish their importance but this clear writing is better than commenting. Up to now what your code does should be obvious to anyone that can read Python without any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.</p>
+<p>Any good programmer knows that the majority of the time we spend coding is actually spent reading and not writing. Python makes it easy for you to write readable code and the first step is write good variable names.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Go to the <a href="https://docs.python.org/3/library/functions.html">Python Built-in Function page</a> and experiment with as many functions in the Python interpreter as you can. What does each of these built in functions do?</li>
+<li>Using the addition operator <code>+</code>, write a program that adds two numbers together and then print the result. (Use three descriptively named variables.)</li>
+<li>Experiment with different names of variables in <code>vars_and_mem.py</code>. How can you make your variables more clear to those reading your code?</li>
+</ul>
+<h2 id="advanced-mastery">Advanced Mastery</h2>
+<ul>
+<li>Use the internet to answer the following questions:</li>
+<li>What is binary?</li>
+<li>How are numbers represented as 1s and 0s?</li>
+<li>How are characters represented as 1s and 0s?</li>
+<li>How do computers do addition and subtraction using binary math?</li>
+<li>What is 2's compliment? Why is it used?</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../08-Formatted-Strings/">Previous: 08-Formatted Strings</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../10-Better-String-Formatting/">Next: 10-Better String Formatting</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../10-Better-String-Formatting/" class="btn btn-neutral float-right" title="10. Better String Formatting">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../08-Formatted-Strings/" class="btn btn-neutral" title="8. Formatted Strings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../08-Formatted-Strings/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../10-Better-String-Formatting/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

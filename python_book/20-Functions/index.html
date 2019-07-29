@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>20. Functions - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "20. Functions";
+    var mkdocs_page_input_path = "20-Functions.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">20. Functions</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#20-functions">20 - Functions</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#functions">Functions</a></li>
+        
+            <li><a class="toctree-l3" href="#scope">Scope</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>20. Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../19-Dictionaries/">Previous: 19-Dictionaries</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../21-More-Functions/">Next: 21-More Functions</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="20-functions">20 - Functions</h1>
+<p>We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent thereof:</p>
+<ul>
+<li>The ability to format text and print it to the command line</li>
+<li>Assignment of variables and storage in volatile memory</li>
+<li>Receiving user input</li>
+<li>Reading and writing files in persistent memory</li>
+<li>Performing mathematical operations on numbers</li>
+<li>Conditionals (i.e. if, else statements) and logical evaluation</li>
+<li>Both for-loops and while-loops</li>
+<li>The ability to define and manipulate list-like structures (i.e. array or linked structures)</li>
+<li>Functions</li>
+</ul>
+<p>It is this last feature that we have not yet sufficiently explored. This next exercise will introduce what is perhaps the most powerful of the features we have explored so far.</p>
+<pre><code class="python"># function_intro.py
+
+# define a global variable
+number_of_sandwiches = 0
+
+# 'def' defines a function
+def count_sandwiches():
+    print(f&quot;\nThere are {number_of_sandwiches} sandchwiches.&quot;) 
+
+
+def make_a_sandwich():
+    global number_of_sandwiches
+    number_of_sandwiches += 1
+    print(&quot;\nA sandwich has been made.&quot;)
+    print(f&quot;There are now {number_of_sandwiches} sandwiches.&quot;)
+
+
+def eat_a_sandwich():
+    global number_of_sandwiches
+    number_of_sandwiches -= 1
+    print(&quot;\nYou ate a sandwich.&quot;)
+    print(f&quot;There are now {number_of_sandwiches} sandwiches.&quot;)
+
+
+def main():
+    &quot;&quot;&quot;
+    This is the main function of the program.
+    It will be the main entry point for all
+    the functions.
+    &quot;&quot;&quot;
+    prompt = &quot;&quot;&quot;
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; &quot;&quot;&quot;
+    running = True
+
+    while running:
+        choice = input(prompt)
+
+        if &quot;count&quot; in choice:
+            count_sandwiches()
+
+        elif &quot;make&quot; in choice:
+            make_a_sandwich()
+
+        elif &quot;eat&quot; in choice:
+            if number_of_sandwiches &gt; 0:
+                eat_a_sandwich()
+            else:
+                print(&quot;There are no sandwiches to eat!&quot;)
+
+        elif &quot;quit&quot; in choice:
+            running = False
+
+        else:
+            print(&quot;That isn't an option.&quot;)
+
+main()
+
+</code></pre>
+
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python3 function_intro.py
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; make
+
+A sandwich has been made.
+There are now 1 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; count
+
+There are 1 sandchwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; make
+
+A sandwich has been made.
+There are now 2 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; eat
+
+You ate a sandwich.
+There are now 1 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; eat
+
+You ate a sandwich.
+There are now 0 sandwiches.
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; eat
+There are no sandwiches to eat!
+
+Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+--&gt; quit
+$ 
+</code></pre>
+
+<h3 id="functions">Functions</h3>
+<p>Upon finishing this lesson, you should have made your first functions!</p>
+<p>There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a single call to the function. We will explore the basic aspects in this and the next lessons.</p>
+<p>Functions follow the following syntax:</p>
+<pre><code class="python">def function_name(argument1, argument2 ...):
+    &lt;statements ...&gt;
+    &lt;statements ...&gt;
+    &lt;statements ...&gt;
+
+# code continues unindented
+
+# call the function using
+function_name(argument1, argument2)
+
+# or if there are no arguments
+function_name()
+</code></pre>
+
+<p>We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by <code>&lt;statements ...&gt;</code>). The first example of this was in the <code>count_sandwiches()</code> function. As you saw while executing the script, it simply gets the value of <code>number_of_sandwiches</code> and prints the corresponding text.</p>
+<h3 id="scope">Scope</h3>
+<p>In the second and third functions,  <code>make_a_sandwich()</code> and <code>eat_a_sandwich()</code>, you see the statement <code>global number_of_sandwiches</code>. The word <code>global</code> is a keyword in Python that we have not talked about yet and relates to how Python manages variables and memory.</p>
+<p>Up to this, point we have used only global variables. That is, we have had variables that were visible to every part of the program. Consider the following code:</p>
+<pre><code class="python">egg = &quot;Brown&quot;
+
+def change_color():
+    egg = &quot;White&quot;
+
+change_color()
+print(f&quot;The egg is {egg}&quot;)
+</code></pre>
+
+<p>Based on this code, which will print?</p>
+<ul>
+<li><code>The egg is White</code></li>
+<li><code>The egg is Brown</code></li>
+</ul>
+<p>If you try this out yourself, you will find that <code>The egg is Brown</code> is printed even though we changed the color of <code>egg</code> with <code>change_color()</code>. This is because of the scope of the <code>egg</code> variable. From Python's point of view, the <code>egg</code> defined on line 1 and the <code>egg</code> defined on line 4 inside the <code>change_color()</code> function are two different variables. The <code>egg</code> defined in the function only works inside the function and ceases to exist once the function ends.</p>
+<p>If we want the <code>egg</code>  on line 1 and the <code>egg</code> inside the function to be the same variable we need to tell Python to do that. We do this with the <code>global</code> key word as follows:</p>
+<pre><code class="python">egg = &quot;Brown&quot;
+
+def change_color():
+    global egg
+    egg = &quot;White&quot;
+
+change_color()
+print(f&quot;The egg is {egg}&quot;)
+</code></pre>
+
+<p>The line <code>global egg</code> tells Python to treat the <code>egg</code> variable in the function as the same <code>egg</code> variable defined in the global scope. There are many possible scopes that could exist in a Python program but for now the function scope and the global scope are the most important.</p>
+<p>A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.</p>
+<p>In the case of <code>function_intro.py</code>, you may have noticed that we did not have to use <code>global</code> in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with <code>count_sandwiches()</code>), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in <code>function_intro.py</code> you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<ul>
+<li>Make a function that calculates the <a href="https://en.wikipedia.org/wiki/Factorial">factorial of a number</a> (use a for-loop in your function) using a global variable from the user as your input.</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../19-Dictionaries/">Previous: 19-Dictionaries</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../21-More-Functions/">Next: 21-More Functions</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../21-More-Functions/" class="btn btn-neutral float-right" title="21. More Functions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../19-Dictionaries/" class="btn btn-neutral" title="19. Dictionaries"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../19-Dictionaries/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../21-More-Functions/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

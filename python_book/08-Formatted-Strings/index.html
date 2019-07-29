@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>8. Formatted Strings - The Redd Python Book</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "8. Formatted Strings";
+    var mkdocs_page_input_path = "08-Formatted-Strings.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> The Redd Python Book</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="..">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../03-CLI/">3. CLI</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../04-Hello-World/">4. Hello World</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../05-Comments/">5. Comments</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
+	    </li>
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href="./">8. Formatted Strings</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#8-formatted-strings">8 - Formatted Strings</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#formatting-and-the-format-method">Formatting and the .format() method</a></li>
+        
+            <li><a class="toctree-l3" href="#format-commands">Format commands</a></li>
+        
+            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../17-Loops/">17. Loops</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../18-Iterables/">18. Iterables</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../20-Functions/">20. Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../21-More-Functions/">21. More Functions</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../22-Try-Except/">22. Try Except</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../23-Imports/">23. Imports</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../28-Modules/">28. Modules</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">The Redd Python Book</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>8. Formatted Strings</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../07-Escape-Characters/">Previous: 07-Escape Characters</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../09-Variables-and-Memory/">Next: 09-Variables and Memory</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="8-formatted-strings">8 - Formatted Strings</h1>
+<p>As you use the <code>print</code> function there will be times when you want to "fill in the blank" and you can do this with format statements. Also we will introduce a few more features in addition to these.</p>
+<pre><code class="python"># format_strings.py
+
+# We can print a comma-separated list
+print(&quot;How much will this cost?&quot;, 23.00, &quot;dollars&quot;)
+
+# this is more readable with a .format statement
+print(&quot;How much will this cost? {} dollars.&quot;.format(23.0))
+
+# The benefits of formatting become more apparent with more blanks to fill in.
+print(&quot;Prices for cheese: ${}/1 oz, ${}/5 oz, ${}/10 oz&quot;.format(1.23, 5.35, 9.84))
+
+# Change the formatting order with indices in the braces
+print(&quot;Would you like {2}, {0} or {1}?&quot;.format(&quot;Brie&quot;, &quot;Gouda&quot;, &quot;Cheddar&quot;))
+
+# line up numbers and define decimal places with format codes
+print(&quot;&quot;&quot;
+Prices for cheese:
+${:5.2f}/ 1 oz
+${:5.2f}/ 5 oz
+${:5.2f}/10 oz
+&quot;&quot;&quot;.format(1.23232, 5.3593, 9.84655))
+</code></pre>
+
+<p><strong>Here is what should happen</strong></p>
+<pre><code>$ python format_strings.py
+How much will this cost? 23.0 dollars
+How much will this cost? 23.0 dollars.
+Prices for cheese: $1.23/1 oz, $5.35/5 oz, $9.84/10 oz
+Would you like 'Cheddar', Brie or Gouda?
+
+Prices for cheese:
+$ 1.23/ 1 oz
+$ 5.36/ 5 oz
+$ 9.85/10 oz
+
+$
+</code></pre>
+
+<h3 id="formatting-and-the-format-method">Formatting and the <code>.format()</code> method</h3>
+<p>We must understand a few things before understanding this code. </p>
+<ul>
+<li>
+<p>Print statements can be called on multiple strings separated by commas. As seen in line 4 that reads <code>print("How much will this cost?", 23.00, "dollars")</code> when we put a list of comma-separated strings in a print function, the print function prints them out with a space instead of a new line between them.</p>
+</li>
+<li>
+<p>We have introduced a powerful feature in the <code>.format</code> statement. The <code>.format</code>  statement refers to special kind of code called a 'method'. A method is like a function, such as the <code>print</code> function, but in this case it is tied to whatever is on the left side of the dot (<code>.</code>). In this case, it only acts on the string to which it is tied. We first see this in line 7 which reads:</p>
+</li>
+</ul>
+<p><code>print("How much will this cost? {} dollars.".format(23.0))</code></p>
+<ul>
+<li>
+<p>To understand this process, here is what <code>.format()</code> does to the string from which it is called:</p>
+</li>
+<li>
+<p>Scans the string looking for braces (<code>{}</code>) in the text</p>
+</li>
+<li>If there is text between the braces it interprets the text as format instructions.</li>
+<li>It then looks at what is given between the parentheses (<code>.format("Text")</code>) and puts that text in place of the braces formatting it as per the format instructions.</li>
+</ul>
+<h3 id="format-commands">Format commands</h3>
+<p>Let's look at each example of a <code>.format</code>  statement one by one:</p>
+<ul>
+<li><code>print("Prices for cheese: ${}/1 oz, ${}/5 oz, ${}/10 oz".format(1.23, 5.35, 9.84))</code></li>
+</ul>
+<p>Each pair of braces is replaced by each value, in order, as they appear in the comma-separated list inside the parentheses. This is the default behavior if no format instructions in the braces are given. This is executed in the same way on line 24. If you notice in the case of line 24, there are numbers in the braces. Each of these is an index number that counts from 0. (NOTE: In Python, counting <em>always</em> begins with 0.  I.E. <code>0, 1, 2, ...</code> instead of <code>1, 2, 3, ...</code>. We will explain more about this when we discuss lists and iterables.) This means that when you write the following <code>"{1}".format("First", "Second")</code> you are commanding <code>.format("First", "Second")</code> to replace that text with <code>"Second"</code>. If the string were instead <code>"{0}"</code>the text would be replace by <code>"First"</code></p>
+<ul>
+<li><code>print("Would you like {2}, {0} or {1}?".format("Brie", "Gouda", "Cheddar"))</code></li>
+</ul>
+<p>As above you are putting indexes in the format braces. But what we see here is that you can put them in any order you want and even repeat them if you wish. (See "Hone your Skills" for an example of repetition.) </p>
+<ul>
+<li><code>python
+  print("""
+  Prices for cheese:
+  ${:5.2f}/ 1 oz
+  ${:5.2f}/ 5 oz
+  ${:5.2f}/10 oz
+  """.format(1.23232, 5.3593, 9.84655))</code></li>
+</ul>
+<p>Here we see that we are using format commands to organize data. The part that says <code>{:5.2f}</code> means to allow at least <code>5</code> spaces for the number to exist (fill any unused space with whitespace), round the number to <code>2</code> decimal places, and treat the number as a floating point number <code>f</code>.  We have omitted the index of the values for simplicity but they would be written on the left side of the colon (e.g. <code>{0:5.2f}</code>).</p>
+<p>There are other formatting commands other than this but this is a good start to using formatting that will come up again and again. To review:</p>
+<pre><code class="python"># formatting cheat sheet
+print(&quot;{&lt;format index or identifier&gt;:&lt;format commands&gt;}&quot;.format(arguments))
+</code></pre>
+
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<pre><code class="python">print(&quot;No. &quot; * 3)
+print(&quot;No.&quot;,&quot;No.&quot;,&quot;No.&quot;)
+print(&quot;{0} {0} {0}&quot;.format(&quot;No.&quot;))
+print(&quot;{} {} {}&quot;.format(&quot;No.&quot;,&quot;No.&quot;,&quot;No.&quot;))
+print(&quot;{0} &quot;.format(&quot;No.&quot;) * 3)
+</code></pre>
+
+<ul>
+<li>Write the above code in a separate Python file and run it. As you will see, all 5 lines apparently do the same thing. Which way is the best way to do that and why? What are some potential advantages and drawbacks to each?</li>
+<li>Try rewriting lines of code from <code>format_strings.py</code> to make it so all the cheeses are aligned vertically. How can you do this with what we learned in this exercise?</li>
+<li>Look in the <a href="https://docs.python.org/3.7/library/string.html#custom-string-formatting">Python documentation</a> for other format commands. Experiment with these and learn how to use them.</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../07-Escape-Characters/">Previous: 07-Escape Characters</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../09-Variables-and-Memory/">Next: 09-Variables and Memory</a></p>
+<hr />
+<!-- End Navigation -->
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../09-Variables-and-Memory/" class="btn btn-neutral float-right" title="9. Variables and Memory">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../07-Escape-Characters/" class="btn btn-neutral" title="7. Escape Characters"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../07-Escape-Characters/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../09-Variables-and-Memory/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
