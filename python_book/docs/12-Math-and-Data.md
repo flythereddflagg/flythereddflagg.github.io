@@ -127,15 +127,15 @@ There are many more types than these and we will introduce them later on. These 
 
 Each set of symbols between x and y is called a binary operator. Below is a brief description of each binary operator and what it does to a integer, float and string.
 
-| Operator                  | Math Example                                    | Integer and float                  | String                                                       |
-| ------------------------- | ----------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
-| + (plus)                  | `x +  y` $=x + y$                               | Addition                           | Concatenate two strings                                      |
-| - (dash)                  | `x -  y`  $=x - y$                              | Subtraction                        | No meaning                                                   |
-| * (asterisk)              | `x *  y`  $= xy = x\cdot y$                     | Multiplication                     | Multiply a string by a positive integer to concatenate string `y` with itself  `x` times |
-| ** (double asterisk)      | `x ** y ` $=x^y $                               | The exponent                       | No meaning                                                   |
-| / (forward slash)         | `x /  y` $=x/y=\frac{x}{y}$                     | Float (i.e. normal) division       | No meaning                                                   |
-| // (double forward slash) | `x // y` $=\frac{x}{y}$ rounded down to integer | Integer division or floor division | No meaning                                                   |
-| % (percent character)     | `x %  y = y - x * (x // y)`                     | Modulo or Remainder                | "Old style" string formatting                                |
+| Operator                  | Math Example                                      | Integer and float                  | String                                                       |
+| ------------------------- | ------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
+| + (plus)                  | `x +  y`\(=x + y\)                                | Addition                           | Concatenate two strings                                      |
+| - (dash)                  | `x -  y`  \(=x - y\)                              | Subtraction                        | No meaning                                                   |
+| * (asterisk)              | `x *  y`  \(= xy = x\cdot y\)                     | Multiplication                     | Multiply a string by a positive integer to concatenate string `y` with itself  `x` times |
+| ** (double asterisk)      | `x ** y ` \(=x^y\)                                | The exponent                       | No meaning                                                   |
+| / (forward slash)         | `x /  y` \(=x/y=\frac{x}{y}\)                     | Float (i.e. normal) division       | No meaning                                                   |
+| // (double forward slash) | `x // y` \(=\frac{x}{y}\) rounded down to integer | Integer division or floor division | No meaning                                                   |
+| % (percent character)     | `x %  y = y - x * (x // y)`                       | Modulo or Remainder                | "Old style" string formatting                                |
 
 Among the above operators, the less commonly known operators are the last 2 and therefore we will give more details about them below:
 
