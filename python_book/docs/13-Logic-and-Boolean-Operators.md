@@ -23,8 +23,7 @@ Go to your python interpreter and try running the following commands:
 
 ```python
 $ python3
-Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
-[GCC 8.2.0] on linux
+Python 3.x.x ...
 Type "help", "copyright", "credits" or "license" for more information.
 >>> bool(True)
 True
@@ -82,8 +81,7 @@ A few things to do while doing this exercise:
 
 ```python
 $ python3
-Python 3.6.7 (default, Oct 22 2018, 11:32:17) 
-[GCC 8.2.0] on linux
+Python 3.x.x ...
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 1 == 2
 False
@@ -159,7 +157,7 @@ Notes:
 
 ```python
 $ python
-Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+Python 3.x.x ...
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 1 and 2
 2

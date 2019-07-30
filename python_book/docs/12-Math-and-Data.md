@@ -111,11 +111,11 @@ The different ways a computer can "mark" a set of numbers for interpretation are
 
   An important note about floats and integers are that if you combine them mathematically, you will always get a float back. Therefore if you need to "upgrade" and integer to a float you can do so by multiplying an integer by `1.0`.
 
-  ```python
-  number = 2 # 'number' is an integer
-  number = number * 1.0
-  # 'number' now has the same value but is a float
-  ```
+```python
+number = 2 # 'number' is an integer
+number = number * 1.0
+# 'number' now has the same value but is a float
+```
 
 - **String**
 

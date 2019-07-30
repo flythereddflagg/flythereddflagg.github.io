@@ -108,15 +108,15 @@ There is nothing in this folder yet so lets make a file to put in this folder! T
 
 - **Command for Mac OS X  or Linux**
 
-  ```bash
-  $ touch carrots.py
-  ```
+```bash
+$ touch carrots.py
+```
 
 - **Command for Windows**
 
-  ```powershell
-  > New-Item -type file carrots.py
-  ```
+```powershell
+> New-Item -type file carrots.py
+```
 
 You have just created an empty file called `carrots.py`. The `.py` part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the `.py` extension but they are not fundamentally different from plain text files (i.e. files that end in `.txt`).
 
@@ -206,9 +206,6 @@ Here are a few questions you should research:
 
 - Look up 'shell scripting' for your platform (i.e. Windows Command Prompt (cmd) or Windows Powershell,
  Linux Bash, or OS X Terminal). Begin to learn to shell script on your computer. 
-
- We will cover some basics of shell scripting later of study but
- beginning to learn shell scripting can be powerful as many of the concepts we will learn apply to shell scripting as well.
 
 <!-- Navigation -->
 

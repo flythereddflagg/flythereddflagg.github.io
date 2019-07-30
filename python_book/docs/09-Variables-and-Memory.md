@@ -56,7 +56,7 @@ I want to begin here by saying a few things about computers that hopefully will 
 Computers, including those that that run everything from your desktop to your phone to your car, basically only do 3 things:
 
 1. Store numbers as 1s and 0s in different places
-1. Move those 1s and 0s between the different storage places
+1. Move those 1s and 0s between the different places
 1. Combine those 1s and 0s mathematically (i.e. addition and subtraction)
 
 Of course, computers can do these things at blinding speeds and can be endlessly combined to do all sorts of complex things but these three basics make up all of computing. The programs we have been writing so far do just those things but the details of how this is done is hidden from you but don't be fooled! Nothing more than those three things is happening at any time.
@@ -158,19 +158,19 @@ Within the limits of these rules, you can call your variables any name you want 
   print("cheese")
   ```
 
-  will not work because you have changed the meaning of print from that of a function that writes things on the screen to an integer with a value of 2. Try this out for yourself.
+  will break because you have changed the meaning of print from that of a function that writes things on the screen to an integer with a value of 2. Try this out for yourself.
 
   When naming variables always be careful to not use names that are already being used for another purpose. 
 
 - **Write descriptive names**
 
-  One time while working on someone else's code, I came across a line of code that looked something like this (I have changed it for privacy reasons but the lesson still stands):
+  One time while working on someone else's code, I came across a line of code that looked something like this:
 
   ```python
   val = a*cav + b*wtmcls + c*hcpv + d
   ```
 
-  As a chemical engineer, I had some context but could not figure out what this was saying. Initially I could infer the following:
+  I had some context for the code but could not figure out what this was saying. Initially I could infer the following:
 
   - This was a mathematical statement equivalent to $val = a \cdot cav + b \cdot wtmcls + c\cdot hcpv + d$
   - a, b, c and d were constants related to all the other variables and if I could figure out the other 4 variables I could easily figure out a, b, c and d
@@ -185,7 +185,7 @@ Within the limits of these rules, you can call your variables any name you want 
   - `wtmcls` was the number of 'water molecules' in the compound
   - `hcpv` was the 'heat capacity value' for that compound
 
-  Now you don't need to understand what this does exactly but consider how much easier it would have been if the code had been written like this:
+  Now you don't need to understand all of this perfectly but consider how much easier to understand it would have been if the code had been written like this:
 
   ```python
   viscosity_value = a*compound_avg_val + b*h2o_molecules + c*heat_capacity + d 

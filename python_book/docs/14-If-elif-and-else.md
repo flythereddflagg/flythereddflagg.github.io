@@ -21,7 +21,7 @@ We will use the concepts of True and False to drive our scripts ability to make 
 # message if necessary
 error = False
 
-# this is how much the farmer 
+# this is how much each farmer 
 # needs in revenue to break even
 break_even = 1000.00
 

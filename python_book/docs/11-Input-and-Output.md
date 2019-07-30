@@ -16,9 +16,9 @@ Lets start with this exercise:
 # input_output.py
 
 # use input() to get user input
-user_name = input("Enter your name      :")
-user_age  = input("Enter your age       :")
-user_job  = input("Enter your occupation:")
+user_name = input("Enter your name      : ")
+user_age  = input("Enter your age       : ")
+user_job  = input("Enter your occupation: ")
 
 # let's print out what we got from the user
 print(f"Hello {user_name}! You are {user_age} years old.")
@@ -29,9 +29,9 @@ print(f"You work as a/an {user_job}.")
 
 ```
 $ python io_files.py
-Enter your name      :John Doe
-Enter your age       :30
-Enter your occupation:Panda Caretaker
+Enter your name      : John Doe
+Enter your age       : 30
+Enter your occupation: Panda Caretaker
 Hello John Doe! You are 30 years old.
 You work as a/an Panda Caretaker.
 $
