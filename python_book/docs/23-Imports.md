@@ -205,33 +205,33 @@ Skim the basic commands of pip [here](https://pip.pypa.io/en/stable/quickstart/)
 
 - Consider the following function definition from  `import_practice.py`:
 
-  ```python
-  def gen_random_matrix(size):
-      """
-      Returns a 2D matrix (a.k.a. a list of lists)
-      of shape "size X size" with elements generated 
-      having random values between 0 and 1
-      """
-      matrix = []
-      for row_index in range(size):
-          row = []
-          for element in range(size):
-              row.append(random())
-          matrix.append(row)
-      return matrix
-  ```
+```python
+def gen_random_matrix(size):
+    """
+    Returns a 2D matrix (a.k.a. a list of lists)
+    of shape "size X size" with elements generated 
+    having random values between 0 and 1
+    """
+    matrix = []
+    for row_index in range(size):
+        row = []
+        for element in range(size):
+            row.append(random())
+        matrix.append(row)
+    return matrix
+```
 
   It turns out Python has a neat trick called a [List Comprehension](https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions) to turn all that code into one line of code so that it can be written as follows:
 
-  ```python
-  def gen_random_matrix(size):
-      """
-      Returns a 2D matrix (a.k.a. a list of lists)
-      of shape "size X size" with elements generated 
-      having random values between 0 and 1
-      """
-      return # insert line of code here
-  ```
+```python
+def gen_random_matrix(size):
+    """
+    Returns a 2D matrix (a.k.a. a list of lists)
+    of shape "size X size" with elements generated 
+    having random values between 0 and 1
+    """
+    return # insert line of code here
+```
 
   After reading about list comprehensions write one line of code that will do the same thing as above and run it to test it.
 

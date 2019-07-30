@@ -446,29 +446,31 @@ $
 <p>Consider the following function definition from  <code>import_practice.py</code>:</p>
 </li>
 </ul>
-<p><code>python
-  def gen_random_matrix(size):
-      """
-      Returns a 2D matrix (a.k.a. a list of lists)
-      of shape "size X size" with elements generated 
-      having random values between 0 and 1
-      """
-      matrix = []
-      for row_index in range(size):
-          row = []
-          for element in range(size):
-              row.append(random())
-          matrix.append(row)
-      return matrix</code></p>
+<pre><code class="python">def gen_random_matrix(size):
+    &quot;&quot;&quot;
+    Returns a 2D matrix (a.k.a. a list of lists)
+    of shape &quot;size X size&quot; with elements generated 
+    having random values between 0 and 1
+    &quot;&quot;&quot;
+    matrix = []
+    for row_index in range(size):
+        row = []
+        for element in range(size):
+            row.append(random())
+        matrix.append(row)
+    return matrix
+</code></pre>
+
 <p>It turns out Python has a neat trick called a <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">List Comprehension</a> to turn all that code into one line of code so that it can be written as follows:</p>
-<p><code>python
-  def gen_random_matrix(size):
-      """
-      Returns a 2D matrix (a.k.a. a list of lists)
-      of shape "size X size" with elements generated 
-      having random values between 0 and 1
-      """
-      return # insert line of code here</code></p>
+<pre><code class="python">def gen_random_matrix(size):
+    &quot;&quot;&quot;
+    Returns a 2D matrix (a.k.a. a list of lists)
+    of shape &quot;size X size&quot; with elements generated 
+    having random values between 0 and 1
+    &quot;&quot;&quot;
+    return # insert line of code here
+</code></pre>
+
 <p>After reading about list comprehensions write one line of code that will do the same thing as above and run it to test it.</p>
 <!-- Navigation -->
 
