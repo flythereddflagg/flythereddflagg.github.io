@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 15-Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 17-Loops](./17-Loops.md)
-
----
-<!-- End Navigation -->
 
 # 16 - File Reading and Writing
 
@@ -160,11 +152,3 @@ Remember to use `with` statements in all the following exercises.
 - Try to open and read a non-.txt file with Python. Were you able to read it? Research why or why not.
 - Read about the complete list of methods for working with files [here](https://docs.python.org/3.7/library/io.html#class-hierarchy). How could you use these methods?
 
-<!-- Navigation -->
-
----
-
-[Previous: 15-Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 17-Loops](./17-Loops.md)
-
----
-<!-- End Navigation -->

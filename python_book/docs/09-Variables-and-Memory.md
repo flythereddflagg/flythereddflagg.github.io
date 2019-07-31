@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 08-Formatted Strings](./08-Formatted-Strings.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 10-Better String Formatting](./10-Better-String-Formatting.md)
-
----
-<!-- End Navigation -->
 # 9 - Variables and Memory
 
 Now we will introduce some concepts that make Python far more powerful. You have the ability to store things in computer memory and the following exercise will demonstrate how to use it.
@@ -220,11 +212,3 @@ Any good programmer knows that the majority of the time we spend coding is actua
 
 
 
-<!-- Navigation -->
-
----
-
-[Previous: 08-Formatted Strings](./08-Formatted-Strings.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 10-Better String Formatting](./10-Better-String-Formatting.md)
-
----
-<!-- End Navigation -->

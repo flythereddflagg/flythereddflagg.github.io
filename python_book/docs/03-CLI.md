@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 02-Getting Started](./02-Getting-Started.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 04-Hello World](./04-Hello-World.md)
-
----
-<!-- End Navigation -->
 
 # 3 - CLI
 
@@ -207,11 +199,3 @@ Here are a few questions you should research:
 - Look up 'shell scripting' for your platform (i.e. Windows Command Prompt (cmd) or Windows Powershell,
  Linux Bash, or OS X Terminal). Begin to learn to shell script on your computer. 
 
-<!-- Navigation -->
-
----
-
-[Previous: 02-Getting Started](./02-Getting-Started.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 04-Hello World](./04-Hello-World.md)
-
----
-<!-- End Navigation -->

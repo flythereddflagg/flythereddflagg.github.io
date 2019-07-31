@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 24-Reading Code](./24-Reading-Code.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 26-Objects and Classes](./26-Objects-and-Classes.md)
-
----
-<!-- End Navigation -->
 # 25 - Do a Project
 
 It is now time to put your new found skills to use! You have learned enough in Python to find out how to solve many of your own problems. Now your assignment is to integrate everything you have learned into a project. My only requirement is that the project must interact with a user and the user must have some measure of control over what happens in the program. There are two basic ways this can be done. The first is by using the `input` function as we have covered. Another way is to use `sys.argv` (i.e. the `argv` variable from the `sys` module).
@@ -298,11 +290,3 @@ Consider how the `break` and `continue` statements change the flow of the code. 
 
 You may notice that these introductions have been brief. This is on purpose. My goal was to simply let you know that these features exist. It is up to you to research and utilize them. They are not required. 
 
-<!-- Navigation -->
-
----
-
-[Previous: 24-Reading Code](./24-Reading-Code.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 26-Objects and Classes](./26-Objects-and-Classes.md)
-
----
-<!-- End Navigation -->

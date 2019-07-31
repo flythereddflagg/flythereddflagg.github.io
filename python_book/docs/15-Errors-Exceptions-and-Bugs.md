@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 14-If elif and else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16-File Reading and Writing](./16-File-Reading-and-Writing.md)
-
----
-<!-- End Navigation -->
 # 15 - Errors, Exceptions and Bugs
 
 We are going to "break" Python in a lot of ways in this section. Your assignment for this section is to fix all the problems in the following script. For the purposes of this exercise, here is how you should go about doing this:
@@ -149,11 +141,3 @@ As I noted above, the hardest thing to fix is logic errors. Later we will go muc
 
 - Research debugging strategies and begin to implement them in your programs.
 
-<!-- Navigation -->
-
----
-
-[Previous: 14-If elif and else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16-File Reading and Writing](./16-File-Reading-and-Writing.md)
-
----
-<!-- End Navigation -->

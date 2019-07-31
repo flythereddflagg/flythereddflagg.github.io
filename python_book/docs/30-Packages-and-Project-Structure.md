@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 29-Comments and Code Documentation](./29-Comments-and-Code-Documentation.md) | [Table of Contents](./00-Table-of-Contents.md) | 
-
----
-<!-- End Navigation -->
 #  30 - Packages and Project structure
 
 This section is low on code but introduces some powerful features of Python that will enable you to scale your code to do large, maintainable projects. Within the next few lessons you will be doing another project. This time your project will be object-oriented. You will use a class structure to do something interesting. You should start thinking about what you want to do right now. So far you have done a project in which you probably made a structure of global variables (i.e. variables that were defined outside of any function or class) and used functions to act on those variables. This project will focus on using the object-oriented features of Python to make the best and most robust piece of software that you can.
@@ -111,12 +103,4 @@ This will be covered in the next section.
 - if you haven't already, now would be a good time to turn the documentation in your docstrings into a human readable manual. If you are unsure where to start, try using [pydoc](https://docs.python.org/3.7/library/pydoc.html) and invoke it by using `python -m pydoc`. (Enter `python --help` to get an idea of how this works).
 - Begin building your own project! Have an idea you want to see? Start by building a similar project structure as above but replace every instance of `emails` with the name of your own project. Begin fleshing out what you want to see from this project. 
 
-<!-- Navigation -->
-
----
-
-[Previous: 29-Comments and Code Documentation](./29-Comments-and-Code-Documentation.md) | [Table of Contents](./00-Table-of-Contents.md) | 
-
----
-<!-- End Navigation -->
 

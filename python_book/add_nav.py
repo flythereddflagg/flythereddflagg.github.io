@@ -29,8 +29,8 @@ def add_nav(nav_root_dir):
     nav_files = sorted(nav_files)
     
     for i in range(len(nav_files)):
-        if "README" in nav_files[i] or
-            "Table of Contents" in nav_files[i] or
+        if "README" in nav_files[i] or \
+            "Table of Contents" in nav_files[i] or \
             "index" in nav_files[i]:
             continue
         
@@ -72,13 +72,13 @@ def add_nav(nav_root_dir):
 <!-- End Navigation -->
 """
 
-        with open(nav_files[i], 'r') as f:
+        with open(nav_root_dir+nav_files[i], 'r') as f:
             content = f.read()
         
-        with open(nav_files[i], 'w') as f:
+        with open(nav_root_dir+nav_files[i], 'w') as f:
             f.write(front_add_text + content + back_add_text)
     
-    with open("00-Table of Contents.md", 'w') as f:
+    with open(nav_root_dir+"00-Table-of-Contents.md", 'w') as f:
         f.write("# Table of Contents\n")
         f.write("\n".join(toc) + "\n")
         
@@ -94,7 +94,7 @@ def rm_nav(nav_root_dir):
         break
     
     for i in range(len(nav_files)):
-        with open(nav_files[i], 'r') as f:
+        with open(nav_root_dir+nav_files[i], 'r') as f:
             content = f.readlines()
         
         nav = False
@@ -113,11 +113,11 @@ def rm_nav(nav_root_dir):
         new_content = "".join(new_content)
         
                 
-        with open(nav_files[i], 'w') as f:
+        with open(nav_root_dir+nav_files[i], 'w') as f:
             f.write(new_content)
 
         
         
 if __name__ == "__main__":
-    rm_nav(".")
-    add_nav(".")
+    rm_nav("./docs/")
+    #add_nav("./docs/")

@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 22-Try Except](./22-Try-Except.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 24-Reading Code](./24-Reading-Code.md)
-
----
-<!-- End Navigation -->
 # 23 - Imports
 
 This is the last concept we will cover that I would consider the "basics" of Python and programming in general. Up to now, we have been using only the built-in functionality of Python. This is, in fact, a very limited view of what Python can do. To get the full power and utility of Python, we can use libraries of code that other programmers have written to do all sorts of complex and powerful tasks.
@@ -235,11 +227,3 @@ def gen_random_matrix(size):
 
   After reading about list comprehensions write one line of code that will do the same thing as above and run it to test it.
 
-<!-- Navigation -->
-
----
-
-[Previous: 22-Try Except](./22-Try-Except.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 24-Reading Code](./24-Reading-Code.md)
-
----
-<!-- End Navigation -->

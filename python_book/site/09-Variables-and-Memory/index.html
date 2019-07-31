@@ -230,6 +230,11 @@
     <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
 	    </li>
           
+            <li class="toctree-l1">
+		
+    <a class="" href="../31-Automated-Testing/">31. Automated Testing</a>
+	    </li>
+          
         </ul>
       </div>
       &nbsp;
@@ -262,14 +267,7 @@
           <div role="main">
             <div class="section">
               
-                <!-- Navigation -->
-
-<hr />
-<p><a href="../08-Formatted-Strings/">Previous: 08-Formatted Strings</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../10-Better-String-Formatting/">Next: 10-Better String Formatting</a></p>
-<hr />
-<!-- End Navigation -->
-
-<h1 id="9-variables-and-memory">9 - Variables and Memory</h1>
+                <h1 id="9-variables-and-memory">9 - Variables and Memory</h1>
 <p>Now we will introduce some concepts that make Python far more powerful. You have the ability to store things in computer memory and the following exercise will demonstrate how to use it.</p>
 <pre><code class="python"># vars_and_mem.py
 
@@ -310,7 +308,7 @@ $
 <p>Computers, including those that that run everything from your desktop to your phone to your car, basically only do 3 things:</p>
 <ol>
 <li>Store numbers as 1s and 0s in different places</li>
-<li>Move those 1s and 0s between the different storage places</li>
+<li>Move those 1s and 0s between the different places</li>
 <li>Combine those 1s and 0s mathematically (i.e. addition and subtraction)</li>
 </ol>
 <p>Of course, computers can do these things at blinding speeds and can be endlessly combined to do all sorts of complex things but these three basics make up all of computing. The programs we have been writing so far do just those things but the details of how this is done is hidden from you but don't be fooled! Nothing more than those three things is happening at any time.</p>
@@ -442,15 +440,15 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <p><code>python
   print = 2
   print("cheese")</code></p>
-<p>will not work because you have changed the meaning of print from that of a function that writes things on the screen to an integer with a value of 2. Try this out for yourself.</p>
+<p>will break because you have changed the meaning of print from that of a function that writes things on the screen to an integer with a value of 2. Try this out for yourself.</p>
 <p>When naming variables always be careful to not use names that are already being used for another purpose. </p>
 <ul>
 <li><strong>Write descriptive names</strong></li>
 </ul>
-<p>One time while working on someone else's code, I came across a line of code that looked something like this (I have changed it for privacy reasons but the lesson still stands):</p>
+<p>One time while working on someone else's code, I came across a line of code that looked something like this:</p>
 <p><code>python
   val = a*cav + b*wtmcls + c*hcpv + d</code></p>
-<p>As a chemical engineer, I had some context but could not figure out what this was saying. Initially I could infer the following:</p>
+<p>I had some context for the code but could not figure out what this was saying. Initially I could infer the following:</p>
 <ul>
 <li>This was a mathematical statement equivalent to $val = a \cdot cav + b \cdot wtmcls + c\cdot hcpv + d$</li>
 <li>a, b, c and d were constants related to all the other variables and if I could figure out the other 4 variables I could easily figure out a, b, c and d</li>
@@ -464,7 +462,7 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <li><code>wtmcls</code> was the number of 'water molecules' in the compound</li>
 <li><code>hcpv</code> was the 'heat capacity value' for that compound</li>
 </ul>
-<p>Now you don't need to understand what this does exactly but consider how much easier it would have been if the code had been written like this:</p>
+<p>Now you don't need to understand all of this perfectly but consider how much easier to understand it would have been if the code had been written like this:</p>
 <p><code>python
   viscosity_value = a*compound_avg_val + b*h2o_molecules + c*heat_capacity + d</code></p>
 <p>I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before.</p>
@@ -490,12 +488,6 @@ Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;licen
 <li>How do computers do addition and subtraction using binary math?</li>
 <li>What is 2's compliment? Why is it used?</li>
 </ul>
-<!-- Navigation -->
-
-<hr />
-<p><a href="../08-Formatted-Strings/">Previous: 08-Formatted Strings</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../10-Better-String-Formatting/">Next: 10-Better String Formatting</a></p>
-<hr />
-<!-- End Navigation -->
               
             </div>
           </div>

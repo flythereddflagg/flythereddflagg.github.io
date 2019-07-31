@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 06-Strings and the Print Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08-Formatted Strings](./08-Formatted-Strings.md)
-
----
-<!-- End Navigation -->
 
 # 7 - Escape Characters
 
@@ -119,11 +111,3 @@ these by doing the exercises under "Hone your skills". For now, understand that
   Navier-Stokes Equations</a> for a 3-D system in Cartesian coordinates formatted 
   like a normal math equation using escape sequences and print statements.
 
-<!-- Navigation -->
-
----
-
-[Previous: 06-Strings and the Print Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08-Formatted Strings](./08-Formatted-Strings.md)
-
----
-<!-- End Navigation -->
