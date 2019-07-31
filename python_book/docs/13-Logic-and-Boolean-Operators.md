@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 12-Math-and-Data](./12-Math-and-Data.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 14-If-elif-and-else](./14-If-elif-and-else.md)
+
+---
+<!-- End Navigation -->
 
 # 13 - Logic and Boolean Operators
 
@@ -208,3 +216,11 @@ For all of these operators, memorize their behavior and practice with them
   - Does order matter in logical operator statements? How can you use this to your advantage?
   - For objects that are not numbers or strings, how is the Truth value evaluated? How could you change this evaluation?
 
+<!-- Navigation -->
+
+---
+
+[Previous: 12-Math-and-Data](./12-Math-and-Data.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 14-If-elif-and-else](./14-If-elif-and-else.md)
+
+---
+<!-- End Navigation -->

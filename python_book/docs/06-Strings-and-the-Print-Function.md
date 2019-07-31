@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 05-Comments](./05-Comments.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 07-Escape-Characters](./07-Escape-Characters.md)
+
+---
+<!-- End Navigation -->
 
 # 6 - Strings and the print function
 
@@ -78,3 +86,11 @@ with your use of single and double quotes or you will run into problems.
 
 - Look up strings as they relate to computers. How are strings represented in computer language?
 
+<!-- Navigation -->
+
+---
+
+[Previous: 05-Comments](./05-Comments.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 07-Escape-Characters](./07-Escape-Characters.md)
+
+---
+<!-- End Navigation -->

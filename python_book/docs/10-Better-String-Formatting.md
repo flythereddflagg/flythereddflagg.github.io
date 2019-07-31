@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 09-Variables-and-Memory](./09-Variables-and-Memory.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 11-Input-and-Output](./11-Input-and-Output.md)
+
+---
+<!-- End Navigation -->
 # 10 - Better String Formatting
 
 This is a short lesson in which we will learn a "trick" that will make all that formatting a lot more efficient using variables.
@@ -124,3 +132,11 @@ The `f` that we put in front of a string is referred to technically as a "litera
 1. The format instructions are detailed [here](https://docs.python.org/3.7/library/string.html#format-string-syntax) in the Python documentation. Learn what each of these things do and experiment with them.
 1. Experiment with the format instructions. Can you align all the numbers in different ways?
 
+<!-- Navigation -->
+
+---
+
+[Previous: 09-Variables-and-Memory](./09-Variables-and-Memory.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 11-Input-and-Output](./11-Input-and-Output.md)
+
+---
+<!-- End Navigation -->

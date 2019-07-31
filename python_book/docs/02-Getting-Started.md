@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 01-Intro-and-How-to-Use-This-Book](./01-Intro-and-How-to-Use-This-Book.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 03-CLI](./03-CLI.md)
+
+---
+<!-- End Navigation -->
 
 # 2 - Getting started 
 
@@ -94,3 +102,11 @@ Once you have determined you are ready, lets begin programming!
 
 *|Space Intentionally Left blank|*
 
+<!-- Navigation -->
+
+---
+
+[Previous: 01-Intro-and-How-to-Use-This-Book](./01-Intro-and-How-to-Use-This-Book.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 03-CLI](./03-CLI.md)
+
+---
+<!-- End Navigation -->

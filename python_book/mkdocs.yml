@@ -41,6 +41,31 @@ extra_javascript:
 
 markdown_extensions:
     - mdx_math
+    - codehilite:
+        linenums: true
 
-
-theme: readthedocs
+theme:
+# pip install mkdocs-material
+    name: 'material'
+    palette:
+        primary: 'blue grey'
+        accent: 'grey'
+    font:
+        text: 'Ubuntu'
+        code: 'Ubuntu Mono'
+    logo:
+        icon: 'home'
+        
+    # feature:
+        # tabs: true
+        
+    extra:
+      social:
+        - type: 'github'
+          link: 'https://github.com/flythereddflagg'
+        # - type: 'twitter'
+          # link: 'https://twitter.com/squidfunk'
+        # - type: 'linkedin'
+          # link: 'https://linkedin.com/in/squidfunk'
+       
+    

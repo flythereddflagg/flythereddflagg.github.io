@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 23-Imports](./23-Imports.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 25-Do-a-Project](./25-Do-a-Project.md)
+
+---
+<!-- End Navigation -->
 # 24 - Reading Code
 
 If you have stuck with Python up to this point, congratulations! You have learned the basics of Python scripting. Everything you have learned up to now has been an exercise to get you familiar with the syntax of Python as well as a few basic principles of programming and computer science. I mentioned when we introduced functions that there are a few things that are common to all programming languages. There are only a few more concepts common to many programming languages that we have not yet covered in Python. However, you now know enough to understand the bulk of the language.
@@ -22,3 +30,11 @@ Like all of these lessons, what you put in to this exercise is what you will get
 
 - Do this exercise for a Python third-party library such as the Python scientific library [`scipy`](https://github.com/scipy/scipy/tree/v1.2.0/scipy). Could you write your own module? How? (Note: We will go into detail on this later.)
 
+<!-- Navigation -->
+
+---
+
+[Previous: 23-Imports](./23-Imports.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 25-Do-a-Project](./25-Do-a-Project.md)
+
+---
+<!-- End Navigation -->

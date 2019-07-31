@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 17-Loops](./17-Loops.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 19-Dictionaries](./19-Dictionaries.md)
+
+---
+<!-- End Navigation -->
 # 18 - Iterables
 
 The [Python Documentation](https://docs.python.org/3/glossary.html#term-iterable) defines an iterable this way:
@@ -233,3 +241,11 @@ Each of the properties that we used in `iterables.py`  that are common to all it
 - Try putting negative numbers into the subscript operator. Start with `-1`. What happens? How can you use this to your advantage?
 - Look up the documentation on [tuples](https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences) and learn how to pack and unpack variables. How could this be useful?
 
+<!-- Navigation -->
+
+---
+
+[Previous: 17-Loops](./17-Loops.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 19-Dictionaries](./19-Dictionaries.md)
+
+---
+<!-- End Navigation -->

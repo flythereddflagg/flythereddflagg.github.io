@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 26-Objects-and-Classes](./26-Objects-and-Classes.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 28-Modules](./28-Modules.md)
+
+---
+<!-- End Navigation -->
 # 27 - Inheritance and Polymorphism
 
 As we saw from the last lesson, object oriented programming allows us to scale our software in a convenient way. There is another powerful way object-oriented programming allows us to structure our programs. That is through a family-like structure called inheritance that gives rise to polymorphism. The following exercise will illustrate how one may use this programming to their advantage.
@@ -165,3 +173,11 @@ One more powerful feature of object-oriented programming is the idea that a give
 
   
 
+<!-- Navigation -->
+
+---
+
+[Previous: 26-Objects-and-Classes](./26-Objects-and-Classes.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 28-Modules](./28-Modules.md)
+
+---
+<!-- End Navigation -->

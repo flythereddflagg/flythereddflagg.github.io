@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 03-CLI](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05-Comments](./05-Comments.md)
+
+---
+<!-- End Navigation -->
 
 # 4 - Hello World!
 
@@ -132,3 +140,11 @@ File "hello_world.py", line 8
 
   Look back at the code that you wrote down from this lesson. Does the spacing make sense? How would you change the spacing to be more consistent? Would you add more lines here or fewer there? Rewrite the code to reflect your mental understanding of the code.
 
+<!-- Navigation -->
+
+---
+
+[Previous: 03-CLI](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05-Comments](./05-Comments.md)
+
+---
+<!-- End Navigation -->

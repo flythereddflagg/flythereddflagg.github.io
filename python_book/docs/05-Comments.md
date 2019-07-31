@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 04-Hello-World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06-Strings-and-the-Print-Function](./06-Strings-and-the-Print-Function.md)
+
+---
+<!-- End Navigation -->
 
 # 5 - Comments 
 
@@ -119,3 +127,11 @@ I will often put comments in the code I have you write. You will need to put the
 1. Look up what Python Docstrings are. Why would you want to use them?
 1. Comment and uncomment some of the lines in the code you wrote. What can you happen by uncommenting code?
 
+<!-- Navigation -->
+
+---
+
+[Previous: 04-Hello-World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06-Strings-and-the-Print-Function](./06-Strings-and-the-Print-Function.md)
+
+---
+<!-- End Navigation -->

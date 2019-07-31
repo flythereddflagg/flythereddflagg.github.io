@@ -120,4 +120,4 @@ def rm_nav(nav_root_dir):
         
 if __name__ == "__main__":
     rm_nav("./docs/")
-    #add_nav("./docs/")
+    add_nav("./docs/")

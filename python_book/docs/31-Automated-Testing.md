@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: index](./index.md)
+
+---
+<!-- End Navigation -->
 # 31 - Automated Testing
 
 asdasdf
@@ -20,3 +28,11 @@ afds
 
 ### Run `nose`
 
+<!-- Navigation -->
+
+---
+
+[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: index](./index.md)
+
+---
+<!-- End Navigation -->

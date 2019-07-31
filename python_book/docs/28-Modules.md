@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 29-Comments-and-Code-Documentation](./29-Comments-and-Code-Documentation.md)
+
+---
+<!-- End Navigation -->
 
 # 28 - Modules
 
@@ -204,3 +212,11 @@ Once you have finished the main objective of this exercise you should have a wor
 - Look up the `curses` module in Python and use it to make a more advanced and easy-to-use user interface in the CLI.
 - Look up `python tkinter` and begin learning how to build a non-CLI user interface. Use what you have learned to make a better UI for the database.
 
+<!-- Navigation -->
+
+---
+
+[Previous: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 29-Comments-and-Code-Documentation](./29-Comments-and-Code-Documentation.md)
+
+---
+<!-- End Navigation -->

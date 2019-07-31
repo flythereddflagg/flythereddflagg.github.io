@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 28-Modules](./28-Modules.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md)
+
+---
+<!-- End Navigation -->
 
 # 29 - Comments and Code Documentation
 
@@ -114,3 +122,11 @@ I have introduced this feature now instead of earlier for a few reasons. Before 
 - Make a full website from the documentation you pull from your docstrings. You do not have to serve it but make it useable for a website format.
 
 
+<!-- Navigation -->
+
+---
+
+[Previous: 28-Modules](./28-Modules.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md)
+
+---
+<!-- End Navigation -->

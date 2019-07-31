@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 18-Iterables](./18-Iterables.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 20-Functions](./20-Functions.md)
+
+---
+<!-- End Navigation -->
 
 # 20 - Dictionaries
 
@@ -85,3 +93,11 @@ As we saw above, dictionaries can be thought of as a list of unique keys that, w
 
 - Search the Internet and learn about hashmaps and how they work. From what you learn, why are dictionaries/hashmaps so efficient? How can you use this to make your code better?
 
+<!-- Navigation -->
+
+---
+
+[Previous: 18-Iterables](./18-Iterables.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 20-Functions](./20-Functions.md)
+
+---
+<!-- End Navigation -->

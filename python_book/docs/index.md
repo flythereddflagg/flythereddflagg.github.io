@@ -22,3 +22,4 @@ The Redd Python Book is a book I am writing to make a free resource to learn pyt
 Go to the [Table of Contents](./00-Table-of-Contents.md) to start reading!
 
 ![](.//media/Cover.png)
+

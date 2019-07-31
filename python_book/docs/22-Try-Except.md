@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 21-More-Functions](./21-More-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 23-Imports](./23-Imports.md)
+
+---
+<!-- End Navigation -->
 # 22 - Try Except
 
 Surely you have noticed by now that errors can be common as you program. Well they are more than common. They are practically inevitable. In this lesson we will explore how you can "try" some code without letting it break your program.
@@ -122,3 +130,11 @@ The backslash `\` at the end of the line is called a "line continuation characte
 - What is a [User-Defined Exception](https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions) and why would you want to use one?
 - What is the [`finally`](https://docs.python.org/3/tutorial/errors.html#defining-clean-up-actions) statement for and why would you need it?
 
+<!-- Navigation -->
+
+---
+
+[Previous: 21-More-Functions](./21-More-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 23-Imports](./23-Imports.md)
+
+---
+<!-- End Navigation -->

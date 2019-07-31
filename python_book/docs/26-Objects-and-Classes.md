@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 25-Do-a-Project](./25-Do-a-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md)
+
+---
+<!-- End Navigation -->
 
 # 26 - Objects and Classes
 
@@ -157,3 +165,11 @@ Any object that is contained by the class or object is considered an attribute o
 
 - Look up operator overloading in Python and see if you can write some classes that do it. You may want to implement something like how complex numbers should act or numbers with units.
 
+<!-- Navigation -->
+
+---
+
+[Previous: 25-Do-a-Project](./25-Do-a-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md)
+
+---
+<!-- End Navigation -->
