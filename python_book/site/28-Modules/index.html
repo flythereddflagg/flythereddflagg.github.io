@@ -1,441 +1,906 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>28. Modules - The Redd Python Book</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "28. Modules";
-    var mkdocs_page_input_path = "28-Modules.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
 
-<body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
 
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> The Redd Python Book</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>28. Modules - The Redd Python Book</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="grey">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#28-modules" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../03-CLI/">3. CLI</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../04-Hello-World/">4. Hello World</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../05-Comments/">5. Comments</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../17-Loops/">17. Loops</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../18-Iterables/">18. Iterables</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../20-Functions/">20. Functions</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../21-More-Functions/">21. More Functions</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../22-Try-Except/">22. Try Except</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../23-Imports/">23. Imports</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">28. Modules</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#28-modules">28 - Modules</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#the-email-database-manager">The Email Database Manager</a></li>
-        
-            <li><a class="toctree-l3" href="#hone-your-skills">Hone Your Skills</a></li>
-        
-            <li><a class="toctree-l3" href="#advanced-mastery">Advanced Mastery</a></li>
-        
-        </ul>
-    
-
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../31-Automated-Testing/">31. Automated Testing</a>
-	    </li>
-          
-        </ul>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">The Redd Python Book</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>28. Modules</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              The Redd Python Book
+            </span>
+            <span class="md-header-nav__topic">
               
-                <h1 id="28-modules">28 - Modules</h1>
+                28. Modules
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="The Redd Python Book" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    The Redd Python Book
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../00-Table-of-Contents/" title="Table of Contents" class="md-nav__link">
+      Table of Contents
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01-Intro-and-How-to-Use-This-Book/" title="1. Intro and How to Use This Book" class="md-nav__link">
+      1. Intro and How to Use This Book
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02-Getting-Started/" title="2. Getting Started" class="md-nav__link">
+      2. Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03-CLI/" title="3. CLI" class="md-nav__link">
+      3. CLI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04-Hello-World/" title="4. Hello World" class="md-nav__link">
+      4. Hello World
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05-Comments/" title="5. Comments" class="md-nav__link">
+      5. Comments
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06-Strings-and-the-Print-Function/" title="6. Strings and the Print Function" class="md-nav__link">
+      6. Strings and the Print Function
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07-Escape-Characters/" title="7. Escape Characters" class="md-nav__link">
+      7. Escape Characters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08-Formatted-Strings/" title="8. Formatted Strings" class="md-nav__link">
+      8. Formatted Strings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09-Variables-and-Memory/" title="9. Variables and Memory" class="md-nav__link">
+      9. Variables and Memory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10-Better-String-Formatting/" title="10. Better String Formatting" class="md-nav__link">
+      10. Better String Formatting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11-Input-and-Output/" title="11. Input and Output" class="md-nav__link">
+      11. Input and Output
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12-Math-and-Data/" title="12. Math and Data" class="md-nav__link">
+      12. Math and Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../13-Logic-and-Boolean-Operators/" title="13. Logic and Boolean Operators" class="md-nav__link">
+      13. Logic and Boolean Operators
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../14-If-elif-and-else/" title="14. If elif and else" class="md-nav__link">
+      14. If elif and else
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../15-Errors-Exceptions-and-Bugs/" title="15. Errors Exceptions and Bugs" class="md-nav__link">
+      15. Errors Exceptions and Bugs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../16-File-Reading-and-Writing/" title="16. File Reading and Writing" class="md-nav__link">
+      16. File Reading and Writing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../17-Loops/" title="17. Loops" class="md-nav__link">
+      17. Loops
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../18-Iterables/" title="18. Iterables" class="md-nav__link">
+      18. Iterables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../19-Dictionaries/" title="19. Dictionaries" class="md-nav__link">
+      19. Dictionaries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../20-Functions/" title="20. Functions" class="md-nav__link">
+      20. Functions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../21-More-Functions/" title="21. More Functions" class="md-nav__link">
+      21. More Functions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../22-Try-Except/" title="22. Try Except" class="md-nav__link">
+      22. Try Except
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../23-Imports/" title="23. Imports" class="md-nav__link">
+      23. Imports
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../24-Reading-Code/" title="24. Reading Code" class="md-nav__link">
+      24. Reading Code
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../25-Do-a-Project/" title="25. Do a Project" class="md-nav__link">
+      25. Do a Project
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../26-Objects-and-Classes/" title="26. Objects and Classes" class="md-nav__link">
+      26. Objects and Classes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../27-Inheritance-and-Polymorphism/" title="27. Inheritance and Polymorphism" class="md-nav__link">
+      27. Inheritance and Polymorphism
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        28. Modules
+      </label>
+    
+    <a href="./" title="28. Modules" class="md-nav__link md-nav__link--active">
+      28. Modules
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-email-database-manager" title="The Email Database Manager" class="md-nav__link">
+    The Email Database Manager
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-database-manager-file" title="The Database Manager File" class="md-nav__link">
+    The Database Manager File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-user-interface-file" title="The User Interface File" class="md-nav__link">
+    The User Interface File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" title="Hone Your Skills" class="md-nav__link">
+    Hone Your Skills
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-mastery" title="Advanced Mastery" class="md-nav__link">
+    Advanced Mastery
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../29-Comments-and-Code-Documentation/" title="29. Comments and Code Documentation" class="md-nav__link">
+      29. Comments and Code Documentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../30-Packages-and-Project-Structure/" title="30. Packages and Project Structure" class="md-nav__link">
+      30. Packages and Project Structure
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../31-Automated-Testing/" title="31. Automated Testing" class="md-nav__link">
+      31. Automated Testing
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-email-database-manager" title="The Email Database Manager" class="md-nav__link">
+    The Email Database Manager
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-database-manager-file" title="The Database Manager File" class="md-nav__link">
+    The Database Manager File
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-user-interface-file" title="The User Interface File" class="md-nav__link">
+    The User Interface File
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" title="Hone Your Skills" class="md-nav__link">
+    Hone Your Skills
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-mastery" title="Advanced Mastery" class="md-nav__link">
+    Advanced Mastery
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27-Inheritance-and-Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29-Comments-and-Code-Documentation</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="28-modules">28 - Modules</h1>
 <p>In this section we will explore how to connect python files together and make them work together. Also included in this section is an opportunity to get used to using classes and do more object oriented  programming.  Each file in Python is sometimes called a module. A module is simply a python file you can import and use its contents. You used some of the standard modules or libraries in <a href="../23-Imports/">the section about imports</a>.</p>
 <p>In this section we will begin learning how to build our own packages or libraries by connecting two modules together. In a later section, we will take what we accomplish here and make a complete (albeit simple) package that could be made into a distributable software. These will also be used in the next sections so <strong>make sure you save these files for later</strong>.</p>
 <h3 id="the-email-database-manager">The Email Database Manager</h3>
 <p>The following are two files that you will copy-paste into separate text files. The names of these files are indicated at the top. These files serve as a sort of skeleton of a project you must complete using all you have learned so far. Take your time and get this project working as well as you possibly can. As always, the more you put into this the more you will get out of the experience. More specific information about the files is given below. Many of the same principles from your first project apply here. </p>
 <p>I have left multi-line comments under each label to guide your implimentation of this project. Do not delete these as these are the subject of the next section.</p>
 <h4 id="the-database-manager-file">The Database Manager File</h4>
-<pre><code class="python"># database_manager.py
-import json
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># database_manager.py</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">json</span>
 
 
-class DatabaseManager():
-    &quot;&quot;&quot;
-    Manages all aspects of the database including how and where data are stored.
-    This database is contact list consisting of a collection of names with
-    corresponding phone numbers and email addresses. This may be implimented as a
-    dictionary (which sorts the list automatically) or a list. The exact structure 
-    of the database is up to you but it might be a good idea to find out how others
-    have done first.
-    &quot;&quot;&quot;
-    def __init__(self, filename):
-        &quot;&quot;&quot;
-        Loads the database based on the passed in filename. The database should
-        come from a .json file and be stored in the class as a dictionary. This
-        should call self.load_database() as its last step.
-        &quot;&quot;&quot;
-        pass
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">DatabaseManager</span>():
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Manages all aspects of the database including how and where data are stored.</span>
+<span style="color: #BA2121; font-style: italic">    This database is contact list consisting of a collection of names with</span>
+<span style="color: #BA2121; font-style: italic">    corresponding phone numbers and email addresses. This may be implimented as a</span>
+<span style="color: #BA2121; font-style: italic">    dictionary (which sorts the list automatically) or a list. The exact structure </span>
+<span style="color: #BA2121; font-style: italic">    of the database is up to you but it might be a good idea to find out how others</span>
+<span style="color: #BA2121; font-style: italic">    have done first.</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, filename):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Loads the database based on the passed in filename. The database should</span>
+<span style="color: #BA2121; font-style: italic">        come from a .json file and be stored in the class as a dictionary. This</span>
+<span style="color: #BA2121; font-style: italic">        should call self.load_database() as its last step.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def load_database(self):
-        &quot;&quot;&quot;
-        Loads the database from a .json file using Python's built in json 
-        package. If the filename does not exist it should make an empty database
-        and call self.save_database() to write the new database.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">load_database</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Loads the database from a .json file using Python&#39;s built in json </span>
+<span style="color: #BA2121; font-style: italic">        package. If the filename does not exist it should make an empty database</span>
+<span style="color: #BA2121; font-style: italic">        and call self.save_database() to write the new database.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def save_database(self):
-        &quot;&quot;&quot;
-        Saves the database to a .json file using Python's built-in json package.
-        This should be called any time the database is altered.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">save_database</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Saves the database to a .json file using Python&#39;s built-in json package.</span>
+<span style="color: #BA2121; font-style: italic">        This should be called any time the database is altered.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def add_item(self, entry):
-        &quot;&quot;&quot;
-        Adds and organizes an 'entry' consisting of an name, phone number and 
-        email to the database it then saves the database.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">add_item</span>(<span style="color: #008000">self</span>, entry):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Adds and organizes an &#39;entry&#39; consisting of an name, phone number and </span>
+<span style="color: #BA2121; font-style: italic">        email to the database it then saves the database.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def remove_item(self, name):
-        &quot;&quot;&quot;
-        Removes an entry with ID 'name' from the database and then saves 
-        the database.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">remove_item</span>(<span style="color: #008000">self</span>, name):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Removes an entry with ID &#39;name&#39; from the database and then saves </span>
+<span style="color: #BA2121; font-style: italic">        the database.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def get_database(self):
-        &quot;&quot;&quot;
-        Returns a reference or a copy of the database in some form to be 
-        used elsewhere.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_database</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Returns a reference or a copy of the database in some form to be </span>
+<span style="color: #BA2121; font-style: italic">        used elsewhere.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def __repr__(self):
-        &quot;&quot;&quot;
-        Returns a string representation of the database. With this, the database
-        may be printed or otherwise represented.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__repr__</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Returns a string representation of the database. With this, the database</span>
+<span style="color: #BA2121; font-style: italic">        may be printed or otherwise represented.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
 
-def test_dbman():
-    &quot;&quot;&quot;
-    A test function to ensure the database class performed as expected
-    &quot;&quot;&quot;
-    pass
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_dbman</span>():
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    A test function to ensure the database class performed as expected</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    <span style="color: #008000; font-weight: bold">pass</span>
 
 
-if __name__ == &quot;__main__&quot;:
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;__main__&quot;</span>:
     test_dbman()
-</code></pre>
+</pre></div>
+
 
 <p>This file implements a class that will manage the database. The user interface class must have a reference to an instance of this class in the form of a class variable inside the <code>UserInterface</code> object (i.e. <code>self.dbman</code>) so that it can access all its methods. For this exercise you may use any format you wish. However, for this simple example I recommend using JavaScript Object Notation or JSON. I recommend this because Python has an excellent JSON library for storing data and JSON conveniently translates to common python objects such as dictionaries, lists, strings etc. You can learn how to use both the load and save features by looking at the corresponding Python documentation <a href="https://docs.python.org/3/library/json.html#basic-usage">here</a> and reading about <code>json.load()</code> and <code>json.dump()</code>. The documentation strings under each label explain what should be implemented. Feel free to use your own creativity and what you have learned to implement this class. Finally, do not hesitate to add any methods or  make changes to names as you see fit. The <code>test_dbman()</code> function is there to allow you to test the class by itself before using it in the user interface. </p>
 <h4 id="the-user-interface-file">The User Interface File</h4>
-<pre><code class="python"># user_interface.py
-from database_manager import DatabaseManager
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># user_interface.py</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">database_manager</span> <span style="color: #008000; font-weight: bold">import</span> DatabaseManager
 
 
-class UserInterface():
-    &quot;&quot;&quot;
-    Allows the user to access and use the features of the database without 
-    having to know how to program.
-    The user should be allowed to do a few basic things:
-     - view the database
-     - add an entry to the database
-     - remove an entry from the database
-     - export the database to a human-readable text file
-     - exit the program
+<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">UserInterface</span>():
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Allows the user to access and use the features of the database without </span>
+<span style="color: #BA2121; font-style: italic">    having to know how to program.</span>
+<span style="color: #BA2121; font-style: italic">    The user should be allowed to do a few basic things:</span>
+<span style="color: #BA2121; font-style: italic">     - view the database</span>
+<span style="color: #BA2121; font-style: italic">     - add an entry to the database</span>
+<span style="color: #BA2121; font-style: italic">     - remove an entry from the database</span>
+<span style="color: #BA2121; font-style: italic">     - export the database to a human-readable text file</span>
+<span style="color: #BA2121; font-style: italic">     - exit the program</span>
 
-    Provided the user can do these thing easily and reliably, the program is
-    successful.
-    &quot;&quot;&quot;
+<span style="color: #BA2121; font-style: italic">    Provided the user can do these thing easily and reliably, the program is</span>
+<span style="color: #BA2121; font-style: italic">    successful.</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
 
-    def __init__(self, dbman):
-        &quot;&quot;&quot;
-        sets up the UI and sets the self.dbman = dbman so the database may be
-        accessed.
-        &quot;&quot;&quot;
-        pass
-
-
-    def mainloop(self):
-        &quot;&quot;&quot;
-        Runs the mainloop of the program. This should include the following
-        steps:
-            1 - display information
-            2 - prompt the user for input
-            3 - process the input to get new information to display
-
-        This also must exit the program when the user commands.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, dbman):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        sets up the UI and sets the self.dbman = dbman so the database may be</span>
+<span style="color: #BA2121; font-style: italic">        accessed.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def display(self):
-        &quot;&quot;&quot;
-        gets and displays information as given by the self.execute function.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">mainloop</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Runs the mainloop of the program. This should include the following</span>
+<span style="color: #BA2121; font-style: italic">        steps:</span>
+<span style="color: #BA2121; font-style: italic">            1 - display information</span>
+<span style="color: #BA2121; font-style: italic">            2 - prompt the user for input</span>
+<span style="color: #BA2121; font-style: italic">            3 - process the input to get new information to display</span>
+
+<span style="color: #BA2121; font-style: italic">        This also must exit the program when the user commands.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def get_input(self):
-        &quot;&quot;&quot;
-        Accepts user input by calling the built-in input() function
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">display</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        gets and displays information as given by the self.execute function.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def execute(self):
-        &quot;&quot;&quot;
-        Uses the information form user input to execute the program including
-        accessing self.dbman to use database commands.
-        &quot;&quot;&quot;
-        pass
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_input</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Accepts user input by calling the built-in input() function</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-    def export(self, filename):
-        &quot;&quot;&quot;
-        Writes the database to a file pointed to by the variable 'filename'.
-        May use a string representation of the database.
-        &quot;&quot;&quot;
-        pass   
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">execute</span>(<span style="color: #008000">self</span>):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Uses the information form user input to execute the program including</span>
+<span style="color: #BA2121; font-style: italic">        accessing self.dbman to use database commands.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>
 
 
-def run_ui_test():
-    &quot;&quot;&quot;
-    This runs a UI test if we run it
-    as the main Python program
-    &quot;&quot;&quot;
-    db_manager = DatabaseManager('data.json')
-    ui = UserInterface(db_manager)
-    ui.mainloop()
+    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">export</span>(<span style="color: #008000">self</span>, filename):
+        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">        Writes the database to a file pointed to by the variable &#39;filename&#39;.</span>
+<span style="color: #BA2121; font-style: italic">        May use a string representation of the database.</span>
+<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
+        <span style="color: #008000; font-weight: bold">pass</span>   
 
-if __name__ == '__main__':
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">run_ui_test</span>():
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    This runs a UI test if we run it</span>
+<span style="color: #BA2121; font-style: italic">    as the main Python program</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    db_manager <span style="color: #666666">=</span> DatabaseManager(<span style="color: #BA2121">&#39;data.json&#39;</span>)
+    ui <span style="color: #666666">=</span> UserInterface(db_manager)
+    ui<span style="color: #666666">.</span>mainloop()
+
+<span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;__main__&#39;</span>:
     run_ui_test()
+</pre></div>
 
-</code></pre>
 
 <p>This file uses the <code>DatabaseManager</code> class to access the JSON files in a simple way. The user interface should contain a main-loop structure explained in the <a href="../25-Do-a-Project/">Do a Project</a> section. Try to make the user interface as intuitive and easy to use as possible. Again, the documentation strings under each label explain what should be implemented. Also as above, use your own creativity and what you have learned and add any methods or changes as you see fit. The <code>run_ui_test()</code> function is there to initiate the program. </p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
@@ -456,53 +921,87 @@ if __name__ == '__main__':
 <li>Look up the <code>curses</code> module in Python and use it to make a more advanced and easy-to-use user interface in the CLI.</li>
 <li>Look up <code>python tkinter</code> and begin learning how to build a non-CLI user interface. Use what you have learned to make a better UI for the database.</li>
 </ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27-Inheritance-and-Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29-Comments-and-Code-Documentation</a></p>
+<hr />
+<!-- End Navigation -->
+                
+                  
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../29-Comments-and-Code-Documentation/" class="btn btn-neutral float-right" title="29. Comments and Code Documentation">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../27-Inheritance-and-Polymorphism/" class="btn btn-neutral" title="27. Inheritance and Polymorphism"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../27-Inheritance-and-Polymorphism/" title="27. Inheritance and Polymorphism" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                27. Inheritance and Polymorphism
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../29-Comments-and-Code-Documentation/" title="29. Comments and Code Documentation" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                29. Comments and Code Documentation
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
       
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
-        <span><a href="../27-Inheritance-and-Polymorphism/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
-      
-        <span style="margin-left: 15px"><a href="../29-Comments-and-Code-Documentation/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-      <script src="../search/main.js" defer></script>
-
-</body>
+    
+  </body>
 </html>

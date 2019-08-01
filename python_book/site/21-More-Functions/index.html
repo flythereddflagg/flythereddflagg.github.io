@@ -1,324 +1,773 @@
-<!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  
-  <link rel="shortcut icon" href="../img/favicon.ico">
-  <title>21. More Functions - The Redd Python Book</title>
-  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-  
-  <script>
-    // Current page data
-    var mkdocs_page_name = "21. More Functions";
-    var mkdocs_page_input_path = "21-More-Functions.md";
-    var mkdocs_page_url = null;
-  </script>
-  
-  <script src="../js/jquery-2.1.1.min.js" defer></script>
-  <script src="../js/modernizr-2.8.3.min.js" defer></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script> 
-  
-</head>
 
-<body class="wy-body-for-nav" role="document">
 
-  <div class="wy-grid-for-nav">
 
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-      <div class="wy-side-nav-search">
-        <a href=".." class="icon icon-home"> The Redd Python Book</a>
-        <div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
-  </form>
-</div>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+    
+    
+      
+        <title>21. More Functions - The Redd Python Book</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
+        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="blue-grey" data-md-color-accent="grey">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#21-more-functions" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon">home</i>
+          
+        </a>
       </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-	<ul class="current">
-	  
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="..">Home</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../00-Table-of-Contents/">Table of Contents</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../01-Intro-and-How-to-Use-This-Book/">1. Intro and How to Use This Book</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../02-Getting-Started/">2. Getting Started</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../03-CLI/">3. CLI</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../04-Hello-World/">4. Hello World</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../05-Comments/">5. Comments</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../06-Strings-and-the-Print-Function/">6. Strings and the Print Function</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../07-Escape-Characters/">7. Escape Characters</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../08-Formatted-Strings/">8. Formatted Strings</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../09-Variables-and-Memory/">9. Variables and Memory</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../10-Better-String-Formatting/">10. Better String Formatting</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../11-Input-and-Output/">11. Input and Output</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../12-Math-and-Data/">12. Math and Data</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../13-Logic-and-Boolean-Operators/">13. Logic and Boolean Operators</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../14-If-elif-and-else/">14. If elif and else</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../15-Errors-Exceptions-and-Bugs/">15. Errors Exceptions and Bugs</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../16-File-Reading-and-Writing/">16. File Reading and Writing</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../17-Loops/">17. Loops</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../18-Iterables/">18. Iterables</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../19-Dictionaries/">19. Dictionaries</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../20-Functions/">20. Functions</a>
-	    </li>
-          
-            <li class="toctree-l1 current">
-		
-    <a class="current" href="./">21. More Functions</a>
-    <ul class="subnav">
-            
-    <li class="toctree-l2"><a href="#21-more-functions">21 - More Functions</a></li>
-    
-        <ul>
-        
-            <li><a class="toctree-l3" href="#parameters-and-arguments">Parameters and Arguments</a></li>
-        
-            <li><a class="toctree-l3" href="#default-values-for-parameters">Default Values for Parameters</a></li>
-        
-            <li><a class="toctree-l3" href="#returns-and-the-none-type">Returns and the None type</a></li>
-        
-            <li><a class="toctree-l3" href="#recursion">Recursion</a></li>
-        
-            <li><a class="toctree-l3" href="#hone-your-skills">Hone your Skills</a></li>
-        
-        </ul>
-    
-
-    </ul>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../22-Try-Except/">22. Try Except</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../23-Imports/">23. Imports</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../24-Reading-Code/">24. Reading Code</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../25-Do-a-Project/">25. Do a Project</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../26-Objects-and-Classes/">26. Objects and Classes</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../27-Inheritance-and-Polymorphism/">27. Inheritance and Polymorphism</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../28-Modules/">28. Modules</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../29-Comments-and-Code-Documentation/">29. Comments and Code Documentation</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../30-Packages-and-Project-Structure/">30. Packages and Project Structure</a>
-	    </li>
-          
-            <li class="toctree-l1">
-		
-    <a class="" href="../31-Automated-Testing/">31. Automated Testing</a>
-	    </li>
-          
-        </ul>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
       </div>
-      &nbsp;
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="..">The Redd Python Book</a>
-      </nav>
-
-      
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="..">Docs</a> &raquo;</li>
-    
-      
-    
-    <li>21. More Functions</li>
-    <li class="wy-breadcrumbs-aside">
-      
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main">
-            <div class="section">
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              The Redd Python Book
+            </span>
+            <span class="md-header-nav__topic">
               
-                <h1 id="21-more-functions">21 - More Functions</h1>
+                21. More Functions
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="The Redd Python Book" class="md-nav__button md-logo">
+      
+        <i class="md-icon">home</i>
+      
+    </a>
+    The Redd Python Book
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../00-Table-of-Contents/" title="Table of Contents" class="md-nav__link">
+      Table of Contents
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01-Intro-and-How-to-Use-This-Book/" title="1. Intro and How to Use This Book" class="md-nav__link">
+      1. Intro and How to Use This Book
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02-Getting-Started/" title="2. Getting Started" class="md-nav__link">
+      2. Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../03-CLI/" title="3. CLI" class="md-nav__link">
+      3. CLI
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04-Hello-World/" title="4. Hello World" class="md-nav__link">
+      4. Hello World
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05-Comments/" title="5. Comments" class="md-nav__link">
+      5. Comments
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06-Strings-and-the-Print-Function/" title="6. Strings and the Print Function" class="md-nav__link">
+      6. Strings and the Print Function
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07-Escape-Characters/" title="7. Escape Characters" class="md-nav__link">
+      7. Escape Characters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08-Formatted-Strings/" title="8. Formatted Strings" class="md-nav__link">
+      8. Formatted Strings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09-Variables-and-Memory/" title="9. Variables and Memory" class="md-nav__link">
+      9. Variables and Memory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10-Better-String-Formatting/" title="10. Better String Formatting" class="md-nav__link">
+      10. Better String Formatting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11-Input-and-Output/" title="11. Input and Output" class="md-nav__link">
+      11. Input and Output
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12-Math-and-Data/" title="12. Math and Data" class="md-nav__link">
+      12. Math and Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../13-Logic-and-Boolean-Operators/" title="13. Logic and Boolean Operators" class="md-nav__link">
+      13. Logic and Boolean Operators
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../14-If-elif-and-else/" title="14. If elif and else" class="md-nav__link">
+      14. If elif and else
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../15-Errors-Exceptions-and-Bugs/" title="15. Errors Exceptions and Bugs" class="md-nav__link">
+      15. Errors Exceptions and Bugs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../16-File-Reading-and-Writing/" title="16. File Reading and Writing" class="md-nav__link">
+      16. File Reading and Writing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../17-Loops/" title="17. Loops" class="md-nav__link">
+      17. Loops
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../18-Iterables/" title="18. Iterables" class="md-nav__link">
+      18. Iterables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../19-Dictionaries/" title="19. Dictionaries" class="md-nav__link">
+      19. Dictionaries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../20-Functions/" title="20. Functions" class="md-nav__link">
+      20. Functions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        21. More Functions
+      </label>
+    
+    <a href="./" title="21. More Functions" class="md-nav__link md-nav__link--active">
+      21. More Functions
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-and-arguments" title="Parameters and Arguments" class="md-nav__link">
+    Parameters and Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values-for-parameters" title="Default Values for Parameters" class="md-nav__link">
+    Default Values for Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-and-the-none-type" title="Returns and the None type" class="md-nav__link">
+    Returns and the None type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursion" title="Recursion" class="md-nav__link">
+    Recursion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" title="Hone your Skills" class="md-nav__link">
+    Hone your Skills
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../22-Try-Except/" title="22. Try Except" class="md-nav__link">
+      22. Try Except
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../23-Imports/" title="23. Imports" class="md-nav__link">
+      23. Imports
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../24-Reading-Code/" title="24. Reading Code" class="md-nav__link">
+      24. Reading Code
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../25-Do-a-Project/" title="25. Do a Project" class="md-nav__link">
+      25. Do a Project
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../26-Objects-and-Classes/" title="26. Objects and Classes" class="md-nav__link">
+      26. Objects and Classes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../27-Inheritance-and-Polymorphism/" title="27. Inheritance and Polymorphism" class="md-nav__link">
+      27. Inheritance and Polymorphism
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../28-Modules/" title="28. Modules" class="md-nav__link">
+      28. Modules
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../29-Comments-and-Code-Documentation/" title="29. Comments and Code Documentation" class="md-nav__link">
+      29. Comments and Code Documentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../30-Packages-and-Project-Structure/" title="30. Packages and Project Structure" class="md-nav__link">
+      30. Packages and Project Structure
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../31-Automated-Testing/" title="31. Automated Testing" class="md-nav__link">
+      31. Automated Testing
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#parameters-and-arguments" title="Parameters and Arguments" class="md-nav__link">
+    Parameters and Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-values-for-parameters" title="Default Values for Parameters" class="md-nav__link">
+    Default Values for Parameters
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-and-the-none-type" title="Returns and the None type" class="md-nav__link">
+    Returns and the None type
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursion" title="Recursion" class="md-nav__link">
+    Recursion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" title="Hone your Skills" class="md-nav__link">
+    Hone your Skills
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../20-Functions/">Previous: 20-Functions</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../22-Try-Except/">Next: 22-Try-Except</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="21-more-functions">21 - More Functions</h1>
 <p>There are three more concepts tied to functions that we must understand before moving on. They are each demonstrated in the following exercise:</p>
-<pre><code class="python"># more_functions.py
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># more_functions.py</span>
 
-# params and returns
-def quadratic_formula(a, b, c):
-    &quot;&quot;&quot;
-    Calculates the roots of f(x) given a, b, c where
-    f(x) = a * x**2 + b * x + c
-    Returns the solution as a tuple.
-    Returns None if the solutions are imaginary 
-    &quot;&quot;&quot;
-    discriminant = b**2 - 4*a*c
+<span style="color: #408080; font-style: italic"># params and returns</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">quadratic_formula</span>(a, b, c):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Calculates the roots of f(x) given a, b, c where</span>
+<span style="color: #BA2121; font-style: italic">    f(x) = a * x**2 + b * x + c</span>
+<span style="color: #BA2121; font-style: italic">    Returns the solution as a tuple.</span>
+<span style="color: #BA2121; font-style: italic">    Returns None if the solutions are imaginary </span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    discriminant <span style="color: #666666">=</span> b<span style="color: #666666">**2</span> <span style="color: #666666">-</span> <span style="color: #666666">4*</span>a<span style="color: #666666">*</span>c
 
-    if discriminant &lt; 0:
-        return None
+    <span style="color: #008000; font-weight: bold">if</span> discriminant <span style="color: #666666">&lt;</span> <span style="color: #666666">0</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">None</span>
 
-    root1 = (-b - discriminant**0.5) / 2 / a
-    root2 = (-b + discriminant**0.5) / 2 / a
+    root1 <span style="color: #666666">=</span> (<span style="color: #666666">-</span>b <span style="color: #666666">-</span> discriminant<span style="color: #666666">**0.5</span>) <span style="color: #666666">/</span> <span style="color: #666666">2</span> <span style="color: #666666">/</span> a
+    root2 <span style="color: #666666">=</span> (<span style="color: #666666">-</span>b <span style="color: #666666">+</span> discriminant<span style="color: #666666">**0.5</span>) <span style="color: #666666">/</span> <span style="color: #666666">2</span> <span style="color: #666666">/</span> a
 
-    return root1, root2
-
-
-imaginary_solution = quadratic_formula(1, 2, 3)
-real_solution = quadratic_formula(1, -2, -3)
-print(&quot;Imaginary Solution is:&quot;, imaginary_solution)
-print(&quot;Real Solution is:&quot;,      real_solution)
+    <span style="color: #008000; font-weight: bold">return</span> root1, root2
 
 
-# default params
-def print_a_number(number=1):
-    print(f&quot;Your number is: {number}&quot;)  
+imaginary_solution <span style="color: #666666">=</span> quadratic_formula(<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>)
+real_solution <span style="color: #666666">=</span> quadratic_formula(<span style="color: #666666">1</span>, <span style="color: #666666">-2</span>, <span style="color: #666666">-3</span>)
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Imaginary Solution is:&quot;</span>, imaginary_solution)
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Real Solution is:&quot;</span>,      real_solution)
 
-print_a_number(3)
+
+<span style="color: #408080; font-style: italic"># default params</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">print_a_number</span>(number<span style="color: #666666">=1</span>):
+    <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;Your number is: {number}&quot;</span>)  
+
+print_a_number(<span style="color: #666666">3</span>)
 print_a_number()
 
-# recursion
-def factorial(number):
-    &quot;&quot;&quot;
-    Returns the factorial of a number
-    It first turns it into an integer
-    before calculating its factorial
-    &quot;&quot;&quot;
-    number = abs(int(number))
-    if number &lt;= 0:
-        return 1
-    return number * factorial(number - 1)
+<span style="color: #408080; font-style: italic"># recursion</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">factorial</span>(number):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span style="color: #BA2121; font-style: italic">    Returns the factorial of a number</span>
+<span style="color: #BA2121; font-style: italic">    It first turns it into an integer</span>
+<span style="color: #BA2121; font-style: italic">    before calculating its factorial</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    number <span style="color: #666666">=</span> <span style="color: #008000">abs</span>(<span style="color: #008000">int</span>(number))
+    <span style="color: #008000; font-weight: bold">if</span> number <span style="color: #666666">&lt;=</span> <span style="color: #666666">0</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">1</span>
+    <span style="color: #008000; font-weight: bold">return</span> number <span style="color: #666666">*</span> factorial(number <span style="color: #666666">-</span> <span style="color: #666666">1</span>)
 
-print(&quot;4!   =&quot;, factorial(4))
-print(&quot;2.5! =&quot;, factorial(2.5))
-</code></pre>
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;4!   =&quot;</span>, factorial(<span style="color: #666666">4</span>))
+<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;2.5! =&quot;</span>, factorial(<span style="color: #666666">2.5</span>))
+</pre></div>
+
 
 <p><strong>Here is what should happen</strong></p>
-<pre><code>$ more_functions.py
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ more_functions.py
 Imaginary Solution is: None
 Real Solution is: (-1.0, 3.0)
 Your number is: 3
@@ -326,21 +775,23 @@ Your number is: 1
 4!   = 24
 2.5! = 2
 $
-</code></pre>
+</pre></div>
+
 
 <h3 id="parameters-and-arguments">Parameters and Arguments</h3>
 <p>Parameters are related to arguments. Many times these two terms are used interchangeably. To clarify, a parameter is the variable name that is used in the definition of a function. Whereas, an argument is what actually gets passed into the function call as seen here:</p>
-<pre><code class="python">def function_name(parameter):
-    parameter += 3
-    print(parameter)
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">function_name</span>(parameter):
+    parameter <span style="color: #666666">+=</span> <span style="color: #666666">3</span>
+    <span style="color: #008000; font-weight: bold">print</span>(parameter)
 
-# now we call the function
+<span style="color: #408080; font-style: italic"># now we call the function</span>
 function_name(argument)
-</code></pre>
+</pre></div>
 
-<p>Following this logic, the argument replaces the parameter while the function code executes. You have worked with arguments since the first Python program you ran. The simple statement <code>print("Hello World!")</code> is just you calling the Python function named <code>print</code> and passing in the string <code>"Hello World!"</code> as an argument. Somewhere in the Python core code, there is a <code>print</code> function defined in a similar manner that executes all the details of printing text out to the command line.</p>
+
+<p>Following this logic, the argument replaces the parameter while the function code executes. You have worked with arguments since the first Python program you ran. The simple statement <code>print("Hello World!")</code> is just you calling the Python function named <code>print</code> and passing in the string <code>"Hello World!"</code> as an argument. Somewhere in the Python core code, there is a <code>print</code> function defined in a similar manner that executes all the details of printing text out to the command line.</p>
 <h3 id="default-values-for-parameters">Default Values for Parameters</h3>
-<p>We saw in line 29 the following line of code: <code>def print_a_number(number=1):</code>. This function definition supplied a default value for the <code>number</code> parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value.</p>
+<p>We saw in line 29 the following line of code: <code>def print_a_number(number=1):</code>. This function definition supplied a default value for the <code>number</code> parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value.</p>
 <h3 id="returns-and-the-none-type">Returns and the None type</h3>
 <p>You may have found that functions in Python have some practical similarities with mathematical functions. Just as a mathematical function f(x) will evaluate to a number when a value of x is supplied, a Python function that returns a value will evaluate to whatever value is returned. There are a few things to understand about the return statement:</p>
 <ul>
@@ -364,19 +815,21 @@ function_name(argument)
 <p>Functions that have no <code>return</code> statement return a special data type called <code>None</code> by default. The <code>None</code> data type is basically Python's way of saying this data is nothing or void. Therefore when we explicit returned <code>None</code>  we could have also just written <code>return</code> . Both cases would be saying, if the solution will be imaginary return nothing!</p>
 </li>
 <li>
-<p>It is possible to return multiple values (as seen in  <code>more_functions.py</code>  in the <code>quadratic_formula</code> function). As you saw above, they will simply be returned as a tuple.</p>
+<p>It is possible to return multiple values (as seen in  <code>more_functions.py</code>  in the <code>quadratic_formula</code> function). As you saw above, they will simply be returned as a tuple.</p>
 </li>
 </ul>
 <p>Return statements are crucial for effective functions and it is a good idea to experiment with what you can return in a function. </p>
 <h3 id="recursion">Recursion</h3>
 <p>Recursion is the idea that a function or some process can reference itself. A great explanation of recursion as a concept can be found on <a href="https://en.wikipedia.org/wiki/Recursion">Wikipedia</a>. We saw this with the factorial example. In mathematics, a factorial is a number being multiplied by all the positive integers below it and is symbolized by an exclamtion mark. So the factorial of 4 = 4! = 4 * 3 * 2 * 1. In this case we could do a loop to accomplish this but to demonstrate this principle we can do it with recursion. We set up a base case to end the recursion:</p>
-<pre><code class="python">    if number &lt;= 0:
-        return 1
-</code></pre>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">if</span> number <span style="color: #666666">&lt;=</span> <span style="color: #666666">0</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">1</span>
+</pre></div>
+
 
 <p>Then we have the function call itself with a small adjustment:</p>
-<pre><code class="python">    return number * factorial(number - 1)
-</code></pre>
+<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">return</span> number <span style="color: #666666">*</span> factorial(number <span style="color: #666666">-</span> <span style="color: #666666">1</span>)
+</pre></div>
+
 
 <p>And the function starts over again. This continues until the base case has been reached.</p>
 <h2 id="hone-your-skills">Hone your Skills</h2>
@@ -384,53 +837,87 @@ function_name(argument)
 <li>Try to write a recursive function that acts like a for-loop or a while-loop. Can you do it? What are the pros and cons of doing this?</li>
 <li>Write a function that returns multiple value and then try to unpack those into variables (see "Hone Your Skills" in the section on Iterables for more on how to do this.)</li>
 </ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../20-Functions/">Previous: 20-Functions</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../22-Try-Except/">Next: 22-Try-Except</a></p>
+<hr />
+<!-- End Navigation -->
+                
+                  
+                
               
-            </div>
+              
+                
+
+
+              
+            </article>
           </div>
-          <footer>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../22-Try-Except/" class="btn btn-neutral float-right" title="22. Try Except">Next <span class="icon icon-circle-arrow-right"></span></a>
-      
-      
-        <a href="../20-Functions/" class="btn btn-neutral" title="20. Functions"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-      
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../20-Functions/" title="20. Functions" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                20. Functions
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../22-Try-Except/" title="22. Try Except" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                22. Try Except
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
     </div>
   
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
-    
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
   </div>
-
-  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
       
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" style="cursor: pointer">
-    <span class="rst-current-version" data-toggle="rst-current-version">
+    </div>
+    
+      <script src="../assets/javascripts/application.245445c6.js"></script>
       
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
-        <span><a href="../20-Functions/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       
-      
-        <span style="margin-left: 15px"><a href="../22-Try-Except/" style="color: #fcfcfc">Next &raquo;</a></span>
-      
-    </span>
-</div>
-    <script>var base_url = '..';</script>
-    <script src="../js/theme.js" defer></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
-      <script src="../search/main.js" defer></script>
-
-</body>
+    
+  </body>
 </html>

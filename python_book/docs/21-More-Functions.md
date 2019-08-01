@@ -79,6 +79,7 @@ $
 Parameters are related to arguments. Many times these two terms are used interchangeably. To clarify, a parameter is the variable name that is used in the definition of a function. Whereas, an argument is what actually gets passed into the function call as seen here:
 
 ```python
+
 def function_name(parameter):
     parameter += 3
     print(parameter)
@@ -87,11 +88,11 @@ def function_name(parameter):
 function_name(argument)
 ```
 
-Following this logic, the argument replaces the parameter while the function code executes. You have worked with arguments since the first Python program you ran. The simple statement `print("Hello World!")` is just you calling the Python function named `print` and passing in the string `"Hello World!"` as an argument. Somewhere in the Python core code, there is a `print` function defined in a similar manner that executes all the details of printing text out to the command line.
+Following this logic, the argument replaces the parameter while the function code executes. You have worked with arguments since the first Python program you ran. The simple statement `print("Hello World!")` is just you calling the Python function named `print` and passing in the string `"Hello World!"` as an argument. Somewhere in the Python core code, there is a `print` function defined in a similar manner that executes all the details of printing text out to the command line.
 
 ### Default Values for Parameters
 
-We saw in line 29 the following line of code: `def print_a_number(number=1):`. This function definition supplied a default value for the `number` parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value.
+We saw in line 29 the following line of code: `def print_a_number(number=1):`. This function definition supplied a default value for the `number` parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value.
 
 ### Returns and the None type
 
@@ -118,7 +119,7 @@ You may have found that functions in Python have some practical similarities wit
 
 - Functions that have no `return` statement return a special data type called `None` by default. The `None` data type is basically Python's way of saying this data is nothing or void. Therefore when we explicit returned `None`  we could have also just written `return` . Both cases would be saying, if the solution will be imaginary return nothing!
 
-- It is possible to return multiple values (as seen in  `more_functions.py`  in the `quadratic_formula` function). As you saw above, they will simply be returned as a tuple.
+- It is possible to return multiple values (as seen in  `more_functions.py`  in the `quadratic_formula` function). As you saw above, they will simply be returned as a tuple.
 
 Return statements are crucial for effective functions and it is a good idea to experiment with what you can return in a function. 
 

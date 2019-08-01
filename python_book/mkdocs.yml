@@ -42,7 +42,12 @@ extra_javascript:
 markdown_extensions:
     - mdx_math
     - codehilite:
-        linenums: true
+        #linenums: true
+        #css_class: emacs
+        noclasses: true
+        pygments_style: 'default'
+        guess_lang: false
+        #use_pygments: true
 
 theme:
 # pip install mkdocs-material
@@ -68,4 +73,5 @@ theme:
         # - type: 'linkedin'
           # link: 'https://linkedin.com/in/squidfunk'
        
-    
+# extra_css:
+  # - 'stylesheets/emacs.css'   
