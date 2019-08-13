@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -705,32 +705,64 @@
 <h3 id="building-a-basic-project-structure">Building a Basic Project Structure</h3>
 <p>Go to your CLI, navigate to a place where you will build your project build the following project structure using the CLI commands you have learned. Enter the following commands:</p>
 <p>For Linux and Mac:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ mkdir emails
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ mkdir emails
 $ mkdir ./emails/emails ./emails/bin ./emails/docs ./emails/tests
 $ touch ./emails/README.md
 $ touch ./emails/emails/__init__.py ./emails/tests/__init__.py
 $ touch ./emails/bin/placeholder.txt ./emails/docs/placeholder.txt
 $ ls -R ./emails/
 </pre></div>
-
+</td></tr></table>
 
 <p>For windows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&gt; mkdir emails
-&gt; mkdir ./emails/emails 
-&gt; mkdir ./emails/bin 
-&gt; mkdir ./emails/docs 
-&gt; mkdir ./emails/tests
-&gt; <span style="color: #008000">New-Item</span> ./emails/README.<span style="color: #008000">md</span>
-&gt; <span style="color: #008000">New-Item</span> ./emails/emails/__init__.py 
-&gt; <span style="color: #008000">New-Item</span> ./emails/tests/__init__.py
-&gt; <span style="color: #008000">New-Item</span> ./emails/bin/placeholder.txt
-&gt; <span style="color: #008000">New-Item</span> ./emails/docs/placeholder.txt
-&gt; <span style="color: #008000">ls </span>-R ./emails/
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&gt;</span> <span class="n">mkdir</span> <span class="n">emails</span>
+<span class="p">&gt;</span> <span class="n">mkdir</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">emails</span> 
+<span class="p">&gt;</span> <span class="n">mkdir</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">bin</span> 
+<span class="p">&gt;</span> <span class="n">mkdir</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">docs</span> 
+<span class="p">&gt;</span> <span class="n">mkdir</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">tests</span>
+<span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">README</span><span class="p">.</span><span class="nb">md</span>
+<span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">emails</span><span class="p">/</span><span class="n">__init__</span><span class="p">.</span><span class="n">py</span> 
+<span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">tests</span><span class="p">/</span><span class="n">__init__</span><span class="p">.</span><span class="n">py</span>
+<span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">bin</span><span class="p">/</span><span class="n">placeholder</span><span class="p">.</span><span class="n">txt</span>
+<span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span><span class="n">docs</span><span class="p">/</span><span class="n">placeholder</span><span class="p">.</span><span class="n">txt</span>
+<span class="p">&gt;</span> <span class="nb">ls </span><span class="n">-R</span> <span class="p">./</span><span class="n">emails</span><span class="p">/</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>When you are done your structure should look like this:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>./emails/:
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>./emails/:
     emails
     bin
     docs
@@ -749,33 +781,39 @@ $ ls -R ./emails/
     ./emails/tests:
         __init__.py
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="the-emails-package">The <code>emails</code> package</h3>
 <p>You have just created project called <code>emails</code> that contains two packages called <code>emails</code> and <code>tests</code>. Both of these packages contain an <code>__init__.py</code> file. This file tells python to treat the folder that contains it as its own module. Therefore, any code in <code>./emails/emails/__init__.py</code> may be imported from emails as: <code>from emails import a_thing</code> where <code>a_thing</code> is any class, function or variable defined inside of the <code>__init__.py</code> script. Other Python scripts may be placed in the folder as well (regardless of the presence of an <code>__init__.py</code> script) and classes functions or variables may be imported as: <code>from emails.module import a_thing</code> where <code>module</code> corresponds to <code>module.py</code> inside the folder. The <code>emails</code> folder is where we want to put all of our Python source code for the project. The <code>tests</code> package is where we can write automated tests for our <code>emails</code> package. We will work mainly with these two folders for this section. </p>
 <p>The other two folders are <code>bin</code> and <code>docs</code> and contain binary or executable files we wish to include with our code and documentation about our code respectively. The structure we have just made is not the only or "correct" way to structure a project but it is a convenient way to start a project. For our purposes it is a good idea not to have an empty folder so we have put a <code>placeholder.txt</code> file in each empty folder.</p>
 <h3 id="make-a-project">Make a project</h3>
 <p>Now that we have our project 'skeleton' in place, copy your working code from the modules section into the <code>emails</code> folder. Because you will run this in the context of the <code>emails</code> package make sure you change the following imports to reflect this. Change:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">database_manager</span> <span style="color: #008000; font-weight: bold">import</span> DatabaseManager
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">database_manager</span> <span class="kn">import</span> <span class="n">DatabaseManager</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>to:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">emails.database_manager</span> <span style="color: #008000; font-weight: bold">import</span> DatabaseManager
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">emails.database_manager</span> <span class="kn">import</span> <span class="n">DatabaseManager</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>This will ensure that you are importing from the right environment. If you are using your modules in a project structure you will need to make sure they are referenced correctly or your project will break.</p>
 <p>Test your project by opening a python prompt in your project's root directory and executing the following commands:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="border: 1px solid #FF0000">$</span> pwd
-<span style="color: #666666">.../</span>path<span style="color: #666666">/</span>to<span style="color: #666666">/</span>project<span style="color: #666666">/</span>emails<span style="color: #666666">/</span>
-<span style="border: 1px solid #FF0000">$</span> python
-Python <span style="color: #666666">3.</span>x<span style="color: #666666">.</span>x <span style="color: #666666">...</span>
-Type <span style="color: #BA2121">&quot;help&quot;</span>, <span style="color: #BA2121">&quot;copyright&quot;</span>, <span style="color: #BA2121">&quot;credits&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BA2121">&quot;license&quot;</span> <span style="color: #008000; font-weight: bold">for</span> more information<span style="color: #666666">.</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">emails.user_interface</span> <span style="color: #008000; font-weight: bold">import</span> run_ui_test
-<span style="color: #666666">&gt;&gt;&gt;</span> run_ui_test()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">pwd</span>
+<span class="o">.../</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">project</span><span class="o">/</span><span class="n">emails</span><span class="o">/</span>
+<span class="err">$</span> <span class="n">python</span>
+<span class="n">Python</span> <span class="mf">3.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="o">...</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">emails.user_interface</span> <span class="kn">import</span> <span class="n">run_ui_test</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">run_ui_test</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Your project should run as it always has.</p>
 <p>If the above test worked, congradulations! You have yourself a working project! You can add code to the  <code>emails</code> folder or documentation to the <code>docs</code> folder as you see fit. But for our purposes, the real utiltiy of the project structure is the abliity you have to automatically test your project with a little tool called <code>nose</code>.</p>

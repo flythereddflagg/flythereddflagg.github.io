@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -721,42 +721,89 @@
 <li>The hard drive or persistent memory</li>
 </ul>
 <p>This lesson is an opportunity to interact with the third part, that is the hard drive. We will learn in this lesson how to read and write files from the hard drive.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">#io_files.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#io_files.py</span>
 
-ext       <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;.txt&#39;</span>
-user_name <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter your name       : &quot;</span>)
-user_age  <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter your age        : &quot;</span>)
-user_job  <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter your occupation : &quot;</span>)
-filename  <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter a valid filename: &quot;</span>)
+<span class="n">ext</span>       <span class="o">=</span> <span class="s1">&#39;.txt&#39;</span>
+<span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name       : &quot;</span><span class="p">)</span>
+<span class="n">user_age</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your age        : &quot;</span><span class="p">)</span>
+<span class="n">user_job</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your occupation : &quot;</span><span class="p">)</span>
+<span class="n">filename</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a valid filename: &quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># let&#39;s print out what we got from the user</span>
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">Hello {user_name}! You are {user_age} years old.&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;You work as a/an {user_job}&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">Saving Your Information to </span><span style="color: #BB6622; font-weight: bold">\&quot;</span><span style="color: #BA2121">{filename + ext}</span><span style="color: #BB6622; font-weight: bold">\&quot;</span><span style="color: #BA2121">...&quot;</span>, end<span style="color: #666666">=</span><span style="color: #BA2121">&quot;&quot;</span>)
+<span class="c1"># let&#39;s print out what we got from the user</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hello {user_name}! You are {user_age} years old.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;You work as a/an {user_job}&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Saving Your Information to </span><span class="se">\&quot;</span><span class="s2">{filename + ext}</span><span class="se">\&quot;</span><span class="s2">...&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># older/worse way of working with files</span>
-f <span style="color: #666666">=</span> <span style="color: #008000">open</span>(filename <span style="color: #666666">+</span> ext , <span style="color: #BA2121">&quot;w&quot;</span>)   <span style="color: #408080; font-style: italic"># open in write mode &#39;w&#39;</span>
-f<span style="color: #666666">.</span>write(<span style="color: #BA2121">&quot;name,age,occupation</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>) <span style="color: #408080; font-style: italic"># write headers to file</span>
-data  <span style="color: #666666">=</span> user_name <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;,&quot;</span>          <span style="color: #408080; font-style: italic"># concatenate a string</span>
-data <span style="color: #666666">+=</span> user_age  <span style="color: #666666">+</span> <span style="color: #BA2121">&#39;,&#39;</span>  
-data <span style="color: #666666">+=</span> user_job  <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span> 
-f<span style="color: #666666">.</span>write(data)                    <span style="color: #408080; font-style: italic"># then write it to the file</span>
-f<span style="color: #666666">.</span>close()                        <span style="color: #408080; font-style: italic"># save and close the file</span>
+<span class="c1"># older/worse way of working with files</span>
+<span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>   <span class="c1"># open in write mode &#39;w&#39;</span>
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># write headers to file</span>
+<span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>          <span class="c1"># concatenate a string</span>
+<span class="n">data</span> <span class="o">+=</span> <span class="n">user_age</span>  <span class="o">+</span> <span class="s1">&#39;,&#39;</span>  
+<span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                    <span class="c1"># then write it to the file</span>
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                        <span class="c1"># save and close the file</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Done.&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># newer/better way of working with files</span>
-<span style="color: #408080; font-style: italic"># always use 4 spaces to indent</span>
-<span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(filename <span style="color: #666666">+</span> ext, <span style="color: #BA2121">&#39;r&#39;</span>) <span style="color: #008000; font-weight: bold">as</span> f: <span style="color: #408080; font-style: italic"># r is for read</span>
-    data <span style="color: #666666">=</span> f<span style="color: #666666">.</span>read()                 
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">Here are your data:</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">---&quot;</span>)
-    <span style="color: #008000; font-weight: bold">print</span>(data)
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;---&quot;</span>)
+<span class="c1"># newer/better way of working with files</span>
+<span class="c1"># always use 4 spaces to indent</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># r is for read</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                 
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Here are your data:</span><span class="se">\n</span><span class="s2">---&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python io_files.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python io_files.py
 Enter your name       : Mark
 Enter your age        : 92
 Enter your occupation : Professional Old Guy
@@ -775,13 +822,14 @@ Mark,92,Professional Old Guy
 ---
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>If you open the file <code>"mark_info.txt"</code> that should have appeared in the same folder you will see the following:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>name,age,occupation
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>name,age,occupation
 Mark,92,Professional Old Guy
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>What is happening here?</strong></p>
 <p>We are writing and reading files here with a special tool called a file object. A file object from Python's point of view is another data type although that is not the most convenient way of understanding it. Without going too much into detail here is what is happening:</p>
@@ -818,25 +866,36 @@ Mark,92,Professional Old Guy
 <p>There are ways to combine these that you can experiment with in "Hone Your Skills" below.</p>
 <h3 id="with-statements"><code>with</code> Statements</h3>
 <p>To save the changes we made to the file we opened in <code>f = open(filename + ext , "w")</code>, we need to call <code>f.close()</code> on our file object. This ends up being a problem if you forget to call <code>f.close()</code> on the object. A better way to deal with files is with a with statement. To be clear the following code snippet:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>f <span style="color: #666666">=</span> <span style="color: #008000">open</span>(filename <span style="color: #666666">+</span> ext , <span style="color: #BA2121">&quot;w&quot;</span>)  
-f<span style="color: #666666">.</span>write(<span style="color: #BA2121">&quot;name,age,occupation</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>)
-data  <span style="color: #666666">=</span> user_name <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;,&quot;</span>         
-data <span style="color: #666666">+=</span> user_age  <span style="color: #666666">+</span> <span style="color: #BA2121">&#39;,&#39;</span>  
-data <span style="color: #666666">+=</span> user_job  <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span> 
-f<span style="color: #666666">.</span>write(data)                   
-f<span style="color: #666666">.</span>close()                       
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>  
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>         
+<span class="n">data</span> <span class="o">+=</span> <span class="n">user_age</span>  <span class="o">+</span> <span class="s1">&#39;,&#39;</span>  
+<span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
+<span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                   
+<span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                       
 </pre></div>
-
+</td></tr></table>
 
 <p>is equivalent to:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(filename <span style="color: #666666">+</span> ext , <span style="color: #BA2121">&quot;w&quot;</span>) <span style="color: #008000; font-weight: bold">as</span> f:
-    f<span style="color: #666666">.</span>write(<span style="color: #BA2121">&quot;name,age,occupation</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>)
-    data  <span style="color: #666666">=</span> user_name <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;,&quot;</span>  
-    data <span style="color: #666666">+=</span> user_age  <span style="color: #666666">+</span> <span style="color: #BA2121">&#39;,&#39;</span>  
-    data <span style="color: #666666">+=</span> user_job  <span style="color: #666666">+</span> <span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span> 
-    f<span style="color: #666666">.</span>write(data)     
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>  
+    <span class="n">data</span> <span class="o">+=</span> <span class="n">user_age</span>  <span class="o">+</span> <span class="s1">&#39;,&#39;</span>  
+    <span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>     
 </pre></div>
-
+</td></tr></table>
 
 <p>Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The <code>with</code> statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a with statement (unless you have a <em>very</em> good reason not to do so).</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>

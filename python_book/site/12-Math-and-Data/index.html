@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -752,42 +752,84 @@
 </ul>
 <p>If you have never heard of any of these concepts before, I suggest you familiarize yourself with them before proceeding so you have at least a basic understanding of what they are. However if you intend to proceed anyway, just skip the stuff with which you are not familiar as it is probable you will never have to use it. </p>
 <p>The following exercise will introduce you to the basics of math:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># math_learning.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># math_learning.py</span>
 
-<span style="color: #408080; font-style: italic"># we will use the variables x, y and z</span>
-x <span style="color: #666666">=</span> <span style="color: #666666">24.3</span>
-y <span style="color: #666666">=</span> <span style="color: #666666">9.0</span>
-z <span style="color: #666666">=</span> x
+<span class="c1"># we will use the variables x, y and z</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mf">24.3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mf">9.0</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x =&quot;</span>, x)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;y =&quot;</span>, y)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;y =&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># basic math operators</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x +  y =&quot;</span>, x <span style="color: #666666">+</span> y)  <span style="color: #408080; font-style: italic"># addition</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x -  y =&quot;</span>, x <span style="color: #666666">-</span> y)  <span style="color: #408080; font-style: italic"># subtraction</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x *  y =&quot;</span>, x <span style="color: #666666">*</span> y)  <span style="color: #408080; font-style: italic"># multiplication</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x ** y =&quot;</span>, x <span style="color: #666666">**</span> y) <span style="color: #408080; font-style: italic"># exponentiation</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x /  y =&quot;</span>, x <span style="color: #666666">/</span> y)  <span style="color: #408080; font-style: italic"># division</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x // y =&quot;</span>, x <span style="color: #666666">//</span> y) <span style="color: #408080; font-style: italic"># integer division or floor division</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;x %  y =&quot;</span>, x <span style="color: #666666">%</span> y)  <span style="color: #408080; font-style: italic"># modulo or remainder</span>
+<span class="c1"># basic math operators</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x +  y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># addition</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x -  y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># subtraction</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x *  y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">*</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># multiplication</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x ** y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">**</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># exponentiation</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x /  y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># division</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x // y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">//</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># integer division or floor division</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;x %  y =&quot;</span><span class="p">,</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">)</span>  <span class="c1"># modulo or remainder</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;z was:&quot;</span>, z)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;z was:&quot;</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># assignment operators</span>
-z  <span style="color: #666666">+=</span> x <span style="color: #408080; font-style: italic"># same as z = z +  x</span>
-z  <span style="color: #666666">-=</span> x <span style="color: #408080; font-style: italic"># same as z = z -  x</span>
-z  <span style="color: #666666">*=</span> x <span style="color: #408080; font-style: italic"># same as z = z *  x</span>
-z <span style="color: #666666">**=</span> x <span style="color: #408080; font-style: italic"># same as z = z ** x</span>
-z  <span style="color: #666666">/=</span> x <span style="color: #408080; font-style: italic"># same as z = z /  x</span>
-z <span style="color: #666666">//=</span> x <span style="color: #408080; font-style: italic"># same as z = z // x</span>
-z  <span style="color: #666666">%=</span> x <span style="color: #408080; font-style: italic"># same as z = z %  x</span>
+<span class="c1"># assignment operators</span>
+<span class="n">z</span>  <span class="o">+=</span> <span class="n">x</span> <span class="c1"># same as z = z +  x</span>
+<span class="n">z</span>  <span class="o">-=</span> <span class="n">x</span> <span class="c1"># same as z = z -  x</span>
+<span class="n">z</span>  <span class="o">*=</span> <span class="n">x</span> <span class="c1"># same as z = z *  x</span>
+<span class="n">z</span> <span class="o">**=</span> <span class="n">x</span> <span class="c1"># same as z = z ** x</span>
+<span class="n">z</span>  <span class="o">/=</span> <span class="n">x</span> <span class="c1"># same as z = z /  x</span>
+<span class="n">z</span> <span class="o">//=</span> <span class="n">x</span> <span class="c1"># same as z = z // x</span>
+<span class="n">z</span>  <span class="o">%=</span> <span class="n">x</span> <span class="c1"># same as z = z %  x</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;z is now:&quot;</span>, z)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;z is now:&quot;</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python math_learning.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python math_learning.py
 x = 24.3
 y = 9.0
 x +  y = 33.3
@@ -801,7 +843,7 @@ z was: 24.3
 z is now: 4.70613749314111
 $ 
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>What is happening here?</strong></p>
 <p>This is a demonstration of binary math operators and assignment operators. Both will be explained below. Lines 28 - 34 demonstrate the assignment operators and were the equivalent of</p>
@@ -813,9 +855,9 @@ $
 <h3 id="data-types">Data Types</h3>
 <p>In the lesson on <a href="../09-Variables-and-Memory/">Variables and Memory</a>, we talked about a computer can only move and store numbers in "boxes". However, we can represent anything we want as a series of "boxes" with numbers using some clever tricks that we will not get into here. </p>
 <p>Suffice it to say that the computer has a way of 'marking' a box or series of boxes as number, letter, chunk of code or, indeed, anything we want. This mark allows the computer to deal with those boxes in a logical manner. For example, you should not try to mathematically divide a string. Therefore, the computer marks the series of numbers as a string so it knows how to properly deal with it and the code:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>name <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;John&quot;</span> <span style="color: #666666">/</span> <span style="color: #666666">3</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span> <span class="o">/</span> <span class="mi">3</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>does not make any sense will make Python throw an error.</p>
 <p>The different ways a computer can "mark" a set of numbers for interpretation are called "data types" or simply "types". Later on, we will deepen our understanding of types but for now we will talk about 3 basic types.</p>
@@ -829,11 +871,13 @@ $
 </ul>
 <p>A floating point number or "float" for short is a number that can have a non-whole or fractional value. Values like <code>1.0</code>, <code>-0.06020</code>, or <code>16575.23</code> are all floats. A float generally takes up more memory than an integer and can give you more accuracy in mathematical calculations. The accuracy a computer can have is limited by how much space a float can take up.</p>
 <p>An important note about floats and integers are that if you combine them mathematically, you will always get a float back. Therefore if you need to "upgrade" and integer to a float you can do so by multiplying an integer by <code>1.0</code>.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>number <span style="color: #666666">=</span> <span style="color: #666666">2</span> <span style="color: #408080; font-style: italic"># &#39;number&#39; is an integer</span>
-number <span style="color: #666666">=</span> number <span style="color: #666666">*</span> <span style="color: #666666">1.0</span>
-<span style="color: #408080; font-style: italic"># &#39;number&#39; now has the same value but is a float</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># &#39;number&#39; is an integer</span>
+<span class="n">number</span> <span class="o">=</span> <span class="n">number</span> <span class="o">*</span> <span class="mf">1.0</span>
+<span class="c1"># &#39;number&#39; now has the same value but is a float</span>
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li><strong>String</strong></li>

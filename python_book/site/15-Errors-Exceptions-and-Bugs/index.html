@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -789,74 +789,133 @@
 <li>Each time it breaks or throws an error, fix the error</li>
 <li>Continue running the script and fixing each error that comes up until the script runs without any errors</li>
 </ul>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># errors.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># errors.py</span>
 
-fav_number <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Please enter your favorite number: &quot;</span>
+<span class="n">fav_number</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Please enter your favorite number: &quot;</span>
 
-fav_number <span style="color: #666666">=</span> <span style="color: #008000">float</span>(fav_number)
+<span class="n">fav_number</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">fav_number</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># there is a line of code missing here</span>
+<span class="c1"># there is a line of code missing here</span>
 
-<span style="color: #408080; font-style: italic"># pi is the same as π and should have a value of 3.14</span>
-<span style="color: #008000; font-weight: bold">if</span> fav_number <span style="color: #666666">&gt;</span> pi
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Your number is bigger than pi!&quot;</span>)
-<span style="color: #008000; font-weight: bold">else</span>:
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Your number is less than or equal to pi!&quot;</span>)
+<span class="c1"># pi is the same as π and should have a value of 3.14</span>
+<span class="k">if</span> <span class="n">fav_number</span> <span class="o">&gt;</span> <span class="n">pi</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Your number is bigger than pi!&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Your number is less than or equal to pi!&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;You can print all sorts of &quot;</span>numbers<span style="color: #BA2121">&quot; given by the user.&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;You can print all sorts of &quot;</span><span class="n">numbers</span><span class="s2">&quot; given by the user.&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
 <p>This is what should happen as you run it. You should be fixing the problems with the script between each time you attempt to run it.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python3 errors.py 
-  File <span style="color: #BA2121">&quot;errors.py&quot;</span>, line <span style="color: #666666">5</span>
-    <span style="color: #19177C">fav_number</span> <span style="color: #666666">=</span> float<span style="color: #666666">(</span>fav_number<span style="color: #666666">)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python3 errors.py 
+  File <span class="s2">&quot;errors.py&quot;</span>, line <span class="m">5</span>
+    <span class="nv">fav_number</span> <span class="o">=</span> float<span class="o">(</span>fav_number<span class="o">)</span>
              ^
 SyntaxError: invalid syntax
 $ python3 errors.py 
-  File <span style="color: #BA2121">&quot;errors.py&quot;</span>, line <span style="color: #666666">5</span>
-    <span style="color: #19177C">fav_number</span> <span style="color: #666666">=</span> float<span style="color: #666666">(</span>fav_number<span style="color: #666666">)</span>
+  File <span class="s2">&quot;errors.py&quot;</span>, line <span class="m">5</span>
+    <span class="nv">fav_number</span> <span class="o">=</span> float<span class="o">(</span>fav_number<span class="o">)</span>
              ^
 SyntaxError: invalid syntax
 $ python3 errors.py 
-  File <span style="color: #BA2121">&quot;errors.py&quot;</span>, line <span style="color: #666666">9</span>
-    <span style="color: #008000; font-weight: bold">if</span> fav_number &lt; pi
+  File <span class="s2">&quot;errors.py&quot;</span>, line <span class="m">9</span>
+    <span class="k">if</span> fav_number &lt; pi
                      ^
 SyntaxError: invalid syntax
 $ python3 errors.py 
-  File <span style="color: #BA2121">&quot;errors.py&quot;</span>, line <span style="color: #666666">14</span>
-    print<span style="color: #666666">(</span><span style="color: #BA2121">&quot;You can print all sorts of &quot;</span>numbers<span style="color: #BA2121">&quot; given by the user.&quot;</span><span style="color: #666666">)</span>
+  File <span class="s2">&quot;errors.py&quot;</span>, line <span class="m">14</span>
+    print<span class="o">(</span><span class="s2">&quot;You can print all sorts of &quot;</span>numbers<span class="s2">&quot; given by the user.&quot;</span><span class="o">)</span>
                                              ^
 SyntaxError: invalid syntax
 $ python3 errors.py 
-  File <span style="color: #BA2121">&quot;errors.py&quot;</span>, line <span style="color: #666666">14</span>
-    print<span style="color: #666666">(</span><span style="color: #BA2121">&quot;You can print all sorts of \&quot;numbers&quot;</span> given by the user.<span style="color: #BA2121">&quot;)</span>
-<span style="color: #BA2121">                                                     ^</span>
-<span style="color: #BA2121">SyntaxError: invalid syntax</span>
-$<span style="color: #BA2121"> python3 errors.py </span>
-<span style="color: #BA2121">Please enter your favorite number: 23</span>
-<span style="color: #BA2121">Traceback (most recent call last):</span>
-<span style="color: #BA2121">  File &quot;</span>errors.py<span style="color: #BA2121">&quot;, line 9, in &lt;module&gt;</span>
-<span style="color: #BA2121">    if fav_number &lt; pi:</span>
-<span style="color: #BA2121">NameError: name &#39;pi&#39; is not defined</span>
-$<span style="color: #BA2121"> python3 errors.py </span>
-<span style="color: #BA2121">Please enter your favorite number: 23</span>
-<span style="color: #BA2121">Your number is less than or equal to pi!</span>
-<span style="color: #BA2121">You can print all sorts of &quot;</span>numbers<span style="color: #BA2121">&quot; given by the user.</span>
-$<span style="color: #BA2121"> python3 errors.py </span>
-<span style="color: #BA2121">Please enter your favorite number: 23</span>
-<span style="color: #BA2121">Your number is bigger than pi!</span>
-<span style="color: #BA2121">You can print all sorts of &quot;</span>numbers<span style="color: #BA2121">&quot; given by the user.</span>
-$<span style="color: #BA2121"> python3 errors.py </span>
-<span style="color: #BA2121">Please enter your favorite number: 23d</span>
-<span style="color: #BA2121">Traceback (most recent call last):</span>
-<span style="color: #BA2121">  File &quot;</span>errors.py<span style="color: #BA2121">&quot;, line 5, in &lt;module&gt;</span>
-<span style="color: #BA2121">    fav_number = float(fav_number)</span>
-<span style="color: #BA2121">ValueError: could not convert string to float: &#39;23d&#39;</span>
-$<span style="color: #BA2121"> </span>
+  File <span class="s2">&quot;errors.py&quot;</span>, line <span class="m">14</span>
+    print<span class="o">(</span><span class="s2">&quot;You can print all sorts of \&quot;numbers&quot;</span> given by the user.<span class="s2">&quot;)</span>
+<span class="s2">                                                     ^</span>
+<span class="s2">SyntaxError: invalid syntax</span>
+$<span class="s2"> python3 errors.py </span>
+<span class="s2">Please enter your favorite number: 23</span>
+<span class="s2">Traceback (most recent call last):</span>
+<span class="s2">  File &quot;</span>errors.py<span class="s2">&quot;, line 9, in &lt;module&gt;</span>
+<span class="s2">    if fav_number &lt; pi:</span>
+<span class="s2">NameError: name &#39;pi&#39; is not defined</span>
+$<span class="s2"> python3 errors.py </span>
+<span class="s2">Please enter your favorite number: 23</span>
+<span class="s2">Your number is less than or equal to pi!</span>
+<span class="s2">You can print all sorts of &quot;</span>numbers<span class="s2">&quot; given by the user.</span>
+$<span class="s2"> python3 errors.py </span>
+<span class="s2">Please enter your favorite number: 23</span>
+<span class="s2">Your number is bigger than pi!</span>
+<span class="s2">You can print all sorts of &quot;</span>numbers<span class="s2">&quot; given by the user.</span>
+$<span class="s2"> python3 errors.py </span>
+<span class="s2">Please enter your favorite number: 23d</span>
+<span class="s2">Traceback (most recent call last):</span>
+<span class="s2">  File &quot;</span>errors.py<span class="s2">&quot;, line 5, in &lt;module&gt;</span>
+<span class="s2">    fav_number = float(fav_number)</span>
+<span class="s2">ValueError: could not convert string to float: &#39;23d&#39;</span>
+$<span class="s2"> </span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="errors-and-exceptions">Errors and Exceptions</h3>
 <p>I am using the term "error" loosely here. In reality, there was a time when an error was the computer equivalent of certain death. You see, Python has all sorts of protections and carefully constructed walls up to protect the programmer from him or herself. But it wasn't always this way. Older languages such as C (especially in their earlier years) were perfectly happy to let you crash your entire computer. (It turns out that you could also destroy your hardware too but that's another can of worms we are not getting into here.) From the stand point of these programming languages, an error is a death sentence, at least, for the program in which it occurs. Not to mention, there were potentially a lot of weird side effects from a program that just stopped running unexpectedly.</p>

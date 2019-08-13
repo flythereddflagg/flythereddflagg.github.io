@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -706,10 +706,11 @@ all things, beginning in Python is very simple.</p>
 <ul>
 <li>Type the following <em>exactly</em> as it is written here. Do <em>not</em> copy-paste it.</li>
 </ul>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># hello_world.py</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Hello World!&quot;</span>)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># hello_world.py</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li>
@@ -719,43 +720,69 @@ all things, beginning in Python is very simple.</p>
 <p>Enter the following command in your terminal:</p>
 </li>
 </ul>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python hello_world.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python hello_world.py
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python hello_world.py 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python hello_world.py 
 Hello World!
 $ 
 </pre></div>
-
+</td></tr></table>
 
 <p>If you see the above output, congratulations! You have just written and run your first Python program!</p>
 <p><strong>What is happening here?</strong> 
 Traditionally, displaying "Hello World!" in a console window is the first thing 
 that every programmer generally learns to do in a new language. Later we will get into more detail on how exactly everything works and what is happening on a fundamental level.</p>
 <p>Go back to your Python file and add the following under the first line so the whole file looks like this:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># hello_world.py</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Hello World!&quot;</span>)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># hello_world.py</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;I skipped a line in code!&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;I skipped a line in code!&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Here is a little song:&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Twinkle, twinkle little star,&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;How I wonder what you are.&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Up above the world so high,&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Here is a little song:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Twinkle, twinkle little star,&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How I wonder what you are.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Up above the world so high,&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Like a diamond in the sky&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Twinkle, twinkle little star&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Like a diamond in the sky&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Twinkle, twinkle little star&quot;</span><span class="p">)</span>
 
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;How I wonder what you are.&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How I wonder what you are.&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong> </p>
 <p>Re-run the code as before and you should see the following:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python hello_world.py 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python hello_world.py 
 Hello World!
 I skipped a line in code!
 Here is a little song:
@@ -767,7 +794,7 @@ Twinkle, twinkle little star
 How I wonder what you are.
 $ 
 </pre></div>
-
+</td></tr></table>
 
 <p>As you can see here, the code runs in order line by line, ignoring any blank lines. This is how any python program works. It starts on line 1 and executes each line of code until it reaches the end of the file. </p>
 <p>Once you see the output appear <em>exactly</em> as it appears above, congratulations! You have completed the first exercise!</p>
@@ -781,12 +808,15 @@ $
 <p>In this example example, I deleted the last three characters on line 8 and got this message. As you can see, Python tells me exactly where my mistake is and what kind of error it is. </p>
 <p>Take some time and mess with this program. Delete different parts and try to run it and see the kind of errors you get. </p>
 <p>My hope is that you'll get two things out of this: First, don't be afraid to make mistakes (although you of course want to avoid them if you can) and secondly, when an error does happen, this should help you begin to be comfortable with how python reports errors and exceptions. We will cover these in more detail in a later lesson.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>File <span style="color: #BA2121">&quot;hello_world.py&quot;</span>, line <span style="color: #666666">8</span>
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;How I wonder what you are</span>
-                    <span style="color: #666666">^</span>
-  <span style="color: #D2413A; font-weight: bold">SyntaxError</span>: EOL <span style="color: #008000; font-weight: bold">while</span> scanning string literal
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">File</span> <span class="s2">&quot;hello_world.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">8</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;How I wonder what you are</span>
+                    <span class="o">^</span>
+  <span class="ne">SyntaxError</span><span class="p">:</span> <span class="n">EOL</span> <span class="k">while</span> <span class="n">scanning</span> <span class="n">string</span> <span class="n">literal</span>
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li><strong>"Sparse is better than dense"</strong></li>

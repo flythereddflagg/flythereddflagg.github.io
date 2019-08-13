@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -704,94 +704,173 @@
 <h3 id="docstrings">Docstrings</h3>
 <p>The "string literals" or multi-line comments under each labels are recognized by python as documentation strings or "docstrings" for short. You will see these commonly in professional code and you may also use them at the beginning of a module to give general information about the module.</p>
 <p>The following example will set out some use cases. Don't bother to write this out just read and understand it.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">file: docstrings.py</span>
-<span style="color: #BA2121; font-style: italic">author: Mark Redd</span>
-<span style="color: #BA2121; font-style: italic">github: flythereddflagg</span>
-<span style="color: #BA2121; font-style: italic">about:</span>
-<span style="color: #BA2121; font-style: italic">    This module has some dummy functions and a dummy class to demonstrate</span>
-<span style="color: #BA2121; font-style: italic">    proper usage of docstrings.</span>
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">file: docstrings.py</span>
+<span class="sd">author: Mark Redd</span>
+<span class="sd">github: flythereddflagg</span>
+<span class="sd">about:</span>
+<span class="sd">    This module has some dummy functions and a dummy class to demonstrate</span>
+<span class="sd">    proper usage of docstrings.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Dummy</span>():
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Impliments Nothing of value. Is for demonstration purposes only.</span>
-<span style="color: #BA2121; font-style: italic">    Notice the indentation level of this doc string. Notice how it</span>
-<span style="color: #BA2121; font-style: italic">    is different from the methods in this class.</span>
-<span style="color: #BA2121; font-style: italic">    Attributes:</span>
-<span style="color: #BA2121; font-style: italic">        a (integer): a meaningless value</span>
-<span style="color: #BA2121; font-style: italic">        b (string): a meaningless word</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, a, b):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;Constructor for the Dummy class&quot;&quot;&quot;</span>
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>a <span style="color: #666666">=</span> a
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>b <span style="color: #666666">=</span> b
+<span class="k">class</span> <span class="nc">Dummy</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Impliments Nothing of value. Is for demonstration purposes only.</span>
+<span class="sd">    Notice the indentation level of this doc string. Notice how it</span>
+<span class="sd">    is different from the methods in this class.</span>
+<span class="sd">    Attributes:</span>
+<span class="sd">        a (integer): a meaningless value</span>
+<span class="sd">        b (string): a meaningless word</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Constructor for the Dummy class&quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">=</span> <span class="n">a</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">b</span> <span class="o">=</span> <span class="n">b</span>
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">jump</span>(how_high, when):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        This is a function or method belonging to the Dummy class</span>
-<span style="color: #BA2121; font-style: italic">        that will take longer than one sentence to explain. Where</span>
-<span style="color: #BA2121; font-style: italic">        this is the case be as detailed as necessary. Some functions</span>
-<span style="color: #BA2121; font-style: italic">        are so complex that they require many lines of code to explain</span>
-<span style="color: #BA2121; font-style: italic">        the intent and use of a function. For such cases it is useful</span>
-<span style="color: #BA2121; font-style: italic">        to list the parameters and what they mean. e.g. :</span>
-<span style="color: #BA2121; font-style: italic">        Parameters:</span>
-<span style="color: #BA2121; font-style: italic">            - how_high (integer): the height you want the dummy to jump</span>
-<span style="color: #BA2121; font-style: italic">                in feet</span>
-<span style="color: #BA2121; font-style: italic">            - when (datetime instance): a Python datetime instance specifying</span>
-<span style="color: #BA2121; font-style: italic">                the moment when you want the dummy to jump</span>
+    <span class="k">def</span> <span class="nf">jump</span><span class="p">(</span><span class="n">how_high</span><span class="p">,</span> <span class="n">when</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This is a function or method belonging to the Dummy class</span>
+<span class="sd">        that will take longer than one sentence to explain. Where</span>
+<span class="sd">        this is the case be as detailed as necessary. Some functions</span>
+<span class="sd">        are so complex that they require many lines of code to explain</span>
+<span class="sd">        the intent and use of a function. For such cases it is useful</span>
+<span class="sd">        to list the parameters and what they mean. e.g. :</span>
+<span class="sd">        Parameters:</span>
+<span class="sd">            - how_high (integer): the height you want the dummy to jump</span>
+<span class="sd">                in feet</span>
+<span class="sd">            - when (datetime instance): a Python datetime instance specifying</span>
+<span class="sd">                the moment when you want the dummy to jump</span>
 
-<span style="color: #BA2121; font-style: italic">        Likewise it is useful to tell what the function returns e.g. :</span>
-<span style="color: #BA2121; font-style: italic">        Returns:</span>
-<span style="color: #BA2121; font-style: italic">            - success (boolean): True if the jump completed successfully</span>
-<span style="color: #BA2121; font-style: italic">                False otherwise.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">True</span>
+<span class="sd">        Likewise it is useful to tell what the function returns e.g. :</span>
+<span class="sd">        Returns:</span>
+<span class="sd">            - success (boolean): True if the jump completed successfully</span>
+<span class="sd">                False otherwise.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">True</span>
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">slide</span>(left_right):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        It is not always necessary that you be extremely detailed. For </span>
-<span style="color: #BA2121; font-style: italic">        instance you could get the needed information across with </span>
-<span style="color: #BA2121; font-style: italic">        something like:</span>
+    <span class="k">def</span> <span class="nf">slide</span><span class="p">(</span><span class="n">left_right</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        It is not always necessary that you be extremely detailed. For </span>
+<span class="sd">        instance you could get the needed information across with </span>
+<span class="sd">        something like:</span>
 
-<span style="color: #BA2121; font-style: italic">        Returns True for a successful slide &quot;left&quot; or &quot;right&quot;.</span>
-<span style="color: #BA2121; font-style: italic">        On an unsuccessful slide, returns False and increments a.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        success <span style="color: #666666">=</span> <span style="color: #008000">True</span>
-        <span style="color: #008000; font-weight: bold">if</span> left_right <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;left&quot;</span> <span style="color: #AA22FF; font-weight: bold">and</span> success:
-            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">True</span>
-        <span style="color: #008000; font-weight: bold">elif</span> left_right <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;right&quot;</span> <span style="color: #AA22FF; font-weight: bold">and</span> success:
-            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">True</span>
-        <span style="color: #008000; font-weight: bold">else</span>:
-            <span style="color: #008000">self</span><span style="color: #666666">.</span>a <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
-            <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">False</span>
+<span class="sd">        Returns True for a successful slide &quot;left&quot; or &quot;right&quot;.</span>
+<span class="sd">        On an unsuccessful slide, returns False and increments a.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">success</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="k">if</span> <span class="n">left_right</span> <span class="o">==</span> <span class="s2">&quot;left&quot;</span> <span class="ow">and</span> <span class="n">success</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">elif</span> <span class="n">left_right</span> <span class="o">==</span> <span class="s2">&quot;right&quot;</span> <span class="ow">and</span> <span class="n">success</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">True</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="k">return</span> <span class="bp">False</span>
 
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">give_me_an_a</span>():
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;Gives you an A. Notice the indentation of the doc string&quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #BA2121">&#39;A&#39;</span>
+<span class="k">def</span> <span class="nf">give_me_an_a</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;Gives you an A. Notice the indentation of the doc string&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="s1">&#39;A&#39;</span>
 
-<span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;__main__&quot;</span>:
-    <span style="color: #408080; font-style: italic">#help(__name__)</span>
-    <span style="color: #408080; font-style: italic">#help(give_me_an_a)</span>
-    <span style="color: #408080; font-style: italic">#help(Dummy)</span>
-    <span style="color: #408080; font-style: italic">#help(Dummy.__init__)</span>
-    <span style="color: #408080; font-style: italic">#help(Dummy.jump)</span>
-    <span style="color: #408080; font-style: italic">#help(Dummy.slide)</span>
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1">#help(__name__)</span>
+    <span class="c1">#help(give_me_an_a)</span>
+    <span class="c1">#help(Dummy)</span>
+    <span class="c1">#help(Dummy.__init__)</span>
+    <span class="c1">#help(Dummy.jump)</span>
+    <span class="c1">#help(Dummy.slide)</span>
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="the-help-function">The <code>help</code> function</h3>
 <p>You will see at the bottom of the <code>docstrings.py</code> script there are several lines commented out. Copy-paste this script into a separate text file and uncomment those lines one by one. What do they do? You will see the docstrings show up as you do. This can also be done in the interactive prompt. Try the following commands and notice the output.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="border: 1px solid #FF0000">$</span> python
-Python <span style="color: #666666">3.</span>x<span style="color: #666666">.</span>x <span style="color: #666666">...</span>
-Type <span style="color: #BA2121">&quot;help&quot;</span>, <span style="color: #BA2121">&quot;copyright&quot;</span>, <span style="color: #BA2121">&quot;credits&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BA2121">&quot;license&quot;</span> <span style="color: #008000; font-weight: bold">for</span> more information<span style="color: #666666">.</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">docstrings</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> help(docstrings)
-<span style="color: #666666">&gt;&gt;&gt;</span> help(docstrings<span style="color: #666666">.</span>Dummy)
-<span style="color: #666666">&gt;&gt;&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">python</span>
+<span class="n">Python</span> <span class="mf">3.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="o">...</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">docstrings</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">docstrings</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">help</span><span class="p">(</span><span class="n">docstrings</span><span class="o">.</span><span class="n">Dummy</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>For more information just type <code>help()</code> into the prompt. This will turn on the interactive help. This functionality is used by Python programmers everywhere to help the user learn the API. If you need information on a class or function you have imported this will give you what you need.</p>
 <p>I have introduced this feature now instead of earlier for a few reasons. Before using the feature, understanding classes and docstrings will help you understand how to use this feature and implement it in your own projects. Therefore from here on out, I expect you to include clear documentation for all your modules, classes and functions.</p>

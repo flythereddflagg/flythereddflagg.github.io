@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -795,9 +795,9 @@ to understand something about the context and environment that we are working in
 <p>Once you have successfully opened your command line interface, you may begin the rest of the lesson. The object of this lesson is to practice and become familiar with each of the commands listed below. A summary table at the end of the lesson lists all the commands and what they do.</p>
 <h3 id="where-am-i-command-pwd">Where am I? (Command: <code>pwd</code>)</h3>
 <p>Begin by typing the following in your prompt and pressing Enter:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ <span style="color: #008000">pwd</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">pwd</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>'pwd' means 'print working directory'. This command will show you where you are
 in the directory structure of your computer. For example typing this command 
@@ -807,9 +807,9 @@ computer. Similarly in Windows, <code>pwd</code> returns <code>C:\Users\&lt;YOUR
 figure out where you are.</p>
 <h3 id="moving-around-command-cd">Moving Around (Command: <code>cd</code>)</h3>
 <p>Type the following into your terminal and press Enter:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ <span style="color: #008000">cd</span> ~
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> ~
 </pre></div>
-
+</td></tr></table>
 
 <p><code>cd</code> means 'change directory' and is one of the main ways you will navigate
 the command line. The normal usage of the "change directory" command is of the form: <code>$ cd "NAME OF DIRECTORY"</code> (e.g. <code>cd Documents</code>) but in this case we are using the "home" short cut (<code>~</code>).</p>
@@ -820,43 +820,45 @@ folder the <code>~</code> will get you there.</p>
 "Take me me to the home folder." Or "Change the working directory to the home folder".</p>
 <h3 id="working-in-folders-commands-ls-mkdir-and-touch-or-new-item">Working in folders (Commands: <code>ls</code>, <code>mkdir</code>, and <code>touch</code> or <code>New-Item</code>)</h3>
 <p>Now that you are in the 'home' folder, enter the following:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ ls
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ls
 </pre></div>
-
+</td></tr></table>
 
 <p><code>ls</code> is short hand for "list files and sub-folders in the current directory". 
 Upon entering this command you should see a list of files and directories in
 your home folder.</p>
 <p>Let's make a directory in your home folder. Enter the
 following:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ mkdir peas
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ mkdir peas
 </pre></div>
-
+</td></tr></table>
 
 <p>Now enter the <code>ls</code> command and you will notice a new folder in your home folder
 called 'peas' you made it with the 'make directory' command.</p>
 <p>Let's go in there!</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ <span style="color: #008000">cd</span> peas
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> peas
 $ ls
 $ 
 </pre></div>
-
+</td></tr></table>
 
 <p>If you type in the above commands in you will notice that nothing comes up!
 There is nothing in this folder yet so lets make a file to put in this folder! This is bit different for Windows so follow the Windows commands if you are using Windows.</p>
 <ul>
 <li><strong>Command for Mac OS X  or Linux</strong></li>
 </ul>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ touch carrots.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ touch carrots.py
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li><strong>Command for Windows</strong></li>
 </ul>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>&gt; <span style="color: #008000">New-Item</span> -type file carrots.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="n">-type</span> <span class="n">file</span> <span class="n">carrots</span><span class="p">.</span><span class="n">py</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>You have just created an empty file called <code>carrots.py</code>. The <code>.py</code> part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the <code>.py</code> extension but they are not fundamentally different from plain text files (i.e. files that end in <code>.txt</code>).</p>
 <p>Make another file called <code>cool_beans.txt</code> using the <code>touch</code> command (if you're on Mac OS X  or Linux) or <code>New-Item</code> command (if you're on windows). Go on try it yourself!</p>
@@ -867,39 +869,39 @@ program on your computer. Cool huh?</p>
 <p>Now that we know how to create files and folders we will now learn how to delete them.</p>
 <h3 id="deleting-files-and-folders-commands-rm-rmdir">Deleting Files and Folders (Commands: <code>rm</code>, <code>rmdir</code>)</h3>
 <p>Now that we know how to create files and folders we will now learn how to delete them. Let's delete your files by entering the command:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ rm carrots.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ rm carrots.py
 </pre></div>
-
+</td></tr></table>
 
 <p><code>rm</code> means "remove". Verify that this has been deleted with <code>ls</code>.</p>
 <p>Now let's delete the other file.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ rm cool_beans.txt
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ rm cool_beans.txt
 </pre></div>
-
+</td></tr></table>
 
 <p>When you finish this your directory should once again be empty. You can verify
 this with <code>ls</code>.</p>
 <p>Now...how do we get out of here? You may want to go directly to the home
 directory using</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ <span style="color: #008000">cd</span> ~
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> ~
 </pre></div>
-
+</td></tr></table>
 
 <p>but you may not always want to go all the way back to the home directory when
 all you really want is to go to the parent directory. I will now show you the
 way to do this. Simply enter:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ <span style="color: #008000">cd</span> ..
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> ..
 </pre></div>
-
+</td></tr></table>
 
 <p>This is a shorthand for, "change directory to the immediate parent directory"
 in a manner that is known as "relative path reference". In the command line,
 <code>.</code> or <code>./</code> is short hand for "the directory I'm in right now" and <code>..</code> or <code>../</code> means "the immediate parent folder of where I am right now".</p>
 <p>You can verify that you have indeed left the <code>peas</code> directory by using the <code>pwd</code>
 and <code>ls</code> commands. Now it is time to actually delete the directory.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ rmdir peas
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ rmdir peas
 </pre></div>
-
+</td></tr></table>
 
 <p>If you didn't have any errors doing this congratulations! You have finished the
 basic exercises for the command line!</p>

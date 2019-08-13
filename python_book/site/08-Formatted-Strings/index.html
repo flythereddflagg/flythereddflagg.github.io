@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -687,32 +687,63 @@
 
 <h1 id="8-formatted-strings">8 - Formatted Strings</h1>
 <p>As you use the <code>print</code> function there will be times when you want to "fill in the blank" and you can do this with format statements. Also we will introduce a few more features in addition to these.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># format_strings.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># format_strings.py</span>
 
-<span style="color: #408080; font-style: italic"># We can print a comma-separated list</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;How much will this cost?&quot;</span>, <span style="color: #666666">23.00</span>, <span style="color: #BA2121">&quot;dollars&quot;</span>)
+<span class="c1"># We can print a comma-separated list</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost?&quot;</span><span class="p">,</span> <span class="mf">23.00</span><span class="p">,</span> <span class="s2">&quot;dollars&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># this is more readable with a .format statement</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;How much will this cost? {} dollars.&quot;</span><span style="color: #666666">.</span>format(<span style="color: #666666">23.0</span>))
+<span class="c1"># this is more readable with a .format statement</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost? {} dollars.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">23.0</span><span class="p">))</span>
 
-<span style="color: #408080; font-style: italic"># The benefits of formatting become more apparent with more blanks to fill in.</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Prices for cheese: ${}/1 oz, ${}/5 oz, ${}/10 oz&quot;</span><span style="color: #666666">.</span>format(<span style="color: #666666">1.23</span>, <span style="color: #666666">5.35</span>, <span style="color: #666666">9.84</span>))
+<span class="c1"># The benefits of formatting become more apparent with more blanks to fill in.</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Prices for cheese: ${}/1 oz, ${}/5 oz, ${}/10 oz&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">5.35</span><span class="p">,</span> <span class="mf">9.84</span><span class="p">))</span>
 
-<span style="color: #408080; font-style: italic"># Change the formatting order with indices in the braces</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Would you like {2}, {0} or {1}?&quot;</span><span style="color: #666666">.</span>format(<span style="color: #BA2121">&quot;Brie&quot;</span>, <span style="color: #BA2121">&quot;Gouda&quot;</span>, <span style="color: #BA2121">&quot;Cheddar&quot;</span>))
+<span class="c1"># Change the formatting order with indices in the braces</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Would you like {2}, {0} or {1}?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span><span class="p">))</span>
 
-<span style="color: #408080; font-style: italic"># line up numbers and define decimal places with format codes</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;&quot;</span>
-<span style="color: #BA2121">Prices for cheese:</span>
-<span style="color: #BA2121">${:5.2f}/ 1 oz</span>
-<span style="color: #BA2121">${:5.2f}/ 5 oz</span>
-<span style="color: #BA2121">${:5.2f}/10 oz</span>
-<span style="color: #BA2121">&quot;&quot;&quot;</span><span style="color: #666666">.</span>format(<span style="color: #666666">1.23232</span>, <span style="color: #666666">5.3593</span>, <span style="color: #666666">9.84655</span>))
+<span class="c1"># line up numbers and define decimal places with format codes</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Prices for cheese:</span>
+<span class="s2">${:5.2f}/ 1 oz</span>
+<span class="s2">${:5.2f}/ 5 oz</span>
+<span class="s2">${:5.2f}/10 oz</span>
+<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23232</span><span class="p">,</span> <span class="mf">5.3593</span><span class="p">,</span> <span class="mf">9.84655</span><span class="p">))</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python format_strings.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python format_strings.py
 How much will this cost? 23.0 dollars
 How much will this cost? 23.0 dollars.
 Prices for cheese: $1.23/1 oz, $5.35/5 oz, $9.84/10 oz
@@ -725,7 +756,7 @@ $ 9.85/10 oz
 
 $
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="formatting-and-the-format-method">Formatting and the <code>.format()</code> method</h3>
 <p>We must understand a few things before understanding this code. </p>
@@ -769,19 +800,24 @@ $
 </ul>
 <p>Here we see that we are using format commands to organize data. The part that says <code>{:5.2f}</code> means to allow at least <code>5</code> spaces for the number to exist (fill any unused space with whitespace), round the number to <code>2</code> decimal places, and treat the number as a floating point number <code>f</code>.  We have omitted the index of the values for simplicity but they would be written on the left side of the colon (e.g. <code>{0:5.2f}</code>).</p>
 <p>There are other formatting commands other than this but this is a good start to using formatting that will come up again and again. To review:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># formatting cheat sheet</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;{&lt;format index or identifier&gt;:&lt;format commands&gt;}&quot;</span><span style="color: #666666">.</span>format(arguments))
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># formatting cheat sheet</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{&lt;format index or identifier&gt;:&lt;format commands&gt;}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="p">))</span>
 </pre></div>
-
+</td></tr></table>
 
 <h2 id="hone-your-skills">Hone Your Skills</h2>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;No. &quot;</span> <span style="color: #666666">*</span> <span style="color: #666666">3</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;No.&quot;</span>,<span style="color: #BA2121">&quot;No.&quot;</span>,<span style="color: #BA2121">&quot;No.&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;{0} {0} {0}&quot;</span><span style="color: #666666">.</span>format(<span style="color: #BA2121">&quot;No.&quot;</span>))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;{} {} {}&quot;</span><span style="color: #666666">.</span>format(<span style="color: #BA2121">&quot;No.&quot;</span>,<span style="color: #BA2121">&quot;No.&quot;</span>,<span style="color: #BA2121">&quot;No.&quot;</span>))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;{0} &quot;</span><span style="color: #666666">.</span>format(<span style="color: #BA2121">&quot;No.&quot;</span>) <span style="color: #666666">*</span> <span style="color: #666666">3</span>)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;No. &quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0} {0} {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{} {} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0} &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <ul>
 <li>Write the above code in a separate Python file and run it. As you will see, all 5 lines apparently do the same thing. Which way is the best way to do that and why? What are some potential advantages and drawbacks to each?</li>

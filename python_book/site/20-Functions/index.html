@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -699,69 +699,170 @@
 <li>Functions</li>
 </ul>
 <p>It is this last feature that we have not yet sufficiently explored. This next exercise will introduce what is perhaps the most powerful of the features we have explored so far.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># function_intro.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># function_intro.py</span>
 
-<span style="color: #408080; font-style: italic"># define a global variable</span>
-number_of_sandwiches <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+<span class="c1"># define a global variable</span>
+<span class="n">number_of_sandwiches</span> <span class="o">=</span> <span class="mi">0</span>
 
-<span style="color: #408080; font-style: italic"># &#39;def&#39; defines a function</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">count_sandwiches</span>():
-    <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">There are {number_of_sandwiches} sandchwiches.&quot;</span>) 
-
-
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">make_a_sandwich</span>():
-    <span style="color: #008000; font-weight: bold">global</span> number_of_sandwiches
-    number_of_sandwiches <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">A sandwich has been made.&quot;</span>)
-    <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;There are now {number_of_sandwiches} sandwiches.&quot;</span>)
+<span class="c1"># &#39;def&#39; defines a function</span>
+<span class="k">def</span> <span class="nf">count_sandwiches</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There are {number_of_sandwiches} sandchwiches.&quot;</span><span class="p">)</span> 
 
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">eat_a_sandwich</span>():
-    <span style="color: #008000; font-weight: bold">global</span> number_of_sandwiches
-    number_of_sandwiches <span style="color: #666666">-=</span> <span style="color: #666666">1</span>
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">You ate a sandwich.&quot;</span>)
-    <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;There are now {number_of_sandwiches} sandwiches.&quot;</span>)
+<span class="k">def</span> <span class="nf">make_a_sandwich</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">number_of_sandwiches</span>
+    <span class="n">number_of_sandwiches</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A sandwich has been made.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;There are now {number_of_sandwiches} sandwiches.&quot;</span><span class="p">)</span>
 
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">main</span>():
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    This is the main function of the program.</span>
-<span style="color: #BA2121; font-style: italic">    It will be the main entry point for all</span>
-<span style="color: #BA2121; font-style: italic">    the functions.</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    prompt <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;&quot;</span>
-<span style="color: #BA2121">Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,</span>
-<span style="color: #BA2121">&quot;count&quot; your sandchwiches or &quot;quit&quot;?</span>
-<span style="color: #BA2121">--&gt; &quot;&quot;&quot;</span>
-    running <span style="color: #666666">=</span> <span style="color: #008000">True</span>
+<span class="k">def</span> <span class="nf">eat_a_sandwich</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">number_of_sandwiches</span>
+    <span class="n">number_of_sandwiches</span> <span class="o">-=</span> <span class="mi">1</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">You ate a sandwich.&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;There are now {number_of_sandwiches} sandwiches.&quot;</span><span class="p">)</span>
 
-    <span style="color: #008000; font-weight: bold">while</span> running:
-        choice <span style="color: #666666">=</span> <span style="color: #008000">input</span>(prompt)
 
-        <span style="color: #008000; font-weight: bold">if</span> <span style="color: #BA2121">&quot;count&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> choice:
-            count_sandwiches()
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This is the main function of the program.</span>
+<span class="sd">    It will be the main entry point for all</span>
+<span class="sd">    the functions.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,</span>
+<span class="s2">&quot;count&quot; your sandchwiches or &quot;quit&quot;?</span>
+<span class="s2">--&gt; &quot;&quot;&quot;</span>
+    <span class="n">running</span> <span class="o">=</span> <span class="bp">True</span>
 
-        <span style="color: #008000; font-weight: bold">elif</span> <span style="color: #BA2121">&quot;make&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> choice:
-            make_a_sandwich()
+    <span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
 
-        <span style="color: #008000; font-weight: bold">elif</span> <span style="color: #BA2121">&quot;eat&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> choice:
-            <span style="color: #008000; font-weight: bold">if</span> number_of_sandwiches <span style="color: #666666">&gt;</span> <span style="color: #666666">0</span>:
-                eat_a_sandwich()
-            <span style="color: #008000; font-weight: bold">else</span>:
-                <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;There are no sandwiches to eat!&quot;</span>)
+        <span class="k">if</span> <span class="s2">&quot;count&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+            <span class="n">count_sandwiches</span><span class="p">()</span>
 
-        <span style="color: #008000; font-weight: bold">elif</span> <span style="color: #BA2121">&quot;quit&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> choice:
-            running <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+        <span class="k">elif</span> <span class="s2">&quot;make&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+            <span class="n">make_a_sandwich</span><span class="p">()</span>
 
-        <span style="color: #008000; font-weight: bold">else</span>:
-            <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;That isn&#39;t an option.&quot;</span>)
+        <span class="k">elif</span> <span class="s2">&quot;eat&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">number_of_sandwiches</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">eat_a_sandwich</span><span class="p">()</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="s2">&quot;There are no sandwiches to eat!&quot;</span><span class="p">)</span>
 
-main()
+        <span class="k">elif</span> <span class="s2">&quot;quit&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+            <span class="n">running</span> <span class="o">=</span> <span class="bp">False</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="s2">&quot;That isn&#39;t an option.&quot;</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python3 function_intro.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python3 function_intro.py
 
 Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
 &quot;count&quot; your sandchwiches or &quot;quit&quot;?
@@ -807,40 +908,57 @@ Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
 --&gt; quit
 $ 
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="functions">Functions</h3>
 <p>Upon finishing this lesson, you should have made your first functions!</p>
 <p>There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a single call to the function. We will explore the basic aspects in this and the next lessons.</p>
 <p>Functions follow the following syntax:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">function_name</span>(argument1, argument2 <span style="color: #666666">...</span>):
-    <span style="color: #666666">&lt;</span>statements <span style="color: #666666">...&gt;</span>
-    <span style="color: #666666">&lt;</span>statements <span style="color: #666666">...&gt;</span>
-    <span style="color: #666666">&lt;</span>statements <span style="color: #666666">...&gt;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span> <span class="o">...</span><span class="p">):</span>
+    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
+    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
 
-<span style="color: #408080; font-style: italic"># code continues unindented</span>
+<span class="c1"># code continues unindented</span>
 
-<span style="color: #408080; font-style: italic"># call the function using</span>
-function_name(argument1, argument2)
+<span class="c1"># call the function using</span>
+<span class="n">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># or if there are no arguments</span>
-function_name()
+<span class="c1"># or if there are no arguments</span>
+<span class="n">function_name</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by <code>&lt;statements ...&gt;</code>). The first example of this was in the <code>count_sandwiches()</code> function. As you saw while executing the script, it simply gets the value of <code>number_of_sandwiches</code> and prints the corresponding text.</p>
 <h3 id="scope">Scope</h3>
 <p>In the second and third functions,  <code>make_a_sandwich()</code> and <code>eat_a_sandwich()</code>, you see the statement <code>global number_of_sandwiches</code>. The word <code>global</code> is a keyword in Python that we have not talked about yet and relates to how Python manages variables and memory.</p>
 <p>Up to this, point we have used only global variables. That is, we have had variables that were visible to every part of the program. Consider the following code:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>egg <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Brown&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">change_color</span>():
-    egg <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;White&quot;</span>
+<span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
+    <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
 
-change_color()
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;The egg is {egg}&quot;</span>)
+<span class="n">change_color</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The egg is {egg}&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Based on this code, which will print?</p>
 <ul>
@@ -849,16 +967,23 @@ change_color()
 </ul>
 <p>If you try this out yourself, you will find that <code>The egg is Brown</code> is printed even though we changed the color of <code>egg</code> with <code>change_color()</code>. This is because of the scope of the <code>egg</code> variable. From Python's point of view, the <code>egg</code> defined on line 1 and the <code>egg</code> defined on line 4 inside the <code>change_color()</code> function are two different variables. The <code>egg</code> defined in the function only works inside the function and ceases to exist once the function ends.</p>
 <p>If we want the <code>egg</code>  on line 1 and the <code>egg</code> inside the function to be the same variable we need to tell Python to do that. We do this with the <code>global</code> key word as follows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>egg <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Brown&quot;</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">change_color</span>():
-    <span style="color: #008000; font-weight: bold">global</span> egg
-    egg <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;White&quot;</span>
+<span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">egg</span>
+    <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
 
-change_color()
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;The egg is {egg}&quot;</span>)
+<span class="n">change_color</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The egg is {egg}&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>The line <code>global egg</code> tells Python to treat the <code>egg</code> variable in the function as the same <code>egg</code> variable defined in the global scope. There are many possible scopes that could exist in a Python program but for now the function scope and the global scope are the most important.</p>
 <p>A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.</p>

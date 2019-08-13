@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -715,49 +715,98 @@
 
 <h1 id="22-try-except">22 - Try Except</h1>
 <p>Surely you have noticed by now that errors can be common as you program. Well they are more than common. They are practically inevitable. In this lesson we will explore how you can "try" some code without letting it break your program.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># try_except.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># try_except.py</span>
 
-month_names <span style="color: #666666">=</span> [
-    <span style="color: #BA2121">&quot;January&quot;</span>,
-    <span style="color: #BA2121">&quot;February&quot;</span>,
-    <span style="color: #BA2121">&quot;March&quot;</span>,
-    <span style="color: #BA2121">&quot;April&quot;</span>,
-    <span style="color: #BA2121">&quot;May&quot;</span>,
-    <span style="color: #BA2121">&quot;June&quot;</span>,
-    <span style="color: #BA2121">&quot;July&quot;</span>,
-    <span style="color: #BA2121">&quot;August&quot;</span>,
-    <span style="color: #BA2121">&quot;September&quot;</span>,
-    <span style="color: #BA2121">&quot;October&quot;</span>,
-    <span style="color: #BA2121">&quot;November&quot;</span>,
-    <span style="color: #BA2121">&quot;December&quot;</span>]
+<span class="n">month_names</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;January&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;February&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;March&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;April&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;May&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;June&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;July&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;August&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;September&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;October&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;November&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;December&quot;</span><span class="p">]</span>
 
-running <span style="color: #666666">=</span> <span style="color: #008000">True</span>
+<span class="n">running</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span style="color: #008000; font-weight: bold">while</span> running:
-    date_string <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter a date of the format: MM/DD/YYYY</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">--&gt; &quot;</span>)
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="n">date_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a date of the format: MM/DD/YYYY</span><span class="se">\n</span><span class="s2">--&gt; &quot;</span><span class="p">)</span>
 
-    <span style="color: #008000; font-weight: bold">try</span>:
-        month, day, year <span style="color: #666666">=</span> date_string<span style="color: #666666">.</span>split(<span style="color: #BA2121">&quot;/&quot;</span>)
-        month, day, year <span style="color: #666666">=</span> <span style="color: #008000">int</span>(month), <span style="color: #008000">int</span>(day), <span style="color: #008000">int</span>(year)
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="n">date_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+        <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">month</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">day</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
 
-        <span style="color: #008000; font-weight: bold">if</span> day <span style="color: #666666">&lt;</span> <span style="color: #666666">1</span> <span style="color: #AA22FF; font-weight: bold">or</span> day <span style="color: #666666">&gt;</span> <span style="color: #666666">31</span>:
-            <span style="color: #008000; font-weight: bold">raise</span> <span style="color: #D2413A; font-weight: bold">Exception</span>(<span style="color: #BA2121">&quot;Invalid day value.&quot;</span>)
+        <span class="k">if</span> <span class="n">day</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">day</span> <span class="o">&gt;</span> <span class="mi">31</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Invalid day value.&quot;</span><span class="p">)</span>
 
-        era <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;B.C.&quot;</span> <span style="color: #008000; font-weight: bold">if</span> year <span style="color: #666666">&lt;</span> <span style="color: #666666">0</span> <span style="color: #008000; font-weight: bold">else</span> <span style="color: #BA2121">&quot;A.D.&quot;</span>
-        year <span style="color: #666666">=</span> <span style="color: #008000">abs</span>(year)
+        <span class="n">era</span> <span class="o">=</span> <span class="s2">&quot;B.C.&quot;</span> <span class="k">if</span> <span class="n">year</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;A.D.&quot;</span>
+        <span class="n">year</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
 
-        <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;The date you entered was {month_names[month - 1]}&quot;</span>\
-              <span style="color: #BA2121">&quot; {day} in the year {year} {era}&quot;</span>)
-        running <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The date you entered was {month_names[month - 1]}&quot;</span>\
+              <span class="s2">&quot; {day} in the year {year} {era}&quot;</span><span class="p">)</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="bp">False</span>
 
-    <span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">Exception</span> <span style="color: #008000; font-weight: bold">as</span> e:
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Invalid Date detected!&quot;</span>)
-        <span style="color: #008000; font-weight: bold">print</span>(e)
+    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Invalid Date detected!&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python try_except.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python try_except.py
 Enter a date of the format: MM/DD/YYYY
 --&gt; 100/10/1230
 Invalid Date detected!
@@ -771,33 +820,47 @@ Enter a date of the format: MM/DD/YYYY
 The date you entered was December 10 in the year 100 B.C.
 $
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="the-try-except-statement">The <code>try-except</code> Statement</h3>
 <p>Most of the time time in programming, you, the programmer, cannot guarantee that an error will not occur or an exception will not be thrown. You could try to prevent every problem with a series of if statements but   that becomes cumbersome and is difficult to cover every eventuality.</p>
 <p>Python deals with this problem with <code>try-except</code> statements. A <code>try</code> statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the <code>try</code> block stops and the <code>except</code> block is executed. If no exceptions are "raised" the the except block is skipped. In <code>try_except.py</code>, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">try</span>:
-    <span style="color: #408080; font-style: italic"># Block of code you expect may</span>
-    <span style="color: #408080; font-style: italic"># raise an exception</span>
-<span style="color: #008000; font-weight: bold">except</span>:
-    <span style="color: #408080; font-style: italic"># this block runs if an exception is raised</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Block of code you expect may</span>
+    <span class="c1"># raise an exception</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="c1"># this block runs if an exception is raised</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>You will notice that we added a part to the except line that reads <code>except Exception as e:</code>. This allows us to capture data about the Exception that was thrown but the <code>Exception</code> covers all exceptions that can be thrown in Python. If you wish to catch a particular exception or multiple types of exceptions you may do so with multiple <code>except</code> blocks as follows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">try</span>:
-    <span style="color: #408080; font-style: italic"># Block of code you expect may</span>
-    <span style="color: #408080; font-style: italic"># raise an exception</span>
-<span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">ZeroDivisionError</span>:
-    <span style="color: #408080; font-style: italic"># this block runs if the </span>
-    <span style="color: #408080; font-style: italic"># try block tries to divide by 0</span>
-<span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">TypeError</span>:
-    <span style="color: #408080; font-style: italic"># this block runs if </span>
-    <span style="color: #408080; font-style: italic"># a type error is raised</span>
-<span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">Exception</span> <span style="color: #008000; font-weight: bold">as</span> e:
-    <span style="color: #408080; font-style: italic"># this block runs for all other exceptions</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="c1"># Block of code you expect may</span>
+    <span class="c1"># raise an exception</span>
+<span class="k">except</span> <span class="ne">ZeroDivisionError</span><span class="p">:</span>
+    <span class="c1"># this block runs if the </span>
+    <span class="c1"># try block tries to divide by 0</span>
+<span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+    <span class="c1"># this block runs if </span>
+    <span class="c1"># a type error is raised</span>
+<span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="c1"># this block runs for all other exceptions</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Any exception in Python can be handled this way. When writing these statements one should always order them from specific errors to more general errors. This is because Python will execute the first valid <code>except</code> block it comes to. Therefore if you begin your list of except blocks with <code>except Exception:</code> no other <code>except</code> block will ever run.</p>
 <p>These statements allow for writing more secure code that can handle any amount of garbage that is fed to it. Use these judiciously as overuse can clutter your code and silence bugs and issues in your programs. </p>
@@ -805,10 +868,11 @@ $
 <p>We saw in <code>try_except.py</code> that we can force an exception to be raised with the <code>raise</code> statement. This is a powerful tool as it allows us to throw exceptions with customized messages. These can be very useful in debugging especially if we are careful about where we raise errors and what message we send. In our case we just wanted to send a general error to the user so a general <code>Exception</code> worked just fine here.</p>
 <h3 id="line-continuation">Line Continuation</h3>
 <p>You may have noticed the snippet of code from <code>try_except.py</code>:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;The date you entered was {month_names[month - 1]}&quot;</span>\
-              f<span style="color: #BA2121">&quot; {day} in the year {year} {era}&quot;</span>)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The date you entered was {month_names[month - 1]}&quot;</span>\
+              <span class="n">f</span><span class="s2">&quot; {day} in the year {year} {era}&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>The backslash <code>\</code> at the end of the line is called a "line continuation character" and allows us to split long lines of code into multiple lines that are interpreted as one line of code. These are useful when you are trying to limit the length of your lines for ease of reading.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>

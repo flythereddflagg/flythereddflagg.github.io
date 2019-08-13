@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -715,59 +715,113 @@
 
 <h1 id="21-more-functions">21 - More Functions</h1>
 <p>There are three more concepts tied to functions that we must understand before moving on. They are each demonstrated in the following exercise:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># more_functions.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># more_functions.py</span>
 
-<span style="color: #408080; font-style: italic"># params and returns</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">quadratic_formula</span>(a, b, c):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Calculates the roots of f(x) given a, b, c where</span>
-<span style="color: #BA2121; font-style: italic">    f(x) = a * x**2 + b * x + c</span>
-<span style="color: #BA2121; font-style: italic">    Returns the solution as a tuple.</span>
-<span style="color: #BA2121; font-style: italic">    Returns None if the solutions are imaginary </span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    discriminant <span style="color: #666666">=</span> b<span style="color: #666666">**2</span> <span style="color: #666666">-</span> <span style="color: #666666">4*</span>a<span style="color: #666666">*</span>c
+<span class="c1"># params and returns</span>
+<span class="k">def</span> <span class="nf">quadratic_formula</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Calculates the roots of f(x) given a, b, c where</span>
+<span class="sd">    f(x) = a * x**2 + b * x + c</span>
+<span class="sd">    Returns the solution as a tuple.</span>
+<span class="sd">    Returns None if the solutions are imaginary </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">discriminant</span> <span class="o">=</span> <span class="n">b</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="mi">4</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">c</span>
 
-    <span style="color: #008000; font-weight: bold">if</span> discriminant <span style="color: #666666">&lt;</span> <span style="color: #666666">0</span>:
-        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #008000">None</span>
+    <span class="k">if</span> <span class="n">discriminant</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">None</span>
 
-    root1 <span style="color: #666666">=</span> (<span style="color: #666666">-</span>b <span style="color: #666666">-</span> discriminant<span style="color: #666666">**0.5</span>) <span style="color: #666666">/</span> <span style="color: #666666">2</span> <span style="color: #666666">/</span> a
-    root2 <span style="color: #666666">=</span> (<span style="color: #666666">-</span>b <span style="color: #666666">+</span> discriminant<span style="color: #666666">**0.5</span>) <span style="color: #666666">/</span> <span style="color: #666666">2</span> <span style="color: #666666">/</span> a
+    <span class="n">root1</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">-</span> <span class="n">discriminant</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">a</span>
+    <span class="n">root2</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="n">b</span> <span class="o">+</span> <span class="n">discriminant</span><span class="o">**</span><span class="mf">0.5</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">a</span>
 
-    <span style="color: #008000; font-weight: bold">return</span> root1, root2
-
-
-imaginary_solution <span style="color: #666666">=</span> quadratic_formula(<span style="color: #666666">1</span>, <span style="color: #666666">2</span>, <span style="color: #666666">3</span>)
-real_solution <span style="color: #666666">=</span> quadratic_formula(<span style="color: #666666">1</span>, <span style="color: #666666">-2</span>, <span style="color: #666666">-3</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Imaginary Solution is:&quot;</span>, imaginary_solution)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Real Solution is:&quot;</span>,      real_solution)
+    <span class="k">return</span> <span class="n">root1</span><span class="p">,</span> <span class="n">root2</span>
 
 
-<span style="color: #408080; font-style: italic"># default params</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">print_a_number</span>(number<span style="color: #666666">=1</span>):
-    <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;Your number is: {number}&quot;</span>)  
+<span class="n">imaginary_solution</span> <span class="o">=</span> <span class="n">quadratic_formula</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">real_solution</span> <span class="o">=</span> <span class="n">quadratic_formula</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">3</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Imaginary Solution is:&quot;</span><span class="p">,</span> <span class="n">imaginary_solution</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Real Solution is:&quot;</span><span class="p">,</span>      <span class="n">real_solution</span><span class="p">)</span>
 
-print_a_number(<span style="color: #666666">3</span>)
-print_a_number()
 
-<span style="color: #408080; font-style: italic"># recursion</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">factorial</span>(number):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Returns the factorial of a number</span>
-<span style="color: #BA2121; font-style: italic">    It first turns it into an integer</span>
-<span style="color: #BA2121; font-style: italic">    before calculating its factorial</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    number <span style="color: #666666">=</span> <span style="color: #008000">abs</span>(<span style="color: #008000">int</span>(number))
-    <span style="color: #008000; font-weight: bold">if</span> number <span style="color: #666666">&lt;=</span> <span style="color: #666666">0</span>:
-        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">1</span>
-    <span style="color: #008000; font-weight: bold">return</span> number <span style="color: #666666">*</span> factorial(number <span style="color: #666666">-</span> <span style="color: #666666">1</span>)
+<span class="c1"># default params</span>
+<span class="k">def</span> <span class="nf">print_a_number</span><span class="p">(</span><span class="n">number</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Your number is: {number}&quot;</span><span class="p">)</span>  
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;4!   =&quot;</span>, factorial(<span style="color: #666666">4</span>))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;2.5! =&quot;</span>, factorial(<span style="color: #666666">2.5</span>))
+<span class="n">print_a_number</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">print_a_number</span><span class="p">()</span>
+
+<span class="c1"># recursion</span>
+<span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">number</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the factorial of a number</span>
+<span class="sd">    It first turns it into an integer</span>
+<span class="sd">    before calculating its factorial</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">number</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">number</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;4!   =&quot;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;2.5! =&quot;</span><span class="p">,</span> <span class="n">factorial</span><span class="p">(</span><span class="mf">2.5</span><span class="p">))</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ more_functions.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ more_functions.py
 Imaginary Solution is: None
 Real Solution is: (-1.0, 3.0)
 Your number is: 3
@@ -776,18 +830,23 @@ Your number is: 1
 2.5! = 2
 $
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="parameters-and-arguments">Parameters and Arguments</h3>
 <p>Parameters are related to arguments. Many times these two terms are used interchangeably. To clarify, a parameter is the variable name that is used in the definition of a function. Whereas, an argument is what actually gets passed into the function call as seen here:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">function_name</span>(parameter):
-    parameter <span style="color: #666666">+=</span> <span style="color: #666666">3</span>
-    <span style="color: #008000; font-weight: bold">print</span>(parameter)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">parameter</span><span class="p">):</span>
+    <span class="n">parameter</span> <span class="o">+=</span> <span class="mi">3</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">parameter</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># now we call the function</span>
-function_name(argument)
+<span class="c1"># now we call the function</span>
+<span class="n">function_name</span><span class="p">(</span><span class="n">argument</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Following this logic, the argument replaces the parameter while the function code executes. You have worked with arguments since the first Python program you ran. The simple statement <code>print("Hello World!")</code> is just you calling the Python function named <code>print</code> and passing in the string <code>"Hello World!"</code> as an argument. Somewhere in the Python core code, there is a <code>print</code> function defined in a similar manner that executes all the details of printing text out to the command line.</p>
 <h3 id="default-values-for-parameters">Default Values for Parameters</h3>
@@ -821,15 +880,16 @@ function_name(argument)
 <p>Return statements are crucial for effective functions and it is a good idea to experiment with what you can return in a function. </p>
 <h3 id="recursion">Recursion</h3>
 <p>Recursion is the idea that a function or some process can reference itself. A great explanation of recursion as a concept can be found on <a href="https://en.wikipedia.org/wiki/Recursion">Wikipedia</a>. We saw this with the factorial example. In mathematics, a factorial is a number being multiplied by all the positive integers below it and is symbolized by an exclamtion mark. So the factorial of 4 = 4! = 4 * 3 * 2 * 1. In this case we could do a loop to accomplish this but to demonstrate this principle we can do it with recursion. We set up a base case to end the recursion:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">if</span> number <span style="color: #666666">&lt;=</span> <span style="color: #666666">0</span>:
-        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">1</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="k">if</span> <span class="n">number</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="mi">1</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>Then we have the function call itself with a small adjustment:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>    <span style="color: #008000; font-weight: bold">return</span> number <span style="color: #666666">*</span> factorial(number <span style="color: #666666">-</span> <span style="color: #666666">1</span>)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>    <span class="k">return</span> <span class="n">number</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">number</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>And the function starts over again. This continues until the base case has been reached.</p>
 <h2 id="hone-your-skills">Hone your Skills</h2>

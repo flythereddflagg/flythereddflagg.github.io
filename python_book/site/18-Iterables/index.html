@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -747,113 +747,256 @@
 <li>Iterable: An object capable of returning its members one at a time.</li>
 </ul>
 <p>Iterables are a powerful way to structure data. In this lesson, we will introduce a common type of iterable called sequenced types and explore how to use them. Note that there are many iterable types that we will not cover here but these (the sequenced types) are the most common. This is the longest exercise you've done so far so don't get complacent. Make sure that it is exactly as it appears here.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># iterables.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+ 12
+ 13
+ 14
+ 15
+ 16
+ 17
+ 18
+ 19
+ 20
+ 21
+ 22
+ 23
+ 24
+ 25
+ 26
+ 27
+ 28
+ 29
+ 30
+ 31
+ 32
+ 33
+ 34
+ 35
+ 36
+ 37
+ 38
+ 39
+ 40
+ 41
+ 42
+ 43
+ 44
+ 45
+ 46
+ 47
+ 48
+ 49
+ 50
+ 51
+ 52
+ 53
+ 54
+ 55
+ 56
+ 57
+ 58
+ 59
+ 60
+ 61
+ 62
+ 63
+ 64
+ 65
+ 66
+ 67
+ 68
+ 69
+ 70
+ 71
+ 72
+ 73
+ 74
+ 75
+ 76
+ 77
+ 78
+ 79
+ 80
+ 81
+ 82
+ 83
+ 84
+ 85
+ 86
+ 87
+ 88
+ 89
+ 90
+ 91
+ 92
+ 93
+ 94
+ 95
+ 96
+ 97
+ 98
+ 99
+100
+101
+102</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># iterables.py</span>
 
-<span style="color: #408080; font-style: italic"># --- strings --- </span>
-example_string <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Hello World!&quot;</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;A string:&quot;</span>, example_string)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>) <span style="color: #408080; font-style: italic"># white space to make output readable</span>
+<span class="c1"># --- strings --- </span>
+<span class="n">example_string</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A string:&quot;</span><span class="p">,</span> <span class="n">example_string</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># white space to make output readable</span>
 
-<span style="color: #408080; font-style: italic"># --- ranges ---</span>
-example_range <span style="color: #666666">=</span> <span style="color: #008000">range</span>(<span style="color: #666666">5</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;A range:&quot;</span>, example_range)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="c1"># --- ranges ---</span>
+<span class="n">example_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A range:&quot;</span><span class="p">,</span> <span class="n">example_range</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># --- lists ---</span>
-<span style="color: #408080; font-style: italic"># brackets initialize a list</span>
-example_list <span style="color: #666666">=</span> [<span style="color: #BA2121">&quot;tea&quot;</span>, <span style="color: #BA2121">&quot;biscuts&quot;</span>, <span style="color: #BA2121">&quot;crackers&quot;</span>, <span style="color: #BA2121">&quot;kale&quot;</span>]
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;A list:&quot;</span>, example_list)
+<span class="c1"># --- lists ---</span>
+<span class="c1"># brackets initialize a list</span>
+<span class="n">example_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tea&quot;</span><span class="p">,</span> <span class="s2">&quot;biscuts&quot;</span><span class="p">,</span> <span class="s2">&quot;crackers&quot;</span><span class="p">,</span> <span class="s2">&quot;kale&quot;</span><span class="p">]</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A list:&quot;</span><span class="p">,</span> <span class="n">example_list</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># lists are mutable</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;adding cheese to the list...&quot;</span>)
-example_list<span style="color: #666666">.</span>append(<span style="color: #BA2121">&quot;cheese&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(example_list)
+<span class="c1"># lists are mutable</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;adding cheese to the list...&quot;</span><span class="p">)</span>
+<span class="n">example_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;cheese&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;changing the first element to &#39;Lemon Tea&#39;...&quot;</span>)
-example_list[<span style="color: #666666">0</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Lemon Tea&quot;</span>
-<span style="color: #008000; font-weight: bold">print</span>(example_list)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;changing the first element to &#39;Lemon Tea&#39;...&quot;</span><span class="p">)</span>
+<span class="n">example_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Lemon Tea&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;popping off the last element...&quot;</span>)
-example_list<span style="color: #666666">.</span>pop()
-<span style="color: #008000; font-weight: bold">print</span>(example_list)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;popping off the last element...&quot;</span><span class="p">)</span>
+<span class="n">example_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># --- tuples ---</span>
-<span style="color: #408080; font-style: italic"># parethesis define a tuple</span>
-example_tuple <span style="color: #666666">=</span> (<span style="color: #BA2121">&quot;tea&quot;</span>, <span style="color: #BA2121">&quot;biscuts&quot;</span>, <span style="color: #BA2121">&quot;crackers&quot;</span>, <span style="color: #BA2121">&quot;kale&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;A tuple:&quot;</span>, example_tuple)
+<span class="c1"># --- tuples ---</span>
+<span class="c1"># parethesis define a tuple</span>
+<span class="n">example_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;tea&quot;</span><span class="p">,</span> <span class="s2">&quot;biscuts&quot;</span><span class="p">,</span> <span class="s2">&quot;crackers&quot;</span><span class="p">,</span> <span class="s2">&quot;kale&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A tuple:&quot;</span><span class="p">,</span> <span class="n">example_tuple</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># a comma-separated list can also define a tuple</span>
-example_tuple <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;biscuts&quot;</span>, <span style="color: #BA2121">&quot;crackers&quot;</span>,  <span style="color: #BA2121">&quot;kale&quot;</span>, <span style="color: #BA2121">&quot;tea&quot;</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Another tuple:&quot;</span>, example_tuple)
+<span class="c1"># a comma-separated list can also define a tuple</span>
+<span class="n">example_tuple</span> <span class="o">=</span> <span class="s2">&quot;biscuts&quot;</span><span class="p">,</span> <span class="s2">&quot;crackers&quot;</span><span class="p">,</span>  <span class="s2">&quot;kale&quot;</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Another tuple:&quot;</span><span class="p">,</span> <span class="n">example_tuple</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># tuples are immutable</span>
-<span style="color: #408080; font-style: italic"># notice how this throws an error:</span>
-<span style="color: #408080; font-style: italic"># comment it out after you have looked at the error</span>
-<span style="color: #408080; font-style: italic"># example_tuple[-1] = &quot;Lemon tea&quot; # throws an error</span>
+<span class="c1"># tuples are immutable</span>
+<span class="c1"># notice how this throws an error:</span>
+<span class="c1"># comment it out after you have looked at the error</span>
+<span class="c1"># example_tuple[-1] = &quot;Lemon tea&quot; # throws an error</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># --- Common among iterables ---</span>
+<span class="c1"># --- Common among iterables ---</span>
 
-<span style="color: #408080; font-style: italic"># all iterables are subscriptable and sliceable</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;The last element and&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;The first two elements of each iterable:&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Last:&quot;</span>,     example_string[<span style="color: #666666">-1</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;First two:&quot;</span>,example_string[:<span style="color: #666666">2</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Last:&quot;</span>,     example_range[<span style="color: #666666">-1</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;First two:&quot;</span>,example_range[:<span style="color: #666666">2</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Last:&quot;</span>,     example_list[<span style="color: #666666">-1</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;First two:&quot;</span>,example_list[:<span style="color: #666666">2</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Last:&quot;</span>,     example_tuple[<span style="color: #666666">-1</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;First two:&quot;</span>,example_tuple[:<span style="color: #666666">2</span>])
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="c1"># all iterables are subscriptable and sliceable</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;The last element and&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;The first two elements of each iterable:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_string</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_range</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_range</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_list</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_tuple</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_tuple</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 
-<span style="color: #408080; font-style: italic"># all iterables have a length (len())</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;length of string: &quot;</span>, <span style="color: #008000">len</span>(example_string))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;length of range:  &quot;</span>, <span style="color: #008000">len</span>(example_range))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;length of list:   &quot;</span>, <span style="color: #008000">len</span>(example_list))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;length of tuple:  &quot;</span>, <span style="color: #008000">len</span>(example_tuple))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="c1"># all iterables have a length (len())</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of string: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_string</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of range:  &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_range</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of list:   &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_list</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of tuple:  &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_tuple</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># all iterables can be used to make for-loops</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;For-loop examples of each:&quot;</span>)
-<span style="color: #008000; font-weight: bold">for</span> character <span style="color: #AA22FF; font-weight: bold">in</span> example_string:
-    <span style="color: #008000; font-weight: bold">print</span>(character, end<span style="color: #666666">=</span><span style="color: #BA2121">&quot; &quot;</span>)
+<span class="c1"># all iterables can be used to make for-loops</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;For-loop examples of each:&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">example_string</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">for</span> index_value <span style="color: #AA22FF; font-weight: bold">in</span> example_range:
-    <span style="color: #008000; font-weight: bold">print</span>(index_value, end<span style="color: #666666">=</span><span style="color: #BA2121">&quot; &quot;</span>)
+<span class="k">for</span> <span class="n">index_value</span> <span class="ow">in</span> <span class="n">example_range</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">index_value</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)   
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>   
 
-<span style="color: #008000; font-weight: bold">for</span> element <span style="color: #AA22FF; font-weight: bold">in</span> example_list:
-    <span style="color: #008000; font-weight: bold">print</span>(element, end<span style="color: #666666">=</span><span style="color: #BA2121">&quot; &quot;</span>)
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">example_list</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">for</span> variable <span style="color: #AA22FF; font-weight: bold">in</span> example_tuple:
-    <span style="color: #008000; font-weight: bold">print</span>(variable, end<span style="color: #666666">=</span><span style="color: #BA2121">&quot; &quot;</span>)
+<span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">example_tuple</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># you can check if something is &#39;in&#39;</span>
-<span style="color: #408080; font-style: italic"># a sequence iterable</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;&quot;Hello&quot; in example_string:&#39;</span>, 
-      <span style="color: #BA2121">&quot;Hello&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> example_string)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;3 in example_range:&#39;</span>, 
-      <span style="color: #666666">3</span> <span style="color: #AA22FF; font-weight: bold">in</span> example_range)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;&quot;kale&quot; in example_list:&#39;</span>, 
-      <span style="color: #BA2121">&quot;kale&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> example_list)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;&quot;potatoes&quot; in example_tuple:&#39;</span>,
-      <span style="color: #BA2121">&quot;potatoes&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> example_tuple)
+<span class="c1"># you can check if something is &#39;in&#39;</span>
+<span class="c1"># a sequence iterable</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&quot;Hello&quot; in example_string:&#39;</span><span class="p">,</span> 
+      <span class="s2">&quot;Hello&quot;</span> <span class="ow">in</span> <span class="n">example_string</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 in example_range:&#39;</span><span class="p">,</span> 
+      <span class="mi">3</span> <span class="ow">in</span> <span class="n">example_range</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&quot;kale&quot; in example_list:&#39;</span><span class="p">,</span> 
+      <span class="s2">&quot;kale&quot;</span> <span class="ow">in</span> <span class="n">example_list</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&quot;potatoes&quot; in example_tuple:&#39;</span><span class="p">,</span>
+      <span class="s2">&quot;potatoes&quot;</span> <span class="ow">in</span> <span class="n">example_tuple</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python iterables.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python iterables.py
 A string: Hello World!
 
 A range: range(0, 5)
@@ -897,7 +1040,7 @@ biscuts crackers kale tea
 &quot;potatoes&quot; in example_tuple: False
 $
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>What is happening here?</strong></p>
 <p>We have just dumped a lot of information on you. This is probably the longest script you've written yet. We will go through each step by step. Lets start with each type of iterable.</p>
@@ -913,12 +1056,15 @@ $
 <p>or it could be a bunch of different types of objects:</p>
 <p><code>objects = [12, 23.5, "Nougat"]</code></p>
 <p>The point is, lists can do many things and can be the structure for many types of data. A common use of lists for example is to define matrices for math:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>matrix_a <span style="color: #666666">=</span> [
-    [<span style="color: #666666">1</span>,<span style="color: #666666">2</span>,<span style="color: #666666">3</span>],
-    [<span style="color: #666666">4</span>,<span style="color: #666666">5</span>,<span style="color: #666666">6</span>],
-    [<span style="color: #666666">7</span>,<span style="color: #666666">8</span>,<span style="color: #666666">9</span>]]
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">matrix_a</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>which is just a lists of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.</p>
 <h3 id="tuple">Tuple</h3>

@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -703,65 +703,178 @@
 <p>This is the last concept we will cover that I would consider the "basics" of Python and programming in general. Up to now, we have been using only the built-in functionality of Python. This is, in fact, a very limited view of what Python can do. To get the full power and utility of Python, we can use libraries of code that other programmers have written to do all sorts of complex and powerful tasks.</p>
 <p>In this lesson we will introduce many different tools that you may want to use. While going through the exercises in this lesson do not worry about learning everything there is to know about each set of tools. The point of this lesson is to get you familiar with how to get what you need for programming.</p>
 <p>With that said let's start!</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># import_practice.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># import_practice.py</span>
 
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">os</span>
-<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">math</span> <span style="color: #008000; font-weight: bold">import</span> sin, log, pi
-<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">random</span> <span style="color: #008000; font-weight: bold">import</span> random
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">csv</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">datetime</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">dt</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span><span class="p">,</span> <span class="n">log</span><span class="p">,</span> <span class="n">pi</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">random</span>
+<span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="kn">as</span> <span class="nn">dt</span>
 
-<span style="color: #408080; font-style: italic"># os example</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Python doing: ls&quot;</span>)
-<span style="color: #008000; font-weight: bold">for</span> root, dirs, files <span style="color: #AA22FF; font-weight: bold">in</span> os<span style="color: #666666">.</span>walk(<span style="color: #BA2121">&quot;.&quot;</span>):
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;-&quot;</span> <span style="color: #666666">*</span> <span style="color: #666666">20</span>)
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Folder Name:&quot;</span>, root, <span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">----&quot;</span>)
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Sub-folders:&quot;</span>)
-    <span style="color: #008000; font-weight: bold">for</span> directory <span style="color: #AA22FF; font-weight: bold">in</span> dirs:
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\t</span><span style="color: #BA2121">&quot;</span>, directory)
+<span class="c1"># os example</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Python doing: ls&quot;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">dirs</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Folder Name:&quot;</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">----&quot;</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Sub-folders:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">directory</span> <span class="ow">in</span> <span class="n">dirs</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">directory</span><span class="p">)</span>
 
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;---</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">Files:&quot;</span>)
-    <span style="color: #008000; font-weight: bold">for</span> <span style="color: #008000">file</span> <span style="color: #AA22FF; font-weight: bold">in</span> files:
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\t</span><span style="color: #BA2121">&quot;</span>, <span style="color: #008000">file</span>)
-    <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;---</span><span class="se">\n</span><span class="s2">Files:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="nb">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">,</span> <span class="nb">file</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;-&quot;</span> <span style="color: #666666">*</span> <span style="color: #666666">20</span>)
-
-
-<span style="color: #408080; font-style: italic"># math example</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;sin(</span><span style="color: #BB6622; font-weight: bold">\u03C0</span><span style="color: #BA2121">/2) =&quot;</span>, sin(pi<span style="color: #666666">/2</span>))
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;ln(23)   =&quot;</span>, <span style="color: #008000">round</span>(log(<span style="color: #666666">24</span>), <span style="color: #666666">2</span>))
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">20</span><span class="p">)</span>
 
 
-<span style="color: #408080; font-style: italic"># random example</span>
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">gen_random_matrix</span>(size):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Returns a 2D matrix (a.k.a. a list of lists)</span>
-<span style="color: #BA2121; font-style: italic">    of shape &quot;size X size&quot; with elements generated </span>
-<span style="color: #BA2121; font-style: italic">    having random values between 0 and 1</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    matrix <span style="color: #666666">=</span> []
-    <span style="color: #008000; font-weight: bold">for</span> row_index <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(size):
-        row <span style="color: #666666">=</span> []
-        <span style="color: #008000; font-weight: bold">for</span> element <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(size):
-            row<span style="color: #666666">.</span>append(random())
-        matrix<span style="color: #666666">.</span>append(row)
-    <span style="color: #008000; font-weight: bold">return</span> matrix
+<span class="c1"># math example</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;sin(</span><span class="se">\u03C0</span><span class="s2">/2) =&quot;</span><span class="p">,</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">))</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;ln(23)   =&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="mi">24</span><span class="p">),</span> <span class="mi">2</span><span class="p">))</span>
 
 
-<span style="color: #408080; font-style: italic"># csv example</span>
-<span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(<span style="color: #BA2121">&quot;data.csv&quot;</span>, <span style="color: #BA2121">&#39;w&#39;</span>, newline<span style="color: #666666">=</span><span style="color: #BA2121">&quot;&quot;</span>) <span style="color: #008000; font-weight: bold">as</span> f:
-    writer <span style="color: #666666">=</span> csv<span style="color: #666666">.</span>writer(f)
-    writer<span style="color: #666666">.</span>writerows(gen_random_matrix(<span style="color: #666666">3</span>))
+<span class="c1"># random example</span>
+<span class="k">def</span> <span class="nf">gen_random_matrix</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a 2D matrix (a.k.a. a list of lists)</span>
+<span class="sd">    of shape &quot;size X size&quot; with elements generated </span>
+<span class="sd">    having random values between 0 and 1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+            <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="p">())</span>
+        <span class="n">matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">matrix</span>
 
 
-<span style="color: #408080; font-style: italic"># datetime example</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">The exact date and time is:&quot;</span>, dt<span style="color: #666666">.</span>datetime<span style="color: #666666">.</span>now())
+<span class="c1"># csv example</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;data.csv&quot;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="n">writer</span><span class="o">.</span><span class="n">writerows</span><span class="p">(</span><span class="n">gen_random_matrix</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+
+
+<span class="c1"># datetime example</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The exact date and time is:&quot;</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python import_practice.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python import_practice.py
 Python doing: ls
 --------------------
 Folder Name: .
@@ -823,7 +936,7 @@ ln(23)   = 3.18
 The exact date and time is: 2019-01-05 12:49:54.332969
 $
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="imports">Imports</h3>
 <p>The main concept we introduced in this exercise is that of an <code>import</code> statement. These statements are how we use code from another script written in Python. The syntax of an import statement follows two basic forms:</p>
@@ -864,12 +977,15 @@ $
 <p>Any package in the Python Standard Library is written and endorsed by the creators and maintainers of Python. However, there is an enormous number of libraries that are written and maintained by thousands of programmers everywhere. These are sometimes called third-party libraries or packages and are available for quick download and installation through a handy software called <code>pip</code> which is built-in to your standard Python 3 installation.</p>
 <p>Let's practice with it here by installing a package called <code>nose</code>. Open your command line and enter</p>
 <p><code>pip install nose</code>:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ pip install nose
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ pip install nose
 &lt;a bunch of text&gt;
 Successfully installed nose-1.3.7
 $ 
 </pre></div>
-
+</td></tr></table>
 
 <p><code>nose</code> is a package that allows you to write tests for larger programs. If you see something like <code>Successfully installed nose-1.3.7</code> then the package installed correctly.</p>
 <p>Skim the basic commands of pip <a href="https://pip.pypa.io/en/stable/quickstart/">here</a> and use them to install libraries/packages when you need them. We will install more packages later once we get further along.</p>
@@ -882,32 +998,50 @@ $
 <p>Consider the following function definition from  <code>import_practice.py</code>:</p>
 </li>
 </ul>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">gen_random_matrix</span>(size):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Returns a 2D matrix (a.k.a. a list of lists)</span>
-<span style="color: #BA2121; font-style: italic">    of shape &quot;size X size&quot; with elements generated </span>
-<span style="color: #BA2121; font-style: italic">    having random values between 0 and 1</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    matrix <span style="color: #666666">=</span> []
-    <span style="color: #008000; font-weight: bold">for</span> row_index <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(size):
-        row <span style="color: #666666">=</span> []
-        <span style="color: #008000; font-weight: bold">for</span> element <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(size):
-            row<span style="color: #666666">.</span>append(random())
-        matrix<span style="color: #666666">.</span>append(row)
-    <span style="color: #008000; font-weight: bold">return</span> matrix
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">gen_random_matrix</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a 2D matrix (a.k.a. a list of lists)</span>
+<span class="sd">    of shape &quot;size X size&quot; with elements generated </span>
+<span class="sd">    having random values between 0 and 1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">matrix</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">row_index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+        <span class="n">row</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+            <span class="n">row</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="p">())</span>
+        <span class="n">matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">matrix</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>It turns out Python has a neat trick called a <a href="https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions">List Comprehension</a> to turn all that code into one line of code so that it can be written as follows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">gen_random_matrix</span>(size):
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Returns a 2D matrix (a.k.a. a list of lists)</span>
-<span style="color: #BA2121; font-style: italic">    of shape &quot;size X size&quot; with elements generated </span>
-<span style="color: #BA2121; font-style: italic">    having random values between 0 and 1</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">return</span> <span style="color: #408080; font-style: italic"># insert line of code here</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">gen_random_matrix</span><span class="p">(</span><span class="n">size</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns a 2D matrix (a.k.a. a list of lists)</span>
+<span class="sd">    of shape &quot;size X size&quot; with elements generated </span>
+<span class="sd">    having random values between 0 and 1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="c1"># insert line of code here</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>After reading about list comprehensions write one line of code that will do the same thing as above and run it to test it.</p>
 <!-- Navigation -->

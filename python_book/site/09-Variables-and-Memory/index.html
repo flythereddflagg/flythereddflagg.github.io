@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -769,40 +769,65 @@
 
 <h1 id="9-variables-and-memory">9 - Variables and Memory</h1>
 <p>Now we will introduce some concepts that make Python far more powerful. You have the ability to store things in computer memory and the following exercise will demonstrate how to use it.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># vars_and_mem.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># vars_and_mem.py</span>
 
-<span style="color: #408080; font-style: italic"># equals sign ( = ) is the assignment operator</span>
-<span style="color: #408080; font-style: italic"># it says: assign whatever is on the right </span>
-<span style="color: #408080; font-style: italic"># to the name on the left</span>
-first_text <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Here is some text!&quot;</span>
-more_text <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;This is another string of text.&quot;</span>
+<span class="c1"># equals sign ( = ) is the assignment operator</span>
+<span class="c1"># it says: assign whatever is on the right </span>
+<span class="c1"># to the name on the left</span>
+<span class="n">first_text</span> <span class="o">=</span> <span class="s2">&quot;Here is some text!&quot;</span>
+<span class="n">more_text</span> <span class="o">=</span> <span class="s2">&quot;This is another string of text.&quot;</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;{} {}&quot;</span><span style="color: #666666">.</span>format(first_text, more_text))
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">first_text</span><span class="p">,</span> <span class="n">more_text</span><span class="p">))</span>
 
-message <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;You can print numbers too! Here are some&quot;</span>
-number_1 <span style="color: #666666">=</span> <span style="color: #666666">1</span>
-number_2 <span style="color: #666666">=</span> <span style="color: #666666">23</span>
-number_34 <span style="color: #666666">=</span> <span style="color: #666666">25.34</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;{} {} {} {}&quot;</span><span style="color: #666666">.</span>format(message, number_1, number_2, number_34))
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;You can print numbers too! Here are some&quot;</span>
+<span class="n">number_1</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">number_2</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">number_34</span> <span class="o">=</span> <span class="mf">25.34</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{} {} {} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">number_1</span><span class="p">,</span> <span class="n">number_2</span><span class="p">,</span> <span class="n">number_34</span><span class="p">))</span>
 
-<span style="color: #408080; font-style: italic"># now lets do the same thing but assign these names to new values!</span>
-message <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Here are some more numbers&quot;</span>
-number_1 <span style="color: #666666">=</span> <span style="color: #666666">34.1</span>
-number_2 <span style="color: #666666">=</span> <span style="color: #666666">203</span>
-number_34 <span style="color: #666666">=</span> <span style="color: #666666">3.14159265</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;{} {} {} {}&quot;</span><span style="color: #666666">.</span>format(message, number_1, number_2, number_34))
+<span class="c1"># now lets do the same thing but assign these names to new values!</span>
+<span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Here are some more numbers&quot;</span>
+<span class="n">number_1</span> <span class="o">=</span> <span class="mf">34.1</span>
+<span class="n">number_2</span> <span class="o">=</span> <span class="mi">203</span>
+<span class="n">number_34</span> <span class="o">=</span> <span class="mf">3.14159265</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{} {} {} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">message</span><span class="p">,</span> <span class="n">number_1</span><span class="p">,</span> <span class="n">number_2</span><span class="p">,</span> <span class="n">number_34</span><span class="p">))</span>
 </pre></div>
-
+</td></tr></table>
 
 <hr />
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python vars_and_mem.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python vars_and_mem.py
 Here is some text! This is another string of text.
 You can print numbers too! Here are some 1 23 25.34
 Here are some more numbers 34.1 203 3.14159265
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a <strong>variable</strong>. Here is how the computer works with variables: </p>
 <h3 id="computer-bare-essentials">Computer Bare Essentials</h3>
@@ -836,24 +861,34 @@ $
 <p>Anytime x is referenced after that command, the computer looks up the address associated with 'x' and goes directly to the 'box' with that address and replaces 'x' with whatever is in that 'box'.</p>
 <h3 id="more-practice">More Practice</h3>
 <p>The python interpreter will illustrate this better. Go to your terminal and enter <code>python</code> to start the interpreter.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="border: 1px solid #FF0000">$</span> python
-Python <span style="color: #666666">3.7.0</span> (v3<span style="color: #666666">.7.0</span>:<span style="color: #666666">1</span>bf9cc5093, Jun <span style="color: #666666">27</span> <span style="color: #666666">2018</span>, <span style="color: #666666">04</span>:<span style="color: #666666">59</span>:<span style="color: #666666">51</span>) [MSC v<span style="color: #666666">.1914</span> <span style="color: #666666">64</span> bit (AMD64)] on win32
-Type <span style="color: #BA2121">&quot;help&quot;</span>, <span style="color: #BA2121">&quot;copyright&quot;</span>, <span style="color: #BA2121">&quot;credits&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BA2121">&quot;license&quot;</span> <span style="color: #008000; font-weight: bold">for</span> more information<span style="color: #666666">.</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> 
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">python</span>
+<span class="n">Python</span> <span class="mf">3.7</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">v3</span><span class="o">.</span><span class="mf">7.0</span><span class="p">:</span><span class="mi">1</span><span class="n">bf9cc5093</span><span class="p">,</span> <span class="n">Jun</span> <span class="mi">27</span> <span class="mi">2018</span><span class="p">,</span> <span class="mo">04</span><span class="p">:</span><span class="mi">59</span><span class="p">:</span><span class="mi">51</span><span class="p">)</span> <span class="p">[</span><span class="n">MSC</span> <span class="n">v</span><span class="o">.</span><span class="mi">1914</span> <span class="mi">64</span> <span class="n">bit</span> <span class="p">(</span><span class="n">AMD64</span><span class="p">)]</span> <span class="n">on</span> <span class="n">win32</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> 
 </pre></div>
-
+</td></tr></table>
 
 <p>Run the following commands:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #666666">&gt;&gt;&gt;</span> x <span style="color: #666666">=</span> <span style="color: #666666">23</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">type</span>(x)
-<span style="color: #666666">&lt;</span><span style="color: #008000; font-weight: bold">class</span> <span style="border: 1px solid #FF0000">&#39;</span><span style="color: #0000FF; font-weight: bold">int</span><span style="color: #BA2121">&#39;&gt;</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">id</span>(x)
-<span style="color: #666666">140737371887328</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> x
-<span style="color: #666666">23</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">exit</span>()
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">int</span><span class="s1">&#39;&gt;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">id</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="mi">140737371887328</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">x</span>
+<span class="mi">23</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">exit</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><code>type</code> , <code>id</code>  and <code>exit</code> are other built-in functions like <code>print</code> that provide some useful information about <code>x</code>. </p>
 <p><code>type</code> spits out the type of variable between its parentheses.  <code>id</code> spits out the address of the variable in the RAM. This will be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and <code>exit()</code> simply exits the program.</p>

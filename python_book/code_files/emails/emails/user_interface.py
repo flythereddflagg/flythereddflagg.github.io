@@ -55,9 +55,11 @@ Please select one of the following options:
         elif self.current_input.startswith('3'):
             filename = input("Specify the filename: ")
             self.dbman.export(filename)
-            self.current_view = f"Database exported to {filename}\n" + self.menu
+            self.current_view = f"Database exported to {filename}\n" +\
+                                self.menu
         else:
-            self.current_view = "\n"+"-"*5+" invalid input!\n" + self.menu
+            self.current_view = "\n"+"-"*5+" invalid input!\n" +\
+                                self.menu
     
     
     def edit_database(self):

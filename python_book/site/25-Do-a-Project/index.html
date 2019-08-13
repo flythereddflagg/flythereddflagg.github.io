@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -864,49 +864,89 @@
 <p>There are many different things you may want to do with your newfound skills. In reality, this project will be the most valuable thing you do yet as it will introduce problems you have not yet faced and develop skills you have not yet even thought of. Ideally, you will make something that interests you and feeds your passions. Below I have provided some general ideas and perhaps a push in the right direction. However, you must flesh out the ideas here and make them your own. Please note that right now, everything you will do will interface with your user in the command line. This however does not mean that you cannot make something interesting or useful. With that said, here are some possible projects.</p>
 <h3 id="design-a-game">Design A Game</h3>
 <p>Video games back in earlier days of computing were all based in the command line. A popular one that was among the first video games was called "Zork". Search the Internet for information about Zork and make your own little version. A tiny version of a Zork-like might look like:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">entrance_hall</span>():
-    look <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;&quot;</span>
-<span style="color: #BA2121">You find yourself locked inside a castle.</span>
-<span style="color: #BA2121">You are in the entrance hall to the palace.</span>
-<span style="color: #BA2121">To the SOUTH there is a locked door to the outside.</span>
-<span style="color: #BA2121">To the NORTH there is a staircase.</span>
-<span style="color: #BA2121">To the EAST and WEST there are large wooden doors</span>
-<span style="color: #BA2121">standing ajar.</span>
-<span style="color: #BA2121">&quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">print</span>(look)
-    do <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;What will you do? &gt; &quot;</span>)
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">entrance_hall</span><span class="p">():</span>
+    <span class="n">look</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">You find yourself locked inside a castle.</span>
+<span class="s2">You are in the entrance hall to the palace.</span>
+<span class="s2">To the SOUTH there is a locked door to the outside.</span>
+<span class="s2">To the NORTH there is a staircase.</span>
+<span class="s2">To the EAST and WEST there are large wooden doors</span>
+<span class="s2">standing ajar.</span>
+<span class="s2">&quot;&quot;&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
+    <span class="n">do</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What will you do? &gt; &quot;</span><span class="p">)</span>
 
-    <span style="color: #008000; font-weight: bold">if</span> do <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;go north&quot;</span>:
-        staircase()
-    <span style="color: #008000; font-weight: bold">elif</span> do <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;go south&quot;</span>:
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;You&#39;re pretty bad at this game.&quot;</span>)
-    <span style="color: #008000; font-weight: bold">elif</span> do <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;go east&#39;</span> <span style="color: #AA22FF; font-weight: bold">or</span> do <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;go west&quot;</span>:
-        east_west_rooms()
-    <span style="color: #008000; font-weight: bold">else</span>:
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;You lose. Next time try doing something&quot;</span>,
-              <span style="color: #BA2121">&quot;like &#39;go &lt;direction&gt;&#39; to do something.&quot;</span>)
+    <span class="k">if</span> <span class="n">do</span> <span class="o">==</span> <span class="s2">&quot;go north&quot;</span><span class="p">:</span>
+        <span class="n">staircase</span><span class="p">()</span>
+    <span class="k">elif</span> <span class="n">do</span> <span class="o">==</span> <span class="s2">&quot;go south&quot;</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You&#39;re pretty bad at this game.&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">do</span> <span class="o">==</span> <span class="s1">&#39;go east&#39;</span> <span class="ow">or</span> <span class="n">do</span> <span class="o">==</span> <span class="s2">&quot;go west&quot;</span><span class="p">:</span>
+        <span class="n">east_west_rooms</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You lose. Next time try doing something&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;like &#39;go &lt;direction&gt;&#39; to do something.&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">staircase</span>():
-    look <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;&quot;</span>
-<span style="color: #BA2121">There is a lot of treasure here!</span>
-<span style="color: #BA2121">You take the treasure, get rich and live happily ever after!</span>
+<span class="k">def</span> <span class="nf">staircase</span><span class="p">():</span>
+    <span class="n">look</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">There is a lot of treasure here!</span>
+<span class="s2">You take the treasure, get rich and live happily ever after!</span>
 
-<span style="color: #BA2121">YOU WIN!</span>
-<span style="color: #BA2121">&quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">print</span>(look)
+<span class="s2">YOU WIN!</span>
+<span class="s2">&quot;&quot;&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">east_west_rooms</span>():
-    look <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;&quot;</span>
-<span style="color: #BA2121">There is a monster in this room. He eats you and</span>
-<span style="color: #BA2121">you regret ever being born as you fall down his throat.</span>
+<span class="k">def</span> <span class="nf">east_west_rooms</span><span class="p">():</span>
+    <span class="n">look</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">There is a monster in this room. He eats you and</span>
+<span class="s2">you regret ever being born as you fall down his throat.</span>
 
-<span style="color: #BA2121">GAME OVER</span>
-<span style="color: #BA2121">&quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">print</span>(look)
+<span class="s2">GAME OVER</span>
+<span class="s2">&quot;&quot;&quot;</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
 
-entrance_hall() <span style="color: #408080; font-style: italic"># this starts the game</span>
+<span class="n">entrance_hall</span><span class="p">()</span> <span class="c1"># this starts the game</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>It is up to you to develop this idea. The following are some suggestions the intent of this exercise it that you make the best game you can with your current skill set. Try some of the following as you develop your game:</p>
 <ul>
@@ -925,62 +965,142 @@ entrance_hall() <span style="color: #408080; font-style: italic"># this starts t
 <h2 id="appendix-a-quick-introduction-to-some-useful-concepts">APPENDIX: A quick introduction to some useful concepts</h2>
 <h3 id="sysargv"><code>sys.argv</code></h3>
 <p>Included here are some useful concepts and ideas for your project. Write out the following file and run it:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># add_numbers.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># add_numbers.py</span>
 
-<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">sys</span> <span style="color: #008000; font-weight: bold">import</span> argv
+<span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;The name of this file is: {argv[0]}&quot;</span>) <span style="color: #408080; font-style: italic"># get the filename</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The name of this file is: {argv[0]}&quot;</span><span class="p">)</span> <span class="c1"># get the filename</span>
 
-numbers <span style="color: #666666">=</span> [<span style="color: #008000">float</span>(i) <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> argv[<span style="color: #666666">1</span>:]] <span style="color: #408080; font-style: italic"># turn string arguments into numbers</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span> <span class="c1"># turn string arguments into numbers</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;The sum of the numbers given is {sum(numbers)}&quot;</span>) <span style="color: #408080; font-style: italic"># sum numbers together</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The sum of the numbers given is {sum(numbers)}&quot;</span><span class="p">)</span> <span class="c1"># sum numbers together</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python add_numbers.py 1 0.2 3 5 4 3
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python add_numbers.py 1 0.2 3 5 4 3
 The name of this file is: add_numbers.py
 The sum of the numbers given is 16.2
 $
 </pre></div>
-
+</td></tr></table>
 
 <p><code>argv</code> is short for argument variables and represents the space-separated arguments passed in with any call to Python. It takes the form of a list of strings with the first element being the name of the script that is being run. In our case the rest of the arguments are numbers to be summed together. If you want more detail on <code>argv</code> you can read about it <a href="https://docs.python.org/3/library/sys.html#sys.argv">here</a>. This is a common way to have your user interact with a program by passing it arguments as you run it. </p>
 <h3 id="main-loops">Main-loops</h3>
 <p>Write out the following and run it as well:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># mainloop.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># mainloop.py</span>
 
-menu <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&#39;&#39;</span>
-<span style="color: #BA2121">Enter one of the following.</span>
-<span style="color: #BA2121">    1 - print a word</span>
-<span style="color: #BA2121">    2 - do a thing</span>
-<span style="color: #BA2121">    3 - quit the program</span>
-<span style="color: #BA2121">&#39;&#39;&#39;</span>
+<span class="n">menu</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">Enter one of the following.</span>
+<span class="s1">    1 - print a word</span>
+<span class="s1">    2 - do a thing</span>
+<span class="s1">    3 - quit the program</span>
+<span class="s1">&#39;&#39;&#39;</span>
 
-running <span style="color: #666666">=</span> <span style="color: #008000">True</span>
+<span class="n">running</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span style="color: #008000; font-weight: bold">while</span> running:
-    <span style="color: #008000; font-weight: bold">print</span>(menu)
-    command <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;--&gt; &quot;</span>)
+<span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">menu</span><span class="p">)</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;--&gt; &quot;</span><span class="p">)</span>
 
-    <span style="color: #008000; font-weight: bold">if</span> command <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;1&quot;</span>:
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;a word&quot;</span>)
+    <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;a word&quot;</span><span class="p">)</span>
 
-    <span style="color: #008000; font-weight: bold">elif</span> command <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;2&quot;</span>:
-        <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">10</span>):
-            <span style="color: #008000; font-weight: bold">print</span>(i<span style="color: #666666">+1</span>)
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;I did a thing!&quot;</span>)
+    <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+            <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I did a thing!&quot;</span><span class="p">)</span>
 
-    <span style="color: #008000; font-weight: bold">elif</span> command <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;3&quot;</span>:
-        running <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+    <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="bp">False</span>
 
-    <span style="color: #008000; font-weight: bold">else</span>:
-        <span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;I do not understand that command.&quot;</span>)
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I do not understand that command.&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python mainloop.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python mainloop.py
 
 Enter one of the following.
     1 - print a word
@@ -1024,7 +1144,7 @@ Enter one of the following.
 --&gt; 3
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>As you can see, this program has a main-loop which runs the program until the user elects to end the program. In fact, it is a staple of programming to have a main-loop-like structure. The basic idea of a main-loop is a program that acts as follows:</p>
 <ol>
@@ -1036,33 +1156,52 @@ $
 <p>This basic structure should be a norm of programming for a user. Use this as your model for user input.</p>
 <h3 id="break-and-continue-statements">Break and Continue statements</h3>
 <p>You can skip a loop iteration or stop a loop entirely with the <code>continue</code> or <code>break</code> statements respectively. Write out the following code to practice it.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># cont_break.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># cont_break.py</span>
 
-<span style="color: #408080; font-style: italic"># this loop counts to 100 by 10&#39;s</span>
-<span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">1</span>,<span style="color: #666666">101</span>):
-    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> i <span style="color: #666666">%</span> <span style="color: #666666">10</span> <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
-        <span style="color: #008000; font-weight: bold">continue</span>
-    <span style="color: #008000; font-weight: bold">print</span>(i, end<span style="color: #666666">=</span><span style="color: #BA2121">&quot; &quot;</span>)
+<span class="c1"># this loop counts to 100 by 10&#39;s</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">continue</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># this loop will prematurely end at 24</span>
-<span style="color: #008000; font-weight: bold">for</span> j <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #666666">100</span>):
-    <span style="color: #008000; font-weight: bold">print</span>(j, end<span style="color: #666666">=</span><span style="color: #BA2121">&quot; &quot;</span>)
-    <span style="color: #008000; font-weight: bold">if</span> j <span style="color: #666666">&gt;</span> <span style="color: #666666">23</span>:
-        <span style="color: #008000; font-weight: bold">break</span>
+<span class="c1"># this loop will prematurely end at 24</span>
+<span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">23</span><span class="p">:</span>
+        <span class="k">break</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python cont_break.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python cont_break.py
 10 20 30 40 50 60 70 80 90 100 
 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>Consider how the <code>break</code> and <code>continue</code> statements change the flow of the code.  Use these statements to skip iterations of loops or get out of loops entirely.</p>
 <p>You may notice that these introductions have been brief. This is on purpose. My goal was to simply let you know that these features exist. It is up to you to research and utilize them. They are not required. </p>

@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -704,57 +704,95 @@
 comments in code.</p>
 <h3 id="what-is-an-octothorpe">What is an octothorpe?</h3>
 <p>You have probably seen this symbol at some point:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic">#</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>The proper name for this symbol is an octothorpe. However, I have heard the following names for it: Hash, Hashtag, Pound and Tic-tac-toe symbol. For the purposes of this book I will refer to it as a hash. The hash has a special purpose that will be seen in the code you will write below.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># octothorpe.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># octothorpe.py</span>
 
-<span style="color: #408080; font-style: italic"># I can explain the code here</span>
+<span class="c1"># I can explain the code here</span>
 
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">I can do some lengthy explanations</span>
-<span style="color: #BA2121; font-style: italic">here too. But this can span over </span>
-<span style="color: #BA2121; font-style: italic">multiple lines</span>
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">I can do some lengthy explanations</span>
+<span class="sd">here too. But this can span over </span>
+<span class="sd">multiple lines</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
-<span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;</span>
-<span style="color: #BA2121; font-style: italic">Sometimes I want to use single quotes though</span>
-<span style="color: #BA2121; font-style: italic">when I want to do this, Python doesn&#39;t care.</span>
-<span style="color: #BA2121; font-style: italic">It just keeps on doing its thing and ignoring</span>
-<span style="color: #BA2121; font-style: italic">me</span>
-<span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Sometimes I want to use single quotes though</span>
+<span class="sd">when I want to do this, Python doesn&#39;t care.</span>
+<span class="sd">It just keeps on doing its thing and ignoring</span>
+<span class="sd">me</span>
+<span class="sd">&#39;&#39;&#39;</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Here is some text that will appear.&quot;</span>) <span style="color: #408080; font-style: italic"># this is a print statement</span>
-<span style="color: #408080; font-style: italic">#print(&quot;Here is some text that will not appear.&quot;)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Here is some text that will appear.&quot;</span><span class="p">)</span> <span class="c1"># this is a print statement</span>
+<span class="c1">#print(&quot;Here is some text that will not appear.&quot;)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;A good line of code is hard to find.&quot;</span>)
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot; print(&quot;But this line doesn&#39;t even work.&quot;) &quot;&quot;&quot;</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A good line of code is hard to find.&quot;</span><span class="p">)</span>
+<span class="sd">&quot;&quot;&quot; print(&quot;But this line doesn&#39;t even work.&quot;) &quot;&quot;&quot;</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;At last we can print again.&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;At last we can print again.&quot;</span><span class="p">)</span>
 
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot; </span>
-<span style="color: #BA2121; font-style: italic">print(&quot;none&quot;)</span>
-<span style="color: #BA2121; font-style: italic">print(&quot;of&quot;)</span>
-<span style="color: #BA2121; font-style: italic">print(&quot;these&quot;)</span>
-<span style="color: #BA2121; font-style: italic">print(&quot;lines&quot;)</span>
-<span style="color: #BA2121; font-style: italic">print(&quot;print&quot;)</span>
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span class="sd">&quot;&quot;&quot; </span>
+<span class="sd">print(&quot;none&quot;)</span>
+<span class="sd">print(&quot;of&quot;)</span>
+<span class="sd">print(&quot;these&quot;)</span>
+<span class="sd">print(&quot;lines&quot;)</span>
+<span class="sd">print(&quot;print&quot;)</span>
+<span class="sd">&quot;&quot;&quot;</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Well I guess we&#39;re done here.&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Well I guess we&#39;re done here.&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python octothorpe.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python octothorpe.py
 Here is some text that will appear.
 A good line of code is hard to find.
 At last we can print again.
 Well I guess we&#39;re done here.
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>Again if the result you get isn't <em>exactly</em> like the book's, go back in fix it until you get it right.</p>
 <h3 id="about-comments">About comments</h3>
@@ -763,43 +801,77 @@ $
 <p><strong>NOTE:</strong> Whenever you use quotes in Python you must be consistent which ever you decide to use for a particular case.</p>
 <h3 id="comment-conventions">Comment Conventions</h3>
 <p>The following rules of thumb apply to code comments and are demonstrated below (don't bother writing this all out, just read it):</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;</span>
-<span style="color: #BA2121; font-style: italic">File        : comment_conventions.py</span>
-<span style="color: #BA2121; font-style: italic">Author      : Mark Redd</span>
-<span style="color: #BA2121; font-style: italic">Version     : 1.0</span>
-<span style="color: #BA2121; font-style: italic">Description :</span>
-<span style="color: #BA2121; font-style: italic">It is common to have a header at the top of your file that has the filename, author</span>
-<span style="color: #BA2121; font-style: italic">and a general description of the program in the file. This space may also be used</span>
-<span style="color: #BA2121; font-style: italic">to include pertient data about the software such as its version number or the </span>
-<span style="color: #BA2121; font-style: italic">date it was last modified. In many cases this header may be long and detailed </span>
-<span style="color: #BA2121; font-style: italic">depending on the intent of the programmer.</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">File        : comment_conventions.py</span>
+<span class="sd">Author      : Mark Redd</span>
+<span class="sd">Version     : 1.0</span>
+<span class="sd">Description :</span>
+<span class="sd">It is common to have a header at the top of your file that has the filename, author</span>
+<span class="sd">and a general description of the program in the file. This space may also be used</span>
+<span class="sd">to include pertient data about the software such as its version number or the </span>
+<span class="sd">date it was last modified. In many cases this header may be long and detailed </span>
+<span class="sd">depending on the intent of the programmer.</span>
 
-<span style="color: #BA2121; font-style: italic">For the purposes of this book, we will not worry about having headers in our code</span>
-<span style="color: #BA2121; font-style: italic">until we tackle some larger, more complex problems but it&#39;s good to know that these</span>
-<span style="color: #BA2121; font-style: italic">things exist.</span>
-<span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;</span>
+<span class="sd">For the purposes of this book, we will not worry about having headers in our code</span>
+<span class="sd">until we tackle some larger, more complex problems but it&#39;s good to know that these</span>
+<span class="sd">things exist.</span>
+<span class="sd">&#39;&#39;&#39;</span>
 
-<span style="color: #BA2121; font-style: italic">&#39;&#39;&#39;Single line comments that explain code &#39;&#39;&#39;</span>
-<span style="color: #408080; font-style: italic"># should be in one of two places:</span>
+<span class="sd">&#39;&#39;&#39;Single line comments that explain code &#39;&#39;&#39;</span>
+<span class="c1"># should be in one of two places:</span>
 
-<span style="color: #408080; font-style: italic"># This comment explains the line below</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Here are some words&quot;</span>) <span style="color: #408080; font-style: italic"># The comment may be here as well if space permits</span>
+<span class="c1"># This comment explains the line below</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Here are some words&quot;</span><span class="p">)</span> <span class="c1"># The comment may be here as well if space permits</span>
 
-<span style="color: #408080; font-style: italic"># If needed, the comment may span</span>
-<span style="color: #408080; font-style: italic"># multiple lines. The comment is generally</span>
-<span style="color: #408080; font-style: italic"># above the line or block of code</span>
-<span style="color: #408080; font-style: italic"># it explains in any case.</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Here are some words&quot;</span>) <span style="color: #408080; font-style: italic"># The comment may be here as well if space permits</span>
+<span class="c1"># If needed, the comment may span</span>
+<span class="c1"># multiple lines. The comment is generally</span>
+<span class="c1"># above the line or block of code</span>
+<span class="c1"># it explains in any case.</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Here are some words&quot;</span><span class="p">)</span> <span class="c1"># The comment may be here as well if space permits</span>
 
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">It is bad practice to write comments that trail off the visible screen.</span>
-<span style="color: #BA2121; font-style: italic">Later we will explore code style and explain this convetion more fully.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">It is bad practice to write comments that trail off the visible screen.</span>
+<span class="sd">Later we will explore code style and explain this convetion more fully.</span>
 
-<span style="color: #BA2121; font-style: italic">Multi-line comments may be placed wherever appropriate to make general</span>
-<span style="color: #BA2121; font-style: italic">comments or explain a large block of code.</span>
-<span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
+<span class="sd">Multi-line comments may be placed wherever appropriate to make general</span>
+<span class="sd">comments or explain a large block of code.</span>
+<span class="sd">&quot;&quot;&quot;</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>I will often put comments in the code I have you write. You will need to put these in your code as well but also I will have you explain your code line by line with comments. You may find it useful to take notes as you write code to help you remember what you have learned.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>

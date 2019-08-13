@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -686,21 +686,36 @@
 <h1 id="11-input-and-output">11 - Input and Output</h1>
 <p>Up to now, we have had our scripts take pre-determined input and turn it into output in the form of text printed to the console screen. Our script does nothing else.  What if we want to be able to do more than that? What if we want to interact with the user? In this lesson we will cover getting and using user input.</p>
 <p>Lets start with this exercise:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># input_output.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># input_output.py</span>
 
-<span style="color: #408080; font-style: italic"># use input() to get user input</span>
-user_name <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter your name      : &quot;</span>)
-user_age  <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter your age       : &quot;</span>)
-user_job  <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter your occupation: &quot;</span>)
+<span class="c1"># use input() to get user input</span>
+<span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name      : &quot;</span><span class="p">)</span>
+<span class="n">user_age</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your age       : &quot;</span><span class="p">)</span>
+<span class="n">user_job</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your occupation: &quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># let&#39;s print out what we got from the user</span>
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;Hello {user_name}! You are {user_age} years old.&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;You work as a/an {user_job}.&quot;</span>)
+<span class="c1"># let&#39;s print out what we got from the user</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hello {user_name}! You are {user_age} years old.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;You work as a/an {user_job}.&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python io_files.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python io_files.py
 Enter your name      : John Doe
 Enter your age       : 30
 Enter your occupation: Panda Caretaker
@@ -708,7 +723,7 @@ Hello John Doe! You are 30 years old.
 You work as a/an Panda Caretaker.
 $
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>What is happening here?</strong> </p>
 <p>As you can see the built-in <code>input</code> function allows you to take user data and store it in variables. Whatever the user enters into the input is saved as a string and you can then do what you wish with it.</p>

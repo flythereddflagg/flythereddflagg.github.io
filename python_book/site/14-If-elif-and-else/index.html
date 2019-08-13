@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -702,75 +702,166 @@
 <h1 id="14-if-elif-and-else">14 - If, elif and else</h1>
 <p>We will use the concepts of True and False to drive our scripts ability to make decisions. The following exercise will help introduce program decisions and conditionals. </p>
 <p><strong>Note:</strong> This will be the first time we see indented blocks of code. Whenever you see an indented line of code, follow the <a href="https://www.python.org/dev/peps/pep-0008/#code-lay-out">Python standard</a> of always indenting 4 spaces (do <em>not</em> use tabs). Your text editor can and should be configured to insert 4 spaces instead of a tab character <code>\t</code> when the "Tab" key is pressed.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># if_else.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># if_else.py</span>
 
-<span style="color: #408080; font-style: italic"># let&#39;s start with some variables</span>
-<span style="color: #408080; font-style: italic"># this will tell us to print an error</span>
-<span style="color: #408080; font-style: italic"># message if necessary</span>
-error <span style="color: #666666">=</span> <span style="color: #008000">False</span>
+<span class="c1"># let&#39;s start with some variables</span>
+<span class="c1"># this will tell us to print an error</span>
+<span class="c1"># message if necessary</span>
+<span class="n">error</span> <span class="o">=</span> <span class="bp">False</span>
 
-<span style="color: #408080; font-style: italic"># this is how much each farmer </span>
-<span style="color: #408080; font-style: italic"># needs in revenue to break even</span>
-break_even <span style="color: #666666">=</span> <span style="color: #666666">1000.00</span>
+<span class="c1"># this is how much each farmer </span>
+<span class="c1"># needs in revenue to break even</span>
+<span class="n">break_even</span> <span class="o">=</span> <span class="mf">1000.00</span>
 
-<span style="color: #408080; font-style: italic"># these are farming data</span>
-berry_farmer <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Barry Farmer&quot;</span>
-wheat_farmer <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Ray Wheatley&quot;</span>
+<span class="c1"># these are farming data</span>
+<span class="n">berry_farmer</span> <span class="o">=</span> <span class="s2">&quot;Barry Farmer&quot;</span>
+<span class="n">wheat_farmer</span> <span class="o">=</span> <span class="s2">&quot;Ray Wheatley&quot;</span>
 
-number_of_berries <span style="color: #666666">=</span> <span style="color: #666666">3294</span>
-bushels_of_wheat  <span style="color: #666666">=</span> <span style="color: #666666">523.45</span>
+<span class="n">number_of_berries</span> <span class="o">=</span> <span class="mi">3294</span>
+<span class="n">bushels_of_wheat</span>  <span class="o">=</span> <span class="mf">523.45</span>
 
-berry_hired_hands <span style="color: #666666">=</span> <span style="color: #666666">34</span>
-wheat_hired_hands <span style="color: #666666">=</span> <span style="color: #666666">23</span>
+<span class="n">berry_hired_hands</span> <span class="o">=</span> <span class="mi">34</span>
+<span class="n">wheat_hired_hands</span> <span class="o">=</span> <span class="mi">23</span>
 
-price_per_bushel <span style="color: #666666">=</span> <span style="color: #666666">2.50</span>
-price_per_100_berries <span style="color: #666666">=</span> <span style="color: #666666">15.23</span>
+<span class="n">price_per_bushel</span> <span class="o">=</span> <span class="mf">2.50</span>
+<span class="n">price_per_100_berries</span> <span class="o">=</span> <span class="mf">15.23</span>
 
-<span style="color: #408080; font-style: italic"># now let&#39;s get the farmer we</span>
-<span style="color: #408080; font-style: italic"># want to know about</span>
-farmer_name <span style="color: #666666">=</span> <span style="color: #008000">input</span>(<span style="color: #BA2121">&quot;Enter the name of the farmer</span><span style="color: #BB6622; font-weight: bold">\n\t</span><span style="color: #BA2121">--&gt; &quot;</span>)
+<span class="c1"># now let&#39;s get the farmer we</span>
+<span class="c1"># want to know about</span>
+<span class="n">farmer_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the name of the farmer</span><span class="se">\n\t</span><span class="s2">--&gt; &quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">if</span> farmer_name <span style="color: #666666">==</span> berry_farmer:
-    produce <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Berries&quot;</span>
-    amount  <span style="color: #666666">=</span> number_of_berries <span style="color: #666666">/</span> <span style="color: #666666">100</span>
-    hands   <span style="color: #666666">=</span> berry_hired_hands
-    pricing <span style="color: #666666">=</span> price_per_100_berries
+<span class="k">if</span> <span class="n">farmer_name</span> <span class="o">==</span> <span class="n">berry_farmer</span><span class="p">:</span>
+    <span class="n">produce</span> <span class="o">=</span> <span class="s2">&quot;Berries&quot;</span>
+    <span class="n">amount</span>  <span class="o">=</span> <span class="n">number_of_berries</span> <span class="o">/</span> <span class="mi">100</span>
+    <span class="n">hands</span>   <span class="o">=</span> <span class="n">berry_hired_hands</span>
+    <span class="n">pricing</span> <span class="o">=</span> <span class="n">price_per_100_berries</span>
 
-<span style="color: #008000; font-weight: bold">elif</span> farmer_name <span style="color: #666666">==</span> wheat_farmer:
-    produce <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Wheat&quot;</span>
-    amount  <span style="color: #666666">=</span> bushels_of_wheat
-    hands   <span style="color: #666666">=</span> wheat_hired_hands
-    pricing <span style="color: #666666">=</span> price_per_bushel
+<span class="k">elif</span> <span class="n">farmer_name</span> <span class="o">==</span> <span class="n">wheat_farmer</span><span class="p">:</span>
+    <span class="n">produce</span> <span class="o">=</span> <span class="s2">&quot;Wheat&quot;</span>
+    <span class="n">amount</span>  <span class="o">=</span> <span class="n">bushels_of_wheat</span>
+    <span class="n">hands</span>   <span class="o">=</span> <span class="n">wheat_hired_hands</span>
+    <span class="n">pricing</span> <span class="o">=</span> <span class="n">price_per_bushel</span>
 
-<span style="color: #008000; font-weight: bold">else</span>:
-    error <span style="color: #666666">=</span> <span style="color: #008000">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="bp">True</span>
 
-<span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> error:
-    revenue <span style="color: #666666">=</span> amount <span style="color: #666666">*</span> pricing
-    payment_per_hand <span style="color: #666666">=</span> revenue <span style="color: #666666">/</span> hands
+<span class="k">if</span> <span class="ow">not</span> <span class="n">error</span><span class="p">:</span>
+    <span class="n">revenue</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">*</span> <span class="n">pricing</span>
+    <span class="n">payment_per_hand</span> <span class="o">=</span> <span class="n">revenue</span> <span class="o">/</span> <span class="n">hands</span>
 
-    <span style="color: #008000; font-weight: bold">if</span> revenue <span style="color: #666666">&lt;</span> break_even:
-        message <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Farm is below break-even point. Sorry&quot;</span>
-    <span style="color: #008000; font-weight: bold">else</span>:
-        message <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Farm is above break-even point. Congratulations!&quot;</span>
+    <span class="k">if</span> <span class="n">revenue</span> <span class="o">&lt;</span> <span class="n">break_even</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Farm is below break-even point. Sorry&quot;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Farm is above break-even point. Congratulations!&quot;</span>
 
-    <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;&quot;&quot;</span>
-<span style="color: #BA2121">        --- Farm Report for {farmer_name} ---</span>
-<span style="color: #BA2121">    Product for sale               : {produce:&gt;11}</span>
-<span style="color: #BA2121">    Price per unit                 : ${pricing:10.2f}</span>
-<span style="color: #BA2121">    Total revenue                  : ${revenue:10.2f}</span>
-<span style="color: #BA2121">    Amount owed to each hired hand : ${payment_per_hand:10.2f}</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        --- Farm Report for {farmer_name} ---</span>
+<span class="s2">    Product for sale               : {produce:&gt;11}</span>
+<span class="s2">    Price per unit                 : ${pricing:10.2f}</span>
+<span class="s2">    Total revenue                  : ${revenue:10.2f}</span>
+<span class="s2">    Amount owed to each hired hand : ${payment_per_hand:10.2f}</span>
 
-<span style="color: #BA2121">        {message}</span>
-<span style="color: #BA2121">    &quot;&quot;&quot;</span>)
+<span class="s2">        {message}</span>
+<span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">else</span>:
-    <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&quot;Farmer name </span><span style="color: #BB6622; font-weight: bold">\&quot;</span><span style="color: #BA2121">{farmer_name}</span><span style="color: #BB6622; font-weight: bold">\&quot;</span><span style="color: #BA2121"> does not exist in record!&quot;</span>)
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Farmer name </span><span class="se">\&quot;</span><span class="s2">{farmer_name}</span><span class="se">\&quot;</span><span class="s2"> does not exist in record!&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python if_else.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python if_else.py
 Enter the name of the farmer
     --&gt; Barry Farmer
 
@@ -800,29 +891,42 @@ Enter the name of the farmer
 Farmer name &quot;Gary Hart&quot; does not exist in record!
 $
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>What is happening Here?</strong></p>
 <p>We are using conditional logic to get data for a pair of farmers. We begin by prompting the user for the farmer's name. We then check the names of the farmers we have data for. If the name does not match any of the farmer's on record we print an error message. (This is the <code>else</code>  part on line 63.) The <code>error</code> variable we set earlier in the script will be set to <code>True</code> on line 42 in the case that we do not find  the name of any farmer in record.</p>
 <p>Should the name given match a name in our records we prepare the output by setting appropriate variables and then formatting and printing them out in the absence of an error.</p>
 <h3 id="conditionals">Conditionals</h3>
 <p>The section about logical operators introduced us to the idea that everything can be evaluated with a value of <code>True</code> or <code>False</code>. In this section we put that logic to work for us. The conditional or "if" statement in python has the following syntax:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #008000; font-weight: bold">if</span> Expression1: <span style="color: #408080; font-style: italic"># don&#39;t forget the colon</span>
-    do_thing_one() <span style="color: #408080; font-style: italic"># indent 4 spaces</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">Expression1</span><span class="p">:</span> <span class="c1"># don&#39;t forget the colon</span>
+    <span class="n">do_thing_one</span><span class="p">()</span> <span class="c1"># indent 4 spaces</span>
 
-<span style="color: #408080; font-style: italic"># if Expression1 evaluates to False check Expression 2</span>
-<span style="color: #008000; font-weight: bold">elif</span> Expression2: 
-    do_thing_two()
+<span class="c1"># if Expression1 evaluates to False check Expression 2</span>
+<span class="k">elif</span> <span class="n">Expression2</span><span class="p">:</span> 
+    <span class="n">do_thing_two</span><span class="p">()</span>
 
-<span style="color: #408080; font-style: italic"># and so on</span>
-<span style="color: #008000; font-weight: bold">elif</span> Expression3:
-    do_thing_three()
+<span class="c1"># and so on</span>
+<span class="k">elif</span> <span class="n">Expression3</span><span class="p">:</span>
+    <span class="n">do_thing_three</span><span class="p">()</span>
 
-<span style="color: #408080; font-style: italic"># if all previous expressions evaluate to False do the &#39;else&#39; part</span>
-<span style="color: #008000; font-weight: bold">else</span>:
-    do_thing_three()
+<span class="c1"># if all previous expressions evaluate to False do the &#39;else&#39; part</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">do_thing_three</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>We will explain the syntax step by step. When Python comes to an <code>if</code> statement, the following is executed:</p>
 <ul>

@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -812,31 +812,53 @@
 <p>This gives rise to a new data type, the Boolean data type. The Boolean data type can only have two values namely <code>True</code> or <code>False</code>. This makes it among the simplest and most useful of data types. By</p>
 <h4 id="try-this-out-in-the-interpreter">Try this out in the interpreter</h4>
 <p>Go to your python interpreter and try running the following commands:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="border: 1px solid #FF0000">$</span> python3
-Python <span style="color: #666666">3.</span>x<span style="color: #666666">.</span>x <span style="color: #666666">...</span>
-Type <span style="color: #BA2121">&quot;help&quot;</span>, <span style="color: #BA2121">&quot;copyright&quot;</span>, <span style="color: #BA2121">&quot;credits&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BA2121">&quot;license&quot;</span> <span style="color: #008000; font-weight: bold">for</span> more information<span style="color: #666666">.</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #008000">True</span>)
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #008000">False</span>)
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #666666">0</span>)
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #666666">34</span>)
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #666666">-1</span>)
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #666666">0.0</span>)
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #666666">0.001</span>)
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #BA2121">&quot;&quot;</span>)
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #BA2121">&quot;s&quot;</span>)
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">exit</span>()
-<span style="border: 1px solid #FF0000">$</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">python3</span>
+<span class="n">Python</span> <span class="mf">3.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="o">...</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">True</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="bp">False</span><span class="p">)</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">34</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mf">0.0</span><span class="p">)</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="s2">&quot;s&quot;</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">exit</span><span class="p">()</span>
+<span class="err">$</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>What I hope you get out of this is that, for the three data types we have covered so far, anything that is a non-empty or non-zero value will evaluate to True and empty or zero values will evaluate to False. <code>True</code> and <code>False</code> are both key words in Python to express these boolean concepts. And every data type in Python, by default, will evaluate to one or the other. In the next lesson we will explore how we can use this idea to make decisions.</p>
 <p>Another way to return the truth of something is by using the logical comparison operators.</p>
@@ -890,51 +912,93 @@ Type <span style="color: #BA2121">&quot;help&quot;</span>, <span style="color: #
 <li>etc.</li>
 </ul>
 <p>This will help you learn to think about these logical statements.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="border: 1px solid #FF0000">$</span> python3
-Python <span style="color: #666666">3.</span>x<span style="color: #666666">.</span>x <span style="color: #666666">...</span>
-Type <span style="color: #BA2121">&quot;help&quot;</span>, <span style="color: #BA2121">&quot;copyright&quot;</span>, <span style="color: #BA2121">&quot;credits&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BA2121">&quot;license&quot;</span> <span style="color: #008000; font-weight: bold">for</span> more information<span style="color: #666666">.</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">1</span> <span style="color: #666666">==</span> <span style="color: #666666">2</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">==</span> <span style="color: #666666">0</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">0</span> <span style="color: #666666">==</span> <span style="color: #666666">0</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">1.0</span> <span style="color: #666666">==</span> <span style="color: #666666">1</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">3</span> <span style="color: #666666">!=</span> <span style="color: #666666">2</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">!=</span> <span style="color: #666666">0</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">0</span> <span style="color: #666666">!=</span> <span style="color: #666666">0</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">3</span> <span style="color: #666666">&lt;</span> <span style="color: #666666">2</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">3</span> <span style="color: #666666">&gt;=2</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">3</span> <span style="color: #666666">&gt;</span> <span style="color: #666666">3</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;&quot;</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">&gt;</span> <span style="color: #666666">3</span>
-Traceback (most recent call last):
-  File <span style="color: #BA2121">&quot;&lt;stdin&gt;&quot;</span>, line <span style="color: #666666">1</span>, <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #666666">&lt;</span>module<span style="color: #666666">&gt;</span>
-<span style="color: #D2413A; font-weight: bold">TypeError</span>: <span style="color: #BA2121">&#39;&gt;&#39;</span> <span style="color: #AA22FF; font-weight: bold">not</span> supported between instances of <span style="color: #BA2121">&#39;str&#39;</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #BA2121">&#39;int&#39;</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">&gt;</span> <span style="color: #BA2121">&quot;23&quot;</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #666666">&lt;</span> <span style="color: #BA2121">&quot;23&quot;</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;23&quot;</span> <span style="color: #666666">&lt;</span> <span style="color: #BA2121">&quot;23&quot;</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;23&quot;</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;23&quot;</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;23&quot;</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;24&quot;</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;23&quot;</span> <span style="color: #666666">&gt;</span> <span style="color: #BA2121">&quot;24&quot;</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">exit</span>()
-<span style="border: 1px solid #FF0000">$</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">python3</span>
+<span class="n">Python</span> <span class="mf">3.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="o">...</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="o">==</span> <span class="mi">2</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">1.0</span> <span class="o">==</span> <span class="mi">1</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">!=</span> <span class="mi">2</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="o">!=</span> <span class="mi">0</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">0</span> <span class="o">!=</span> <span class="mi">0</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">&lt;</span> <span class="mi">2</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">&gt;=</span><span class="mi">2</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">3</span> <span class="o">&gt;</span> <span class="mi">3</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="o">&gt;</span> <span class="mi">3</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">TypeError</span><span class="p">:</span> <span class="s1">&#39;&gt;&#39;</span> <span class="ow">not</span> <span class="n">supported</span> <span class="n">between</span> <span class="n">instances</span> <span class="n">of</span> <span class="s1">&#39;str&#39;</span> <span class="ow">and</span> <span class="s1">&#39;int&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;23&quot;</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;23&quot;</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;23&quot;</span> <span class="o">&lt;</span> <span class="s2">&quot;23&quot;</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;23&quot;</span> <span class="o">==</span> <span class="s2">&quot;23&quot;</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;23&quot;</span> <span class="o">==</span> <span class="s2">&quot;24&quot;</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;23&quot;</span> <span class="o">&gt;</span> <span class="s2">&quot;24&quot;</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">exit</span><span class="p">()</span>
+<span class="err">$</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>You can see from the results of the above exercise that some types are incompatible with others. Also note that in most cases combining numbers and strings returns a not equal condition. </p>
 <h3 id="logical-operators">Logical operators</h3>
@@ -977,51 +1041,93 @@ Traceback (most recent call last):
 </ol>
 <hr />
 <h4 id="try-this-out-in-the-interpreter_2">Try this out in the interpreter</h4>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="border: 1px solid #FF0000">$</span> python
-Python <span style="color: #666666">3.</span>x<span style="color: #666666">.</span>x <span style="color: #666666">...</span>
-Type <span style="color: #BA2121">&quot;help&quot;</span>, <span style="color: #BA2121">&quot;copyright&quot;</span>, <span style="color: #BA2121">&quot;credits&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BA2121">&quot;license&quot;</span> <span style="color: #008000; font-weight: bold">for</span> more information<span style="color: #666666">.</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">1</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #666666">2</span>
-<span style="color: #666666">2</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #666666">1</span>
-<span style="color: #666666">1</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #666666">2</span>) <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">bool</span>(<span style="color: #666666">1</span>)
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">False</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">True</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #008000">False</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">False</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #008000">True</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">and</span> (<span style="color: #008000">False</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #008000">True</span>)
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #008000">False</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #008000">True</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">False</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #008000">True</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;&quot;</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #666666">4</span>
-<span style="color: #BA2121">&#39;&#39;</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #666666">3.14</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #666666">0.0</span>
-<span style="color: #666666">3.14</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">bool</span>(<span style="color: #666666">3</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #666666">4</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #666666">0</span>)
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;cheese&quot;</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #BA2121">&quot;crackers&quot;</span>
-<span style="color: #BA2121">&#39;cheese&#39;</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #BA2121">&quot;cheese&quot;</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #BA2121">&quot;crackers&quot;</span>
-<span style="color: #BA2121">&#39;crackers&#39;</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">and</span> <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #008000">False</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #008000">True</span> <span style="color: #AA22FF; font-weight: bold">or</span> <span style="color: #008000">False</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #666666">3</span>
-<span style="color: #008000">False</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #AA22FF; font-weight: bold">not</span> <span style="color: #666666">0</span>
-<span style="color: #008000">True</span>
-<span style="color: #666666">&gt;&gt;&gt;</span> <span style="color: #008000">exit</span>()
-<span style="border: 1px solid #FF0000">$</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="err">$</span> <span class="n">python</span>
+<span class="n">Python</span> <span class="mf">3.</span><span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="o">...</span>
+<span class="n">Type</span> <span class="s2">&quot;help&quot;</span><span class="p">,</span> <span class="s2">&quot;copyright&quot;</span><span class="p">,</span> <span class="s2">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s2">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="mi">2</span>
+<span class="mi">2</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mi">2</span> <span class="ow">and</span> <span class="mi">1</span>
+<span class="mi">1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">True</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span> <span class="ow">or</span> <span class="bp">True</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="p">(</span><span class="bp">False</span> <span class="ow">or</span> <span class="bp">True</span><span class="p">)</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span> <span class="ow">or</span> <span class="bp">True</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="bp">False</span> <span class="ow">and</span> <span class="bp">True</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;&quot;</span> <span class="ow">and</span> <span class="mi">4</span>
+<span class="s1">&#39;&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="mf">3.14</span> <span class="ow">or</span> <span class="mf">0.0</span>
+<span class="mf">3.14</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">bool</span><span class="p">(</span><span class="mi">3</span> <span class="ow">and</span> <span class="mi">4</span> <span class="ow">and</span> <span class="mi">0</span><span class="p">)</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;cheese&quot;</span> <span class="ow">or</span> <span class="s2">&quot;crackers&quot;</span>
+<span class="s1">&#39;cheese&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="s2">&quot;cheese&quot;</span> <span class="ow">and</span> <span class="s2">&quot;crackers&quot;</span>
+<span class="s1">&#39;crackers&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="bp">True</span> <span class="ow">and</span> <span class="ow">not</span> <span class="bp">False</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="bp">True</span> <span class="ow">or</span> <span class="bp">False</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="mi">3</span>
+<span class="bp">False</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="ow">not</span> <span class="mi">0</span>
+<span class="bp">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">exit</span><span class="p">()</span>
+<span class="err">$</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>For all of these operators, memorize their behavior and practice with them</p>
 <!--Potentially take out the results so they have to do it themselves and interpret what the results mean themselves?-->

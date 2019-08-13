@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -713,40 +713,57 @@
 <p>The quotes are necessary to differentiate between code being fed into the print
 statement and the text to be printed.</p>
 <p>If you want to print single quotes (<code>' '</code>) in your text you can do this by enclosing the text with double quotes (<code>" "</code>) or vice versa. Python does not care if you use single or double quotes to enclose your strings as long as you are consistent.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># string_quotes.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># string_quotes.py</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;This is:&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;a string with &#39;double&#39; quotes enclosing it but &#39;single quotes&#39; inside it.&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;a string with &quot;single&quot; quotes enclosing it but &quot;double quotes&quot; inside it.&#39;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;This will cause an error because I am mixing &quot;</span>double<span style="color: #BA2121">&quot; and&#39;single&#39; quotes.&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;This is:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;a string with &#39;double&#39; quotes enclosing it but &#39;single quotes&#39; inside it.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;a string with &quot;single&quot; quotes enclosing it but &quot;double quotes&quot; inside it.&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;This will cause an error because I am mixing &quot;</span><span class="n">double</span><span class="s2">&quot; and&#39;single&#39; quotes.&quot;</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>This is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python string_quotes.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python string_quotes.py
 File &quot;string_quotes.py&quot;, line 6
     print(&quot;This will cause an error in Python because I am mixing &quot;double&quot; quotes with &#39;single&#39; quotes.&quot;)
                                                                         ^
 SyntaxError: invalid syntax
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>If we comment out the last line we will get:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># string_quotes.py</span>
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;This is:&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;a string with &#39;double&#39; quotes enclosing it but &#39;single quotes&#39; inside it.&quot;</span>)
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&#39;a string with &quot;single&quot; quotes enclosing it but &quot;double quotes&quot; inside it.&#39;</span>)
-<span style="color: #408080; font-style: italic">#print(&quot;This will cause an error because I am mixing &quot;double&quot; and&#39;single&#39; quotes.&quot;)</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># string_quotes.py</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;This is:&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;a string with &#39;double&#39; quotes enclosing it but &#39;single quotes&#39; inside it.&quot;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s1">&#39;a string with &quot;single&quot; quotes enclosing it but &quot;double quotes&quot; inside it.&#39;</span><span class="p">)</span>
+<span class="c1">#print(&quot;This will cause an error because I am mixing &quot;double&quot; and&#39;single&#39; quotes.&quot;)</span>
 </pre></div>
+</td></tr></table>
 
-
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python string_quotes.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python string_quotes.py
 This is a string with &#39;double&#39; quotes enclosing it but &#39;single quotes&#39; inside it.
 This is a string with &quot;single&quot; quotes enclosing it but &quot;double quotes&quot; inside it.
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>When ever you make a string by using quotes always remember to be consistent 
 with your use of single and double quotes or you will run into problems.</p>

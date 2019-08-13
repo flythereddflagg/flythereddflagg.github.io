@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -772,38 +772,70 @@
 <p>There are two shorter exercises in this section as well as some new vocabulary. Ensure that you understand all the terms in <strong>bold</strong> as you go along as these concepts will come up later.</p>
 <h3 id="what-is-object-oriented-programming">What is object oriented programming?</h3>
 <p>In Python, everything is an object. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work. For an example, we will use some list objects in Python. Do the following exercise:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># list_objects.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># list_objects.py</span>
 
-list_object <span style="color: #666666">=</span> []
-<span style="color: #408080; font-style: italic"># this is more or less equivalent to</span>
-list_object2 <span style="color: #666666">=</span> <span style="color: #008000">list</span>()
+<span class="n">list_object</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="c1"># this is more or less equivalent to</span>
+<span class="n">list_object2</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Initial objects&quot;</span>, list_object, list_object2)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Initial objects&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># now that we have these objects built </span>
-<span style="color: #408080; font-style: italic"># or &quot;initialized&quot; we can call methods on them!</span>
+<span class="c1"># now that we have these objects built </span>
+<span class="c1"># or &quot;initialized&quot; we can call methods on them!</span>
 
-list_object<span style="color: #666666">.</span>append(<span style="color: #666666">23</span>)
-list_object2<span style="color: #666666">.</span>append(<span style="color: #666666">24</span>)
+<span class="n">list_object</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
+<span class="n">list_object2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Added 1 element to each&quot;</span>, list_object, list_object2)
-list_object<span style="color: #666666">.</span>append(<span style="color: #666666">36</span>)
-list_object2<span style="color: #666666">.</span>append(<span style="color: #666666">45</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Added 1 element to each&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
+<span class="n">list_object</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span>
+<span class="n">list_object2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Added another element to each&quot;</span>, list_object, list_object2)
-<span style="color: #408080; font-style: italic"># now we will remove both elements of each</span>
-list_object<span style="color: #666666">.</span>pop()
-list_object2<span style="color: #666666">.</span>pop()
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Popped off one element&quot;</span>, list_object, list_object2)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Added another element to each&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
+<span class="c1"># now we will remove both elements of each</span>
+<span class="n">list_object</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">list_object2</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Popped off one element&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
 
-list_object<span style="color: #666666">.</span>pop()
-list_object2<span style="color: #666666">.</span>pop()
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;Popped off the other&quot;</span>, list_object, list_object2)
+<span class="n">list_object</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="n">list_object2</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Popped off the other&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python list_objects.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python list_objects.py
 Initial objects [] []
 Added 1 element to each [23] [24]
 Added another element to each [23, 36] [24, 45]
@@ -811,7 +843,7 @@ Popped off one element [23] [24]
 Popped off the other [] []
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>From this short exercise you should be able to see the following:</p>
 <ul>
@@ -824,65 +856,99 @@ $
 <p>You have seen before and in this short exercise that functions may be called with dot syntax (e.g. <code>list_object.pop()</code>). I have mentioned before that these functions are called <strong>methods</strong> and "belong" to the object they are being called from. A method may do anything the programmer wishes but often are used to modify the object or, more specifically, the data or variables that "belong" to the object. The variables that "belong" to the object are called the object's <strong>attributes</strong>.</p>
 <h3 id="objects-are-handled-by-reference">Objects are handled by reference</h3>
 <p>Since everything is an object in Python, this may not make much sense until you see the effects of this behavior. In Python when you write code like:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>x <span style="color: #666666">=</span> <span style="color: #666666">2</span>
-y <span style="color: #666666">=</span> x
-y <span style="color: #666666">+=</span> <span style="color: #666666">3</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">y</span> <span class="o">+=</span> <span class="mi">3</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>You would rightly expect that <code>x = 2</code> and <code>y = 5</code>. However should you do something similar with a list:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>x <span style="color: #666666">=</span> [<span style="color: #666666">2</span>]
-y <span style="color: #666666">=</span> x
-y[<span style="color: #666666">0</span>] <span style="color: #666666">+=</span> <span style="color: #666666">3</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">3</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>You will find that <code>y[0] = 5</code> <em>and</em> <code>x[0] = 5</code>. This is because you just made two variables <code>x</code> and <code>y</code> that refer to the same object! This is how all objects behave. The variable names act only as a reference. Therefore when you modified one of the variables it changed the object that both variables pointed to. This idea of only replicating a reference to an object is called a <strong>shallow copy</strong> of an object. If you wish to have a distinct <strong>deep copy</strong> of an list object you may use the <code>list.copy()</code> method as follows:</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>x <span style="color: #666666">=</span> [<span style="color: #666666">2</span>]
-y <span style="color: #666666">=</span> x<span style="color: #666666">.</span>copy()
-y[<span style="color: #666666">0</span>] <span style="color: #666666">+=</span> <span style="color: #666666">3</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">3</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>This will return <code>y[0] = 5</code> and <code>x[0] = 2</code>. This may not make a big difference right now, but understanding this upfront will aid your understanding of how objects behave.</p>
 <h3 id="classes">Classes</h3>
 <p>Python has a way for the programmer to define their own objects with unique behavior. These are called classes. The next exercise will help you understand how they work.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># learn_classes.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># learn_classes.py</span>
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">Cat</span>():
-    species <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Felis catus&quot;</span>
+<span class="k">class</span> <span class="nc">Cat</span><span class="p">():</span>
+    <span class="n">species</span> <span class="o">=</span> <span class="s2">&quot;Felis catus&quot;</span>
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, name, color, favorite_food):
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>name <span style="color: #666666">=</span> name
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>color <span style="color: #666666">=</span> color
-        <span style="color: #008000">self</span><span style="color: #666666">.</span>favorite_food <span style="color: #666666">=</span> favorite_food
-
-
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">print_introduction</span>(<span style="color: #008000">self</span>):
-        <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&#39;This is {self.name}. &#39;</span>\
-              f<span style="color: #BA2121">&#39;He is of the species </span><span style="color: #BB6622; font-weight: bold">\&#39;</span><span style="color: #BA2121">{self.species}</span><span style="color: #BB6622; font-weight: bold">\&#39;</span><span style="color: #BA2121">.&#39;</span>)
-        <span style="color: #008000; font-weight: bold">print</span>(f<span style="color: #BA2121">&#39;He is a/an {self.color} cat. &#39;</span>\
-              f<span style="color: #BA2121">&#39;He really likes {self.favorite_food}!&#39;</span>)
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="p">,</span> <span class="n">favorite_food</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="n">color</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">favorite_food</span> <span class="o">=</span> <span class="n">favorite_food</span>
 
 
+    <span class="k">def</span> <span class="nf">print_introduction</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;This is {self.name}. &#39;</span>\
+              <span class="n">f</span><span class="s1">&#39;He is of the species </span><span class="se">\&#39;</span><span class="s1">{self.species}</span><span class="se">\&#39;</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;He is a/an {self.color} cat. &#39;</span>\
+              <span class="n">f</span><span class="s1">&#39;He really likes {self.favorite_food}!&#39;</span><span class="p">)</span>
 
-cat1 <span style="color: #666666">=</span> Cat(<span style="color: #BA2121">&quot;Snowflake&quot;</span>, <span style="color: #BA2121">&quot;White&quot;</span>, <span style="color: #BA2121">&quot;Fish&quot;</span>)
-cat2 <span style="color: #666666">=</span> Cat(<span style="color: #BA2121">&quot;Milo&quot;</span>, <span style="color: #BA2121">&quot;Orange&quot;</span>, <span style="color: #BA2121">&quot;Bacon&quot;</span>)
 
-<span style="color: #008000; font-weight: bold">for</span> cat <span style="color: #AA22FF; font-weight: bold">in</span> [cat1, cat2]:
-    cat<span style="color: #666666">.</span>print_introduction()
+
+<span class="n">cat1</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;Snowflake&quot;</span><span class="p">,</span> <span class="s2">&quot;White&quot;</span><span class="p">,</span> <span class="s2">&quot;Fish&quot;</span><span class="p">)</span>
+<span class="n">cat2</span> <span class="o">=</span> <span class="n">Cat</span><span class="p">(</span><span class="s2">&quot;Milo&quot;</span><span class="p">,</span> <span class="s2">&quot;Orange&quot;</span><span class="p">,</span> <span class="s2">&quot;Bacon&quot;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">cat</span> <span class="ow">in</span> <span class="p">[</span><span class="n">cat1</span><span class="p">,</span> <span class="n">cat2</span><span class="p">]:</span>
+    <span class="n">cat</span><span class="o">.</span><span class="n">print_introduction</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python learn_classes.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python learn_classes.py
 This is Snowflake. He is of the species &#39;Felis catus&#39;.
 He is a/an White cat. He really likes Fish!
 This is Milo. He is of the species &#39;Felis catus&#39;.
 He is a/an Orange cat. He really likes Bacon!
 $
 </pre></div>
-
+</td></tr></table>
 
 <p>From this exercise you should see that with the <code>class</code> keyword we are defining a new data type or a "class" of objects. Therefore each object created from the "class" template is also called an <strong>instance</strong> of that class. As I said before, in Python, everything is an object. That means that somewhere in the Python source code there must be some Python <code>class</code> definition (or some equivalent definition) that defines the structure and behavior of all Python objects.</p>
 <h3 id="defining-behavior-and-data-structures">Defining Behavior and Data Structures</h3>

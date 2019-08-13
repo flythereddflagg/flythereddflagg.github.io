@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -687,47 +687,103 @@
 
 <h1 id="20-dictionaries">20 - Dictionaries</h1>
 <p>In the last lesson we learned about sequenced iterables. In this lesson we will learn about one of the most powerful iterables that does not exist in a sequence. This is called a dictionary. The following lesson will introduce and illustrate how to use a dictionary.</p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># dictionary_practice.py</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># dictionary_practice.py</span>
 
-<span style="color: #408080; font-style: italic"># curly braces or just &quot;braces&quot; define a dictionary</span>
-player_data <span style="color: #666666">=</span> {<span style="color: #BA2121">&quot;Name&quot;</span>:<span style="color: #BA2121">&quot;Jack&quot;</span>, <span style="color: #BA2121">&quot;Team&quot;</span>:<span style="color: #BA2121">&quot;Wildcats&quot;</span>, <span style="color: #BA2121">&quot;Wins&quot;</span>:<span style="color: #666666">3</span>}
+<span class="c1"># curly braces or just &quot;braces&quot; define a dictionary</span>
+<span class="n">player_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Name&quot;</span><span class="p">:</span><span class="s2">&quot;Jack&quot;</span><span class="p">,</span> <span class="s2">&quot;Team&quot;</span><span class="p">:</span><span class="s2">&quot;Wildcats&quot;</span><span class="p">,</span> <span class="s2">&quot;Wins&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
 
-<span style="color: #408080; font-style: italic">#  we subscript with a keyword instead of an index,</span>
-<span style="color: #008000; font-weight: bold">print</span>(player_data[<span style="color: #BA2121">&quot;Name&quot;</span>])
-<span style="color: #008000; font-weight: bold">print</span>(player_data[<span style="color: #BA2121">&quot;Team&quot;</span>])
-<span style="color: #008000; font-weight: bold">print</span>(player_data[<span style="color: #BA2121">&quot;Wins&quot;</span>],<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>)
+<span class="c1">#  we subscript with a keyword instead of an index,</span>
+<span class="k">print</span><span class="p">(</span><span class="n">player_data</span><span class="p">[</span><span class="s2">&quot;Name&quot;</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">player_data</span><span class="p">[</span><span class="s2">&quot;Team&quot;</span><span class="p">])</span>
+<span class="k">print</span><span class="p">(</span><span class="n">player_data</span><span class="p">[</span><span class="s2">&quot;Wins&quot;</span><span class="p">],</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># a dictionary is an iterable</span>
-<span style="color: #008000; font-weight: bold">for</span> key <span style="color: #AA22FF; font-weight: bold">in</span> player_data:
-    <span style="color: #008000; font-weight: bold">print</span>(key, <span style="color: #BA2121">&quot;:&quot;</span>, player_data[key])
+<span class="c1"># a dictionary is an iterable</span>
+<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">player_data</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">player_data</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># another possibly better way to do the same thing</span>
-<span style="color: #008000; font-weight: bold">for</span> key, value <span style="color: #AA22FF; font-weight: bold">in</span> player_data<span style="color: #666666">.</span>items():
-    <span style="color: #008000; font-weight: bold">print</span>(key, <span style="color: #BA2121">&quot;:&quot;</span>, value)
+<span class="c1"># another possibly better way to do the same thing</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">player_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># dictionaries are mutable and extendable</span>
-player_data[<span style="color: #BA2121">&quot;Wins&quot;</span>]  <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
-player_data[<span style="color: #BA2121">&quot;Height&quot;</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;6&#39;2</span><span style="color: #BB6622; font-weight: bold">\&quot;</span><span style="color: #BA2121">&quot;</span>
+<span class="c1"># dictionaries are mutable and extendable</span>
+<span class="n">player_data</span><span class="p">[</span><span class="s2">&quot;Wins&quot;</span><span class="p">]</span>  <span class="o">+=</span> <span class="mi">1</span>
+<span class="n">player_data</span><span class="p">[</span><span class="s2">&quot;Height&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;6&#39;2</span><span class="se">\&quot;</span><span class="s2">&quot;</span>
 
-<span style="color: #008000; font-weight: bold">for</span> key, value <span style="color: #AA22FF; font-weight: bold">in</span> player_data<span style="color: #666666">.</span>items():
-    <span style="color: #008000; font-weight: bold">print</span>(key, <span style="color: #BA2121">&quot;:&quot;</span>, value)
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">player_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 
-<span style="color: #008000; font-weight: bold">print</span>(<span style="color: #BA2121">&quot;&quot;</span>)
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
-<span style="color: #408080; font-style: italic"># you can also delete items too</span>
-<span style="color: #008000; font-weight: bold">del</span> player_data[<span style="color: #BA2121">&quot;Height&quot;</span>]
+<span class="c1"># you can also delete items too</span>
+<span class="k">del</span> <span class="n">player_data</span><span class="p">[</span><span class="s2">&quot;Height&quot;</span><span class="p">]</span>
 
-<span style="color: #008000; font-weight: bold">for</span> key, value <span style="color: #AA22FF; font-weight: bold">in</span> player_data<span style="color: #666666">.</span>items():
-    <span style="color: #008000; font-weight: bold">print</span>(key, <span style="color: #BA2121">&quot;:&quot;</span>, value)
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">player_data</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 </pre></div>
-
+</td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span>$ python dictionary_practice.py
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python dictionary_practice.py
 Jack
 Wildcats
 3 
@@ -750,7 +806,7 @@ Team : Wildcats
 Wins : 4
 $
 </pre></div>
-
+</td></tr></table>
 
 <h3 id="dictionaries">Dictionaries</h3>
 <p>A dictionary is a mapping type, that is, a data type that takes one kind of object and connects it to another. In other programming languages this is Dictionaries are nothing short of magic in programming for their efficiency and usefulness. A dictionary can be like a mini database or a convenient way to describe almost any object.</p>

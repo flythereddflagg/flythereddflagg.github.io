@@ -56,8 +56,8 @@
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
-        <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
@@ -732,175 +732,335 @@
 <p>The following are two files that you will copy-paste into separate text files. The names of these files are indicated at the top. These files serve as a sort of skeleton of a project you must complete using all you have learned so far. Take your time and get this project working as well as you possibly can. As always, the more you put into this the more you will get out of the experience. More specific information about the files is given below. Many of the same principles from your first project apply here. </p>
 <p>I have left multi-line comments under each label to guide your implimentation of this project. Do not delete these as these are the subject of the next section.</p>
 <h4 id="the-database-manager-file">The Database Manager File</h4>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># database_manager.py</span>
-<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">json</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># database_manager.py</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">DatabaseManager</span>():
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Manages all aspects of the database including how and where data are stored.</span>
-<span style="color: #BA2121; font-style: italic">    This database is contact list consisting of a collection of names with</span>
-<span style="color: #BA2121; font-style: italic">    corresponding phone numbers and email addresses. This may be implimented as a</span>
-<span style="color: #BA2121; font-style: italic">    dictionary (which sorts the list automatically) or a list. The exact structure </span>
-<span style="color: #BA2121; font-style: italic">    of the database is up to you but it might be a good idea to find out how others</span>
-<span style="color: #BA2121; font-style: italic">    have done first.</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, filename):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Loads the database based on the passed in filename. The database should</span>
-<span style="color: #BA2121; font-style: italic">        come from a .json file and be stored in the class as a dictionary. This</span>
-<span style="color: #BA2121; font-style: italic">        should call self.load_database() as its last step.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+<span class="k">class</span> <span class="nc">DatabaseManager</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Manages all aspects of the database including how and where data are stored.</span>
+<span class="sd">    This database is contact list consisting of a collection of names with</span>
+<span class="sd">    corresponding phone numbers and email addresses. This may be implimented as a</span>
+<span class="sd">    dictionary (which sorts the list automatically) or a list. The exact structure </span>
+<span class="sd">    of the database is up to you but it might be a good idea to find out how others</span>
+<span class="sd">    have done first.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads the database based on the passed in filename. The database should</span>
+<span class="sd">        come from a .json file and be stored in the class as a dictionary. This</span>
+<span class="sd">        should call self.load_database() as its last step.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">load_database</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Loads the database from a .json file using Python&#39;s built in json </span>
-<span style="color: #BA2121; font-style: italic">        package. If the filename does not exist it should make an empty database</span>
-<span style="color: #BA2121; font-style: italic">        and call self.save_database() to write the new database.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">load_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Loads the database from a .json file using Python&#39;s built in json </span>
+<span class="sd">        package. If the filename does not exist it should make an empty database</span>
+<span class="sd">        and call self.save_database() to write the new database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">save_database</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Saves the database to a .json file using Python&#39;s built-in json package.</span>
-<span style="color: #BA2121; font-style: italic">        This should be called any time the database is altered.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">save_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Saves the database to a .json file using Python&#39;s built-in json package.</span>
+<span class="sd">        This should be called any time the database is altered.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">add_item</span>(<span style="color: #008000">self</span>, entry):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Adds and organizes an &#39;entry&#39; consisting of an name, phone number and </span>
-<span style="color: #BA2121; font-style: italic">        email to the database it then saves the database.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">add_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds and organizes an &#39;entry&#39; consisting of an name, phone number and </span>
+<span class="sd">        email to the database it then saves the database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">remove_item</span>(<span style="color: #008000">self</span>, name):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Removes an entry with ID &#39;name&#39; from the database and then saves </span>
-<span style="color: #BA2121; font-style: italic">        the database.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">remove_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Removes an entry with ID &#39;name&#39; from the database and then saves </span>
+<span class="sd">        the database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_database</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Returns a reference or a copy of the database in some form to be </span>
-<span style="color: #BA2121; font-style: italic">        used elsewhere.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">get_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a reference or a copy of the database in some form to be </span>
+<span class="sd">        used elsewhere.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__repr__</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Returns a string representation of the database. With this, the database</span>
-<span style="color: #BA2121; font-style: italic">        may be printed or otherwise represented.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Returns a string representation of the database. With this, the database</span>
+<span class="sd">        may be printed or otherwise represented.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">test_dbman</span>():
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    A test function to ensure the database class performed as expected</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    <span style="color: #008000; font-weight: bold">pass</span>
+<span class="k">def</span> <span class="nf">test_dbman</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A test function to ensure the database class performed as expected</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span>
 
 
-<span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;__main__&quot;</span>:
-    test_dbman()
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_dbman</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>This file implements a class that will manage the database. The user interface class must have a reference to an instance of this class in the form of a class variable inside the <code>UserInterface</code> object (i.e. <code>self.dbman</code>) so that it can access all its methods. For this exercise you may use any format you wish. However, for this simple example I recommend using JavaScript Object Notation or JSON. I recommend this because Python has an excellent JSON library for storing data and JSON conveniently translates to common python objects such as dictionaries, lists, strings etc. You can learn how to use both the load and save features by looking at the corresponding Python documentation <a href="https://docs.python.org/3/library/json.html#basic-usage">here</a> and reading about <code>json.load()</code> and <code>json.dump()</code>. The documentation strings under each label explain what should be implemented. Feel free to use your own creativity and what you have learned to implement this class. Finally, do not hesitate to add any methods or  make changes to names as you see fit. The <code>test_dbman()</code> function is there to allow you to test the class by itself before using it in the user interface. </p>
 <h4 id="the-user-interface-file">The User Interface File</h4>
-<div class="codehilite" style="background: #f8f8f8"><pre style="line-height: 125%"><span></span><span style="color: #408080; font-style: italic"># user_interface.py</span>
-<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">database_manager</span> <span style="color: #008000; font-weight: bold">import</span> DatabaseManager
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># user_interface.py</span>
+<span class="kn">from</span> <span class="nn">database_manager</span> <span class="kn">import</span> <span class="n">DatabaseManager</span>
 
 
-<span style="color: #008000; font-weight: bold">class</span> <span style="color: #0000FF; font-weight: bold">UserInterface</span>():
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    Allows the user to access and use the features of the database without </span>
-<span style="color: #BA2121; font-style: italic">    having to know how to program.</span>
-<span style="color: #BA2121; font-style: italic">    The user should be allowed to do a few basic things:</span>
-<span style="color: #BA2121; font-style: italic">     - view the database</span>
-<span style="color: #BA2121; font-style: italic">     - add an entry to the database</span>
-<span style="color: #BA2121; font-style: italic">     - remove an entry from the database</span>
-<span style="color: #BA2121; font-style: italic">     - export the database to a human-readable text file</span>
-<span style="color: #BA2121; font-style: italic">     - exit the program</span>
+<span class="k">class</span> <span class="nc">UserInterface</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Allows the user to access and use the features of the database without </span>
+<span class="sd">    having to know how to program.</span>
+<span class="sd">    The user should be allowed to do a few basic things:</span>
+<span class="sd">     - view the database</span>
+<span class="sd">     - add an entry to the database</span>
+<span class="sd">     - remove an entry from the database</span>
+<span class="sd">     - export the database to a human-readable text file</span>
+<span class="sd">     - exit the program</span>
 
-<span style="color: #BA2121; font-style: italic">    Provided the user can do these thing easily and reliably, the program is</span>
-<span style="color: #BA2121; font-style: italic">    successful.</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+<span class="sd">    Provided the user can do these thing easily and reliably, the program is</span>
+<span class="sd">    successful.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">__init__</span>(<span style="color: #008000">self</span>, dbman):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        sets up the UI and sets the self.dbman = dbman so the database may be</span>
-<span style="color: #BA2121; font-style: italic">        accessed.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
-
-
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">mainloop</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Runs the mainloop of the program. This should include the following</span>
-<span style="color: #BA2121; font-style: italic">        steps:</span>
-<span style="color: #BA2121; font-style: italic">            1 - display information</span>
-<span style="color: #BA2121; font-style: italic">            2 - prompt the user for input</span>
-<span style="color: #BA2121; font-style: italic">            3 - process the input to get new information to display</span>
-
-<span style="color: #BA2121; font-style: italic">        This also must exit the program when the user commands.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dbman</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        sets up the UI and sets the self.dbman = dbman so the database may be</span>
+<span class="sd">        accessed.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">display</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        gets and displays information as given by the self.execute function.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">mainloop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Runs the mainloop of the program. This should include the following</span>
+<span class="sd">        steps:</span>
+<span class="sd">            1 - display information</span>
+<span class="sd">            2 - prompt the user for input</span>
+<span class="sd">            3 - process the input to get new information to display</span>
+
+<span class="sd">        This also must exit the program when the user commands.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_input</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Accepts user input by calling the built-in input() function</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        gets and displays information as given by the self.execute function.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">execute</span>(<span style="color: #008000">self</span>):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Uses the information form user input to execute the program including</span>
-<span style="color: #BA2121; font-style: italic">        accessing self.dbman to use database commands.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>
+    <span class="k">def</span> <span class="nf">get_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Accepts user input by calling the built-in input() function</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-    <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">export</span>(<span style="color: #008000">self</span>, filename):
-        <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">        Writes the database to a file pointed to by the variable &#39;filename&#39;.</span>
-<span style="color: #BA2121; font-style: italic">        May use a string representation of the database.</span>
-<span style="color: #BA2121; font-style: italic">        &quot;&quot;&quot;</span>
-        <span style="color: #008000; font-weight: bold">pass</span>   
+    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Uses the information form user input to execute the program including</span>
+<span class="sd">        accessing self.dbman to use database commands.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>
 
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">run_ui_test</span>():
-    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;</span>
-<span style="color: #BA2121; font-style: italic">    This runs a UI test if we run it</span>
-<span style="color: #BA2121; font-style: italic">    as the main Python program</span>
-<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
-    db_manager <span style="color: #666666">=</span> DatabaseManager(<span style="color: #BA2121">&#39;data.json&#39;</span>)
-    ui <span style="color: #666666">=</span> UserInterface(db_manager)
-    ui<span style="color: #666666">.</span>mainloop()
+    <span class="k">def</span> <span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Writes the database to a file pointed to by the variable &#39;filename&#39;.</span>
+<span class="sd">        May use a string representation of the database.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">pass</span>   
 
-<span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;__main__&#39;</span>:
-    run_ui_test()
+
+<span class="k">def</span> <span class="nf">run_ui_test</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    This runs a UI test if we run it</span>
+<span class="sd">    as the main Python program</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">db_manager</span> <span class="o">=</span> <span class="n">DatabaseManager</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">)</span>
+    <span class="n">ui</span> <span class="o">=</span> <span class="n">UserInterface</span><span class="p">(</span><span class="n">db_manager</span><span class="p">)</span>
+    <span class="n">ui</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">run_ui_test</span><span class="p">()</span>
 </pre></div>
-
+</td></tr></table>
 
 <p>This file uses the <code>DatabaseManager</code> class to access the JSON files in a simple way. The user interface should contain a main-loop structure explained in the <a href="../25-Do-a-Project/">Do a Project</a> section. Try to make the user interface as intuitive and easy to use as possible. Again, the documentation strings under each label explain what should be implemented. Also as above, use your own creativity and what you have learned and add any methods or changes as you see fit. The <code>run_ui_test()</code> function is there to initiate the program. </p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
