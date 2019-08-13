@@ -54,9 +54,9 @@ theme:
     name: 'material'
     palette:
         primary: 'blue grey'
-        accent: 'grey'
+        accent: 'deep orange'
     font:
-        text: 'Roboto Slab'
+        text: 'Roboto'
         code: 'Source Code Pro'
     logo:
         icon: 'home'
