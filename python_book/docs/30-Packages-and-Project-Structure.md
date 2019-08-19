@@ -109,7 +109,7 @@ This will be covered in the next section.
 ## Hone Your Skills
 
 - if you haven't already, now would be a good time to turn the documentation in your docstrings into a human readable manual. If you are unsure where to start, try using [pydoc](https://docs.python.org/3.7/library/pydoc.html) and invoke it by using `python -m pydoc`. (Enter `python --help` to get an idea of how this works).
-- Begin building your own project! Have an idea you want to see? Start by building a similar project structure as above but replace every instance of `emails` with the name of your own project. Begin fleshing out what you want to see from this project. 
+- Begin building your own project! Have an idea you want to implement? Start by building a similar project structure as above but replace every filename instance of `emails` with the name of your own project. Begin fleshing out what you want to see from this project. 
 
 
 <!-- Navigation -->
