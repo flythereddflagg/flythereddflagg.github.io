@@ -28,6 +28,18 @@ def add_nav(nav_root_dir):
         
     nav_files = sorted(nav_files)
     
+    yml_nav = []
+    for file in nav_files:
+        if "README" in nav_files[i] or \
+            "Table of Contents" in nav_files[i] or \
+            "index" in nav_files[i]:
+            continue
+        file_words = file[:-3].split('-')
+        yml_nav.append(f"    - {int(file_words[0])}."\
+                    f" {' '.join(file_words[1:])}: './{file}'\n")
+    
+    for # continue here to add to yml
+    
     for i in range(len(nav_files)):
         if "README" in nav_files[i] or \
             "Table of Contents" in nav_files[i] or \

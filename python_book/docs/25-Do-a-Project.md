@@ -18,7 +18,7 @@ Have fun with this. Think about why you started this in the first place. This ma
 
 Before you begin coding you should make sure you are styling your code correctly. Up to now you should have been following my code along and styling it as I have in each example. To make your code easy to debug and easy to read as possible you should continue to use good style practices in Python. 
 
-Before doing any coding, read Python's style guide called [PEP-8](https://www.python.org/dev/peps/pep-0008/#introduction). Commit to using these conventions to make your code readable and easier to debug. Once you have practiced this style enough you will be able to follow and debug your code much more easily. 
+Before doing any coding, read Python's style guide called [PEP-8](https://www.python.org/dev/peps/pep-0008/#introduction). Commit to using these conventions to make your code readable and easier to debug. Once you have practiced this style you will be able to follow and debug your code much more easily. 
 
 ## Debugging
 

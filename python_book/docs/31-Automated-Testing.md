@@ -22,7 +22,7 @@ At the time of writing, the original `nose` package has been replaced by `nose2`
 
 `nose2` works by being called in your project's root directory and searching for folders and files with names beginning with 'test'. It then runs all functions with names beginning with 'test'. If no errors occur then it gives them a pass. It then reports back what passed and what failed. The general failure conditions are 'E' for error and 'F' for assertion error. The `assert` statement is the way an assertion error is raised.
 
-### `assert`
+### The `assert` statement
 
 Open up an interactive Python prompt and practice with the `assert` statement.
 
@@ -52,21 +52,94 @@ AssertionError: x is not y!
 
 From this you should quickly gather that the assert statement checks the Boolean truth value of the expression after it and then does nothing if it is true and raises an `AssertionError` if it is false. If a string message is included by separated commas then it will print that message out with the `AssertionError`. Many automated testing packages use this feature to test packages. Use this as much as you can. It will help you code more efficiently and effectively.
 
-### Install `nose`
+### Install `nose2`
 
-asdf
+Go to your terminal and install `nose2` using `pip`.
+
+```
+$ pip install nose2 --user
+```
+
+Remember that to install Python packages with `pip` it is best to just use the `--user` option to avoid permission errors that can occur on operating systems.
 
 ### Make your tests
 
-afds
+Put the following file in the `tests` directory of your project. Write out the following tests:
 
-### Run `nose`
+```python
+# tests/test_general.py
+from emails.database_manager import DatabaseManager
+from emails.user_interface import UserInterface
+import os
+
+
+def test_dbman():
+    filename = 'data.json'
+    name = "./joe manyouare"
+    data = [name, 29382984, "coolguy@glasdkfj.com"]
+    
+    dbman = DatabaseManager(filename)  
+    dbman.add_item(data)
+    assert name in dbman.__repr__(), "Name not added!"
+    
+    dbman.remove_item(name)
+    assert not(name in dbman.__repr__())
+    os.remove(filename) # clean up the file afterward
+    
+
+def test_ui_export():
+    filename = 'data.json'
+    name = "joe manyouare"
+    export = 'data.txt'
+    data = [name, 29382984, "coolguy@glasdkfj.com"]
+    
+    dbman = DatabaseManager(filename)
+    ui = UserInterface(dbman)
+    dbman.add_item(data)
+    ui.export(export)
+    
+    try:
+        with open(export, 'r') as f:
+            contents = f.read()
+        export_exists = True
+    except FileNotFoundError:
+        export_exists = False
+    
+    assert export_exists
+    
+    os.remove(filename)
+    os.remove(export) # clean up the file afterward
+
+```
+
+This file may vary somewhat depending on how you impliemented your `emails` project. If you find your implimentation cannot pass these tests because you structured your project differently, make approprate changes so that these tests test the "add/remove" functionality of your database manager and the "export" functionality of your user interface.
+
+### Run `nose2`
+
+Now from the root directory of your project run the following commands:
+
+```bash
+$ nose2
+..
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+$
+```
+
+If you get the above output, congradulations! Your tests all passed! 
+
+### Your Assignment
+
+Write more tests in separate functions to ensure that as many parts of the program are working as possible. If your tests fail, use the principles in the "Do a project" section to debug and fix those problems.  Continue using `nose2` to test your program as a whole until your program is free of bugs.
 
 ## Hone Your Skills
 
 - Use automated testing to drive your development from here on out. Write tests before you write code that do what you want the code to do. Once you have done this, write code that passes those tests.
+- Check out the documentation on `nose2` to see how you can better test your programs [here](https://docs.nose2.io/en/latest/).
 - Try out other automated testing packages to test your package. You can test some like `py.test` or `unittest` or find others via an internet search.
-- Write a script that does the same thing as `nose` have it walk through all the subfolders of a folder and catch all the errors it finds and report back to the user.
+- Write a script that does the same thing as `nose` have it walk through all the subfolders of a folder and catch all the errors it finds and report back to the user.
 
 <!-- Navigation -->
 

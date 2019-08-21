@@ -1,8 +1,9 @@
 site_name: The Redd Python Book
 nav:
-# start nav
+
     - Home: 'index.md'
     - Table of Contents: '00-Table-of-Contents.md'
+# start nav
     - 1. Intro and How to Use This Book: './01-Intro-and-How-to-Use-This-Book.md'
     - 2. Getting Started: './02-Getting-Started.md'
     - 3. CLI: './03-CLI.md'

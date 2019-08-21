@@ -184,25 +184,35 @@ These are just a surface look at each of these libraries but don't worry too muc
 
 Any package in the Python Standard Library is written and endorsed by the creators and maintainers of Python. However, there is an enormous number of libraries that are written and maintained by thousands of programmers everywhere. These are sometimes called third-party libraries or packages and are available for quick download and installation through a handy software called `pip` which is built-in to your standard Python 3 installation.
 
-Let's practice with it here by installing a package called `nose`. Open your command line and enter
-
- `pip install nose`:
+Let's practice with it here by installing a package called `nose`. Open your command line and the following:
 
 ```bash
-$ pip install nose
+$ pip install nose --user
 <a bunch of text>
 Successfully installed nose-1.3.7
 $ 
 ```
 
-`nose` is a package that allows you to write tests for larger programs. If you see something like `Successfully installed nose-1.3.7` then the package installed correctly.
+The `--user` option tells `pip` to install the package only for the current user. This avoids certain permission problems that can occur on your operating system. If you see something like `Successfully installed nose-1.3.7` then the package installed correctly. `nose` is a package that allows you to write tests for larger programs. However, it is not actively being maintained so we don't need it. Since this was just for practice anyway, let's uninstall it. Uninstall the package by using the following command:
+
+```bash
+$ pip uninstall nose
+Uninstalling nose-1.3.7:
+  Would remove:
+    <list of files that will be removed>
+Proceed (y/n)? y
+  Successfully uninstalled nose-1.3.7
+$
+```
+
+Likewise if you see something like ` Successfully uninstalled nose-1.3.7` the package was removed successfully.
 
 Skim the basic commands of pip [here](https://pip.pypa.io/en/stable/quickstart/) and use them to install libraries/packages when you need them. We will install more packages later once we get further along.
 
 ## Hone Your Skills
 
 - The [Python Standard Library](https://docs.python.org/3/library/) is a good reference to get an idea of all the things that Python can do without even including third-party libraries and packages. Read the general statement at the beginning of the linked page and browse the index looking for 2 or 3 things that interest you. Begin to experiment with them and see if you can pick up how they work.
-
+- There are hundereds of libraries in the [Python Package Index](https://pypi.org/). Follow that link and look around for packages that look interesting and try installing them and using them. For practice, can you find, install and use a package that opens a game of [tetris](https://en.wikipedia.org/wiki/Tetris) in your terminal?
 - Consider the following function definition from  `import_practice.py`:
 
 ```python

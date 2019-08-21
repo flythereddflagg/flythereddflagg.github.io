@@ -174,7 +174,7 @@ class UserInterface():
 
     def export(self, filename):
         """
-        Writes the database to a file pointed to by the variable 'filename'.
+        Writes the database to a file with the path: 'filename'.
         May use a string representation of the database.
         """
         pass   
