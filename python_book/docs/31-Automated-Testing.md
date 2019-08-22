@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: index](./index.md)
+[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32-Do-Another-Project](./32-Do-Another-Project.md)
 
 ---
 <!-- End Navigation -->
@@ -112,7 +112,7 @@ def test_ui_export():
 
 ```
 
-This file may vary somewhat depending on how you impliemented your `emails` project. If you find your implimentation cannot pass these tests because you structured your project differently, make approprate changes so that these tests test the "add/remove" functionality of your database manager and the "export" functionality of your user interface.
+This file may vary somewhat depending on how you implemented your `emails` project. If you find your implementation cannot pass these tests because you structured your project differently, make appropriate changes so that these tests test the "add/remove" functionality of your database manager and the "export" functionality of your user interface.
 
 ### Run `nose2`
 
@@ -128,24 +128,27 @@ OK
 $
 ```
 
-If you get the above output, congradulations! Your tests all passed! 
+If you get the above output, congratulations! Your tests all passed! 
 
 ### Your Assignment
 
-Write more tests in separate functions to ensure that as many parts of the program are working as possible. If your tests fail, use the principles in the "Do a project" section to debug and fix those problems.  Continue using `nose2` to test your program as a whole until your program is free of bugs.
+Write more tests in separate functions to ensure that as many parts of the program are working as possible. If your tests fail, use the principles in the "Do a project" section to debug and fix those problems.  Continue using `nose2` to test your program as a whole until your program is free of bugs. Make multiple test modules to test different sub sections of your code. In each file make multiple tests that test individual units of the module. Remember that each filename must begin with "test" and each variable name must also begin with "test".
 
 ## Hone Your Skills
 
 - Use automated testing to drive your development from here on out. Write tests before you write code that do what you want the code to do. Once you have done this, write code that passes those tests.
-- Check out the documentation on `nose2` to see how you can better test your programs [here](https://docs.nose2.io/en/latest/).
+- Check out the documentation on `nose2` to see how you can better test your programs [here](https://docs.nose2.io/en/latest/).
 - Try out other automated testing packages to test your package. You can test some like `py.test` or `unittest` or find others via an internet search.
+
+## Advanced Mastery
+
 - Write a script that does the same thing as `nose` have it walk through all the subfolders of a folder and catch all the errors it finds and report back to the user.
 
 <!-- Navigation -->
 
 ---
 
-[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: index](./index.md)
+[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32-Do-Another-Project](./32-Do-Another-Project.md)
 
 ---
 <!-- End Navigation -->

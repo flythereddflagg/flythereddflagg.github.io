@@ -1,5 +1,4 @@
 # Table of Contents
-1. [Table-of-Contents](./00-Table-of-Contents.md)
 1. [Intro-and-How-to-Use-This-Book](./01-Intro-and-How-to-Use-This-Book.md)
 1. [Getting-Started](./02-Getting-Started.md)
 1. [CLI](./03-CLI.md)
@@ -31,3 +30,4 @@
 1. [Comments-and-Code-Documentation](./29-Comments-and-Code-Documentation.md)
 1. [Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md)
 1. [Automated-Testing](./31-Automated-Testing.md)
+1. [Do-Another-Project](./32-Do-Another-Project.md)

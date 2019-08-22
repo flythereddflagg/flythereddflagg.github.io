@@ -70,7 +70,7 @@ To that end, I have the following goals in mind while writing this book:
     With that said, you may find that you reach your 20-hour mark and are not
     finished with the book in terms of learning the basics. That is okay. You
     may find that a reasonable amount of proficiency is possible in less than
-    20 hours. That is also okay. Learn at your own pace, but understand that 
+    20 hours. That is also okay. Learn at your own pace, but understand that
     10,000 hours of coding is NOT required to gain amazing benefits from coding.
 
 Okay, that is my soap box on the principles of this book. I will do my best to 

@@ -32,6 +32,8 @@
 1. Modules
 1. Comments and code documentation
 1. Packages and Project structure
+1. Automated Testing
+1. Do another project
 
 
 
@@ -45,6 +47,5 @@
 1. Websites (flask or django or web.py)
 1. Games
 1. Databases and SQL
-1. Do another project
 
 

@@ -30,19 +30,35 @@ def add_nav(nav_root_dir):
     
     yml_nav = []
     for file in nav_files:
-        if "README" in nav_files[i] or \
-            "Table of Contents" in nav_files[i] or \
-            "index" in nav_files[i]:
+        if "README" in file or \
+            "Table-of-Contents" in file or \
+            "index" in file:
             continue
         file_words = file[:-3].split('-')
         yml_nav.append(f"    - {int(file_words[0])}."\
                     f" {' '.join(file_words[1:])}: './{file}'\n")
     
-    for # continue here to add to yml
+    with open("mkdocs.yml", 'r') as f:
+        content = f.readlines()
+    
+    new_content = []
+    new_nav = False
+    for line in content:
+        if "# start nav" in line:
+            new_content.append(line)
+            new_content.extend(yml_nav)
+            new_nav = True
+        if "# end nav" in line:
+            new_nav = False
+        if not new_nav:
+            new_content.append(line)
+            
+    with open("mkdocs.yml", 'w') as f:
+        f.write("".join(new_content))
     
     for i in range(len(nav_files)):
         if "README" in nav_files[i] or \
-            "Table of Contents" in nav_files[i] or \
+            "Table-of-Contents" in nav_files[i] or \
             "index" in nav_files[i]:
             continue
         
