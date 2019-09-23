@@ -36,7 +36,7 @@
     
     
       
-        <title>11. Input and Output - The Redd Python Book</title>
+        <title>32. Do Another Project - The Redd Python Book</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#11-input-and-output" tabindex="1" class="md-skip">
+      <a href="#32-do-another-project" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                11. Input and Output
+                32. Do Another Project
               
             </span>
           
@@ -320,62 +320,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        11. Input and Output
-      </label>
-    
-    <a href="./" title="11. Input and Output" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../11-Input-and-Output/" title="11. Input and Output" class="md-nav__link">
       11. Input and Output
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#do-a-mini-project" class="md-nav__link">
-    Do a mini project
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#the-wacky-stories-game" class="md-nav__link">
-    The Wacky Stories Game
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -623,11 +572,62 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../32-Do-Another-Project/" title="32. Do Another Project" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        32. Do Another Project
+      </label>
+    
+    <a href="./" title="32. Do Another Project" class="md-nav__link md-nav__link--active">
       32. Do Another Project
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-specifications" class="md-nav__link">
+    Project Specifications
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-final-note" class="md-nav__link">
+    A Final Note
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -652,16 +652,16 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#do-a-mini-project" class="md-nav__link">
-    Do a mini project
+  <a href="#project-specifications" class="md-nav__link">
+    Project Specifications
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#the-wacky-stories-game" class="md-nav__link">
-    The Wacky Stories Game
+  <a href="#a-final-note" class="md-nav__link">
+    A Final Note
   </a>
   
 </li>
@@ -691,78 +691,37 @@
                 <!-- Navigation -->
 
 <hr />
-<p><a href="../10-Better-String-Formatting/">Previous: 10-Better-String-Formatting</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../12-Math-and-Data/">Next: 12-Math-and-Data</a></p>
+<p><a href="../31-Automated-Testing/">Previous: 31-Automated-Testing</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="..">Next: index</a></p>
 <hr />
 <!-- End Navigation -->
 
-<h1 id="11-input-and-output">11 - Input and Output</h1>
-<p>Up to now, we have had our scripts take pre-determined input and turn it into output in the form of text printed to the console screen. Our script does nothing else.  What if we want to be able to do more than that? What if we want to interact with the user? In this lesson we will cover getting and using user input.</p>
-<p>Lets start with this exercise:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># input_output.py</span>
-
-<span class="c1"># use input() to get user input</span>
-<span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name      : &quot;</span><span class="p">)</span>
-<span class="n">user_age</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your age       : &quot;</span><span class="p">)</span>
-<span class="n">user_job</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your occupation: &quot;</span><span class="p">)</span>
-
-<span class="c1"># let&#39;s print out what we got from the user</span>
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Hello {user_name}! You are {user_age} years old.&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;You work as a/an {user_job}.&quot;</span><span class="p">)</span>
-</pre></div>
-</td></tr></table>
-
-<p><strong>Here is what should happen</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python io_files.py
-Enter your name      : John Doe
-Enter your age       : 30
-Enter your occupation: Panda Caretaker
-Hello John Doe! You are 30 years old.
-You work as a/an Panda Caretaker.
-$
-</pre></div>
-</td></tr></table>
-
-<p><strong>What is happening here?</strong> </p>
-<p>As you can see the built-in <code>input</code> function allows you to take user data and store it in variables. Whatever the user enters into the input is saved as a string and you can then do what you wish with it.</p>
-<h3 id="do-a-mini-project">Do a mini project</h3>
-<p>With this capability, we can start to write programs that can be used by someone other than the programmer! 
-To get you used to this I want you to write your first independent program.</p>
-<p>You can do any project you want using everything you have learned so far. If you have something you really want to do, go for it. I only ask that you do the following in your project:</p>
+<h1 id="32-do-another-project">32 - Do Another Project</h1>
+<p>If you have reached this point, you are almost finished with the course of this book! You should have had many opportunities to code simple projects and see how they work. Your "final exam" for this course is to do another project.</p>
+<h2 id="project-specifications">Project Specifications</h2>
+<p>Like everything else in this book you will get the most out of your experience if you build something that interests you. Whether this project is a game, a small database manager, a website does not matter compared to your interest in this project. There will be appendix chapters following this section covering topics that may help you get started on your project. For this project use the following to create your project:</p>
 <ul>
-<li>Use some format statements</li>
-<li>Use the input function</li>
+<li>Use classes and object-oriented programming to structure your data.</li>
+<li>Build automatic tests as you go. Use the principles of test-driven development to make your project as robust and usable as you can.</li>
+<li>Focus on the user experience. We haven't talked much about this but you should put some thought into how easy it is to use your software. Try to make it as easy to use as possible.</li>
+<li>Make the project as fully featured as you can. Flesh out every feature you can.</li>
+<li>Get feedback. This means working with others to try your software and give you criticism. Try to improve your software based on this criticism.</li>
 </ul>
-<p>Beyond that you can do any project you want. If you do not know what you want to do I will suggest the following project.</p>
-<h4 id="the-wacky-stories-game">The Wacky Stories Game</h4>
-<p>You may have heard of the game <a href="http://www.madlibs.com">Mad Libs</a>. This is a similar concept that you will implement yourself.</p>
-<p>The rules of the game are simple. Take a short story like the following:</p>
-<p><em>Jake and John went fishing. While in the boat, Jake got a bite on his line and pulled up the biggest fish either of the men had ever seen. John exclaimed, "Now that is a fish!" The men took it home and made fish and chips.</em></p>
-<p>The story should be a bit longer but for our purposes this will do. You'll notice that this story is rather mundane so we are going to make it wacky! Take the text of the story and replace key words from the story with a prompt for the type of word in parentheses.</p>
-<p><em>(Name of person in the room[person 1]) and (Name of different person in the room[person 2]) went (verb ending in 'ing'). While in the (noun), (person 1) got a (noun) on his/her (noun) and pulled up the (superlative adjective) (noun) either of the (plural animal) had ever seen. (person 2) exclaimed, "Now that is a (noun)!" The (plural animal) took it home and made (plural noun).</em></p>
-<p>Prompt the user for each unique word and save each of these to a variable. Then using what you have learned, print out the complete story with the users words in place of the omitted words so you could get a story like:</p>
-<p><em>Jill and Mark went farming. While in the needle, Jill
-got a Canned air on his/her guitar and pulled up the greatest germ
-either of the sloths had ever seen. Mark exclaimed, "Now that
-is a gift card!" The cockroaches took it home and made slides.</em></p>
+<p>Once you have finished and completely debugged your project according to the above specifications, congratulations! You have finished the main content of this book! The rest of the content of this book is to help you get started in a direction that interests you.</p>
+<h3 id="a-final-note">A Final Note</h3>
+<p>As you have finished learning the "basics" of Python, I want to let you know that you have only scratched the surface of what is possible. I do not say this to discourage you but to let you know that <a href="https://www.youtube.com/watch?v=535Zy_rf4NU">"you've taken your first step into a larger world"</a>.  The ability to program will allow you to do more with your computer that you thought possible. Such was the case for me.</p>
+<p>My hope is that, if you have gotten to this point, at least some of the following things have happened for you:</p>
+<ul>
+<li>You have ideas about projects you could do later with your newfound skills</li>
+<li>Computers seem less scary or intimidating for you</li>
+<li>You have a solid foundation of a skill set you need for professional work</li>
+<li>You have learned some new problem-solving skills</li>
+</ul>
+<p>Looking back, I found these things to be true for me. I was so excited about everything I had learned I wanted to give that to anyone else who was interested. This book is the result of that excitement. I hope you benefited from it.</p>
+<p>Now go out there and make something amazing!</p>
 <!-- Navigation -->
 
 <hr />
-<p><a href="../10-Better-String-Formatting/">Previous: 10-Better-String-Formatting</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../12-Math-and-Data/">Next: 12-Math-and-Data</a></p>
+<p><a href="../31-Automated-Testing/">Previous: 31-Automated-Testing</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="..">Next: index</a></p>
 <hr />
 <!-- End Navigation -->
                 
@@ -785,7 +744,7 @@ is a gift card!" The cockroaches took it home and made slides.</em></p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../10-Better-String-Formatting/" title="10. Better String Formatting" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../31-Automated-Testing/" title="31. Automated Testing" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -794,25 +753,11 @@ is a gift card!" The cockroaches took it home and made slides.</em></p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                10. Better String Formatting
+                31. Automated Testing
               </span>
             </div>
           </a>
         
-        
-          <a href="../12-Math-and-Data/" title="12. Math and Data" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                12. Math and Data
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

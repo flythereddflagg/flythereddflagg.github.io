@@ -25,7 +25,18 @@ Once you have finished and completely debugged your project according to the abo
 
 ### A Final Note
 
-As you have finished learning the "basics" of Python, I want to let you know that you have only scratched the surface of what is possible. I do not say this to discourage you but to let you know that "you've taken your first steps into a larger world".  The ability to program will allow you to do 
+As you have finished learning the "basics" of Python, I want to let you know that you have only scratched the surface of what is possible. I do not say this to discourage you but to let you know that ["you've taken your first step into a larger world"](https://www.youtube.com/watch?v=535Zy_rf4NU).  The ability to program will allow you to do more with your computer that you thought possible. Such was the case for me.
+
+My hope is that, if you have gotten to this point, at least some of the following things have happened for you:
+
+- You have ideas about projects you could do later with your newfound skills
+- Computers seem less scary or intimidating for you
+- You have a solid foundation of a skill set you need for professional work
+- You have learned some new problem-solving skills
+
+Looking back, I found these things to be true for me. I was so excited about everything I had learned I wanted to give that to anyone else who was interested. This book is the result of that excitement. I hope you benefited from it.
+
+Now go out there and make something amazing!
 
 <!-- Navigation -->
 

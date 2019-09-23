@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -153,7 +153,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -493,28 +493,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#imports" title="Imports" class="md-nav__link">
+  <a href="#imports" class="md-nav__link">
     Imports
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-libraries" title="Standard Libraries" class="md-nav__link">
+  <a href="#standard-libraries" class="md-nav__link">
     Standard Libraries
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-more-libraries-and-packages" title="Getting More Libraries and Packages" class="md-nav__link">
+  <a href="#getting-more-libraries-and-packages" class="md-nav__link">
     Getting More Libraries and Packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hone-your-skills" title="Hone Your Skills" class="md-nav__link">
+  <a href="#hone-your-skills" class="md-nav__link">
     Hone Your Skills
   </a>
   
@@ -627,6 +627,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../32-Do-Another-Project/" title="32. Do Another Project" class="md-nav__link">
+      32. Do Another Project
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -648,28 +660,28 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#imports" title="Imports" class="md-nav__link">
+  <a href="#imports" class="md-nav__link">
     Imports
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#standard-libraries" title="Standard Libraries" class="md-nav__link">
+  <a href="#standard-libraries" class="md-nav__link">
     Standard Libraries
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#getting-more-libraries-and-packages" title="Getting More Libraries and Packages" class="md-nav__link">
+  <a href="#getting-more-libraries-and-packages" class="md-nav__link">
     Getting More Libraries and Packages
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hone-your-skills" title="Hone Your Skills" class="md-nav__link">
+  <a href="#hone-your-skills" class="md-nav__link">
     Hone Your Skills
   </a>
   
@@ -975,28 +987,41 @@ $
 <p>These are just a surface look at each of these libraries but don't worry too much about learning every library. I have never had occasion to use many of the standard libraries but they are a great starting place for accomplishing complex tasks more easily.</p>
 <h3 id="getting-more-libraries-and-packages">Getting More Libraries and Packages</h3>
 <p>Any package in the Python Standard Library is written and endorsed by the creators and maintainers of Python. However, there is an enormous number of libraries that are written and maintained by thousands of programmers everywhere. These are sometimes called third-party libraries or packages and are available for quick download and installation through a handy software called <code>pip</code> which is built-in to your standard Python 3 installation.</p>
-<p>Let's practice with it here by installing a package called <code>nose</code>. Open your command line and enter</p>
-<p><code>pip install nose</code>:</p>
+<p>Let's practice with it here by installing a package called <code>nose</code>. Open your command line and the following:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
-4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ pip install nose
+4</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ pip install nose --user
 &lt;a bunch of text&gt;
 Successfully installed nose-1.3.7
 $ 
 </pre></div>
 </td></tr></table>
 
-<p><code>nose</code> is a package that allows you to write tests for larger programs. If you see something like <code>Successfully installed nose-1.3.7</code> then the package installed correctly.</p>
+<p>The <code>--user</code> option tells <code>pip</code> to install the package only for the current user. This avoids certain permission problems that can occur on your operating system. If you see something like <code>Successfully installed nose-1.3.7</code> then the package installed correctly. <code>nose</code> is a package that allows you to write tests for larger programs. However, it is not actively being maintained so we don't need it. Since this was just for practice anyway, let's uninstall it. Uninstall the package by using the following command:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ pip uninstall nose
+Uninstalling nose-1.3.7:
+  Would remove:
+    &lt;list of files that will be removed&gt;
+Proceed <span class="o">(</span>y/n<span class="o">)</span>? y
+  Successfully uninstalled nose-1.3.7
+$
+</pre></div>
+</td></tr></table>
+
+<p>Likewise if you see something like <code>Successfully uninstalled nose-1.3.7</code> the package was removed successfully.</p>
 <p>Skim the basic commands of pip <a href="https://pip.pypa.io/en/stable/quickstart/">here</a> and use them to install libraries/packages when you need them. We will install more packages later once we get further along.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>
-<li>
-<p>The <a href="https://docs.python.org/3/library/">Python Standard Library</a> is a good reference to get an idea of all the things that Python can do without even including third-party libraries and packages. Read the general statement at the beginning of the linked page and browse the index looking for 2 or 3 things that interest you. Begin to experiment with them and see if you can pick up how they work.</p>
-</li>
-<li>
-<p>Consider the following function definition from  <code>import_practice.py</code>:</p>
-</li>
+<li>The <a href="https://docs.python.org/3/library/">Python Standard Library</a> is a good reference to get an idea of all the things that Python can do without even including third-party libraries and packages. Read the general statement at the beginning of the linked page and browse the index looking for 2 or 3 things that interest you. Begin to experiment with them and see if you can pick up how they work.</li>
+<li>There are hundereds of libraries in the <a href="https://pypi.org/">Python Package Index</a>. Follow that link and look around for packages that look interesting and try installing them and using them. For practice, can you find, install and use a package that opens a game of <a href="https://en.wikipedia.org/wiki/Tetris">tetris</a> in your terminal?</li>
+<li>Consider the following function definition from  <code>import_practice.py</code>:</li>
 </ul>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
@@ -1119,7 +1144,7 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.245445c6.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

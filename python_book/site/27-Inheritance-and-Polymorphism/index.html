@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.2">
     
     
       
@@ -40,9 +40,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
       
         
@@ -153,7 +153,7 @@
         
       
       
-      <main class="md-main">
+      <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
             
@@ -541,42 +541,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#inheritance" title="Inheritance" class="md-nav__link">
+  <a href="#inheritance" class="md-nav__link">
     Inheritance
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#polymorphism" title="Polymorphism" class="md-nav__link">
+  <a href="#polymorphism" class="md-nav__link">
     Polymorphism
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-and-the-super-function" title="Overriding and the super function" class="md-nav__link">
+  <a href="#overriding-and-the-super-function" class="md-nav__link">
     Overriding and the super function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-__repr__-method" title="The __repr__ method" class="md-nav__link">
+  <a href="#the-__repr__-method" class="md-nav__link">
     The __repr__ method
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hone-your-skills" title="Hone your Skills" class="md-nav__link">
+  <a href="#hone-your-skills" class="md-nav__link">
     Hone your Skills
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-mastery" title="Advanced Mastery" class="md-nav__link">
+  <a href="#advanced-mastery" class="md-nav__link">
     Advanced Mastery
   </a>
   
@@ -641,6 +641,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../32-Do-Another-Project/" title="32. Do Another Project" class="md-nav__link">
+      32. Do Another Project
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -662,42 +674,42 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#inheritance" title="Inheritance" class="md-nav__link">
+  <a href="#inheritance" class="md-nav__link">
     Inheritance
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#polymorphism" title="Polymorphism" class="md-nav__link">
+  <a href="#polymorphism" class="md-nav__link">
     Polymorphism
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#overriding-and-the-super-function" title="Overriding and the super function" class="md-nav__link">
+  <a href="#overriding-and-the-super-function" class="md-nav__link">
     Overriding and the super function
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#the-__repr__-method" title="The __repr__ method" class="md-nav__link">
+  <a href="#the-__repr__-method" class="md-nav__link">
     The __repr__ method
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hone-your-skills" title="Hone your Skills" class="md-nav__link">
+  <a href="#hone-your-skills" class="md-nav__link">
     Hone your Skills
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#advanced-mastery" title="Advanced Mastery" class="md-nav__link">
+  <a href="#advanced-mastery" class="md-nav__link">
     Advanced Mastery
   </a>
   
@@ -949,7 +961,7 @@ $
 <p>That is, the class with the name <code>Name</code> is a type of the previously-defined class called <code>Parent</code>. This means that class <code>Name</code> "inherits" all the attributes from the <code>Parent</code> class.  We saw this in <code>inheritance.py</code> when we had a parent class, <code>Automobile</code>, pass its attributes to each of its children. For example, in the <code>Truck</code> class we see that a <code>Truck</code> instance was able to use the <code>__repr__</code> method belonging to the <code>Automobile</code> class without it having to be explicitly coded in the <code>Truck</code> class. Another way of describing the relationship between <code>Automobile</code> and <code>Truck</code> is that a <code>Truck</code> class is a type of <code>Automobile</code> class.</p>
 <p>This is a very useful feature as it allows a programmer to avoid having to recode every method and attribute for a set of similar classes. This also allows a clean structuring of sub-classes or "child" classes to produce powerful data structures. Much of this will come to bear later on when we do more interesting things with object-oriented programming.</p>
 <h3 id="polymorphism">Polymorphism</h3>
-<p>Another feature of inheritance is the idea that a child class need not be exactly the same as its parent class. In fact, a the utility of this construct hinges on the idea that a child class can be a specialized instance of a parent class. This allows the creation of many child classes that specialize in particular things. The child class may take the attributes that the parent class has and build on them, adding its own attributes and methods to do what it needs to do. This concept is called "polymorphism" meaning "having many forms". After experimenting with this structure, it becomes apparent how this may be used to build large data structures that model complex systems.</p>
+<p>Another feature of inheritance is the idea that a child class need not be exactly the same as its parent class. In fact, a the utility of this construct hinges on the idea that a child class can be a specialized instance of a parent class. This allows the creation of many child classes that specialize in particular things. The child class may take the attributes that the parent class has and build on them, adding its own attributes and methods to do what it needs to do. This concept is called "polymorphism" meaning "having many forms". After experimenting with this structure, it should become apparent how this may be used to build large data structures that model complex systems.</p>
 <p>We saw this as well in the <code>Truck</code> class. The <code>Automobile</code> parent class had only 4 attributes namely, <code>number_of_doors</code>, <code>year</code>, <code>make</code> and <code>model</code>. The <code>Truck</code> class expanded on this data set by adding attributes that are specific to a <code>Truck</code>, namely <code>bed_type</code>, <code>bed_size</code> and <code>axel_weight</code>. Furthermore, each child class of <code>Automobile</code> brought something unique to the table by adding its own attributes or methods. In the case of the <code>Corvette</code> class,  it inherited from the <code>Coupe</code> class, a sub-class of <code>Automobile</code>. This means it took all the attributes of both the <code>Automobile</code> class and the <code>Coupe</code> class and then added its own methods and attributes. </p>
 <h3 id="overriding-and-the-super-function">Overriding and the <code>super</code> function</h3>
 <p>You may have also noticed that sometimes things defined in a parent class are redefined in a child class. This is not an accident. It is common to have a generic implementation of each method in a parent class and then a specific implementation in the child classes tailored to their specific needs. When any method or attribute is redefined in a child class this is called "overriding" the method or attribute.</p>
@@ -1055,7 +1067,7 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.245445c6.js"></script>
+      <script src="../assets/javascripts/application.c648116f.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

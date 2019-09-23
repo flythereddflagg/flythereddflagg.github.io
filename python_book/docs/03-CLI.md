@@ -14,9 +14,13 @@
 Welcome to the Command Line Interface (CLI)! Before we begin programming we need 
 to understand something about the context and environment that we are working in.
 
-First, we start with a little nomenclature. Perhaps you have seen a black, white or blue window with nothing but text in it on your computer. This is called the command line or the command line interface. I will refer to it as the "command line" in this lesson. An example of one is shown below:
+First, we start with a little nomenclature. Perhaps you have seen a black, white or blue window with nothing but text in it on your computer. This is called the command line or the command line interface. It has other names such as "terminal" or "command prompts" but I will refer to it as the "command line" in this lesson. 
+
+An example of one is shown below:
 
 ![cli](./media/cli.png)
+
+
 
 This interface was at one point the only way to use a computer. Generally speaking, if you wanted to explore files, play a computer game or use any program, this was the way you needed to do it. There were no windowing systems or point-and-click interfaces. The way you did anything was to type commands into the prompt (seen above as the text after the `$`) and look at the output that resulted. We will be doing something similar in this lesson. To enter any command simply type the command in and press Enter.
 

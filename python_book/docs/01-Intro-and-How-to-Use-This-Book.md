@@ -73,19 +73,39 @@ To that end, I have the following goals in mind while writing this book:
     20 hours. That is also okay. Learn at your own pace, but understand that
     10,000 hours of coding is NOT required to gain amazing benefits from coding.
 
-Okay, that is my soap box on the principles of this book. I will do my best to 
-be as succinct as possible from here on out.
+This is not an exhaustive list but this should give an idea of the philosophy that went into how to learn Python.
 
 
 ## How to use this book
 
+### Boring Before Interesting
+
+In the 1984 film "[The Karate Kid](https://www.imdb.com/title/tt0087538/plotsummary?ref_=tt_stry_pl#synopsis)", Mr. Miyagi, the teacher, doesn't start training
+Daniel, the protagonist, in Karate by teaching him fancy moves but begins by 
+having him perform many menial tasks with no apparent point to them. It is in 
+doing these seemingly pointless tasks that Daniel first begins to have skill in 
+Karate.
+
+You will find that anytime you want to learn a new skill you must do many boring
+and seemingly pointless things before you can do something interesting or 
+useful. Every discipline has this feature. I am telling you this because for me, a person with a very limited attention span, the beginning of programming
+was agonizingly slow and seemingly pointless and you may feel that way too.
+
+However, if you will do some simple things in every section you will be well on
+your way to becoming a good programmer. The simple things you must do are the 
+following:
+
+- Read each section
+- Type the corresponding code EXACTLY as it is written without copy-pasting it
+- Make it run
+
+When things get boring or tedious, remember the Karate Kid. You are building a foundation on which you can move mountains. To that end, I have structured each section to build on what you have learned.
+
 ### Sections
 
-In each section of this book reading and exercises will be ordered by how mandatory they are. If
+In each section of this book, reading and exercises will be ordered by how mandatory they are. If
 you wish to move as quickly as possible, you may only do the first part of each
-section where I will cover the essential material. However, I do recommend 
-doing all parts of every section to get the most out of this book as well as to
-hone your skills.
+section where I will cover the essential material. However, I do recommend doing everything under "Hone Your Skills" in every section to get the most out of this book.
 
 The sections generally will be divided in to 3 subsections. Each of these sections has a distinct purpose. Depending on your level of skill 
 and interest there are a number of ways of approaching each section. They are as follows:
@@ -110,33 +130,9 @@ and interest there are a number of ways of approaching each section. They are as
 
 This book is intended to serve you and not the other way around. Therefore, I recommend you do the basics of each section. Beyond that, you are free to pursue what interests you and skip anything that doesn't. I am still playing with the layout of this text but a possible way to approach learning the material is to do the basics first and then add to your knowledge with the other two subsections.
 
-### Boring Before Interesting
-
-In the 1984 film "[The Karate Kid](https://www.imdb.com/title/tt0087538/plotsummary?ref_=tt_stry_pl#synopsis)", Mr. Miyagi, the teacher, doesn't start training
-Daniel, the protagonist, in Karate by teaching him fancy moves but begins by 
-having him perform many menial tasks with no apparent point to them. It is in 
-doing these seemingly pointless tasks that Daniel first begins to have skill in 
-Karate.
-
-You will find that anytime you want to learn a new skill you must do many boring
-and seemingly pointless things before you can do something interesting or 
-useful. Every discipline has this feature. I am telling you this because for me, a person with a very limited attention span, the beginning of programming
-was agonizingly slow and seemingly pointless and you may feel that way too.
-
-However, if you will do some simple things in every section you will be well on
-your way to becoming a good programmer. The simple things you must do are the 
-following:
-
- - Read each section
- - Type the corresponding code EXACTLY as it is written without copy-pasting it
- - Make it run
-
-When things get boring or tedious, remember the Karate Kid. You are 
-building a foundation on which you can move mountains.
-
 ### Learning to feed yourself
 
-I will sometimes have you read [Official Python documentation](https://docs.python.org/3.7/index.html) or visit other websites or resources. I do this for a number of reasons but most importantly, I want you to be able to teach yourself everything this book cannot. It would be my goal that, after you have read and learned everything in this book, you can put it down and never pick it up again because you have learned how to find answers to your *own* questions. Doing this will make you that much more effective as a programmer and in everything you do. 
+I will sometimes have you read [The Official Python Documentation](https://docs.python.org/3.7/index.html), visit other websites or resources or have you use an internet search engine to learn about a particular topic. I do this for a number of reasons but most importantly, I want you to be able to teach yourself everything this book cannot. It would be my goal that, after you have read and learned everything in this book, you can put it down and never pick it up again because you have learned how to find answers to your *own* questions. Doing this will make you that much more effective as a programmer and more effective as a human being in general.
 
 **Remember:** Whenever I tell you to search for something on the Internet, remember that the best way to use a search engine is to type "Python" and then write what you are looking for. This will be a boon to your learning as you go along.
 
