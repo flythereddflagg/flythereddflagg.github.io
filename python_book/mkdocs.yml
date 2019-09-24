@@ -64,17 +64,12 @@ theme:
     logo:
         icon: 'home'
         
-    # feature:
-        # tabs: true
-        
     extra:
       social:
         - type: 'github'
           link: 'https://github.com/flythereddflagg'
         # - type: 'twitter'
           # link: 'https://twitter.com/squidfunk'
-        # - type: 'linkedin'
-          # link: 'https://linkedin.com/in/squidfunk'
+        - type: 'linkedin'
+          link: 'https://www.linkedin.com/in/mark-redd-53878880/'
        
-# extra_css:
-  # - 'stylesheets/emacs.css'   
