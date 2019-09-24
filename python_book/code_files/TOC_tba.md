@@ -47,5 +47,6 @@
 1. Websites (flask or django or web.py)
 1. Games
 1. Databases and SQL
+1. Hardware and Arduino
 
 
