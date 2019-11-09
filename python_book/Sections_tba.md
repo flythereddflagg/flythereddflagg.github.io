@@ -41,6 +41,7 @@
 
 1. Branching out
 1. Data Structures
+1. Advanced topics
 1. GUIs (Qt and tkinter)
 1. Make your own package
 1. The Scipy stack (numpy and scipy)
