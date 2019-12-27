@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CSource+Code+Pro&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
@@ -782,7 +782,7 @@
 <span class="c1"># let&#39;s start with some variables</span>
 <span class="c1"># this will tell us to print an error</span>
 <span class="c1"># message if necessary</span>
-<span class="n">error</span> <span class="o">=</span> <span class="bp">False</span>
+<span class="n">error</span> <span class="o">=</span> <span class="kc">False</span>
 
 <span class="c1"># this is how much each farmer </span>
 <span class="c1"># needs in revenue to break even</span>
@@ -818,7 +818,7 @@
     <span class="n">pricing</span> <span class="o">=</span> <span class="n">price_per_bushel</span>
 
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">error</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">error</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">if</span> <span class="ow">not</span> <span class="n">error</span><span class="p">:</span>
     <span class="n">revenue</span> <span class="o">=</span> <span class="n">amount</span> <span class="o">*</span> <span class="n">pricing</span>
@@ -829,18 +829,18 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Farm is above break-even point. Congratulations!&quot;</span>
 
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">        --- Farm Report for {farmer_name} ---</span>
-<span class="s2">    Product for sale               : {produce:&gt;11}</span>
-<span class="s2">    Price per unit                 : ${pricing:10.2f}</span>
-<span class="s2">    Total revenue                  : ${revenue:10.2f}</span>
-<span class="s2">    Amount owed to each hired hand : ${payment_per_hand:10.2f}</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        --- Farm Report for </span><span class="si">{farmer_name}</span><span class="s2"> ---</span>
+<span class="s2">    Product for sale               : </span><span class="si">{produce:&gt;11}</span><span class="s2"></span>
+<span class="s2">    Price per unit                 : $</span><span class="si">{pricing:10.2f}</span><span class="s2"></span>
+<span class="s2">    Total revenue                  : $</span><span class="si">{revenue:10.2f}</span><span class="s2"></span>
+<span class="s2">    Amount owed to each hired hand : $</span><span class="si">{payment_per_hand:10.2f}</span><span class="s2"></span>
 
-<span class="s2">        {message}</span>
+<span class="s2">        </span><span class="si">{message}</span><span class="s2"></span>
 <span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;Farmer name </span><span class="se">\&quot;</span><span class="s2">{farmer_name}</span><span class="se">\&quot;</span><span class="s2"> does not exist in record!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Farmer name </span><span class="se">\&quot;</span><span class="si">{farmer_name}</span><span class="se">\&quot;</span><span class="s2"> does not exist in record!&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -983,6 +983,7 @@ $
                 
                   
                 
+                
               
               
                 
@@ -1049,7 +1050,7 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

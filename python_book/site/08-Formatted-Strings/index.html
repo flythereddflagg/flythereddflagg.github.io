@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CSource+Code+Pro&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
@@ -722,23 +722,23 @@
 21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># format_strings.py</span>
 
 <span class="c1"># We can print a comma-separated list</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost?&quot;</span><span class="p">,</span> <span class="mf">23.00</span><span class="p">,</span> <span class="s2">&quot;dollars&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost?&quot;</span><span class="p">,</span> <span class="mf">23.00</span><span class="p">,</span> <span class="s2">&quot;dollars&quot;</span><span class="p">)</span>
 
 <span class="c1"># this is more readable with a .format statement</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost? {} dollars.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">23.0</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost? </span><span class="si">{}</span><span class="s2"> dollars.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">23.0</span><span class="p">))</span>
 
 <span class="c1"># The benefits of formatting become more apparent with more blanks to fill in.</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Prices for cheese: ${}/1 oz, ${}/5 oz, ${}/10 oz&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">5.35</span><span class="p">,</span> <span class="mf">9.84</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prices for cheese: $</span><span class="si">{}</span><span class="s2">/1 oz, $</span><span class="si">{}</span><span class="s2">/5 oz, $</span><span class="si">{}</span><span class="s2">/10 oz&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">5.35</span><span class="p">,</span> <span class="mf">9.84</span><span class="p">))</span>
 
 <span class="c1"># Change the formatting order with indices in the braces</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Would you like {2}, {0} or {1}?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Would you like </span><span class="si">{2}</span><span class="s2">, </span><span class="si">{0}</span><span class="s2"> or </span><span class="si">{1}</span><span class="s2">?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span><span class="p">))</span>
 
 <span class="c1"># line up numbers and define decimal places with format codes</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">Prices for cheese:</span>
-<span class="s2">${:5.2f}/ 1 oz</span>
-<span class="s2">${:5.2f}/ 5 oz</span>
-<span class="s2">${:5.2f}/10 oz</span>
+<span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 1 oz</span>
+<span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 5 oz</span>
+<span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/10 oz</span>
 <span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23232</span><span class="p">,</span> <span class="mf">5.3593</span><span class="p">,</span> <span class="mf">9.84655</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
@@ -814,7 +814,7 @@ $
 <p>There are other formatting commands other than this but this is a good start to using formatting that will come up again and again. To review:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># formatting cheat sheet</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{&lt;format index or identifier&gt;:&lt;format commands&gt;}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&lt;format index or identifier&gt;:&lt;format commands&gt;}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="p">))</span>
 </pre></div>
 </td></tr></table>
 
@@ -823,11 +823,11 @@ $
 2
 3
 4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;No. &quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0} {0} {0}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{} {} {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;{0} &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No. &quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> </span><span class="si">{0}</span><span class="s2"> </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -844,6 +844,7 @@ $
 <!-- End Navigation -->
                 
                   
+                
                 
               
               
@@ -911,7 +912,7 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

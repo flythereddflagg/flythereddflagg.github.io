@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CSource+Code+Pro&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
@@ -864,103 +864,103 @@
 
 <span class="c1"># --- strings --- </span>
 <span class="n">example_string</span> <span class="o">=</span> <span class="s2">&quot;Hello World!&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A string:&quot;</span><span class="p">,</span> <span class="n">example_string</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># white space to make output readable</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A string:&quot;</span><span class="p">,</span> <span class="n">example_string</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="c1"># white space to make output readable</span>
 
 <span class="c1"># --- ranges ---</span>
 <span class="n">example_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A range:&quot;</span><span class="p">,</span> <span class="n">example_range</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A range:&quot;</span><span class="p">,</span> <span class="n">example_range</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># --- lists ---</span>
 <span class="c1"># brackets initialize a list</span>
 <span class="n">example_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tea&quot;</span><span class="p">,</span> <span class="s2">&quot;biscuts&quot;</span><span class="p">,</span> <span class="s2">&quot;crackers&quot;</span><span class="p">,</span> <span class="s2">&quot;kale&quot;</span><span class="p">]</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A list:&quot;</span><span class="p">,</span> <span class="n">example_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A list:&quot;</span><span class="p">,</span> <span class="n">example_list</span><span class="p">)</span>
 
 <span class="c1"># lists are mutable</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;adding cheese to the list...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;adding cheese to the list...&quot;</span><span class="p">)</span>
 <span class="n">example_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;cheese&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;changing the first element to &#39;Lemon Tea&#39;...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;changing the first element to &#39;Lemon Tea&#39;...&quot;</span><span class="p">)</span>
 <span class="n">example_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Lemon Tea&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;popping off the last element...&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;popping off the last element...&quot;</span><span class="p">)</span>
 <span class="n">example_list</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
-<span class="k">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">example_list</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># --- tuples ---</span>
 <span class="c1"># parethesis define a tuple</span>
 <span class="n">example_tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;tea&quot;</span><span class="p">,</span> <span class="s2">&quot;biscuts&quot;</span><span class="p">,</span> <span class="s2">&quot;crackers&quot;</span><span class="p">,</span> <span class="s2">&quot;kale&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;A tuple:&quot;</span><span class="p">,</span> <span class="n">example_tuple</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A tuple:&quot;</span><span class="p">,</span> <span class="n">example_tuple</span><span class="p">)</span>
 
 <span class="c1"># a comma-separated list can also define a tuple</span>
 <span class="n">example_tuple</span> <span class="o">=</span> <span class="s2">&quot;biscuts&quot;</span><span class="p">,</span> <span class="s2">&quot;crackers&quot;</span><span class="p">,</span>  <span class="s2">&quot;kale&quot;</span><span class="p">,</span> <span class="s2">&quot;tea&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Another tuple:&quot;</span><span class="p">,</span> <span class="n">example_tuple</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Another tuple:&quot;</span><span class="p">,</span> <span class="n">example_tuple</span><span class="p">)</span>
 
 <span class="c1"># tuples are immutable</span>
 <span class="c1"># notice how this throws an error:</span>
 <span class="c1"># comment it out after you have looked at the error</span>
 <span class="c1"># example_tuple[-1] = &quot;Lemon tea&quot; # throws an error</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># --- Common among iterables ---</span>
 
 <span class="c1"># all iterables are subscriptable and sliceable</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;The last element and&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;The first two elements of each iterable:&quot;</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_string</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_range</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_range</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_list</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_tuple</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_tuple</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The last element and&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The first two elements of each iterable:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_string</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_string</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_range</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_range</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_list</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_list</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Last:&quot;</span><span class="p">,</span>     <span class="n">example_tuple</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;First two:&quot;</span><span class="p">,</span><span class="n">example_tuple</span><span class="p">[:</span><span class="mi">2</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 
 <span class="c1"># all iterables have a length (len())</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of string: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_string</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of range:  &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_range</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of list:   &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_list</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;length of tuple:  &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_tuple</span><span class="p">))</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of string: &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_string</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of range:  &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_range</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of list:   &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_list</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;length of tuple:  &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">example_tuple</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># all iterables can be used to make for-loops</span>
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;For-loop examples of each:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;For-loop examples of each:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">character</span> <span class="ow">in</span> <span class="n">example_string</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">character</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">index_value</span> <span class="ow">in</span> <span class="n">example_range</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">index_value</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">index_value</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>   
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>   
 
 <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">example_list</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">example_tuple</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">variable</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># you can check if something is &#39;in&#39;</span>
 <span class="c1"># a sequence iterable</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&quot;Hello&quot; in example_string:&#39;</span><span class="p">,</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;Hello&quot; in example_string:&#39;</span><span class="p">,</span> 
       <span class="s2">&quot;Hello&quot;</span> <span class="ow">in</span> <span class="n">example_string</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;3 in example_range:&#39;</span><span class="p">,</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;3 in example_range:&#39;</span><span class="p">,</span> 
       <span class="mi">3</span> <span class="ow">in</span> <span class="n">example_range</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&quot;kale&quot; in example_list:&#39;</span><span class="p">,</span> 
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;kale&quot; in example_list:&#39;</span><span class="p">,</span> 
       <span class="s2">&quot;kale&quot;</span> <span class="ow">in</span> <span class="n">example_list</span><span class="p">)</span>
-<span class="k">print</span><span class="p">(</span><span class="s1">&#39;&quot;potatoes&quot; in example_tuple:&#39;</span><span class="p">,</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;potatoes&quot; in example_tuple:&#39;</span><span class="p">,</span>
       <span class="s2">&quot;potatoes&quot;</span> <span class="ow">in</span> <span class="n">example_tuple</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
@@ -1117,6 +1117,7 @@ $
                 
                   
                 
+                
               
               
                 
@@ -1183,7 +1184,7 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       

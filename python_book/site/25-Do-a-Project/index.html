@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.3">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.30686662.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,12 +51,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Source+Code+Pro&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CSource+Code+Pro&display=fallback">
         <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro","Courier New",Courier,monospace}</style>
       
     
@@ -925,17 +925,17 @@
 <span class="s2">To the EAST and WEST there are large wooden doors</span>
 <span class="s2">standing ajar.</span>
 <span class="s2">&quot;&quot;&quot;</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
     <span class="n">do</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What will you do? &gt; &quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">do</span> <span class="o">==</span> <span class="s2">&quot;go north&quot;</span><span class="p">:</span>
         <span class="n">staircase</span><span class="p">()</span>
     <span class="k">elif</span> <span class="n">do</span> <span class="o">==</span> <span class="s2">&quot;go south&quot;</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You&#39;re pretty bad at this game.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You&#39;re pretty bad at this game.&quot;</span><span class="p">)</span>
     <span class="k">elif</span> <span class="n">do</span> <span class="o">==</span> <span class="s1">&#39;go east&#39;</span> <span class="ow">or</span> <span class="n">do</span> <span class="o">==</span> <span class="s2">&quot;go west&quot;</span><span class="p">:</span>
         <span class="n">east_west_rooms</span><span class="p">()</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;You lose. Next time try doing something&quot;</span><span class="p">,</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You lose. Next time try doing something&quot;</span><span class="p">,</span>
               <span class="s2">&quot;like &#39;go &lt;direction&gt;&#39; to do something.&quot;</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">staircase</span><span class="p">():</span>
@@ -945,7 +945,7 @@
 
 <span class="s2">YOU WIN!</span>
 <span class="s2">&quot;&quot;&quot;</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
 
 <span class="k">def</span> <span class="nf">east_west_rooms</span><span class="p">():</span>
     <span class="n">look</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -954,7 +954,7 @@
 
 <span class="s2">GAME OVER</span>
 <span class="s2">&quot;&quot;&quot;</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">look</span><span class="p">)</span>
 
 <span class="n">entrance_hall</span><span class="p">()</span> <span class="c1"># this starts the game</span>
 </pre></div>
@@ -989,11 +989,11 @@
 
 <span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The name of this file is: {argv[0]}&quot;</span><span class="p">)</span> <span class="c1"># get the filename</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The name of this file is: </span><span class="si">{argv[0]}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># get the filename</span>
 
 <span class="n">numbers</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:]]</span> <span class="c1"># turn string arguments into numbers</span>
 
-<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;The sum of the numbers given is {sum(numbers)}&quot;</span><span class="p">)</span> <span class="c1"># sum numbers together</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The sum of the numbers given is {sum(numbers)}&quot;</span><span class="p">)</span> <span class="c1"># sum numbers together</span>
 </pre></div>
 </td></tr></table>
 
@@ -1047,25 +1047,25 @@ $
 <span class="s1">    3 - quit the program</span>
 <span class="s1">&#39;&#39;&#39;</span>
 
-<span class="n">running</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="k">while</span> <span class="n">running</span><span class="p">:</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">menu</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">menu</span><span class="p">)</span>
     <span class="n">command</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;--&gt; &quot;</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;a word&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a word&quot;</span><span class="p">)</span>
 
     <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;2&quot;</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-            <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I did a thing!&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I did a thing!&quot;</span><span class="p">)</span>
 
     <span class="k">elif</span> <span class="n">command</span> <span class="o">==</span> <span class="s2">&quot;3&quot;</span><span class="p">:</span>
-        <span class="n">running</span> <span class="o">=</span> <span class="bp">False</span>
+        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
 
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;I do not understand that command.&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I do not understand that command.&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1190,17 +1190,17 @@ $
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">101</span><span class="p">):</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">10</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="k">continue</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># this loop will prematurely end at 24</span>
 <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">):</span>
-    <span class="k">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">j</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">23</span><span class="p">:</span>
         <span class="k">break</span>
 
-<span class="k">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </pre></div>
 </td></tr></table>
 
@@ -1225,6 +1225,7 @@ $
 <!-- End Navigation -->
                 
                   
+                
                 
               
               
@@ -1292,7 +1293,7 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.ac79c3b0.js"></script>
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
