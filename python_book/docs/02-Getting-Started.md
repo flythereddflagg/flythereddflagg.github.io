@@ -52,13 +52,13 @@ I do make some assumptions about your knowledge of computers. If any of the foll
   - For Linux/Unix users you can usually open your terminal by pressing `ctrl+alt+t`.
   - You may find that Python 3 is already installed on your system. You can check if this is the case by just opening your terminal and typing "Python3". A string of text should appear indicating that Python has started. Also you should see `>>>` at the bottom of the page. If this does not happen then you will need to go through the following steps.
 
-Let's start by going to https://www.Python.org/downloads/ you will see a button there. Ensure that the correct operating system is selected (e.g. Windows, Mac OS X, Linux/Unix). Click on the "Download Python 3.x.x" button to begin the download. 
+Let's start by going to https://www.Python.org/downloads/ you will see a button there. Ensure that the correct operating system is selected (e.g. Windows, Mac OS X, Linux/Unix). Click on the "Download Python 3.x.x" button to begin the download. (See image below.)
 
  ![Python_download_site](./media/python_download_site.JPG)
 
 
 
-Once downloaded, open the file and you will see the following image. Ensure "Add Python 3.X to PATH" is checked and click "Install Now". Select "Next" on the next few screens and allow it to install on your computer. 
+Once downloaded, open the file and you will see the following image. Ensure "Add Python 3.X to PATH" is checked and click "Install Now". Select "Next" on the next few screens and allow it to install on your computer. (See image below.)
 
 
 
@@ -68,7 +68,7 @@ Once downloaded, open the file and you will see the following image. Ensure "Add
 
 **Note:** If you want to get the 64-bit version or do any custom installation then I'm going to assume you know what you are doing and this tutorial is not necessary for you. If you don't know what any of that means then just do as it says above and you will be fine.
 
-Once the installation finishes, open your terminal or Windows PowerShell and type in `Python` into the prompt and press Enter. You should see something like:
+Once the installation finishes, open your terminal or Windows PowerShell (press the windows key on your keyboard and type "powershell" then select Windows PowerShell from the list that pops up) and type in `python` into the prompt and press Enter. You should see something like:
 
 ![Python_terminal](./media/python_terminal.JPG)
 
@@ -80,7 +80,7 @@ However if something went wrong, consult the [Trouble Shooting Section](#trouble
 
 
 ### Text Editor
-The next thing to consider is the way you will write code. True to my coding upbringing, **I strongly discourage IDEs and IDLEs.** They are not conducive to you learning how to code and will make you dependent on them. I have met too many coders that cannot work on anything but their own IDE and therefore are useless if anything even remotely different comes along.
+The next thing to consider is what you will use to actually write the code. True to my coding upbringing, **I strongly discourage IDEs and IDLEs.** They are not conducive to you learning how to code and will make you dependent on them. I have met too many coders that cannot work on anything but their own IDE and therefore are useless if anything even remotely different comes along.
 
 I am asking for some faith from you right now. But trust me when I say that if you learn to code without an IDE you will learn better than any of your peers that use an IDE.
 
@@ -105,7 +105,11 @@ Once you have determined you are ready, lets begin programming!
 
 ### Troubleshooting Your Installation
 
-*|Space Intentionally Left blank|*
+I will keep a running list of problems with your Python installation and how to solve them. If you get stuck look here. If you cannot find your problem you can write your issue down [here](https://github.com/flythereddflagg/flythereddflagg.github.io/issues) or email me directly (redddogjr@gmail.com).
+
+- **Sample problem...**
+
+  Sample Solution...
 
 <!-- Navigation -->
 

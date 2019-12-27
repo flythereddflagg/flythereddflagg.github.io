@@ -44,6 +44,7 @@ extra_javascript:
 
 markdown_extensions:
     - mdx_math
+    #pip install python-markdown-math
     - codehilite:
         linenums: true
         #css_class: emacs

@@ -12,7 +12,7 @@ OR
 $ mkdocs serve # to serve the markdown pages for testing
 ```
 
-Theming is done with`mkdocs-material` from `pip` and `pygments`.
+Theming is done with`mkdocs-material` from `pip` and `pygments` also needed for math rendering is `python-markdown-math`.
 
 ## To Do
 
