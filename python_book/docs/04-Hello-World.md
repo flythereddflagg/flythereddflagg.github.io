@@ -20,7 +20,7 @@ all things, beginning in Python is very simple.
 
 - Start by opening your text editor and opening a new file
 
-- Pick a folder to keep all your Python learning files in. This could be in your home folder but I like to put it in my "Documents" folder.
+- Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend putting it in your "Documents" folder. However, you can put it wherever makes sense.
 
 - Use the 'Save as' dialog to save this file in a folder where you want to keep all
    your Python files
@@ -32,7 +32,7 @@ all things, beginning in Python is very simple.
    file it is. Make sure you name all files you make in Python using this extension.
 
    Also it is good practice to never use spaces when naming files used in
-   programming. Use underscores instead of spaces. There are reasons for this but 
+   programming. Use underscores (`_`) instead of spaces. There are reasons for this but 
    just for now trust me when I say that you are avoiding a lot of confusion and 
    problems if you just commit to never using spaces in your filenames when you 
    write code.
@@ -47,13 +47,14 @@ all things, beginning in Python is very simple.
 print("Hello World!")
 ```
 
-- Go to your terminal and navigate to the folder that holds your Python file.
-
+- Go to your terminal and navigate to the folder that holds your Python file. *(if you have trouble doing this, review the previous section until you can navigate the terminal with confidence.)*
 - Enter the following command in your terminal:
 
 ```
 $ python hello_world.py
 ```
+
+*(Remember, DO NOT type in the `$` and ignore everything in the terminal before the `$` or the `>`)*
 
 **Here is what should happen**
 
@@ -66,8 +67,7 @@ $
 If you see the above output, congratulations! You have just written and run your first Python program!
 
 **What is happening here?** 
-Traditionally, displaying "Hello World!" in a console window is the first thing 
-that every programmer generally learns to do in a new language. Later we will get into more detail on how exactly everything works and what is happening on a fundamental level.
+Traditionally, displaying "Hello World!" in a console window is the first thing every programmer generally learns to do in a new language. Later we will get into more detail on how exactly everything works and what is happening on a fundamental level.
 
 Go back to your Python file and add the following under the first line so the whole file looks like this:
 
@@ -109,9 +109,11 @@ $
 
 As you can see here, the code runs in order line by line, ignoring any blank lines. This is how any python program works. It starts on line 1 and executes each line of code until it reaches the end of the file. 
 
+If you did not get the above output *exactly* as it appears above or you got some error, review the code above and everything we have covered so far until the output matches the above output *exactly*.
+
 Once you see the output appear *exactly* as it appears above, congratulations! You have completed the first exercise!
 
-This is the general format for most of the sections in this book. For each section I will have you write some code and then we will go back and try to understand it.
+This is generally how each section in this book will work. In each section, I will have you write some code and then we will go back and try to understand it.
 
 ## Hone Your Skills
 
@@ -121,11 +123,13 @@ This is the simplest type of program that exists in Python (i.e. simple statemen
 
   It is likely that unless you were paying very careful attention to what you were doing that you made a mistake. In which case you may have gotten an error such as the one below
 
-  In this example example, I deleted the last three characters on line 8 and got this message. As you can see, Python tells me exactly where my mistake is and what kind of error it is. 
+  In Example 1 below, I deleted the last three characters on line 8 and got this message. As you can see, Python tells me exactly where my mistake is and what kind of error it is. 
 
   Take some time and mess with this program. Delete different parts and try to run it and see the kind of errors you get. 
 
-  My hope is that you'll get two things out of this: First, don't be afraid to make mistakes (although you of course want to avoid them if you can) and secondly, when an error does happen, this should help you begin to be comfortable with how python reports errors and exceptions. We will cover these in more detail in a later lesson.
+  My hope is that you'll get two things out of this: First, don't be afraid to make mistakes (although you will, of course, want to avoid them where possible) and secondly, when an error does happen, this should help you begin to be comfortable with how python reports errors and exceptions. We will cover these in more detail in a later lesson.
+
+**Example 1: Python Error Reporting**
 
 ```python
 File "hello_world.py", line 8

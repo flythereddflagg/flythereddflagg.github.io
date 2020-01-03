@@ -9,14 +9,14 @@
 
 # 7 - Escape Characters
 
-You may ask "What do I do if I need a string to have a mixture of double and 
+Based on the previous section, you may ask "What do I do if I need a string to have a mixture of double and 
 single quotes?" For example:
 
 ```
 John's character says, "I'd like to buy some cheese."
 ```
 
-This is where escape characters come in handy. An escape character is a text character that can be represented by a backslash followed by a character or series of characters (e.g. `\t`, `\n`, `\u03b7`). Escape characters make possible the mixing of single and double quotes (among many other things) as you will see in this next exercise.
+This is where escape characters come in handy. An escape character is a text character that can be represented by a backslash (`\`) followed by a character or series of characters (e.g. `\t`, `\n`, `\u03b7`). Escape characters make possible the mixing of single and double quotes (among many other things) as you will see in this next exercise.
 
 Now go back to your text editor and write the following code (again, do NOT 
 copy-paste it). Notice the use of escape characters and try to figure out what each one does.
@@ -69,7 +69,7 @@ How do you print a backslash? \ like that!
 
 I just made a new line! Now I will do another!
 
-Here is a funny character: η
+Here is a greek eta character: η
 ```
 
 If on any of these exercises you do not see the output appear *exactly* as you 
@@ -91,7 +91,7 @@ Let's examine all the escape characters introduced in this exercise:
 - `\t`: This is the tab character and printing it inserts 4 or 8 spaces depending on the system you are using.
 - `\r`: This is the carriage return character and it returns the print cursor to the beginning of the line. Notice how the first part of the printed line is now overwritten with the "I did it!" part.
 - `\\`: This is the backslash character and tells python to treat this 
-  character as a single backslash. As you can see, the only thing that came out of the print statement was a backslash"
+  character as a single backslash. As you can see, the only thing that came out of the print statement was a single backslash.
 - `\u03b7`: This is called a "Unicode escape character". It follows the 
   format `\uhhhh` where `hhhh` references the 4-character hexadecimal code that corresponds to what was printed (in this case, $\eta$). Using that 4-character hexadecimal code you can express over 65000 characters. If you want to know a character's code simply search on the internet for "Unicode *CHARACTER NAME*". (e.g. "Unicode eta" for $ \eta $)
 
@@ -110,14 +110,12 @@ these by doing the exercises under "Hone your skills". For now, understand that
   - `\o**	`
   - `\x**	`
 - Look up how to make Python print $\epsilon = \gamma c^2$ 
-  (those are the greek letters epsilon ($\epsilon$) and gamma ($\gamma​$) and 
+  (those are the greek letters epsilon ($\epsilon$) and gamma ($\gamma$) and 
   the equation reads: "epsilon equals gamma c squared")
 
 ## Advanced Mastery
 
-- Make Python print out the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">
-  Navier-Stokes Equations</a> for a 3-D system in Cartesian coordinates formatted 
-  like a normal math equation using escape sequences and print statements.
+- Make Python print out the [Navier-Stokes Equations](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations) for a 3-D system in Cartesian coordinates formatted like a normal math equation using escape sequences and print statements.
 
 <!-- Navigation -->
 

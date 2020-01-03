@@ -9,8 +9,7 @@
 
 # 5 - Comments 
 
-The next thing you need to understand that is fundamental to programming is
-comments in code.
+The next thing you need to understand that is fundamental to programming is comments in code.
 
 
 ### What is an octothorpe?
@@ -72,15 +71,15 @@ Again if the result you get isn't *exactly* like the book's, go back in fix it u
 
 ### About comments
 
-As you may be able to surmise from the code, the hash symbol tells Python, "Ignore everything after this on this line". The triple quotes (``` """```  or ```'''```) begin and end a block of text that can span as many lines as you want that Python will likewise ignore. (There are a few exceptions to this but we will cover them later.)
+As you may be able to gather from the code, the hash symbol tells Python, "Ignore everything after this on this line". The triple quotes (``` """```  or ```'''```) begin and end a block of text that can span as many lines as you want that Python will likewise ignore. (There are a few exceptions to this but we will cover them later.)
 
 These are generally called "comments" in the code. They let the programmer make comments that either explain small bits of code or provide detailed explanations of his code. They also allow the programmer to disable chunks of code if desired. 
 
-**NOTE:** Whenever you use quotes in Python you must be consistent which ever you decide to use for a particular case.
+**NOTE:** Whenever you use quotes in Python, you must be consistent in whether you use single (`'`) or double (`"`) quotes to open or close text. Generally it does not matter which you choose. The only requirement is that you are consistent.
 
 ### Comment Conventions
 
-The following rules of thumb apply to code comments and are demonstrated below (don't bother writing this all out, just read it):
+The following rules of thumb apply to code comments and are demonstrated below (don't bother writing this all out, just read it)
 
 ```python
 '''
@@ -92,24 +91,25 @@ It is common to have a header at the top of your file that has the filename, aut
 and a general description of the program in the file. This space may also be used
 to include pertient data about the software such as its version number or the 
 date it was last modified. In many cases this header may be long and detailed 
-depending on the intent of the programmer.
+depending on the intent of the programmer. This header is commonly called a
+"documentation string" or a "doc string".
 
 For the purposes of this book, we will not worry about having headers in our code
 until we tackle some larger, more complex problems but it's good to know that these
 things exist.
 '''
 
-'''Single line comments that explain code '''
-# should be in one of two places:
+'''Single line comments that explain code should be in one of two places:'''
 
 # This comment explains the line below
-print("Here are some words") # The comment may be here as well if space permits
+# The comment may be here at the end of the line as well if space permits
+print("Here are some words") # here is an end-of-line comment
 
 # If needed, the comment may span
-# multiple lines. The comment is generally
-# above the line or block of code
-# it explains in any case.
-print("Here are some words") # The comment may be here as well if space permits
+# multiple lines. In any case, the comment 
+# is generally above the line or block of code
+# it explains.
+print("Here are some more words")
 
 """
 It is bad practice to write comments that trail off the visible screen.
@@ -120,12 +120,12 @@ comments or explain a large block of code.
 """
 ```
 
-I will often put comments in the code I have you write. You will need to put these in your code as well but also I will have you explain your code line by line with comments. You may find it useful to take notes as you write code to help you remember what you have learned.
+I will often put comments in the code I have you write. You do not need to put these in your code as well but sometimes I will have you explain your code line by line with comments. You may find it useful to take notes in the form of code comments as you write code to help you remember what you have learned.
 
 ## Hone Your Skills
 
 1. Look up what Python Docstrings are. Why would you want to use them?
-1. Comment and uncomment some of the lines in the code you wrote. What can you happen by uncommenting code?
+1. Comment and uncomment some of the lines in the code you wrote. What can you make happen by uncommenting code?
 
 <!-- Navigation -->
 

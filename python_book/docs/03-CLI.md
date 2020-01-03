@@ -24,7 +24,11 @@ An example of one is shown below:
 
 This interface was at one point the only way to use a computer. Generally speaking, if you wanted to explore files, play a computer game or use any program, this was the way you needed to do it. There were no windowing systems or point-and-click interfaces. The way you did anything was to type commands into the prompt (seen above as the text after the `$`) and look at the output that resulted. We will be doing something similar in this lesson. To enter any command simply type the command in and press Enter.
 
-Secondly, you should be familiar with basic terminology relating to file systems. (i.e. words like "folder", "file", "program" and "app"/"application"). I will use the words 'directory' and 'folder' interchangeably. All file systems I have seen start with a "root" folder (usually `C:\` for Windows and `/` for OS X and Linux). File systems start at this root folder and have a tree of sub-folders in which all files are organized. We will explore this via the command line and cover how to do basic navigation and commands. The command line is a large and powerful interface so this lesson is by no means comprehensive. It is intended to get you just competent enough to do programming. We will explore more about the command line later.
+Secondly, you should be familiar with basic terminology relating to file systems. Important words you need to know are in bold font (i.e. words like **folder,** **file**, **program** and **app** or **application**"). I will use the words **directory** and **folder** interchangeably.
+
+All file systems I have seen start with a **root folder** (usually `C:\` for Windows and `/` for OS X and Linux). File systems start at this root folder and the root folder contains a tree of sub-folders in which all files are organized. You will sometimes see folders referred to as **parent folders** to their sub-folders and their sub-folders as **child folders** to the **parent folder**. This relationship is a common way of undertanding relationships between files and folders. The address of a particlar file or folder is called its **path**. The path of a file or folder is a string of text with each folder name separated by `\` (for Windows) or `/` (for OS X or Linux). Examples of paths are: `C:\Users\mer\Documents\a_file.py` (for Windows) or `/home/mer/Documents/a_file.py` (for OS X or Linux). 
+
+ We will explore this via the command line and cover how to do basic navigation and commands. The command line is a large and powerful interface so this lesson is by no means comprehensive. It is intended to get you just competent enough to do programming. We will explore more about the command line later.
 
 ### Open the command line
 
@@ -41,7 +45,7 @@ Depending on your operating system (e.g. Microsoft Windows, Apple Mac OS X, Linu
 - **Linux** 
   - Press `ctrl+t` or `ctrl+alt+t`  from your desktop. (A bash window should appear with some text in it and a prompt that looks like: `"YOUR USERNAME"@"YOUR COMPUTER'S NAME" ~ $` or `-bash-4.2$` )
 
-Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the `$` or the `>` that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the `$` or the `>` as being equivalent. Therefore, when you see something like `$ clear` written in the book, you should read that as, "Type the text `clear` into the command line prompt and press enter." 
+**Note about your command line prompt:** Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the `$` or the `>`, that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the `$` or the `>` as being equivalent. Therefore, when you see something like `$ clear` written in the book, you should read that as, "Type the text `clear` into the command line prompt and press enter." Just remember, **the `$` is NOT part of what you enter.**
 
 Once you have successfully opened your command line interface, you may begin the rest of the lesson. The object of this lesson is to practice and become familiar with each of the commands listed below. A summary table at the end of the lesson lists all the commands and what they do.
 
@@ -53,9 +57,11 @@ Begin by typing the following in your prompt and pressing Enter:
 $ pwd
 ```
 
+**Remember, DO NOT type in the `$`.**
+
 'pwd' means 'print working directory'. This command will show you where you are
 in the directory structure of your computer. For example typing this command 
-into the terminal on my linux computer will return `/home/mer/`, which tells me 
+into the terminal on my linux computer print out `/home/mer` to the terminal window, which tells me 
 I am in the 'mer' directory of the 'home' directory of the root directory of my 
 computer. Similarly in Windows, `pwd` returns `C:\Users\<YOURNAME>\`. Therefore if you ever get lost while navigating in the terminal, use `pwd` to 
 figure out where you are.
@@ -68,14 +74,16 @@ Type the following into your terminal and press Enter:
 $ cd ~
 ```
 
-`cd` means 'change directory' and is one of the main ways you will navigate
-the command line. The normal usage of the "change directory" command is of the form: `$ cd "NAME OF DIRECTORY"` (e.g. `cd Documents`) but in this case we are using the "home" short cut (`~`).
+**Again remember, DO NOT type in the `$`.**
 
-The tilde (`~`) is a short hand that stands for the 'home' directory. This can take you to slightly different places depending on the operating system you are running, but should be the default starting place for any folders you may wish to navigate. If you
+`cd` means 'change directory' and is one of the main ways you will navigate
+the command line. The normal usage of the "change directory" command is of the form: `$ cd "NAME OF DIRECTORY"` (e.g. `cd Documents`) but in this case we are using the "home" shortcut (`~`).
+
+The tilde (`~`) is a shorthand that stands for the 'home' directory. This can take you to slightly different places depending on the operating system you are running, but should be the default starting place for any folders you may wish to navigate. If you
 need to get back home or want to navigate from the home folder as a root
 folder the `~` will get you there.
 
-So when you enter `` what you are telling the terminal is this:
+So when you enter `cd ~` what you are telling the terminal is this:
 "Take me me to the home folder." Or "Change the working directory to the home folder".
 
 ### Working in folders (Commands: `ls`, `mkdir`, and `touch` or `New-Item`)
@@ -86,7 +94,7 @@ Now that you are in the 'home' folder, enter the following:
 $ ls
 ```
 
-`ls` is short hand for "list files and sub-folders in the current directory". 
+`ls` is shorthand for "list files and sub-folders in the current directory". 
 Upon entering this command you should see a list of files and directories in
 your home folder.
 
@@ -122,7 +130,7 @@ $ touch carrots.py
 > New-Item -type file carrots.py
 ```
 
-You have just created an empty file called `carrots.py`. The `.py` part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the `.py` extension but they are not fundamentally different from plain text files (i.e. files that end in `.txt`).
+You have just created an empty file called `carrots.py`. The `.py` part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the `.py` extension but they are not fundamentally different from plain text files (i.e. files that end with `.txt`).
 
 Make another file called `cool_beans.txt` using the `touch` command (if you're on Mac OS X  or Linux) or `New-Item` command (if you're on windows). Go on try it yourself!
 
@@ -156,15 +164,12 @@ directory using
 $ cd ~
 ```
 but you may not always want to go all the way back to the home directory when
-all you really want is to go to the parent directory. I will now show you the
-way to do this. Simply enter:
+all you really want is to go to the next highest directory in the folder structure (a.k.a. the "parent directory"). I will now show you the way to do this. Simply enter:
 
 ```bash
 $ cd ..
 ```
-This is a shorthand for, "change directory to the immediate parent directory"
-in a manner that is known as "relative path reference". In the command line,
-`.` or `./` is short hand for "the directory I'm in right now" and `..` or `../` means "the immediate parent folder of where I am right now".
+This is a shorthand for, "change directory to the immediate parent directory" using what is called its "relative path". In the command line, `.` or `./` are both shorthand for "the directory I'm in right now" and `..` or `../` means "the immediate parent folder of where I am right now".
 
 You can verify that you have indeed left the `peas` directory by using the `pwd`
 and `ls` commands. Now it is time to actually delete the directory.
@@ -186,7 +191,7 @@ Below is a table of all the commands we learned in this lesson and pertinent inf
 | `cd`       | `$ cd NAME`                      | "Change Directory": Changes your location to that of `NAME`.  The tilde `~` refers to the home directory, `.` refers to the current directory and `..` refers to the immediate parent directory. |
 | `ls`       | `$ ls`                           | Lists all files and sub-folders in the current directory.    |
 | `mkdir`    | `$ mkdir NAME`                   | "Make Directory": Makes a directory in the current directory called `NAME`. |
-| `touch`    | `$ touch NAME.EXT`               | (**Mac and Linux**) Makes a new file in the current directory with a name of `NAME` and an extension of `.ext` |
+| `touch`    | `$ touch NAME.EXT`               | (**Mac and Linux**) Makes a new file in the current directory with a name of `NAME` and an extension of `.EXT` |
 | `New-item` | `> New-Item -type file NAME.ext` | (**Windows**) Same as `touch`.                               |
 | `rm`       | `$ rm NAME`                      | "Remove": Permanently deletes the file called `NAME` where `NAME` includes both the filename and the extension. |
 | `rmdir`    | `$ rmdir NAME`                   | "Remove Directory": Permanently deletes a directory called `NAME`. (Only works if the directory is empty.) |
@@ -200,11 +205,10 @@ Here are a few questions you should research:
  - Normally you have to remove every file in a directory before you can delete 
     the directory. What is a way you can delete a directory and all its contents
     using one line of command line code? Why would you *not* want to do this?
- - How could you navigate to the parent directory's parent's parent directory in one line
-    of code?
+ - How could you navigate to the parent directory's parent's parent directory in one command?
  - Look up commands to 'copy', 'rename' and 'move' files in command
     line. How would you complete these common tasks in command line?
- - Research other common commands in command line and learn them for your benefit. There are many good tutorials to use many powerful commands in the command line.
+ - Research other common commands in command line and learn them for your benefit. Use google or a similar search engine. There are many good tutorials to use many powerful commands in the command line.
 
 ## Advanced mastery
 

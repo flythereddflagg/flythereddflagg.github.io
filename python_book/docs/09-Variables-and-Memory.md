@@ -57,7 +57,7 @@ Computers, including those that that run everything from your desktop to your ph
 
 1. Store numbers as 1s and 0s in different places
 1. Move those 1s and 0s between the different places
-1. Combine those 1s and 0s mathematically (i.e. addition and subtraction)
+1. Combine those 1s and 0s mathematically (e.g. addition and subtraction)
 
 Of course, computers can do these things at blinding speeds and can be endlessly combined to do all sorts of complex things but these three basics make up all of computing. The programs we have been writing so far do just those things but the details of how this is done is hidden from you but don't be fooled! Nothing more than those three things is happening at any time.
 
@@ -70,10 +70,10 @@ For now the most important things you need to understand are these:
 - There are three basic parts to the computer that we will interact with constantly. They are:
   - The CPU
   - The RAM or volatile memory
-  - The hard drive or persistent memory
-- CPU stands for central processing unit. Every instruction you write gets executed there.
+  - The persistent memory
+- CPU stands for Central Processing Unit. Every instruction you write gets executed there.
 - RAM stands for Random Access Memory. You will put information relevant to your programs there as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.
-- The hard drive is like the RAM except the information you write there stays there until you actively erase it. We will be doing more with the hard drive later
+- The persistent memory is like the RAM except the information you write there stays there until you actively erase it. Depending on your hardware. The persistent memory is generally contained on a hard disk drive (HDD) or a solid-state drive (SSD). We will be doing more with the persistent memory in a later section.
 
 The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. Boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like
 
@@ -92,7 +92,7 @@ The python interpreter will illustrate this better. Go to your terminal and ente
 
 ```python
 $ python
-Python 3.7.0 (v3.7.0:1bf9cc5093, Jun 27 2018, 04:59:51) [MSC v.1914 64 bit (AMD64)] on win32
+Python X.X.X ...
 Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
@@ -112,20 +112,20 @@ Run the following commands:
 
 `type` , `id`  and `exit` are other built-in functions like `print` that provide some useful information about `x`. 
 
-`type` spits out the type of variable between its parentheses.  `id` spits out the address of the variable in the RAM. This will be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and `exit()` simply exits the program.
+`type` spits out the type of variable between its parentheses.  `id` spits out the "address" of the variable in the RAM (depending on the implimentation of Python this may or may not be the literal address in memory). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and `exit()` simply exits the program.
 
 ### Naming Variables
 
-As a programmer you will have to give names to your variables. Within certain rules you can make up any name you want but the following guides will help you make smart choices about how you name variables.
+As a programmer you will have to give names to your variables. There are certain rules for naming variables but, within those rules, you can make up any name you want for any variable. However, the guidelines below will help you make smart choices about how you name variables.
 
 #### Naming Rules in Python
 
 Python follows some rules on what a valid variable name can be. The rules are as follows:
 
-- Names must start with a letter **or** and underscore `_` (e.g. Spam, eggs, _cheese)
+- Names must start with a letter **or** an underscore (`_`) (e.g. Spam, eggs, _cheese)
 - Names must **only** contain numbers, letters or underscores (i.e. spaces and punctuation are not allowed)
 - Names are case sensitive (i.e. Spam, spAm and spam are three different names)
-- Names cannot be one of the 35 reserved words in Python. These are listed in the table below. (As a note should you feel the need to use one of these names, you can turn it into a valid variable name by adding leading or trailing underscores e.g. `_False` or `False__ `  or a trailing number e.g. `False1`)
+- Names cannot be one of the 35 reserved words in Python. These are listed in the table below. (As a note, should you feel the need to use one of these names, you can turn it into a valid variable name by adding leading or trailing underscores e.g. `_False` or `False__ `  or a trailing number e.g. `False1`)
 
 |Reserved Words|||||
 | -------- | ------- | ----- | ----- | ------ |

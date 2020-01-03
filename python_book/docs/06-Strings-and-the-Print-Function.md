@@ -11,7 +11,7 @@
 
 ###  The print function 
 
-Lets talk about the print statement or as it is more correctly called, the print function.
+Lets talk about the `print()` statement or, as it is more correctly called, the print function.
 
 "print" is what is known as a built-in function in Python. Let's get some terminology out of the way before moving on:
 
@@ -40,7 +40,9 @@ You may have noticed that the text inside the parentheses is also between single
 The quotes are necessary to differentiate between code being fed into the print
 statement and the text to be printed.
 
-If you want to print single quotes (`' '`) in your text you can do this by enclosing the text with double quotes (`" "`) or vice versa. Python does not care if you use single or double quotes to enclose your strings as long as you are consistent.
+If you want to print single quotes (`'`) in your text you can do this by enclosing the text with double quotes (`" "`) or vice versa. Python does not care if you use single or double quotes to enclose your strings as long as you are consistent.
+
+We will illustrate this in the next exercise:
 
 ```python
 # string_quotes.py
@@ -84,7 +86,7 @@ with your use of single and double quotes or you will run into problems.
 
 ## Advanced Mastery
 
-- Look up strings as they relate to computers. How are strings represented in computer language?
+- Look up strings as they relate to computers. How are strings represented by a computer?
 
 <!-- Navigation -->
 
