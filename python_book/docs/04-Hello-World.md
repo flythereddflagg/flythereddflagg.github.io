@@ -9,8 +9,7 @@
 
 # 4 - Hello World!
 
-If you have completed the two sections successfully you are ready now to begin 
-the actual programming!
+If you have sucessfully installed Python and are able to do basic navagation in the command line, you are ready to begin programming in Python!
 
 We will begin with the most basic program that actually does something in 
 Python. This is common when you want to begin any programming language. As with
@@ -20,26 +19,25 @@ all things, beginning in Python is very simple.
 
 - Start by opening your text editor and opening a new file
 
-- Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend putting it in your "Documents" folder. However, you can put it wherever makes sense.
+- Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend making a new folder, calling it something like `python_exercises` and putting it in your "Documents" folder. However, you can put it wherever makes sense.
 
-- Use the 'Save as' dialog to save this file in a folder where you want to keep all
-   your Python files
-
+- Use the 'Save as' dialog and navagate to the folder you made.
+   
 - Give the file the name `hello_world.py` and save it
-
-   You will notice the `.py` part of the filename. This is called an extension and 
+   
+You will notice the `.py` part of the filename. This is called an extension and 
    is a way of telling the computer or anyone who looks at the file what kind of 
    file it is. Make sure you name all files you make in Python using this extension.
-
+   
    Also it is good practice to never use spaces when naming files used in
    programming. Use underscores (`_`) instead of spaces. There are reasons for this but 
    just for now trust me when I say that you are avoiding a lot of confusion and 
    problems if you just commit to never using spaces in your filenames when you 
    write code.
-
+   
    **NOTE: I will give you the name of each filename you should be using for each
    exercise in this book. When you see an octothorpe (`#`) followed by a filename at the beginning of a code example, it means I want you to make a new file with that name by following the steps above.**
-
+   
 - Type the following *exactly* as it is written here. Do *not* copy-paste it.
 
 ```python
