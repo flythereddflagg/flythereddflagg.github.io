@@ -82,6 +82,8 @@ else:
 
 **Here is what should happen**
 
+Run this program 3 times as shown below. You should see similar results.
+
 ```
 $ python if_else.py
 Enter the name of the farmer
@@ -137,7 +139,7 @@ elif Expression3:
     
 # if all previous expressions evaluate to False do the 'else' part
 else:
-    do_thing_three()
+    do_thing_four()
 ```
 
 We will explain the syntax step by step. When Python comes to an `if` statement, the following is executed:
@@ -154,11 +156,11 @@ We will explain the syntax step by step. When Python comes to an `if` statement,
 - This pattern continues for all the `elif` expressions.
 - Finally, if none of the 'if' or `elif` expressions evaluate to `True`, the code under the `else` is executed. 
 
-Python's conditional syntax allows as many `elif` statements as the programmer wishes. However, the `elif` and `else` parts are not necessary. You may choose to have a conditional block without an `else` or without an `elif` part. For coding purposes this is good practice as we will see in the section about errors.
+Python's conditional syntax allows as many `elif` statements as the programmer wishes. However, the `elif` and `else` parts are not necessary. You may choose to have a conditional block without an `else` or without an `elif` part. We will discuss good practices for conditional statements in the section about errors.
 
 ### Indented Blocks
 
-We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make it more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each `if`, `elif` or `else` statement, the code is executed as normal. An indented block is just a way of python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to `True`. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:
+We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make code more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each `if`, `elif` or `else` statement, the code is executed as normal. An indented block is just a way of Python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to `True`. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:
 
 - *Indented blocks must start with a colon `:`.* A colon tells Python in effect "This is the beginning of a new indented block"
 - *Indent 4 spaces.* Four spaces is an accepted convention although Python will technically allow whatever spacing you want as long as you are consistent. Any code you see written will follow the 4 space convention and that is the standard so it is best if you follow suit. If you mix spacings or are inconsistent with this Python will throw a syntax error.
@@ -175,7 +177,7 @@ You may not know understand yet why these are so important but as we go along it
 
 1. There is a problem in the above script `if_else.py` that can cause errors if we're not careful. Can you find the problem? How would you fix it?
 
-   <!-- Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the `else` block be deleted. this can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well. -->
+   <!-- Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the `else` block be deleted. This can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well. -->
 
 <!-- Navigation -->
 

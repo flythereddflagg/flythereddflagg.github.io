@@ -9,7 +9,7 @@
 
 # 12 - Math, Operators and Data Types
 
-Now before going further we need to talk about math. This is not a book about math. I will cover some concepts related to scientific/engineering math in a more advanced lesson but I expect that you already know about the following concepts:
+Now before going further we need to talk about math. This is not a book about math. I will cover some concepts related to scientific/engineering math in an optional lesson later but I expect that you already know about the following concepts:
 
 - Addition and Subtraction
 - Multiplication and Division
@@ -17,7 +17,7 @@ Now before going further we need to talk about math. This is not a book about ma
 - Exponents
 - Absolute Values
 
-If you have never heard of any of these concepts before, I suggest you familiarize yourself with them before proceeding so you have at least a basic understanding of what they are. However if you intend to proceed anyway, just skip the stuff with which you are not familiar as it is probable you will never have to use it. 
+If you are unfamiliar with some of these concepts, I suggest you familiarize yourself with them before proceeding so you have at least a basic understanding of what they are. However if you intend to proceed anyway, just skip the stuff with which you are not familiar as it is probable you will never have to use it. 
 
 The following exercise will introduce you to the basics of math:
 
@@ -75,7 +75,7 @@ $
 
 **What is happening here?**
 
-This is a demonstration of binary math operators and assignment operators. Both will be explained below. Lines 28 - 34 demonstrate the assignment operators and were the equivalent of
+This is a demonstration of mathematical binary operators and assignment operators. Both types of operators will be explained below. Lines 28 - 34 demonstrate the assignment operators and were the equivalent of:
 
  `z = (((((z + x - x) * x) ** x) / x) // x) % x`,
 
@@ -87,7 +87,7 @@ We will explain all of this in this lesson.
 
 ### Data Types
 
-In the lesson on [Variables and Memory](./09-Variables-and-Memory.md), we talked about a computer can only move and store numbers in "boxes". However, we can represent anything we want as a series of "boxes" with numbers using some clever tricks that we will not get into here. 
+In the lesson on [Variables and Memory](./09-Variables-and-Memory.md), we talked about a computer can only move and store numbers in "boxes". However, we can represent anything we want as a set of "boxes" with numbers using some clever tricks that we will not get into here. 
 
 Suffice it to say that the computer has a way of 'marking' a box or series of boxes as number, letter, chunk of code or, indeed, anything we want. This mark allows the computer to deal with those boxes in a logical manner. For example, you should not try to mathematically divide a string. Therefore, the computer marks the series of numbers as a string so it knows how to properly deal with it and the code:
 
@@ -101,15 +101,15 @@ The different ways a computer can "mark" a set of numbers for interpretation are
 
 - **Integers**
 
-  An integer is any whole number, positive or negative (e.g. -3, -2, -1, 0, 1, 2, 3). This changes how it is combined with other numbers (as we will see later). As it happens, an integer is the only type that can be directly expressed as 1s and 0s in computer memory. Every other data type must have an interpretation attached to it (i.e. a data type).
+  An integer is any whole number, positive or negative (e.g. -3, -2, -1, 0, 1, 2, 3). This changes how it is combined with other numbers (as we will see later). As it happens, a positive integer is the only data type that can be directly expressed as 1s and 0s in computer memory. Every other data type must have an interpretation attached to it (i.e. a data type).
 
   The most obvious feature of an integer is that it cannot have a decimal or any fraction value. To have those features you need a float or a floating point number.
 
 - **Float**
 
-  A floating point number or "float" for short is a number that can have a non-whole or fractional value. Values like `1.0`, `-0.06020`, or `16575.23` are all floats. A float generally takes up more memory than an integer and can give you more accuracy in mathematical calculations. The accuracy a computer can have is limited by how much space a float can take up.
+  A floating point number or "float" for short is a number that can have a non-whole or fractional value. Values like `1.0`, `-0.06020`, or `16575.23` are all floats. A float generally takes up more memory than an integer and can give you more precision in mathematical calculations. The precision a computer can have is limited by how much space a float can take up.
 
-  An important note about floats and integers are that if you combine them mathematically, you will always get a float back. Therefore if you need to "upgrade" and integer to a float you can do so by multiplying an integer by `1.0`.
+  An important note about floats and integers are that if you combine them mathematically, you will always get a float back. Therefore, should you need to "upgrade" and integer to a float you can do so by multiplying an integer by `1.0`.
 
 ```python
 number = 2 # 'number' is an integer
@@ -129,7 +129,7 @@ Each set of symbols between x and y is called a binary operator. Below is a brie
 
 | Operator                  | Math Example                                      | Integer and float                  | String                                                       |
 | ------------------------- | ------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
-| + (plus)                  | `x +  y`\(=x + y\)                                | Addition                           | Concatenate two strings                                      |
+| + (plus)                  | `x + y`\(=x + y\)                                 | Addition                           | Concatenate two strings                                      |
 | - (dash)                  | `x -  y`  \(=x - y\)                              | Subtraction                        | No meaning                                                   |
 | * (asterisk)              | `x *  y`  \(= xy = x\cdot y\)                     | Multiplication                     | Multiply a string by a positive integer to concatenate string `y` with itself  `x` times |
 | ** (double asterisk)      | `x ** y ` \(=x^y\)                                | The exponent                       | No meaning                                                   |
@@ -160,13 +160,13 @@ Below is a summary of the assignment operators and their corresponding string op
 
 | Operator                   | Same as      | String Operation                              |
 | -------------------------- | ------------ | --------------------------------------------- |
-| `+=` Plus-equals           | `z = z +  x` | Append `x` to `z`                             |
-| `-=` Minus-equals          | `z = z -  x` | No meaning                                    |
-| `*=` Times-equals          | `z = z *  x` | The new `z` is the old `z` repeated `x` times |
+| `+=` Plus-equals           | `z = z + x`  | Append `x` to `z`                             |
+| `-=` Minus-equals          | `z = z - x`  | No meaning                                    |
+| `*=` Times-equals          | `z = z * x`  | The new `z` is the old `z` repeated `x` times |
 | `**=` Exponent-equals      | `z = z ** x` | No meaning                                    |
-| `/=` Divide-equals         | `z = z /  x` | No meaning                                    |
+| `/=` Divide-equals         | `z = z / x`  | No meaning                                    |
 | `//= `Double-divide-equals | `z = z // x` | No meaning                                    |
-| `%=` Modulo-equals         | `z = z %  x` | An expansion of the "old-style" formatting    |
+| `%=` Modulo-equals         | `z = z % x`  | An expansion of the "old-style" formatting    |
 
 ### Order of Operations
 

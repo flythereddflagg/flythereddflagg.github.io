@@ -42,8 +42,7 @@ As you can see the built-in `input` function allows you to take user data and st
 
 ### Do a mini project
 
-With this capability, we can start to write programs that can be used by someone other than the programmer! 
-To get you used to this I want you to write your first independent program.
+With this capability, we can start to write programs that can be used by someone other than the programmer! To get you used to this, I want you to write your own first program.
 
 You can do any project you want using everything you have learned so far. If you have something you really want to do, go for it. I only ask that you do the following in your project:
 
@@ -56,7 +55,7 @@ Beyond that you can do any project you want. If you do not know what you want to
 
 You may have heard of the game [Mad Libs](http://www.madlibs.com). This is a similar concept that you will implement yourself.
 
-The rules of the game are simple. Take a short story like the following:
+The rules of the game are simple. Take a short story such as the following:
 
 *Jake and John went fishing. While in the boat, Jake got a bite on his line and pulled up the biggest fish either of the men had ever seen. John exclaimed, "Now that is a fish!" The men took it home and made fish and chips.*
 
@@ -70,6 +69,10 @@ Prompt the user for each unique word and save each of these to a variable. Then 
 got a Canned air on his/her guitar and pulled up the greatest germ
 either of the sloths had ever seen. Mark exclaimed, "Now that
 is a gift card!" The cockroaches took it home and made slides.*
+
+### Hone Your Skills
+
+- Play with the "Wacky Stories" concept and make other stories and play the game with friends and family! 
 
 <!-- Navigation -->
 

@@ -10,7 +10,7 @@
 
 We are going to "break" Python in a lot of ways in this section. Your assignment for this section is to fix all the problems in the following script. For the purposes of this exercise, here is how you should go about doing this:
 
-- Write out the code exactly as it appears as always
+- Write out the code **exactly** as it appears as always
 - Try to run it
 - Each time it breaks or throws an error, fix the error
 - Continue running the script and fixing each error that comes up until the script runs without any errors
@@ -88,13 +88,13 @@ $
 
 ### Errors and Exceptions
 
-I am using the term "error" loosely here. In reality, there was a time when an error was the computer equivalent of certain death. You see, Python has all sorts of protections and carefully constructed walls up to protect the programmer from him or herself. But it wasn't always this way. Older languages such as C (especially in their earlier years) were perfectly happy to let you crash your entire computer. (It turns out that you could also destroy your hardware too but that's another can of worms we are not getting into here.) From the stand point of these programming languages, an error is a death sentence, at least, for the program in which it occurs. Not to mention, there were potentially a lot of weird side effects from a program that just stopped running unexpectedly.
+I am using the term "error" loosely here. In reality, there was a time when an error was the computer equivalent of certain death. You see, Python has all sorts of protections and carefully constructed walls up to protect the programmer from him or herself. But it wasn't always this way. Older languages such as C (especially in their earlier years) were perfectly happy to let you crash your entire computer. (It turns out that you could also destroy your hardware too but that's another can of worms we are not getting into here.) From the stand point of these programming languages, an error is a death sentence, at least, for the program in which it occurs. Not to mention, there were potentially a lot of weird side-effects from a program that just stopped running unexpectedly.
 
 To deal with the problems that this caused, languages like C++ introduced the concept of an "exception" in which an error could be caught and handled without breaking the program or computer. In Python, there are no such things as "errors", at least in the sense that is described above. Everything is an exception. This means that Python is a relatively forgiving language. You can put any amount of junk in there and generally it will keep you from causing major problems. In fact as you have seen by now, Python does everything it can to help you understand what went wrong and sometimes even tells you how you can fix it.
 
 I mentioned in an earlier section that "There is no such thing as perfect code". I mean it. Even when you write the simplest programs there are hundreds if not thousands of little things that have to go right for you to get a desired result. 
 
-And I want you to understand this now as well. You will make mistakes. This doesn't necessarily make you a bad programmer. Mistakes are almost inevitable. What I want you to get from this lesson is to not fear making mistakes and to know how to fix them when you make them. To that end we will now go over the kinds of exceptions and errors you will run into and how they can be fixed.
+And I want you to understand this now as well. You will make mistakes. This doesn't necessarily make you a bad programmer. Mistakes are almost inevitable. What I want you to get from this lesson is to not fear making mistakes and to know how to fix them when you make them. To that end, we will now go over the kinds of exceptions and errors you will run into and how they can be fixed.
 
 #### Syntax Errors
 
@@ -136,7 +136,7 @@ With all that said, we will cover how to deal with bad user input in later lesso
 
 There is a story that you can read in detail [here](https://en.wikipedia.org/wiki/Software_bug#Etymology). The story goes that in one of the earliest computers a system failure occurred when a moth got stuck inside the computer. Since then, the terms "bugs" and "debugging" are a catch-all terms for exceptions and logic errors in a program and the process of identifying and fixing these errors respectively. Much of what programmers do involves debugging programs. 
 
-As I noted above, the hardest thing to fix is logic errors. Later we will go much more into detail about debugging such errors. However for the purposes of lesson, the above strategy of running and fixing until all the errors disappear is sufficient. Just note for now that this is not the only way nor necessarily the best way of debugging.
+As I noted above, the hardest thing to fix is logic errors. Later, we will go much more into detail about debugging such errors. However for the purposes of lesson, the above strategy of running and fixing until all the errors disappear is sufficient. Just note for now that this is not the only way nor necessarily the best way of debugging.
 
 ## Hone Your Skills
 

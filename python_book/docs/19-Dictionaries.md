@@ -7,7 +7,7 @@
 ---
 <!-- End Navigation -->
 
-# 20 - Dictionaries
+# 19 - Dictionaries
 
 In the last lesson we learned about sequenced iterables. In this lesson we will learn about one of the most powerful iterables that does not exist in a sequence. This is called a dictionary. The following lesson will introduce and illustrate how to use a dictionary.
 
@@ -79,11 +79,11 @@ $
 
 ### Dictionaries
 
-A dictionary is a mapping type, that is, a data type that takes one kind of object and connects it to another. In other programming languages this is Dictionaries are nothing short of magic in programming for their efficiency and usefulness. A dictionary can be like a mini database or a convenient way to describe almost any object.
+A dictionary is a mapping type, that is, a data type that takes one kind of object and connects it to another. In other programming languages this concept of a mapping type is called a "hash map" or a "hash table". Dictionaries are nothing short of magic in programming for their efficiency and usefulness. A dictionary can be like a mini database or a convenient way to describe almost any object.
 
 As we saw above, dictionaries can be thought of as a list of unique keys that, when passed in the subscript operator, return a corresponding value. These key-value pairs allow a data structure that acts like a literal dictionary. This short lesson is only do introduce dictionaries but there are many things you can do with them.
 
-<!-- Continue Here -->
+<!-- Continue Here ADD MORE HERE!-->
 
 ## Hone Your Skills
 
@@ -91,7 +91,7 @@ As we saw above, dictionaries can be thought of as a list of unique keys that, w
 
 ## Advanced Mastery
 
-- Search the Internet and learn about hashmaps and how they work. From what you learn, why are dictionaries/hashmaps so efficient? How can you use this to make your code better?
+- Search the Internet and learn about hash maps and how they work. From what you learn, why are dictionaries/hashmaps so efficient? How can you use this to make your code better?
 
 <!-- Navigation -->
 

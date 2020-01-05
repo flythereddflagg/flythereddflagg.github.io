@@ -28,7 +28,7 @@ Inevitably you may run into situations where your code is doing unexpected thing
 
   The best way to fix bugs is to do your best to ensure that they never happen. You can plan your code so you have an idea of where you want to be when you finish up.
 
-  Before you write any code at all, pull out a pencil and paper or open up a drawing software like [draw.io](https://www.draw.io). Make an outline and write down in general what your code will do. Then get more specific by specifying how it will do it. Repeat this process until you have a general idea of what you need to code the project and the logic it will follow. This can be a flow chart or a list of function names and descriptions of what they do. This can be a difficult habit to follow but rest assured that doing good planning up front will save you a large amount of time debugging later on.
+  Before you write any code at all, pull out a pencil and paper or open up a drawing software like [draw.io](https://www.draw.io). Make an outline and write down in general what your code will do. Then get more specific by specifying how it will do it. Repeat this process until you have a general idea of what you need to code the project and the logic it will follow. This can be a flow chart or a list of function names and descriptions of what they do. This can be a difficult habit to establish but rest assured that doing good planning up front will save you a large amount of time debugging later on.
 
 - **Use Good Coding Practice**
 
@@ -70,7 +70,7 @@ Inevitably you may run into situations where your code is doing unexpected thing
 
 There are many different things you may want to do with your newfound skills. In reality, this project will be the most valuable thing you do yet as it will introduce problems you have not yet faced and develop skills you have not yet even thought of. Ideally, you will make something that interests you and feeds your passions. Below I have provided some general ideas and perhaps a push in the right direction. However, you must flesh out the ideas here and make them your own. Please note that right now, everything you will do will interface with your user in the command line. This however does not mean that you cannot make something interesting or useful. With that said, here are some possible projects.
 
-### Design A Game
+### Make A Game
 
 Video games back in earlier days of computing were all based in the command line. A popular one that was among the first video games was called "Zork". Search the Internet for information about Zork and make your own little version. A tiny version of a Zork-like might look like:
 

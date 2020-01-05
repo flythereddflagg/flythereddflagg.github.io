@@ -127,7 +127,7 @@ Python follows some rules on what a valid variable name can be. The rules are as
 - Names are case sensitive (i.e. Spam, spAm and spam are three different names)
 - Names cannot be one of the 35 reserved words in Python. These are listed in the table below. (As a note, should you feel the need to use one of these names, you can turn it into a valid variable name by adding leading or trailing underscores e.g. `_False` or `False__ `  or a trailing number e.g. `False1`)
 
-|Reserved Words|||||
+|Reserved Words in Python|||||
 | -------- | ------- | ----- | ----- | ------ |
 | False | None    | True | and   | as     |
 | assert   | async   | await | break | class  |
@@ -139,11 +139,11 @@ Python follows some rules on what a valid variable name can be. The rules are as
 
 #### Naming Conventions and Guidelines
 
-Within the limits of these rules, you can call your variables any name you want and make them as long or as short as you want. However, there are some conventions you should stick to you make your coding better. The following conventions will help make your code easier to write and fix when something goes wrong. (And trust me, something *always* goes wrong.):
+Within the limits of these rules, you can call your variables any name you want and make them as long or as short as you want. However, there are some conventions you should stick to you make your code better. The following conventions will help make your code easier to write and fix when something goes wrong. (And trust me, something *always* goes wrong.):
 
 - **Use lower case and underscores**
 
-  There are two common ways to name a variable. For an example we will consider a variable that will bear a name that can be read as "black knight". The first way is lower case with underscores for spaces: `black_knight`. The second is often called "camel case": `BlackKnight`. Obviously you can use all caps (`BLACKKNIGHT`), no spaces (`blackknight`), some form abbreviation (`blk_knt`)  or any combination of these. However, the lower case with underscores and camel case are the most common for general use variables. 
+  There are two common ways to name a variable. For an example we will consider a variable with a name that can be read as "black knight". The first way is lower case with underscores for spaces: `black_knight`. The second is often called "camel case": `BlackKnight`. Obviously you can use all caps (`BLACKKNIGHT`), no spaces (`blackknight`), some abbreviation (`blk_knt`)  or any combination of these. However, the lower case with underscores and camel case are the most common for general use variables. 
 
   When writing Python especially as you are learning, stick to the lower case with underscores. For what we will be doing this will help your code be more readable and clear to you and anyone else reading it. 
 
@@ -170,7 +170,7 @@ Within the limits of these rules, you can call your variables any name you want 
   val = a*cav + b*wtmcls + c*hcpv + d
   ```
 
-  I had some context for the code but could not figure out what this was saying. Initially I could infer the following:
+  I had some context for the code but could not figure out what this was saying. Initially, I could infer the following:
 
   - This was a mathematical statement equivalent to $val = a \cdot cav + b \cdot wtmcls + c\cdot hcpv + d$
   - a, b, c and d were constants related to all the other variables and if I could figure out the other 4 variables I could easily figure out a, b, c and d
@@ -188,30 +188,28 @@ Within the limits of these rules, you can call your variables any name you want 
   Now you don't need to understand all of this perfectly but consider how much easier to understand it would have been if the code had been written like this:
 
   ```python
-  viscosity_value = a*compound_avg_val + b*h2o_molecules + c*heat_capacity + d 
+  viscosity = a*compound_average + b*h2o_molecules + c*heat_capacity + d 
   ```
 
   I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before.
 
   This will take practice but it behooves you to write your variable names (and the rest of your code for that matter) descriptively to avoid issues like the one above. 
 
-  ​	
-
 - **Help your reader understand the code without comments**
 
-  Ideally you want to write code clearly enough that it is apparent what the code does without needing comments explaining it. Comments are important and I do not want to diminish their importance but this clear writing is better than commenting. Up to now what your code does should be obvious to anyone that can read Python without any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.
+  Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. Comments are important and I do not want to diminish their importance but writing easily understandable code is better than commenting. Up to now what your code does should be obvious to anyone that can read Python without any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.
 
 Any good programmer knows that the majority of the time we spend coding is actually spent reading and not writing. Python makes it easy for you to write readable code and the first step is write good variable names.
 
 ## Hone Your Skills
 
 - Go to the [Python Built-in Function page](https://docs.python.org/3/library/functions.html) and experiment with as many functions in the Python interpreter as you can. What does each of these built in functions do?
-- Using the addition operator `+`, write a program that adds two numbers together and then print the result. (Use three descriptively named variables.)
+- Using the addition operator (`+`), write a program that adds two numbers together and then print the result. (Use three descriptively named variables.)
 - Experiment with different names of variables in `vars_and_mem.py`. How can you make your variables more clear to those reading your code?
 
 ## Advanced Mastery
 
-- Use the internet to answer the following questions:
+- Search the internet to answer the following questions:
   - What is binary?
   - How are numbers represented as 1s and 0s?
   - How are characters represented as 1s and 0s?

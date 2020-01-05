@@ -13,7 +13,7 @@ When we talked about variables and memory I mentioned that there were three basi
 
 - The CPU
 - The RAM or volatile memory
-- The hard drive or persistent memory
+- The persistent memory (e.g. the hard disk drive or the solid-state drive)
 
 This lesson is an opportunity to interact with the third part, that is the hard drive. We will learn in this lesson how to read and write files from the hard drive.
 
@@ -89,16 +89,17 @@ We are writing and reading files here with a special tool called a file object. 
 - We get some data from the user.
 - We organize this data into a table where the rows are separated by newline characters (`\n`) and the columns are separated in each row by commas (`,`). We give this table headers and concatenate this string all together using the addition operator.
 - We call `open` on a string containing a filename which returns a file object.
-- We feed appropriate method statements to the file object to read, write or save and close the object.
-- The file is altered as we alter the object.
+- We feed appropriate method statements to the file object to read, write.
+- The file object is altered as we use the file object's methods.
+- We then save and close the object.
 
 Some of this nomenclature is new. I will now explain some of the newer concepts below.
 
 ### Objects
 
-In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence over again.
+In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence again.
 
-A type, as I explained before, is a mark that a computer puts on a 'box' or set of 'boxes' in volatile memory. It is a label that lets the computer know how to work with those boxes. An object is those boxes themselves. An object may have a type assigned to it just as you have the label "human" or "homo sapien" assigned to you.
+A type, as I explained before, is a mark that a computer puts on a 'box' or set of 'boxes' in volatile memory. It is a label that lets the computer know how to work with those boxes. An object is the actual box or set of boxes themselves. An object has a data type assigned to it just as you have the label "human" or "homo sapien" assigned to you.
 
 For example, when you have a string variable, virtually speaking you have a set of boxes in a certain order and each box has a character in it. In addition, you have other boxes that contain the code that makes `.format` work and everything else the string needs to know how to do what it does. Collectively, all these boxes together in memory are the object. This nomenclature will be used often so it's important to internalize this concept early.
 
@@ -110,7 +111,7 @@ Now that we have discussed objects lets look specifically at file objects. Lets 
 
 where `filename` is the name of the file (okay maybe that's obvious) you want to open and `mode` is the way you want to open the file. The basic ways you can open a file are:
 
-- `'r'` for read mode. In this mode the file can only be read (this is sometimes called "read-only" mode). This is the default mode, meaning if you do not give the `open` function a mode it will assume read mode. Because you are in read mode operations like `.write()` will throw an error. Also, if the filename you are put into `filename` doesn't exist that will also throw an error.
+- `'r'` for read mode. In this mode the file can only be read (this is sometimes called "read-only" mode). This is the default mode, meaning if you do not give the `open` function a mode it will assume read mode. Because you are in read mode operations like `.write()` will throw an error. Also, if the filename you put into `filename` doesn't exist that will also throw an error.
 
   The `.read()` method returns the entirety of the file as a string. Experiment with this function. What happens when you try to call `.read()` twice?
 
@@ -145,7 +146,7 @@ with open(filename + ext , "w") as f:
     f.write(data)     
 ```
 
-Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The `with` statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a with statement (unless you have a *very* good reason not to do so).
+Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The `with` statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a `with` statement (unless you have a *very* good reason not to do so). Also note that working with files is not the only situation in which it is appropriate to use a with statement but it is a very common one.
 
 ## Hone Your Skills
 

@@ -8,7 +8,7 @@
 <!-- End Navigation -->
 # 20 - Functions
 
-We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent thereof:
+We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent:
 
 - The ability to format text and print it to the command line
 - Assignment of variables and storage in volatile memory
@@ -200,6 +200,10 @@ The line `global egg` tells Python to treat the `egg` variable in the function a
 A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.
 
 In the case of `function_intro.py`, you may have noticed that we did not have to use `global` in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with `count_sandwiches()`), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in `function_intro.py` you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!
+
+### Main-loops
+
+*To be added*
 
 ## Hone Your Skills
 

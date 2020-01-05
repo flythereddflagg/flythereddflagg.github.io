@@ -202,7 +202,7 @@ matrix_a = [
     [7,8,9]]
 ```
 
-which is just a lists of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.
+which is just a list of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.
 
 ### Tuple
 

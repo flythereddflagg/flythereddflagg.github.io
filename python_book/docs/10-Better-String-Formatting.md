@@ -54,7 +54,7 @@ print(f"{random_number_6}")
 print("")
 
 print("Notice how this can be hard to read.")
-print("Let's try printing them while up the decimals.")
+print("Let's try printing them and lining up the decimals.")
 print(f"{random_number_1:7d}")    
 print(f"{random_number_2:7d}")    
 print(f"{random_number_3:11.3f}") 
@@ -108,23 +108,17 @@ lets go through each new concept one-by-one:
 - *Lines 19-21 and 33- 50:* Notice the `f` in front of the string. This is known as a "literal string interpolation" and is explained below.
 
 - *Lines 43-50 and line 21:* These are format instructions. `d` is the symbol that corresponds 
-  to formatting an integer.
-  `f` is the symbol for floats.
-  The number before the decimal
-  is the amount of space padding.
-  The number after the decimal
-  is the number of decimal places
-  to show in the number. There are more instructions that can be passed. See "Hone your skills" for more on this subject. The important thing here is that for numbers, changing the padding and decimal places can align the numbers' decimals in an easy-to-read fashion.
+  to formatting an integer. `f` is the symbol for floats. The number before the decimal is the amount of space padding. The number after the decimal is the number of decimal places to show in the number. There are more instructions that can be passed. See "Hone your skills" for more on this subject. The important thing here is that for numbers, changing the padding and decimal places can align the numbers' decimals in an easy-to-read fashion.
 
 
 ### Literal String Interpolation
 
-The `f` that we put in front of a string is referred to technically as a "literal string interpolation". Colloquially, we call it an "f-string". It tells Python to automatically call `format` on the string using the variable names in the braces. The colon and the text following it tells Python to accept format codes that we explored before. This feature was added relatively recently and is now the standard way of string formatting.
+The `f` that we put in front of a string is referred to technically as a "literal string interpolation". Colloquially, it is called an "f-string". It tells Python to automatically call `format()` on the string using the variable names in the braces. The colon and the text following it tells Python to accept format codes that we explored before. This feature was added relatively recently and is now a standard way of string formatting.
 
 ## Hone Your Skills
 
 1. Look up what a Python PEP is and specifically look up PEP 498. Why do PEPs exist?
-1. `f` is not the only thing that we can put at the beginning of a string to make it do something different. What happens when you put the following letters in front of a string? (Google these if you can't figure it out.)
+1. `f` is not the only thing that we can put at the beginning of a string to make it do something different. What happens when you put the following letters in front of a string? (Search for these on the internet if you can't figure it out.)
    - `r`
    - `b`
    - `u`

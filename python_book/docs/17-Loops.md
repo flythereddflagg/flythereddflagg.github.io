@@ -31,7 +31,7 @@ while n <= 5:
     n += 1
 
 # better! that only took 4 lines of code
-# but here is a better way
+# but here is an even better way
 print("")
 
 for n in range(5):

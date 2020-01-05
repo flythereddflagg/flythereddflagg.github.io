@@ -105,8 +105,7 @@ sin(π/2) = 1.0
 ln(23)   = 3.18
 
 The exact date and time is: 2019-01-05 12:38:55.442190
-PS C:\Users\Jilly\Documents\Mark\python_book\code_files> python .\
-import_practice.py
+$ python import_practice.py
 Python doing: ls
 --------------------
 Folder Name: .

@@ -15,7 +15,7 @@ For this section's exercises there will be a short example that you will work in
 
 One of the most important concepts in programming is that of Boolean logic. On a fundamental level the computer only knows 2 things: 1 and 0, Yes and No, On and Off, True and False. Everything else in a computer must be constructed from these two things. Within this framework the computer can do many things such as make decisions. However to make  a decision, the computer must be able to evaluate the truth value of everything. Therefore everything can be evaluated as True or False using the built-in `bool` function.
 
-This gives rise to a new data type, the Boolean data type. The Boolean data type can only have two values namely `True` or `False`. This makes it among the simplest and most useful of data types. By
+This gives rise to a new data type, the **Boolean data type**. The Boolean data type can only have two values namely `True` or `False`. This makes it among the simplest and most useful of data types.
 
 #### Try this out in the interpreter
 
@@ -47,9 +47,7 @@ True
 $
 ```
 
-What I hope you get out of this is that, for the three data types we have covered so far, anything that is a non-empty or non-zero value will evaluate to True and empty or zero values will evaluate to False. `True` and `False` are both key words in Python to express these boolean concepts. And every data type in Python, by default, will evaluate to one or the other. In the next lesson we will explore how we can use this idea to make decisions.
-
-Another way to return the truth of something is by using the logical comparison operators.
+What you should get out of this is that, for the three data types we have covered so far, anything that is a non-empty or non-zero value will evaluate to True and empty or zero values will evaluate to False. `True` and `False` are both key words in Python to express these boolean concepts. And every data type in Python, by default, will evaluate to one or the other. In the next lesson we will explore how we can use this idea to make decisions. Another way to return the boolean value of something is by using the logical comparison operators.
 
 ### Comparison Operators
 
