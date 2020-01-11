@@ -158,7 +158,7 @@ One more powerful feature of object-oriented programming is the idea that a give
 
 ## Hone your Skills
 
-- Copy the code from `inheritance.py` into a separate text file and use code comments to mark every example in the code of children using inherited traits with something like `# inheritance used here`. Mark up the code in a similar fashion for every example of polymorphism and every example of overriding. 
+- Copy your code from `inheritance.py` into a separate text file and use code comments to mark every example in the code of children using inherited traits with something like `# inheritance used here`. Mark up the code in a similar fashion for every example of polymorphism and every example of overriding. 
 
 - You may notice that each automobile class has more data to offer than just its year, make and model. Implement `__repr__` for every class so all of their data members are shown when you print them.
 - Add a method and data attribute that sets and adjusts the color of the car. Add this color to the `__repr__` method for each class.
