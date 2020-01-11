@@ -15,7 +15,7 @@ There are two shorter exercises in this section as well as some new vocabulary. 
 
 ### What is object oriented programming?
 
-In Python, everything is an object. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work. For an example, we will use some list objects in Python. Do the following exercise:
+In Python, everything is an object. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work, including some things common to Python objects. For an example, we will use some list objects in Python. Do the following exercise:
 
 ```python
 # list_objects.py
@@ -63,7 +63,7 @@ From this short exercise you should be able to see the following:
 
 - **Objects must be called into existence by some function**
 
-  You may not see exactly where it happens but when you write `x = []` you are effectively calling `list()` and setting it equal to x. You will not see the details of this but they are implemented in the Python code somewhere. The process of calling an object into existence is called **instantiation** and the function that makes it happen is called an **object constructor.** Another way to think about this relationship is that `list_object1` and `list_object2` are both **instances** of a `list` data type.
+  You may not see exactly where it happens but when you write `x = []` you are effectively calling `list()` and setting it equal to x. You will not see the details of this but they are implemented in the Python code somewhere. The process of calling an object into existence is called **instantiation** and the function that usually makes it happen is called an **object constructor.** Another way to think about this relationship is that `list_object1` and `list_object2` are both **instances** of a `list` data type.
 
 - **Objects have and can be modified by methods**
 
@@ -154,7 +154,7 @@ Any object that is contained by the class or object is considered an attribute o
 
 #### Methods
 
-**Methods** are just functions defined in the class definition and operate solely within the context of the class or **instances** of the class. Methods are there to define how a class will behave. In fact, a class can be altered to act in all sorts of useful ways (see [Advanced Mastery](#Advanced-Mastery) below). As a matter of good coding practice, methods should alter the class's members or return outputs of the class but should not alter other objects or classes not referred to by the class.
+**Methods** are just functions defined inside the class definition and operate solely within the context of the class or **instances** of the class. Methods are there to define how a class will behave. In fact, a class can be altered to act in all sorts of useful ways (see [Advanced Mastery](#Advanced-Mastery) below). As a matter of good coding practice, methods should alter the class's members or return outputs of the class but should not alter other objects or classes not referred to by the class.
 
 ## Hone Your Skills
 
