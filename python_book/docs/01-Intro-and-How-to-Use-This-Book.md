@@ -28,14 +28,9 @@ To that end, I have the following goals in mind while writing this book:
     beer and free speech) forever so that any student of Python may have access
     to these introductory materials. Python is a language that anyone can learn and learning Python should not be a skill that is forever behind a pay wall.
 
- - **Teach to the "Zen of Python"** 
+    I hope this book is useful to you. I hope you get out of Python what I did and continue to get.
 
-    The "[Zen of Python](https://www.python.org/dev/peps/pep-0020/)" will be covered at some point in this book. It is a
-    list of 20 principles that embody the design of Python written in poetic
-    fashion. These principles are so powerful that I will continually try to
-    use them in every lesson where applicable.
-
- - **Teach fundamentals about the computer and what is happening** 
+ - **Teach fundamentals about computer science and the "Zen of Python"** 
 
     This is an aspect of teaching programming that is lost in many cases that I have been able to observe. In my experience if one understands what is happening on a fundamental level in the computer, two
     benefits arise.
@@ -43,6 +38,11 @@ To that end, I have the following goals in mind while writing this book:
     First, the code design, implementation and improvement will be faster and can help you know how to tackle difficult problems.
 
     Secondly, debugging your code will be less of a recursive refactoring black hole and more of a intuitive wave that you can surf into the sunset. 
+
+    The "[Zen of Python](https://www.python.org/dev/peps/pep-0020/)" will be covered at some point in this book. It is a
+    list of 20 principles that embody the design of Python written in poetic
+    fashion. These principles apply to how you write code and are so powerful that I will try to
+    use them in every lesson I can.
 
  - **Get as much as you want out of the learning experience** 
 
@@ -55,25 +55,21 @@ To that end, I have the following goals in mind while writing this book:
     Many introduction books on programming are content with covering the basics
     that are common to all programmers but then do not take you any further. In this book, I intend to point you to as many good resources as possible for as many branches of programming as I can. I will not recommend a resource unless I have used it myself and found it to be useful.
 
-    There are, however, a few branches of programming for which I have not been able to find any good learning resources. Where this is the case, included are introductions to certain frameworks such as Tkinter and Pygame.
-
- - **Get you writing code as fast as possible**
-
-    I have always learned best by doing. I feel that for programming this is the
-    best approach to learning therefore I aim to get you coding and keep you 
-    coding as much as possible.
+    There are, however, a few branches of programming for which I have not been able to find any good learning resources. Where this is the case, included are introductions to certain frameworks such as Tkinter.
 
  - **Get you reasonably coding proficient within 20 hours instead of 10,000 hours**
 
+    I have always learned best by doing. I feel that for programming this is the
+best approach to learning therefore I aim to get you coding and keep you 
+    coding as much as possible.
+    
     I have heard it said that it takes 10,000 hours to become proficient at something. I, along with [this guy](https://www.youtube.com/watch?v=5MgBikgcWnY), believe that is false. My best aim is to get you reasonably proficient at Python within 20 hours of coding.
-
+    
     With that said, you may find that you reach your 20-hour mark and are not
     finished with the book in terms of learning the basics. That is okay. You
     may find that a reasonable amount of proficiency is possible in less than
     20 hours. That is also okay. Learn at your own pace, but understand that
     10,000 hours of coding is NOT required to gain amazing benefits from coding.
-
-This is not an exhaustive list but this should give an idea of the philosophy that went into how to learn Python.
 
 
 ## How to use this book

@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#7-escape-characters" tabindex="1" class="md-skip">
+      <a href="#7-escape-characters" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+        <a href=".." title="The Redd Python Book" aria-label="The Redd Python Book" class="md-header-nav__button md-logo">
           
             <i class="md-icon">home</i>
           
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -625,6 +625,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+      33. Branching Out
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -684,13 +696,13 @@
 <!-- End Navigation -->
 
 <h1 id="7-escape-characters">7 - Escape Characters</h1>
-<p>You may ask "What do I do if I need a string to have a mixture of double and 
+<p>Based on the previous section, you may ask "What do I do if I need a string to have a mixture of double and 
 single quotes?" For example:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
+</code></pre></div>
 </td></tr></table>
 
-<p>This is where escape characters come in handy. An escape character is a text character that can be represented by a backslash followed by a character or series of characters (e.g. <code>\t</code>, <code>\n</code>, <code>\u03b7</code>). Escape characters make possible the mixing of single and double quotes (among many other things) as you will see in this next exercise.</p>
+<p>This is where escape characters come in handy. An escape character is a text character that can be represented by a backslash (<code>\</code>) followed by a character or series of characters (e.g. <code>\t</code>, <code>\n</code>, <code>\u03b7</code>). Escape characters make possible the mixing of single and double quotes (among many other things) as you will see in this next exercise.</p>
 <p>Now go back to your text editor and write the following code (again, do NOT 
 copy-paste it). Notice the use of escape characters and try to figure out what each one does.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -717,7 +729,7 @@ copy-paste it). Notice the use of escape characters and try to figure out what e
 22
 23
 24
-25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># esc_chars.py</span>
+25</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># esc_chars.py</span>
 
 <span class="c1"># here is an example of the use of escape characters</span>
 <span class="c1"># Both of lines do the same thing</span>
@@ -742,7 +754,7 @@ copy-paste it). Notice the use of escape characters and try to figure out what e
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">I just made a new line! Now I will do another!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is a greek eta character: </span><span class="se">\u03b7</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>Here is what should happen</strong> </p>
@@ -763,7 +775,7 @@ copy-paste it). Notice the use of escape characters and try to figure out what e
 15
 16
 17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python esc_chars.py
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python esc_chars.py
 John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
 John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
 
@@ -780,8 +792,8 @@ How do you print a backslash? \ like that!
 
 I just made a new line! Now I will do another!
 
-Here is a funny character: η
-</pre></div>
+Here is a greek eta character: η
+</code></pre></div>
 </td></tr></table>
 
 <p>If on any of these exercises you do not see the output appear <em>exactly</em> as you 
@@ -801,7 +813,7 @@ saw it in the book, go back and fix it until it does. </p>
 <li><code>\t</code>: This is the tab character and printing it inserts 4 or 8 spaces depending on the system you are using.</li>
 <li><code>\r</code>: This is the carriage return character and it returns the print cursor to the beginning of the line. Notice how the first part of the printed line is now overwritten with the "I did it!" part.</li>
 <li><code>\\</code>: This is the backslash character and tells python to treat this 
-  character as a single backslash. As you can see, the only thing that came out of the print statement was a backslash"</li>
+  character as a single backslash. As you can see, the only thing that came out of the print statement was a single backslash.</li>
 <li><code>\u03b7</code>: This is called a "Unicode escape character". It follows the 
   format <code>\uhhhh</code> where <code>hhhh</code> references the 4-character hexadecimal code that corresponds to what was printed (in this case, $\eta$). Using that 4-character hexadecimal code you can express over 65000 characters. If you want to know a character's code simply search on the internet for "Unicode <em>CHARACTER NAME</em>". (e.g. "Unicode eta" for $ \eta $)</li>
 </ul>
@@ -819,14 +831,12 @@ these by doing the exercises under "Hone your skills". For now, understand that
 <li><code>\o**</code></li>
 <li><code>\x**</code></li>
 <li>Look up how to make Python print $\epsilon = \gamma c^2$ 
-  (those are the greek letters epsilon ($\epsilon$) and gamma ($\gamma​$) and 
+  (those are the greek letters epsilon ($\epsilon$) and gamma ($\gamma$) and 
   the equation reads: "epsilon equals gamma c squared")</li>
 </ul>
 <h2 id="advanced-mastery">Advanced Mastery</h2>
 <ul>
-<li>Make Python print out the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">
-  Navier-Stokes Equations</a> for a 3-D system in Cartesian coordinates formatted 
-  like a normal math equation using escape sequences and print statements.</li>
+<li>Make Python print out the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">Navier-Stokes Equations</a> for a 3-D system in Cartesian coordinates formatted like a normal math equation using escape sequences and print statements.</li>
 </ul>
 <!-- Navigation -->
 
@@ -892,9 +902,9 @@ these by doing the exercises under "Hone your skills". For now, understand that
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -904,9 +914,9 @@ these by doing the exercises under "Hone your skills". For now, understand that
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#20-functions" tabindex="1" class="md-skip">
+      <a href="#20-functions" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+        <a href=".." title="The Redd Python Book" aria-label="The Redd Python Book" class="md-header-nav__button md-logo">
           
             <i class="md-icon">home</i>
           
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -471,6 +471,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#main-loops" class="md-nav__link">
+    Main-loops
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hone-your-skills" class="md-nav__link">
     Hone Your Skills
   </a>
@@ -632,6 +639,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+      33. Branching Out
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -662,6 +681,13 @@
         <li class="md-nav__item">
   <a href="#scope" class="md-nav__link">
     Scope
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-loops" class="md-nav__link">
+    Main-loops
   </a>
   
 </li>
@@ -698,7 +724,7 @@
 <!-- End Navigation -->
 
 <h1 id="20-functions">20 - Functions</h1>
-<p>We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent thereof:</p>
+<p>We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent:</p>
 <ul>
 <li>The ability to format text and print it to the command line</li>
 <li>Assignment of variables and storage in volatile memory</li>
@@ -768,28 +794,28 @@
 55
 56
 57
-58</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># function_intro.py</span>
+58</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># function_intro.py</span>
 
 <span class="c1"># define a global variable</span>
 <span class="n">number_of_sandwiches</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="c1"># &#39;def&#39; defines a function</span>
 <span class="k">def</span> <span class="nf">count_sandwiches</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There are </span><span class="si">{number_of_sandwiches}</span><span class="s2"> sandchwiches.&quot;</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There are </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandchwiches.&quot;</span><span class="p">)</span> 
 
 
 <span class="k">def</span> <span class="nf">make_a_sandwich</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">number_of_sandwiches</span>
     <span class="n">number_of_sandwiches</span> <span class="o">+=</span> <span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A sandwich has been made.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{number_of_sandwiches}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">eat_a_sandwich</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">number_of_sandwiches</span>
     <span class="n">number_of_sandwiches</span> <span class="o">-=</span> <span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">You ate a sandwich.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{number_of_sandwiches}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
 
 
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
@@ -826,7 +852,7 @@
             <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That isn&#39;t an option.&quot;</span><span class="p">)</span>
 
 <span class="n">main</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
@@ -874,7 +900,7 @@
 42
 43
 44
-45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python3 function_intro.py
+45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python3 function_intro.py
 
 Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
 &quot;count&quot; your sandchwiches or &quot;quit&quot;?
@@ -919,7 +945,7 @@ Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
 &quot;count&quot; your sandchwiches or &quot;quit&quot;?
 --&gt; quit
 $ 
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <h3 id="functions">Functions</h3>
@@ -937,7 +963,7 @@ $
  9
 10
 11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span> <span class="o">...</span><span class="p">):</span>
+12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span> <span class="o">...</span><span class="p">):</span>
     <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
     <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
     <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
@@ -949,7 +975,7 @@ $
 
 <span class="c1"># or if there are no arguments</span>
 <span class="n">function_name</span><span class="p">()</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by <code>&lt;statements ...&gt;</code>). The first example of this was in the <code>count_sandwiches()</code> function. As you saw while executing the script, it simply gets the value of <code>number_of_sandwiches</code> and prints the corresponding text.</p>
@@ -962,14 +988,14 @@ $
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
 
 <span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
     <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
 
 <span class="n">change_color</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{egg}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{</span><span class="n">egg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
 </td></tr></table>
 
 <p>Based on this code, which will print?</p>
@@ -986,20 +1012,22 @@ $
 5
 6
 7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
+8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
 
 <span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
     <span class="k">global</span> <span class="n">egg</span>
     <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
 
 <span class="n">change_color</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{egg}</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{</span><span class="n">egg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
 </td></tr></table>
 
 <p>The line <code>global egg</code> tells Python to treat the <code>egg</code> variable in the function as the same <code>egg</code> variable defined in the global scope. There are many possible scopes that could exist in a Python program but for now the function scope and the global scope are the most important.</p>
 <p>A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.</p>
 <p>In the case of <code>function_intro.py</code>, you may have noticed that we did not have to use <code>global</code> in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with <code>count_sandwiches()</code>), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in <code>function_intro.py</code> you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!</p>
+<h3 id="main-loops">Main-loops</h3>
+<p><em>To be added</em></p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>
 <li>Make a function that calculates the <a href="https://en.wikipedia.org/wiki/Factorial">factorial of a number</a> (use a for-loop in your function) using a global variable from the user as your input.</li>
@@ -1068,9 +1096,9 @@ $
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -1080,9 +1108,9 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

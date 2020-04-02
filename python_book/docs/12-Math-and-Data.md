@@ -204,7 +204,7 @@ Lastly we will talk about some built-in functions (like `print()`) can help us e
 
 ## Hone Your Skills
 
-1. Write your own script that uses the built-in functions. Can you break them? What are their limitations?
+1. Write your own script that uses the built-in functions discussed above. Can you break them? What are their limitations?
 2. Using the `input` function, write a script that asks the user for the parameters `a`, `b` and `c` corresponding to the quadratic equation ($ax^2+bx+c = 0$) and calculates the roots of the equation using the [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_equation) with the user providing a, b and c. (Hint: A square root is the same as taking a number to the $\frac{1}{2}$ power. e.g. $\sqrt{a+b} = (a+b)^\frac{1}{2}$) 
 
 ## Advanced Mastery

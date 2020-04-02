@@ -86,6 +86,8 @@ with your use of single and double quotes or you will run into problems.
 
 ## Advanced Mastery
 
+**Remember:** It is not required to figure out everything in these sections. Advanced Mastery is for those who are especially curious or wish to do more to understand the topics explained above. If you want you can skip this part and move on to the next section.
+
 - Look up strings as they relate to computers. How are strings represented by a computer?
 
 <!-- Navigation -->

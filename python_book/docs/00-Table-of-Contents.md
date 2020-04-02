@@ -31,3 +31,4 @@
 1. [Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md)
 1. [Automated-Testing](./31-Automated-Testing.md)
 1. [Do-Another-Project](./32-Do-Another-Project.md)
+1. [Branching-Out](./33-Branching-Out.md)

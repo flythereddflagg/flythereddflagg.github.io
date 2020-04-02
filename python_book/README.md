@@ -17,5 +17,5 @@ Theming is done with`mkdocs-material` from `pip` and `pygments` also needed for 
 ## To Do
 
 - Shorten all code blocks so that any line does not exceed 72 characters in length
-- investigate line number problem
-- check that all math and code blocks are rendering correctly (fix if necessary)
+
+  

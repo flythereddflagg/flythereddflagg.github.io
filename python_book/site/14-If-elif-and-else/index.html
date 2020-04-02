@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#14-if-elif-and-else" tabindex="1" class="md-skip">
+      <a href="#14-if-elif-and-else" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+        <a href=".." title="The Redd Python Book" aria-label="The Redd Python Book" class="md-header-nav__button md-logo">
           
             <i class="md-icon">home</i>
           
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -639,6 +639,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+      33. Branching Out
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -777,7 +789,7 @@
 61
 62
 63
-64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># if_else.py</span>
+64</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># if_else.py</span>
 
 <span class="c1"># let&#39;s start with some variables</span>
 <span class="c1"># this will tell us to print an error</span>
@@ -830,21 +842,22 @@
         <span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Farm is above break-even point. Congratulations!&quot;</span>
 
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">        --- Farm Report for </span><span class="si">{farmer_name}</span><span class="s2"> ---</span>
-<span class="s2">    Product for sale               : </span><span class="si">{produce:&gt;11}</span><span class="s2"></span>
-<span class="s2">    Price per unit                 : $</span><span class="si">{pricing:10.2f}</span><span class="s2"></span>
-<span class="s2">    Total revenue                  : $</span><span class="si">{revenue:10.2f}</span><span class="s2"></span>
-<span class="s2">    Amount owed to each hired hand : $</span><span class="si">{payment_per_hand:10.2f}</span><span class="s2"></span>
+<span class="s2">        --- Farm Report for </span><span class="si">{</span><span class="n">farmer_name</span><span class="si">}</span><span class="s2"> ---</span>
+<span class="s2">    Product for sale               : </span><span class="si">{</span><span class="n">produce</span><span class="si">:</span><span class="s2">&gt;11</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">    Price per unit                 : $</span><span class="si">{</span><span class="n">pricing</span><span class="si">:</span><span class="s2">10.2f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">    Total revenue                  : $</span><span class="si">{</span><span class="n">revenue</span><span class="si">:</span><span class="s2">10.2f</span><span class="si">}</span><span class="s2"></span>
+<span class="s2">    Amount owed to each hired hand : $</span><span class="si">{</span><span class="n">payment_per_hand</span><span class="si">:</span><span class="s2">10.2f</span><span class="si">}</span><span class="s2"></span>
 
-<span class="s2">        </span><span class="si">{message}</span><span class="s2"></span>
+<span class="s2">        </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s2"></span>
 <span class="s2">    &quot;&quot;&quot;</span><span class="p">)</span>
 
 <span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Farmer name </span><span class="se">\&quot;</span><span class="si">{farmer_name}</span><span class="se">\&quot;</span><span class="s2"> does not exist in record!&quot;</span><span class="p">)</span>
-</pre></div>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Farmer name </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">farmer_name</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2"> does not exist in record!&quot;</span><span class="p">)</span>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
+<p>Run this program 3 times as shown below. You should see similar results.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -873,7 +886,7 @@
 26
 27
 28
-29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python if_else.py
+29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python if_else.py
 Enter the name of the farmer
     --&gt; Barry Farmer
 
@@ -902,7 +915,7 @@ Enter the name of the farmer
     --&gt; Gary Hart
 Farmer name &quot;Gary Hart&quot; does not exist in record!
 $
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>What is happening Here?</strong></p>
@@ -923,7 +936,7 @@ $
 11
 12
 13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="n">Expression1</span><span class="p">:</span> <span class="c1"># don&#39;t forget the colon</span>
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">if</span> <span class="n">Expression1</span><span class="p">:</span> <span class="c1"># don&#39;t forget the colon</span>
     <span class="n">do_thing_one</span><span class="p">()</span> <span class="c1"># indent 4 spaces</span>
 
 <span class="c1"># if Expression1 evaluates to False check Expression 2</span>
@@ -936,8 +949,8 @@ $
 
 <span class="c1"># if all previous expressions evaluate to False do the &#39;else&#39; part</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">do_thing_three</span><span class="p">()</span>
-</pre></div>
+    <span class="n">do_thing_four</span><span class="p">()</span>
+</code></pre></div>
 </td></tr></table>
 
 <p>We will explain the syntax step by step. When Python comes to an <code>if</code> statement, the following is executed:</p>
@@ -954,9 +967,9 @@ $
 <li>This pattern continues for all the <code>elif</code> expressions.</li>
 <li>Finally, if none of the 'if' or <code>elif</code> expressions evaluate to <code>True</code>, the code under the <code>else</code> is executed. </li>
 </ul>
-<p>Python's conditional syntax allows as many <code>elif</code> statements as the programmer wishes. However, the <code>elif</code> and <code>else</code> parts are not necessary. You may choose to have a conditional block without an <code>else</code> or without an <code>elif</code> part. For coding purposes this is good practice as we will see in the section about errors.</p>
+<p>Python's conditional syntax allows as many <code>elif</code> statements as the programmer wishes. However, the <code>elif</code> and <code>else</code> parts are not necessary. You may choose to have a conditional block without an <code>else</code> or without an <code>elif</code> part. We will discuss good practices for conditional statements in the section about errors.</p>
 <h3 id="indented-blocks">Indented Blocks</h3>
-<p>We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make it more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each <code>if</code>, <code>elif</code> or <code>else</code> statement, the code is executed as normal. An indented block is just a way of python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to <code>True</code>. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:</p>
+<p>We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make code more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each <code>if</code>, <code>elif</code> or <code>else</code> statement, the code is executed as normal. An indented block is just a way of Python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to <code>True</code>. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:</p>
 <ul>
 <li><em>Indented blocks must start with a colon <code>:</code>.</em> A colon tells Python in effect "This is the beginning of a new indented block"</li>
 <li><em>Indent 4 spaces.</em> Four spaces is an accepted convention although Python will technically allow whatever spacing you want as long as you are consistent. Any code you see written will follow the 4 space convention and that is the standard so it is best if you follow suit. If you mix spacings or are inconsistent with this Python will throw a syntax error.</li>
@@ -972,7 +985,7 @@ $
 <ol>
 <li>There is a problem in the above script <code>if_else.py</code> that can cause errors if we're not careful. Can you find the problem? How would you fix it?</li>
 </ol>
-<!-- Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the <code>else</code> block be deleted. this can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well. -->
+<!-- Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the <code>else</code> block be deleted. This can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well. -->
 
 <!-- Navigation -->
 
@@ -1038,9 +1051,9 @@ $
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -1050,9 +1063,9 @@ $
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

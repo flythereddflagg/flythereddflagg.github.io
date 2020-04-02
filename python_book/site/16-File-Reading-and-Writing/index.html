@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#16-file-reading-and-writing" tabindex="1" class="md-skip">
+      <a href="#16-file-reading-and-writing" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+        <a href=".." title="The Redd Python Book" aria-label="The Redd Python Book" class="md-header-nav__button md-logo">
           
             <i class="md-icon">home</i>
           
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -646,6 +646,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+      33. Branching Out
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -730,7 +742,7 @@
 <ul>
 <li>The CPU</li>
 <li>The RAM or volatile memory</li>
-<li>The hard drive or persistent memory</li>
+<li>The persistent memory (e.g. the hard disk drive or the solid-state drive)</li>
 </ul>
 <p>This lesson is an opportunity to interact with the third part, that is the hard drive. We will learn in this lesson how to read and write files from the hard drive.</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -763,7 +775,7 @@
 28
 29
 30
-31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1">#io_files.py</span>
+31</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1">#io_files.py</span>
 
 <span class="n">ext</span>       <span class="o">=</span> <span class="s1">&#39;.txt&#39;</span>
 <span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name       : &quot;</span><span class="p">)</span>
@@ -772,9 +784,9 @@
 <span class="n">filename</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a valid filename: &quot;</span><span class="p">)</span>
 
 <span class="c1"># let&#39;s print out what we got from the user</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hello </span><span class="si">{user_name}</span><span class="s2">! You are </span><span class="si">{user_age}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You work as a/an </span><span class="si">{user_job}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Saving Your Information to </span><span class="se">\&quot;</span><span class="s2">{filename + ext}</span><span class="se">\&quot;</span><span class="s2">...&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Hello </span><span class="si">{</span><span class="n">user_name</span><span class="si">}</span><span class="s2">! You are </span><span class="si">{</span><span class="n">user_age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You work as a/an </span><span class="si">{</span><span class="n">user_job</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Saving Your Information to </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">...&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 
 <span class="c1"># older/worse way of working with files</span>
 <span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>   <span class="c1"># open in write mode &#39;w&#39;</span>
@@ -787,14 +799,14 @@
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>
 
-<span class="c1"># newer/better way of working with files</span>
+<span class="c1"># better way of working with files</span>
 <span class="c1"># always use 4 spaces to indent</span>
 <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># r is for read</span>
     <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                 
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Here are your data:</span><span class="se">\n</span><span class="s2">---&quot;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
@@ -815,7 +827,7 @@
 15
 16
 17
-18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python io_files.py
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python io_files.py
 Enter your name       : Mark
 Enter your age        : 92
 Enter your occupation : Professional Old Guy
@@ -833,14 +845,14 @@ Mark,92,Professional Old Guy
 
 ---
 $
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>If you open the file <code>"mark_info.txt"</code> that should have appeared in the same folder you will see the following:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>name,age,occupation
+2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>name,age,occupation
 Mark,92,Professional Old Guy
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>What is happening here?</strong></p>
@@ -849,13 +861,14 @@ Mark,92,Professional Old Guy
 <li>We get some data from the user.</li>
 <li>We organize this data into a table where the rows are separated by newline characters (<code>\n</code>) and the columns are separated in each row by commas (<code>,</code>). We give this table headers and concatenate this string all together using the addition operator.</li>
 <li>We call <code>open</code> on a string containing a filename which returns a file object.</li>
-<li>We feed appropriate method statements to the file object to read, write or save and close the object.</li>
-<li>The file is altered as we alter the object.</li>
+<li>We feed appropriate method statements to the file object to read, write.</li>
+<li>The file object is altered as we use the file object's methods.</li>
+<li>We then save and close the object.</li>
 </ul>
 <p>Some of this nomenclature is new. I will now explain some of the newer concepts below.</p>
 <h3 id="objects">Objects</h3>
-<p>In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence over again.</p>
-<p>A type, as I explained before, is a mark that a computer puts on a 'box' or set of 'boxes' in volatile memory. It is a label that lets the computer know how to work with those boxes. An object is those boxes themselves. An object may have a type assigned to it just as you have the label "human" or "homo sapien" assigned to you.</p>
+<p>In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence again.</p>
+<p>A type, as I explained before, is a mark that a computer puts on a 'box' or set of 'boxes' in volatile memory. It is a label that lets the computer know how to work with those boxes. An object is the actual box or set of boxes themselves. An object has a data type assigned to it just as you have the label "human" or "homo sapien" assigned to you.</p>
 <p>For example, when you have a string variable, virtually speaking you have a set of boxes in a certain order and each box has a character in it. In addition, you have other boxes that contain the code that makes <code>.format</code> work and everything else the string needs to know how to do what it does. Collectively, all these boxes together in memory are the object. This nomenclature will be used often so it's important to internalize this concept early.</p>
 <h3 id="file-objects-and-methods">File Objects and Methods</h3>
 <p>Now that we have discussed objects lets look specifically at file objects. Lets begin with the <code>open</code> built-in function. The basic usage for the open function has the following form and arguments:</p>
@@ -864,7 +877,7 @@ Mark,92,Professional Old Guy
 </ul>
 <p>where <code>filename</code> is the name of the file (okay maybe that's obvious) you want to open and <code>mode</code> is the way you want to open the file. The basic ways you can open a file are:</p>
 <ul>
-<li><code>'r'</code> for read mode. In this mode the file can only be read (this is sometimes called "read-only" mode). This is the default mode, meaning if you do not give the <code>open</code> function a mode it will assume read mode. Because you are in read mode operations like <code>.write()</code> will throw an error. Also, if the filename you are put into <code>filename</code> doesn't exist that will also throw an error.</li>
+<li><code>'r'</code> for read mode. In this mode the file can only be read (this is sometimes called "read-only" mode). This is the default mode, meaning if you do not give the <code>open</code> function a mode it will assume read mode. Because you are in read mode operations like <code>.write()</code> will throw an error. Also, if the filename you put into <code>filename</code> doesn't exist that will also throw an error.</li>
 </ul>
 <p>The <code>.read()</code> method returns the entirety of the file as a string. Experiment with this function. What happens when you try to call <code>.read()</code> twice?</p>
 <ul>
@@ -884,14 +897,14 @@ Mark,92,Professional Old Guy
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>  
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>  
 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>         
 <span class="n">data</span> <span class="o">+=</span> <span class="n">user_age</span>  <span class="o">+</span> <span class="s1">&#39;,&#39;</span>  
 <span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
 <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                   
 <span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                       
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>is equivalent to:</p>
@@ -900,16 +913,16 @@ Mark,92,Professional Old Guy
 3
 4
 5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>  
     <span class="n">data</span> <span class="o">+=</span> <span class="n">user_age</span>  <span class="o">+</span> <span class="s1">&#39;,&#39;</span>  
     <span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
     <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>     
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
-<p>Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The <code>with</code> statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a with statement (unless you have a <em>very</em> good reason not to do so).</p>
+<p>Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The <code>with</code> statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a <code>with</code> statement (unless you have a <em>very</em> good reason not to do so). Also note that working with files is not the only situation in which it is appropriate to use a with statement but it is a very common one.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <p>Remember to use <code>with</code> statements in all the following exercises.</p>
 <ul>
@@ -986,9 +999,9 @@ Mark,92,Professional Old Guy
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -998,9 +1011,9 @@ Mark,92,Professional Old Guy
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

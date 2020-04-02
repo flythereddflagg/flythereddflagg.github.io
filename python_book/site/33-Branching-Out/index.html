@@ -36,7 +36,7 @@
     
     
       
-        <title>8. Formatted Strings - The Redd Python Book</title>
+        <title>33. Branching Out - The Redd Python Book</title>
       
     
     
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#8-formatted-strings" tabindex="0" class="md-skip">
+      <a href="#33-branching-out" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -109,7 +109,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                8. Formatted Strings
+                33. Branching Out
               
             </span>
           
@@ -284,63 +284,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        8. Formatted Strings
-      </label>
-    
-    <a href="./" title="8. Formatted Strings" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../08-Formatted-Strings/" title="8. Formatted Strings" class="md-nav__link">
       8. Formatted Strings
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#formatting-and-the-format-method" class="md-nav__link">
-    Formatting and the .format() method
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#format-commands" class="md-nav__link">
-    Format commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hone-your-skills" class="md-nav__link">
-    Hone Your Skills
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -636,11 +584,20 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="33. Branching Out" class="md-nav__link md-nav__link--active">
       33. Branching Out
     </a>
+    
   </li>
 
     
@@ -661,36 +618,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#formatting-and-the-format-method" class="md-nav__link">
-    Formatting and the .format() method
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#format-commands" class="md-nav__link">
-    Format commands
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hone-your-skills" class="md-nav__link">
-    Hone Your Skills
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -705,153 +632,49 @@
                 <!-- Navigation -->
 
 <hr />
-<p><a href="../07-Escape-Characters/">Previous: 07-Escape-Characters</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../09-Variables-and-Memory/">Next: 09-Variables-and-Memory</a></p>
+<p><a href="../32-Do-Another-Project/">Previous: 32-Do-Another-Project</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="..">Next: index</a></p>
 <hr />
 <!-- End Navigation -->
 
-<h1 id="8-formatted-strings">8 - Formatted Strings</h1>
-<p>As you use the <code>print</code> function there will be times when you want to "fill in the blank" and you can do this with format statements. Also we will introduce a few more features in addition to these.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># format_strings.py</span>
-
-<span class="c1"># We can print a comma-separated list</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost?&quot;</span><span class="p">,</span> <span class="mf">23.00</span><span class="p">,</span> <span class="s2">&quot;dollars&quot;</span><span class="p">)</span>
-
-<span class="c1"># this is more readable with a .format statement</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost? </span><span class="si">{}</span><span class="s2"> dollars.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">23.0</span><span class="p">))</span>
-
-<span class="c1"># The benefits of formatting become more apparent with more blanks to fill in.</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prices for cheese: $</span><span class="si">{}</span><span class="s2">/1 oz, $</span><span class="si">{}</span><span class="s2">/5 oz, $</span><span class="si">{}</span><span class="s2">/10 oz&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">5.35</span><span class="p">,</span> <span class="mf">9.84</span><span class="p">))</span>
-
-<span class="c1"># Change the formatting order with indices in the braces</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Would you like </span><span class="si">{2}</span><span class="s2">, </span><span class="si">{0}</span><span class="s2"> or </span><span class="si">{1}</span><span class="s2">?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span><span class="p">))</span>
-
-<span class="c1"># line up numbers and define decimal places with format codes</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Prices for cheese:</span>
-<span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 1 oz</span>
-<span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 5 oz</span>
-<span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/10 oz</span>
-<span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23232</span><span class="p">,</span> <span class="mf">5.3593</span><span class="p">,</span> <span class="mf">9.84655</span><span class="p">))</span>
-</code></pre></div>
-</td></tr></table>
-
-<p><strong>Here is what should happen</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python format_strings.py
-How much will this cost? 23.0 dollars
-How much will this cost? 23.0 dollars.
-Prices for cheese: $1.23/1 oz, $5.35/5 oz, $9.84/10 oz
-Would you like &#39;Cheddar&#39;, Brie or Gouda?
-
-Prices for cheese:
-$ 1.23/ 1 oz
-$ 5.36/ 5 oz
-$ 9.85/10 oz
-
-$
-</code></pre></div>
-</td></tr></table>
-
-<h3 id="formatting-and-the-format-method">Formatting and the <code>.format()</code> method</h3>
-<p>We must understand a few things before understanding this code. </p>
+<h1 id="33-branching-out">33 - Branching Out</h1>
+<p>I gather by the fact you are still reading this that the past 30+ sections have failed to quench your thirst for learning about Python! Well you are in luck because I got to this point in writing and found that, although I had given a foundational understanding, most of what people use Python for is somewhat beyond the foundational. Therefore, the rest of this book will be dedicated to introducing concepts you will use in the real world! Below are some things you can do with Python. Do not feel obligated to do all of them. I have put them here to help people like me who have tried to do something new only to slog through hours and hours of tutorials and stack overflow questions to find the very specific answers to the ones they are interested in.</p>
 <ul>
 <li>
-<p>Print statements can be called on multiple strings separated by commas. As seen in line 4 that reads <code>print("How much will this cost?", 23.00, "dollars")</code> when we put a list of comma-separated strings in a print function, the print function prints them out with a space instead of a new line between them.</p>
+<p><a href="">Intermediate Topics</a> (COMING SOON): Want to get into some intermediate topics in Python? section should get you started on some general topics that will improve your general coding skills.</p>
 </li>
 <li>
-<p>We have introduced a powerful feature in the <code>.format</code> statement. The <code>.format</code>  statement refers to special kind of code called a 'method'. A method is like a function, such as the <code>print</code> function, but in this case it is tied to whatever is on the left side of the dot (<code>.</code>). In this case, it only acts on the string to which it is tied. We first see this in line 7 which reads:</p>
-</li>
-</ul>
-<p><code>print("How much will this cost? {} dollars.".format(23.0))</code></p>
-<ul>
-<li>
-<p>To understand this process, here is what <code>.format()</code> does to the string from which it is called:</p>
+<p><a href="">Data Structures</a> (COMING SOON): Here I will go over why Python does certain things that frustrate beginners and how to avoid pitfalls. We will get into the guts of why Python does what it does.</p>
 </li>
 <li>
-<p>Scans the string looking for braces (<code>{}</code>) in the text</p>
+<p><a href="">Graphical User Interfaces</a> (COMING SOON): Do you want to build an actual app? Like one with buttons and windows and stuff? This is a good start on using these frameworks in Python.</p>
 </li>
-<li>If there is text between the braces it interprets the text as format instructions.</li>
-<li>It then looks at what is given between the parentheses (<code>.format("Text")</code>) and puts that text in place of the braces formatting it as per the format instructions.</li>
+<li>
+<p><a href="">Make your own package</a> (COMING SOON): Want to learn how to publish your super awesome package on the Python Package Index? This section will walk you through it!</p>
+</li>
+<li>
+<p><a href="">Using interactive Python frameworks</a> (COMING SOON): An introduction to interactive Python and frameworks such as Jupyter-Notebook and Jupyter-Lab.</p>
+</li>
+<li>
+<p><a href="">The Scipy stack</a> (COMING SOON): Are you interested in STEM? This section will help you use Python to do STEM-related programming! </p>
+</li>
+<li>
+<p><a href="">Working with data/excel using pandas</a> (COMING SOON): Get started on understanding and manipulating big data using pandas!</p>
+</li>
+<li>
+<p><a href="">Websites</a> (COMING SOON): Want to make a website? Here you can make one with interactive content using Python!</p>
+</li>
+<li>
+<p><a href="">Games</a> (COMING SOON): Want to make a video game with Python? Here are some resources to get you started!</p>
+</li>
+<li>
+<p><a href="">Hardware Interfacing</a> (COMING SOON): Need to talk to a piece of equipment? Python has you covered! This introduction to Serial interfaces will walk you through how to talk to an Arduino!</p>
+</li>
 </ul>
-<h3 id="format-commands">Format commands</h3>
-<p>Let's look at each example of a <code>.format</code>  statement one by one:</p>
-<ul>
-<li><code>print("Prices for cheese: ${}/1 oz, ${}/5 oz, ${}/10 oz".format(1.23, 5.35, 9.84))</code></li>
-</ul>
-<p>Each pair of braces is replaced by each value, in order, as they appear in the comma-separated list inside the parentheses. This is the default behavior if no format instructions in the braces are given. This is executed in the same way on line 24. If you notice in the case of line 24, there are numbers in the braces. Each of these is an index number that counts from 0. (NOTE: In Python, counting <em>always</em> begins with 0.  I.E. <code>0, 1, 2, ...</code> instead of <code>1, 2, 3, ...</code>. We will explain more about this when we discuss lists and iterables.) This means that when you write the following <code>"{1}".format("First", "Second")</code> you are commanding <code>.format("First", "Second")</code> to replace that text with <code>"Second"</code>. If the string were instead <code>"{0}"</code>the text would be replace by <code>"First"</code></p>
-<ul>
-<li><code>print("Would you like {2}, {0} or {1}?".format("Brie", "Gouda", "Cheddar"))</code></li>
-</ul>
-<p>As above you are putting indexes in the format braces. But what we see here is that you can put them in any order you want and even repeat them if you wish. (See "Hone your Skills" for an example of repetition.) </p>
-<ul>
-<li><code>python
-  print("""
-  Prices for cheese:
-  ${:5.2f}/ 1 oz
-  ${:5.2f}/ 5 oz
-  ${:5.2f}/10 oz
-  """.format(1.23232, 5.3593, 9.84655))</code></li>
-</ul>
-<p>Here we see that we are using format commands to organize data. The part that says <code>{:5.2f}</code> means to allow at least <code>5</code> spaces for the number to exist (fill any unused space with whitespace), round the number to <code>2</code> decimal places, and treat the number as a floating point number <code>f</code>.  We have omitted the index of the values for simplicity but they would be written on the left side of the colon (e.g. <code>{0:5.2f}</code>).</p>
-<p>There are other formatting commands other than this but this is a good start to using formatting that will come up again and again. To review:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># formatting cheat sheet</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;{&lt;format index or identifier&gt;:&lt;format commands&gt;}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="p">))</span>
-</code></pre></div>
-</td></tr></table>
-
-<h2 id="hone-your-skills">Hone Your Skills</h2>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No. &quot;</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> </span><span class="si">{0}</span><span class="s2"> </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2"> </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">,</span><span class="s2">&quot;No.&quot;</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;No.&quot;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span><span class="p">)</span>
-</code></pre></div>
-</td></tr></table>
-
-<ul>
-<li>Write the above code in a separate Python file and run it. As you will see, all 5 lines apparently do the same thing. Which way is the best way to do that and why? What are some potential advantages and drawbacks to each?</li>
-<li>Try rewriting lines of code from <code>format_strings.py</code> to make it so all the cheeses are aligned vertically. How can you do this with what we learned in this exercise?</li>
-<li>Look in the <a href="https://docs.python.org/3.7/library/string.html#custom-string-formatting">Python documentation</a> for other format commands. Experiment with these and learn how to use them.</li>
-</ul>
+<p><!-- <a href="">Databases and SQL</a> (COMING SOON): Want to automate your SQL interface? --> </p>
 <!-- Navigation -->
 
 <hr />
-<p><a href="../07-Escape-Characters/">Previous: 07-Escape-Characters</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../09-Variables-and-Memory/">Next: 09-Variables-and-Memory</a></p>
+<p><a href="../32-Do-Another-Project/">Previous: 32-Do-Another-Project</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="..">Next: index</a></p>
 <hr />
 <!-- End Navigation -->
                 
@@ -875,7 +698,7 @@ $
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../07-Escape-Characters/" title="7. Escape Characters" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../32-Do-Another-Project/" title="32. Do Another Project" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -884,25 +707,11 @@ $
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                7. Escape Characters
+                32. Do Another Project
               </span>
             </div>
           </a>
         
-        
-          <a href="../09-Variables-and-Memory/" title="9. Variables and Memory" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                9. Variables and Memory
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
         
       </nav>
     </div>

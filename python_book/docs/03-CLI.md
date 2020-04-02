@@ -210,11 +210,6 @@ Here are a few questions you should research:
     line. How would you complete these common tasks in command line?
  - Research other common commands in command line and learn them for your benefit. Use google or a similar search engine. There are many good tutorials to use many powerful commands in the command line.
 
-## Advanced mastery
-
-- Look up 'shell scripting' for your platform (i.e. Windows Command Prompt (cmd) or Windows Powershell,
- Linux Bash, or OS X Terminal). Begin to learn to shell script on your computer. 
-
 <!-- Navigation -->
 
 ---

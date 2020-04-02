@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#11-input-and-output" tabindex="1" class="md-skip">
+      <a href="#11-input-and-output" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+        <a href=".." title="The Redd Python Book" aria-label="The Redd Python Book" class="md-header-nav__button md-logo">
           
             <i class="md-icon">home</i>
           
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -365,6 +365,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" class="md-nav__link">
+    Hone Your Skills
+  </a>
   
 </li>
       
@@ -631,6 +638,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+      33. Branching Out
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -671,6 +690,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" class="md-nav__link">
+    Hone Your Skills
+  </a>
+  
+</li>
+      
       
       
       
@@ -707,7 +733,7 @@
  7
  8
  9
-10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="c1"># input_output.py</span>
+10</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># input_output.py</span>
 
 <span class="c1"># use input() to get user input</span>
 <span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name      : &quot;</span><span class="p">)</span>
@@ -715,9 +741,9 @@
 <span class="n">user_job</span>  <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your occupation: &quot;</span><span class="p">)</span>
 
 <span class="c1"># let&#39;s print out what we got from the user</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{user_name}</span><span class="s2">! You are </span><span class="si">{user_age}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You work as a/an </span><span class="si">{user_job}</span><span class="s2">.&quot;</span><span class="p">)</span>
-</pre></div>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">user_name</span><span class="si">}</span><span class="s2">! You are </span><span class="si">{</span><span class="n">user_age</span><span class="si">}</span><span class="s2"> years old.&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You work as a/an </span><span class="si">{</span><span class="n">user_job</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>Here is what should happen</strong></p>
@@ -727,21 +753,20 @@
 4
 5
 6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ python io_files.py
+7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python io_files.py
 Enter your name      : John Doe
 Enter your age       : 30
 Enter your occupation: Panda Caretaker
 Hello John Doe! You are 30 years old.
 You work as a/an Panda Caretaker.
 $
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p><strong>What is happening here?</strong> </p>
 <p>As you can see the built-in <code>input</code> function allows you to take user data and store it in variables. Whatever the user enters into the input is saved as a string and you can then do what you wish with it.</p>
 <h3 id="do-a-mini-project">Do a mini project</h3>
-<p>With this capability, we can start to write programs that can be used by someone other than the programmer! 
-To get you used to this I want you to write your first independent program.</p>
+<p>With this capability, we can start to write programs that can be used by someone other than the programmer! To get you used to this, I want you to write your own first program.</p>
 <p>You can do any project you want using everything you have learned so far. If you have something you really want to do, go for it. I only ask that you do the following in your project:</p>
 <ul>
 <li>Use some format statements</li>
@@ -750,7 +775,7 @@ To get you used to this I want you to write your first independent program.</p>
 <p>Beyond that you can do any project you want. If you do not know what you want to do I will suggest the following project.</p>
 <h4 id="the-wacky-stories-game">The Wacky Stories Game</h4>
 <p>You may have heard of the game <a href="http://www.madlibs.com">Mad Libs</a>. This is a similar concept that you will implement yourself.</p>
-<p>The rules of the game are simple. Take a short story like the following:</p>
+<p>The rules of the game are simple. Take a short story such as the following:</p>
 <p><em>Jake and John went fishing. While in the boat, Jake got a bite on his line and pulled up the biggest fish either of the men had ever seen. John exclaimed, "Now that is a fish!" The men took it home and made fish and chips.</em></p>
 <p>The story should be a bit longer but for our purposes this will do. You'll notice that this story is rather mundane so we are going to make it wacky! Take the text of the story and replace key words from the story with a prompt for the type of word in parentheses.</p>
 <p><em>(Name of person in the room[person 1]) and (Name of different person in the room[person 2]) went (verb ending in 'ing'). While in the (noun), (person 1) got a (noun) on his/her (noun) and pulled up the (superlative adjective) (noun) either of the (plural animal) had ever seen. (person 2) exclaimed, "Now that is a (noun)!" The (plural animal) took it home and made (plural noun).</em></p>
@@ -759,6 +784,10 @@ To get you used to this I want you to write your first independent program.</p>
 got a Canned air on his/her guitar and pulled up the greatest germ
 either of the sloths had ever seen. Mark exclaimed, "Now that
 is a gift card!" The cockroaches took it home and made slides.</em></p>
+<h3 id="hone-your-skills">Hone Your Skills</h3>
+<ul>
+<li>Play with the "Wacky Stories" concept and make other stories and play the game with friends and family! </li>
+</ul>
 <!-- Navigation -->
 
 <hr />
@@ -823,9 +852,9 @@ is a gift card!" The cockroaches took it home and made slides.</em></p>
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -835,9 +864,9 @@ is a gift card!" The cockroaches took it home and made slides.</em></p>
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 31-Automated-Testing](./31-Automated-Testing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: index](./index.md)
+[Previous: 31-Automated-Testing](./31-Automated-Testing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 33-Branching-Out](./33-Branching-Out.md)
 
 ---
 <!-- End Navigation -->
@@ -42,7 +42,7 @@ Now go out there and make something amazing!
 
 ---
 
-[Previous: 31-Automated-Testing](./31-Automated-Testing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: index](./index.md)
+[Previous: 31-Automated-Testing](./31-Automated-Testing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 33-Branching-Out](./33-Branching-Out.md)
 
 ---
 <!-- End Navigation -->

@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -51,7 +51,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -83,7 +83,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#3-cli" tabindex="1" class="md-skip">
+      <a href="#3-cli" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -92,7 +92,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo">
+        <a href=".." title="The Redd Python Book" aria-label="The Redd Python Book" class="md-header-nav__button md-logo">
           
             <i class="md-icon">home</i>
           
@@ -123,7 +123,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -304,13 +304,6 @@
         <li class="md-nav__item">
   <a href="#hone-your-skills" class="md-nav__link">
     Hone your skills
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-mastery" class="md-nav__link">
-    Advanced mastery
   </a>
   
 </li>
@@ -674,6 +667,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+      33. Branching Out
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -750,13 +755,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#advanced-mastery" class="md-nav__link">
-    Advanced mastery
-  </a>
-  
-</li>
-      
       
       
       
@@ -789,7 +787,9 @@ to understand something about the context and environment that we are working in
 <p>An example of one is shown below:</p>
 <p><img alt="cli" src="../media/cli.png" /></p>
 <p>This interface was at one point the only way to use a computer. Generally speaking, if you wanted to explore files, play a computer game or use any program, this was the way you needed to do it. There were no windowing systems or point-and-click interfaces. The way you did anything was to type commands into the prompt (seen above as the text after the <code>$</code>) and look at the output that resulted. We will be doing something similar in this lesson. To enter any command simply type the command in and press Enter.</p>
-<p>Secondly, you should be familiar with basic terminology relating to file systems. (i.e. words like "folder", "file", "program" and "app"/"application"). I will use the words 'directory' and 'folder' interchangeably. All file systems I have seen start with a "root" folder (usually <code>C:\</code> for Windows and <code>/</code> for OS X and Linux). File systems start at this root folder and have a tree of sub-folders in which all files are organized. We will explore this via the command line and cover how to do basic navigation and commands. The command line is a large and powerful interface so this lesson is by no means comprehensive. It is intended to get you just competent enough to do programming. We will explore more about the command line later.</p>
+<p>Secondly, you should be familiar with basic terminology relating to file systems. Important words you need to know are in bold font (i.e. words like <strong>folder,</strong> <strong>file</strong>, <strong>program</strong> and <strong>app</strong> or <strong>application</strong>"). I will use the words <strong>directory</strong> and <strong>folder</strong> interchangeably.</p>
+<p>All file systems I have seen start with a <strong>root folder</strong> (usually <code>C:\</code> for Windows and <code>/</code> for OS X and Linux). File systems start at this root folder and the root folder contains a tree of sub-folders in which all files are organized. You will sometimes see folders referred to as <strong>parent folders</strong> to their sub-folders and their sub-folders as <strong>child folders</strong> to the <strong>parent folder</strong>. This relationship is a common way of undertanding relationships between files and folders. The address of a particlar file or folder is called its <strong>path</strong>. The path of a file or folder is a string of text with each folder name separated by <code>\</code> (for Windows) or <code>/</code> (for OS X or Linux). Examples of paths are: <code>C:\Users\mer\Documents\a_file.py</code> (for Windows) or <code>/home/mer/Documents/a_file.py</code> (for OS X or Linux). </p>
+<p>We will explore this via the command line and cover how to do basic navigation and commands. The command line is a large and powerful interface so this lesson is by no means comprehensive. It is intended to get you just competent enough to do programming. We will explore more about the command line later.</p>
 <h3 id="open-the-command-line">Open the command line</h3>
 <p>Depending on your operating system (e.g. Microsoft Windows, Apple Mac OS X, Linux) the way to open your command line differs significantly. Once your command line is open however, almost everything else is the same or very similar. I will indicate the differences where this is the case.</p>
 <ul>
@@ -804,46 +804,48 @@ to understand something about the context and environment that we are working in
 <li><strong>Linux</strong> </li>
 <li>Press <code>ctrl+t</code> or <code>ctrl+alt+t</code>  from your desktop. (A bash window should appear with some text in it and a prompt that looks like: <code>"YOUR USERNAME"@"YOUR COMPUTER'S NAME" ~ $</code> or <code>-bash-4.2$</code> )</li>
 </ul>
-<p>Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the <code>$</code> or the <code>&gt;</code> that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the <code>$</code> or the <code>&gt;</code> as being equivalent. Therefore, when you see something like <code>$ clear</code> written in the book, you should read that as, "Type the text <code>clear</code> into the command line prompt and press enter." </p>
+<p><strong>Note about your command line prompt:</strong> Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the <code>$</code> or the <code>&gt;</code>, that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the <code>$</code> or the <code>&gt;</code> as being equivalent. Therefore, when you see something like <code>$ clear</code> written in the book, you should read that as, "Type the text <code>clear</code> into the command line prompt and press enter." Just remember, <strong>the <code>$</code> is NOT part of what you enter.</strong></p>
 <p>Once you have successfully opened your command line interface, you may begin the rest of the lesson. The object of this lesson is to practice and become familiar with each of the commands listed below. A summary table at the end of the lesson lists all the commands and what they do.</p>
 <h3 id="where-am-i-command-pwd">Where am I? (Command: <code>pwd</code>)</h3>
 <p>Begin by typing the following in your prompt and pressing Enter:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">pwd</span>
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">pwd</span>
+</code></pre></div>
 </td></tr></table>
 
+<p><strong>Remember, DO NOT type in the <code>$</code>.</strong></p>
 <p>'pwd' means 'print working directory'. This command will show you where you are
 in the directory structure of your computer. For example typing this command 
-into the terminal on my linux computer will return <code>/home/mer/</code>, which tells me 
+into the terminal on my linux computer print out <code>/home/mer</code> to the terminal window, which tells me 
 I am in the 'mer' directory of the 'home' directory of the root directory of my 
 computer. Similarly in Windows, <code>pwd</code> returns <code>C:\Users\&lt;YOURNAME&gt;\</code>. Therefore if you ever get lost while navigating in the terminal, use <code>pwd</code> to 
 figure out where you are.</p>
 <h3 id="moving-around-command-cd">Moving Around (Command: <code>cd</code>)</h3>
 <p>Type the following into your terminal and press Enter:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> ~
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~
+</code></pre></div>
 </td></tr></table>
 
+<p><strong>Again remember, DO NOT type in the <code>$</code>.</strong></p>
 <p><code>cd</code> means 'change directory' and is one of the main ways you will navigate
-the command line. The normal usage of the "change directory" command is of the form: <code>$ cd "NAME OF DIRECTORY"</code> (e.g. <code>cd Documents</code>) but in this case we are using the "home" short cut (<code>~</code>).</p>
-<p>The tilde (<code>~</code>) is a short hand that stands for the 'home' directory. This can take you to slightly different places depending on the operating system you are running, but should be the default starting place for any folders you may wish to navigate. If you
+the command line. The normal usage of the "change directory" command is of the form: <code>$ cd "NAME OF DIRECTORY"</code> (e.g. <code>cd Documents</code>) but in this case we are using the "home" shortcut (<code>~</code>).</p>
+<p>The tilde (<code>~</code>) is a shorthand that stands for the 'home' directory. This can take you to slightly different places depending on the operating system you are running, but should be the default starting place for any folders you may wish to navigate. If you
 need to get back home or want to navigate from the home folder as a root
 folder the <code>~</code> will get you there.</p>
-<p>So when you enter `` what you are telling the terminal is this:
+<p>So when you enter <code>cd ~</code> what you are telling the terminal is this:
 "Take me me to the home folder." Or "Change the working directory to the home folder".</p>
 <h3 id="working-in-folders-commands-ls-mkdir-and-touch-or-new-item">Working in folders (Commands: <code>ls</code>, <code>mkdir</code>, and <code>touch</code> or <code>New-Item</code>)</h3>
 <p>Now that you are in the 'home' folder, enter the following:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ ls
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ls
+</code></pre></div>
 </td></tr></table>
 
-<p><code>ls</code> is short hand for "list files and sub-folders in the current directory". 
+<p><code>ls</code> is shorthand for "list files and sub-folders in the current directory". 
 Upon entering this command you should see a list of files and directories in
 your home folder.</p>
 <p>Let's make a directory in your home folder. Enter the
 following:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ mkdir peas
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ mkdir peas
+</code></pre></div>
 </td></tr></table>
 
 <p>Now enter the <code>ls</code> command and you will notice a new folder in your home folder
@@ -851,10 +853,10 @@ called 'peas' you made it with the 'make directory' command.</p>
 <p>Let's go in there!</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
-3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> peas
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> peas
 $ ls
 $ 
-</pre></div>
+</code></pre></div>
 </td></tr></table>
 
 <p>If you type in the above commands in you will notice that nothing comes up!
@@ -862,18 +864,18 @@ There is nothing in this folder yet so lets make a file to put in this folder! T
 <ul>
 <li><strong>Command for Mac OS X  or Linux</strong></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ touch carrots.py
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ touch carrots.py
+</code></pre></div>
 </td></tr></table>
 
 <ul>
 <li><strong>Command for Windows</strong></li>
 </ul>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="n">-type</span> <span class="n">file</span> <span class="n">carrots</span><span class="p">.</span><span class="n">py</span>
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="n">-type</span> <span class="n">file</span> <span class="n">carrots</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div>
 </td></tr></table>
 
-<p>You have just created an empty file called <code>carrots.py</code>. The <code>.py</code> part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the <code>.py</code> extension but they are not fundamentally different from plain text files (i.e. files that end in <code>.txt</code>).</p>
+<p>You have just created an empty file called <code>carrots.py</code>. The <code>.py</code> part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the <code>.py</code> extension but they are not fundamentally different from plain text files (i.e. files that end with <code>.txt</code>).</p>
 <p>Make another file called <code>cool_beans.txt</code> using the <code>touch</code> command (if you're on Mac OS X  or Linux) or <code>New-Item</code> command (if you're on windows). Go on try it yourself!</p>
 <p>Did you do it? Check that you it worked using the <code>ls</code> command.
 You should see that you have two files in this folder. If you're curious you can
@@ -882,38 +884,35 @@ program on your computer. Cool huh?</p>
 <p>Now that we know how to create files and folders we will now learn how to delete them.</p>
 <h3 id="deleting-files-and-folders-commands-rm-rmdir">Deleting Files and Folders (Commands: <code>rm</code>, <code>rmdir</code>)</h3>
 <p>Now that we know how to create files and folders we will now learn how to delete them. Let's delete your files by entering the command:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ rm carrots.py
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ rm carrots.py
+</code></pre></div>
 </td></tr></table>
 
 <p><code>rm</code> means "remove". Verify that this has been deleted with <code>ls</code>.</p>
 <p>Now let's delete the other file.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ rm cool_beans.txt
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ rm cool_beans.txt
+</code></pre></div>
 </td></tr></table>
 
 <p>When you finish this your directory should once again be empty. You can verify
 this with <code>ls</code>.</p>
 <p>Now...how do we get out of here? You may want to go directly to the home
 directory using</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> ~
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~
+</code></pre></div>
 </td></tr></table>
 
 <p>but you may not always want to go all the way back to the home directory when
-all you really want is to go to the parent directory. I will now show you the
-way to do this. Simply enter:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> ..
-</pre></div>
+all you really want is to go to the next highest directory in the folder structure (a.k.a. the "parent directory"). I will now show you the way to do this. Simply enter:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ..
+</code></pre></div>
 </td></tr></table>
 
-<p>This is a shorthand for, "change directory to the immediate parent directory"
-in a manner that is known as "relative path reference". In the command line,
-<code>.</code> or <code>./</code> is short hand for "the directory I'm in right now" and <code>..</code> or <code>../</code> means "the immediate parent folder of where I am right now".</p>
+<p>This is a shorthand for, "change directory to the immediate parent directory" using what is called its "relative path". In the command line, <code>.</code> or <code>./</code> are both shorthand for "the directory I'm in right now" and <code>..</code> or <code>../</code> means "the immediate parent folder of where I am right now".</p>
 <p>You can verify that you have indeed left the <code>peas</code> directory by using the <code>pwd</code>
 and <code>ls</code> commands. Now it is time to actually delete the directory.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span>$ rmdir peas
-</pre></div>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ rmdir peas
+</code></pre></div>
 </td></tr></table>
 
 <p>If you didn't have any errors doing this congratulations! You have finished the
@@ -952,7 +951,7 @@ basic exercises for the command line!</p>
 <tr>
 <td><code>touch</code></td>
 <td><code>$ touch NAME.EXT</code></td>
-<td>(<strong>Mac and Linux</strong>) Makes a new file in the current directory with a name of <code>NAME</code> and an extension of <code>.ext</code></td>
+<td>(<strong>Mac and Linux</strong>) Makes a new file in the current directory with a name of <code>NAME</code> and an extension of <code>.EXT</code></td>
 </tr>
 <tr>
 <td><code>New-item</code></td>
@@ -978,16 +977,10 @@ basic exercises for the command line!</p>
 <li>Normally you have to remove every file in a directory before you can delete 
     the directory. What is a way you can delete a directory and all its contents
     using one line of command line code? Why would you <em>not</em> want to do this?</li>
-<li>How could you navigate to the parent directory's parent's parent directory in one line
-    of code?</li>
+<li>How could you navigate to the parent directory's parent's parent directory in one command?</li>
 <li>Look up commands to 'copy', 'rename' and 'move' files in command
     line. How would you complete these common tasks in command line?</li>
-<li>Research other common commands in command line and learn them for your benefit. There are many good tutorials to use many powerful commands in the command line.</li>
-</ul>
-<h2 id="advanced-mastery">Advanced mastery</h2>
-<ul>
-<li>Look up 'shell scripting' for your platform (i.e. Windows Command Prompt (cmd) or Windows Powershell,
- Linux Bash, or OS X Terminal). Begin to learn to shell script on your computer. </li>
+<li>Research other common commands in command line and learn them for your benefit. Use google or a similar search engine. There are many good tutorials to use many powerful commands in the command line.</li>
 </ul>
 <!-- Navigation -->
 
@@ -1053,9 +1046,9 @@ basic exercises for the command line!</p>
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
@@ -1065,9 +1058,9 @@ basic exercises for the command line!</p>
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
       

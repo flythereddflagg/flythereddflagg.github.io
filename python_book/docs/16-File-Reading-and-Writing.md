@@ -42,7 +42,7 @@ f.close()                        # save and close the file
     
 print("Done.")
 
-# newer/better way of working with files
+# better way of working with files
 # always use 4 spaces to indent
 with open(filename + ext, 'r') as f: # r is for read
     data = f.read()                 
