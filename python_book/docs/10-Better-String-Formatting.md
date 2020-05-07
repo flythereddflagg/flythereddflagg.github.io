@@ -119,9 +119,9 @@ The `f` that we put in front of a string is referred to technically as a "litera
 
 1. Look up what a Python PEP is and specifically look up PEP 498. Why do PEPs exist?
 1. `f` is not the only thing that we can put at the beginning of a string to make it do something different. What happens when you put the following letters in front of a string? (Search for these on the internet if you can't figure it out.)
-   - `r`
-   - `b`
-   - `u`
+    - `r`
+    - `b`
+    - `u`
 1. Now you can make a form with variables that will print out information. Make a form that gives the name, age and occupation of whatever you set those variables
 1. The format instructions are detailed [here](https://docs.python.org/3.7/library/string.html#format-string-syntax) in the Python documentation. Learn what each of these things do and experiment with them.
 1. Experiment with the format instructions. Can you align all the numbers in different ways?
