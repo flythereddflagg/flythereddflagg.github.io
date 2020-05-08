@@ -65,15 +65,12 @@ Of course, computers can do these things at blinding speeds and can be endlessly
 
 One of the most important things you can learn is how memory works on a computer. Storing 1s and 0s is the first thing that a computer must be able to do in order to function.
 
-For now the most important things you need to understand are these:
+For now, you need to understand that there are three basic parts to the computer that we interact with constantly. They are:
 
-- There are three basic parts to the computer that we will interact with constantly. They are:
-  - The CPU
-  - The RAM or volatile memory
-  - The persistent memory
-- CPU stands for Central Processing Unit. Every instruction you write gets executed there.
-- RAM stands for Random Access Memory. You will put information relevant to your programs there as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.
-- The persistent memory is like the RAM except the information you write there stays there until you actively erase it. Depending on your hardware. The persistent memory is generally contained on a hard disk drive (HDD) or a solid-state drive (SSD). We will be doing more with the persistent memory in a later section.
+1. The **Central Processing Unit** (CPU): every instruction you write gets executed there.
+2. The **Random Access Memory** (RAM, or volatile memory): you will put information relevant to your programs there as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.
+3. The **persistent memory**: like the RAM, but the information you write there stays there until you actively erase it (depending on your hardware). The persistent memory is generally contained on a hard disk drive (HDD) or a solid-state drive (SSD). We will be doing more with the persistent memory in a later section.
+
 
 The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. Boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like
 
