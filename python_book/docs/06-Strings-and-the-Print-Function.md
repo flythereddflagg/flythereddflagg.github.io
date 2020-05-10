@@ -34,7 +34,7 @@ When we talk about functions you will see that they have things (such as `stuff`
 
 You may have noticed that the text inside the parentheses is also between single or double quotes. It may not be clear why this is. In Python, putting text inside quotes designates it as a string.
 
-- **String**: a sequence of characters that is generally treated as non-code 
+- **String**: a sequence of characters that is treated as non-code
   text
 
 The quotes are necessary to differentiate between code being fed into the print
@@ -86,7 +86,7 @@ with your use of single and double quotes or you will run into problems.
 
 ## Advanced Mastery
 
-**Remember:** It is not required to figure out everything in these sections. Advanced Mastery is for those who are especially curious or wish to do more to understand the topics explained above. If you want you can skip this part and move on to the next section.
+**Remember:** It is not required to figure out everything in these sections. Advanced Mastery is for those who are especially curious or wish to do more to understand the topics explained above. If you want you can skip this part and move on to the next section.
 
 - Look up strings as they relate to computers. How are strings represented by a computer?
 

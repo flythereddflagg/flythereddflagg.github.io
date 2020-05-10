@@ -38,7 +38,7 @@ It just keeps on doing its thing and ignoring
 me
 '''
 
-print("Here is some text that will appear.") # this is a print statement
+print("Here is some text that will appear.") # comment
 #print("Here is some text that will not appear.")
 
 print("A good line of code is hard to find.")
@@ -73,7 +73,7 @@ Again if the result you get isn't *exactly* like the book's, go back in fix it u
 
 As you may be able to gather from the code, the hash symbol tells Python, "Ignore everything after this on this line". The triple quotes (``` """```  or ```'''```) begin and end a block of text that can span as many lines as you want that Python will likewise ignore. (There are a few exceptions to this but we will cover them later.)
 
-These are generally called "comments" in the code. They let the programmer make comments that either explain small bits of code or provide detailed explanations of his code. They also allow the programmer to disable chunks of code if desired. 
+These are generally called "comments" in the code. They let the programmer make comments that either explain small bits of code or provide detailed explanations of his code. They also allow the programmer to disable a line or a chunk of code if desired. 
 
 **NOTE:** Whenever you use quotes in Python, you must be consistent in whether you use single (`'`) or double (`"`) quotes to open or close text. Generally it does not matter which you choose. The only requirement is that you are consistent.
 
@@ -87,23 +87,29 @@ File        : comment_conventions.py
 Author      : Mark Redd
 Version     : 1.0
 Description :
-It is common to have a header at the top of your file that has the filename, author
-and a general description of the program in the file. This space may also be used
-to include pertient data about the software such as its version number or the 
-date it was last modified. In many cases this header may be long and detailed 
-depending on the intent of the programmer. This header is commonly called a
+It is common to have a header at the top of your file that 
+has the filename, author and a general description of the 
+program in the file. This space may also be used to 
+include pertient data about the software such as its 
+version number or the date it was last modified. In many 
+cases, this header may be long and detailed depending on 
+the intent of the programmer. This header is commonly called a 
 "documentation string" or a "doc string".
 
-For the purposes of this book, we will not worry about having headers in our code
-until we tackle some larger, more complex problems but it's good to know that these
-things exist.
+For the purposes of this book, we will not worry about having
+headers in our code until we tackle some larger, more complex
+problems but it's good to know that these things exist.
 '''
 
-'''Single line comments that explain code should be in one of two places:'''
+'''
+Single line comments that explain code should be in 
+one of two places:
+'''
 
-# This comment explains the line below
-# The comment may be here at the end of the line as well if space permits
-print("Here are some words") # here is an end-of-line comment
+# By convention, this comment explains the next 
+# line of code below it. The comment may be at 
+# the end of the line as well if space permits
+print("Here are some words") # an end-of-line comment
 
 # If needed, the comment may span
 # multiple lines. In any case, the comment 
@@ -112,15 +118,16 @@ print("Here are some words") # here is an end-of-line comment
 print("Here are some more words")
 
 """
-It is bad practice to write comments that trail off the visible screen.
-Later we will explore code style and explain this convetion more fully.
+It is bad practice to write comments that trail off 
+the visible screen. Later, we will explore code style 
+and explain this convetion more fully.
 
-Multi-line comments may be placed wherever appropriate to make general
-comments or explain a large block of code.
+Multi-line comments may be placed wherever appropriate 
+to make general comments or explain a large block of code.
 """
 ```
 
-I will often put comments in the code I have you write. You do not need to put these in your code as well but sometimes I will have you explain your code line by line with comments. You may find it useful to take notes in the form of code comments as you write code to help you remember what you have learned.
+I will put comments in the code I have you write. You do not need to put these in your code as well but sometimes I will have you explain your code line by line with comments. You may find it useful to take notes in the form of code comments as you write code to help you remember what you have learned.
 
 ## Hone Your Skills
 

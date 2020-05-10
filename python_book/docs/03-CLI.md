@@ -14,7 +14,7 @@
 Welcome to the Command Line Interface (CLI)! Before we begin programming we need 
 to understand something about the context and environment that we are working in.
 
-First, we start with a little nomenclature. Perhaps you have seen a black, white or blue window with nothing but text in it on your computer. This is called the command line or the command line interface. It has other names such as "terminal" or "command prompts" but I will refer to it as the "command line" in this lesson. 
+First, we start with a little nomenclature. Perhaps you have seen a black, white or blue window with nothing but text in it on your computer. This is called the command line or the command line interface. It has other names that I may use such as "terminal", "command prompt", or "shell" but I will refer to it as the "command line" or CLI in this lesson.
 
 An example of one is shown below:
 
@@ -22,11 +22,11 @@ An example of one is shown below:
 
 
 
-This interface was at one point the only way to use a computer. Generally speaking, if you wanted to explore files, play a computer game or use any program, this was the way you needed to do it. There were no windowing systems or point-and-click interfaces. The way you did anything was to type commands into the prompt (seen above as the text after the `$`) and look at the output that resulted. We will be doing something similar in this lesson. To enter any command simply type the command in and press Enter.
+This interface was, at one point, the only way to use a computer. Generally speaking, if you wanted to explore files, play a computer game or use any program, this was the way you needed to do it. There were no windowing systems or point-and-click interfaces. The way you did anything was to type commands into the prompt (seen above as the text after the `$`) and look at the output that resulted. We will be doing something similar in this lesson. To enter any command simply type the command in and press Enter.
 
 Secondly, you should be familiar with basic terminology relating to file systems. Important words you need to know are in bold font (i.e. words like **folder,** **file**, **program** and **app** or **application**"). I will use the words **directory** and **folder** interchangeably.
 
-All file systems I have seen start with a **root folder** (usually `C:\` for Windows and `/` for OS X and Linux). File systems start at this root folder and the root folder contains a tree of sub-folders in which all files are organized. You will sometimes see folders referred to as **parent folders** to their sub-folders and their sub-folders as **child folders** to the **parent folder**. This relationship is a common way of undertanding relationships between files and folders. The address of a particlar file or folder is called its **path**. The path of a file or folder is a string of text with each folder name separated by `\` (for Windows) or `/` (for OS X or Linux). Examples of paths are: `C:\Users\mer\Documents\a_file.py` (for Windows) or `/home/mer/Documents/a_file.py` (for OS X or Linux). 
+All file systems I have seen start with a **root folder** (usually `C:\` for Windows and `/` for OS X and Linux). File systems start at this root folder and the root folder contains a tree of sub-folders in which all files are organized. You will sometimes see folders referred to as **parent folders** to their sub-folders and their sub-folders as **child folders** to the **parent folder**. This relationship is a common way of understanding relationships between files and folders. The address of a particular file or folder is called its **path**. The path of a file or folder is a string of text with each folder name separated by `\` (for Windows) or `/` (for OS X or Linux). Examples of paths are: `C:\Users\mer\Documents\a_file.py` (for Windows) or `/home/mer/Documents/a_file.py` (for OS X or Linux). 
 
  We will explore this via the command line and cover how to do basic navigation and commands. The command line is a large and powerful interface so this lesson is by no means comprehensive. It is intended to get you just competent enough to do programming. We will explore more about the command line later.
 
@@ -45,7 +45,7 @@ Depending on your operating system (e.g. Microsoft Windows, Apple Mac OS X, Linu
 - **Linux** 
   - Press `ctrl+t` or `ctrl+alt+t`  from your desktop. (A bash window should appear with some text in it and a prompt that looks like: `"YOUR USERNAME"@"YOUR COMPUTER'S NAME" ~ $` or `-bash-4.2$` )
 
-**Note about your command line prompt:** Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the `$` or the `>`, that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the `$` or the `>` as being equivalent. Therefore, when you see something like `$ clear` written in the book, you should read that as, "Type the text `clear` into the command line prompt and press enter." Just remember, **the `$` is NOT part of what you enter.**
+**Note about your command line prompt:** Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the `$` or the `>`, that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the `$` or the `>` as being equivalent. Therefore, when you see something like `$ clear` written in the book, you should read that as, "Type the text `clear` into the command line prompt and press enter." Just remember, **the `$` is NOT part of what you type in.**
 
 Once you have successfully opened your command line interface, you may begin the rest of the lesson. The object of this lesson is to practice and become familiar with each of the commands listed below. A summary table at the end of the lesson lists all the commands and what they do.
 
@@ -135,7 +135,7 @@ You have just created an empty file called `carrots.py`. The `.py` part of the f
 Make another file called `cool_beans.txt` using the `touch` command (if you're on Mac OS X  or Linux) or `New-Item` command (if you're on windows). Go on try it yourself!
 
 Did you do it? Check that you it worked using the `ls` command.
-You should see that you have two files in this folder. If you're curious you can
+You should see that you have two files in this folder called `carrots.py` and `cool_beans.txt`. If you're curious you can
 "print the working directory" and find this folder in your file explorer
 program on your computer. Cool huh?
 
@@ -163,7 +163,7 @@ directory using
 ```bash
 $ cd ~
 ```
-but you may not always want to go all the way back to the home directory when
+but you may not always want to go *all* the way back to the home directory when
 all you really want is to go to the next highest directory in the folder structure (a.k.a. the "parent directory"). I will now show you the way to do this. Simply enter:
 
 ```bash
@@ -192,7 +192,7 @@ Below is a table of all the commands we learned in this lesson and pertinent inf
 | `ls`       | `$ ls`                           | Lists all files and sub-folders in the current directory.    |
 | `mkdir`    | `$ mkdir NAME`                   | "Make Directory": Makes a directory in the current directory called `NAME`. |
 | `touch`    | `$ touch NAME.EXT`               | (**Mac and Linux**) Makes a new file in the current directory with a name of `NAME` and an extension of `.EXT` |
-| `New-item` | `> New-Item -type file NAME.ext` | (**Windows**) Same as `touch`.                               |
+| `New-item` | `> New-Item -type file NAME.EXT` | (**Windows**) Same as `touch`.                               |
 | `rm`       | `$ rm NAME`                      | "Remove": Permanently deletes the file called `NAME` where `NAME` includes both the filename and the extension. |
 | `rmdir`    | `$ rmdir NAME`                   | "Remove Directory": Permanently deletes a directory called `NAME`. (Only works if the directory is empty.) |
 
@@ -202,9 +202,7 @@ Memorize these commands or keep this cheat sheet with you to help you work in th
 
 Here are a few questions you should research:
 
- - Normally you have to remove every file in a directory before you can delete 
-    the directory. What is a way you can delete a directory and all its contents
-    using one line of command line code? Why would you *not* want to do this?
+ - Normally you have to remove every file in a directory before you can delete the directory. What is a way you can delete a directory and all its contents using one line of command line code? Why would you *not* want to do this?
  - How could you navigate to the parent directory's parent's parent directory in one command?
  - Look up commands to 'copy', 'rename' and 'move' files in command
     line. How would you complete these common tasks in command line?

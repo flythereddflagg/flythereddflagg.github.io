@@ -85,13 +85,10 @@ Let's examine all the escape characters introduced in this exercise:
    with either `"` or `'` and print the same string depending on which escapes 
   you used.
 - `\n`: This is a newline character and printing it makes a newline on which 
-  you can continue to write text. The print statement automatically adds this 
-   character to the end of every string. In some languages like C you must 
-  explicitly put in this character yourself.
+  you can continue to write text. The print statement automatically adds this character to the end of the given string. In some languages like C you must explicitly put in this character yourself.
 - `\t`: This is the tab character and printing it inserts 4 or 8 spaces depending on the system you are using.
 - `\r`: This is the carriage return character and it returns the print cursor to the beginning of the line. Notice how the first part of the printed line is now overwritten with the "I did it!" part.
-- `\\`: This is the backslash character and tells python to treat this 
-  character as a single backslash. As you can see, the only thing that came out of the print statement was a single backslash.
+- `\\`: This is the backslash character and tells python to treat this character as a single backslash. As you can see, the only thing that came out of the print statement was a single backslash.
 - `\u03b7`: This is called a "Unicode escape character". It follows the 
   format `\uhhhh` where `hhhh` references the 4-character hexadecimal code that corresponds to what was printed (in this case, $\eta$). Using that 4-character hexadecimal code you can express over 65000 characters. If you want to know a character's code simply search on the internet for "Unicode *CHARACTER NAME*". (e.g. "Unicode eta" for $ \eta $)
 

@@ -18,26 +18,15 @@ all things, beginning in Python is very simple.
 #### Making your first Python file
 
 - Start by opening your text editor and opening a new file
-
-- Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend making a new folder, calling it something like `python_exercises` and putting it in your "Documents" folder. However, you can put it wherever makes sense.
-
+- Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend making a new folder, calling it something like `python_exercises` and putting it in your "Documents" folder. However, you can put it wherever makes sense. 
 - Use the 'Save as' dialog and navigate to the folder you made.
-  
 - Give the file the name `hello_world.py` and save it
-  
 
-You will notice the `.py` part of the filename. This is called an extension and 
-   is a way of telling the computer or anyone who looks at the file what kind of 
-   file it is. Make sure you name all files you make in Python using this extension.
+You will notice the `.py` part of the filename. This is called an extension and is a way of telling the computer or anyone who looks at the file what kind of file it is. Make sure you name all files you make in Python using this extension.
 
-   Also it is good practice to never use spaces when naming files used in
-   programming. Use underscores (`_`) instead of spaces. There are reasons for this but 
-   just for now trust me when I say that you are avoiding a lot of confusion and 
-   problems if you just commit to never using spaces in your filenames when you 
-   write code.
+   Also it is good practice to never use spaces when naming files used in programming. Use underscores (`_`) instead of spaces. There are reasons for this but, just for now, trust me when I say that you are avoiding a lot of confusion and problems if you just commit to never using spaces in your filenames when you write code.
 
-   **NOTE: I will give you the name of each filename you should be using for each
-   exercise in this book. When you see an octothorpe (`#`) followed by a filename at the beginning of a code example, it means I want you to make a new file with that name by following the steps above.**
+   **NOTE: I will give you the name of each filename you should be using for each exercise in this book. When you see an octothorpe (`#`) followed by a filename at the beginning of a code example, it means I want you to make a new file with that name by following the steps above.**
 
 - Type the following *exactly* as it is written here. Do *not* copy-paste it.
 
@@ -49,15 +38,15 @@ print("Hello World!")
 - Go to your terminal and navigate to the folder that holds your Python file. *(if you have trouble doing this, review the previous section until you can navigate the terminal with confidence.)*
 - Enter the following command in your terminal:
 
-```
+```bash
 $ python hello_world.py
 ```
 
-*(Remember, DO NOT type in the `$` and ignore everything in the terminal before the `$` or the `>`)*
+*Remember, DO NOT type in the `$` and ignore everything in the terminal before the `$` or the `>`*
 
 **Here is what should happen**
 
-```
+```bash
 $ python hello_world.py 
 Hello World!
 $ 
@@ -65,8 +54,14 @@ $
 
 If you see the above output, congratulations! You have just written and run your first Python program!
 
+If this did not work try the following:
+
+- Look where you saved `hello_world.py` have you navigated to the same folder in the command line? If not navigate to the folder `hello_world.py` is in before trying again.
+- Did you write *exactly* what was written above? Check it carefully before trying again.
+- Check that Python is working. Type "python" or "python3" into the terminal like it says in [Chapter 2](./02-Getting-Started.md). Does it work as it says there? If not check the [Troubleshooting Section](./02-Getting-Started.md/#troubleshooting-your-installation) in Chapter 2.
+
 **What is happening here?** 
-Traditionally, displaying "Hello World!" in a console window is the first thing every programmer generally learns to do in a new language. Later we will get into more detail on how exactly everything works and what is happening on a fundamental level.
+Traditionally, displaying "Hello World!" in a console window is the first thing every programmer generally learns to do in a new language. Later, we will get into more detail on how exactly everything works.
 
 Go back to your Python file and add the following under the first line so the whole file looks like this:
 
@@ -120,13 +115,13 @@ This is the simplest type of program that exists in Python (i.e. simple statemen
 
 - **There is no such thing as perfect code**
 
-  It is likely that unless you were paying very careful attention to what you were doing that you made a mistake. In which case you may have gotten an error such as the one below
+  It is possible that, unless you were careful, you made a mistake. In which case you may have gotten an error such as the one below
 
   In Example 1 below, I deleted the last three characters on line 8 and got this message. As you can see, Python tells me exactly where my mistake is and what kind of error it is. 
 
   Take some time and mess with this program. Delete different parts and try to run it and see the kind of errors you get. 
 
-  My hope is that you'll get two things out of this: First, don't be afraid to make mistakes (although you will, of course, want to avoid them where possible) and secondly, when an error does happen, this should help you begin to be comfortable with how python reports errors and exceptions. We will cover these in more detail in a later lesson.
+  My hope is that you'll get two things out of this: First, don't be afraid to make mistakes (although you will, of course, want to avoid them where possible) and secondly, when an error does happen, this should help you begin to be comfortable with how Python reports errors and exceptions. We will cover these in more detail in a later lesson.
 
 **Example 1: Python Error Reporting**
 
