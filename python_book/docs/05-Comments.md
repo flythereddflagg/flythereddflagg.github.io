@@ -18,7 +18,7 @@ You have probably seen this symbol at some point:
 ```python
 #
 ```
-The proper name for this symbol is an octothorpe. However, I have heard the following names for it: Hash, Hashtag, Pound and Tic-tac-toe symbol. For the purposes of this book I will refer to it as a hash. The hash has a special purpose that will be seen in the code you will write below.
+The proper name for this symbol is an octothorpe. However, I have heard the following names for it: Hash, Hashtag, Pound, Tic-tac-toe symbol etc. For the purposes of this book, I will refer to it as a hash. The hash has a special purpose that will be seen in the code you will write below.
 
 ```python
 # octothorpe.py
@@ -34,8 +34,7 @@ multiple lines
 '''
 Sometimes I want to use single quotes though
 when I want to do this, Python doesn't care.
-It just keeps on doing its thing and ignoring
-me
+It just ignores me as long as I am consistent.
 '''
 
 print("Here is some text that will appear.") # comment
@@ -56,7 +55,7 @@ print("print")
 
 print("Well I guess we're done here.")
 ```
-**Here is what should happen**
+#### Here is what should happen
 
 ```
 $ python octothorpe.py
@@ -79,7 +78,7 @@ These are generally called "comments" in the code. They let the programmer make 
 
 ### Comment Conventions
 
-The following rules of thumb apply to code comments and are demonstrated below (don't bother writing this all out, just read it)
+The following rules of thumb apply to code comments and are demonstrated below (don't bother writing this all out, just read it):
 
 ```python
 '''
@@ -127,12 +126,12 @@ to make general comments or explain a large block of code.
 """
 ```
 
-I will put comments in the code I have you write. You do not need to put these in your code as well but sometimes I will have you explain your code line by line with comments. You may find it useful to take notes in the form of code comments as you write code to help you remember what you have learned.
+I will put comments in the code I have you write. You do not need to put these in your code as well but sometimes I may have you explain your code line by line with comments. You may find it useful to take notes in the form of code comments as you write code to help you remember what you have learned.
 
 ## Hone Your Skills
 
-1. Look up what Python Docstrings are. Why would you want to use them?
 1. Comment and uncomment some of the lines in the code you wrote. What can you make happen by uncommenting code?
+1. Look up what Python Docstrings are. Why would you want to use them?
 
 <!-- Navigation -->
 

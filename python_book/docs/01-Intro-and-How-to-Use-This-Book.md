@@ -11,7 +11,7 @@
 
 ## Introduction
 
-Python changed my life. Before learning Python, computers scared me. Python
+Python changed my life. Before learning Python, computers intimidated me. Python
 opened up to me a world of programming that made computers into useful tools
 instead of necessary evils. Regardless of the reason you are reading this book
 right now, I hope that Python will have a similar impact on you.
@@ -19,43 +19,37 @@ right now, I hope that Python will have a similar impact on you.
 I am writing this book to introduce Python to newcomers to programming. If you
 are an experienced programmer and are looking to add Python to your repertoire,
 this may not be the book for you. The intent of this book is, primarily,
-to give a solid introduction to Python, and some introductory computer science, to those 
+to give a solid introduction to Python, and some introductory computer science, to those
 who are completely new to programming.
 
 To that end, I have the following goals in mind while writing this book:
 
  - **Make a free Python resource** 
 
-    I want to make a resource that will be free (as in free beer and free speech) forever so that any student of Python may have access to these introductory materials. Python is a language that anyone can learn and learning Python should not be a skill that is forever behind a pay wall.
+    I want to make a resource that will be free (as in free beer and free speech) forever so that any student of Python may have access to these introductory materials. Anyone can learn to program in Python and programming should not be a skill that is forever behind a pay wall.
 
-- **Teach fundamentals about computer science** 
+- **Teach computer science fundamentals** 
 
-    Computer fundamentals is an area  of understanding that is often neglected when teaching Python. In my experience, if one understands what is happening on a fundamental level in the computer, two benefits arise.
-
-    First, this understanding will help you know how to tackle difficult problems, leading to a faster and more efficient coding experience.
-
-    Secondly, debugging your code will be less of a recursive refactoring black hole and more of a intuitive wave that you can surf into the sunset. 
+    Computer fundamentals is an area of understanding that is often neglected when teaching Python. In my experience, understanding these fundamentals helps you write better code more quickly and, when things go wrong, fixing your code is easier to do.
 
 
- - **Allow the reader to get as much as they want out of the learning experience** 
 
-    I continually strive to structure this book such that, after covering a particular skill or aspect of the language, you can move on quickly to the next exercise or, if desired, you can do more to hone your skills and master the subject. 
-    
-    This is part of the philosophy of learning at your own pace and will hopefully facilitate the depth of your learning. Also, this allows you to pursue your specific interests and flesh out your skill set in a way that benefits you the most.
+ - **Allow the reader to learn at their own pace** 
 
- - **Get you reasonably coding proficient within 20 hours instead of 10,000 hours**
+    I attempt to structure the experience of this book such that you can learn at your own pace. After covering a particular skill or subject, you can move on quickly to the next exercise or, if desired, you can do more to hone your skills and master the subject. 
 
-    I feel that, for programming, the best approach to learning is simply to get in there and start writing some code. Therefore, I aim to get you coding and keep you coding as much as possible. I have heard it said that it takes 10,000 hours to become proficient at something. I, along with [this guy](https://www.youtube.com/watch?v=5MgBikgcWnY), believe that is false. My best aim is to get you reasonably proficient at Python within 20 hours of coding.
-    
-    With that said, you may find that you reach your 20-hour mark and are not finished with the book in terms of learning the basics. That is okay. You may find that a reasonable amount of proficiency is possible in less than 20 hours. That is also okay. Learn at your own pace, but understand that 10,000 hours of coding is NOT required to gain amazing benefits from coding.
+    This philosophy of learning will hopefully facilitate the depth of your learning. Also, this allows you to pursue your specific interests and flesh out your skill set in a way that benefits you the most.
 
-I hope this book is useful to you. I hope you benefit from learning Python as much as I have.
+    When learning programming, I feel the best approach to learning is simply to get in there and start writing some code. Therefore, I aim to get you coding and keep you coding as much as possible. You may have heard it said that it takes 10,000 hours to become proficient at something. I agree with [this guy](https://www.youtube.com/watch?v=5MgBikgcWnY) that this is false. This book is intended to get you reasonably proficient at Python within about 20 hours of coding.
+
+    With that said, you may find that you reach your 20-hour mark and are not finished with the book in terms of learning the basics. That is okay. You may find that a reasonable amount of proficiency is possible in less than 20 hours. That is also okay. Learn at your own pace, but understand that 10,000 hours of coding is NOT required to gain benefits from coding.
+
 
 ## How to use this book
 
 ### Boring Before Interesting
 
-In the 1984 film "[The Karate Kid](https://www.imdb.com/title/tt0087538/plotsummary?ref_=tt_stry_pl#synopsis)", Mr. Miyagi, the teacher, doesn't start training Daniel, the protagonist, in Karate by teaching him fancy moves but begins by having him perform many menial tasks with no apparent point to them. It is in doing these seemingly pointless tasks that Daniel first begins to have skill in Karate.
+In the 1984 film "[The Karate Kid](https://www.imdb.com/title/tt0087538/plotsummary?ref_=tt_stry_pl#synopsis)", Mr. Miyagi, the teacher, doesn't start training Daniel, the protagonist, in Karate by teaching him fancy moves but instead begins by having him perform many menial tasks with no apparent point to them. It is in doing these seemingly pointless tasks that Daniel first begins to have skill in Karate.
 
 You will find that anytime you want to learn a new skill you must do many boring and seemingly pointless things before you can do something interesting or useful. Every discipline has this feature. I am telling you this because for me, a person with a very limited attention span, the beginning of programming was agonizingly slow and seemingly pointless and you may feel that way too.
 
@@ -64,7 +58,7 @@ your way to becoming a good programmer. The simple things you must do are the
 following:
 
 - Read each section
-- Type the corresponding code EXACTLY as it is written without copy-pasting it
+- Write the code from each section code **EXACTLY** as it is written **without** copy-pasting it
 - Make it run
 
 When things get boring or tedious, remember the Karate Kid. You are building a foundation on which you can move mountains. To that end, I have structured each section to build on what you have learned.
@@ -77,7 +71,7 @@ The sections generally will be divided in to 3 subsections. Each of these sectio
 
  - **Reading and basic exercises**
 
-   This will be the main content of each section and is mandatory as you learn. It will include a relatively short  introduction on the subject of each section and provide exercises intended to  get you reasonably competent in a particular concept or skill. Once you have completed this subsection, you may move on to the next section with confidence that you have gotten the essential parts of the section.
+   This will be the main content of each section and is mandatory as you learn. It will include a relatively short introduction on the subject of each section and provide exercises intended to get you reasonably competent in a particular concept or skill. Once you have completed this subsection, you may move on to the next section with confidence that you have gotten the essential parts of the section.
 
  - **Hone Your Skills**
 
@@ -89,7 +83,7 @@ The sections generally will be divided in to 3 subsections. Each of these sectio
 
    These sections may not be included in every section. However, I have added these subsections whenever I feel there are some deeper things to learn or some principles that will serve you as you master programming. These sections may involve concepts we have not covered yet as well so if you get to a point where you feel lost, just skip it and come back to it later.
 
-This book is intended to serve you and not the other way around. Therefore, I recommend you do the reading and basic exercises of each section. Beyond that, you are free to pursue what interests you and skip anything that doesn't. I am still playing with the layout of this text but a possible way to approach learning the material is to do the basics first and then add to your knowledge with the other two subsections.
+This book is intended to serve you and not the other way around. Therefore, I recommend you do the reading and basic exercises of each section. Beyond that, you are free to pursue what interests you and skip anything that doesn't. There are multiple ways to approach learning but one way is to do the "Reading and basic exercises" from each section first and then add to your knowledge with the other two subsections.
 
 ### Learning to feed yourself
 

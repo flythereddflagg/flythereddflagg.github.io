@@ -44,8 +44,8 @@ extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 markdown_extensions:
+    # pip install python-markdown-math
     - mdx_math
-    #pip install python-markdown-math
     - codehilite:
         linenums: true
         #css_class: emacs
@@ -54,8 +54,8 @@ markdown_extensions:
         guess_lang: false
         #use_pygments: true
 
-theme:
 # pip install mkdocs-material
+theme:
     name: 'material'
     palette:
         primary: 'blue grey'
@@ -63,8 +63,8 @@ theme:
     font:
         text: 'Roboto'
         code: 'Source Code Pro'
-    logo:
-        icon: 'home'
+    icon:
+        logo: 'material/home'
         
     extra:
       social:
