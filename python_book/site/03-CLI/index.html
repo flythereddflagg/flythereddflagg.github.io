@@ -1,0 +1,1182 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+    
+    
+      
+        <title>3. CLI - The Redd Python Book</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#546e7a">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-cli" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo" aria-label="The Redd Python Book">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            The Redd Python Book
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              3. CLI
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Redd Python Book" class="md-nav__button md-logo" aria-label="The Redd Python Book">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+
+    </a>
+    The Redd Python Book
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../00-Table-of-Contents/" title="Table of Contents" class="md-nav__link">
+      Table of Contents
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01-Intro-and-How-to-Use-This-Book/" title="1. Intro and How to Use This Book" class="md-nav__link">
+      1. Intro and How to Use This Book
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02-Getting-Started/" title="2. Getting Started" class="md-nav__link">
+      2. Getting Started
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        3. CLI
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="3. CLI" class="md-nav__link md-nav__link--active">
+      3. CLI
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-the-command-line" class="md-nav__link">
+    Open the command line
+  </a>
+  
+    <nav class="md-nav" aria-label="Open the command line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-7810" class="md-nav__link">
+    Windows 7/8/10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apple-mac-os-x" class="md-nav__link">
+    Apple Mac OS X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-about-your-command-line-prompt" class="md-nav__link">
+    Note about your command line prompt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-am-i-command-pwd" class="md-nav__link">
+    Where am I? (Command: pwd)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-around-command-cd" class="md-nav__link">
+    Moving Around (Command: cd)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-in-folders-commands-ls-mkdir-and-touch-or-new-item" class="md-nav__link">
+    Working in folders (Commands: ls, mkdir, and touch or New-Item)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-files-and-folders-commands-rm-rmdir" class="md-nav__link">
+    Deleting Files and Folders (Commands: rm, rmdir)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-relative-paths-eg-and" class="md-nav__link">
+    Using Relative Paths (e.g. . and ..)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" class="md-nav__link">
+    Hone your skills
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../04-Hello-World/" title="4. Hello World" class="md-nav__link">
+      4. Hello World
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../05-Comments/" title="5. Comments" class="md-nav__link">
+      5. Comments
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../06-Strings-and-the-Print-Function/" title="6. Strings and the Print Function" class="md-nav__link">
+      6. Strings and the Print Function
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../07-Escape-Characters/" title="7. Escape Characters" class="md-nav__link">
+      7. Escape Characters
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../08-Formatted-Strings/" title="8. Formatted Strings" class="md-nav__link">
+      8. Formatted Strings
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../09-Variables-and-Memory/" title="9. Variables and Memory" class="md-nav__link">
+      9. Variables and Memory
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../10-Better-String-Formatting/" title="10. Better String Formatting" class="md-nav__link">
+      10. Better String Formatting
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../11-Input-and-Output/" title="11. Input and Output" class="md-nav__link">
+      11. Input and Output
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../12-Math-and-Data/" title="12. Math and Data" class="md-nav__link">
+      12. Math and Data
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../13-Logic-and-Boolean-Operators/" title="13. Logic and Boolean Operators" class="md-nav__link">
+      13. Logic and Boolean Operators
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../14-If-elif-and-else/" title="14. If elif and else" class="md-nav__link">
+      14. If elif and else
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../15-Errors-Exceptions-and-Bugs/" title="15. Errors Exceptions and Bugs" class="md-nav__link">
+      15. Errors Exceptions and Bugs
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../16-File-Reading-and-Writing/" title="16. File Reading and Writing" class="md-nav__link">
+      16. File Reading and Writing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../17-Loops/" title="17. Loops" class="md-nav__link">
+      17. Loops
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../18-Iterables/" title="18. Iterables" class="md-nav__link">
+      18. Iterables
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../19-Dictionaries/" title="19. Dictionaries" class="md-nav__link">
+      19. Dictionaries
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../20-Functions/" title="20. Functions" class="md-nav__link">
+      20. Functions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../21-More-Functions/" title="21. More Functions" class="md-nav__link">
+      21. More Functions
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../22-Try-Except/" title="22. Try Except" class="md-nav__link">
+      22. Try Except
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../23-Imports/" title="23. Imports" class="md-nav__link">
+      23. Imports
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../24-Reading-Code/" title="24. Reading Code" class="md-nav__link">
+      24. Reading Code
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../25-Do-a-Project/" title="25. Do a Project" class="md-nav__link">
+      25. Do a Project
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../26-Objects-and-Classes/" title="26. Objects and Classes" class="md-nav__link">
+      26. Objects and Classes
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../27-Inheritance-and-Polymorphism/" title="27. Inheritance and Polymorphism" class="md-nav__link">
+      27. Inheritance and Polymorphism
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../28-Modules/" title="28. Modules" class="md-nav__link">
+      28. Modules
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../29-Comments-and-Code-Documentation/" title="29. Comments and Code Documentation" class="md-nav__link">
+      29. Comments and Code Documentation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../30-Packages-and-Project-Structure/" title="30. Packages and Project Structure" class="md-nav__link">
+      30. Packages and Project Structure
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../31-Automated-Testing/" title="31. Automated Testing" class="md-nav__link">
+      31. Automated Testing
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../32-Do-Another-Project/" title="32. Do Another Project" class="md-nav__link">
+      32. Do Another Project
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
+      33. Branching Out
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#open-the-command-line" class="md-nav__link">
+    Open the command line
+  </a>
+  
+    <nav class="md-nav" aria-label="Open the command line">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows-7810" class="md-nav__link">
+    Windows 7/8/10
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apple-mac-os-x" class="md-nav__link">
+    Apple Mac OS X
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux" class="md-nav__link">
+    Linux
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#note-about-your-command-line-prompt" class="md-nav__link">
+    Note about your command line prompt
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#where-am-i-command-pwd" class="md-nav__link">
+    Where am I? (Command: pwd)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#moving-around-command-cd" class="md-nav__link">
+    Moving Around (Command: cd)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-in-folders-commands-ls-mkdir-and-touch-or-new-item" class="md-nav__link">
+    Working in folders (Commands: ls, mkdir, and touch or New-Item)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deleting-files-and-folders-commands-rm-rmdir" class="md-nav__link">
+    Deleting Files and Folders (Commands: rm, rmdir)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-relative-paths-eg-and" class="md-nav__link">
+    Using Relative Paths (e.g. . and ..)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#review" class="md-nav__link">
+    Review
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" class="md-nav__link">
+    Hone your skills
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../02-Getting-Started/">Previous: 02-Getting-Started</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../04-Hello-World/">Next: 04-Hello-World</a></p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="3-cli">3 - CLI</h1>
+<h3 id="introduction">Introduction</h3>
+<p>Welcome to the Command Line Interface (CLI)! Before we begin programming we need 
+to understand something about the context and environment that we are working in.</p>
+<p>First, we start with a little nomenclature. Perhaps you have seen a black, white or blue window with nothing but text in it on your computer. This is called the <strong>command line</strong> or the <strong>command line interface</strong>. It has other names that I may use such as "<strong>terminal</strong>", "<strong>command prompt</strong>", or "<strong>shell</strong>" but I will refer to it as the "command line" or CLI in this lesson.</p>
+<p>An example of one is shown below:</p>
+<p><img alt="cli" src="../media/cli.png" /></p>
+<p>This interface was, at one point, the only way to use a computer. Generally speaking, if you wanted to explore files, play a computer game or use any program, this was the way you needed to do it. There were no windowing systems or point-and-click interfaces. The way you did anything was to type commands into the prompt (seen above as the text after the <code>$</code>) and look at the output that resulted. We will be doing something similar in this lesson. To enter any command simply type the command in and press Enter.</p>
+<p>Secondly, you should be familiar with basic terminology relating to file systems. Important words you need to know are in bold font (i.e. words like <strong>folder,</strong> <strong>file</strong>, <strong>program</strong> and <strong>app</strong> or <strong>application</strong>"). I will use the words <strong>directory</strong> and <strong>folder</strong> interchangeably.</p>
+<p>All file systems I have seen start with a <strong>root folder</strong> (usually <code>C:\</code> for Windows and <code>/</code> for OS X and Linux). File systems start at this root folder and the root folder contains a tree of sub-folders in which all files are organized. You will sometimes see folders referred to as <strong>parent folders</strong> to their sub-folders and their sub-folders as <strong>child folders</strong> to the <strong>parent folder</strong>. This relationship is a common way of understanding relationships between files and folders. The address of a particular file or folder is called its <strong>path</strong>. The path of a file or folder is a string of text with each folder name separated by <code>\</code> (for Windows) or <code>/</code> (for OS X or Linux). Examples of paths are:</p>
+<ul>
+<li><code>C:\Users\mer\Documents\a_file.py</code> (Windows)</li>
+<li><code>/home/mer/Documents/a_file.py</code> (OS X or Linux). </li>
+</ul>
+<p>We will explore this via the command line and cover how to do basic navigation and commands. The command line is a feature-rich and powerful interface so this lesson is by no means comprehensive. It is intended to get you just competent enough to do programming. We will explore more about the command line later.</p>
+<h3 id="open-the-command-line">Open the command line</h3>
+<p>Depending on your operating system (e.g. Microsoft Windows, Apple Mac OS X, Linux) the way to open your command line differs significantly. Once your command line is open however, almost everything else is the same or very similar. I will indicate the differences where this is the case.</p>
+<h4 id="windows-7810">Windows 7/8/10</h4>
+<ul>
+<li>From your desktop, press the windows key. <ul>
+<li>The start menu should pop up.</li>
+</ul>
+</li>
+<li>Type in "powershell" into the start menu search bar.<ul>
+<li>A bunch of options should be displayed in the start menu.</li>
+</ul>
+</li>
+<li>Select "Windows PowerShell" from the list of options to open it. <ul>
+<li>A blue box with some text and a prompt should appear that looks something like this: <code>PS C:\Users\YOUR-USERNAME\&gt;</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="apple-mac-os-x">Apple Mac OS X</h4>
+<ul>
+<li>Open spotlight search by pressing &#8984;+Space. <ul>
+<li>A spotlight search bar should appear on your screen.</li>
+</ul>
+</li>
+<li>Type "terminal" into the search bar. <ul>
+<li>Options should appear under the search bar.</li>
+</ul>
+</li>
+<li>Select the "Terminal" application to open it. <ul>
+<li>A white box with some text should appear with a prompt that looks something like: <code>"YOUR COMPUTER'S NAME":~ "YOUR USERNAME"$</code></li>
+</ul>
+</li>
+</ul>
+<h4 id="linux">Linux</h4>
+<ul>
+<li>Press <code>ctrl+t</code> or <code>ctrl+alt+t</code>  from your desktop.<ul>
+<li>A bash window should appear with some text in it and a prompt that looks like: <code>"YOUR USERNAME"@"YOUR COMPUTER'S NAME" ~ $</code> or <code>-bash-4.2$</code> </li>
+</ul>
+</li>
+</ul>
+<h4 id="note-about-your-command-line-prompt">Note about your command line prompt</h4>
+<p>Regardless of what kind of prompt appears on your command line interface, ignore everything on the line before the <code>$</code> or the <code>&gt;</code>, that is, the prompt symbol. That part before the prompt symbol is usually irrelevant to understanding what is happening anyway. In this lesson and the rest of the book, I have omitted anything before the prompt symbol and you may interpret the <code>$</code> or the <code>&gt;</code> as being equivalent. Therefore, when you see something like <code>$ clear</code> written in the book, you should read that as, "Type the text <code>clear</code> into the command line prompt and press enter." Just remember, <strong>the <code>$</code> is NOT part of what you type in.</strong></p>
+<p>Once you have successfully opened your command line interface, you may begin the rest of the lesson. The object of this lesson is to practice and become familiar with each of the commands listed below. A summary table at the end of the lesson lists all the commands and what they do.</p>
+<h3 id="where-am-i-command-pwd">Where am I? (Command: <code>pwd</code>)</h3>
+<p>Begin by typing the following in your prompt and pressing Enter (Remember, <strong>DO NOT</strong> type in the <code>$</code>.):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">pwd</span>
+</code></pre></div>
+</td></tr></table>
+
+<p><code>pwd</code> means 'print working directory'. This command will show you where you are
+in the directory structure of your computer. For example typing this command 
+into the terminal on my linux computer print out <code>/home/mer</code> to the terminal window, which tells me 
+I am in the 'mer' directory of the 'home' directory of the root directory of my 
+computer. Similarly in Windows, <code>pwd</code> returns <code>C:\Users\YOUR-USERNAME\</code>. Therefore if you ever get lost while navigating in the terminal, use <code>pwd</code> to 
+figure out where you are.</p>
+<h3 id="moving-around-command-cd">Moving Around (Command: <code>cd</code>)</h3>
+<p>Type the following into your terminal and press Enter (Again remember, <strong>DO NOT</strong> type in the <code>$</code>.):</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~
+</code></pre></div>
+</td></tr></table>
+
+<p><code>cd</code> means 'change directory' and is one of the main ways you will navigate
+the command line. The normal usage of the "change directory" command is of the form: <code>$ cd "NAME OF DIRECTORY"</code> (e.g. <code>cd Documents</code>) but in this case we are using the "home" shortcut (<code>~</code>).</p>
+<p>The tilde (<code>~</code>) is a shorthand that stands for the 'home' directory. This can take you to slightly different places depending on the operating system you are running, but should be the default starting place for any folders you may wish to navigate. If you
+need to get back home or want to navigate from the home folder as a root
+folder the <code>~</code> will get you there.</p>
+<p>So when you enter <code>cd ~</code> what you are telling the terminal is this:
+"Take me me to the home folder." Or "Change the working directory to the home folder".</p>
+<h3 id="working-in-folders-commands-ls-mkdir-and-touch-or-new-item">Working in folders (Commands: <code>ls</code>, <code>mkdir</code>, and <code>touch</code> or <code>New-Item</code>)</h3>
+<p>Now that you are in the 'home' folder, enter the following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ ls
+</code></pre></div>
+</td></tr></table>
+
+<p><code>ls</code> is shorthand for "list files and sub-folders in the current directory". 
+Upon entering this command you should see a list of files and directories in
+your home folder.</p>
+<p>Let's make a directory in your home folder. Enter the
+following:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ mkdir peas
+</code></pre></div>
+</td></tr></table>
+
+<p>Now enter the <code>ls</code> command and you will notice a new folder in your home folder
+called 'peas' you made it with the 'make directory' command.</p>
+<p>Let's go in there!</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> peas
+$ ls
+$ 
+</code></pre></div>
+</td></tr></table>
+
+<p>If you type in the above commands in you will notice that nothing comes up!
+There is nothing in this folder yet so lets make a file to put in this folder! This is bit different for Windows so follow the Windows commands if you are using Windows.</p>
+<ul>
+<li><strong>Command for Mac OS X  or Linux</strong></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ touch carrots.py
+</code></pre></div>
+</td></tr></table>
+
+<ul>
+<li><strong>Command for Windows</strong></li>
+</ul>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="p">&gt;</span> <span class="nb">New-Item</span> <span class="n">-type</span> <span class="n">file</span> <span class="n">carrots</span><span class="p">.</span><span class="n">py</span>
+</code></pre></div>
+</td></tr></table>
+
+<p>You have just created an empty file called <code>carrots.py</code>. The <code>.py</code> part of the filename is called the extension and is a way that a user communicates what kind of file is being used. Generally, Python files have the <code>.py</code> extension but they are not fundamentally different from plain text files (i.e. files that end with <code>.txt</code>).</p>
+<p>Make another file called <code>cool_beans.txt</code> using the <code>touch</code> command (if you're on Mac OS X  or Linux) or <code>New-Item</code> command (if you're on windows). Go on, try it yourself!</p>
+<p>Did you do it? Check that you it worked using the <code>ls</code> command.
+You should see that you have two files in this folder called <code>carrots.py</code> and <code>cool_beans.txt</code>. If you're curious you can
+"print the working directory" and find this folder in your file explorer
+program on your computer. Cool huh?</p>
+<p>Now that we know how to create files and folders we will now learn how to delete them.</p>
+<h3 id="deleting-files-and-folders-commands-rm-rmdir">Deleting Files and Folders (Commands: <code>rm</code>, <code>rmdir</code>)</h3>
+<p>Now that we know how to create files and folders we will now learn how to delete them. Let's delete your files by entering the command:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ rm carrots.py
+</code></pre></div>
+</td></tr></table>
+
+<p><code>rm</code> means "remove". Verify that this has been deleted with <code>ls</code>.</p>
+<p>Now let's delete the other file.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ rm cool_beans.txt
+</code></pre></div>
+</td></tr></table>
+
+<p>When you finish this your directory should once again be empty. You can verify
+this with <code>ls</code>.</p>
+<h3 id="using-relative-paths-eg-and">Using Relative Paths (e.g. <code>.</code> and <code>..</code>)</h3>
+<p>Now...how do we get out of here? You may want to go directly to the home
+directory using</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ~
+</code></pre></div>
+</td></tr></table>
+
+<p>but you may not always want to go <em>all</em> the way back to the home directory when
+all you really want is to go to the next highest directory in the folder structure (a.k.a. the "parent directory"). I will now show you the way to do this. Simply enter:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ <span class="nb">cd</span> ..
+</code></pre></div>
+</td></tr></table>
+
+<p>This is a shorthand for, "change directory to the immediate parent directory" using what is called its "relative path". In the command line, <code>.</code> is shorthand for "the directory I'm in right now" and <code>..</code> means "the immediate parent folder of where I am right now".</p>
+<p>You can verify that you have indeed left the <code>peas</code> directory by using the <code>pwd</code>
+and <code>ls</code> commands. Now it is time to actually delete the directory.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ rmdir peas
+</code></pre></div>
+</td></tr></table>
+
+<p>If you didn't have any errors doing this congratulations! You have finished the
+basic exercises for the command line!</p>
+<h3 id="review">Review</h3>
+<p>Below is a table of all the commands we learned in this lesson and pertinent information about each.</p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Usage</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pwd</code></td>
+<td><code>$ pwd</code></td>
+<td>"Print Working Directory": Prints the location of the folder you are currently in.</td>
+</tr>
+<tr>
+<td><code>cd</code></td>
+<td><code>$ cd NAME</code></td>
+<td>"Change Directory": Changes your location to that of <code>NAME</code>.  The tilde <code>~</code> refers to the home directory, <code>.</code> refers to the current directory and <code>..</code> refers to the immediate parent directory.</td>
+</tr>
+<tr>
+<td><code>ls</code></td>
+<td><code>$ ls</code></td>
+<td>Lists all files and sub-folders in the current directory.</td>
+</tr>
+<tr>
+<td><code>mkdir</code></td>
+<td><code>$ mkdir NAME</code></td>
+<td>"Make Directory": Makes a directory in the current directory called <code>NAME</code>.</td>
+</tr>
+<tr>
+<td><code>touch</code></td>
+<td><code>$ touch NAME.EXT</code></td>
+<td>(<strong>Mac and Linux</strong>) Makes a new file in the current directory with a name of <code>NAME</code> and an extension of <code>.EXT</code></td>
+</tr>
+<tr>
+<td><code>New-item</code></td>
+<td><code>&gt; New-Item -type file NAME.EXT</code></td>
+<td>(<strong>Windows</strong>) Same as <code>touch</code>.</td>
+</tr>
+<tr>
+<td><code>rm</code></td>
+<td><code>$ rm NAME</code></td>
+<td>"Remove": Permanently deletes the file called <code>NAME</code> where <code>NAME</code> includes both the filename and the extension.</td>
+</tr>
+<tr>
+<td><code>rmdir</code></td>
+<td><code>$ rmdir NAME</code></td>
+<td>"Remove Directory": Permanently deletes a directory called <code>NAME</code>. (Only works if the directory is empty.)</td>
+</tr>
+<tr>
+<td>current directory path</td>
+<td><code>cd .</code></td>
+<td>Takes you nowhere but <code>.</code> is the shorthand for "the directory I am currently in".</td>
+</tr>
+<tr>
+<td>immediate parent directory path</td>
+<td><code>cd ..</code></td>
+<td>Takes you to the immediate parent directory. For, example if you were in <code>/home/mer/cheese/pizza/</code> and you entered <code>cd ..</code> you would be taken to <code>/home/mer/cheese/</code>. Remember that <code>..</code> is shorthand for "the immediate parent directory".</td>
+</tr>
+</tbody>
+</table>
+<p>Memorize these commands or keep this cheat sheet with you to help you work in the command line. Once you feel comfortable with these commands then it's time to start programming!</p>
+<h2 id="hone-your-skills">Hone your skills</h2>
+<p>Here are a few questions you should research:</p>
+<ul>
+<li>Normally you have to remove every file in a directory before you can delete the directory. What is a way you can delete a directory and all its contents using one line of command line code? Why would you <em>not</em> want to do this?</li>
+<li>How could you navigate to the parent directory's parent's parent directory in one command?</li>
+<li>Look up commands to 'copy', 'rename' and 'move' files in command
+    line. How would you complete these common tasks in command line?</li>
+<li>Research other common commands in command line and learn them for your benefit. Use google or a similar search engine. There are many good tutorials to use many powerful commands in the command line.</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../02-Getting-Started/">Previous: 02-Getting-Started</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../04-Hello-World/">Next: 04-Hello-World</a></p>
+<hr />
+<!-- End Navigation -->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../02-Getting-Started/" title="2. Getting Started" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                2. Getting Started
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../04-Hello-World/" title="4. Hello World" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                4. Hello World
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      
+    
+  </body>
+</html>

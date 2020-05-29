@@ -8,7 +8,7 @@
 <!-- End Navigation -->
 # 9 - Variables and Memory
 
-Now we will introduce some concepts that make Python far more powerful. You have the ability to store things in computer memory and the following exercise will demonstrate how to use it.
+Now we will introduce some concepts that make Python far more powerful. You have the ability to store things in computer memory and the following exercise will demonstrate how it works.
 
 ```python
 # vars_and_mem.py
@@ -21,33 +21,50 @@ more_text = "This is another string of text."
 
 print("{} {}".format(first_text, more_text))
 
-message = "You can print numbers too! Here are some"
-number_1 = 1
-number_2 = 23
-number_34 = 25.34
-print("{} {} {} {}".format(message, number_1, number_2, number_34))
+# You can print numbers too! Here are some
+random_integer_1 = 1
+random_integer_2 = 23
+random_number = 25.34
 
-# now lets do the same thing but assign these names to new values!
-message = "Here are some more numbers"
-number_1 = 34.1
-number_2 = 203
-number_34 = 3.14159265
-print("{} {} {} {}".format(message, number_1, number_2, number_34))
+# notice the format of the code
+# you can do this any time you have a
+# comma separated list
+# we also reuse the variable "first text" 
+print("{} {} {} {}".format(
+    first_text, 
+    random_integer_1,
+    random_integer_2,
+    random_number
+))
+
+# now lets do the same thing but assign these 
+# names to new values!
+first_text = "Here are some more numbers"
+random_integer_1 = 34
+random_integer_2 = 203
+random_number = 3.14159265
+
+# notice how this print statement does the same
+# thing as the last print statement
+print(
+    message, 
+    random_integer_1, 
+    random_integer_2,
+    random_number
+)
 ```
 
----
+#### Here is what should happen
 
-**Here is what should happen**
-
-```
+```bash
 $ python vars_and_mem.py
 Here is some text! This is another string of text.
-You can print numbers too! Here are some 1 23 25.34
-Here are some more numbers 34.1 203 3.14159265
+Here is some text! 1 23 25.34
+Here are some more numbers 34 203 3.14159265
 $
 ```
 
-You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a **variable**. Here is how the computer works with variables: 
+You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a <span title="Variable: a name assigned to a value. This value may be of any type in Python.">**variable**</span>. Here is how the computer works with variables.
 
 ### Computer Bare Essentials
 
@@ -63,22 +80,23 @@ Of course, computers can do these things at blinding speeds and can be endlessly
 
 ### Storing Information
 
-One of the most important things you can learn is how memory works on a computer. Storing 1s and 0s is the first thing that a computer must be able to do in order to function.
+One of the most important things you can learn is how memory works on a computer. Storing 1s and 0s is an essential ability for a computer to function.
 
 For now, you need to understand that there are three basic parts to the computer that we interact with constantly. They are:
 
 1. The **Central Processing Unit** (CPU): every instruction you write gets executed there.
-2. The **Random Access Memory** (RAM, or volatile memory): you will put information relevant to your programs there as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.
-3. The **persistent memory**: like the RAM, but the information you write there stays there until you actively erase it (depending on your hardware). The persistent memory is generally contained on a hard disk drive (HDD) or a solid-state drive (SSD). We will be doing more with the persistent memory in a later section.
+2. The **Random Access Memory** (RAM, or volatile memory): relevant program information is stored here as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.
+3. The **persistent memory**: like the RAM, but the information you write there stays there until you actively erase it (depending on your hardware). Your program get's stored here and is loaded into ram to actually run. The persistent memory is generally contained on a drive of some sort (e.g a hard disk drive (HDD) or a solid-state drive (SSD)). We will be doing more with the persistent memory in a later section.
 
+### Using RAM
 
 The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. Boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like
 
- `x = 23` 
+ `x = 23`
 
 you are executing the following:
 
-- Find an appropriate, empty 'box' and write 23 in that box.
+- Find an empty 'box' and write 23 in that box.
 - Get the address of the 'box' and associate it with the name 'x'. (This erases any previous associations x may have had before.)
 
 Anytime x is referenced after that command, the computer looks up the address associated with 'x' and goes directly to the 'box' with that address and replaces 'x' with whatever is in that 'box'.
@@ -109,7 +127,7 @@ Run the following commands:
 
 `type` , `id`  and `exit` are other built-in functions like `print` that provide some useful information about `x`. 
 
-`type` spits out the type of variable between its parentheses.  `id` spits out the "address" of the variable in the RAM (depending on the implimentation of Python this may or may not be the literal address in memory). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and `exit()` simply exits the program.
+`type` spits out the type of variable between its parentheses (in this case, an integer).  `id` spits out the "address" of the variable in the RAM (depending on the Python implementation you are using, this may or may not be the literal address in memory). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and `exit()` simply exits the program.
 
 ### Naming Variables
 
@@ -119,10 +137,10 @@ As a programmer you will have to give names to your variables. There are certain
 
 Python follows some rules on what a valid variable name can be. The rules are as follows:
 
-- Names must start with a letter **or** an underscore (`_`) (e.g. Spam, eggs, _cheese)
+- Names must start with a letter **or** an underscore (`_`) (e.g. `Spam`, `eggs`, `_cheese`)
 - Names must **only** contain numbers, letters or underscores (i.e. spaces and punctuation are not allowed)
-- Names are case sensitive (i.e. Spam, spAm and spam are three different names)
-- Names cannot be one of the 35 reserved words in Python. These are listed in the table below. (As a note, should you feel the need to use one of these names, you can turn it into a valid variable name by adding leading or trailing underscores e.g. `_False` or `False__ `  or a trailing number e.g. `False1`)
+- Names are case sensitive (i.e. `Spam`, `spAm` and `spam` are three different names)
+- Names cannot be one of the 35 reserved words in Python. These are listed in the table below. Should you feel the need to use one of these names, you can turn it into a valid variable name by adding a trailing underscore (e.g. `False_`).
 
 |Reserved Words in Python|||||
 | -------- | ------- | ----- | ----- | ------ |
@@ -196,7 +214,7 @@ Within the limits of these rules, you can call your variables any name you want 
 
   Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. Comments are important and I do not want to diminish their importance but writing easily understandable code is better than commenting. Up to now what your code does should be obvious to anyone that can read Python without any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.
 
-Any good programmer knows that the majority of the time we spend coding is actually spent reading and not writing. Python makes it easy for you to write readable code and the first step is write good variable names.
+Any good programmer knows that **the majority of the time we spend coding is actually spent reading and not writing**. Python makes it easy for you to write readable code and the first step is write good variable names.
 
 ## Hone Your Skills
 

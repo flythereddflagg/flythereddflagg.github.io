@@ -8,7 +8,7 @@
 <!-- End Navigation -->
 # 10 - Better String Formatting
 
-This is a short lesson in which we will learn a "trick" that will make all that formatting a lot more efficient using variables.
+This is a short lesson in which we will learn a "trick" that will make all that formatting a lot more efficient using variables. Pay attention to the strings that begin with `f` before the quotation marks. What is going on here?
 
 ```python
 # adv_format.py
@@ -22,9 +22,10 @@ average_pickle_weight = 2.34758475 # oz
 pickle_info = """I have a jar of {} brand pickles. 
 In the jar, there are {} pickles with an average
 weight of {} ounces.\n""".format(
-                                pickle_brand, 
-                                number_of_pickles, 
-                                average_pickle_weight) 
+    pickle_brand, 
+    number_of_pickles, 
+    average_pickle_weight
+) 
 
 print(pickle_info)
 
@@ -64,7 +65,7 @@ print(f"{random_number_6:11.3f}")
 
 ```
 
-**Here is what should happen**
+#### Here is what should happen
 
 ```
 $ python adv_format.py
@@ -85,7 +86,7 @@ Printing the numbers without any formatting.
 1293.0
 
 Notice how this can be hard to read.
-Let's try printing them while up the decimals.
+Let's try printing them and lining up the decimals.
    7583
    -123
      23.000

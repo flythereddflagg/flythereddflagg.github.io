@@ -74,7 +74,7 @@ As you may be able to gather from the code, the hash symbol tells Python, "Ignor
 
 These are generally called "comments" in the code. They let the programmer make comments that either explain small bits of code or provide detailed explanations of his code. They also allow the programmer to disable a line or a chunk of code if desired. 
 
-**NOTE:** Whenever you use quotes in Python, you must be consistent in whether you use single (`'`) or double (`"`) quotes to open or close text. Generally it does not matter which you choose. The only requirement is that you are consistent.
+***NOTE:*** *Whenever you use quotes in Python, you must be consistent in whether you use single (`'`) or double (`"`) quotes to open or close text. Generally, it does not matter which you choose. The only requirement is that you are consistent.*
 
 ### Comment Conventions
 

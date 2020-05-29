@@ -17,9 +17,7 @@ Now before going further we need to talk about math. This is not a book about ma
 - Exponents
 - Absolute Values
 
-If you are unfamiliar with some of these concepts, I suggest you familiarize yourself with them before proceeding so you have at least a basic understanding of what they are. However if you intend to proceed anyway, just skip the stuff with which you are not familiar as it is probable you will never have to use it. 
-
-The following exercise will introduce you to the basics of math:
+If you are unfamiliar with some of these concepts, I suggest you familiarize yourself with them before proceeding so you have at least a basic understanding of what they are. The following exercise will introduce you to the basics of math:
 
 ```python
 # math_learning.py
@@ -205,7 +203,7 @@ Lastly we will talk about some built-in functions (like `print()`) can help us e
 ## Hone Your Skills
 
 1. Write your own script that uses the built-in functions discussed above. Can you break them? What are their limitations?
-2. Using the `input` function, write a script that asks the user for the parameters `a`, `b` and `c` corresponding to the quadratic equation ($ax^2+bx+c = 0$) and calculates the roots of the equation using the [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_equation) with the user providing a, b and c. (Hint: A square root is the same as taking a number to the $\frac{1}{2}$ power. e.g. $\sqrt{a+b} = (a+b)^\frac{1}{2}$) 
+2. Using the `input` function, write a script that asks the user for the parameters `a`, `b` and `c` corresponding to the quadratic equation (\(ax^2+bx+c = 0\)) and calculates the roots of the equation using the [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_equation) with the user providing a, b and c. (Hint: A square root is the same as taking a number to the \(\frac{1}{2}\) power. e.g. \(\sqrt{a+b}\) = \((a+b)^\frac{1}{2}​\)) 
 
 ## Advanced Mastery
 
