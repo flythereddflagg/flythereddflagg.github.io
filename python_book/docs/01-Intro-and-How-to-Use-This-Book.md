@@ -85,6 +85,10 @@ The sections generally will be divided in to 3 subsections. Each of these sectio
 
 This book is intended to serve you and not the other way around. Therefore, I recommend you do the reading and basic exercises of each section. Beyond that, you are free to pursue what interests you and skip anything that doesn't. There are multiple ways to approach learning but one way is to do the "Reading and basic exercises" from each section first and then add to your knowledge with the other two subsections.
 
+### Defining Terms
+
+We will introduce several terms throughout this book with which you may be unfamiliar. Where this is the case, you may view a definition of the word or phrase by hovering your mouse cursor over the word or phrase in bold (e.g. here is the definition of <span title="Python: a high-level general-purpose programming language">**Python**</span>)
+
 ### Learning to feed yourself
 
 I will sometimes have you read [The Official Python Documentation](https://docs.python.org/3.7/index.html), visit other websites or resources, or have you use an internet search engine to learn about a particular topic. I do this for a number of reasons but most importantly, I want you to be able to teach yourself everything this book cannot. It would be my goal that, after you have read and learned everything in this book, you can put it down and never pick it up again because you have learned how to find answers to your *own* questions. Doing this will make you that much more effective as a programmer and more effective as a human being in general.

@@ -13,7 +13,7 @@
 
 ###  The print function 
 
-Lets talk about the `print()` statement or, as it is more correctly called, the print function.
+Let's talk about the `print()` statement or, as it is more correctly called, the print function.
 
 `print` is what is known as a built-in function in Python. Let's get some terminology out of the way before moving on:
 
@@ -22,13 +22,9 @@ Lets talk about the `print()` statement or, as it is more correctly called, the 
 We will learn a lot more about functions later on and you will even build your own. But for now, just understand the following:
 
 - There is some chunk of code labeled 'print' in the Python <span title="source code: Text files written in a particular programming language. Not to be confused with the program itself.">**source code**</span>.
-- When you write `print(stuff)` in your code you 
-  are telling the computer, "ACTIVATE THAT CHUNK OF CODE LABELED 'print'!"
-- The chunk of code then comes alive and says,
-  "Okay! My job is to write the `stuff` between the parentheses  in the terminal
-  window!"
-- The chunk of code does just that and then becomes dormant awaiting 
-  the next time it is called to action. 
+- When you write `print(stuff)` in your code you are telling the computer, "Activate that chunk of code labeled 'print'!"
+- The chunk of code then comes alive and says, "Okay! My job is to write the `stuff` between the parentheses in the terminal window!"
+- The chunk of code does just that and then becomes dormant awaiting the next time it is called to action. 
 
 When we talk about functions you will see that they have things (such as `stuff` above) between the parentheses. Sometimes these things are in a comma-separated list. These things between the parentheses are called <span title="arguments: Values and variables passed into a function.">**arguments**</span>. For now, we have just one argument being fed to the `print` function and that is simply the text you want printed out to the screen. 
 
@@ -36,11 +32,9 @@ When we talk about functions you will see that they have things (such as `stuff`
 
 You may have noticed that the text inside the parentheses is also between single or double quotes. It may not be clear why this is. In Python, putting text inside quotes designates it as a string.
 
-- **String**: a sequence of characters that is treated as non-code
-  text
+- **String**: a sequence of characters that is treated as non-code text
 
-The quotes are necessary to differentiate between code being fed into the print
-statement and the text to be printed.
+The quotes are necessary to differentiate between code being fed into the print statement and the text to be printed.
 
 If you want to print single quotes (`'`) in your text you can do this by enclosing the text with double quotes (`" "`) or vice versa. Python does not care if you use single or double quotes to enclose your strings as long as you are consistent.
 
@@ -55,7 +49,7 @@ print('with "single" quotes but "double quotes" inside it.')
 print("mixing "double" and'single' quotes will cause an error.")
 ```
 
-**This is what should happen**
+#### This is what should happen
 
 ```
 $ python string_quotes.py

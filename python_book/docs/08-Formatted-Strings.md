@@ -38,7 +38,7 @@ ${:5.2f}/10 oz
 """.format(1.23232, 5.3593, 9.84655))
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```bash
 $ python format_strings.py
