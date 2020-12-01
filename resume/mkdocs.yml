@@ -1,0 +1,19 @@
+site_name: Mark Redd's Resume
+
+theme:
+    name: 'material'
+    palette:
+        primary: 'black'
+        accent: 'purple'
+    font:
+        text: 'Roboto'
+        code: 'Source Code Pro'
+    icon:
+        logo: 'material/account'
+        
+    extra:
+      social:
+        - type: 'github'
+          link: 'https://github.com/flythereddflagg'
+        - type: 'linkedin'
+          link: 'https://www.linkedin.com/in/mark-redd-53878880/'
