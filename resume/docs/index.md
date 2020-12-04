@@ -57,7 +57,7 @@
 
   *Utah State University, Logan, UT, USA | Apr 2009 – Aug 2009*
 
-  - Assisted a PhD candidate with experiments on Arabidopsis thaliana to find patterns in gene expression from the removal of Saccharide‐9 from the plant genome
+  - Assisted a PhD candidate with experiments on Arabidopsis thaliana to find patterns in gene expression from the removal of Saccharide-9 from the plant genome
   - Collected data from over 100 specimens by making synthetic growth media, planting and observing growth patterns
 
 ## Education
