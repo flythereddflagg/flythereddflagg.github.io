@@ -1,4 +1,4 @@
-[**Printable Resume**](/media/Mark_Redd_Resume_Printable.pdf)
+[**Printable CV**](/media/Mark_Redd_Resume_Printable.pdf)
 
 # Mark Edward Redd
 
