@@ -6,11 +6,11 @@
 
 [LinkedIn](https://www.linkedin.com/in/mark-redd-53878880/), [Github](https://github.com/flythereddflagg)
 
-## Accepted Publications
+## Publications
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
-- Bloxham, J. C., Redd, M. E., Giles, N. F., Knotts, T. A., & Wilding, W. (n.d.). Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes. *Journal of Chemical & Engineering Data*.
+- Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, "Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes." *Journal of Chemical & Engineering Data*, **Article ASAP**, DOI: 10.1021/acs.jced.0c00641
 
 ## Experience
 
