@@ -10,7 +10,7 @@
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
-- Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, "Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes." *Journal of Chemical & Engineering Data*, **Article ASAP**, DOI: 10.1021/acs.jced.0c00641
+- Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, *Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes*, Journal of Chemical & Engineering Data **2021** *66* (1), 3-10. DOI: 10.1021/acs.jced.0c00641
 
 ## Experience
 
