@@ -3,6 +3,12 @@ SRC_MD = ../resume/docs/index.md
 SRC_TEX = ./Mark_Redd_Resume_Printable
 SRC = main
 
+ifeq ($(OS), Windows_NT)
+	RM = del
+else
+	RM = rm -f
+endif
+
 all: md edit_tex to_pdf clean-meta
 	
 md:
@@ -16,8 +22,8 @@ to_pdf:
 	$(CC) -jobname=$(SRC_TEX) $(SRC).tex
 	
 clean-meta:
-	del *.aux
-	del *.log
+	$(RM) *.aux
+	$(RM) *.log
 
 clean: clean-meta
-	del *.pdf
+	$(RM) *.pdf
