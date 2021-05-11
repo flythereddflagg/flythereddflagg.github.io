@@ -4,3 +4,10 @@
 
 - Why I am making this?
 - How to use this book
+- https://flythereddflagg.github.io/python_book/site/
+- Sections
+  - Reading and Basic Exercises
+  - Hone your skills
+  - Advanced Mastery
+- Learn To Feed Yourself
+
