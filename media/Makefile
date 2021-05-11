@@ -24,6 +24,7 @@ to_pdf:
 clean-meta:
 	$(RM) *.aux
 	$(RM) *.log
+    $(RM) *.out
 
 clean: clean-meta
 	$(RM) *.pdf
