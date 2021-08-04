@@ -6,42 +6,38 @@
 
 [LinkedIn](https://www.linkedin.com/in/mark-redd-53878880/), [Github](https://github.com/flythereddflagg)
 
-## Publications
-
-<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
-- Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, *Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes*, Journal of Chemical & Engineering Data **2021** *66* (1), 3-10. DOI: 10.1021/acs.jced.0c00641
-
 ## Experience
 
 ### PhD Researcher
 
-  *Brigham Young University, Provo, UT, USA | Jul 2016 – Present*
+  *Brigham Young University, Provo, UT, USA | Advisor: Dr. W. V. Wilding | Jul 2016 – Present*
 
-- Research focus in autoignition temperatures (AIT) of pure compounds focusing on chemical family trends
-- Mentored 20+ undergraduates focusing on safety and relevant laboratory skills 
-- Designed and constructed experimental apparatus and data acquisition hardware and software
-- Worked as a teaching assistant for undergraduate courses on "Chemical Plant Design" and "Numerical Methods"
-- Automated data acquisition and analysis by writing custom software using Python, C/C++, and Arduino
+- Research in autoignition temperatures (AIT) of pure compounds for AIChE's DIPPR 801 Database
+- Improved the reliability of AIT values in the 801 Database through evaluation of data from 600+ sources
+- Designed and constructed an experimental apparatus at ~ 10% of the expected capital cost 
+- Increased reliability and throughput of AIT measurements by automating aspects of the experimental process
+- Wrote custom software to automate data acquisition and analysis using Python and C/C++
+- Brokered the release of a previously closed-source AIT prediction method for publication
+- Improved the method by relaxing assumptions, improving regression data quality, and expanding applicability
+- Mentored 20+ undergraduates focusing on safety and relevant laboratory skills
+- Teaching assistant for undergraduate courses on "Chemical Plant Design" and "Numerical Methods"
 
 ### Engineering Intern
 
  *Sustainable Energy Solutions LLC, Orem, UT, USA | May 2014 – Aug 2015*
 
   - Worked with a team of engineers to build an experimental reactor
-  - Personally designed and fabricated multiple components of reactor through various welding and machining processes
-  - Assembled and wired multiple components on coal fire reactor
-  - Designed and began fabrication of a specialized $CO_2$ separation process
+  - Designed and began fabrication of a novel $CO_2$​ separation process
   - Designed parts and assemblies with Autodesk Inventor CAD software
+  - Personally fabricated multiple components through various welding and machining processes
 
 ### Chemical Engineering Laboratory Assistant
 
 *Brigham Young University, Provo, UT, USA |  Jun 2012 – May 2014*
 
+  - Aided development of biomass gasification kinetic models by collecting data on more than 70 reactions
   - Managed and carried out all aspects of laboratory work in an independent and unsupervised setting
-  - Installed, repaired and maintained ceramic gasification reactor and components
-  - Collected data on more than 70 reactions to develop accurate kinetic models
-  - Improved efficiency of data collection by automating data analysis and graphic generation with Microsoft VBA
-  - Built, repaired and maintained various components of experimental reactor apparatus
+  - Improved experimental efficiency by automating data analysis with Microsoft VBA
   - Trained 2 new employees in safety regulations and standard operating procedures
 
 ### Full-Time Volunteer Missionary
@@ -73,13 +69,13 @@
 
 ### Programming
 
-- Experience with C / C++, C#, FORTRAN, Java, JavaScript / HTML / CSS, MATLAB, Python, Microsoft VBA
+- Experience with C / C++, C#, FORTRAN, Java, JavaScript / HTML / CSS, MATLAB, Python, SQL, Microsoft VBA
 - Implemented and published the open-source [Leapfrogging Algorithm](https://github.com/flythereddflagg/lpfgopt) with library wrappers for C, C++ and Python
 - Wrote an open-source introductory [book](https://flythereddflagg.github.io/python_book/site/index.html) on Python and computer science
 
 ### Software / Platforms
 
-- Experience with Arduino, Autodesk Inventor, GCC and GNU Build Tools, Git, Linux, MathCAD, MATLAB / Simulink, Microsoft Office
+- Experience with Arduino, Autodesk Inventor, GCC and GNU Build Tools, Git, Linux, MathCAD, MATLAB / Simulink, Microsoft Office, Raspberry Pi, SQLite, Microsoft SQL Server
 - Built custom data acquisition and analysis hardware and corresponding software using Arduino and other open-source platforms
 
 ### Industrial
@@ -89,3 +85,13 @@
 - Machining processes (i.e. end milling, turning etc.)
 - Welding (SMAW, GMAW, Oxy-acetylene welding and brazing, GTAW)
 
+## Publications
+
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
+
+- Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, *Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes*, Journal of Chemical & Engineering Data **2021** *66* (1), 3-10. DOI: 10.1021/acs.jced.0c00641
+
+## Presentations
+
+- Mark E. Redd, Glenn Seaton, Thomas A. Knotts IV, Neil F. Giles, and W. Vincent Wilding. “An Improved Method for Predicting Autoignition Temperatures Based on First Principles”, Properties and Phase Equilibria for Fuels and Petrochemicals: Model Development, AIChE Fall Meeting, November 16, 2020, Virtual Meeting, (https://youtu.be/v3WRcLRLV_M)
+- Mark E. Redd, Thomas A. Knotts, Neil F. Giles, and W. Vincent Wilding. “A Study of Unexpected Autoignition Temperature Trends for Pure *n-*Alkanes”, Presentation 480e, Presentation Session 480: Properties and Phase Equilibria for Fuels and Petrochemicals I, AIChE Annual Meeting, November 13, 2019. Orlando, FL.
