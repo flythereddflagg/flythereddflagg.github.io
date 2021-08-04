@@ -15,4 +15,3 @@
 - Deleting Files and Folders (Commands: rm, rmdir)
 - Using Relative Paths (e.g. . and ..)
 - Review
-
