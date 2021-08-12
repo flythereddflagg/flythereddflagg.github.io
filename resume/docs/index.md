@@ -26,7 +26,7 @@
 
  *Sustainable Energy Solutions LLC, Orem, UT, USA | May 2014 – Aug 2015*
 
-  - Worked with a team of engineers to build an experimental reactor
+  - Worked with a team of engineers to build an experimental, multi-fuel, combustion reactor
   - Designed and began fabrication of a novel $CO_2$​ separation process
   - Designed parts and assemblies with Autodesk Inventor CAD software
   - Personally fabricated multiple components through various welding and machining processes
@@ -53,7 +53,7 @@
   *Utah State University, Logan, UT, USA | Apr 2009 – Aug 2009*
 
   - Assisted a PhD candidate with experiments on Arabidopsis thaliana to find patterns in gene expression from the removal of Saccharide-9 from the plant genome
-  - Collected data from over 100 specimens by making synthetic growth media, planting and observing growth patterns
+  - Collected data from 100+ specimens by making synthetic growth media, planting and observing growth patterns
 
 ## Education
 
@@ -69,13 +69,13 @@
 
 ### Programming
 
-- Experience with C / C++, C#, FORTRAN, Java, JavaScript / HTML / CSS, MATLAB, Python, SQL, Microsoft VBA
+- Experience with C/C++, C#, FORTRAN, Java, JavaScript/HTML/CSS, MATLAB, Python, SQL, Microsoft VBA
 - Implemented and published the open-source [Leapfrogging Algorithm](https://github.com/flythereddflagg/lpfgopt) with library wrappers for C, C++ and Python
-- Wrote an open-source introductory [book](https://flythereddflagg.github.io/python_book/site/index.html) on Python and computer science
+- Wrote an open-source introductory [book on Python and computer science](https://flythereddflagg.github.io/python_book/site/index.html)
 
 ### Software / Platforms
 
-- Experience with Arduino, Autodesk Inventor, GCC and GNU Build Tools, Git, Linux, MathCAD, MATLAB / Simulink, Microsoft Office, Raspberry Pi, SQLite, Microsoft SQL Server
+- Experience with Arduino, Autodesk Inventor, GCC and GNU Build Tools, Git, Linux, MathCAD, MATLAB/Simulink, Microsoft Office, Raspberry Pi, SQLite, Microsoft SQL Server
 - Built custom data acquisition and analysis hardware and corresponding software using Arduino and other open-source platforms
 
 ### Industrial
@@ -89,9 +89,10 @@
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
+- Mark E. Redd, Joseph C. Bloxham, Neil F. Giles, Thomas A. Knotts, W. Vincent Wilding, *A Study of Unexpected Autoignition Temperature Trends for Pure* n-*Alkanes*, Fuel **2021**, (Accepted)
 - Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, *Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes*, Journal of Chemical & Engineering Data **2021** *66* (1), 3-10. [DOI: 10.1021/acs.jced.0c00641](https://doi.org/10.1021/acs.jced.0c00641)
 
 ## Presentations
 
-- Mark E. Redd, Glenn Seaton, Thomas A. Knotts IV, Neil F. Giles, and W. Vincent Wilding. “An Improved Method for Predicting Autoignition Temperatures Based on First Principles”, Properties and Phase Equilibria for Fuels and Petrochemicals: Model Development, AIChE Fall Meeting, November 16, 2020, Virtual Meeting, (https://youtu.be/v3WRcLRLV_M)
+- Mark E. Redd, Glenn Seaton, Thomas A. Knotts IV, Neil F. Giles, and W. Vincent Wilding. “An Improved Method for Predicting Autoignition Temperatures Based on First Principles”, Properties and Phase Equilibria for Fuels and Petrochemicals: Model Development, AIChE Fall Meeting, November 16, 2020, Virtual Meeting, ([https://youtu.be/v3WRcLRLV_M](https://youtu.be/v3WRcLRLV_M))
 - Mark E. Redd, Thomas A. Knotts, Neil F. Giles, and W. Vincent Wilding. “A Study of Unexpected Autoignition Temperature Trends for Pure *n-*Alkanes”, Presentation 480e, Presentation Session 480: Properties and Phase Equilibria for Fuels and Petrochemicals I, AIChE Annual Meeting, November 13, 2019. Orlando, FL.
