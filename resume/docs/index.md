@@ -12,15 +12,16 @@
 
   *Brigham Young University, Provo, UT, USA | Advisor: Dr. W. V. Wilding | Jul 2016 – Present*
 
-- Research in autoignition temperatures (AIT) of pure compounds for AIChE's DIPPR 801 Database
-- Improved the reliability of AIT values in the 801 Database through evaluation of data from 600+ sources
+- Researched the autoignition temperatures (AIT) of pure compounds for AIChE's DIPPR 801 Database
+- Improved the reliability of AIT values in the 801 Database through evaluating data from 600+ sources 
+- Filled gaps in the 801 Database by measuring AIT for 13 pure compounds
 - Designed and constructed an experimental apparatus at ~ 10% of the expected capital cost 
 - Increased reliability and throughput of AIT measurements by automating aspects of the experimental process
 - Wrote custom software to automate data acquisition and analysis using Python and C/C++
 - Brokered the release of a previously closed-source AIT prediction method for publication
 - Improved the method by relaxing assumptions, improving regression data quality, and expanding applicability
 - Mentored 20+ undergraduates focusing on safety and relevant laboratory skills
-- Teaching assistant for undergraduate courses on "Chemical Plant Design" and "Numerical Methods"
+- Teaching assistant for undergraduate courses on "Chemical Plant Design" (3 times)  and "Numerical Methods"
 
 ### Engineering Intern
 
