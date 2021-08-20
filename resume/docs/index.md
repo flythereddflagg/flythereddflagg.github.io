@@ -90,10 +90,11 @@
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
-- Mark E. Redd, Joseph C. Bloxham, Neil F. Giles, Thomas A. Knotts, W. Vincent Wilding, *A Study of Unexpected Autoignition Temperature Trends for Pure* n-*Alkanes*, Fuel **2021**, (Accepted)
+- Mark E. Redd, Joseph C. Bloxham, Neil F. Giles, Thomas A. Knotts, W. Vincent Wilding, *A study of unexpected autoignition temperature trends for pure* n*-alkanes*, Fuel **2021** 306, 121710. [DOI: 10.1016/j.fuel.2021.121710](https://doi.org/10.1016/j.fuel.2021.121710).
 - Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, *Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes*, Journal of Chemical & Engineering Data **2021** *66* (1), 3-10. [DOI: 10.1021/acs.jced.0c00641](https://doi.org/10.1021/acs.jced.0c00641)
 
 ## Presentations
 
 - Mark E. Redd, Glenn Seaton, Thomas A. Knotts IV, Neil F. Giles, and W. Vincent Wilding. “An Improved Method for Predicting Autoignition Temperatures Based on First Principles”, Properties and Phase Equilibria for Fuels and Petrochemicals: Model Development, AIChE Fall Meeting, November 16, 2020, Virtual Meeting, ([https://youtu.be/v3WRcLRLV_M](https://youtu.be/v3WRcLRLV_M))
 - Mark E. Redd, Thomas A. Knotts, Neil F. Giles, and W. Vincent Wilding. “A Study of Unexpected Autoignition Temperature Trends for Pure *n-*Alkanes”, Presentation 480e, Presentation Session 480: Properties and Phase Equilibria for Fuels and Petrochemicals I, AIChE Annual Meeting, November 13, 2019. Orlando, FL.
+
