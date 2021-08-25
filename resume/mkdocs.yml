@@ -11,12 +11,13 @@ theme:
     icon:
         logo: 'material/account'
         
-    extra:
-      social:
-        - type: 'github'
-          link: 'https://github.com/flythereddflagg'
-        - type: 'linkedin'
-          link: 'https://www.linkedin.com/in/mark-redd-53878880/'
+extra:
+  social:
+    - icon:  fontawesome/brands/github
+      link: 'https://github.com/flythereddflagg'
+    - icon: fontawesome/brands/linkedin
+      link: 'https://www.linkedin.com/in/mark-redd-53878880/'
+
 
 markdown_extensions:
   - pymdownx.arithmatex:

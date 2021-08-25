@@ -4,7 +4,7 @@
 
 <redddogjr@gmail.com> | 552 N 800 W, Provo, UT, 84601 | (435) 760-9452
 
-[LinkedIn](https://www.linkedin.com/in/mark-redd-53878880/), [Github](https://github.com/flythereddflagg)
+[LinkedIn](https://www.linkedin.com/in/mark-redd-53878880/), [GitHub](https://github.com/flythereddflagg)
 
 ## Experience
 
