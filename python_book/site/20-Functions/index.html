@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -10,8 +8,9 @@
       
       
       
-      <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.2.2">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
     
     
       
@@ -19,28 +18,34 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a2408e81.min.css">
-      
-        <link rel="stylesheet" href="../assets/stylesheets/palette.a46bcfb3.min.css">
-      
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
       
         
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
         
-        <meta name="theme-color" content="#546e7a">
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
       
     
     
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CSource+Code+Pro&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Source Code Pro"}</style>
       
     
     
     
+      <link rel="stylesheet" href="../css/default.min.css">
+    
     
       
+
+
     
     
   </head>
@@ -49,8 +54,13 @@
     
     
     
+    
+    
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
   
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -67,47 +77,55 @@
     </div>
     
       <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href=".." title="The Redd Python Book" class="md-header-nav__button md-logo" aria-label="The Redd Python Book">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Redd Python Book" class="md-header__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
+    <label class="md-header__button md-icon" for="__drawer">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
     </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
-      
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             The Redd Python Book
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               20. Functions
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
       </label>
       
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" data-md-scrollfix>
@@ -128,8 +146,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -137,12 +153,16 @@
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="The Redd Python Book" class="md-nav__button md-logo" aria-label="The Redd Python Book">
+    <a href=".." title="The Redd Python Book" class="md-nav__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
@@ -157,252 +177,15 @@
       
       
 
-
-  <li class="md-nav__item">
-    <a href=".." title="Home" class="md-nav__link">
-      Home
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../00-Table-of-Contents/" title="Table of Contents" class="md-nav__link">
-      Table of Contents
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../01-Intro-and-How-to-Use-This-Book/" title="1. Intro and How to Use This Book" class="md-nav__link">
-      1. Intro and How to Use This Book
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../02-Getting-Started/" title="2. Getting Started" class="md-nav__link">
-      2. Getting Started
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../03-CLI/" title="3. CLI" class="md-nav__link">
-      3. CLI
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../04-Hello-World/" title="4. Hello World" class="md-nav__link">
-      4. Hello World
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../05-Comments/" title="5. Comments" class="md-nav__link">
-      5. Comments
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../06-Strings-and-the-Print-Function/" title="6. Strings and the Print Function" class="md-nav__link">
-      6. Strings and the Print Function
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../07-Escape-Characters/" title="7. Escape Characters" class="md-nav__link">
-      7. Escape Characters
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../08-Formatted-Strings/" title="8. Formatted Strings" class="md-nav__link">
-      8. Formatted Strings
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../09-Variables-and-Memory/" title="9. Variables and Memory" class="md-nav__link">
-      9. Variables and Memory
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../10-Better-String-Formatting/" title="10. Better String Formatting" class="md-nav__link">
-      10. Better String Formatting
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../11-Input-and-Output/" title="11. Input and Output" class="md-nav__link">
-      11. Input and Output
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../12-Math-and-Data/" title="12. Math and Data" class="md-nav__link">
-      12. Math and Data
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../13-Logic-and-Boolean-Operators/" title="13. Logic and Boolean Operators" class="md-nav__link">
-      13. Logic and Boolean Operators
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../14-If-elif-and-else/" title="14. If elif and else" class="md-nav__link">
-      14. If elif and else
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../15-Errors-Exceptions-and-Bugs/" title="15. Errors Exceptions and Bugs" class="md-nav__link">
-      15. Errors Exceptions and Bugs
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../16-File-Reading-and-Writing/" title="16. File Reading and Writing" class="md-nav__link">
-      16. File Reading and Writing
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../17-Loops/" title="17. Loops" class="md-nav__link">
-      17. Loops
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../18-Iterables/" title="18. Iterables" class="md-nav__link">
-      18. Iterables
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../19-Dictionaries/" title="19. Dictionaries" class="md-nav__link">
-      19. Dictionaries
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
 
     
       
@@ -410,40 +193,340 @@
       
 
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-Table-of-Contents/" class="md-nav__link">
+        Table of Contents
+      </a>
+    </li>
+  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-Intro-and-How-to-Use-This-Book/" class="md-nav__link">
+        1. Intro and How to Use This Book
+      </a>
+    </li>
+  
+
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Getting-Started/" class="md-nav__link">
+        2. Getting Started
+      </a>
+    </li>
+  
+
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-CLI/" class="md-nav__link">
+        3. CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-Hello-World/" class="md-nav__link">
+        4. Hello World
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Comments/" class="md-nav__link">
+        5. Comments
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Strings-and-the-Print-Function/" class="md-nav__link">
+        6. Strings and the Print Function
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-Escape-Characters/" class="md-nav__link">
+        7. Escape Characters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-Formatted-Strings/" class="md-nav__link">
+        8. Formatted Strings
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-Variables-and-Memory/" class="md-nav__link">
+        9. Variables and Memory
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-Better-String-Formatting/" class="md-nav__link">
+        10. Better String Formatting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-Input-and-Output/" class="md-nav__link">
+        11. Input and Output
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-Math-and-Data/" class="md-nav__link">
+        12. Math and Data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-Logic-and-Boolean-Operators/" class="md-nav__link">
+        13. Logic and Boolean Operators
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-If-elif-and-else/" class="md-nav__link">
+        14. If elif and else
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-Errors-Exceptions-and-Bugs/" class="md-nav__link">
+        15. Errors Exceptions and Bugs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-File-Reading-and-Writing/" class="md-nav__link">
+        16. File Reading and Writing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-Loops/" class="md-nav__link">
+        17. Loops
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-Iterables/" class="md-nav__link">
+        18. Iterables
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-Dictionaries/" class="md-nav__link">
+        19. Dictionaries
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          20. Functions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         20. Functions
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
-        </span>
-      </label>
-    
-    <a href="./" title="20. Functions" class="md-nav__link md-nav__link--active">
-      20. Functions
-    </a>
-    
+      </a>
       
+        
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
@@ -476,164 +559,204 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../21-More-Functions/" title="21. More Functions" class="md-nav__link">
-      21. More Functions
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../22-Try-Except/" title="22. Try Except" class="md-nav__link">
-      22. Try Except
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-More-Functions/" class="md-nav__link">
+        21. More Functions
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../23-Imports/" title="23. Imports" class="md-nav__link">
-      23. Imports
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../24-Reading-Code/" title="24. Reading Code" class="md-nav__link">
-      24. Reading Code
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-Try-Except/" class="md-nav__link">
+        22. Try Except
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../25-Do-a-Project/" title="25. Do a Project" class="md-nav__link">
-      25. Do a Project
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../26-Objects-and-Classes/" title="26. Objects and Classes" class="md-nav__link">
-      26. Objects and Classes
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-Imports/" class="md-nav__link">
+        23. Imports
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../27-Inheritance-and-Polymorphism/" title="27. Inheritance and Polymorphism" class="md-nav__link">
-      27. Inheritance and Polymorphism
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../28-Modules/" title="28. Modules" class="md-nav__link">
-      28. Modules
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-Reading-Code/" class="md-nav__link">
+        24. Reading Code
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../29-Comments-and-Code-Documentation/" title="29. Comments and Code Documentation" class="md-nav__link">
-      29. Comments and Code Documentation
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../30-Packages-and-Project-Structure/" title="30. Packages and Project Structure" class="md-nav__link">
-      30. Packages and Project Structure
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-Do-a-Project/" class="md-nav__link">
+        25. Do a Project
+      </a>
+    </li>
+  
 
     
       
       
       
 
-
-  <li class="md-nav__item">
-    <a href="../31-Automated-Testing/" title="31. Automated Testing" class="md-nav__link">
-      31. Automated Testing
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../32-Do-Another-Project/" title="32. Do Another Project" class="md-nav__link">
-      32. Do Another Project
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-Objects-and-Classes/" class="md-nav__link">
+        26. Objects and Classes
+      </a>
+    </li>
+  
 
     
       
       
       
 
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-Inheritance-and-Polymorphism/" class="md-nav__link">
+        27. Inheritance and Polymorphism
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item">
-    <a href="../33-Branching-Out/" title="33. Branching Out" class="md-nav__link">
-      33. Branching Out
-    </a>
-  </li>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28-Modules/" class="md-nav__link">
+        28. Modules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29-Comments-and-Code-Documentation/" class="md-nav__link">
+        29. Comments and Code Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30-Packages-and-Project-Structure/" class="md-nav__link">
+        30. Packages and Project Structure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../31-Automated-Testing/" class="md-nav__link">
+        31. Automated Testing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../32-Do-Another-Project/" class="md-nav__link">
+        32. Do Another Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33-Branching-Out/" class="md-nav__link">
+        33. Branching Out
+      </a>
+    </li>
+  
 
     
   </ul>
@@ -643,23 +766,23 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
@@ -697,12 +820,9 @@
               </div>
             
           
-          <div class="md-content">
+          <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-                
-                
-                  
                 
                 
                 <!-- Navigation -->
@@ -711,7 +831,6 @@
 <p><a href="../19-Dictionaries/">Previous: 19-Dictionaries</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../21-More-Functions/">Next: 21-More-Functions</a></p>
 <hr />
 <!-- End Navigation -->
-
 <h1 id="20-functions">20 - Functions</h1>
 <p>We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent:</p>
 <ul>
@@ -726,267 +845,141 @@
 <li>Functions</li>
 </ul>
 <p>It is this last feature that we have not yet sufficiently explored. This next exercise will introduce what is perhaps the most powerful of the features we have explored so far.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="c1"># function_intro.py</span>
-
-<span class="c1"># define a global variable</span>
-<span class="n">number_of_sandwiches</span> <span class="o">=</span> <span class="mi">0</span>
-
-<span class="c1"># &#39;def&#39; defines a function</span>
-<span class="k">def</span> <span class="nf">count_sandwiches</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There are </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandchwiches.&quot;</span><span class="p">)</span> 
-
-
-<span class="k">def</span> <span class="nf">make_a_sandwich</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">number_of_sandwiches</span>
-    <span class="n">number_of_sandwiches</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A sandwich has been made.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">eat_a_sandwich</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">number_of_sandwiches</span>
-    <span class="n">number_of_sandwiches</span> <span class="o">-=</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">You ate a sandwich.&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    This is the main function of the program.</span>
-<span class="sd">    It will be the main entry point for all</span>
-<span class="sd">    the functions.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,</span>
-<span class="s2">&quot;count&quot; your sandchwiches or &quot;quit&quot;?</span>
-<span class="s2">--&gt; &quot;&quot;&quot;</span>
-    <span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
-
-    <span class="k">while</span> <span class="n">running</span><span class="p">:</span>
-        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="s2">&quot;count&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-            <span class="n">count_sandwiches</span><span class="p">()</span>
-
-        <span class="k">elif</span> <span class="s2">&quot;make&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-            <span class="n">make_a_sandwich</span><span class="p">()</span>
-
-        <span class="k">elif</span> <span class="s2">&quot;eat&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-            <span class="k">if</span> <span class="n">number_of_sandwiches</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">eat_a_sandwich</span><span class="p">()</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are no sandwiches to eat!&quot;</span><span class="p">)</span>
-
-        <span class="k">elif</span> <span class="s2">&quot;quit&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
-
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That isn&#39;t an option.&quot;</span><span class="p">)</span>
-
-<span class="n">main</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># function_intro.py</span>
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1"># define a global variable</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="n">number_of_sandwiches</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1"># &#39;def&#39; defines a function</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="k">def</span> <span class="nf">count_sandwiches</span><span class="p">():</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There are </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandchwiches.&quot;</span><span class="p">)</span> 
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="k">def</span> <span class="nf">make_a_sandwich</span><span class="p">():</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="k">global</span> <span class="n">number_of_sandwiches</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="n">number_of_sandwiches</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos" data-linenos="14 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">A sandwich has been made.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span><span class="k">def</span> <span class="nf">eat_a_sandwich</span><span class="p">():</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="k">global</span> <span class="n">number_of_sandwiches</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="n">number_of_sandwiches</span> <span class="o">-=</span> <span class="mi">1</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">You ate a sandwich.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="22 "></span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;There are now </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="27 "></span><span class="sd">    This is the main function of the program.</span>
+<span class="linenos" data-linenos="28 "></span><span class="sd">    It will be the main entry point for all</span>
+<span class="linenos" data-linenos="29 "></span><span class="sd">    the functions.</span>
+<span class="linenos" data-linenos="30 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="32 "></span><span class="s2">Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,</span>
+<span class="linenos" data-linenos="33 "></span><span class="s2">&quot;count&quot; your sandchwiches or &quot;quit&quot;?</span>
+<span class="linenos" data-linenos="34 "></span><span class="s2">--&gt; &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="35 "></span>    <span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos" data-linenos="36 "></span>
+<span class="linenos" data-linenos="37 "></span>    <span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+<span class="linenos" data-linenos="38 "></span>        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<span class="linenos" data-linenos="39 "></span>
+<span class="linenos" data-linenos="40 "></span>        <span class="k">if</span> <span class="s2">&quot;count&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="41 "></span>            <span class="n">count_sandwiches</span><span class="p">()</span>
+<span class="linenos" data-linenos="42 "></span>
+<span class="linenos" data-linenos="43 "></span>        <span class="k">elif</span> <span class="s2">&quot;make&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="44 "></span>            <span class="n">make_a_sandwich</span><span class="p">()</span>
+<span class="linenos" data-linenos="45 "></span>
+<span class="linenos" data-linenos="46 "></span>        <span class="k">elif</span> <span class="s2">&quot;eat&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="47 "></span>            <span class="k">if</span> <span class="n">number_of_sandwiches</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos" data-linenos="48 "></span>                <span class="n">eat_a_sandwich</span><span class="p">()</span>
+<span class="linenos" data-linenos="49 "></span>            <span class="k">else</span><span class="p">:</span>
+<span class="linenos" data-linenos="50 "></span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are no sandwiches to eat!&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="51 "></span>
+<span class="linenos" data-linenos="52 "></span>        <span class="k">elif</span> <span class="s2">&quot;quit&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="53 "></span>            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos" data-linenos="54 "></span>
+<span class="linenos" data-linenos="55 "></span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos" data-linenos="56 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That isn&#39;t an option.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="57 "></span>
+<span class="linenos" data-linenos="58 "></span><span class="n">main</span><span class="p">()</span>
 </code></pre></div>
-</td></tr></table>
-
 <p><strong>Here is what should happen</strong></p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code>$ python3 function_intro.py
-
-Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-&quot;count&quot; your sandchwiches or &quot;quit&quot;?
---&gt; make
-
-A sandwich has been made.
-There are now 1 sandwiches.
-
-Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-&quot;count&quot; your sandchwiches or &quot;quit&quot;?
---&gt; count
-
-There are 1 sandchwiches.
-
-Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-&quot;count&quot; your sandchwiches or &quot;quit&quot;?
---&gt; make
-
-A sandwich has been made.
-There are now 2 sandwiches.
-
-Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-&quot;count&quot; your sandchwiches or &quot;quit&quot;?
---&gt; eat
-
-You ate a sandwich.
-There are now 1 sandwiches.
-
-Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-&quot;count&quot; your sandchwiches or &quot;quit&quot;?
---&gt; eat
-
-You ate a sandwich.
-There are now 0 sandwiches.
-
-Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-&quot;count&quot; your sandchwiches or &quot;quit&quot;?
---&gt; eat
-There are no sandwiches to eat!
-
-Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-&quot;count&quot; your sandchwiches or &quot;quit&quot;?
---&gt; quit
-$ 
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python3 function_intro.py
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+<span class="linenos" data-linenos=" 4 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos=" 5 "></span>--&gt; make
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span>A sandwich has been made.
+<span class="linenos" data-linenos=" 8 "></span>There are now 1 sandwiches.
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+<span class="linenos" data-linenos="11 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="12 "></span>--&gt; count
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>There are 1 sandchwiches.
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+<span class="linenos" data-linenos="17 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="18 "></span>--&gt; make
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span>A sandwich has been made.
+<span class="linenos" data-linenos="21 "></span>There are now 2 sandwiches.
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+<span class="linenos" data-linenos="24 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="25 "></span>--&gt; eat
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span>You ate a sandwich.
+<span class="linenos" data-linenos="28 "></span>There are now 1 sandwiches.
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+<span class="linenos" data-linenos="31 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="32 "></span>--&gt; eat
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span>You ate a sandwich.
+<span class="linenos" data-linenos="35 "></span>There are now 0 sandwiches.
+<span class="linenos" data-linenos="36 "></span>
+<span class="linenos" data-linenos="37 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+<span class="linenos" data-linenos="38 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="39 "></span>--&gt; eat
+<span class="linenos" data-linenos="40 "></span>There are no sandwiches to eat!
+<span class="linenos" data-linenos="41 "></span>
+<span class="linenos" data-linenos="42 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
+<span class="linenos" data-linenos="43 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="44 "></span>--&gt; quit
+<span class="linenos" data-linenos="45 "></span>$ 
 </code></pre></div>
-</td></tr></table>
-
 <h3 id="functions">Functions</h3>
 <p>Upon finishing this lesson, you should have made your first functions!</p>
 <p>There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a single call to the function. We will explore the basic aspects in this and the next lessons.</p>
 <p>Functions follow the following syntax:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span> <span class="o">...</span><span class="p">):</span>
-    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
-    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
-    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
-
-<span class="c1"># code continues unindented</span>
-
-<span class="c1"># call the function using</span>
-<span class="n">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">)</span>
-
-<span class="c1"># or if there are no arguments</span>
-<span class="n">function_name</span><span class="p">()</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span> <span class="o">...</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1"># code continues unindented</span>
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span><span class="c1"># call the function using</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="n">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span><span class="p">)</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="c1"># or if there are no arguments</span>
+<span class="linenos" data-linenos="12 "></span><span class="n">function_name</span><span class="p">()</span>
 </code></pre></div>
-</td></tr></table>
-
 <p>We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by <code>&lt;statements ...&gt;</code>). The first example of this was in the <code>count_sandwiches()</code> function. As you saw while executing the script, it simply gets the value of <code>number_of_sandwiches</code> and prints the corresponding text.</p>
 <h3 id="scope">Scope</h3>
 <p>In the second and third functions,  <code>make_a_sandwich()</code> and <code>eat_a_sandwich()</code>, you see the statement <code>global number_of_sandwiches</code>. The word <code>global</code> is a keyword in Python that we have not talked about yet and relates to how Python manages variables and memory.</p>
 <p>Up to this, point we have used only global variables. That is, we have had variables that were visible to every part of the program. Consider the following code:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
-
-<span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
-    <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
-
-<span class="n">change_color</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{</span><span class="n">egg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
+<span class="linenos" data-linenos="5 "></span>
+<span class="linenos" data-linenos="6 "></span><span class="n">change_color</span><span class="p">()</span>
+<span class="linenos" data-linenos="7 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{</span><span class="n">egg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-</td></tr></table>
-
 <p>Based on this code, which will print?</p>
 <ul>
 <li><code>The egg is White</code></li>
@@ -994,24 +987,15 @@ $
 </ul>
 <p>If you try this out yourself, you will find that <code>The egg is Brown</code> is printed even though we changed the color of <code>egg</code> with <code>change_color()</code>. This is because of the scope of the <code>egg</code> variable. From Python's point of view, the <code>egg</code> defined on line 1 and the <code>egg</code> defined on line 4 inside the <code>change_color()</code> function are two different variables. The <code>egg</code> defined in the function only works inside the function and ceases to exist once the function ends.</p>
 <p>If we want the <code>egg</code>  on line 1 and the <code>egg</code> inside the function to be the same variable we need to tell Python to do that. We do this with the <code>global</code> key word as follows:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6
-7
-8</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><code><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
-
-<span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">egg</span>
-    <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
-
-<span class="n">change_color</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{</span><span class="n">egg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="k">def</span> <span class="nf">change_color</span><span class="p">():</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="k">global</span> <span class="n">egg</span>
+<span class="linenos" data-linenos="5 "></span>    <span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;White&quot;</span>
+<span class="linenos" data-linenos="6 "></span>
+<span class="linenos" data-linenos="7 "></span><span class="n">change_color</span><span class="p">()</span>
+<span class="linenos" data-linenos="8 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The egg is </span><span class="si">{</span><span class="n">egg</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-</td></tr></table>
-
 <p>The line <code>global egg</code> tells Python to treat the <code>egg</code> variable in the function as the same <code>egg</code> variable defined in the global scope. There are many possible scopes that could exist in a Python program but for now the function scope and the global scope are the most important.</p>
 <p>A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.</p>
 <p>In the case of <code>function_intro.py</code>, you may have noticed that we did not have to use <code>global</code> in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with <code>count_sandwiches()</code>), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in <code>function_intro.py</code> you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!</p>
@@ -1037,45 +1021,46 @@ $
             </article>
           </div>
         </div>
+        
       </main>
       
         
 <footer class="md-footer">
   
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
         
-          <a href="../19-Dictionaries/" title="19. Dictionaries" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        <a href="../19-Dictionaries/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 19. Dictionaries" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              19. Dictionaries
             </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                19. Dictionaries
-              </div>
-            </div>
-          </a>
+          </div>
+        </a>
+      
+      
         
-        
-          <a href="../21-More-Functions/" title="21. More Functions" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                21. More Functions
-              </div>
+        <a href="../21-More-Functions/" class="md-footer__link md-footer__link--next" aria-label="Next: 21. More Functions" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              21. More Functions
             </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1085,6 +1070,7 @@ $
         <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs
         </a>
+        
       </div>
       
     </div>
@@ -1092,21 +1078,21 @@ $
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
-      <script src="../assets/javascripts/vendor.d710d30a.min.js"></script>
-      <script src="../assets/javascripts/bundle.5f27aba8.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+    
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
       
-      <script>
-        app = initialize({
-          base: "..",
-          features: [],
-          search: Object.assign({
-            worker: "../assets/javascripts/worker/search.27c6a5e6.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/highlight.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
       
     
   </body>

@@ -41,18 +41,22 @@ nav:
 
 
 extra_javascript: 
-    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    - https://polyfill.io/v3/polyfill.min.js?features=es6
+    - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    - javascripts/highlight.min.js
+    - javascripts/config.js
+    
+extra_css:
+    - css/default.min.css
 
 markdown_extensions:
     # pip install python-markdown-math
-    - mdx_math
-    - codehilite:
+    - pymdownx.arithmatex:
+        generic: true
+    - pymdownx.highlight:
         linenums: true
-        #css_class: emacs
-        #noclasses: true
-        #pygments_style: 'default'
-        guess_lang: false
-        #use_pygments: true
+        linenums_style: pymdownx-inline
+    - pymdownx.superfences
 
 # pip install mkdocs-material
 theme:

@@ -10,7 +10,7 @@ By Mark Redd
 
 ---
 
-[Input](https://github.com/flythereddflagg/flythereddflagg.github.io/issues) and [contributions](https://github.com/flythereddflagg/flythereddflagg.github.io/pulls) welcome! I am adding more sections and tutorials continually.
+[Input](https://github.com/flythereddflagg/flythereddflagg.github.io/issues) and [contributions](https://github.com/flythereddflagg/flythereddflagg.github.io/pulls) welcome! I am adding more sections and tutorials continually. I am also uploading videos to YouTube that you can view [here](https://youtube.com/playlist?list=PLlL36nxOkEQ_q_en6xot0EC323oktQ9FU).
 
 Go to the [Table of Contents](./00-Table-of-Contents.md) to start reading!
 

@@ -54,7 +54,7 @@ See the notes for Linux/Unix and Mac OS X Users below if you are not using Windo
  ![Python_download_site](./media/python_download_site.JPG)
 
 - Once downloaded, open the file and you will see the following image. Ensure "Add Python X.X to PATH" is checked and click "Install Now". Select "Next" on the next few screens and allow it to install on your computer. (See image below.)
-  - ***Note:*** *If you want to get the 64-bit version or do any custom installation then I'm going to assume you know what you are doing and this tutorial is not necessary for you. If you don't know what any of that means then just do as it says above and you will be fine.*
+  - ***Note:*** *If you want to do any custom installation (such as choose between 32 and 64 bit versions) then I'm going to assume you know what you are doing and this tutorial is not necessary for you. If you don't know what any of that means then just do as it says above and you will be fine.*
 
 
 ![install_scrn1](./media/install_scrn1.JPG)
