@@ -119,40 +119,40 @@ number = number * 1.0
 
   A string, is fundamentally a series of numbers in boxes in computer memory that are interpreted as a sequence of letters. Those numbers can be used to express thousands of characters. Strings can interact with floats and integers and be combined using operators but do not act the same way floats and integers do as we will see below.
 
-There are many more types than these and we will introduce them later on. These are, however, the most common and fundamental types. If you wish to ever know the type of any variable you can use `print(type(var))`.
+There are many more types than these and we will introduce them later on. These are, however, the most common and fundamental types. If you wish to ever know the type of any variable (`var`) you can use `print(type(var))`.
 
 ### Math Operators
 
-Each set of symbols between x and y is called a binary operator. Below is a brief description of each binary operator and what it does to a integer, float and string.
+Each set of symbols between x and y is called a binary operator (so called because it operates on two things). Below is a brief description of each binary operator and what it does to a integer, float and string.
 
 | Operator                  | Math Example                                      | Integer and float                  | String                                                       |
 | ------------------------- | ------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
-| + (plus)                  | `x + y`\(=x + y\)                                 | Addition                           | Concatenate two strings                                      |
+| + (plus)                  | `x + y`\(=x + y/)                                 | Addition                           | Concatenate two strings                                      |
 | - (dash)                  | `x -  y`  \(=x - y\)                              | Subtraction                        | No meaning                                                   |
 | * (asterisk)              | `x *  y`  \(= xy = x\cdot y\)                     | Multiplication                     | Multiply a string by a positive integer to concatenate string `y` with itself  `x` times |
-| ** (double asterisk)      | `x ** y ` \(=x^y\)                                | The exponent                       | No meaning                                                   |
+| ** (double asterisk)      | `x ** y ` \(=x^y\)                                | exponentiaion                      | No meaning                                                   |
 | / (forward slash)         | `x /  y` \(=x/y=\frac{x}{y}\)                     | Float (i.e. normal) division       | No meaning                                                   |
 | // (double forward slash) | `x // y` \(=\frac{x}{y}\) rounded down to integer | Integer division or floor division | No meaning                                                   |
-| % (percent character)     | `x %  y = y - x * (x // y)`                       | Modulo or Remainder                | "Old style" string formatting                                |
+| % (percent character)     | `x %  y = y - x * (x // y)`                       | Modulo or Remainder                | "Old style" string formatting (Not used in this book. See [here](https://docs.python.org/3/library/string.html#format-examples) for details.) |
 
 Among the above operators, the less commonly known operators are the last 2 and therefore we will give more details about them below:
 
 - **Integer Division** 
 
-  This is like normal division but the resulting number is rounded down to the next lowest integer. The result is always an integer value but not necessarily an integer number (e.g. `2.0` may be returned instead of `2`)
+  This is like normal division but the resulting number is rounded down to the next lowest integer. The result is always an integer value but not necessarily an integer type (e.g. `2.0` may be returned instead of `2`)
 
 - **Modulo**
 
-  This is the same thing as a remainder. For example: how many times does 3 goes into 5 evenly? Answer: 1 but if we subtract the product of 3 and 1 from 5 we get what is left over. 
+  This is the same thing as a remainder. For example: how many times does 3 goes into 5 evenly? Answer: 1 but if we subtract the product of 3 and 1 from 5 we get what is left over or the remainder. 
 
 ### Assignment Operators
 
 The assignment operator `=` will always evaluate whatever is on the right side of it before storing it in memory. Therefore, an operation like `z = z + x` tells the computer to do the following:
 
 - Take the current value of `z` and add it to `x`
-- Once you have that result, store that result in the same place 
+- Once you have that result, assign that result to the same variable so the variable has been modified "in place"
 
-Python has a shorthand for all of these operators to make certain things easier later on. We will explore this in a later lesson. These shorthand versions are also called assignment operators.
+Python has a shorthand for modifying a variable in place for every operator. These shorthand versions are also called assignment operators.
 
 Below is a summary of the assignment operators and their corresponding string operations.
 
@@ -182,15 +182,15 @@ All Python expressions follow the convention of being evaluated left to right an
 Lastly we will talk about some built-in functions (like `print()`) can help us evaluate and convert between math and string operations:
 
 - `int`
-  This function can be used to turn a float or a string into an integer if there is any way to interpret it as such. Therefore expressions like `int("123")`, `int(123.223)` and `int(123)` will all work and return `123` as an integer but `int("a 123")` will throw an error.
+  This function can be used to turn any type of data into an integer if there is any way to interpret it as such. Therefore expressions like `int("123")`, `int(123.223)` and `int(123)` will all work and return `123` as an integer but `int("a 123")` will throw an error.
 
 - `float`
 
-  This will likewise turn any type into a float if possible. (e.g.  `float("123.00")`, `float("123")`, `float(123.00)` and `float(123)` will all work and return `123` as an integer but `float("a 123")` will throw an error.)
+  This will likewise turn any type into a float if possible. (e.g.  `float("123.00")`, `float("123")`, `float(123.00)` and `float(123)` will all work and return `123.0` as a float but `float("a 123")` will throw an error.
 
 - `str`
 
-  This function will turn any type into a string if possible. (e.g. `str(123)` becomes `"123"` and `str(123.00)` becomes `"123.0"` )
+  This function will turn any type into a string if possible. (e.g. `str(123)` becomes `"123"` and `str(123.00)` becomes `"123.0"`.
 
 - `abs`
 
@@ -207,7 +207,7 @@ Lastly we will talk about some built-in functions (like `print()`) can help us e
 
 ## Advanced Mastery
 
-1. Notice in the results of `math_learning.py` that you got some answers that were lots of 0s followed by a single digit. Research "round off error" to understand why this happens.
+1. Notice in the results of `math_learning.py` that you got some answers that were lots of 0s followed by a single digit. Research "round-off error" to understand why this happens.
 
 <!-- Navigation -->
 

@@ -70,11 +70,11 @@ You can see that each name that is assigned a value can be used multiple times a
 
 I want to begin here by saying a few things about computers that hopefully will help you understand them better.
 
-Computers, including those that that run everything from your desktop to your phone to your car, basically only do 3 things:
+Computers, including those that run everything from your desktop to your phone to your car, basically only do 3 things:
 
 1. Store numbers as 1s and 0s in different places
 1. Move those 1s and 0s between the different places
-1. Combine those 1s and 0s mathematically (e.g. addition and subtraction)
+1. Compare and combine those 1s and 0s mathematically (e.g. addition and subtraction)
 
 Of course, computers can do these things at blinding speeds and can be endlessly combined to do all sorts of complex things but these three basics make up all of computing. The programs we have been writing so far do just those things but the details of how this is done is hidden from you but don't be fooled! Nothing more than those three things is happening at any time.
 
@@ -84,13 +84,13 @@ One of the most important things you can learn is how memory works on a computer
 
 For now, you need to understand that there are three basic parts to the computer that we interact with constantly. They are:
 
-1. The **Central Processing Unit** (CPU): every instruction you write gets executed there.
-2. The **Random Access Memory** (RAM, or volatile memory): relevant program information is stored here as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.
-3. The **persistent memory**: like the RAM, but the information you write there stays there until you actively erase it (depending on your hardware). Your program get's stored here and is loaded into ram to actually run. The persistent memory is generally contained on a drive of some sort (e.g a hard disk drive (HDD) or a solid-state drive (SSD)). We will be doing more with the persistent memory in a later section.
+1. The **Central Processing Unit** (CPU): every instruction in the code gets executed here.
+2. The **Random Access Memory** (RAM, or volatile memory): relevant program information is stored here as your program runs. As soon as your program stops running, all the information you have in RAM is erased.
+3. The **persistent memory**: like the RAM, but the information you write here stays until you actively erase it (depending on your hardware). Your program gets stored here and is loaded into RAM to actually run. The persistent memory is generally contained on a drive of some sort (e.g a hard disk drive (HDD) or a solid-state drive (SSD)). We will be doing more with the persistent memory in a later section.
 
 ### Using RAM
 
-The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. Boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like
+The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like
 
  `x = 23`
 
@@ -127,7 +127,7 @@ Run the following commands:
 
 `type` , `id`  and `exit` are other built-in functions like `print` that provide some useful information about `x`. 
 
-`type` spits out the type of variable between its parentheses (in this case, an integer).  `id` spits out the "address" of the variable in the RAM (depending on the Python implementation you are using, this may or may not be the literal address in memory). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and `exit()` simply exits the program.
+`type` spits out the type of variable between its parentheses (in this case, an integer or `int` as given in the interpreter).  `id` spits out the "address" of the variable in the RAM (***NOTE:** Depending on the Python implementation you are using, this may or may not be the literal address in memory but is always unique to the chunk of memory being used, hence its `id` or identification*). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and `exit()` simply exits the program.
 
 ### Naming Variables
 
@@ -160,7 +160,7 @@ Within the limits of these rules, you can call your variables any name you want 
 
   There are two common ways to name a variable. For an example we will consider a variable with a name that can be read as "black knight". The first way is lower case with underscores for spaces: `black_knight`. The second is often called "camel case": `BlackKnight`. Obviously you can use all caps (`BLACKKNIGHT`), no spaces (`blackknight`), some abbreviation (`blk_knt`)  or any combination of these. However, the lower case with underscores and camel case are the most common for general use variables. 
 
-  When writing Python especially as you are learning, stick to the lower case with underscores. For what we will be doing this will help your code be more readable and clear to you and anyone else reading it. 
+  When writing Python especially as you are learning, stick to the lower case with underscores. For what we will be doing, this will help you avoid annoying errors and make your code more readable and clear to you and anyone else reading it.
 
   Understand however, that this is not a hard and fast rule and should be broken if there is a good reason to do so. We will break this rule later on as we explore more features.
 
@@ -212,9 +212,9 @@ Within the limits of these rules, you can call your variables any name you want 
 
 - **Help your reader understand the code without comments**
 
-  Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. Comments are important and I do not want to diminish their importance but writing easily understandable code is better than commenting. Up to now what your code does should be obvious to anyone that can read Python without any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.
+  Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. I do not want to diminish the importance of comments in code but writing easily understandable code is better than commenting. Up to now, what your code does should be obvious to anyone that can read Python without needing any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.
 
-Any good programmer knows that **the majority of the time we spend coding is actually spent reading and not writing**. Python makes it easy for you to write readable code and the first step is write good variable names.
+Any good programmer knows that **the majority of the time spent coding is actually spent reading and not writing**. Python makes it easy for you to write readable code and the first step is write good variable names.
 
 ## Hone Your Skills
 
@@ -230,8 +230,6 @@ Any good programmer knows that **the majority of the time we spend coding is act
   - How are characters represented as 1s and 0s?
   - How do computers do addition and subtraction using binary math?
   - What is 2's compliment? Why is it used?
-
-
 
 <!-- Navigation -->
 

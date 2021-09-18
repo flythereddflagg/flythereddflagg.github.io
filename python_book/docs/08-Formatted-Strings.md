@@ -27,7 +27,7 @@ print("Prices for cheese: "
 
 # Change the formatting order with indices in the braces
 print("Would you like "
-"{2}, {0} or {1}?".format("Brie", "Gouda", "Cheddar"))
+    "{2}, {0} or {1}?".format("Brie", "Gouda", "Cheddar"))
 
 # line up numbers and decimal places with format codes
 print("""
@@ -61,7 +61,7 @@ We must understand a few things before understanding this code.
 
 - Print statements can be called on multiple strings or values separated by commas. As seen in line 4 that reads `print("How much will this cost?", 23.00, "dollars")` when we put a list of comma-separated strings in a print function, the print function prints them out with a space instead of a new line between them.
 
-- We have introduced a powerful feature in the `.format` statement. The `.format`  statement refers to special kind of code called a 'method'. A method is like a function, such as the `print` function, but in this case it is tied to whatever is on the left side of the dot (`.`). In this case, it only acts on the string to which it is tied. We first see this in line 7 which reads:
+- We have introduced a powerful feature in the `.format` statement. The `.format`  statement refers to special kind of code called a 'method'. A method is like a function, such as the `print` function. But in this case, it is tied to whatever is on the left side of the dot (`.`). In this case, it only acts on the string to which it is tied. We first see this in line 7 which reads:
 
   `print("How much will this cost? {} dollars.".format(23.0))`
 
@@ -83,9 +83,11 @@ Let's look at each example of a `.format`  statement one by one:
 
   As above you are putting indexes in the format braces. But what we see here is that you can put them in any order you want and even repeat them if you wish. (See "Hone your Skills" for an example of repetition.) 
 
-  ***Note***: *In Python, counting always begins with 0.  I.E. `0, 1, 2, ...` instead of `1, 2, 3, ...`. We will explain more about this when we discuss lists and iterables.) This means that when you write the following `"{1}".format("First", "Second")` you are commanding `.format("First", "Second")` to replace that text with `"Second"`. If the string were instead `"{0}"`the text would be replace by `"First"`*
+  ***Note***: *In Python, counting always begins with 0.  (I.e. `0, 1, 2, ...` instead of `1, 2, 3, ...`) We will explain more about this when we discuss lists and iterables.) This means that when you write the following `"{1}".format("First", "Second")` you are commanding `.format("First", "Second")` to replace that text with `"Second"`. If the string were instead `"{0}"`the text would be replaced by `"First"`*
 
-- ```python
+- The third example:
+  
+  ```python
   print("""
   Prices for cheese:
   ${:5.2f}/ 1 oz
@@ -93,7 +95,7 @@ Let's look at each example of a `.format`  statement one by one:
   ${:5.2f}/10 oz
   """.format(1.23232, 5.3593, 9.84655))
   ```
-
+  
   Here we see that we are using format commands to organize data. The part that says `{:5.2f}` means to allow at least `5` spaces for the number to exist (fill any unused space with whitespace), round the number to `2` decimal places, and treat the number as a floating point number `f`.  We have omitted the index of the values for simplicity but they would be written on the left side of the colon (e.g. `{0:5.2f}`).
 
 There are other formatting commands other than this but this is a good start to using formatting that will come up again and again. To review:

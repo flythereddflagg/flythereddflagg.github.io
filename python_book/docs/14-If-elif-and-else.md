@@ -148,7 +148,7 @@ We will explain the syntax step by step. When Python comes to an `if` statement,
 - If `Expression1` evaluates to `True`:
   -  Everything in the indented block of code under `if` will be executed. 
   - Once the block has ended (by un-indenting), the rest of the `elif` and `else` blocks of code are skipped. 
-- If `Expression1` evaluates to `False`, `Expression2` is checked for its truth value 
+- If `Expression1` evaluates to `False`, the block of code uner `Expression1` is skipped and `Expression2` is checked for its truth value 
 - If`Expression2` evaluates to `True` :
   -  Everything in the indented block of code under `elif` will be executed. 
   - Once the block has ended (by un-indenting), the rest of the `elif` and `else` blocks of code are skipped.
@@ -162,7 +162,7 @@ Python's conditional syntax allows as many `elif` statements as the programmer w
 
 We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make code more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each `if`, `elif` or `else` statement, the code is executed as normal. An indented block is just a way of Python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to `True`. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:
 
-- *Indented blocks must start with a colon `:`.* A colon tells Python in effect "This is the beginning of a new indented block"
+- *Indented blocks must start with a colon `:`.* A colon tells Python in effect, "This is the beginning of a new indented block"
 - *Indent 4 spaces.* Four spaces is an accepted convention although Python will technically allow whatever spacing you want as long as you are consistent. Any code you see written will follow the 4 space convention and that is the standard so it is best if you follow suit. If you mix spacings or are inconsistent with this Python will throw a syntax error.
 - *End the block by un-indenting.* The only way Python knows that the indented block has ended is when an un-indented line of code is observed. 
 - *Nested blocks are allowed.* If you want to have an indented block inside an indented block that is fine. the same rules apply in all cases.

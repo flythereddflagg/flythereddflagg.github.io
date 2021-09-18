@@ -13,9 +13,9 @@ For this section's exercises there will be a short example that you will work in
 
 ### True and False
 
-One of the most important concepts in programming is that of Boolean logic. On a fundamental level the computer only knows 2 things: 1 and 0, Yes and No, On and Off, True and False. Everything else in a computer must be constructed from these two things. Within this framework the computer can do many things such as make decisions. However to make  a decision, the computer must be able to evaluate the truth value of everything. Therefore everything can be evaluated as True or False using the built-in `bool` function.
+One of the most important concepts in programming is that of Boolean logic. On a fundamental level, your computer only knows 2 things: 1 and 0, Yes and No, On and Off, True and False. Everything else in a computer must be constructed from these two things. Within this framework the computer can do many things such as make decisions. However to make a decision, the computer must be able to evaluate a "truth value" of everything. Therefore, everything can be evaluated as True or False using the built-in `bool` function.
 
-This gives rise to a new data type, the **Boolean data type**. The Boolean data type can only have two values namely `True` or `False`. This makes it among the simplest and most useful of data types.
+This gives rise to a new data type, the **Boolean data type**. The Boolean data type can only have two values, namely `True` or `False`. This makes it among the simplest and most useful of data types.
 
 #### Try this out in the interpreter
 
