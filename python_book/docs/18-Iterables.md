@@ -117,6 +117,7 @@ print('"kale" in example_list:',
       "kale" in example_list)
 print('"potatoes" in example_tuple:',
       "potatoes" in example_tuple)
+
 ```
 
 **Here is what should happen**
@@ -199,7 +200,8 @@ The point is, lists can do many things and can be the structure for many types o
 matrix_a = [
     [1,2,3],
     [4,5,6],
-    [7,8,9]]
+    [7,8,9]
+]
 ```
 
 which is just a list of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.
@@ -208,13 +210,13 @@ which is just a list of lists of numbers. They have all sorts of methods tied to
 
 Tuples are interesting beasts in Python. Without getting into gory details, tuples are like lists that cannot be changed once they are created and are fixed in memory. You may think of them as a "read-only" list. You may rightly ask why they even exist if all they appear to be is a less-useful list. The advantage of tuples is that, because they cannot be changed, the computer can use them more efficiently. However, they do have some uses that can be of interest. (See Hone Your Skills for more on this.) 
 
-### Subscripts and Slices
+### Subscripts, Slices and Concatenation
 
 A useful feature all sequenced iterators have is that of subscripting and slicing.  It may not be clear what this means however. The following two operations allow us to conveniently work with sequenced iterables. 
 
 - **Subscript** 
 
-  Suppose we have a list of strings like `shopping_list = ["cheese" "milk", "sugar", "eggs"]` and we just want to get `"sugar"` out of the list. We can do that through subscripting. The "subscript" or "get item" operator is the pair of brackets after the name of the iterator (in this case, `shopping_list[]`). The number that goes between the brackets is the index of the item that is being retrieved. Therefore, if we want to get `"sugar"` out of the list we can store it in a new variable like this: `sugar_item = shopping_list[2]`. (Remember that Python indices start with 0 so the third item in the list has an index of 2.) 
+  Suppose we have a list of strings like `shopping_list = ["cheese" "milk", "sugar", "eggs"]` and we just want to get `"sugar"` out of the list. We can do that through subscripting. The "subscript" or "get item" operator is the pair of brackets after the name of the iterator (in this case, `shopping_list[]`). The number that goes between the brackets is the index of the item that is being retrieved. Therefore, if we want to get `"sugar"` out of the list we can store it in a new variable like this: `sugar_item = shopping_list[2]`. (Remember that Python indices start with 0 so the third item in the list has an index of 2.)
 
 - **Slice**
 
@@ -225,13 +227,15 @@ A useful feature all sequenced iterators have is that of subscripting and slicin
   where `first_index` is the first included element in the slice and `second_element` is the first element not included in the slice. Therefore if we write `shopping_list[1:3]` we get `['sugar', 'eggs']` back. This is because we are including element `1` and `2` but not `3`. Also, `shopping_list[2:3]` is not the same as `shopping_list[2]` but instead, returns the same type of iterable with a length of 1 containing `shopping_list[2]`. 
 
   If the `first_index` is omitted, everything from the beginning to the `second_index` is extracted. Likewise, if `second_index` is omitted, everything from `first_index` to the end is extracted.
+  
+- Like strings, all sequenced iterators may be concatenated with the `+` operator and multiplied by integers. (See the section on Math and Data.)
 
 ### For-loops, Length and the `in` operator
 
 Each of the properties that we used in `iterables.py`  that are common to all iterables are both useful and easy to understand given the context we now have.
 
 - **For-loops:** Any iterable used in the definition of a for-loop is defined (as in the lesson on loops) as `for i in iterable:` where `i` can be called the loop variable. In the case of any sequenced iterable the loop variable takes on the next value in the sequence for each loop.
-- **`len()`:** This is a built-in function that can find the length of any iterable if it is at all possible. The function has many uses including use for referencing by index instead of element ( i.e. using `range(len(iterable))` instead of just `iterable`.)
+- **`len()`:** This is a built-in function that can find the length of any iterable if it is at all possible. The function has many uses including use for referencing by index instead of element ( i.e. using `range(len(iterable))` instead of just `iterable` in a for-loop.)
 - **The `in` operator** will return true if the operand on the left exists as one of the elements on the right or if a series of elements exist on the right. And the logic reads just like in English.
 
 ## Hone Your Skills

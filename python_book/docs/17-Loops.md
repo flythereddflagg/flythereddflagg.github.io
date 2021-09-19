@@ -8,7 +8,7 @@
 <!-- End Navigation -->
 # 17 - Loops
 
-We are about to introduce another fundamental aspect of programming that will be used over and over again in programming. We will, as always, introduce the subject in an example script.
+We are about to introduce another fundamental aspect of programming that will be used over and over again in programming (no pun intended). We will, as always, introduce the subject in an example script.
 
 ```python
 # loops.py
@@ -23,7 +23,8 @@ print(4)
 print(5)
 
 # there is a better way of doing this
-print("")
+# put an empty line between each example
+print("") 
 
 n = 1
 while n <= 5:
@@ -95,7 +96,9 @@ This can be read as "While `truth_expression` evaluates to `True`, `do_things` o
 
 ### for-loops
 
-The built-in function `range` produces a range object which is a type of *iterable*. An iterable is something in code that produces a sequence that can give each value one at a time. It can do this through a number of methods that we will not cover here. In the case of `range` however, it produces a sequence of integer numbers starting with 0. (Remember: Python counting *always* starts with 0.) The sequence increments by integers up to but not including the number passed as an argument. (Note: `range` can be modified to do other things but we will get to that later.) In our case, that means that `range(5)` produced the sequence: `0, 1, 2, 3, 4`. This is a common way to say that we want to do something 5 times (as we see the sequence is 5 elements long) or to count up to from 0 to 4. The `range` function is a common way to do a for-loop but any iterable will do. We will learn more about ranges in the next lesson.
+The built-in function `range` produces a range object which produces a sequence of integer numbers starting with 0. (Remember: Python counting *always* starts with 0.) The sequence increments by integers up to but not including the number passed as an argument. (Note: `range` can be modified to do other things but we will get to that later.) In our case, that means that `range(5)` produced the sequence: `0, 1, 2, 3, 4`. This is a common way to say that we want to do something 5 times (as we see the sequence is 5 elements long) or to count up to from 0 to 4. 
+
+A range object is a type of iterable object. In Python, an iterable object is one that can produce a sequence of objects. (We will cover iterables more deeply later on.) A for-loop steps through the sequence the given iterable produces and assigns each element to a variable. 
 
 For-loops follow the following syntax:
 
@@ -107,7 +110,7 @@ for i in iterable:
 # end of the indented block
 ```
 
-A for-loop will only repeat as many times as the iterable fed to it allows. (Again in `loops.py`, this was 5 times.) It also has the feature that, before each time that the loop runs, it defines a variable (which, in the example above, is `i` but you can name it whatever you want) based on the current element of the iterable. Therefore, `i` gets redefined for every iteration of the loop based on the next element of `iterable`. 
+Where `i` is the temporary variable. A for-loop will only repeat as many times as the iterable fed to it allows. (Again in `loops.py`, this was 5 times.) It also has the feature that, before each time that the loop runs, it defines a variable (which, in the example above, is `i` but you can name it whatever you want) based on the current element of the iterable. Therefore, `i` gets redefined for every iteration of the loop based on the next element of `iterable`. 
 
 Other than that, the statements executed in the indented block are done normally and an un-indentation indicates that the loop block is done and the loop can continue. Once the `iterable` has run out of values to give to `i`, the loop terminates and code continues normally.
 

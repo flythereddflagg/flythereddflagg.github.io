@@ -92,7 +92,7 @@ Following this logic, the argument replaces the parameter while the function cod
 
 ### Default Values for Parameters
 
-We saw in line 29 the following line of code: `def print_a_number(number=1):`. This function definition supplied a default value for the `number` parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value.
+We saw in line 29 the following line of code: `def print_a_number(number=1):`. This function definition supplied a default value for the `number` parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value. You may mix and match required and optional parameters like this but you must put the optional parameters with default values **after** the required "positional" parameters.
 
 ### Returns and the None type
 
@@ -125,7 +125,7 @@ Return statements are crucial for effective functions and it is a good idea to e
 
 ### Recursion
 
-Recursion is the idea that a function or some process can reference itself. A great explanation of recursion as a concept can be found on [Wikipedia](https://en.wikipedia.org/wiki/Recursion). We saw this with the factorial example. In mathematics, a factorial is a number being multiplied by all the positive integers below it and is symbolized by an exclamtion mark. So the factorial of 4 = 4! = 4 * 3 * 2 * 1. In this case we could do a loop to accomplish this but to demonstrate this principle we can do it with recursion. We set up a base case to end the recursion:
+Recursion is the idea that a function or some process can reference itself. A great explanation of recursion as a concept can be found on [Wikipedia](https://en.wikipedia.org/wiki/Recursion). We saw this with the factorial example. In mathematics, a factorial is a number being multiplied by all the positive integers below it and is symbolized by an exclamation mark. So the factorial of 4 = 4! = 4 * 3 * 2 * 1. In this case we could do a loop to accomplish this but to demonstrate this principle we can do it with recursion. We set up a base case to end the recursion:
 
 ```python
     if number <= 0:

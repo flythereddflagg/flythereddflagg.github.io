@@ -17,7 +17,7 @@ In the last lesson we learned about sequenced iterables. In this lesson we will 
 # curly braces or just "braces" define a dictionary
 player_data = {"Name":"Jack", "Team":"Wildcats", "Wins":3}
 
-#  we subscript with a keyword instead of an index,
+# we subscript with a keyword instead of an index,
 print(player_data["Name"])
 print(player_data["Team"])
 print(player_data["Wins"],"\n")
@@ -79,11 +79,9 @@ $
 
 ### Dictionaries
 
-A dictionary is a mapping type, that is, a data type that takes one kind of object and connects it to another. In other programming languages this concept of a mapping type is called a "hash map" or a "hash table". Dictionaries are nothing short of magic in programming for their efficiency and usefulness. A dictionary can be like a mini database or a convenient way to describe almost any object.
+A dictionary is an iterable and also a mapping type, that is, a data type that takes one kind of object and connects it to another. In other programming languages this concept of a mapping type is called a "hash map" or a "hash table". Dictionaries are nothing short of magic in programming for their efficiency and usefulness. A dictionary can be like a mini database or a convenient way to describe almost any object.
 
 As we saw above, dictionaries can be thought of as a list of unique keys that, when passed in the subscript operator, return a corresponding value. These key-value pairs allow a data structure that acts like a literal dictionary. This short lesson is only do introduce dictionaries but there are many things you can do with them.
-
-<!-- Continue Here ADD MORE HERE!-->
 
 ## Hone Your Skills
 

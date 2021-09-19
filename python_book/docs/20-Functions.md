@@ -138,7 +138,7 @@ $
 
 Upon finishing this lesson, you should have made your first functions!
 
-There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a single call to the function. We will explore the basic aspects in this and the next lessons.
+There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a line of code to call the function. We will explore the basic aspects in this and the next lessons.
 
 Functions follow the following syntax:
 
@@ -203,12 +203,12 @@ In the case of `function_intro.py`, you may have noticed that we did not have to
 
 ### Main-loops
 
-*To be added*
+The code under the `main` function is what is known as a "main-loop" or a "main-program loop". It uses the model of REPL (Read, Evaluate, Print, then Loop) to execute as many commands as the user needs (the Python interactive prompt uses this same model). Notice, the use of the while-loop and the structure of the function. Understand this part of the program as it will become more important in the following sections.
 
 ## Hone Your Skills
 
 - Make a function that calculates the [factorial of a number](https://en.wikipedia.org/wiki/Factorial) (use a for-loop in your function) using a global variable from the user as your input.
-
+- Experiment with the main-loop or REPL function. How could you use this model to do something useful?
 
 <!-- Navigation -->
 

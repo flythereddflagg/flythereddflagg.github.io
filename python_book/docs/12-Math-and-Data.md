@@ -179,7 +179,7 @@ All Python expressions follow the convention of being evaluated left to right an
 
 ### Built-in Math Functions
 
-Lastly we will talk about some built-in functions (like `print()`) can help us evaluate and convert between math and string operations:
+Lastly we will talk about some built-in functions (like `print()`) can help us evaluate and convert between math and string types:
 
 - `int`
   This function can be used to turn any type of data into an integer if there is any way to interpret it as such. Therefore expressions like `int("123")`, `int(123.223)` and `int(123)` will all work and return `123` as an integer but `int("a 123")` will throw an error.
