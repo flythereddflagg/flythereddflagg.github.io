@@ -527,8 +527,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subscripts-and-slices" class="md-nav__link">
-    Subscripts and Slices
+  <a href="#subscripts-slices-and-concatenation" class="md-nav__link">
+    Subscripts, Slices and Concatenation
   </a>
   
 </li>
@@ -834,8 +834,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#subscripts-and-slices" class="md-nav__link">
-    Subscripts and Slices
+  <a href="#subscripts-slices-and-concatenation" class="md-nav__link">
+    Subscripts, Slices and Concatenation
   </a>
   
 </li>
@@ -1044,17 +1044,18 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">matrix_a</span> <span class="o">=</span> <span class="p">[</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">],</span>
 <span class="linenos" data-linenos="3 "></span>    <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">],</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]]</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="p">[</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="linenos" data-linenos="5 "></span><span class="p">]</span>
 </code></pre></div>
 <p>which is just a list of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.</p>
 <h3 id="tuple">Tuple</h3>
 <p>Tuples are interesting beasts in Python. Without getting into gory details, tuples are like lists that cannot be changed once they are created and are fixed in memory. You may think of them as a "read-only" list. You may rightly ask why they even exist if all they appear to be is a less-useful list. The advantage of tuples is that, because they cannot be changed, the computer can use them more efficiently. However, they do have some uses that can be of interest. (See Hone Your Skills for more on this.) </p>
-<h3 id="subscripts-and-slices">Subscripts and Slices</h3>
+<h3 id="subscripts-slices-and-concatenation">Subscripts, Slices and Concatenation</h3>
 <p>A useful feature all sequenced iterators have is that of subscripting and slicing.  It may not be clear what this means however. The following two operations allow us to conveniently work with sequenced iterables. </p>
 <ul>
 <li><strong>Subscript</strong> </li>
 </ul>
-<p>Suppose we have a list of strings like <code>shopping_list = ["cheese" "milk", "sugar", "eggs"]</code> and we just want to get <code>"sugar"</code> out of the list. We can do that through subscripting. The "subscript" or "get item" operator is the pair of brackets after the name of the iterator (in this case, <code>shopping_list[]</code>). The number that goes between the brackets is the index of the item that is being retrieved. Therefore, if we want to get <code>"sugar"</code> out of the list we can store it in a new variable like this: <code>sugar_item = shopping_list[2]</code>. (Remember that Python indices start with 0 so the third item in the list has an index of 2.) </p>
+<p>Suppose we have a list of strings like <code>shopping_list = ["cheese" "milk", "sugar", "eggs"]</code> and we just want to get <code>"sugar"</code> out of the list. We can do that through subscripting. The "subscript" or "get item" operator is the pair of brackets after the name of the iterator (in this case, <code>shopping_list[]</code>). The number that goes between the brackets is the index of the item that is being retrieved. Therefore, if we want to get <code>"sugar"</code> out of the list we can store it in a new variable like this: <code>sugar_item = shopping_list[2]</code>. (Remember that Python indices start with 0 so the third item in the list has an index of 2.)</p>
 <ul>
 <li><strong>Slice</strong></li>
 </ul>
@@ -1062,11 +1063,14 @@
 <p><code>list_name[first_index : second_index]</code> </p>
 <p>where <code>first_index</code> is the first included element in the slice and <code>second_element</code> is the first element not included in the slice. Therefore if we write <code>shopping_list[1:3]</code> we get <code>['sugar', 'eggs']</code> back. This is because we are including element <code>1</code> and <code>2</code> but not <code>3</code>. Also, <code>shopping_list[2:3]</code> is not the same as <code>shopping_list[2]</code> but instead, returns the same type of iterable with a length of 1 containing <code>shopping_list[2]</code>. </p>
 <p>If the <code>first_index</code> is omitted, everything from the beginning to the <code>second_index</code> is extracted. Likewise, if <code>second_index</code> is omitted, everything from <code>first_index</code> to the end is extracted.</p>
+<ul>
+<li>Like strings, all sequenced iterators may be concatenated with the <code>+</code> operator and multiplied by integers. (See the section on Math and Data.)</li>
+</ul>
 <h3 id="for-loops-length-and-the-in-operator">For-loops, Length and the <code>in</code> operator</h3>
 <p>Each of the properties that we used in <code>iterables.py</code>  that are common to all iterables are both useful and easy to understand given the context we now have.</p>
 <ul>
 <li><strong>For-loops:</strong> Any iterable used in the definition of a for-loop is defined (as in the lesson on loops) as <code>for i in iterable:</code> where <code>i</code> can be called the loop variable. In the case of any sequenced iterable the loop variable takes on the next value in the sequence for each loop.</li>
-<li><strong><code>len()</code>:</strong> This is a built-in function that can find the length of any iterable if it is at all possible. The function has many uses including use for referencing by index instead of element ( i.e. using <code>range(len(iterable))</code> instead of just <code>iterable</code>.)</li>
+<li><strong><code>len()</code>:</strong> This is a built-in function that can find the length of any iterable if it is at all possible. The function has many uses including use for referencing by index instead of element ( i.e. using <code>range(len(iterable))</code> instead of just <code>iterable</code> in a for-loop.)</li>
 <li><strong>The <code>in</code> operator</strong> will return true if the operand on the left exists as one of the elements on the right or if a series of elements exist on the right. And the logic reads just like in English.</li>
 </ul>
 <h2 id="hone-your-skills">Hone Your Skills</h2>

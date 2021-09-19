@@ -849,7 +849,7 @@
 <span class="linenos" data-linenos="13 "></span>
 <span class="linenos" data-linenos="14 "></span><span class="c1"># Change the formatting order with indices in the braces</span>
 <span class="linenos" data-linenos="15 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Would you like &quot;</span>
-<span class="linenos" data-linenos="16 "></span><span class="s2">&quot;</span><span class="si">{2}</span><span class="s2">, </span><span class="si">{0}</span><span class="s2"> or </span><span class="si">{1}</span><span class="s2">?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span><span class="p">))</span>
+<span class="linenos" data-linenos="16 "></span>    <span class="s2">&quot;</span><span class="si">{2}</span><span class="s2">, </span><span class="si">{0}</span><span class="s2"> or </span><span class="si">{1}</span><span class="s2">?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span><span class="p">))</span>
 <span class="linenos" data-linenos="17 "></span>
 <span class="linenos" data-linenos="18 "></span><span class="c1"># line up numbers and decimal places with format codes</span>
 <span class="linenos" data-linenos="19 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
@@ -880,7 +880,7 @@
 <p>Print statements can be called on multiple strings or values separated by commas. As seen in line 4 that reads <code>print("How much will this cost?", 23.00, "dollars")</code> when we put a list of comma-separated strings in a print function, the print function prints them out with a space instead of a new line between them.</p>
 </li>
 <li>
-<p>We have introduced a powerful feature in the <code>.format</code> statement. The <code>.format</code>  statement refers to special kind of code called a 'method'. A method is like a function, such as the <code>print</code> function, but in this case it is tied to whatever is on the left side of the dot (<code>.</code>). In this case, it only acts on the string to which it is tied. We first see this in line 7 which reads:</p>
+<p>We have introduced a powerful feature in the <code>.format</code> statement. The <code>.format</code>  statement refers to special kind of code called a 'method'. A method is like a function, such as the <code>print</code> function. But in this case, it is tied to whatever is on the left side of the dot (<code>.</code>). In this case, it only acts on the string to which it is tied. We first see this in line 7 which reads:</p>
 </li>
 </ul>
 <p><code>print("How much will this cost? {} dollars.".format(23.0))</code></p>
@@ -904,16 +904,17 @@
 <li><code>print("Would you like {2}, {0} or {1}?".format("Brie", "Gouda", "Cheddar"))</code></li>
 </ul>
 <p>As above you are putting indexes in the format braces. But what we see here is that you can put them in any order you want and even repeat them if you wish. (See "Hone your Skills" for an example of repetition.) </p>
-<p><strong><em>Note</em></strong>: <em>In Python, counting always begins with 0.  I.E. <code>0, 1, 2, ...</code> instead of <code>1, 2, 3, ...</code>. We will explain more about this when we discuss lists and iterables.) This means that when you write the following <code>"{1}".format("First", "Second")</code> you are commanding <code>.format("First", "Second")</code> to replace that text with <code>"Second"</code>. If the string were instead <code>"{0}"</code>the text would be replace by <code>"First"</code></em></p>
+<p><strong><em>Note</em></strong>: <em>In Python, counting always begins with 0.  (I.e. <code>0, 1, 2, ...</code> instead of <code>1, 2, 3, ...</code>) We will explain more about this when we discuss lists and iterables.) This means that when you write the following <code>"{1}".format("First", "Second")</code> you are commanding <code>.format("First", "Second")</code> to replace that text with <code>"Second"</code>. If the string were instead <code>"{0}"</code>the text would be replaced by <code>"First"</code></em></p>
 <ul>
-<li><code>python
-  print("""
-  Prices for cheese:
-  ${:5.2f}/ 1 oz
-  ${:5.2f}/ 5 oz
-  ${:5.2f}/10 oz
-  """.format(1.23232, 5.3593, 9.84655))</code></li>
+<li>The third example:</li>
 </ul>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="2 "></span><span class="s2">Prices for cheese:</span>
+<span class="linenos" data-linenos="3 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 1 oz</span>
+<span class="linenos" data-linenos="4 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 5 oz</span>
+<span class="linenos" data-linenos="5 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/10 oz</span>
+<span class="linenos" data-linenos="6 "></span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23232</span><span class="p">,</span> <span class="mf">5.3593</span><span class="p">,</span> <span class="mf">9.84655</span><span class="p">))</span>
+</code></pre></div>
 <p>Here we see that we are using format commands to organize data. The part that says <code>{:5.2f}</code> means to allow at least <code>5</code> spaces for the number to exist (fill any unused space with whitespace), round the number to <code>2</code> decimal places, and treat the number as a floating point number <code>f</code>.  We have omitted the index of the values for simplicity but they would be written on the left side of the colon (e.g. <code>{0:5.2f}</code>).</p>
 <p>There are other formatting commands other than this but this is a good start to using formatting that will come up again and again. To review:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="c1"># formatting cheat sheet</span>

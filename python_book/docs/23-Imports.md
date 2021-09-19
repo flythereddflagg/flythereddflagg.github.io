@@ -155,7 +155,7 @@ For the line that reads `import datetime as dt`, the `as` part of the statement 
 
 ### Standard Libraries
 
-The five libraries we used in `import_practice.py` are part of the [Python Standard Library](https://docs.python.org/3/library/) and can be considered "built-in" to Python. There are well over 200 different modules in Standard Library and to go over each one would be and not very useful. Therefore, this exercise is designed to introduce a few common libraries and get you used to the syntax of importing and using them. But to be thorough, here some brief explanations of each of the libraries we used in this exercise:
+The five libraries we used in `import_practice.py` are part of the [Python Standard Library](https://docs.python.org/3/library/) and can be considered "built-in" to Python. There are well over 200 different modules in Standard Library and to go over each one would be tedious and not very useful. Therefore, this exercise is designed to introduce a few common libraries and get you used to the syntax of importing and using them. But to be thorough, here some brief explanations of each of the libraries we used in this exercise:
 
 - `os`
 
@@ -211,7 +211,7 @@ Skim the basic commands of pip [here](https://pip.pypa.io/en/stable/quickstart/)
 ## Hone Your Skills
 
 - The [Python Standard Library](https://docs.python.org/3/library/) is a good reference to get an idea of all the things that Python can do without even including third-party libraries and packages. Read the general statement at the beginning of the linked page and browse the index looking for 2 or 3 things that interest you. Begin to experiment with them and see if you can pick up how they work.
-- There are hundereds of libraries in the [Python Package Index](https://pypi.org/). Follow that link and look around for packages that look interesting and try installing them and using them. For practice, can you find, install and use a package that opens a game of [tetris](https://en.wikipedia.org/wiki/Tetris) in your terminal?
+- There are hundreds of libraries in the [Python Package Index](https://pypi.org/). Follow that link and look around for packages that look interesting and try installing them and using them. For practice, can you find, install and use a package that opens a game of [tetris](https://en.wikipedia.org/wiki/Tetris) in your terminal?
 - Consider the following function definition from  `import_practice.py`:
 
 ```python

@@ -10,7 +10,7 @@
 
 It is now time to put your new found skills to use! You have learned enough in Python to find out how to solve many of your own problems. Now your assignment is to integrate everything you have learned into a project. My only requirement is that the project must interact with a user and the user must have some measure of control over what happens in the program. There are two basic ways this can be done. The first is by using the `input` function as we have covered. Another way is to use `sys.argv` (i.e. the `argv` variable from the `sys` module).
 
-Before you get started, make sure you read the entirety of this lesson before deciding what to do. The next few sections are important concepts that will aid you as you synthesize your first fully featured program. This section also has an appendix with a quick introduction to some minor things we have not yet covered that you may find useful.
+Before you get started, make sure you read the entirety of this lesson before deciding what to do. The next few sections are important concepts that will aid you as you produce your first fully featured program. This section also has an appendix with a quick introduction to some minor things we have not yet covered that you may find useful.
 
 Have fun with this. Think about why you started this in the first place. This may not be a perfect program but it will be a great learning and growing experience for you as a programmer. Remember that the internet is your friend and 99% of questions you have can be found there. Good luck!
 
@@ -18,7 +18,7 @@ Have fun with this. Think about why you started this in the first place. This ma
 
 Before you begin coding you should make sure you are styling your code correctly. Up to now you should have been following my code along and styling it as I have in each example. To make your code easy to debug and easy to read as possible you should continue to use good style practices in Python. 
 
-Before doing any coding, read Python's style guide called [PEP-8](https://www.python.org/dev/peps/pep-0008/#introduction). Commit to using these conventions to make your code readable and easier to debug. Once you have practiced this style you will be able to follow and debug your code much more easily. 
+Before doing any coding, read over at least the first several sections of Python's style guide called [PEP-8](https://www.python.org/dev/peps/pep-0008/#introduction) (read until the section titled [Module Level Dunder Names](https://www.python.org/dev/peps/pep-0008/#id22)). Commit to using these conventions to make your code readable and easier to debug. Once you have practiced this style you will be able to follow and debug your code much more easily. 
 
 ## Debugging
 
@@ -28,7 +28,9 @@ Inevitably you may run into situations where your code is doing unexpected thing
 
   The best way to fix bugs is to do your best to ensure that they never happen. You can plan your code so you have an idea of where you want to be when you finish up.
 
-  Before you write any code at all, pull out a pencil and paper or open up a drawing software like [draw.io](https://www.draw.io). Make an outline and write down in general what your code will do. Then get more specific by specifying how it will do it. Repeat this process until you have a general idea of what you need to code the project and the logic it will follow. This can be a flow chart or a list of function names and descriptions of what they do. This can be a difficult habit to establish but rest assured that doing good planning up front will save you a large amount of time debugging later on.
+  Before you write any code at all, pull out a pencil and paper or open up a drawing software like [draw.io](https://www.draw.io). Make an outline and write down in general what your code will do. Then get more specific by specifying how it will do it. Repeat this process until you have a good idea of what you need to code the project and the logic it will follow. This can be a flow chart or a list of function names and descriptions of what they do. This can be a difficult habit to establish but rest assured that doing good planning up front will save you a large amount of time debugging later on.
+
+  With that said, you may start and not know exactly what you are doing yet. If this is the case, do your best to plan what you can and then jump in and try. Do *not* let the need to plan everything paralyze you before you even begin!
 
 - **Use Good Coding Practice**
 
@@ -36,7 +38,7 @@ Inevitably you may run into situations where your code is doing unexpected thing
 
   - Ensure you are following the [Python Style Guide](https://www.python.org/dev/peps/pep-0008/). Good style makes code easy to read and therefore  easier to debug.
   - Use descriptive variable names that make clear the purpose of a variable
-  - Follow the principles found in the [Zen of Python](https://www.python.org/dev/peps/pep-0020/#id3) 
+  - Follow the principles found in the [Zen of Python](https://www.python.org/dev/peps/pep-0020/#id3) (do not worry if you do not yet understand all of the principles yet, just use the ones you do know)
   - Document your code as you go. It is easy to forget what your code is doing. If you leave notes for yourself you are less likely to get lost.
 
 - **Do a little at a time**
@@ -66,9 +68,11 @@ Inevitably you may run into situations where your code is doing unexpected thing
 
   Taken from [here](https://ignite.byu.edu/che541/programming_tips.html). This is a good tip for you if you find yourself at a dead end. Split up your problem into parts and tackle each one at a time. For example, split your code into shorter sub-functions and debug each of them.
 
+This list is not exhaustive nor it is perfect. I am telling you to do certain things at this stage because you will be building a relatively simple project. Later we will scale these skills with more sophisticated debugging strategies and tools.
+
 ## Possible Projects
 
-There are many different things you may want to do with your newfound skills. In reality, this project will be the most valuable thing you do yet as it will introduce problems you have not yet faced and develop skills you have not yet even thought of. Ideally, you will make something that interests you and feeds your passions. Below I have provided some general ideas and perhaps a push in the right direction. However, you must flesh out the ideas here and make them your own. Please note that right now, everything you will do will interface with your user in the command line. This however does not mean that you cannot make something interesting or useful. With that said, here are some possible projects.
+There are many different things you may want to do with your newfound skills. In reality, this project will be the most valuable thing you do so far as it will introduce problems you have not yet faced and develop skills you have not yet even thought of. Ideally, you will make something that interests you and feeds your passions. Below I have provided some general ideas and perhaps a push in the right direction. However, you must flesh out the ideas here and make them your own. Please note that right now, everything you will do will interface with your user in the command line. This however does not mean that you cannot make something interesting or useful. With that said, here are some possible projects.
 
 ### Make A Game
 
@@ -118,7 +122,7 @@ GAME OVER
 entrance_hall() # this starts the game
 ```
 
-It is up to you to develop this idea. The following are some suggestions the intent of this exercise it that you make the best game you can with your current skill set. Try some of the following as you develop your game:
+It is up to you to develop this idea and make it your own. The following are some suggestions the intent of this exercise it that you make the best game you can with your current skill set. Try some of the following as you develop your game:
 
 - Draw a map and allow your character to move through many rooms. (At least 10 rooms/encounters.) 
 - Make obstacles, enemies or puzzles for your character to overcome. 
@@ -170,7 +174,7 @@ $
 
 ### Main-loops
 
-Write out the following and run it as well:
+This is a review of the idea of a REPL main-loop that was previously introduced. Write out the following and run it as well:
 
 ```python
 # mainloop.py

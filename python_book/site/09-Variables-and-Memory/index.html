@@ -981,23 +981,23 @@
 <p>You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a <span title="Variable: a name assigned to a value. This value may be of any type in Python."><strong>variable</strong></span>. Here is how the computer works with variables.</p>
 <h3 id="computer-bare-essentials">Computer Bare Essentials</h3>
 <p>I want to begin here by saying a few things about computers that hopefully will help you understand them better.</p>
-<p>Computers, including those that that run everything from your desktop to your phone to your car, basically only do 3 things:</p>
+<p>Computers, including those that run everything from your desktop to your phone to your car, basically only do 3 things:</p>
 <ol>
 <li>Store numbers as 1s and 0s in different places</li>
 <li>Move those 1s and 0s between the different places</li>
-<li>Combine those 1s and 0s mathematically (e.g. addition and subtraction)</li>
+<li>Compare and combine those 1s and 0s mathematically (e.g. addition and subtraction)</li>
 </ol>
 <p>Of course, computers can do these things at blinding speeds and can be endlessly combined to do all sorts of complex things but these three basics make up all of computing. The programs we have been writing so far do just those things but the details of how this is done is hidden from you but don't be fooled! Nothing more than those three things is happening at any time.</p>
 <h3 id="storing-information">Storing Information</h3>
 <p>One of the most important things you can learn is how memory works on a computer. Storing 1s and 0s is an essential ability for a computer to function.</p>
 <p>For now, you need to understand that there are three basic parts to the computer that we interact with constantly. They are:</p>
 <ol>
-<li>The <strong>Central Processing Unit</strong> (CPU): every instruction you write gets executed there.</li>
-<li>The <strong>Random Access Memory</strong> (RAM, or volatile memory): relevant program information is stored here as your program runs. As soon as your program stops running, all the information you have in RAM gets erased.</li>
-<li>The <strong>persistent memory</strong>: like the RAM, but the information you write there stays there until you actively erase it (depending on your hardware). Your program get's stored here and is loaded into ram to actually run. The persistent memory is generally contained on a drive of some sort (e.g a hard disk drive (HDD) or a solid-state drive (SSD)). We will be doing more with the persistent memory in a later section.</li>
+<li>The <strong>Central Processing Unit</strong> (CPU): every instruction in the code gets executed here.</li>
+<li>The <strong>Random Access Memory</strong> (RAM, or volatile memory): relevant program information is stored here as your program runs. As soon as your program stops running, all the information you have in RAM is erased.</li>
+<li>The <strong>persistent memory</strong>: like the RAM, but the information you write here stays until you actively erase it (depending on your hardware). Your program gets stored here and is loaded into RAM to actually run. The persistent memory is generally contained on a drive of some sort (e.g a hard disk drive (HDD) or a solid-state drive (SSD)). We will be doing more with the persistent memory in a later section.</li>
 </ol>
 <h3 id="using-ram">Using RAM</h3>
-<p>The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. Boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like</p>
+<p>The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like</p>
 <p><code>x = 23</code></p>
 <p>you are executing the following:</p>
 <ul>
@@ -1023,7 +1023,7 @@
 <span class="linenos" data-linenos="8 "></span><span class="o">&gt;&gt;&gt;</span> <span class="n">exit</span><span class="p">()</span>
 </code></pre></div>
 <p><code>type</code> , <code>id</code>  and <code>exit</code> are other built-in functions like <code>print</code> that provide some useful information about <code>x</code>. </p>
-<p><code>type</code> spits out the type of variable between its parentheses (in this case, an integer).  <code>id</code> spits out the "address" of the variable in the RAM (depending on the Python implementation you are using, this may or may not be the literal address in memory). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and <code>exit()</code> simply exits the program.</p>
+<p><code>type</code> spits out the type of variable between its parentheses (in this case, an integer or <code>int</code> as given in the interpreter).  <code>id</code> spits out the "address" of the variable in the RAM (<em><strong>NOTE:</strong> Depending on the Python implementation you are using, this may or may not be the literal address in memory but is always unique to the chunk of memory being used, hence its <code>id</code> or identification</em>). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and <code>exit()</code> simply exits the program.</p>
 <h3 id="naming-variables">Naming Variables</h3>
 <p>As a programmer you will have to give names to your variables. There are certain rules for naming variables but, within those rules, you can make up any name you want for any variable. However, the guidelines below will help you make smart choices about how you name variables.</p>
 <h4 id="naming-rules-in-python">Naming Rules in Python</h4>
@@ -1102,7 +1102,7 @@
 <li><strong>Use lower case and underscores</strong></li>
 </ul>
 <p>There are two common ways to name a variable. For an example we will consider a variable with a name that can be read as "black knight". The first way is lower case with underscores for spaces: <code>black_knight</code>. The second is often called "camel case": <code>BlackKnight</code>. Obviously you can use all caps (<code>BLACKKNIGHT</code>), no spaces (<code>blackknight</code>), some abbreviation (<code>blk_knt</code>)  or any combination of these. However, the lower case with underscores and camel case are the most common for general use variables. </p>
-<p>When writing Python especially as you are learning, stick to the lower case with underscores. For what we will be doing this will help your code be more readable and clear to you and anyone else reading it. </p>
+<p>When writing Python especially as you are learning, stick to the lower case with underscores. For what we will be doing, this will help you avoid annoying errors and make your code more readable and clear to you and anyone else reading it.</p>
 <p>Understand however, that this is not a hard and fast rule and should be broken if there is a good reason to do so. We will break this rule later on as we explore more features.</p>
 <ul>
 <li><strong>Avoid names that conflict with existing names</strong></li>
@@ -1141,8 +1141,8 @@
 <ul>
 <li><strong>Help your reader understand the code without comments</strong></li>
 </ul>
-<p>Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. Comments are important and I do not want to diminish their importance but writing easily understandable code is better than commenting. Up to now what your code does should be obvious to anyone that can read Python without any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.</p>
-<p>Any good programmer knows that <strong>the majority of the time we spend coding is actually spent reading and not writing</strong>. Python makes it easy for you to write readable code and the first step is write good variable names.</p>
+<p>Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. I do not want to diminish the importance of comments in code but writing easily understandable code is better than commenting. Up to now, what your code does should be obvious to anyone that can read Python without needing any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.</p>
+<p>Any good programmer knows that <strong>the majority of the time spent coding is actually spent reading and not writing</strong>. Python makes it easy for you to write readable code and the first step is write good variable names.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>
 <li>Go to the <a href="https://docs.python.org/3/library/functions.html">Python Built-in Function page</a> and experiment with as many functions in the Python interpreter as you can. What does each of these built in functions do?</li>

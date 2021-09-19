@@ -74,7 +74,7 @@ $
 
 Most of the time time in programming, you, the programmer, cannot guarantee that an error will not occur or an exception will not be thrown. You could try to prevent every problem with a series of if statements but   that becomes cumbersome and is difficult to cover every eventuality.
 
-Python deals with this problem with `try-except` statements. A `try` statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the `try` block stops and the `except` block is executed. If no exceptions are "raised" the the except block is skipped. In `try_except.py`, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:
+Python deals with this problem with `try-except` statements. A `try` statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the `try` block stops and the `except` block is executed. If no exceptions are "raised" the except block is skipped. In `try_except.py`, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:
 
 ```python
 try:
@@ -124,6 +124,7 @@ The backslash `\` at the end of the line is called a "line continuation characte
 - Change the code to catch specific exceptions such as a `TypeError` and others. Try to do multiple `except` statements. How does this improve your code's usability?
 - Change the code to `raise` some errors when a date is invalid. Does your message help the user understand what went wrong?
 - Experiment with the security of this script. Try to break it or make it produce invalid dates. You may notice some dates that can be written are invalid. Rewrite this script so that it cannot produce an invalid date according to the [Gregorian Calendar](https://en.wikipedia.org/wiki/Gregorian_calendar). (Go as detailed as you like, but at least account for basic leap years and months having different lengths.)
+- Notice the string method `.split()`. What does this do? Research and learn exactly what this method does and how you can use it.
 
 ## Advanced Mastery
 

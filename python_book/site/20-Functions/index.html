@@ -953,7 +953,7 @@
 </code></pre></div>
 <h3 id="functions">Functions</h3>
 <p>Upon finishing this lesson, you should have made your first functions!</p>
-<p>There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a single call to the function. We will explore the basic aspects in this and the next lessons.</p>
+<p>There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a line of code to call the function. We will explore the basic aspects in this and the next lessons.</p>
 <p>Functions follow the following syntax:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">def</span> <span class="nf">function_name</span><span class="p">(</span><span class="n">argument1</span><span class="p">,</span> <span class="n">argument2</span> <span class="o">...</span><span class="p">):</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="o">&lt;</span><span class="n">statements</span> <span class="o">...&gt;</span>
@@ -1000,10 +1000,11 @@
 <p>A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.</p>
 <p>In the case of <code>function_intro.py</code>, you may have noticed that we did not have to use <code>global</code> in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with <code>count_sandwiches()</code>), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in <code>function_intro.py</code> you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!</p>
 <h3 id="main-loops">Main-loops</h3>
-<p><em>To be added</em></p>
+<p>The code under the <code>main</code> function is what is known as a "main-loop" or a "main-program loop". It uses the model of REPL (Read, Evaluate, Print, then Loop) to execute as many commands as the user needs (the Python interactive prompt uses this same model). Notice, the use of the while-loop and the structure of the function. Understand this part of the program as it will become more important in the following sections.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>
 <li>Make a function that calculates the <a href="https://en.wikipedia.org/wiki/Factorial">factorial of a number</a> (use a for-loop in your function) using a global variable from the user as your input.</li>
+<li>Experiment with the main-loop or REPL function. How could you use this model to do something useful?</li>
 </ul>
 <!-- Navigation -->
 

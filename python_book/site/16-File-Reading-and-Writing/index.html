@@ -490,6 +490,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-quick-note-about-function-arguments" class="md-nav__link">
+    A Quick Note About Function Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hone-your-skills" class="md-nav__link">
     Hone Your Skills
   </a>
@@ -813,6 +820,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#a-quick-note-about-function-arguments" class="md-nav__link">
+    A Quick Note About Function Arguments
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#hone-your-skills" class="md-nav__link">
     Hone Your Skills
   </a>
@@ -851,9 +865,9 @@
 <ul>
 <li>The CPU</li>
 <li>The RAM or volatile memory</li>
-<li>The persistent memory (e.g. the hard disk drive or the solid-state drive)</li>
+<li>The persistent memory (i.e. the storage drive)</li>
 </ul>
-<p>This lesson is an opportunity to interact with the third part, that is the hard drive. We will learn in this lesson how to read and write files from the hard drive.</p>
+<p>This lesson is an opportunity to interact with the third part, that is the hard drive. We will learn in this lesson how to read and write files from the storage drive.</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">#io_files.py</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="n">ext</span>       <span class="o">=</span> <span class="s1">&#39;.txt&#39;</span>
@@ -867,24 +881,25 @@
 <span class="linenos" data-linenos="11 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;You work as a/an </span><span class="si">{</span><span class="n">user_job</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="12 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Saving Your Information to </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">...&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span><span class="c1"># older/worse way of working with files</span>
-<span class="linenos" data-linenos="15 "></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>   <span class="c1"># open in write mode &#39;w&#39;</span>
-<span class="linenos" data-linenos="16 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># write headers to file</span>
-<span class="linenos" data-linenos="17 "></span><span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>          <span class="c1"># concatenate a string</span>
-<span class="linenos" data-linenos="18 "></span><span class="n">data</span> <span class="o">+=</span> <span class="n">user_age</span>  <span class="o">+</span> <span class="s1">&#39;,&#39;</span>  
-<span class="linenos" data-linenos="19 "></span><span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
-<span class="linenos" data-linenos="20 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                    <span class="c1"># then write it to the file</span>
-<span class="linenos" data-linenos="21 "></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                        <span class="c1"># save and close the file</span>
-<span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span><span class="c1"># better way of working with files</span>
-<span class="linenos" data-linenos="26 "></span><span class="c1"># always use 4 spaces to indent</span>
-<span class="linenos" data-linenos="27 "></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># r is for read</span>
-<span class="linenos" data-linenos="28 "></span>    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                 
-<span class="linenos" data-linenos="29 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Here are your data:</span><span class="se">\n</span><span class="s2">---&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="30 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="linenos" data-linenos="31 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span><span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span> <span class="c1"># concatenate a string of data</span>
+<span class="linenos" data-linenos="15 "></span><span class="n">data</span> <span class="o">+=</span> <span class="n">user_age</span>  <span class="o">+</span> <span class="s1">&#39;,&#39;</span>  
+<span class="linenos" data-linenos="16 "></span><span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span><span class="c1"># an example of the older/worse way of working with files</span>
+<span class="linenos" data-linenos="19 "></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>   <span class="c1"># open in write mode &#39;w&#39;</span>
+<span class="linenos" data-linenos="20 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># write headers to file</span>
+<span class="linenos" data-linenos="21 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                    <span class="c1"># then write it to the file</span>
+<span class="linenos" data-linenos="22 "></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                        <span class="c1"># save and close the file</span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span><span class="c1"># better way of working with files</span>
+<span class="linenos" data-linenos="27 "></span><span class="c1"># always use 4 spaces to indent</span>
+<span class="linenos" data-linenos="28 "></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># &#39;r&#39; is for read</span>
+<span class="linenos" data-linenos="29 "></span>    <span class="n">data</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>                 
+<span class="linenos" data-linenos="30 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Here are your data:</span><span class="se">\n</span><span class="s2">---&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="31 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="linenos" data-linenos="32 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
 </code></pre></div>
 <strong>Here is what should happen</strong></p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python io_files.py
@@ -913,26 +928,28 @@
 <p><strong>What is happening here?</strong></p>
 <p>We are writing and reading files here with a special tool called a file object. A file object from Python's point of view is another data type although that is not the most convenient way of understanding it. Without going too much into detail here is what is happening:</p>
 <ul>
-<li>We get some data from the user.</li>
-<li>We organize this data into a table where the rows are separated by newline characters (<code>\n</code>) and the columns are separated in each row by commas (<code>,</code>). We give this table headers and concatenate this string all together using the addition operator.</li>
-<li>We call <code>open</code> on a string containing a filename which returns a file object.</li>
-<li>We feed appropriate method statements to the file object to read, write.</li>
+<li>We get some data from the user and print it out for reference. (Lines 3-12)</li>
+<li>We organize this data into a table where the rows are separated by newline characters (<code>\n</code>) and the columns are separated in each row by commas (<code>,</code>). We give this table headers and concatenate this string all together using the addition operator. (Lines 14-16)</li>
+<li>We call <code>open</code> on a string containing a filename which returns a file object. (Line 19)</li>
+<li>We feed appropriate method statements to the file object to read, write. (Lines 20-21)</li>
 <li>The file object is altered as we use the file object's methods.</li>
-<li>We then save and close the object.</li>
+<li>We then save and close the object. (Line 22)</li>
+<li>Finally, we re-open the file in "read" mode using a <code>with</code> statement and print the contents of the file out to the screen. (Lines 28-32)</li>
 </ul>
-<p>Some of this nomenclature is new. I will now explain some of the newer concepts below.</p>
+<p>Some of these topics and nomenclature are new. I will now explain these below.</p>
 <h3 id="objects">Objects</h3>
 <p>In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence again.</p>
-<p>A type, as I explained before, is a mark that a computer puts on a 'box' or set of 'boxes' in volatile memory. It is a label that lets the computer know how to work with those boxes. An object is the actual box or set of boxes themselves. An object has a data type assigned to it just as you have the label "human" or "homo sapien" assigned to you.</p>
-<p>For example, when you have a string variable, virtually speaking you have a set of boxes in a certain order and each box has a character in it. In addition, you have other boxes that contain the code that makes <code>.format</code> work and everything else the string needs to know how to do what it does. Collectively, all these boxes together in memory are the object. This nomenclature will be used often so it's important to internalize this concept early.</p>
+<p>A type, as I explained before, is a marker that a computer puts on a 'box' or set of 'boxes' in the RAM. It is a label that lets the computer know how to work with those boxes. An object is the actual box or set of boxes themselves.</p>
+<p>For example, when you have a string variable such as <code>"Tim {}"</code>, you have a set of 'boxes' in a certain order and each box has a bunch of 1s and 0s that represent each character in "Tim {}". In addition, you have other sets of boxes that contain code that makes the string object's methods work (e.g. <code>"Tim {}".format("The Enchanter")</code>) and any other data the string needs to function properly. Collectively, all these boxes are grouped together in memory and constitute the string object. This nomenclature will be used often so it's important to internalize this concept early.</p>
+<p>Other objects we have talked about such as <code>int</code> and <code>float</code> are also objects but are significantly simpler than strings. These generally have very simple data and methods associated with them but they still have the same fundamental structure as the string objects. </p>
 <h3 id="file-objects-and-methods">File Objects and Methods</h3>
 <p>Now that we have discussed objects lets look specifically at file objects. Lets begin with the <code>open</code> built-in function. The basic usage for the open function has the following form and arguments:</p>
 <ul>
 <li><code>open(filename, mode)</code></li>
 </ul>
-<p>where <code>filename</code> is the name of the file (okay maybe that's obvious) you want to open and <code>mode</code> is the way you want to open the file. The basic ways you can open a file are:</p>
+<p>where <code>filename</code> is the path to the file you want to open and <code>mode</code> is the way you want to open the file. The basic ways you can open a file are:</p>
 <ul>
-<li><code>'r'</code> for read mode. In this mode the file can only be read (this is sometimes called "read-only" mode). This is the default mode, meaning if you do not give the <code>open</code> function a mode it will assume read mode. Because you are in read mode operations like <code>.write()</code> will throw an error. Also, if the filename you put into <code>filename</code> doesn't exist that will also throw an error.</li>
+<li><code>'r'</code> for read mode. In this mode the file can only be read (this is sometimes called "read-only" mode). This is the default mode, meaning if you do not give the <code>open</code> function a mode, it will assume read mode. Because you are in read mode, operations like <code>.write()</code> will throw an error. Also, if the filename you put into <code>filename</code> doesn't exist that will also throw an error.</li>
 </ul>
 <p>The <code>.read()</code> method returns the entirety of the file as a string. Experiment with this function. What happens when you try to call <code>.read()</code> twice?</p>
 <ul>
@@ -943,9 +960,10 @@
 <p><code>'a'</code> for append mode. This mode is like write mode in that methods like <code>.read()</code> will throw an error.  It is also like read mode in that if the filename doesn't exist it will also throw an error. It is used to write without truncating and simply appends text to the end of files. However using methods like the ones <a href="https://docs.python.org/3.7/library/io.html#class-hierarchy">here</a>, you can edit files directly. (With that said and depending onthere are better ways to do this that we will cover later.)</p>
 </li>
 </ul>
-<p>There are ways to combine these that you can experiment with in "Hone Your Skills" below.</p>
+<p>These are not the only options for <code>mode</code> and there are ways to combine these that you can experiment with in "Hone Your Skills" below.</p>
 <h3 id="with-statements"><code>with</code> Statements</h3>
-<p>To save the changes we made to the file we opened in <code>f = open(filename + ext , "w")</code>, we need to call <code>f.close()</code> on our file object. This ends up being a problem if you forget to call <code>f.close()</code> on the object. A better way to deal with files is with a with statement. To be clear the following code snippet:</p>
+<p>To save the changes we made to the file we opened in <code>f = open(filename + ext , "w")</code>, we need to call <code>f.close()</code> on our file object. This ends up being a problem if you forget to call <code>f.close()</code> on the object. A better way to deal with files is with a <code>with</code> statement. </p>
+<p>To be clear, the following code snippet:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>  
 <span class="linenos" data-linenos="2 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="3 "></span><span class="n">data</span>  <span class="o">=</span> <span class="n">user_name</span> <span class="o">+</span> <span class="s2">&quot;,&quot;</span>         
@@ -962,7 +980,12 @@
 <span class="linenos" data-linenos="5 "></span>    <span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
 <span class="linenos" data-linenos="6 "></span>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>     
 </code></pre></div>
-<p>Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The <code>with</code> statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a <code>with</code> statement (unless you have a <em>very</em> good reason not to do so). Also note that working with files is not the only situation in which it is appropriate to use a with statement but it is a very common one.</p>
+<p>Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The <code>with</code> statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a <code>with</code> statement (unless you have a <em>very</em> good reason not to do so). Also note that working with files is not the only situation in which it is appropriate to use a <code>with</code> statement but it is a very common one.</p>
+<h3 id="a-quick-note-about-function-arguments">A Quick Note About Function Arguments</h3>
+<p>You may have noticed the following feature of the <code>print</code> function on Line 12  that we have not used before:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Saving Your Information to </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">...&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>You may have rightly wondered what that business about <code>end</code> was. <code>end</code> is an optional argument in the print function. Normally when you use the print function, what is actually being printed is the string or arguments you give to the print function and a newline character (<code>\n</code>) is automatically appended to the end of the printed text. <code>end</code> is an argument that you must call by name, as seen above but with it you may override the default <code>'\n'</code> with anything else you wish. In the exercise we are just using an empty string.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <p>Remember to use <code>with</code> statements in all the following exercises.</p>
 <ul>

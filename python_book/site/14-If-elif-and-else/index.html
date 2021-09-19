@@ -958,7 +958,7 @@
 <li>If <code>Expression1</code> evaluates to <code>True</code>:</li>
 <li>Everything in the indented block of code under <code>if</code> will be executed. </li>
 <li>Once the block has ended (by un-indenting), the rest of the <code>elif</code> and <code>else</code> blocks of code are skipped. </li>
-<li>If <code>Expression1</code> evaluates to <code>False</code>, <code>Expression2</code> is checked for its truth value </li>
+<li>If <code>Expression1</code> evaluates to <code>False</code>, the block of code uner <code>Expression1</code> is skipped and <code>Expression2</code> is checked for its truth value </li>
 <li>If<code>Expression2</code> evaluates to <code>True</code> :</li>
 <li>Everything in the indented block of code under <code>elif</code> will be executed. </li>
 <li>Once the block has ended (by un-indenting), the rest of the <code>elif</code> and <code>else</code> blocks of code are skipped.</li>
@@ -970,7 +970,7 @@
 <h3 id="indented-blocks">Indented Blocks</h3>
 <p>We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make code more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each <code>if</code>, <code>elif</code> or <code>else</code> statement, the code is executed as normal. An indented block is just a way of Python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to <code>True</code>. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:</p>
 <ul>
-<li><em>Indented blocks must start with a colon <code>:</code>.</em> A colon tells Python in effect "This is the beginning of a new indented block"</li>
+<li><em>Indented blocks must start with a colon <code>:</code>.</em> A colon tells Python in effect, "This is the beginning of a new indented block"</li>
 <li><em>Indent 4 spaces.</em> Four spaces is an accepted convention although Python will technically allow whatever spacing you want as long as you are consistent. Any code you see written will follow the 4 space convention and that is the standard so it is best if you follow suit. If you mix spacings or are inconsistent with this Python will throw a syntax error.</li>
 <li><em>End the block by un-indenting.</em> The only way Python knows that the indented block has ended is when an un-indented line of code is observed. </li>
 <li><em>Nested blocks are allowed.</em> If you want to have an indented block inside an indented block that is fine. the same rules apply in all cases.</li>
