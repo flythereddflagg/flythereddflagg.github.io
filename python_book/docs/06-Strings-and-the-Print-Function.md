@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 05-Comments](./05-Comments.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 07-Escape-Characters](./07-Escape-Characters.md)
+[Previous: 05 - Comments ](./05-Comments.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 07 - Escape Characters](./07-Escape-Characters.md)
 
 ---
 <!-- End Navigation -->
@@ -94,7 +94,7 @@ with your use of single and double quotes or you will run into problems.
 
 ---
 
-[Previous: 05-Comments](./05-Comments.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 07-Escape-Characters](./07-Escape-Characters.md)
+[Previous: 05 - Comments ](./05-Comments.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 07 - Escape Characters](./07-Escape-Characters.md)
 
 ---
 <!-- End Navigation -->

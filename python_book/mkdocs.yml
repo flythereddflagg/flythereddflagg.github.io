@@ -6,9 +6,9 @@ nav:
 # start nav
     - 1. Intro and How to Use This Book: './01-Intro-and-How-to-Use-This-Book.md'
     - 2. Getting Started: './02-Getting-Started.md'
-    - 3. CLI: './03-CLI.md'
+    - 3. CLI : './03-CLI.md'
     - 4. Hello World: './04-Hello-World.md'
-    - 5. Comments: './05-Comments.md'
+    - 5. Comments : './05-Comments.md'
     - 6. Strings and the Print Function: './06-Strings-and-the-Print-Function.md'
     - 7. Escape Characters: './07-Escape-Characters.md'
     - 8. Formatted Strings: './08-Formatted-Strings.md'
@@ -20,25 +20,24 @@ nav:
     - 14. If elif and else: './14-If-elif-and-else.md'
     - 15. Errors Exceptions and Bugs: './15-Errors-Exceptions-and-Bugs.md'
     - 16. File Reading and Writing: './16-File-Reading-and-Writing.md'
-    - 17. Loops: './17-Loops.md'
-    - 18. Iterables: './18-Iterables.md'
-    - 19. Dictionaries: './19-Dictionaries.md'
-    - 20. Functions: './20-Functions.md'
+    - 17. Loops : './17-Loops.md'
+    - 18. Iterables : './18-Iterables.md'
+    - 19. Dictionaries : './19-Dictionaries.md'
+    - 20. Functions : './20-Functions.md'
     - 21. More Functions: './21-More-Functions.md'
     - 22. Try Except: './22-Try-Except.md'
-    - 23. Imports: './23-Imports.md'
+    - 23. Imports : './23-Imports.md'
     - 24. Reading Code: './24-Reading-Code.md'
     - 25. Do a Project: './25-Do-a-Project.md'
     - 26. Objects and Classes: './26-Objects-and-Classes.md'
     - 27. Inheritance and Polymorphism: './27-Inheritance-and-Polymorphism.md'
-    - 28. Modules: './28-Modules.md'
+    - 28. Modules : './28-Modules.md'
     - 29. Comments and Code Documentation: './29-Comments-and-Code-Documentation.md'
     - 30. Packages and Project Structure: './30-Packages-and-Project-Structure.md'
     - 31. Automated Testing: './31-Automated-Testing.md'
     - 32. Do Another Project: './32-Do-Another-Project.md'
     - 33. Branching Out: './33-Branching-Out.md'
 # end nav
-
 
 extra_javascript: 
     - https://polyfill.io/v3/polyfill.min.js?features=es6

@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 29-Comments-and-Code-Documentation](./29-Comments-and-Code-Documentation.md)
+[Previous: 27 - Inheritance and Polymorphism](./27-Inheritance-and-Polymorphism.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 29 - Comments and Code Documentation](./29-Comments-and-Code-Documentation.md)
 
 ---
 <!-- End Navigation -->
@@ -15,7 +15,7 @@ In this section we will begin learning how to build our own packages or librarie
 
 ### The Email Database Manager
 
-The following are two files that you will copy-paste into separate text files. The names of these files are indicated at the top. These files serve as a sort of skeleton of a project you must complete using all you have learned so far. Take your time and get this project working as well as you possibly can. As always, the more you put into this the more you will get out of the experience. More specific information about the files is given below. Many of the same principles from your first project apply here. 
+The following are two files that you will copy-paste into separate text files. (Please note that this is one of the rare times I will ask you to copy-paste code from this book.) The names of these files are indicated at the top. Put both files in a folder called "database_manager". The paths for these files are also indicated for clarity. These files serve as a sort of skeleton of a project you must complete using all you have learned so far. Take your time and get this project working as well as you possibly can. As always, the more you put into this the more you will get out of the experience. More specific information about the files is given below. Many of the same principles from your first project apply here. 
 
 I have left multi-line comments under each label to guide your implimentation of this project. Do not delete these as these are the subject of the next section.
 
@@ -23,6 +23,7 @@ I have left multi-line comments under each label to guide your implimentation of
 
 ```python
 # database_manager.py
+# path <some root folder>/database_manager/database_manager.py
 import json
 
 
@@ -111,6 +112,8 @@ This file implements a class that will manage the database. The user interface c
 
 ```python
 # user_interface.py
+# path <some root folder>/database_manager/user_interface.py
+
 from database_manager import DatabaseManager
 
 
@@ -204,7 +207,7 @@ Once you have finished the main objective of this exercise you should have a wor
 - Add error messages and make helpful info be printed out when the user gives bad input.
 
 - Add home and work versions of emails and phone numbers so that multiple emails and phone numbers may be assigned to one person.
-- Add options to the UI to allow different formats to be exported.
+- Add options to the UI to allow different formats to be exported (e.g. .csv, .txt, or delimited by bars etc.). Implement at least two extra formats.
 - Make a new type of database and implement it with your existing user interface. For example, this could be a car database using code from the previous sections.
 
 ## Advanced Mastery
@@ -216,7 +219,7 @@ Once you have finished the main objective of this exercise you should have a wor
 
 ---
 
-[Previous: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 29-Comments-and-Code-Documentation](./29-Comments-and-Code-Documentation.md)
+[Previous: 27 - Inheritance and Polymorphism](./27-Inheritance-and-Polymorphism.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 29 - Comments and Code Documentation](./29-Comments-and-Code-Documentation.md)
 
 ---
 <!-- End Navigation -->

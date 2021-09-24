@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 02-Getting-Started](./02-Getting-Started.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 04-Hello-World](./04-Hello-World.md)
+[Previous: 02 - Getting Started](./02-Getting-Started.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 04 - Hello World](./04-Hello-World.md)
 
 ---
 <!-- End Navigation -->
@@ -229,7 +229,7 @@ Here are a few questions you should research:
 
 ---
 
-[Previous: 02-Getting-Started](./02-Getting-Started.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 04-Hello-World](./04-Hello-World.md)
+[Previous: 02 - Getting Started](./02-Getting-Started.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 04 - Hello World](./04-Hello-World.md)
 
 ---
 <!-- End Navigation -->

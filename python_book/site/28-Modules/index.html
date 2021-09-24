@@ -854,7 +854,7 @@
                 <!-- Navigation -->
 
 <hr />
-<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27-Inheritance-and-Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29-Comments-and-Code-Documentation</a></p>
+<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27 - Inheritance and Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29 - Comments and Code Documentation</a></p>
 <hr />
 <!-- End Navigation -->
 
@@ -862,174 +862,177 @@
 <p>In this section we will explore how to connect python files together and make them work together. Also included in this section is an opportunity to get used to using classes and do more object oriented  programming.  Each file in Python is sometimes called a module. A module is simply a python file you can import and use its contents. You used some of the standard modules or libraries in <a href="../23-Imports/">the section about imports</a>.</p>
 <p>In this section we will begin learning how to build our own packages or libraries by connecting two modules together. In a later section, we will take what we accomplish here and make a complete (albeit simple) package that could be made into a distributable software. These will also be used in the next sections so <strong>make sure you save these files for later</strong>.</p>
 <h3 id="the-email-database-manager">The Email Database Manager</h3>
-<p>The following are two files that you will copy-paste into separate text files. The names of these files are indicated at the top. These files serve as a sort of skeleton of a project you must complete using all you have learned so far. Take your time and get this project working as well as you possibly can. As always, the more you put into this the more you will get out of the experience. More specific information about the files is given below. Many of the same principles from your first project apply here. </p>
+<p>The following are two files that you will copy-paste into separate text files. (Please note that this is one of the rare times I will ask you to copy-paste code from this book.) The names of these files are indicated at the top. Put both files in a folder called "database_manager". The paths for these files are also indicated for clarity. These files serve as a sort of skeleton of a project you must complete using all you have learned so far. Take your time and get this project working as well as you possibly can. As always, the more you put into this the more you will get out of the experience. More specific information about the files is given below. Many of the same principles from your first project apply here. </p>
 <p>I have left multi-line comments under each label to guide your implimentation of this project. Do not delete these as these are the subject of the next section.</p>
 <h4 id="the-database-manager-file">The Database Manager File</h4>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># database_manager.py</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span> <span class="nn">json</span>
-<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1"># path &lt;some root folder&gt;/database_manager/database_manager.py</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span> <span class="nn">json</span>
 <span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">class</span> <span class="nc">DatabaseManager</span><span class="p">():</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="sd">    Manages all aspects of the database including how and where data are stored.</span>
-<span class="linenos" data-linenos=" 8 "></span><span class="sd">    This database is contact list consisting of a collection of names with</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="sd">    corresponding phone numbers and email addresses. This may be implimented as a</span>
-<span class="linenos" data-linenos="10 "></span><span class="sd">    dictionary (which sorts the list automatically) or a list. The exact structure </span>
-<span class="linenos" data-linenos="11 "></span><span class="sd">    of the database is up to you but it might be a good idea to find out how others</span>
-<span class="linenos" data-linenos="12 "></span><span class="sd">    have done first.</span>
-<span class="linenos" data-linenos="13 "></span><span class="sd">    &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="14 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-<span class="linenos" data-linenos="15 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="16 "></span><span class="sd">        Loads the database based on the passed in filename. The database should</span>
-<span class="linenos" data-linenos="17 "></span><span class="sd">        come from a .json file and be stored in the class as a dictionary. This</span>
-<span class="linenos" data-linenos="18 "></span><span class="sd">        should call self.load_database() as its last step.</span>
-<span class="linenos" data-linenos="19 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="20 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="21 "></span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="k">class</span> <span class="nc">DatabaseManager</span><span class="p">():</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="sd">    Manages all aspects of the database including how and where data are stored.</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="sd">    This database is contact list consisting of a collection of names with</span>
+<span class="linenos" data-linenos="10 "></span><span class="sd">    corresponding phone numbers and email addresses. This may be implimented as a</span>
+<span class="linenos" data-linenos="11 "></span><span class="sd">    dictionary (which sorts the list automatically) or a list. The exact structure </span>
+<span class="linenos" data-linenos="12 "></span><span class="sd">    of the database is up to you but it might be a good idea to find out how others</span>
+<span class="linenos" data-linenos="13 "></span><span class="sd">    have done first.</span>
+<span class="linenos" data-linenos="14 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="linenos" data-linenos="16 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="17 "></span><span class="sd">        Loads the database based on the passed in filename. The database should</span>
+<span class="linenos" data-linenos="18 "></span><span class="sd">        come from a .json file and be stored in the class as a dictionary. This</span>
+<span class="linenos" data-linenos="19 "></span><span class="sd">        should call self.load_database() as its last step.</span>
+<span class="linenos" data-linenos="20 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="21 "></span>        <span class="k">pass</span>
 <span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>    <span class="k">def</span> <span class="nf">load_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="25 "></span><span class="sd">        Loads the database from a .json file using Python&#39;s built in json </span>
-<span class="linenos" data-linenos="26 "></span><span class="sd">        package. If the filename does not exist it should make an empty database</span>
-<span class="linenos" data-linenos="27 "></span><span class="sd">        and call self.save_database() to write the new database.</span>
-<span class="linenos" data-linenos="28 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="29 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="30 "></span>
+<span class="linenos" data-linenos="23 "></span>
+<span class="linenos" data-linenos="24 "></span>    <span class="k">def</span> <span class="nf">load_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="26 "></span><span class="sd">        Loads the database from a .json file using Python&#39;s built in json </span>
+<span class="linenos" data-linenos="27 "></span><span class="sd">        package. If the filename does not exist it should make an empty database</span>
+<span class="linenos" data-linenos="28 "></span><span class="sd">        and call self.save_database() to write the new database.</span>
+<span class="linenos" data-linenos="29 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="30 "></span>        <span class="k">pass</span>
 <span class="linenos" data-linenos="31 "></span>
-<span class="linenos" data-linenos="32 "></span>    <span class="k">def</span> <span class="nf">save_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="33 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="34 "></span><span class="sd">        Saves the database to a .json file using Python&#39;s built-in json package.</span>
-<span class="linenos" data-linenos="35 "></span><span class="sd">        This should be called any time the database is altered.</span>
-<span class="linenos" data-linenos="36 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="37 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="38 "></span>
-<span class="linenos" data-linenos="39 "></span>
-<span class="linenos" data-linenos="40 "></span>    <span class="k">def</span> <span class="nf">add_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
-<span class="linenos" data-linenos="41 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="42 "></span><span class="sd">        Adds and organizes an &#39;entry&#39; consisting of an name, phone number and </span>
-<span class="linenos" data-linenos="43 "></span><span class="sd">        email to the database it then saves the database.</span>
-<span class="linenos" data-linenos="44 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="45 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="46 "></span>
-<span class="linenos" data-linenos="47 "></span>
-<span class="linenos" data-linenos="48 "></span>    <span class="k">def</span> <span class="nf">remove_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
-<span class="linenos" data-linenos="49 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="50 "></span><span class="sd">        Removes an entry with ID &#39;name&#39; from the database and then saves </span>
-<span class="linenos" data-linenos="51 "></span><span class="sd">        the database.</span>
-<span class="linenos" data-linenos="52 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="53 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="54 "></span>
-<span class="linenos" data-linenos="55 "></span>
-<span class="linenos" data-linenos="56 "></span>    <span class="k">def</span> <span class="nf">get_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="57 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="58 "></span><span class="sd">        Returns a reference or a copy of the database in some form to be </span>
-<span class="linenos" data-linenos="59 "></span><span class="sd">        used elsewhere.</span>
-<span class="linenos" data-linenos="60 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="61 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="62 "></span>
-<span class="linenos" data-linenos="63 "></span>
-<span class="linenos" data-linenos="64 "></span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="65 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="66 "></span><span class="sd">        Returns a string representation of the database. With this, the database</span>
-<span class="linenos" data-linenos="67 "></span><span class="sd">        may be printed or otherwise represented.</span>
-<span class="linenos" data-linenos="68 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="69 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="70 "></span>
-<span class="linenos" data-linenos="71 "></span>
-<span class="linenos" data-linenos="72 "></span>
-<span class="linenos" data-linenos="73 "></span><span class="k">def</span> <span class="nf">test_dbman</span><span class="p">():</span>
-<span class="linenos" data-linenos="74 "></span>    <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="75 "></span><span class="sd">    A test function to ensure the database class performed as expected</span>
-<span class="linenos" data-linenos="76 "></span><span class="sd">    &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="77 "></span>    <span class="k">pass</span>
-<span class="linenos" data-linenos="78 "></span>
-<span class="linenos" data-linenos="79 "></span>
-<span class="linenos" data-linenos="80 "></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
-<span class="linenos" data-linenos="81 "></span>    <span class="n">test_dbman</span><span class="p">()</span>
-</code></pre></div>
-<p>This file implements a class that will manage the database. The user interface class must have a reference to an instance of this class in the form of a class variable inside the <code>UserInterface</code> object (i.e. <code>self.dbman</code>) so that it can access all its methods. For this exercise you may use any format you wish. However, for this simple example I recommend using JavaScript Object Notation or JSON. I recommend this because Python has an excellent JSON library for storing data and JSON conveniently translates to common python objects such as dictionaries, lists, strings etc. You can learn how to use both the load and save features by looking at the corresponding Python documentation <a href="https://docs.python.org/3/library/json.html#basic-usage">here</a> and reading about <code>json.load()</code> and <code>json.dump()</code>. The documentation strings under each label explain what should be implemented. Feel free to use your own creativity and what you have learned to implement this class. Finally, do not hesitate to add any methods or  make changes to names as you see fit. The <code>test_dbman()</code> function is there to allow you to test the class by itself before using it in the user interface. </p>
-<h4 id="the-user-interface-file">The User Interface File</h4>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># user_interface.py</span>
-<span class="linenos" data-linenos=" 2 "></span><span class="kn">from</span> <span class="nn">database_manager</span> <span class="kn">import</span> <span class="n">DatabaseManager</span>
-<span class="linenos" data-linenos=" 3 "></span>
-<span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span><span class="k">class</span> <span class="nc">UserInterface</span><span class="p">():</span>
-<span class="linenos" data-linenos=" 6 "></span>    <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="sd">    Allows the user to access and use the features of the database without </span>
-<span class="linenos" data-linenos=" 8 "></span><span class="sd">    having to know how to program.</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="sd">    The user should be allowed to do a few basic things:</span>
-<span class="linenos" data-linenos="10 "></span><span class="sd">     - view the database</span>
-<span class="linenos" data-linenos="11 "></span><span class="sd">     - add an entry to the database</span>
-<span class="linenos" data-linenos="12 "></span><span class="sd">     - remove an entry from the database</span>
-<span class="linenos" data-linenos="13 "></span><span class="sd">     - export the database to a human-readable text file</span>
-<span class="linenos" data-linenos="14 "></span><span class="sd">     - exit the program</span>
-<span class="linenos" data-linenos="15 "></span>
-<span class="linenos" data-linenos="16 "></span><span class="sd">    Provided the user can do these thing easily and reliably, the program is</span>
-<span class="linenos" data-linenos="17 "></span><span class="sd">    successful.</span>
-<span class="linenos" data-linenos="18 "></span><span class="sd">    &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="19 "></span>
-<span class="linenos" data-linenos="20 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dbman</span><span class="p">):</span>
-<span class="linenos" data-linenos="21 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="22 "></span><span class="sd">        sets up the UI and sets the self.dbman = dbman so the database may be</span>
-<span class="linenos" data-linenos="23 "></span><span class="sd">        accessed.</span>
-<span class="linenos" data-linenos="24 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="25 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="26 "></span>
-<span class="linenos" data-linenos="27 "></span>
-<span class="linenos" data-linenos="28 "></span>    <span class="k">def</span> <span class="nf">mainloop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="29 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="30 "></span><span class="sd">        Runs the mainloop of the program. This should include the following</span>
-<span class="linenos" data-linenos="31 "></span><span class="sd">        steps:</span>
-<span class="linenos" data-linenos="32 "></span><span class="sd">            1 - display information</span>
-<span class="linenos" data-linenos="33 "></span><span class="sd">            2 - prompt the user for input</span>
-<span class="linenos" data-linenos="34 "></span><span class="sd">            3 - process the input to get new information to display</span>
-<span class="linenos" data-linenos="35 "></span>
-<span class="linenos" data-linenos="36 "></span><span class="sd">        This also must exit the program when the user commands.</span>
+<span class="linenos" data-linenos="32 "></span>
+<span class="linenos" data-linenos="33 "></span>    <span class="k">def</span> <span class="nf">save_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="34 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="35 "></span><span class="sd">        Saves the database to a .json file using Python&#39;s built-in json package.</span>
+<span class="linenos" data-linenos="36 "></span><span class="sd">        This should be called any time the database is altered.</span>
 <span class="linenos" data-linenos="37 "></span><span class="sd">        &quot;&quot;&quot;</span>
 <span class="linenos" data-linenos="38 "></span>        <span class="k">pass</span>
 <span class="linenos" data-linenos="39 "></span>
 <span class="linenos" data-linenos="40 "></span>
-<span class="linenos" data-linenos="41 "></span>    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="41 "></span>    <span class="k">def</span> <span class="nf">add_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">entry</span><span class="p">):</span>
 <span class="linenos" data-linenos="42 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="43 "></span><span class="sd">        gets and displays information as given by the self.execute function.</span>
-<span class="linenos" data-linenos="44 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="45 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="46 "></span>
+<span class="linenos" data-linenos="43 "></span><span class="sd">        Adds and organizes an &#39;entry&#39; consisting of an name, phone number and </span>
+<span class="linenos" data-linenos="44 "></span><span class="sd">        email to the database it then saves the database.</span>
+<span class="linenos" data-linenos="45 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="46 "></span>        <span class="k">pass</span>
 <span class="linenos" data-linenos="47 "></span>
-<span class="linenos" data-linenos="48 "></span>    <span class="k">def</span> <span class="nf">get_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="49 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="50 "></span><span class="sd">        Accepts user input by calling the built-in input() function</span>
-<span class="linenos" data-linenos="51 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="52 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="53 "></span>
-<span class="linenos" data-linenos="54 "></span>
-<span class="linenos" data-linenos="55 "></span>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="56 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="57 "></span><span class="sd">        Uses the information form user input to execute the program including</span>
-<span class="linenos" data-linenos="58 "></span><span class="sd">        accessing self.dbman to use database commands.</span>
-<span class="linenos" data-linenos="59 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="60 "></span>        <span class="k">pass</span>
-<span class="linenos" data-linenos="61 "></span>
-<span class="linenos" data-linenos="62 "></span>
-<span class="linenos" data-linenos="63 "></span>    <span class="k">def</span> <span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
-<span class="linenos" data-linenos="64 "></span>        <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="65 "></span><span class="sd">        Writes the database to a file with the path: &#39;filename&#39;.</span>
-<span class="linenos" data-linenos="66 "></span><span class="sd">        May use a string representation of the database.</span>
-<span class="linenos" data-linenos="67 "></span><span class="sd">        &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="68 "></span>        <span class="k">pass</span>   
-<span class="linenos" data-linenos="69 "></span>
-<span class="linenos" data-linenos="70 "></span>
-<span class="linenos" data-linenos="71 "></span><span class="k">def</span> <span class="nf">run_ui_test</span><span class="p">():</span>
-<span class="linenos" data-linenos="72 "></span>    <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="73 "></span><span class="sd">    This runs a UI test if we run it</span>
-<span class="linenos" data-linenos="74 "></span><span class="sd">    as the main Python program</span>
-<span class="linenos" data-linenos="75 "></span><span class="sd">    &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="76 "></span>    <span class="n">db_manager</span> <span class="o">=</span> <span class="n">DatabaseManager</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">)</span>
-<span class="linenos" data-linenos="77 "></span>    <span class="n">ui</span> <span class="o">=</span> <span class="n">UserInterface</span><span class="p">(</span><span class="n">db_manager</span><span class="p">)</span>
-<span class="linenos" data-linenos="78 "></span>    <span class="n">ui</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+<span class="linenos" data-linenos="48 "></span>
+<span class="linenos" data-linenos="49 "></span>    <span class="k">def</span> <span class="nf">remove_item</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+<span class="linenos" data-linenos="50 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="51 "></span><span class="sd">        Removes an entry with ID &#39;name&#39; from the database and then saves </span>
+<span class="linenos" data-linenos="52 "></span><span class="sd">        the database.</span>
+<span class="linenos" data-linenos="53 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="54 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="55 "></span>
+<span class="linenos" data-linenos="56 "></span>
+<span class="linenos" data-linenos="57 "></span>    <span class="k">def</span> <span class="nf">get_database</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="58 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="59 "></span><span class="sd">        Returns a reference or a copy of the database in some form to be </span>
+<span class="linenos" data-linenos="60 "></span><span class="sd">        used elsewhere.</span>
+<span class="linenos" data-linenos="61 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="62 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="63 "></span>
+<span class="linenos" data-linenos="64 "></span>
+<span class="linenos" data-linenos="65 "></span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="66 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="67 "></span><span class="sd">        Returns a string representation of the database. With this, the database</span>
+<span class="linenos" data-linenos="68 "></span><span class="sd">        may be printed or otherwise represented.</span>
+<span class="linenos" data-linenos="69 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="70 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="71 "></span>
+<span class="linenos" data-linenos="72 "></span>
+<span class="linenos" data-linenos="73 "></span>
+<span class="linenos" data-linenos="74 "></span><span class="k">def</span> <span class="nf">test_dbman</span><span class="p">():</span>
+<span class="linenos" data-linenos="75 "></span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="76 "></span><span class="sd">    A test function to ensure the database class performed as expected</span>
+<span class="linenos" data-linenos="77 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="78 "></span>    <span class="k">pass</span>
 <span class="linenos" data-linenos="79 "></span>
-<span class="linenos" data-linenos="80 "></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
-<span class="linenos" data-linenos="81 "></span>    <span class="n">run_ui_test</span><span class="p">()</span>
+<span class="linenos" data-linenos="80 "></span>
+<span class="linenos" data-linenos="81 "></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+<span class="linenos" data-linenos="82 "></span>    <span class="n">test_dbman</span><span class="p">()</span>
+</code></pre></div>
+<p>This file implements a class that will manage the database. The user interface class must have a reference to an instance of this class in the form of a class variable inside the <code>UserInterface</code> object (i.e. <code>self.dbman</code>) so that it can access all its methods. For this exercise you may use any format you wish. However, for this simple example I recommend using JavaScript Object Notation or JSON. I recommend this because Python has an excellent JSON library for storing data and JSON conveniently translates to common python objects such as dictionaries, lists, strings etc. You can learn how to use both the load and save features by looking at the corresponding Python documentation <a href="https://docs.python.org/3/library/json.html#basic-usage">here</a> and reading about <code>json.load()</code> and <code>json.dump()</code>. The documentation strings under each label explain what should be implemented. Feel free to use your own creativity and what you have learned to implement this class. Finally, do not hesitate to add any methods or  make changes to names as you see fit. The <code>test_dbman()</code> function is there to allow you to test the class by itself before using it in the user interface. </p>
+<h4 id="the-user-interface-file">The User Interface File</h4>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># user_interface.py</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1"># path &lt;some root folder&gt;/database_manager/user_interface.py</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="kn">from</span> <span class="nn">database_manager</span> <span class="kn">import</span> <span class="n">DatabaseManager</span>
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span>
+<span class="linenos" data-linenos=" 7 "></span><span class="k">class</span> <span class="nc">UserInterface</span><span class="p">():</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="sd">    Allows the user to access and use the features of the database without </span>
+<span class="linenos" data-linenos="10 "></span><span class="sd">    having to know how to program.</span>
+<span class="linenos" data-linenos="11 "></span><span class="sd">    The user should be allowed to do a few basic things:</span>
+<span class="linenos" data-linenos="12 "></span><span class="sd">     - view the database</span>
+<span class="linenos" data-linenos="13 "></span><span class="sd">     - add an entry to the database</span>
+<span class="linenos" data-linenos="14 "></span><span class="sd">     - remove an entry from the database</span>
+<span class="linenos" data-linenos="15 "></span><span class="sd">     - export the database to a human-readable text file</span>
+<span class="linenos" data-linenos="16 "></span><span class="sd">     - exit the program</span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span><span class="sd">    Provided the user can do these thing easily and reliably, the program is</span>
+<span class="linenos" data-linenos="19 "></span><span class="sd">    successful.</span>
+<span class="linenos" data-linenos="20 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="21 "></span>
+<span class="linenos" data-linenos="22 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dbman</span><span class="p">):</span>
+<span class="linenos" data-linenos="23 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="24 "></span><span class="sd">        sets up the UI and sets the self.dbman = dbman so the database may be</span>
+<span class="linenos" data-linenos="25 "></span><span class="sd">        accessed.</span>
+<span class="linenos" data-linenos="26 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="27 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="28 "></span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>    <span class="k">def</span> <span class="nf">mainloop</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="31 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="32 "></span><span class="sd">        Runs the mainloop of the program. This should include the following</span>
+<span class="linenos" data-linenos="33 "></span><span class="sd">        steps:</span>
+<span class="linenos" data-linenos="34 "></span><span class="sd">            1 - display information</span>
+<span class="linenos" data-linenos="35 "></span><span class="sd">            2 - prompt the user for input</span>
+<span class="linenos" data-linenos="36 "></span><span class="sd">            3 - process the input to get new information to display</span>
+<span class="linenos" data-linenos="37 "></span>
+<span class="linenos" data-linenos="38 "></span><span class="sd">        This also must exit the program when the user commands.</span>
+<span class="linenos" data-linenos="39 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="40 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="41 "></span>
+<span class="linenos" data-linenos="42 "></span>
+<span class="linenos" data-linenos="43 "></span>    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="44 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="45 "></span><span class="sd">        gets and displays information as given by the self.execute function.</span>
+<span class="linenos" data-linenos="46 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="47 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="48 "></span>
+<span class="linenos" data-linenos="49 "></span>
+<span class="linenos" data-linenos="50 "></span>    <span class="k">def</span> <span class="nf">get_input</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="51 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="52 "></span><span class="sd">        Accepts user input by calling the built-in input() function</span>
+<span class="linenos" data-linenos="53 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="54 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="55 "></span>
+<span class="linenos" data-linenos="56 "></span>
+<span class="linenos" data-linenos="57 "></span>    <span class="k">def</span> <span class="nf">execute</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="58 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="59 "></span><span class="sd">        Uses the information form user input to execute the program including</span>
+<span class="linenos" data-linenos="60 "></span><span class="sd">        accessing self.dbman to use database commands.</span>
+<span class="linenos" data-linenos="61 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="62 "></span>        <span class="k">pass</span>
+<span class="linenos" data-linenos="63 "></span>
+<span class="linenos" data-linenos="64 "></span>
+<span class="linenos" data-linenos="65 "></span>    <span class="k">def</span> <span class="nf">export</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">):</span>
+<span class="linenos" data-linenos="66 "></span>        <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="67 "></span><span class="sd">        Writes the database to a file with the path: &#39;filename&#39;.</span>
+<span class="linenos" data-linenos="68 "></span><span class="sd">        May use a string representation of the database.</span>
+<span class="linenos" data-linenos="69 "></span><span class="sd">        &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="70 "></span>        <span class="k">pass</span>   
+<span class="linenos" data-linenos="71 "></span>
+<span class="linenos" data-linenos="72 "></span>
+<span class="linenos" data-linenos="73 "></span><span class="k">def</span> <span class="nf">run_ui_test</span><span class="p">():</span>
+<span class="linenos" data-linenos="74 "></span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="75 "></span><span class="sd">    This runs a UI test if we run it</span>
+<span class="linenos" data-linenos="76 "></span><span class="sd">    as the main Python program</span>
+<span class="linenos" data-linenos="77 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="78 "></span>    <span class="n">db_manager</span> <span class="o">=</span> <span class="n">DatabaseManager</span><span class="p">(</span><span class="s1">&#39;data.json&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="79 "></span>    <span class="n">ui</span> <span class="o">=</span> <span class="n">UserInterface</span><span class="p">(</span><span class="n">db_manager</span><span class="p">)</span>
+<span class="linenos" data-linenos="80 "></span>    <span class="n">ui</span><span class="o">.</span><span class="n">mainloop</span><span class="p">()</span>
+<span class="linenos" data-linenos="81 "></span>
+<span class="linenos" data-linenos="82 "></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+<span class="linenos" data-linenos="83 "></span>    <span class="n">run_ui_test</span><span class="p">()</span>
 </code></pre></div>
 <p>This file uses the <code>DatabaseManager</code> class to access the JSON files in a simple way. The user interface should contain a main-loop structure explained in the <a href="../25-Do-a-Project/">Do a Project</a> section. Try to make the user interface as intuitive and easy to use as possible. Again, the documentation strings under each label explain what should be implemented. Also as above, use your own creativity and what you have learned and add any methods or changes as you see fit. The <code>run_ui_test()</code> function is there to initiate the program. </p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
@@ -1042,7 +1045,7 @@
 <li>
 <p>Add home and work versions of emails and phone numbers so that multiple emails and phone numbers may be assigned to one person.</p>
 </li>
-<li>Add options to the UI to allow different formats to be exported.</li>
+<li>Add options to the UI to allow different formats to be exported (e.g. .csv, .txt, or delimited by bars etc.). Implement at least two extra formats.</li>
 <li>Make a new type of database and implement it with your existing user interface. For example, this could be a car database using code from the previous sections.</li>
 </ul>
 <h2 id="advanced-mastery">Advanced Mastery</h2>
@@ -1053,7 +1056,7 @@
 <!-- Navigation -->
 
 <hr />
-<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27-Inheritance-and-Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29-Comments-and-Code-Documentation</a></p>
+<p><a href="../27-Inheritance-and-Polymorphism/">Previous: 27 - Inheritance and Polymorphism</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../29-Comments-and-Code-Documentation/">Next: 29 - Comments and Code Documentation</a></p>
 <hr />
 <!-- End Navigation -->
                 

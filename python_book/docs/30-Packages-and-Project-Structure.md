@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 29-Comments-and-Code-Documentation](./29-Comments-and-Code-Documentation.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 31-Automated-Testing](./31-Automated-Testing.md)
+[Previous: 29 - Comments and Code Documentation](./29-Comments-and-Code-Documentation.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 31 - Automated Testing](./31-Automated-Testing.md)
 
 ---
 <!-- End Navigation -->
@@ -68,9 +68,9 @@ When you are done your structure should look like this:
 
 ### The `emails` package
 
-You have just created project called `emails` that contains two packages called `emails` and `tests`. Both of these packages contain an `__init__.py` file. This file tells python to treat the folder that contains it as its own module. Therefore, any code in `./emails/emails/__init__.py` may be imported from emails as: `from emails import a_thing` where `a_thing` is any class, function or variable defined inside of the `__init__.py` script. Other Python scripts may be placed in the folder as well (regardless of the presence of an `__init__.py` script) and classes functions or variables may be imported as: `from emails.module import a_thing` where `module` corresponds to `module.py` inside the folder. The `emails` folder is where we want to put all of our Python source code for the project. The `tests` package is where we can write automated tests for our `emails` package. We will work mainly with these two folders for this section. 
+You have just created project called `emails` that contains two packages called `emails` and `tests`. Both of these packages contain an `__init__.py` file. This file tells python to treat the file's containing folder as a Python module. Therefore, any code in `./emails/emails/__init__.py` may be imported from emails as: `from emails import a_thing` where `a_thing` is any class, function or variable defined inside of the `__init__.py` script. Other Python scripts may be placed in the folder as well (regardless of the presence of an `__init__.py` script) and classes functions or variables may be imported as: `from emails.module import a_thing` where `module` corresponds to `module.py` inside the folder. The `emails` folder is where we want to put all of our Python source code for the project. The `tests` package is where we can write automated tests for our `emails` package. We will work mainly with these two folders for this section. 
 
-The other two folders are `bin` and `docs` and contain binary or executable files we wish to include with our code and documentation about our code respectively. The structure we have just made is not the only or "correct" way to structure a project but it is a convenient way to start a project. For our purposes it is a good idea not to have an empty folder so we have put a `placeholder.txt` file in each empty folder.
+The other two folders are `bin` and `docs` and contain binary or executable files we wish to include with our code and documentation about our code respectively. The structure we have just made is not the only or "correct" way to structure a project but it is a convenient way to start a project. For our purposes, it is a good idea not to have an empty folder so we have put a `placeholder.txt` file in each empty folder.
 
 ### Make a project
 
@@ -102,7 +102,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 
 Your project should run as it always has.
 
-If the above test worked, congradulations! You have yourself a working project! You can add code to the  `emails` folder or documentation to the `docs` folder as you see fit. But for our purposes, the real utiltiy of the project structure is the abliity you have to automatically test your project with a little tool called `nose`.
+If the above test worked, congradulations! You have yourself a working project! You can add code to the  `emails` folder or documentation to the `docs` folder as you see fit. But for our purposes, the real utiltiy of the project structure is the abliity you have to automatically test your project with automated tests.
 
 This will be covered in the next section.
 
@@ -116,7 +116,7 @@ This will be covered in the next section.
 
 ---
 
-[Previous: 29-Comments-and-Code-Documentation](./29-Comments-and-Code-Documentation.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 31-Automated-Testing](./31-Automated-Testing.md)
+[Previous: 29 - Comments and Code Documentation](./29-Comments-and-Code-Documentation.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 31 - Automated Testing](./31-Automated-Testing.md)
 
 ---
 <!-- End Navigation -->

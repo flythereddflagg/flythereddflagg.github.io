@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 17-Loops](./17-Loops.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 19-Dictionaries](./19-Dictionaries.md)
+[Previous: 17 - Loops ](./17-Loops.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 19 - Dictionaries ](./19-Dictionaries.md)
 
 ---
 <!-- End Navigation -->
@@ -249,7 +249,7 @@ Each of the properties that we used in `iterables.py`  that are common to all it
 
 ---
 
-[Previous: 17-Loops](./17-Loops.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 19-Dictionaries](./19-Dictionaries.md)
+[Previous: 17 - Loops ](./17-Loops.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 19 - Dictionaries ](./19-Dictionaries.md)
 
 ---
 <!-- End Navigation -->

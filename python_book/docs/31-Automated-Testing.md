@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32-Do-Another-Project](./32-Do-Another-Project.md)
+[Previous: 30 - Packages and Project Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32 - Do Another Project](./32-Do-Another-Project.md)
 
 ---
 <!-- End Navigation -->
@@ -14,7 +14,7 @@ In some sense, the job of a programmer is to get a computer automatically do a t
 
 I have mentioned before that taking some time to plan your project will make the process of programming easier. One way to do this is to make programs that test whether your program performs as expected. Do this before you even write one line of code for your project. This forces you to ask important questions about your program such as: What do I want my program to actually do? How well does it have to do it? What things will cause the code to crash?
 
-The programmer does not need to answer all these questions before beginning but it is helpful to have some basic tests ready before beginning a project. More tests can be added as the project progresses. However as you add many tests you will want to automate that part of the process as well. To do this we have a powerful tool called `nose`.
+The programmer does not need to answer all these questions perfectly before beginning but it is helpful to have some basic tests ready before beginning a project. More tests can be added as the project progresses. However as you add many tests you will want to automate that part of the process as well. To do this we have a powerful tool called `nose`.
 
 ### About `nose`
 
@@ -132,7 +132,7 @@ If you get the above output, congratulations! Your tests all passed!
 
 ### Your Assignment
 
-Write more tests in separate functions to ensure that as many parts of the program are working as possible. If your tests fail, use the principles in the "Do a project" section to debug and fix those problems.  Continue using `nose2` to test your program as a whole until your program is free of bugs. Make multiple test modules to test different sub sections of your code. In each file make multiple tests that test individual units of the module. Remember that each filename must begin with "test" and each variable name must also begin with "test".
+Write more tests in separate functions to ensure that as many parts of the program are working as possible. If your tests fail, use the principles in the "Do a project" section to debug and fix those problems.  Continue using `nose2` to test your program as a whole until your program is practicallly free of bugs. Make multiple test modules to test different sub sections of your code. In each file make multiple tests that test individual units of the module. Remember that each filename must begin with "test" and each variable name must also begin with "test".
 
 ## Hone Your Skills
 
@@ -148,7 +148,7 @@ Write more tests in separate functions to ensure that as many parts of the progr
 
 ---
 
-[Previous: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32-Do-Another-Project](./32-Do-Another-Project.md)
+[Previous: 30 - Packages and Project Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32 - Do Another Project](./32-Do-Another-Project.md)
 
 ---
 <!-- End Navigation -->

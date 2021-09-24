@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 03-CLI](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05-Comments](./05-Comments.md)
+[Previous: 03 - CLI ](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05 - Comments ](./05-Comments.md)
 
 ---
 <!-- End Navigation -->
@@ -145,7 +145,7 @@ File "hello_world.py", line 8
 
 ---
 
-[Previous: 03-CLI](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05-Comments](./05-Comments.md)
+[Previous: 03 - CLI ](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05 - Comments ](./05-Comments.md)
 
 ---
 <!-- End Navigation -->

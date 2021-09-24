@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 15-Errors-Exceptions-and-Bugs](./15-Errors-Exceptions-and-Bugs.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 17-Loops](./17-Loops.md)
+[Previous: 15 - Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 17 - Loops ](./17-Loops.md)
 
 ---
 <!-- End Navigation -->
@@ -181,7 +181,7 @@ Remember to use `with` statements in all the following exercises.
 
 ---
 
-[Previous: 15-Errors-Exceptions-and-Bugs](./15-Errors-Exceptions-and-Bugs.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 17-Loops](./17-Loops.md)
+[Previous: 15 - Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 17 - Loops ](./17-Loops.md)
 
 ---
 <!-- End Navigation -->

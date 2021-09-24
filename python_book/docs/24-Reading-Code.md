@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 23-Imports](./23-Imports.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 25-Do-a-Project](./25-Do-a-Project.md)
+[Previous: 23 - Imports ](./23-Imports.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 25 - Do a Project](./25-Do-a-Project.md)
 
 ---
 <!-- End Navigation -->
@@ -34,7 +34,7 @@ Like all of these lessons, what you put in to this exercise is what you will get
 
 ---
 
-[Previous: 23-Imports](./23-Imports.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 25-Do-a-Project](./25-Do-a-Project.md)
+[Previous: 23 - Imports ](./23-Imports.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 25 - Do a Project](./25-Do-a-Project.md)
 
 ---
 <!-- End Navigation -->

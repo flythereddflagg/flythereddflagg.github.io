@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 13-Logic-and-Boolean-Operators](./13-Logic-and-Boolean-Operators.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 15-Errors-Exceptions-and-Bugs](./15-Errors-Exceptions-and-Bugs.md)
+[Previous: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 15 - Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md)
 
 ---
 <!-- End Navigation -->
@@ -183,7 +183,7 @@ You may not know understand yet why these are so important but as we go along it
 
 ---
 
-[Previous: 13-Logic-and-Boolean-Operators](./13-Logic-and-Boolean-Operators.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 15-Errors-Exceptions-and-Bugs](./15-Errors-Exceptions-and-Bugs.md)
+[Previous: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 15 - Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md)
 
 ---
 <!-- End Navigation -->

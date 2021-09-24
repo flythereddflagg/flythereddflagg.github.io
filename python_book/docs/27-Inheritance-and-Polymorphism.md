@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 26-Objects-and-Classes](./26-Objects-and-Classes.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 28-Modules](./28-Modules.md)
+[Previous: 26 - Objects and Classes](./26-Objects-and-Classes.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 28 - Modules ](./28-Modules.md)
 
 ---
 <!-- End Navigation -->
@@ -177,7 +177,7 @@ One more powerful feature of object-oriented programming is the idea that a give
 
 ---
 
-[Previous: 26-Objects-and-Classes](./26-Objects-and-Classes.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 28-Modules](./28-Modules.md)
+[Previous: 26 - Objects and Classes](./26-Objects-and-Classes.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 28 - Modules ](./28-Modules.md)
 
 ---
 <!-- End Navigation -->

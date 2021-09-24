@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 16-File-Reading-and-Writing](./16-File-Reading-and-Writing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 18-Iterables](./18-Iterables.md)
+[Previous: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 18 - Iterables ](./18-Iterables.md)
 
 ---
 <!-- End Navigation -->
@@ -125,7 +125,7 @@ In my estimation, for-loops are one of the most powerful features in programming
 
 ---
 
-[Previous: 16-File-Reading-and-Writing](./16-File-Reading-and-Writing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 18-Iterables](./18-Iterables.md)
+[Previous: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 18 - Iterables ](./18-Iterables.md)
 
 ---
 <!-- End Navigation -->

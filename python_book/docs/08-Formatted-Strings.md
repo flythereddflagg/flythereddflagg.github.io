@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 07-Escape-Characters](./07-Escape-Characters.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 09-Variables-and-Memory](./09-Variables-and-Memory.md)
+[Previous: 07 - Escape Characters](./07-Escape-Characters.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 09 - Variables and Memory](./09-Variables-and-Memory.md)
 
 ---
 <!-- End Navigation -->
@@ -123,7 +123,7 @@ print("{0} ".format("No.") * 3)
 
 ---
 
-[Previous: 07-Escape-Characters](./07-Escape-Characters.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 09-Variables-and-Memory](./09-Variables-and-Memory.md)
+[Previous: 07 - Escape Characters](./07-Escape-Characters.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 09 - Variables and Memory](./09-Variables-and-Memory.md)
 
 ---
 <!-- End Navigation -->

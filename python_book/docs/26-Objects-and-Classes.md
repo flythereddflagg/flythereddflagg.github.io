@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 25-Do-a-Project](./25-Do-a-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md)
+[Previous: 25 - Do a Project](./25-Do-a-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 27 - Inheritance and Polymorphism](./27-Inheritance-and-Polymorphism.md)
 
 ---
 <!-- End Navigation -->
@@ -15,7 +15,7 @@ There are two shorter exercises in this section as well as some new vocabulary. 
 
 ### What is object oriented programming?
 
-In Python, everything is an object. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work, including some things common to Python objects. For an example, we will use some list objects in Python. Do the following exercise:
+Remember that, in Python, everything is an <span title="In object-oriented programming (OOP): an abstract data type created by a developer that can include multiple properties and methods and may even contain other objects. In most programming languages, objects are defined as classes.">**object**</span>. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work, including some things common to Python objects. For an example, we will use some list objects in Python. Do the following exercise:
 
 ```python
 # list_objects.py
@@ -31,12 +31,12 @@ print("Initial objects", list_object, list_object2)
 
 list_object.append(23)
 list_object2.append(24)
-
 print("Added 1 element to each", list_object, list_object2)
+
 list_object.append(36)
 list_object2.append(45)
-
 print("Added another element to each", list_object, list_object2)
+
 # now we will remove both elements of each
 list_object.pop()
 list_object2.pop()
@@ -45,6 +45,7 @@ print("Popped off one element", list_object, list_object2)
 list_object.pop()
 list_object2.pop()
 print("Popped off the other", list_object, list_object2)
+
 ```
 
 **Here is what should happen**
@@ -63,11 +64,11 @@ From this short exercise you should be able to see the following:
 
 - **Objects must be called into existence by some function**
 
-  You may not see exactly where it happens but when you write `x = []` you are effectively calling `list()` and setting it equal to x. You will not see the details of this but they are implemented in the Python code somewhere. The process of calling an object into existence is called **instantiation** and the function that usually makes it happen is called an **object constructor.** Another way to think about this relationship is that `list_object1` and `list_object2` are both **instances** of a `list` data type.
+  You may not see exactly where it happens but when you write `x = []` you are effectively calling `list()` and setting it equal to `x`. You will not see the details of this but they are implemented in the Python code somewhere. The process of calling an object into existence is called <span title="The act of producing an instance, or example of a class, or type of object. (e.g. Using blueprints to build the same house many times is an example of using the blue prints or class to instantiate each individual house.)">**instantiation**</span> and the method or function that makes it happen is called an <span title="A method (or a funciton belonging to a class) intended to execute the instantiaion of the object.">**object constructor**</span>. For example, `list_object1` and `list_object2` are both **instances** of a `list` data type or a `list` class.
 
 - **Objects have and can be modified by methods**
 
-  You have seen before and in this short exercise that functions may be called with dot syntax (e.g. `list_object.pop()`). I have mentioned before that these functions are called **methods** and "belong" to the object they are being called from. A method may do anything the programmer wishes but often are used to modify the object or, more specifically, the data or variables that "belong" to the object. The variables that "belong" to the object are called the object's **attributes**.
+  You have seen before and in this short exercise that functions may be called with dot syntax (e.g. `list_object.pop()`). I have mentioned before that these functions are called <span title="A funciton declared inside a class structure that acts using the instance of the class.">**methods**</span> and "belong" to the object they are being called from. A method may do anything the programmer wishes but often are used to modify the object or, more specifically, the data or variables that "belong" to the object. The variables that "belong" to the object are called the object's <span title="A variable declared inside a class structure that is used in the context of the object instance.">**attributes**</span>.
 
 ### Objects are handled by reference
 
@@ -87,7 +88,7 @@ y = x
 y[0] += 3
 ```
 
-You will find that `y[0] = 5` *and* `x[0] = 5`. This is because you just made two variables `x` and `y` that refer to the same object! This is how all objects behave. The variable names act only as a reference. Therefore when you modified one of the variables it changed the object that both variables pointed to. This idea of only replicating a reference to an object is called a **shallow copy** of an object. If you wish to have a distinct **deep copy** of an list object you may use the `list.copy()` method as follows:
+You will find that `y[0] = 5` *and* `x[0] = 5`. This is because you just made two variables `x` and `y` that refer to the same object (or chunk of memory)! This is how all objects behave. The variable names act only as a reference. Therefore when you modified one of the variables it changed the object that both variables pointed to. This idea of only replicating a reference to an object is called a **shallow copy** of an object. If you wish to have a distinct **deep copy** of a list object you may use the `list.copy()` method as follows:
 
 ```python
 x = [2]
@@ -148,7 +149,7 @@ It may not be obvious right now but, this structure of programming allows you to
 
 #### Attributes and the `self` variable
 
-Any object that is contained by the class or object is considered an attribute of the class or object. This includes functions and the data members inside the class. Functions inside the class are called **methods** and **members** are generally any other objects contained in the class. These are generally referenced in code with the dot syntax (i.e. `object_name.attribute_name`). However, you may have noticed that inside the class definition you see that they are referenced using the `self` variable. 
+Any object that is contained by the class or object is considered an attribute of the class or object. This includes functions and the data members inside the class. Functions inside the class are called **methods** and <span title="Another name for attributes.">**members**</span> are generally any other objects contained in the class. These are generally referenced in code with the dot syntax (i.e. `object_name.attribute_name`). However, you may have noticed that inside the class definition you see that they are referenced using the `self` variable. 
 
 `self` is just a variable that could be named anything but is used by convention in Python. It is a reference to the **instance** of the object that is referring to the attribute. Therefore when you instantiated the cats named "Snowflake" and "Milo" when you called `.print_introduction` on both of them they produced their respective data types in the print statement. In the class definition, if one simply tried to print `name` instead of `self.name`, Python looks for a global variable called name and will throw an error if it cannot find one.
 
@@ -169,7 +170,7 @@ Any object that is contained by the class or object is considered an attribute o
 
 ---
 
-[Previous: 25-Do-a-Project](./25-Do-a-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 27-Inheritance-and-Polymorphism](./27-Inheritance-and-Polymorphism.md)
+[Previous: 25 - Do a Project](./25-Do-a-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 27 - Inheritance and Polymorphism](./27-Inheritance-and-Polymorphism.md)
 
 ---
 <!-- End Navigation -->

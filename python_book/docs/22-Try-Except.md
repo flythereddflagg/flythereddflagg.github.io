@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 21-More-Functions](./21-More-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 23-Imports](./23-Imports.md)
+[Previous: 21 - More Functions](./21-More-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 23 - Imports ](./23-Imports.md)
 
 ---
 <!-- End Navigation -->
@@ -135,7 +135,7 @@ The backslash `\` at the end of the line is called a "line continuation characte
 
 ---
 
-[Previous: 21-More-Functions](./21-More-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 23-Imports](./23-Imports.md)
+[Previous: 21 - More Functions](./21-More-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 23 - Imports ](./23-Imports.md)
 
 ---
 <!-- End Navigation -->

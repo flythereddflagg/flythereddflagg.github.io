@@ -828,7 +828,7 @@
                 <!-- Navigation -->
 
 <hr />
-<p><a href="../29-Comments-and-Code-Documentation/">Previous: 29-Comments-and-Code-Documentation</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../31-Automated-Testing/">Next: 31-Automated-Testing</a></p>
+<p><a href="../29-Comments-and-Code-Documentation/">Previous: 29 - Comments and Code Documentation</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../31-Automated-Testing/">Next: 31 - Automated Testing</a></p>
 <hr />
 <!-- End Navigation -->
 <h1 id="30-packages-and-project-structure">30 - Packages and Project structure</h1>
@@ -878,8 +878,8 @@
 <span class="linenos" data-linenos="18 "></span>        __init__.py
 </code></pre></div>
 <h3 id="the-emails-package">The <code>emails</code> package</h3>
-<p>You have just created project called <code>emails</code> that contains two packages called <code>emails</code> and <code>tests</code>. Both of these packages contain an <code>__init__.py</code> file. This file tells python to treat the folder that contains it as its own module. Therefore, any code in <code>./emails/emails/__init__.py</code> may be imported from emails as: <code>from emails import a_thing</code> where <code>a_thing</code> is any class, function or variable defined inside of the <code>__init__.py</code> script. Other Python scripts may be placed in the folder as well (regardless of the presence of an <code>__init__.py</code> script) and classes functions or variables may be imported as: <code>from emails.module import a_thing</code> where <code>module</code> corresponds to <code>module.py</code> inside the folder. The <code>emails</code> folder is where we want to put all of our Python source code for the project. The <code>tests</code> package is where we can write automated tests for our <code>emails</code> package. We will work mainly with these two folders for this section. </p>
-<p>The other two folders are <code>bin</code> and <code>docs</code> and contain binary or executable files we wish to include with our code and documentation about our code respectively. The structure we have just made is not the only or "correct" way to structure a project but it is a convenient way to start a project. For our purposes it is a good idea not to have an empty folder so we have put a <code>placeholder.txt</code> file in each empty folder.</p>
+<p>You have just created project called <code>emails</code> that contains two packages called <code>emails</code> and <code>tests</code>. Both of these packages contain an <code>__init__.py</code> file. This file tells python to treat the file's containing folder as a Python module. Therefore, any code in <code>./emails/emails/__init__.py</code> may be imported from emails as: <code>from emails import a_thing</code> where <code>a_thing</code> is any class, function or variable defined inside of the <code>__init__.py</code> script. Other Python scripts may be placed in the folder as well (regardless of the presence of an <code>__init__.py</code> script) and classes functions or variables may be imported as: <code>from emails.module import a_thing</code> where <code>module</code> corresponds to <code>module.py</code> inside the folder. The <code>emails</code> folder is where we want to put all of our Python source code for the project. The <code>tests</code> package is where we can write automated tests for our <code>emails</code> package. We will work mainly with these two folders for this section. </p>
+<p>The other two folders are <code>bin</code> and <code>docs</code> and contain binary or executable files we wish to include with our code and documentation about our code respectively. The structure we have just made is not the only or "correct" way to structure a project but it is a convenient way to start a project. For our purposes, it is a good idea not to have an empty folder so we have put a <code>placeholder.txt</code> file in each empty folder.</p>
 <h3 id="make-a-project">Make a project</h3>
 <p>Now that we have our project 'skeleton' in place, copy your working code from the modules section into the <code>emails</code> folder. Because you will run this in the context of the <code>emails</code> package make sure you change the following imports to reflect this. Change:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">from</span> <span class="nn">database_manager</span> <span class="kn">import</span> <span class="n">DatabaseManager</span>
@@ -898,7 +898,7 @@
 <span class="linenos" data-linenos="7 "></span><span class="o">&gt;&gt;&gt;</span> <span class="n">run_ui_test</span><span class="p">()</span>
 </code></pre></div>
 <p>Your project should run as it always has.</p>
-<p>If the above test worked, congradulations! You have yourself a working project! You can add code to the  <code>emails</code> folder or documentation to the <code>docs</code> folder as you see fit. But for our purposes, the real utiltiy of the project structure is the abliity you have to automatically test your project with a little tool called <code>nose</code>.</p>
+<p>If the above test worked, congradulations! You have yourself a working project! You can add code to the  <code>emails</code> folder or documentation to the <code>docs</code> folder as you see fit. But for our purposes, the real utiltiy of the project structure is the abliity you have to automatically test your project with automated tests.</p>
 <p>This will be covered in the next section.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>
@@ -908,7 +908,7 @@
 <!-- Navigation -->
 
 <hr />
-<p><a href="../29-Comments-and-Code-Documentation/">Previous: 29-Comments-and-Code-Documentation</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../31-Automated-Testing/">Next: 31-Automated-Testing</a></p>
+<p><a href="../29-Comments-and-Code-Documentation/">Previous: 29 - Comments and Code Documentation</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../31-Automated-Testing/">Next: 31 - Automated Testing</a></p>
 <hr />
 <!-- End Navigation -->
                 

@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 24-Reading-Code](./24-Reading-Code.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 26-Objects-and-Classes](./26-Objects-and-Classes.md)
+[Previous: 24 - Reading Code](./24-Reading-Code.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 26 - Objects and Classes](./26-Objects-and-Classes.md)
 
 ---
 <!-- End Navigation -->
@@ -306,7 +306,7 @@ You may notice that these introductions have been brief. This is on purpose. My 
 
 ---
 
-[Previous: 24-Reading-Code](./24-Reading-Code.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 26-Objects-and-Classes](./26-Objects-and-Classes.md)
+[Previous: 24 - Reading Code](./24-Reading-Code.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 26 - Objects and Classes](./26-Objects-and-Classes.md)
 
 ---
 <!-- End Navigation -->

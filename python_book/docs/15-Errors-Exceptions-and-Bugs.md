@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 14-If-elif-and-else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16-File-Reading-and-Writing](./16-File-Reading-and-Writing.md)
+[Previous: 14 - If elif and else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md)
 
 ---
 <!-- End Navigation -->
@@ -157,7 +157,7 @@ As noted above, the hardest thing to fix is logic errors. Later, we will go into
 
 ---
 
-[Previous: 14-If-elif-and-else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16-File-Reading-and-Writing](./16-File-Reading-and-Writing.md)
+[Previous: 14 - If elif and else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md)
 
 ---
 <!-- End Navigation -->

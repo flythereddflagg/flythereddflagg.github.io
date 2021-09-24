@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 18-Iterables](./18-Iterables.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 20-Functions](./20-Functions.md)
+[Previous: 18 - Iterables ](./18-Iterables.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 20 - Functions ](./20-Functions.md)
 
 ---
 <!-- End Navigation -->
@@ -95,7 +95,7 @@ As we saw above, dictionaries can be thought of as a list of unique keys that, w
 
 ---
 
-[Previous: 18-Iterables](./18-Iterables.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 20-Functions](./20-Functions.md)
+[Previous: 18 - Iterables ](./18-Iterables.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 20 - Functions ](./20-Functions.md)
 
 ---
 <!-- End Navigation -->

@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 12-Math-and-Data](./12-Math-and-Data.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 14-If-elif-and-else](./14-If-elif-and-else.md)
+[Previous: 12 - Math and Data](./12-Math-and-Data.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 14 - If elif and else](./14-If-elif-and-else.md)
 
 ---
 <!-- End Navigation -->
@@ -218,7 +218,7 @@ For all of these operators, memorize their behavior and practice with them
 
 ---
 
-[Previous: 12-Math-and-Data](./12-Math-and-Data.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 14-If-elif-and-else](./14-If-elif-and-else.md)
+[Previous: 12 - Math and Data](./12-Math-and-Data.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 14 - If elif and else](./14-If-elif-and-else.md)
 
 ---
 <!-- End Navigation -->

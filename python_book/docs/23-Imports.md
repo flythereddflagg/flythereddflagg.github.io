@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 22-Try-Except](./22-Try-Except.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 24-Reading-Code](./24-Reading-Code.md)
+[Previous: 22 - Try Except](./22-Try-Except.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 24 - Reading Code](./24-Reading-Code.md)
 
 ---
 <!-- End Navigation -->
@@ -248,7 +248,7 @@ def gen_random_matrix(size):
 
 ---
 
-[Previous: 22-Try-Except](./22-Try-Except.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 24-Reading-Code](./24-Reading-Code.md)
+[Previous: 22 - Try Except](./22-Try-Except.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 24 - Reading Code](./24-Reading-Code.md)
 
 ---
 <!-- End Navigation -->

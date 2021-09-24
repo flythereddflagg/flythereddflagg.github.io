@@ -896,7 +896,7 @@
                 <!-- Navigation -->
 
 <hr />
-<p><a href="../25-Do-a-Project/">Previous: 25-Do-a-Project</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../27-Inheritance-and-Polymorphism/">Next: 27-Inheritance-and-Polymorphism</a></p>
+<p><a href="../25-Do-a-Project/">Previous: 25 - Do a Project</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../27-Inheritance-and-Polymorphism/">Next: 27 - Inheritance and Polymorphism</a></p>
 <hr />
 <!-- End Navigation -->
 
@@ -904,7 +904,7 @@
 <p>Now that you have finished your project you should feel more or less comfortable with the basics of Python. The next thing to learn about is a new paradigm of programming: Object oriented programming!</p>
 <p>There are two shorter exercises in this section as well as some new vocabulary. Ensure that you understand all the terms in <strong>bold</strong> as you go along as these concepts will come up later.</p>
 <h3 id="what-is-object-oriented-programming">What is object oriented programming?</h3>
-<p>In Python, everything is an object. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work, including some things common to Python objects. For an example, we will use some list objects in Python. Do the following exercise:</p>
+<p>Remember that, in Python, everything is an <span title="In object-oriented programming (OOP): an abstract data type created by a developer that can include multiple properties and methods and may even contain other objects. In most programming languages, objects are defined as classes."><strong>object</strong></span>. That means that every type of data is held inside a container of memory. Inside this container is everything the object needs to work, including some things common to Python objects. For an example, we will use some list objects in Python. Do the following exercise:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># list_objects.py</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="n">list_object</span> <span class="o">=</span> <span class="p">[]</span>
@@ -918,12 +918,12 @@
 <span class="linenos" data-linenos="11 "></span>
 <span class="linenos" data-linenos="12 "></span><span class="n">list_object</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">23</span><span class="p">)</span>
 <span class="linenos" data-linenos="13 "></span><span class="n">list_object2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
-<span class="linenos" data-linenos="14 "></span>
-<span class="linenos" data-linenos="15 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Added 1 element to each&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Added 1 element to each&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
+<span class="linenos" data-linenos="15 "></span>
 <span class="linenos" data-linenos="16 "></span><span class="n">list_object</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">36</span><span class="p">)</span>
 <span class="linenos" data-linenos="17 "></span><span class="n">list_object2</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">45</span><span class="p">)</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Added another element to each&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
+<span class="linenos" data-linenos="18 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Added another element to each&quot;</span><span class="p">,</span> <span class="n">list_object</span><span class="p">,</span> <span class="n">list_object2</span><span class="p">)</span>
+<span class="linenos" data-linenos="19 "></span>
 <span class="linenos" data-linenos="20 "></span><span class="c1"># now we will remove both elements of each</span>
 <span class="linenos" data-linenos="21 "></span><span class="n">list_object</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
 <span class="linenos" data-linenos="22 "></span><span class="n">list_object2</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>
@@ -946,11 +946,11 @@
 <ul>
 <li><strong>Objects must be called into existence by some function</strong></li>
 </ul>
-<p>You may not see exactly where it happens but when you write <code>x = []</code> you are effectively calling <code>list()</code> and setting it equal to x. You will not see the details of this but they are implemented in the Python code somewhere. The process of calling an object into existence is called <strong>instantiation</strong> and the function that usually makes it happen is called an <strong>object constructor.</strong> Another way to think about this relationship is that <code>list_object1</code> and <code>list_object2</code> are both <strong>instances</strong> of a <code>list</code> data type.</p>
+<p>You may not see exactly where it happens but when you write <code>x = []</code> you are effectively calling <code>list()</code> and setting it equal to <code>x</code>. You will not see the details of this but they are implemented in the Python code somewhere. The process of calling an object into existence is called <span title="The act of producing an instance, or example of a class, or type of object. (e.g. Using blueprints to build the same house many times is an example of using the blue prints or class to instantiate each individual house.)"><strong>instantiation</strong></span> and the method or function that makes it happen is called an <span title="A method (or a funciton belonging to a class) intended to execute the instantiaion of the object."><strong>object constructor</strong></span>. For example, <code>list_object1</code> and <code>list_object2</code> are both <strong>instances</strong> of a <code>list</code> data type or a <code>list</code> class.</p>
 <ul>
 <li><strong>Objects have and can be modified by methods</strong></li>
 </ul>
-<p>You have seen before and in this short exercise that functions may be called with dot syntax (e.g. <code>list_object.pop()</code>). I have mentioned before that these functions are called <strong>methods</strong> and "belong" to the object they are being called from. A method may do anything the programmer wishes but often are used to modify the object or, more specifically, the data or variables that "belong" to the object. The variables that "belong" to the object are called the object's <strong>attributes</strong>.</p>
+<p>You have seen before and in this short exercise that functions may be called with dot syntax (e.g. <code>list_object.pop()</code>). I have mentioned before that these functions are called <span title="A funciton declared inside a class structure that acts using the instance of the class."><strong>methods</strong></span> and "belong" to the object they are being called from. A method may do anything the programmer wishes but often are used to modify the object or, more specifically, the data or variables that "belong" to the object. The variables that "belong" to the object are called the object's <span title="A variable declared inside a class structure that is used in the context of the object instance."><strong>attributes</strong></span>.</p>
 <h3 id="objects-are-handled-by-reference">Objects are handled by reference</h3>
 <p>Since everything is an object in Python, this may not make much sense until you see the effects of this behavior. In Python when you write code like:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
@@ -962,7 +962,7 @@
 <span class="linenos" data-linenos="2 "></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
 <span class="linenos" data-linenos="3 "></span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">3</span>
 </code></pre></div>
-<p>You will find that <code>y[0] = 5</code> <em>and</em> <code>x[0] = 5</code>. This is because you just made two variables <code>x</code> and <code>y</code> that refer to the same object! This is how all objects behave. The variable names act only as a reference. Therefore when you modified one of the variables it changed the object that both variables pointed to. This idea of only replicating a reference to an object is called a <strong>shallow copy</strong> of an object. If you wish to have a distinct <strong>deep copy</strong> of an list object you may use the <code>list.copy()</code> method as follows:</p>
+<p>You will find that <code>y[0] = 5</code> <em>and</em> <code>x[0] = 5</code>. This is because you just made two variables <code>x</code> and <code>y</code> that refer to the same object (or chunk of memory)! This is how all objects behave. The variable names act only as a reference. Therefore when you modified one of the variables it changed the object that both variables pointed to. This idea of only replicating a reference to an object is called a <strong>shallow copy</strong> of an object. If you wish to have a distinct <strong>deep copy</strong> of a list object you may use the <code>list.copy()</code> method as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">]</span>
 <span class="linenos" data-linenos="2 "></span><span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="linenos" data-linenos="3 "></span><span class="n">y</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">3</span>
@@ -1007,7 +1007,7 @@
 <h3 id="defining-behavior-and-data-structures">Defining Behavior and Data Structures</h3>
 <p>It may not be obvious right now but, this structure of programming allows you to scale your programs in a very powerful way. In a class, the programmer may define any behavior he/she wants for the class of objects once and may reuse that behavior for every instance of the class. The way that behavior is defined is via <strong>methods</strong> and <strong>attributes</strong>.</p>
 <h4 id="attributes-and-the-self-variable">Attributes and the <code>self</code> variable</h4>
-<p>Any object that is contained by the class or object is considered an attribute of the class or object. This includes functions and the data members inside the class. Functions inside the class are called <strong>methods</strong> and <strong>members</strong> are generally any other objects contained in the class. These are generally referenced in code with the dot syntax (i.e. <code>object_name.attribute_name</code>). However, you may have noticed that inside the class definition you see that they are referenced using the <code>self</code> variable. </p>
+<p>Any object that is contained by the class or object is considered an attribute of the class or object. This includes functions and the data members inside the class. Functions inside the class are called <strong>methods</strong> and <span title="Another name for attributes."><strong>members</strong></span> are generally any other objects contained in the class. These are generally referenced in code with the dot syntax (i.e. <code>object_name.attribute_name</code>). However, you may have noticed that inside the class definition you see that they are referenced using the <code>self</code> variable. </p>
 <p><code>self</code> is just a variable that could be named anything but is used by convention in Python. It is a reference to the <strong>instance</strong> of the object that is referring to the attribute. Therefore when you instantiated the cats named "Snowflake" and "Milo" when you called <code>.print_introduction</code> on both of them they produced their respective data types in the print statement. In the class definition, if one simply tried to print <code>name</code> instead of <code>self.name</code>, Python looks for a global variable called name and will throw an error if it cannot find one.</p>
 <h4 id="methods">Methods</h4>
 <p><strong>Methods</strong> are just functions defined inside the class definition and operate solely within the context of the class or <strong>instances</strong> of the class. Methods are there to define how a class will behave. In fact, a class can be altered to act in all sorts of useful ways (see <a href="#Advanced-Mastery">Advanced Mastery</a> below). As a matter of good coding practice, methods should alter the class's members or return outputs of the class but should not alter other objects or classes not referred to by the class.</p>
@@ -1023,7 +1023,7 @@
 <!-- Navigation -->
 
 <hr />
-<p><a href="../25-Do-a-Project/">Previous: 25-Do-a-Project</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../27-Inheritance-and-Polymorphism/">Next: 27-Inheritance-and-Polymorphism</a></p>
+<p><a href="../25-Do-a-Project/">Previous: 25 - Do a Project</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../27-Inheritance-and-Polymorphism/">Next: 27 - Inheritance and Polymorphism</a></p>
 <hr />
 <!-- End Navigation -->
                 

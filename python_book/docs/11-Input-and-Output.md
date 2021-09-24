@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 10-Better-String-Formatting](./10-Better-String-Formatting.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 12-Math-and-Data](./12-Math-and-Data.md)
+[Previous: 10 - Better String Formatting](./10-Better-String-Formatting.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 12 - Math and Data](./12-Math-and-Data.md)
 
 ---
 <!-- End Navigation -->
@@ -78,7 +78,7 @@ is a gift card!" The cockroaches took it home and made slides.*
 
 ---
 
-[Previous: 10-Better-String-Formatting](./10-Better-String-Formatting.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 12-Math-and-Data](./12-Math-and-Data.md)
+[Previous: 10 - Better String Formatting](./10-Better-String-Formatting.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 12 - Math and Data](./12-Math-and-Data.md)
 
 ---
 <!-- End Navigation -->

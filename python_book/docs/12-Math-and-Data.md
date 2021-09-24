@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 11-Input-and-Output](./11-Input-and-Output.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 13-Logic-and-Boolean-Operators](./13-Logic-and-Boolean-Operators.md)
+[Previous: 11 - Input and Output](./11-Input-and-Output.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md)
 
 ---
 <!-- End Navigation -->
@@ -213,7 +213,7 @@ Lastly we will talk about some built-in functions (like `print()`) can help us e
 
 ---
 
-[Previous: 11-Input-and-Output](./11-Input-and-Output.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 13-Logic-and-Boolean-Operators](./13-Logic-and-Boolean-Operators.md)
+[Previous: 11 - Input and Output](./11-Input-and-Output.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md)
 
 ---
 <!-- End Navigation -->

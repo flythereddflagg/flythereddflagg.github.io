@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 08-Formatted-Strings](./08-Formatted-Strings.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 10-Better-String-Formatting](./10-Better-String-Formatting.md)
+[Previous: 08 - Formatted Strings](./08-Formatted-Strings.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 10 - Better String Formatting](./10-Better-String-Formatting.md)
 
 ---
 <!-- End Navigation -->
@@ -235,7 +235,7 @@ Any good programmer knows that **the majority of the time spent coding is actual
 
 ---
 
-[Previous: 08-Formatted-Strings](./08-Formatted-Strings.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 10-Better-String-Formatting](./10-Better-String-Formatting.md)
+[Previous: 08 - Formatted Strings](./08-Formatted-Strings.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 10 - Better String Formatting](./10-Better-String-Formatting.md)
 
 ---
 <!-- End Navigation -->

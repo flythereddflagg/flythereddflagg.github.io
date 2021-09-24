@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 20-Functions](./20-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 22-Try-Except](./22-Try-Except.md)
+[Previous: 20 - Functions ](./20-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 22 - Try Except](./22-Try-Except.md)
 
 ---
 <!-- End Navigation -->
@@ -149,7 +149,7 @@ And the function starts over again. This continues until the base case has been 
 
 ---
 
-[Previous: 20-Functions](./20-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 22-Try-Except](./22-Try-Except.md)
+[Previous: 20 - Functions ](./20-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 22 - Try Except](./22-Try-Except.md)
 
 ---
 <!-- End Navigation -->

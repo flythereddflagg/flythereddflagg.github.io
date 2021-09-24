@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 19-Dictionaries](./19-Dictionaries.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 21-More-Functions](./21-More-Functions.md)
+[Previous: 19 - Dictionaries ](./19-Dictionaries.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 21 - More Functions](./21-More-Functions.md)
 
 ---
 <!-- End Navigation -->
@@ -214,7 +214,7 @@ The code under the `main` function is what is known as a "main-loop" or a "main-
 
 ---
 
-[Previous: 19-Dictionaries](./19-Dictionaries.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 21-More-Functions](./21-More-Functions.md)
+[Previous: 19 - Dictionaries ](./19-Dictionaries.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 21 - More Functions](./21-More-Functions.md)
 
 ---
 <!-- End Navigation -->

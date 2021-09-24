@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 09-Variables-and-Memory](./09-Variables-and-Memory.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 11-Input-and-Output](./11-Input-and-Output.md)
+[Previous: 09 - Variables and Memory](./09-Variables-and-Memory.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 11 - Input and Output](./11-Input-and-Output.md)
 
 ---
 <!-- End Navigation -->
@@ -131,7 +131,7 @@ The `f` that we put in front of a string is referred to technically as a "litera
 
 ---
 
-[Previous: 09-Variables-and-Memory](./09-Variables-and-Memory.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 11-Input-and-Output](./11-Input-and-Output.md)
+[Previous: 09 - Variables and Memory](./09-Variables-and-Memory.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 11 - Input and Output](./11-Input-and-Output.md)
 
 ---
 <!-- End Navigation -->

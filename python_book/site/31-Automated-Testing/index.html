@@ -898,14 +898,14 @@
                 <!-- Navigation -->
 
 <hr />
-<p><a href="../30-Packages-and-Project-Structure/">Previous: 30-Packages-and-Project-Structure</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../32-Do-Another-Project/">Next: 32-Do-Another-Project</a></p>
+<p><a href="../30-Packages-and-Project-Structure/">Previous: 30 - Packages and Project Structure</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../32-Do-Another-Project/">Next: 32 - Do Another Project</a></p>
 <hr />
 <!-- End Navigation -->
 <h1 id="31-automated-testing">31 - Automated Testing</h1>
 <p>In some sense, the job of a programmer is to get a computer automatically do a task that someone else would have to do. The best programmers automate everything they can, including programming itself where possible. This section in particular will help you automate what can be one of the most necessary and evil necessary evils of programming. Testing your programs.</p>
 <h3 id="test-driven-development">Test-Driven Development</h3>
 <p>I have mentioned before that taking some time to plan your project will make the process of programming easier. One way to do this is to make programs that test whether your program performs as expected. Do this before you even write one line of code for your project. This forces you to ask important questions about your program such as: What do I want my program to actually do? How well does it have to do it? What things will cause the code to crash?</p>
-<p>The programmer does not need to answer all these questions before beginning but it is helpful to have some basic tests ready before beginning a project. More tests can be added as the project progresses. However as you add many tests you will want to automate that part of the process as well. To do this we have a powerful tool called <code>nose</code>.</p>
+<p>The programmer does not need to answer all these questions perfectly before beginning but it is helpful to have some basic tests ready before beginning a project. More tests can be added as the project progresses. However as you add many tests you will want to automate that part of the process as well. To do this we have a powerful tool called <code>nose</code>.</p>
 <h3 id="about-nose">About <code>nose</code></h3>
 <p>At the time of writing, the original <code>nose</code> package has been replaced by <code>nose2</code> which will be maintained for the foreseeable future and has more features than the original <code>nose</code>. Therefore, this section will be an introduction on how to use <code>nose2</code> instead of <code>nose</code>. However, <code>nose</code> and <code>nose2</code> are hardly the only packages that can do automated testing. The <code>nose2</code> package is relatively easy to use and has plenty of features. For these reasons I have elected to use it to demonstrate automated testing techniques. Below I have included an exercise to allow the reader to try a few different automated testing packages.</p>
 <p><code>nose2</code> works by being called in your project's root directory and searching for folders and files with names beginning with 'test'. It then runs all functions with names beginning with 'test'. If no errors occur then it gives them a pass. It then reports back what passed and what failed. The general failure conditions are 'E' for error and 'F' for assertion error. The <code>assert</code> statement is the way an assertion error is raised.</p>
@@ -997,7 +997,7 @@
 </code></pre></div>
 <p>If you get the above output, congratulations! Your tests all passed! </p>
 <h3 id="your-assignment">Your Assignment</h3>
-<p>Write more tests in separate functions to ensure that as many parts of the program are working as possible. If your tests fail, use the principles in the "Do a project" section to debug and fix those problems.  Continue using <code>nose2</code> to test your program as a whole until your program is free of bugs. Make multiple test modules to test different sub sections of your code. In each file make multiple tests that test individual units of the module. Remember that each filename must begin with "test" and each variable name must also begin with "test".</p>
+<p>Write more tests in separate functions to ensure that as many parts of the program are working as possible. If your tests fail, use the principles in the "Do a project" section to debug and fix those problems.  Continue using <code>nose2</code> to test your program as a whole until your program is practicallly free of bugs. Make multiple test modules to test different sub sections of your code. In each file make multiple tests that test individual units of the module. Remember that each filename must begin with "test" and each variable name must also begin with "test".</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>
 <li>Use automated testing to drive your development from here on out. Write tests before you write code that do what you want the code to do. Once you have done this, write code that passes those tests.</li>
@@ -1011,7 +1011,7 @@
 <!-- Navigation -->
 
 <hr />
-<p><a href="../30-Packages-and-Project-Structure/">Previous: 30-Packages-and-Project-Structure</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../32-Do-Another-Project/">Next: 32-Do-Another-Project</a></p>
+<p><a href="../30-Packages-and-Project-Structure/">Previous: 30 - Packages and Project Structure</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../32-Do-Another-Project/">Next: 32 - Do Another Project</a></p>
 <hr />
 <!-- End Navigation -->
                 

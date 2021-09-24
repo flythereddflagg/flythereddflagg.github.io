@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 04-Hello-World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06-Strings-and-the-Print-Function](./06-Strings-and-the-Print-Function.md)
+[Previous: 04 - Hello World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md)
 
 ---
 <!-- End Navigation -->
@@ -137,7 +137,7 @@ I will put comments in the code I have you write. You do not need to put these i
 
 ---
 
-[Previous: 04-Hello-World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06-Strings-and-the-Print-Function](./06-Strings-and-the-Print-Function.md)
+[Previous: 04 - Hello World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md)
 
 ---
 <!-- End Navigation -->

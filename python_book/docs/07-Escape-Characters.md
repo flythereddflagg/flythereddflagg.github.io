@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 06-Strings-and-the-Print-Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08-Formatted-Strings](./08-Formatted-Strings.md)
+[Previous: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08 - Formatted Strings](./08-Formatted-Strings.md)
 
 ---
 <!-- End Navigation -->
@@ -106,7 +106,7 @@ These are not all the potential escape characters. You can learn more about thes
 
 ---
 
-[Previous: 06-Strings-and-the-Print-Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08-Formatted-Strings](./08-Formatted-Strings.md)
+[Previous: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08 - Formatted Strings](./08-Formatted-Strings.md)
 
 ---
 <!-- End Navigation -->

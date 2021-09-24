@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 00-Table-of-Contents](./00-Table-of-Contents.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 02-Getting-Started](./02-Getting-Started.md)
+ | [Table of Contents](./00-Table-of-Contents.md) | [Next: 02 - Getting Started](./02-Getting-Started.md)
 
 ---
 <!-- End Navigation -->
@@ -99,7 +99,7 @@ I will sometimes have you read [The Official Python Documentation](https://docs.
 
 ---
 
-[Previous: 00-Table-of-Contents](./00-Table-of-Contents.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 02-Getting-Started](./02-Getting-Started.md)
+ | [Table of Contents](./00-Table-of-Contents.md) | [Next: 02 - Getting Started](./02-Getting-Started.md)
 
 ---
 <!-- End Navigation -->

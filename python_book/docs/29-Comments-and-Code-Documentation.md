@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 28-Modules](./28-Modules.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md)
+[Previous: 28 - Modules ](./28-Modules.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 30 - Packages and Project Structure](./30-Packages-and-Project-Structure.md)
 
 ---
 <!-- End Navigation -->
@@ -45,7 +45,7 @@ class Dummy():
         """
         This is a function or method belonging to the Dummy class
         that will take longer than one sentence to explain. Where
-        this is the case be as detailed as necessary. Some functions
+        this is the case, be as detailed as necessary. Some functions
         are so complex that they require many lines of code to explain
         the intent and use of a function. For such cases it is useful
         to list the parameters and what they mean. e.g. :
@@ -126,7 +126,7 @@ I have introduced this feature now instead of earlier for a few reasons. Before 
 
 ---
 
-[Previous: 28-Modules](./28-Modules.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 30-Packages-and-Project-Structure](./30-Packages-and-Project-Structure.md)
+[Previous: 28 - Modules ](./28-Modules.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 30 - Packages and Project Structure](./30-Packages-and-Project-Structure.md)
 
 ---
 <!-- End Navigation -->
