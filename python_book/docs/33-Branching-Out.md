@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 32 - Do Another Project](./32-Do-Another-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+[Previous: 32 - Do Another Project](./32-Do-Another-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E01 - Getting Started Again](./E01-Getting-Started-Again.md)
 
 ---
 <!-- End Navigation -->
@@ -27,7 +27,7 @@ I gather by the fact you are still reading this that the past 30+ sections have 
 
 ---
 
-[Previous: 32 - Do Another Project](./32-Do-Another-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+[Previous: 32 - Do Another Project](./32-Do-Another-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E01 - Getting Started Again](./E01-Getting-Started-Again.md)
 
 ---
 <!-- End Navigation -->

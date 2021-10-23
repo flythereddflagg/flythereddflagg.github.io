@@ -32,3 +32,4 @@
 1. [Automated Testing](./31-Automated-Testing.md)
 1. [Do Another Project](./32-Do-Another-Project.md)
 1. [Branching Out](./33-Branching-Out.md)
+1. [ Getting Started Again](./E01-Getting-Started-Again.md)

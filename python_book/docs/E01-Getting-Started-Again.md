@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+
+---
+<!-- End Navigation -->
 # E1 - Getting Started...Again
 
 <!--How much math should they know?-->
@@ -46,18 +54,63 @@ The beautiful thing about command line installers is that it is super fast to in
 Lets install the main packages you will need for most scientific computing. Install the following packages with:
 
 ```bash
-$ conda install numpy scipy pandas ipython jupyter matplotlib sympy
+$ conda install numpy scipy matplotlib pandas sympy ipython jupyter
 ```
 
 ### Wait a second, what did I just do?
 
-Using the Conda package manager, you installed 6 packages and their respective dependecies that are used all the time in STEM programming. You may find you do not need all of these, but they are the most common and there will be introductory sections on all of them. Breifly, they are described here:
+Using the Conda package manager, you installed 6 packages (and their respective dependencies) that are used all the time in STEM programming. You may find you do not need all of these, but they are the most common and there will be introductory sections on all of them. They are briefly described here:
 
-- `numpy` 
-- `scipy`
-- `pandas`
-- `ipython`
-- `jupyter`
-- `matplotlib`
-- `sympy`
+- `numpy`: [NumPy](https://numpy.org/) (Numerical Python) is a package for doing heavy numerical calculations and especially linear algebra (i.e. matrix math). Compared to normal Python, it is blazing fast and built on powerful mathematical algorithms.
+- `scipy`: [SciPy](https://www.scipy.org/index.html) (Scientific Python) is a package for doing scientific computing. This library is also blazing fast and offers access to functions to do numerical calculus (i.e. derivatives, integrals, ordinary differential equations, non-linear equation solving etc.) as well as other math used in many science and engineering disciplines.
+- `matplotlib`: [MatPlotLib](https://matplotlib.org/stable/index.html) (MATLAB Plotting Library) is a package that lets you produce graphs and figures and includes an interface that is modeled after MATLAB's graphing functionality. This makes it easy to use and quick for producing professional-grade graphs.
+- `pandas` [Pandas](https://pandas.pydata.org/) is a data analysis package for Python that allows a convenient way to work with data from text files, Microsoft Excel files, SQL databases, and many other sources. Highly useful and powerful, the package allows easy access to their powerful DataFrame class for easy organization of data.
+- `sympy`: [SymPy](https://www.sympy.org/en/index.html) (Symbolic Python) is a package for doing symbolic math including algebra and calculus. It allows displaying math in a convenient way and offers other helpful tools in the symbolic math space.
+- `ipython`: [IPython](https://ipython.org/) (Interactive Python) provides an improved experience with the Python interpreter. It allows expanded functionality and convenience features for programming not provided by the built-in interpreter.
+- `jupyter`: [Jupyter](https://jupyter.org/) provides a convenient interface for running code one chunk at a time and organizing code in a presentable way. The tool is language agnostic and is available for several other languages besides Python.
 
+All of these tools are tightly integrated and rely on one another to various degrees. They are all commonly used with IPython and Jupyter to display and work with them. We will begin by using Jupyter to get started!
+
+## Open a Jupyter Notebook
+
+**NOTE:** In this book, we will only use Jupyter Notebooks but there is a more advanced interface called Jupyter Lab. If you wish you may use it instead but there will not be a tutorial on it (unless I change my mind for some reason).
+
+Open a terminal window and navigate to where you want to store the exercises for this section. Then, having installed all these packages, open jupyter-notebook with:
+
+```bash
+$ jupyter-notebook
+# OR
+$ jupyter notebook
+```
+
+This should start a small and local webserver that should open a webpage that should look like:
+![The Jupyter Startup Page](./media/jupyter-notebook.png)
+
+On this page there should be a table with all the files in that folder. Use the `new` dropdown menu (in the top-right corner of the file table) and select `Python 3`. This will open a new Jupyter notebook that should look like:
+
+![Empty Juptyer Notebook](./media/jupyter-notebook_blank.png)
+
+Here you can run code just like in a normal python script. Start by renaming the notebook by clicking on "Untitled" at the top of the screen. Then write and run the following code:
+
+```python
+print("Hello Jupyter!")
+```
+
+You can run the code by using the "Run" button or pressing `Shift+Enter` on your keyboard to get:
+
+![Run a simple program in Jupyter](./media/jupyter-notebook_run_simple.png)
+
+Now that you have done the basics. Use the interface tour to familiarize yourself with the Jupyter environment (Help->User Interface Tour).
+
+## Hone Your Skills
+
+- Use the internet to look up "ipython magic commands". What are they and how do they work? Use them in a Jupyter notebook to  run command line arguments and use the help fuction.
+- Look up how to use Markdown in Jupyter. Use the internet to look up Markdown syntax and write some documentation in your notebook.
+<!-- Navigation -->
+
+---
+
+[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+
+---
+<!-- End Navigation -->

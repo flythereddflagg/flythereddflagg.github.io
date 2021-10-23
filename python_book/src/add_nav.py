@@ -71,18 +71,24 @@ for root, dirs, files in os.walk(FILE_PATH+TO_DOCS):
         sec_file.append([section_name, file_])
     break
 
+
 sec_file = sorted(
     sec_file, 
-    key=lambda x: int(x[0][:2])
+    key=lambda x: x[0]
 )
 
 # make the list for mkdocs.yml
 print("Updating YML navigation...")
 nav_yml = []
 for i in range(len(sec_file)):
-    line = f"    - {int(sec_file[i][0][:2])}." +\
-        f" {sec_file[i][0][5:]}:" +\
-        f" './{sec_file[i][1]}'"
+    try:
+        index_num = int(sec_file[i][0][:2])
+        title = sec_file[i][0][5:]
+    except ValueError:
+        index_num = f"{sec_file[i][0][0]}{int(sec_file[i][0][1:3])}"
+        title = sec_file[i][0][6:]
+        
+    line = f"    - {index_num}. {title}: './{sec_file[i][1]}'"
     nav_yml.append(line)
 
 nav_yml_txt = "\n".join(nav_yml)
