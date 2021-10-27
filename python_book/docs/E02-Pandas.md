@@ -67,9 +67,21 @@ dtype: float64
 """
 ```
 
+The only other thing you need to know right now is that the data type of the values in the Series is displayed in the printed part and may be one of a few types. The types are explained briefly [here](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html).
 
+### Your Assignment
+
+Read about Series in the [Pandas Documentation](https://pandas.pydata.org/docs/reference/api/pandas.Series.html). You do not have to understand every method in the class but do understand all off the examples on that page.
 
 ## A Basic DataFrame
+
+A DataFrame you may think of as a dictionary of Series objects. Another way to think of a DataFrame is a table with column and row headings. The following example will show how this works.
+
+```python
+asdfs
+```
+
+
 
 ## Loading Data
 
