@@ -137,9 +137,26 @@ Like the Series class, read through the documentation on the Pandas website for 
 
 ## Loading Data
 
+Now you could just manually write everything to a dictionary to load a DataFrame but that is not what we're about here. We would like it if we could work with data directly from its source. So, I have multiple ways of loading the data into a DataFrame to be used.
+
 ### CSV
 
+If you don't already know, CSV stands for "Comma-Separated Values" and is a common way of storing data in text format. Each comma separates a column of data (although there are various characters commonly used for "delimiting" columns), each row is separated by a newline character, and the files will have the extension ".csv". Otherwise, CSV files are perfectly normal text files. Here is what our file data looks like in CSV format:
+
+```txt
+,name,sex,age,salary
+0,Jared,M,23,20000.0
+1,Lisa,F,32,40000.0
+2,Jan,F,45,65000.0
+3,Peter,M,12,10000.0
+4,Ben,M,67,100000.0
+```
+
+Notice, the leading comma on the first line
+
 ### Microsoft Excel
+
+[Excel File](../code_files/e_sections/some_data.xlsx)
 
 ### SQL
 
