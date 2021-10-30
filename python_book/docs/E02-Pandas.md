@@ -78,10 +78,62 @@ Read about Series in the [Pandas Documentation](https://pandas.pydata.org/docs/r
 A DataFrame you may think of as a dictionary of Series objects. Another way to think of a DataFrame is a table with column and row headings. The following example will show how this works.
 
 ```python
-asdfs
+# In[1]:
+import pandas as pd
+
+# In[2]:
+some_data = {
+    "name": ["Jared", "Lisa", "Jan", "Peter", "Ben"],
+    "sex": ['M', 'F', 'F', 'M', 'M'],
+    "age": [23, 32, 45, 12, 67],
+    "salary": [20e3, 40e3, 65e3, 10e3, 100e3]
+} # notice that all of the values must be iterables of the same length
+
+# In[3]:
+df = pd.DataFrame(some_data)
+df # if you are not using Jupyter use print here instead
+# Out[3]:
+"""
+    name sex  age    salary
+0  Jared   M   23   20000.0
+1   Lisa   F   32   40000.0
+2    Jan   F   45   65000.0
+3  Peter   M   12   10000.0
+4    Ben   M   67  100000.0
+"""
+
+# In[4]:
+# This is an example of filtering using Pandas indexing functionality
+# If you are not using Jupyter use print instead of display
+display(df[df['sex'] == 'M']) 
+display(df[df['salary'] > 30e3])
+# Out[4]:
+"""
+    name sex  age    salary
+0  Jared   M   23   20000.0
+3  Peter   M   12   10000.0
+4    Ben   M   67  100000.0
+   name sex  age    salary
+1  Lisa   F   32   40000.0
+2   Jan   F   45   65000.0
+4   Ben   M   67  100000.0
+"""
+
+# In[5]:
+# DataFrames are like dictionaries
+# Keys are column names and values are Series objects
+df['age'].mean()
+# Out[5]:
+"""
+35.8
+"""
 ```
 
+As you can tell from the example. A DataFrame object is a way of dealing with a table of data and is like a dictionary with column names as the keys and Series objects as the values. On top of dictionary-like functionality, there are lots of different powerful methods available in the objects. A complete reference is available on the [Pandas documentation website](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html). I have provided a brief introduction to DataFrames here but they are immensely powerful and useful.
 
+### Your Assignment
+
+Like the Series class, read through the documentation on the Pandas website for DataFrames. Again, you do not need to understand everything but make sure you understand the examples and attributes. Then look at some of the functionality built in to DataFrames. If you are familiar with spreadsheet software like Microsoft Excel, you will notice a lot of the functionality of Excel is implemented here.
 
 ## Loading Data
 
