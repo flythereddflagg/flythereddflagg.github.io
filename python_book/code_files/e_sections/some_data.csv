@@ -1,6 +1,6 @@
-,name,sex,age,salary
-0,Jared,M,23,20000.0
-1,Lisa,F,32,40000.0
-2,Jan,F,45,65000.0
-3,Peter,M,12,10000.0
-4,Ben,M,67,100000.0
+name,sex,age,salary
+Jared,M,23,20000.0
+Lisa,F,32,40000.0
+Jan,F,45,65000.0
+Peter,M,12,10000.0
+Ben,M,67,100000.0
