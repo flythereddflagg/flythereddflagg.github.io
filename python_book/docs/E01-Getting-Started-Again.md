@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Pandas ](./E02-Pandas.md)
 
 ---
 <!-- End Navigation -->
@@ -110,7 +110,7 @@ Now that you have done the basics. Use the interface tour to familiarize yoursel
 
 ---
 
-[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Pandas ](./E02-Pandas.md)
 
 ---
 <!-- End Navigation -->

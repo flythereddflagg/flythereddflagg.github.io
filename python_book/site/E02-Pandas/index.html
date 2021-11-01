@@ -1,0 +1,1171 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+    
+    
+      
+        <title>E2. Pandas - The Redd Python Book</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Source Code Pro"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../css/default.min.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#e2-pandas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="The Redd Python Book" class="md-header__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            The Redd Python Book
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              E2. Pandas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="The Redd Python Book" class="md-nav__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
+
+    </a>
+    The Redd Python Book
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-Table-of-Contents/" class="md-nav__link">
+        Table of Contents
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-Intro-and-How-to-Use-This-Book/" class="md-nav__link">
+        1. Intro and How to Use This Book
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Getting-Started/" class="md-nav__link">
+        2. Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-CLI/" class="md-nav__link">
+        3. CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-Hello-World/" class="md-nav__link">
+        4. Hello World
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Comments/" class="md-nav__link">
+        5. Comments
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Strings-and-the-Print-Function/" class="md-nav__link">
+        6. Strings and the Print Function
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-Escape-Characters/" class="md-nav__link">
+        7. Escape Characters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-Formatted-Strings/" class="md-nav__link">
+        8. Formatted Strings
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-Variables-and-Memory/" class="md-nav__link">
+        9. Variables and Memory
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-Better-String-Formatting/" class="md-nav__link">
+        10. Better String Formatting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-Input-and-Output/" class="md-nav__link">
+        11. Input and Output
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-Math-and-Data/" class="md-nav__link">
+        12. Math and Data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-Logic-and-Boolean-Operators/" class="md-nav__link">
+        13. Logic and Boolean Operators
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-If-elif-and-else/" class="md-nav__link">
+        14. If elif and else
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-Errors-Exceptions-and-Bugs/" class="md-nav__link">
+        15. Errors Exceptions and Bugs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-File-Reading-and-Writing/" class="md-nav__link">
+        16. File Reading and Writing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-Loops/" class="md-nav__link">
+        17. Loops
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-Iterables/" class="md-nav__link">
+        18. Iterables
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-Dictionaries/" class="md-nav__link">
+        19. Dictionaries
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-Functions/" class="md-nav__link">
+        20. Functions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-More-Functions/" class="md-nav__link">
+        21. More Functions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-Try-Except/" class="md-nav__link">
+        22. Try Except
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-Imports/" class="md-nav__link">
+        23. Imports
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-Reading-Code/" class="md-nav__link">
+        24. Reading Code
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-Do-a-Project/" class="md-nav__link">
+        25. Do a Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-Objects-and-Classes/" class="md-nav__link">
+        26. Objects and Classes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-Inheritance-and-Polymorphism/" class="md-nav__link">
+        27. Inheritance and Polymorphism
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28-Modules/" class="md-nav__link">
+        28. Modules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29-Comments-and-Code-Documentation/" class="md-nav__link">
+        29. Comments and Code Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30-Packages-and-Project-Structure/" class="md-nav__link">
+        30. Packages and Project Structure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../31-Automated-Testing/" class="md-nav__link">
+        31. Automated Testing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../32-Do-Another-Project/" class="md-nav__link">
+        32. Do Another Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33-Branching-Out/" class="md-nav__link">
+        33. Branching Out
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E01-Getting-Started-Again/" class="md-nav__link">
+        E1. Getting Started Again
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          E2. Pandas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        E2. Pandas
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-basic-series" class="md-nav__link">
+    A Basic Series
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-basic-dataframe" class="md-nav__link">
+    A Basic DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    Loading Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-and-excel-files" class="md-nav__link">
+    CSV and Excel Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-data" class="md-nav__link">
+    Plotting Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" class="md-nav__link">
+    Hone Your Skills
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#a-basic-series" class="md-nav__link">
+    A Basic Series
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-basic-dataframe" class="md-nav__link">
+    A Basic DataFrame
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loading-data" class="md-nav__link">
+    Loading Data
+  </a>
+  
+    <nav class="md-nav" aria-label="Loading Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#csv-and-excel-files" class="md-nav__link">
+    CSV and Excel Files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sql" class="md-nav__link">
+    SQL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plotting-data" class="md-nav__link">
+    Plotting Data
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hone-your-skills" class="md-nav__link">
+    Hone Your Skills
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!-- Navigation -->
+
+<hr />
+<p><a href="../E01-Getting-Started-Again/">Previous: E01 - Getting Started Again</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | </p>
+<hr />
+<!-- End Navigation -->
+
+<h1 id="e2-pandas">E2 - Pandas</h1>
+<p>It's time to learn the basics of Pandas! Pandas is a powerful tool for data analysis and manipulation. The power of Pandas is centered around two classes: the Series class and the DataFrame class.</p>
+<h2 id="a-basic-series">A Basic Series</h2>
+<p>Lets try using the Series class. The following exercise will get your feet wet (I recommend you do these exercises in a Jupyter notebook).</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># In Jupyter:</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="c1"># In[1]:</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1"># In[2]:</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="n">input_data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">5.0</span><span class="p">,</span><span class="mi">36</span><span class="p">,</span><span class="mf">23.342</span><span class="p">,</span><span class="mi">34</span><span class="p">,</span><span class="mf">53.3</span><span class="p">]</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="n">the_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">input_data</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="n">the_series</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="c1"># Out[2]:</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="10 "></span><span class="sd">0     3.000</span>
+<span class="linenos" data-linenos="11 "></span><span class="sd">1     2.000</span>
+<span class="linenos" data-linenos="12 "></span><span class="sd">2     5.000</span>
+<span class="linenos" data-linenos="13 "></span><span class="sd">3    36.000</span>
+<span class="linenos" data-linenos="14 "></span><span class="sd">4    23.342</span>
+<span class="linenos" data-linenos="15 "></span><span class="sd">5    34.000</span>
+<span class="linenos" data-linenos="16 "></span><span class="sd">6    53.300</span>
+<span class="linenos" data-linenos="17 "></span><span class="sd">dtype: float64</span>
+<span class="linenos" data-linenos="18 "></span><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<p>As you can see, the Series is a lot like a list. But it is also like a dictionary. In the output, there is a column of index values that act as keys that map to the various values. Therefore, using one of the Series' methods for sorting you get the following:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># In[3]:</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="n">the_series</span><span class="o">.</span><span class="n">sort_values</span><span class="p">()</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="c1"># Out[3]:</span>
+<span class="linenos" data-linenos=" 4 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="sd">1     2.000</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="sd">0     3.000</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="sd">2     5.000</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="sd">4    23.342</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="sd">5    34.000</span>
+<span class="linenos" data-linenos="10 "></span><span class="sd">3    36.000</span>
+<span class="linenos" data-linenos="11 "></span><span class="sd">6    53.300</span>
+<span class="linenos" data-linenos="12 "></span><span class="sd">dtype: float64</span>
+<span class="linenos" data-linenos="13 "></span><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<p>Notice how the values are now in order but the index-value paring is preserved (i.e. now the index column is out of order). In fact, we can make a series that has an arbitrary index as follows:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># In[4]:</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="n">another_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+<span class="linenos" data-linenos=" 3 "></span>    <span class="n">data</span><span class="o">=</span><span class="n">input_data</span><span class="p">,</span> 
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;n cheeses&#39;</span><span class="p">,</span> <span class="s2">&quot;spam&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;the number 36&quot;</span><span class="p">,</span> <span class="s2">&quot;ohh a real float!&quot;</span><span class="p">,</span> <span class="mf">22.2</span><span class="p">,</span> <span class="s2">&quot;the last num&quot;</span><span class="p">]</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="p">)</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="n">another_series</span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1"># Out[4]:</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="sd">n cheeses             3.000</span>
+<span class="linenos" data-linenos="10 "></span><span class="sd">spam                  2.000</span>
+<span class="linenos" data-linenos="11 "></span><span class="sd">32                    5.000</span>
+<span class="linenos" data-linenos="12 "></span><span class="sd">the number 36        36.000</span>
+<span class="linenos" data-linenos="13 "></span><span class="sd">ohh a real float!    23.342</span>
+<span class="linenos" data-linenos="14 "></span><span class="sd">22.2                 34.000</span>
+<span class="linenos" data-linenos="15 "></span><span class="sd">the last num         53.300</span>
+<span class="linenos" data-linenos="16 "></span><span class="sd">dtype: float64</span>
+<span class="linenos" data-linenos="17 "></span><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<p>The only other thing you need to know right now is that the data type of the values in the Series is displayed in the printed part and may be one of a few types. The types are explained briefly <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html">here</a>.</p>
+<p><strong>Your Assignment:</strong> Read about Series in the <a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html">Pandas Documentation</a>. You do not have to understand every method in the class but do understand all off the examples on that page.</p>
+<h2 id="a-basic-dataframe">A Basic DataFrame</h2>
+<p>A DataFrame you may think of as a dictionary of Series objects. Another way to think of a DataFrame is a table with column and row headings. The following example will show how this works.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># In[1]:</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos" data-linenos=" 3 "></span>
+<span class="linenos" data-linenos=" 4 "></span><span class="c1"># In[2]:</span>
+<span class="linenos" data-linenos=" 5 "></span><span class="n">some_data</span> <span class="o">=</span> <span class="p">{</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Jared&quot;</span><span class="p">,</span> <span class="s2">&quot;Lisa&quot;</span><span class="p">,</span> <span class="s2">&quot;Jan&quot;</span><span class="p">,</span> <span class="s2">&quot;Peter&quot;</span><span class="p">,</span> <span class="s2">&quot;Ben&quot;</span><span class="p">],</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="s2">&quot;sex&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">],</span>
+<span class="linenos" data-linenos=" 8 "></span>    <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">23</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">67</span><span class="p">],</span>
+<span class="linenos" data-linenos=" 9 "></span>    <span class="s2">&quot;salary&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mf">20e3</span><span class="p">,</span> <span class="mf">40e3</span><span class="p">,</span> <span class="mf">65e3</span><span class="p">,</span> <span class="mf">10e3</span><span class="p">,</span> <span class="mf">100e3</span><span class="p">]</span>
+<span class="linenos" data-linenos="10 "></span><span class="p">}</span> <span class="c1"># notice that all of the values must be iterables of the same length</span>
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span><span class="c1"># In[3]:</span>
+<span class="linenos" data-linenos="13 "></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">some_data</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span><span class="n">df</span> <span class="c1"># if you are not using Jupyter use print here instead</span>
+<span class="linenos" data-linenos="15 "></span><span class="c1"># Out[3]:</span>
+<span class="linenos" data-linenos="16 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="17 "></span><span class="sd">    name sex  age    salary</span>
+<span class="linenos" data-linenos="18 "></span><span class="sd">0  Jared   M   23   20000.0</span>
+<span class="linenos" data-linenos="19 "></span><span class="sd">1   Lisa   F   32   40000.0</span>
+<span class="linenos" data-linenos="20 "></span><span class="sd">2    Jan   F   45   65000.0</span>
+<span class="linenos" data-linenos="21 "></span><span class="sd">3  Peter   M   12   10000.0</span>
+<span class="linenos" data-linenos="22 "></span><span class="sd">4    Ben   M   67  100000.0</span>
+<span class="linenos" data-linenos="23 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span><span class="c1"># In[4]:</span>
+<span class="linenos" data-linenos="26 "></span><span class="c1"># This is an example of filtering using Pandas indexing functionality</span>
+<span class="linenos" data-linenos="27 "></span><span class="c1"># If you are not using Jupyter use print instead of display</span>
+<span class="linenos" data-linenos="28 "></span><span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;sex&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;M&#39;</span><span class="p">])</span> 
+<span class="linenos" data-linenos="29 "></span><span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;salary&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mf">30e3</span><span class="p">])</span>
+<span class="linenos" data-linenos="30 "></span><span class="c1"># Out[4]:</span>
+<span class="linenos" data-linenos="31 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="32 "></span><span class="sd">    name sex  age    salary</span>
+<span class="linenos" data-linenos="33 "></span><span class="sd">0  Jared   M   23   20000.0</span>
+<span class="linenos" data-linenos="34 "></span><span class="sd">3  Peter   M   12   10000.0</span>
+<span class="linenos" data-linenos="35 "></span><span class="sd">4    Ben   M   67  100000.0</span>
+<span class="linenos" data-linenos="36 "></span><span class="sd">   name sex  age    salary</span>
+<span class="linenos" data-linenos="37 "></span><span class="sd">1  Lisa   F   32   40000.0</span>
+<span class="linenos" data-linenos="38 "></span><span class="sd">2   Jan   F   45   65000.0</span>
+<span class="linenos" data-linenos="39 "></span><span class="sd">4   Ben   M   67  100000.0</span>
+<span class="linenos" data-linenos="40 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="41 "></span>
+<span class="linenos" data-linenos="42 "></span><span class="c1"># In[5]:</span>
+<span class="linenos" data-linenos="43 "></span><span class="c1"># DataFrames are like dictionaries</span>
+<span class="linenos" data-linenos="44 "></span><span class="c1"># Keys are column names and values are Series objects</span>
+<span class="linenos" data-linenos="45 "></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;age&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="linenos" data-linenos="46 "></span><span class="c1"># Out[5]:</span>
+<span class="linenos" data-linenos="47 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="48 "></span><span class="sd">35.8</span>
+<span class="linenos" data-linenos="49 "></span><span class="sd">&quot;&quot;&quot;</span>
+</code></pre></div>
+<p>As you can tell from the example. A DataFrame object is a way of dealing with a table of data and is like a dictionary with column names as the keys and Series objects as the values. On top of dictionary-like functionality, there are lots of different powerful methods available in the objects. A complete reference is available on the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html">Pandas documentation website</a>. I have provided a brief introduction to DataFrames here but they are immensely powerful and useful.</p>
+<p><strong>Your Assignment:</strong> Like the Series class, read through the documentation on the Pandas website for DataFrames. Again, you do not need to understand everything but make sure you understand the examples and attributes. Then look at some of the functionality built in to DataFrames. If you are familiar with spreadsheet software like Microsoft Excel, you will notice a lot of the functionality of Excel is implemented here.</p>
+<h2 id="loading-data">Loading Data</h2>
+<p>Now you could just manually write everything to a dictionary to load a DataFrame but that is not what we're about here. We would like it if we could work with data directly from its source. So, I have multiple ways of loading the data into a DataFrame to be used.</p>
+<h3 id="csv-and-excel-files">CSV and Excel Files</h3>
+<p>If you don't already know, CSV stands for "Comma-Separated Values" and is a common way of storing data in text format. Each comma separates a column of data (although there are various characters commonly used for "delimiting" columns), each row is separated by a newline character, and the files will have the extension ".csv". Otherwise, CSV files are perfectly normal text files. Here is what our file data looks like in CSV format:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>name,sex,age,salary
+<span class="linenos" data-linenos="2 "></span>Jared,M,23,20000.0
+<span class="linenos" data-linenos="3 "></span>Lisa,F,32,40000.0
+<span class="linenos" data-linenos="4 "></span>Jan,F,45,65000.0
+<span class="linenos" data-linenos="5 "></span>Peter,M,12,10000.0
+<span class="linenos" data-linenos="6 "></span>Ben,M,67,100000.0
+</code></pre></div>
+<p>You can download this CSV file <a href="../media/e_sections/some_data.xlsx">here</a>. We can then load it into a DataFrame with two lines of code:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./some_data.csv&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>The same can be done with an <a href="../media/e_sections/some_data.xlsx">Excel File</a>.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;./some_data.xlsx&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>Your Assignment:</strong> Play around with this functionality. Can you write a new file (i.e. a new CSV or Excel file) from your DataFrame? How do you skip some rows in your file when loading it? Can you select which columns and rows get loaded into your DataFrame? Search the internet and try to figure this out.</p>
+<h3 id="sql">SQL</h3>
+<p>Data may also be read from a SQL database. In this example we will use SQLite (the database is <a href="../media/e_sections/some_data.db">here</a>), but there are many other types of SQL databases.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span><span class="k">with</span> <span class="n">sql</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="s2">&quot;./some_data.db&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">con</span><span class="p">:</span>
+<span class="linenos" data-linenos="4 "></span>    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="s2">&quot;select * from some_data&quot;</span><span class="p">,</span> <span class="n">con</span><span class="p">)</span>
+</code></pre></div>
+<p>Notice, you can use the <code>pd.read_sql</code> function to run a SQL query on the database (this database has one table called "some_data"). But you can simplify this process using functionality from another Python package called <code>sqlalchemy</code>.</p>
+<p><strong>Your Assignment:</strong> Can you write a new table or SQL database using Python? Look into <code>sqlalchemy</code> to find out how to more efficiently use SQL in database management. </p>
+<h2 id="plotting-data">Plotting Data</h2>
+<p>Pandas can also plot data using <code>matplotlib</code>. There is no need to import <code>matplotlib</code>, but it must be installed for the following example to work.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="linenos" data-linenos="2 "></span><span class="c1"># import matplotlib.pyplot as plt # uncomment if not using Jupyter Notebook</span>
+<span class="linenos" data-linenos="3 "></span>
+<span class="linenos" data-linenos="4 "></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;./e_sections/some_data.csv&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="5 "></span><span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="s1">&#39;age&#39;</span><span class="p">,</span> <span class="s1">&#39;salary&#39;</span><span class="p">,</span> <span class="s1">&#39;scatter&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="6 "></span>
+<span class="linenos" data-linenos="7 "></span><span class="c1"># plt.show() # uncomment if not using Jupyter Notebook</span>
+</code></pre></div>
+<p><img alt="Plot of some_data" src="../media/data_plot.png" /></p>
+<p>In a Jupyter Notebook, the plot will render in the notebook output. If you use Python without a Jupyter Notebook, it will render in a separate window. If you look at the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html">documentation</a> you can learn more.</p>
+<p><strong>Your Assignment:</strong> Read the documentation linked above. See the different ways you can plot data. In a later section we will explore <code>matplotlib</code> in more detail.</p>
+<h2 id="hone-your-skills">Hone Your Skills</h2>
+<p>I assume if you are reading this section that you already work with some kind of data. Hopefully this section will help you get started using Pandas to work with data more efficiently. These exercises are aimed at you.</p>
+<ul>
+<li>Use the tools presented in this section to perform statistical calculations on your data. Can you calculate confidence intervals and do other interesting things with your data?</li>
+<li>Plot your data and use different kinds of plots (See the <a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html">documentation</a>).</li>
+<li>Explore the ways you can parse and load data using the different methods. What if you need to skip some rows in the excel file? How can you get data from multiple tables out of a SQL database?</li>
+<li>Look up <a href="https://www.sqlalchemy.org/"><code>sqlalchemy</code></a>. If needed download the package using <code>conda</code> or <code>pip</code>. Find out how you can access a database you may be using.</li>
+</ul>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../E01-Getting-Started-Again/">Previous: E01 - Getting Started Again</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | </p>
+<hr />
+<!-- End Navigation -->
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../E01-Getting-Started-Again/" class="md-footer__link md-footer__link--prev" aria-label="Previous: E1. Getting Started Again" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              E1. Getting Started Again
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../javascripts/highlight.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+    
+  </body>
+</html>

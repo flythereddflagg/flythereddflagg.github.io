@@ -1,3 +1,12 @@
+<!-- Navigation -->
+
+---
+
+[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+
+---
+<!-- End Navigation -->
+
 # E2 - Pandas
 
 It's time to learn the basics of Pandas! Pandas is a powerful tool for data analysis and manipulation. The power of Pandas is centered around two classes: the Series class and the DataFrame class.
@@ -148,7 +157,7 @@ Peter,M,12,10000.0
 Ben,M,67,100000.0
 ```
 
-You can download this CSV file [here](../code_files/e_sections/some_data.xlsx). We can then load it into a DataFrame with two lines of code:
+You can download this CSV file [here](./media/e_sections/some_data.xlsx). We can then load it into a DataFrame with two lines of code:
 
 ```python
 import pandas as pd
@@ -156,7 +165,7 @@ import pandas as pd
 df = pd.read_csv("./some_data.csv")
 ```
 
-The same can be done with an [Excel File](../code_files/e_sections/some_data.xlsx).
+The same can be done with an [Excel File](./media/e_sections/some_data.xlsx).
 
 ```python
 import pandas as pd
@@ -168,10 +177,9 @@ df = pd.read_excel("./some_data.xlsx")
 
 ### SQL
 
-Data may also be read from a SQL database. In this example we will use SQLite (the database is [here](../code_files/e_sections/some_data.db)), but there are many other types of SQL databases.
+Data may also be read from a SQL database. In this example we will use SQLite (the database is [here](./media/e_sections/some_data.db)), but there are many other types of SQL databases.
 
 ```python
-import sqlite3 as sql
 import pandas as pd
 
 with sql.connect("./some_data.db") as con:
@@ -184,11 +192,38 @@ Notice, you can use the `pd.read_sql` function to run a SQL query on the databas
 
 ## Plotting Data
 
+Pandas can also plot data using `matplotlib`. There is no need to import `matplotlib`, but it must be installed for the following example to work.
 
+```python
+import pandas as pd
+# import matplotlib.pyplot as plt # uncomment if not using Jupyter Notebook
+
+df = pd.read_csv("./e_sections/some_data.csv")
+df.plot('age', 'salary', 'scatter')
+
+# plt.show() # uncomment if not using Jupyter Notebook
+```
+
+![Plot of some_data](./media/data_plot.png)
+
+In a Jupyter Notebook, the plot will render in the notebook output. If you use Python without a Jupyter Notebook, it will render in a separate window. If you look at the [documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html) you can learn more.
+
+**Your Assignment:** Read the documentation linked above. See the different ways you can plot data. In a later section we will explore `matplotlib` in more detail.
 
 ## Hone Your Skills
 
 I assume if you are reading this section that you already work with some kind of data. Hopefully this section will help you get started using Pandas to work with data more efficiently. These exercises are aimed at you.
 
 - Use the tools presented in this section to perform statistical calculations on your data. Can you calculate confidence intervals and do other interesting things with your data?
-- Plot your data and 
+- Plot your data and use different kinds of plots (See the [documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html)).
+- Explore the ways you can parse and load data using the different methods. What if you need to skip some rows in the excel file? How can you get data from multiple tables out of a SQL database?
+- Look up [`sqlalchemy`](https://www.sqlalchemy.org/). If needed download the package using `conda` or `pip`. Find out how you can access a database you may be using.
+
+<!-- Navigation -->
+
+---
+
+[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+
+---
+<!-- End Navigation -->
