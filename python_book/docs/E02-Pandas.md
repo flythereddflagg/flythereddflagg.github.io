@@ -218,6 +218,7 @@ I assume if you are reading this section that you already work with some kind of
 - Plot your data and use different kinds of plots (See the [documentation](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html)).
 - Explore the ways you can parse and load data using the different methods. What if you need to skip some rows in the excel file? How can you get data from multiple tables out of a SQL database?
 - Look up [`sqlalchemy`](https://www.sqlalchemy.org/). If needed download the package using `conda` or `pip`. Find out how you can access a database you may be using.
+- Read the [User Guide](https://pandas.pydata.org/docs/user_guide/index.html) to Pandas and, in particular, focus on the section called "10 Minutes to Pandas".
 
 <!-- Navigation -->
 
