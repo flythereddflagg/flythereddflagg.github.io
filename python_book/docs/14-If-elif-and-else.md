@@ -175,9 +175,8 @@ You may not know understand yet why these are so important but as we go along it
 
 ## Advanced Mastery
 
-1. There is a problem in the above script `if_else.py` that can cause errors if we're not careful. Can you find the problem? How would you fix it?
+1. There is a problem in the above script `if_else.py` that can cause errors if we're not careful. Can you find the problem? How would you fix it? Answer is <span title="Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the `else` block be deleted. This can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well.">here</span>.
 
-   <!-- Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the `else` block be deleted. This can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well. -->
 
 <!-- Navigation -->
 
