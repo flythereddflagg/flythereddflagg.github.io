@@ -11,7 +11,7 @@
 
 We will use the concepts of True and False to drive our scripts ability to make decisions. The following exercise will help introduce program decisions and conditionals. 
 
-**Note:** This will be the first time we see indented blocks of code. Whenever you see an indented line of code, follow the [Python standard](https://www.python.org/dev/peps/pep-0008/#code-lay-out) of always indenting 4 spaces (do *not* use tabs). Your text editor can and should be configured to insert 4 spaces instead of a tab character `\t` when the "Tab" key is pressed.
+**Note:** This will be the first time we see indented blocks of code. Whenever you see an indented line of code, follow the [Python standard](https://www.python.org/dev/peps/pep-0008/#code-lay-out) of always indenting 4 spaces (do *not* use tabs). Your text editor can and should be configured to insert 4 spaces instead of a tab character `\t` when the "Tab" key is pressed. Using 4 spaces is a convention used in Python that will cause you trouble should you choose to ignore it because all production code in Python has this feature. Furthermore, you are trying to learn Python aren't you?
 
 ```python
 # if_else.py
