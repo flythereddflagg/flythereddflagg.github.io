@@ -14,7 +14,7 @@
     
     
       
-        <title>7. Escape Characters - The Redd Python Book</title>
+        <title>E3. Numpy - The Redd Python Book</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#7-escape-characters" class="md-skip">
+        <a href="#e3-numpy" class="md-skip">
           Skip to content
         </a>
       
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7. Escape Characters
+              E3. Numpy
             
           </span>
         </div>
@@ -299,72 +299,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          7. Escape Characters
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../07-Escape-Characters/" class="md-nav__link">
         7. Escape Characters
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#here-is-what-should-happen" class="md-nav__link">
-    Here is what should happen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-happening-here" class="md-nav__link">
-    What is happening here?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hone-your-skills" class="md-nav__link">
-    Hone Your Skills
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-mastery" class="md-nav__link">
-    Advanced Mastery
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -795,11 +734,51 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          E3. Numpy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         E3. Numpy
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multiply-two-matrices" class="md-nav__link">
+    Multiply Two Matrices
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -830,29 +809,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#here-is-what-should-happen" class="md-nav__link">
-    Here is what should happen
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-happening-here" class="md-nav__link">
-    What is happening here?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#hone-your-skills" class="md-nav__link">
-    Hone Your Skills
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#advanced-mastery" class="md-nav__link">
-    Advanced Mastery
+  <a href="#multiply-two-matrices" class="md-nav__link">
+    Multiply Two Matrices
   </a>
   
 </li>
@@ -873,95 +831,89 @@
                 <!-- Navigation -->
 
 <hr />
-<p><a href="../06-Strings-and-the-Print-Function/">Previous: 06 - Strings and the Print Function</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../08-Formatted-Strings/">Next: 08 - Formatted Strings</a></p>
+<p><a href="../E02-Pandas/">Previous: E02 - Pandas </a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | </p>
 <hr />
 <!-- End Navigation -->
-
-<h1 id="7-escape-characters">7 - Escape Characters</h1>
-<p>Based on the previous section, you may ask "What do I do if I need a string to have a mixture of double and 
-single quotes?" For example:</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
-</code></pre></div>
-<p>This is where escape characters come in handy. An escape character is a text character that can be represented by a backslash (<code>\</code>) followed by a character or series of characters (e.g. <code>\t</code>, <code>\n</code>, <code>\u03b7</code>). Escape characters make possible the mixing of single and double quotes (among many other things) as you will see in this next exercise.</p>
-<p>Now go back to your text editor and write the following code (again, do NOT copy-paste it). Notice the use of escape characters and try to figure out what each one does.</p>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># esc_chars.py</span>
-<span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span><span class="c1"># here is an example of the use of escape characters</span>
-<span class="linenos" data-linenos=" 4 "></span><span class="c1"># Both of lines do the same thing</span>
-<span class="linenos" data-linenos=" 5 "></span><span class="c1"># Why might you prefer one over the other?</span>
-<span class="linenos" data-linenos=" 6 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;John&#39;s character says, </span><span class="se">\&quot;</span><span class="s2">I&#39;d like to buy some cheese.</span><span class="se">\&quot;</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;John</span><span class="se">\&#39;</span><span class="s1">s character says, &quot;I</span><span class="se">\&#39;</span><span class="s1">d like to buy some cheese.&quot;&#39;</span><span class="p">)</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="c1"># here are some more escape character examples</span>
-<span class="linenos" data-linenos="10 "></span><span class="c1"># notice what all the other escape characters do</span>
-<span class="linenos" data-linenos="11 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There once was an old man from Peru&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="12 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;who dreamed he was eating his shoe.&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="13 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">He woke up in fright,&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="14 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">in the middle of the night,&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="15 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;and found it was perfectly true!</span><span class="se">\n\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="c1"># here are a few more new characters and examples</span>
-<span class="linenos" data-linenos="18 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\t\t</span><span class="s2">I have tabbed over here!&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="19 "></span>
-<span class="linenos" data-linenos="20 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I am about to do a carriage return!</span><span class="se">\r</span><span class="s2">I did it!--&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="21 "></span>
-<span class="linenos" data-linenos="22 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How do you print a backslash? </span><span class="se">\\</span><span class="s2"> like that!&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="23 "></span>
-<span class="linenos" data-linenos="24 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">I just made a new line! Now I will do another!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="25 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Here is a greek eta character: </span><span class="se">\u03b7</span><span class="s2">&quot;</span><span class="p">)</span>
-</code></pre></div>
-<h3 id="here-is-what-should-happen">Here is what should happen</h3>
-<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python esc_chars.py
-<span class="linenos" data-linenos=" 2 "></span>John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
-<span class="linenos" data-linenos=" 3 "></span>John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
+<h1 id="e3-numpy">E3 - Numpy</h1>
+<p>Numpy is a Python library that allows complex math to be done easily. Generally, this library is ideal for performing linear algebra calculations and contains modules for common calculations. The following example should show this.</p>
+<h2 id="multiply-two-matrices">Multiply Two Matrices</h2>
+<p>The definition of matrix multiplication is given here for reference.</p>
+<p><em>For two matricies <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(B\)</span> with row-column dimensions <span class="arithmatex">\(d,n\)</span> and <span class="arithmatex">\(n,f\)</span> respectively, each element (noted by <span class="arithmatex">\(r,c\)</span> for each row and column) of the matrix product <span class="arithmatex">\(C\)</span> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> (<span class="arithmatex">\(C = AB\)</span>​):</em></p>
+<div class="arithmatex">\[C_{r,c} = \sum^n_i A_{r,i} \cdot B_{i,c}\]</div>
+<p>Given this definition we will code this into a Python program without and then with Numpy.</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># np_matmul.py</span>
+<span class="linenos" data-linenos=" 2 "></span><span class="kn">import</span> <span class="nn">timeit</span> <span class="c1"># get the module for timing code</span>
+<span class="linenos" data-linenos=" 3 "></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="linenos" data-linenos=" 4 "></span>
-<span class="linenos" data-linenos=" 5 "></span>There once was an old man from Peru
-<span class="linenos" data-linenos=" 6 "></span>who dreamed he was eating his shoe.
-<span class="linenos" data-linenos=" 7 "></span>    He woke up in fright,
-<span class="linenos" data-linenos=" 8 "></span>    in the middle of the night,
-<span class="linenos" data-linenos=" 9 "></span>and found it was perfectly true!
-<span class="linenos" data-linenos="10 "></span>
-<span class="linenos" data-linenos="11 "></span>
-<span class="linenos" data-linenos="12 "></span>        I have tabbed over here!
-<span class="linenos" data-linenos="13 "></span>I did it!--to do a carriage return!
-<span class="linenos" data-linenos="14 "></span>How do you print a backslash? \ like that!
-<span class="linenos" data-linenos="15 "></span>
-<span class="linenos" data-linenos="16 "></span>I just made a new line! Now I will do another!
-<span class="linenos" data-linenos="17 "></span>
-<span class="linenos" data-linenos="18 "></span>Here is a greek eta character: η
+<span class="linenos" data-linenos=" 5 "></span>
+<span class="linenos" data-linenos=" 6 "></span><span class="k">def</span> <span class="nf">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+<span class="linenos" data-linenos=" 7 "></span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="sd">    Using built-in Python functions, multiply matricies</span>
+<span class="linenos" data-linenos=" 9 "></span><span class="sd">    a and b and return an new matrix c.</span>
+<span class="linenos" data-linenos="10 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="11 "></span>    <span class="n">d</span><span class="p">,</span> <span class="n">f</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="nb">len</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="n">c</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.0</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="p">)]</span> <span class="k">for</span> <span class="n">__</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">d</span><span class="p">)]</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span>    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">d</span><span class="p">):</span>
+<span class="linenos" data-linenos="15 "></span>        <span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+<span class="linenos" data-linenos="16 "></span>            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+<span class="linenos" data-linenos="17 "></span>                <span class="n">c</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">column</span><span class="p">]</span> <span class="o">+=</span> <span class="n">a</span><span class="p">[</span><span class="n">row</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">b</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">column</span><span class="p">]</span>
+<span class="linenos" data-linenos="18 "></span>
+<span class="linenos" data-linenos="19 "></span>    <span class="k">return</span> <span class="n">c</span>
+<span class="linenos" data-linenos="20 "></span>
+<span class="linenos" data-linenos="21 "></span>
+<span class="linenos" data-linenos="22 "></span><span class="k">def</span> <span class="nf">np_matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>    
+<span class="linenos" data-linenos="23 "></span>    <span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="24 "></span><span class="sd">    Using Numpy, multiply matricies</span>
+<span class="linenos" data-linenos="25 "></span><span class="sd">    a and b and return an new matrix c.</span>
+<span class="linenos" data-linenos="26 "></span><span class="sd">    We will use the special case of the @</span>
+<span class="linenos" data-linenos="27 "></span><span class="sd">    operator here.</span>
+<span class="linenos" data-linenos="28 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="29 "></span>    <span class="k">return</span> <span class="n">a</span> <span class="o">@</span> <span class="n">b</span>
+<span class="linenos" data-linenos="30 "></span>
+<span class="linenos" data-linenos="31 "></span>
+<span class="linenos" data-linenos="32 "></span><span class="c1"># here are a and b, two matrices to be multiplied</span>
+<span class="linenos" data-linenos="33 "></span><span class="n">a</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos" data-linenos="34 "></span>    <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">],</span>
+<span class="linenos" data-linenos="35 "></span>    <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">9</span><span class="p">],</span>
+<span class="linenos" data-linenos="36 "></span>    <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+<span class="linenos" data-linenos="37 "></span><span class="p">]</span>
+<span class="linenos" data-linenos="38 "></span><span class="n">b</span> <span class="o">=</span> <span class="p">[</span>
+<span class="linenos" data-linenos="39 "></span>    <span class="p">[</span><span class="mi">2</span><span class="p">],</span>
+<span class="linenos" data-linenos="40 "></span>    <span class="p">[</span><span class="mi">6</span><span class="p">],</span>
+<span class="linenos" data-linenos="41 "></span>    <span class="p">[</span><span class="mi">5</span><span class="p">]</span>
+<span class="linenos" data-linenos="42 "></span><span class="p">]</span>
+<span class="linenos" data-linenos="43 "></span><span class="c1"># now pack these matrices into numpy array objects</span>
+<span class="linenos" data-linenos="44 "></span><span class="n">a_array</span><span class="p">,</span> <span class="n">b_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="linenos" data-linenos="45 "></span>
+<span class="linenos" data-linenos="46 "></span><span class="c1"># lets compare the two calculations by running them 10000 times</span>
+<span class="linenos" data-linenos="47 "></span><span class="n">n_times</span> <span class="o">=</span> <span class="mi">10_000</span>
+<span class="linenos" data-linenos="48 "></span><span class="n">t_matmul</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="n">matmul</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">),</span> <span class="n">number</span><span class="o">=</span><span class="n">n_times</span><span class="p">)</span>
+<span class="linenos" data-linenos="49 "></span><span class="n">t_npmatmul</span> <span class="o">=</span> <span class="n">timeit</span><span class="o">.</span><span class="n">timeit</span><span class="p">(</span>
+<span class="linenos" data-linenos="50 "></span>    <span class="k">lambda</span><span class="p">:</span> <span class="n">np_matmul</span><span class="p">(</span><span class="n">a_array</span><span class="p">,</span> <span class="n">b_array</span><span class="p">),</span> 
+<span class="linenos" data-linenos="51 "></span>    <span class="n">number</span><span class="o">=</span><span class="n">n_times</span>
+<span class="linenos" data-linenos="52 "></span><span class="p">)</span>
+<span class="linenos" data-linenos="53 "></span><span class="n">pct_improvement</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="p">(</span><span class="n">t_matmul</span> <span class="o">-</span> <span class="n">t_npmatmul</span><span class="p">)</span><span class="o">/</span><span class="n">t_matmul</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+<span class="linenos" data-linenos="54 "></span>
+<span class="linenos" data-linenos="55 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="56 "></span><span class="s2">% improvement : </span><span class="si">{</span><span class="n">pct_improvement</span><span class="si">:</span><span class="s2">.0f</span><span class="si">}</span><span class="s2"></span>
+<span class="linenos" data-linenos="57 "></span><span class="s2">time python   : </span><span class="si">{</span><span class="n">t_matmul</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"></span>
+<span class="linenos" data-linenos="58 "></span><span class="s2">time numpy    : </span><span class="si">{</span><span class="n">t_npmatmul</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"></span>
+<span class="linenos" data-linenos="59 "></span><span class="s2">&quot;&quot;&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p>If on any of these exercises you do not see the output appear <em>exactly</em> as you saw it in the book, go back and fix it until it does. </p>
-<h3 id="what-is-happening-here">What is happening here?</h3>
-<p>Let's examine all the escape characters introduced in this exercise:</p>
-<ul>
-<li><code>\'</code> and <code>\"</code>: These are quote escapes and tell python to treat them as part of the text of the string rather than the beginning or ending of a string. Hence, both times you wrote the mixed quote sentence you could enclose the text with either <code>"</code> or <code>'</code> and print the same string depending on which escapes you used.</li>
-<li><code>\n</code>: This is a newline character and printing it makes a newline on which you can continue to write text. The print statement automatically adds this character to the end of the given string. In some languages like C you must explicitly put in this character yourself.</li>
-<li><code>\t</code>: This is the tab character and printing it inserts 4 or 8 spaces depending on the system you are using.</li>
-<li><code>\r</code>: This is the carriage return character and it returns the cursor to the beginning of the line. Notice how the first part of the printed line is now overwritten with the "I did it!" part.</li>
-<li><code>\\</code>: This is the backslash character and tells python to treat this character as a single backslash. As you can see, the only thing that came out of the print statement was a single backslash.</li>
-<li><code>\u03b7</code>: This is called a "Unicode escape character". It follows the format <code>\uhhhh</code> where <code>hhhh</code> references the 4-character hexadecimal code that corresponds to what was printed (in this case, <span class="arithmatex">\(\eta\)</span>). Using that 4-character hexadecimal code you can express over 65000 characters. If you want to know a character's code simply search on the internet for "Unicode <em>CHARACTER NAME</em>". (e.g. "Unicode eta" for $ \eta $)</li>
-</ul>
-<p>These are not all the potential escape characters. You can learn more about these by doing the exercises under <a href="#Hone-your-skills">Hone your skills</a>. For now, understand that these are only a small part of python's printing and display capabilities but what we have covered here are the most useful and used most often in programming. </p>
-<h2 id="hone-your-skills">Hone Your Skills</h2>
-<ul>
-<li>Look up what hexadecimal is. Why is it used?</li>
-<li>Using the Internet and experimenting in Python, figure out what the following escape characters do.</li>
-<li><code>\a</code></li>
-<li><code>\b</code></li>
-<li><code>\f</code></li>
-<li><code>\N{char}</code></li>
-<li><code>\o**</code></li>
-<li><code>\x**</code></li>
-<li>Look up how to make Python print <span class="arithmatex">\(\epsilon = \gamma c^2\)</span> (those are the greek letters epsilon (<span class="arithmatex">\(\epsilon\)</span>) and gamma (<span class="arithmatex">\(\gamma\)</span>) and the equation reads: "epsilon equals gamma c squared")</li>
-</ul>
-<h2 id="advanced-mastery">Advanced Mastery</h2>
-<ul>
-<li>Make Python print out the <a href="https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations">Navier-Stokes Equations</a> for a 3-D system in Cartesian coordinates formatted like a normal math equation using escape sequences and print statements.</li>
-</ul>
+<p>This should produces qualitatively similar results to this:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>&gt; python np_matmul.py
+<span class="linenos" data-linenos="2 "></span>
+<span class="linenos" data-linenos="3 "></span>% improvement : 37
+<span class="linenos" data-linenos="4 "></span>time python   : 0.066
+<span class="linenos" data-linenos="5 "></span>time numpy    : 0.024
+</code></pre></div>
+<p>This shows how much faster Numpy is than plain Python. We will talk about the reason that this is but for now lets look at some other powerful things we can do with Numpy arrays.</p>
+<p><strong>More coming soon!</strong></p>
 <!-- Navigation -->
 
 <hr />
-<p><a href="../06-Strings-and-the-Print-Function/">Previous: 06 - Strings and the Print Function</a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../08-Formatted-Strings/">Next: 08 - Formatted Strings</a></p>
+<p><a href="../E02-Pandas/">Previous: E02 - Pandas </a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | </p>
 <hr />
 <!-- End Navigation -->
                 
@@ -983,7 +935,7 @@ single quotes?" For example:</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../06-Strings-and-the-Print-Function/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 6. Strings and the Print Function" rel="prev">
+        <a href="../E02-Pandas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: E2. Pandas" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -992,26 +944,11 @@ single quotes?" For example:</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              6. Strings and the Print Function
+              E2. Pandas
             </div>
           </div>
         </a>
       
-      
-        
-        <a href="../08-Formatted-Strings/" class="md-footer__link md-footer__link--next" aria-label="Next: 8. Formatted Strings" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              8. Formatted Strings
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

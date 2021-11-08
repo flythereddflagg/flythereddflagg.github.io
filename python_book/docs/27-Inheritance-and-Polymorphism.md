@@ -36,7 +36,9 @@ class Truck(Automobile):
     '''
     A Truck object is a type of Automobile.
     '''    
-    def __init__(self, year, make, model, bed_type, bed_size, axel_weight):
+    def __init__(
+        self, year, make, model, bed_type, bed_size, axel_weight
+    ):
         super().__init__(year, make, model)
         self.bed_type = bed_type
         self.bed_size = bed_size
@@ -70,13 +72,16 @@ class Corvette(Coupe):
     A Corvette is a specific type of Coupe.
     '''
     def __init__(self, year, edition, engine_size):
-        super().__init__(year, "Chevrolet", "Corvette", "V8", engine_size)
+        super().__init__(
+            year, "Chevrolet", "Corvette", "V8", engine_size
+        )
         self.edition = edition
 
     def __repr__(self):
         return f"""This car is a {self.make} {self.model},"""\
     		   f""" {self.edition} Edition made in {self.year}.
-It has a {self.engine_size} cubic-inch {self.engine_type} engine. It is awesome!!!"""
+It has a {self.engine_size} cubic-inch {self.engine_type} engine."""\
+			f"""It is awesome!!!"""
     
 
 t = Truck(1990, "Ford", "F-250", "Flat", "Long (8')", '3/4 Ton')

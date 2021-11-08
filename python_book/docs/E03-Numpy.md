@@ -1,3 +1,11 @@
+<!-- Navigation -->
+
+---
+
+[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+
+---
+<!-- End Navigation -->
 # E3 - Numpy
 
 Numpy is a Python library that allows complex math to be done easily. Generally, this library is ideal for performing linear algebra calculations and contains modules for common calculations. The following example should show this.
@@ -87,3 +95,12 @@ time numpy    : 0.024
 
 This shows how much faster Numpy is than plain Python. We will talk about the reason that this is but for now lets look at some other powerful things we can do with Numpy arrays.
 
+**More coming soon!**
+<!-- Navigation -->
+
+---
+
+[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+
+---
+<!-- End Navigation -->

@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -76,9 +76,7 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="The Redd Python Book" class="md-header__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
       
@@ -144,14 +142,11 @@
     
     
   </nav>
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -550,8 +545,6 @@
       </a>
       
         
-
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -803,6 +796,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E03-Numpy/" class="md-nav__link">
+        E3. Numpy
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -815,8 +823,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -900,30 +906,31 @@
 <span class="linenos" data-linenos="12 "></span>    <span class="s2">&quot;September&quot;</span><span class="p">,</span>
 <span class="linenos" data-linenos="13 "></span>    <span class="s2">&quot;October&quot;</span><span class="p">,</span>
 <span class="linenos" data-linenos="14 "></span>    <span class="s2">&quot;November&quot;</span><span class="p">,</span>
-<span class="linenos" data-linenos="15 "></span>    <span class="s2">&quot;December&quot;</span><span class="p">]</span>
-<span class="linenos" data-linenos="16 "></span>
-<span class="linenos" data-linenos="17 "></span><span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="linenos" data-linenos="18 "></span>
-<span class="linenos" data-linenos="19 "></span><span class="k">while</span> <span class="n">running</span><span class="p">:</span>
-<span class="linenos" data-linenos="20 "></span>    <span class="n">date_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a date of the format: MM/DD/YYYY</span><span class="se">\n</span><span class="s2">--&gt; &quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="21 "></span>
-<span class="linenos" data-linenos="22 "></span>    <span class="k">try</span><span class="p">:</span>
-<span class="linenos" data-linenos="23 "></span>        <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="n">date_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="24 "></span>        <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">month</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">day</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
-<span class="linenos" data-linenos="25 "></span>
-<span class="linenos" data-linenos="26 "></span>        <span class="k">if</span> <span class="n">day</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">day</span> <span class="o">&gt;</span> <span class="mi">31</span><span class="p">:</span>
-<span class="linenos" data-linenos="27 "></span>            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Invalid day value.&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="28 "></span>
-<span class="linenos" data-linenos="29 "></span>        <span class="n">era</span> <span class="o">=</span> <span class="s2">&quot;B.C.&quot;</span> <span class="k">if</span> <span class="n">year</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;A.D.&quot;</span>
-<span class="linenos" data-linenos="30 "></span>        <span class="n">year</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
-<span class="linenos" data-linenos="31 "></span>
-<span class="linenos" data-linenos="32 "></span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The date you entered was </span><span class="si">{</span><span class="n">month_names</span><span class="p">[</span><span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>\
-<span class="linenos" data-linenos="33 "></span>              <span class="s2">&quot; </span><span class="si">{day}</span><span class="s2"> in the year </span><span class="si">{year}</span><span class="s2"> </span><span class="si">{era}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="34 "></span>        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="linenos" data-linenos="35 "></span>
-<span class="linenos" data-linenos="36 "></span>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
-<span class="linenos" data-linenos="37 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Date detected!&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="38 "></span>        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="s2">&quot;December&quot;</span>
+<span class="linenos" data-linenos="16 "></span><span class="p">]</span>
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span><span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span><span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+<span class="linenos" data-linenos="21 "></span>    <span class="n">date_string</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter a date of the format: MM/DD/YYYY</span><span class="se">\n</span><span class="s2">--&gt; &quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="22 "></span>
+<span class="linenos" data-linenos="23 "></span>    <span class="k">try</span><span class="p">:</span>
+<span class="linenos" data-linenos="24 "></span>        <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="n">date_string</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="25 "></span>        <span class="n">month</span><span class="p">,</span> <span class="n">day</span><span class="p">,</span> <span class="n">year</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">month</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">day</span><span class="p">),</span> <span class="nb">int</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+<span class="linenos" data-linenos="26 "></span>
+<span class="linenos" data-linenos="27 "></span>        <span class="k">if</span> <span class="n">day</span> <span class="o">&lt;</span> <span class="mi">1</span> <span class="ow">or</span> <span class="n">day</span> <span class="o">&gt;</span> <span class="mi">31</span><span class="p">:</span>
+<span class="linenos" data-linenos="28 "></span>            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;Invalid day value.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="29 "></span>
+<span class="linenos" data-linenos="30 "></span>        <span class="n">era</span> <span class="o">=</span> <span class="s2">&quot;B.C.&quot;</span> <span class="k">if</span> <span class="n">year</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;A.D.&quot;</span>
+<span class="linenos" data-linenos="31 "></span>        <span class="n">year</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">year</span><span class="p">)</span>
+<span class="linenos" data-linenos="32 "></span>
+<span class="linenos" data-linenos="33 "></span>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The date you entered was </span><span class="si">{</span><span class="n">month_names</span><span class="p">[</span><span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>\
+<span class="linenos" data-linenos="34 "></span>              <span class="s2">&quot; </span><span class="si">{day}</span><span class="s2"> in the year </span><span class="si">{year}</span><span class="s2"> </span><span class="si">{era}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="35 "></span>        <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos" data-linenos="36 "></span>
+<span class="linenos" data-linenos="37 "></span>    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="linenos" data-linenos="38 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Date detected!&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="39 "></span>        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Here is what should happen</strong></p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python try_except.py
@@ -1045,12 +1052,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
         
       </div>
       
@@ -1062,10 +1067,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

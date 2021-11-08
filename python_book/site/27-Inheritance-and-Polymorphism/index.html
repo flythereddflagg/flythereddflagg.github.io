@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.a57b2b03.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -76,9 +76,7 @@
       
     </div>
     
-      
-
-<header class="md-header" data-md-component="header">
+      <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="The Redd Python Book" class="md-header__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
       
@@ -144,14 +142,11 @@
     
     
   </nav>
-  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -625,8 +620,6 @@
       </a>
       
         
-
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -810,6 +803,21 @@
   
 
     
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E03-Numpy/" class="md-nav__link">
+        E3. Numpy
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -822,8 +830,6 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-
-
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
@@ -925,56 +931,61 @@
 <span class="linenos" data-linenos="23 "></span>    <span class="sd">&#39;&#39;&#39;</span>
 <span class="linenos" data-linenos="24 "></span><span class="sd">    A Truck object is a type of Automobile.</span>
 <span class="linenos" data-linenos="25 "></span><span class="sd">    &#39;&#39;&#39;</span>    
-<span class="linenos" data-linenos="26 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">bed_type</span><span class="p">,</span> <span class="n">bed_size</span><span class="p">,</span> <span class="n">axel_weight</span><span class="p">):</span>
-<span class="linenos" data-linenos="27 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
-<span class="linenos" data-linenos="28 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">bed_type</span> <span class="o">=</span> <span class="n">bed_type</span>
-<span class="linenos" data-linenos="29 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">bed_size</span> <span class="o">=</span> <span class="n">bed_size</span>
-<span class="linenos" data-linenos="30 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">axel_weight</span> <span class="o">=</span> <span class="n">axel_weight</span>
-<span class="linenos" data-linenos="31 "></span>
-<span class="linenos" data-linenos="32 "></span>
-<span class="linenos" data-linenos="33 "></span><span class="k">class</span> <span class="nc">Sedan</span><span class="p">(</span><span class="n">Automobile</span><span class="p">):</span>
-<span class="linenos" data-linenos="34 "></span>    <span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos" data-linenos="35 "></span><span class="sd">    A Sedan is not a Truck but is a type of Automobile.</span>
-<span class="linenos" data-linenos="36 "></span><span class="sd">    &#39;&#39;&#39;</span>
-<span class="linenos" data-linenos="37 "></span>    <span class="n">number_of_doors</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="linenos" data-linenos="38 "></span>
-<span class="linenos" data-linenos="39 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">engine_type</span><span class="p">,</span> <span class="n">engine_size</span><span class="p">):</span>
-<span class="linenos" data-linenos="40 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
-<span class="linenos" data-linenos="41 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_type</span> <span class="o">=</span> <span class="n">engine_type</span>
-<span class="linenos" data-linenos="42 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_size</span> <span class="o">=</span> <span class="n">engine_size</span>
-<span class="linenos" data-linenos="43 "></span>
-<span class="linenos" data-linenos="44 "></span>
-<span class="linenos" data-linenos="45 "></span><span class="k">class</span> <span class="nc">Coupe</span><span class="p">(</span><span class="n">Automobile</span><span class="p">):</span>
-<span class="linenos" data-linenos="46 "></span>    <span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos" data-linenos="47 "></span><span class="sd">    A Coupe is not a Sedan or a Truck but is a type of Automobile.</span>
-<span class="linenos" data-linenos="48 "></span><span class="sd">    &#39;&#39;&#39;</span>    
-<span class="linenos" data-linenos="49 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">engine_type</span><span class="p">,</span> <span class="n">engine_size</span><span class="p">):</span>
-<span class="linenos" data-linenos="50 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
-<span class="linenos" data-linenos="51 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_type</span> <span class="o">=</span> <span class="n">engine_type</span>
-<span class="linenos" data-linenos="52 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_size</span> <span class="o">=</span> <span class="n">engine_size</span>
-<span class="linenos" data-linenos="53 "></span>
-<span class="linenos" data-linenos="54 "></span>
-<span class="linenos" data-linenos="55 "></span><span class="k">class</span> <span class="nc">Corvette</span><span class="p">(</span><span class="n">Coupe</span><span class="p">):</span>
-<span class="linenos" data-linenos="56 "></span>    <span class="sd">&#39;&#39;&#39;</span>
-<span class="linenos" data-linenos="57 "></span><span class="sd">    A Corvette is a specific type of Coupe.</span>
-<span class="linenos" data-linenos="58 "></span><span class="sd">    &#39;&#39;&#39;</span>
-<span class="linenos" data-linenos="59 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">edition</span><span class="p">,</span> <span class="n">engine_size</span><span class="p">):</span>
-<span class="linenos" data-linenos="60 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="s2">&quot;Chevrolet&quot;</span><span class="p">,</span> <span class="s2">&quot;Corvette&quot;</span><span class="p">,</span> <span class="s2">&quot;V8&quot;</span><span class="p">,</span> <span class="n">engine_size</span><span class="p">)</span>
-<span class="linenos" data-linenos="61 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">edition</span> <span class="o">=</span> <span class="n">edition</span>
-<span class="linenos" data-linenos="62 "></span>
-<span class="linenos" data-linenos="63 "></span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="linenos" data-linenos="64 "></span>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;This car is a </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">,&quot;&quot;&quot;</span>\
-<span class="linenos" data-linenos="65 "></span>               <span class="sa">f</span><span class="s2">&quot;&quot;&quot; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">edition</span><span class="si">}</span><span class="s2"> Edition made in </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2">.</span>
-<span class="linenos" data-linenos="66 "></span><span class="s2">It has a </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">engine_size</span><span class="si">}</span><span class="s2"> cubic-inch </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">engine_type</span><span class="si">}</span><span class="s2"> engine. It is awesome!!!&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="67 "></span>
-<span class="linenos" data-linenos="68 "></span>
-<span class="linenos" data-linenos="69 "></span><span class="n">t</span> <span class="o">=</span> <span class="n">Truck</span><span class="p">(</span><span class="mi">1990</span><span class="p">,</span> <span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;F-250&quot;</span><span class="p">,</span> <span class="s2">&quot;Flat&quot;</span><span class="p">,</span> <span class="s2">&quot;Long (8&#39;)&quot;</span><span class="p">,</span> <span class="s1">&#39;3/4 Ton&#39;</span><span class="p">)</span>
-<span class="linenos" data-linenos="70 "></span><span class="n">s</span> <span class="o">=</span> <span class="n">Sedan</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="s2">&quot;Hyundai&quot;</span><span class="p">,</span> <span class="s2">&quot;Elantra&quot;</span><span class="p">,</span> <span class="s1">&#39;Straight 4&#39;</span><span class="p">,</span> <span class="mi">92</span><span class="p">)</span>
-<span class="linenos" data-linenos="71 "></span><span class="n">p</span> <span class="o">=</span> <span class="n">Coupe</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">&quot;Toyota&quot;</span><span class="p">,</span> <span class="s2">&quot;Camry&quot;</span><span class="p">,</span> <span class="s2">&quot;V6&quot;</span><span class="p">,</span> <span class="mi">205</span><span class="p">)</span>
-<span class="linenos" data-linenos="72 "></span><span class="n">c</span> <span class="o">=</span> <span class="n">Corvette</span><span class="p">(</span><span class="mi">1975</span><span class="p">,</span> <span class="s2">&quot;Sting Ray&quot;</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
+<span class="linenos" data-linenos="26 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span>
+<span class="linenos" data-linenos="27 "></span>        <span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">bed_type</span><span class="p">,</span> <span class="n">bed_size</span><span class="p">,</span> <span class="n">axel_weight</span>
+<span class="linenos" data-linenos="28 "></span>    <span class="p">):</span>
+<span class="linenos" data-linenos="29 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+<span class="linenos" data-linenos="30 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">bed_type</span> <span class="o">=</span> <span class="n">bed_type</span>
+<span class="linenos" data-linenos="31 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">bed_size</span> <span class="o">=</span> <span class="n">bed_size</span>
+<span class="linenos" data-linenos="32 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">axel_weight</span> <span class="o">=</span> <span class="n">axel_weight</span>
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span>
+<span class="linenos" data-linenos="35 "></span><span class="k">class</span> <span class="nc">Sedan</span><span class="p">(</span><span class="n">Automobile</span><span class="p">):</span>
+<span class="linenos" data-linenos="36 "></span>    <span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos" data-linenos="37 "></span><span class="sd">    A Sedan is not a Truck but is a type of Automobile.</span>
+<span class="linenos" data-linenos="38 "></span><span class="sd">    &#39;&#39;&#39;</span>
+<span class="linenos" data-linenos="39 "></span>    <span class="n">number_of_doors</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="linenos" data-linenos="40 "></span>
+<span class="linenos" data-linenos="41 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">engine_type</span><span class="p">,</span> <span class="n">engine_size</span><span class="p">):</span>
+<span class="linenos" data-linenos="42 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+<span class="linenos" data-linenos="43 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_type</span> <span class="o">=</span> <span class="n">engine_type</span>
+<span class="linenos" data-linenos="44 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_size</span> <span class="o">=</span> <span class="n">engine_size</span>
+<span class="linenos" data-linenos="45 "></span>
+<span class="linenos" data-linenos="46 "></span>
+<span class="linenos" data-linenos="47 "></span><span class="k">class</span> <span class="nc">Coupe</span><span class="p">(</span><span class="n">Automobile</span><span class="p">):</span>
+<span class="linenos" data-linenos="48 "></span>    <span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos" data-linenos="49 "></span><span class="sd">    A Coupe is not a Sedan or a Truck but is a type of Automobile.</span>
+<span class="linenos" data-linenos="50 "></span><span class="sd">    &#39;&#39;&#39;</span>    
+<span class="linenos" data-linenos="51 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">engine_type</span><span class="p">,</span> <span class="n">engine_size</span><span class="p">):</span>
+<span class="linenos" data-linenos="52 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">year</span><span class="p">,</span> <span class="n">make</span><span class="p">,</span> <span class="n">model</span><span class="p">)</span>
+<span class="linenos" data-linenos="53 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_type</span> <span class="o">=</span> <span class="n">engine_type</span>
+<span class="linenos" data-linenos="54 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">engine_size</span> <span class="o">=</span> <span class="n">engine_size</span>
+<span class="linenos" data-linenos="55 "></span>
+<span class="linenos" data-linenos="56 "></span>
+<span class="linenos" data-linenos="57 "></span><span class="k">class</span> <span class="nc">Corvette</span><span class="p">(</span><span class="n">Coupe</span><span class="p">):</span>
+<span class="linenos" data-linenos="58 "></span>    <span class="sd">&#39;&#39;&#39;</span>
+<span class="linenos" data-linenos="59 "></span><span class="sd">    A Corvette is a specific type of Coupe.</span>
+<span class="linenos" data-linenos="60 "></span><span class="sd">    &#39;&#39;&#39;</span>
+<span class="linenos" data-linenos="61 "></span>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">year</span><span class="p">,</span> <span class="n">edition</span><span class="p">,</span> <span class="n">engine_size</span><span class="p">):</span>
+<span class="linenos" data-linenos="62 "></span>        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
+<span class="linenos" data-linenos="63 "></span>            <span class="n">year</span><span class="p">,</span> <span class="s2">&quot;Chevrolet&quot;</span><span class="p">,</span> <span class="s2">&quot;Corvette&quot;</span><span class="p">,</span> <span class="s2">&quot;V8&quot;</span><span class="p">,</span> <span class="n">engine_size</span>
+<span class="linenos" data-linenos="64 "></span>        <span class="p">)</span>
+<span class="linenos" data-linenos="65 "></span>        <span class="bp">self</span><span class="o">.</span><span class="n">edition</span> <span class="o">=</span> <span class="n">edition</span>
+<span class="linenos" data-linenos="66 "></span>
+<span class="linenos" data-linenos="67 "></span>    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="linenos" data-linenos="68 "></span>        <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;This car is a </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">make</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="si">}</span><span class="s2">,&quot;&quot;&quot;</span>\
+<span class="linenos" data-linenos="69 "></span>               <span class="sa">f</span><span class="s2">&quot;&quot;&quot; </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">edition</span><span class="si">}</span><span class="s2"> Edition made in </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">year</span><span class="si">}</span><span class="s2">.</span>
+<span class="linenos" data-linenos="70 "></span><span class="s2">It has a </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">engine_size</span><span class="si">}</span><span class="s2"> cubic-inch </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">engine_type</span><span class="si">}</span><span class="s2"> engine.&quot;&quot;&quot;</span>\
+<span class="linenos" data-linenos="71 "></span>            <span class="sa">f</span><span class="s2">&quot;&quot;&quot;It is awesome!!!&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="72 "></span>
 <span class="linenos" data-linenos="73 "></span>
-<span class="linenos" data-linenos="74 "></span><span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">c</span><span class="p">]:</span>
-<span class="linenos" data-linenos="75 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="74 "></span><span class="n">t</span> <span class="o">=</span> <span class="n">Truck</span><span class="p">(</span><span class="mi">1990</span><span class="p">,</span> <span class="s2">&quot;Ford&quot;</span><span class="p">,</span> <span class="s2">&quot;F-250&quot;</span><span class="p">,</span> <span class="s2">&quot;Flat&quot;</span><span class="p">,</span> <span class="s2">&quot;Long (8&#39;)&quot;</span><span class="p">,</span> <span class="s1">&#39;3/4 Ton&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="75 "></span><span class="n">s</span> <span class="o">=</span> <span class="n">Sedan</span><span class="p">(</span><span class="mi">2017</span><span class="p">,</span> <span class="s2">&quot;Hyundai&quot;</span><span class="p">,</span> <span class="s2">&quot;Elantra&quot;</span><span class="p">,</span> <span class="s1">&#39;Straight 4&#39;</span><span class="p">,</span> <span class="mi">92</span><span class="p">)</span>
+<span class="linenos" data-linenos="76 "></span><span class="n">p</span> <span class="o">=</span> <span class="n">Coupe</span><span class="p">(</span><span class="mi">2012</span><span class="p">,</span> <span class="s2">&quot;Toyota&quot;</span><span class="p">,</span> <span class="s2">&quot;Camry&quot;</span><span class="p">,</span> <span class="s2">&quot;V6&quot;</span><span class="p">,</span> <span class="mi">205</span><span class="p">)</span>
+<span class="linenos" data-linenos="77 "></span><span class="n">c</span> <span class="o">=</span> <span class="n">Corvette</span><span class="p">(</span><span class="mi">1975</span><span class="p">,</span> <span class="s2">&quot;Sting Ray&quot;</span><span class="p">,</span> <span class="mi">350</span><span class="p">)</span>
+<span class="linenos" data-linenos="78 "></span>
+<span class="linenos" data-linenos="79 "></span><span class="k">for</span> <span class="n">car</span> <span class="ow">in</span> <span class="p">[</span><span class="n">t</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">c</span><span class="p">]:</span>
+<span class="linenos" data-linenos="80 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">car</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 </code></pre></div>
 <p><strong>Here is what should happen</strong></p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python inheritance.py
@@ -1105,12 +1116,10 @@
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
         
-        
-          Made with
-          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-            Material for MkDocs
-          </a>
-        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
         
       </div>
       
@@ -1122,10 +1131,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

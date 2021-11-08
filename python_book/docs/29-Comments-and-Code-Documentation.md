@@ -23,8 +23,8 @@ file: docstrings.py
 author: Mark Redd
 github: flythereddflagg
 about:
-    This module has some dummy functions and a dummy class to demonstrate
-    proper usage of docstrings.
+    This module has some dummy functions and a dummy class to 
+    demonstrate proper usage of docstrings.
 """
 
 class Dummy():
@@ -50,15 +50,15 @@ class Dummy():
         the intent and use of a function. For such cases it is useful
         to list the parameters and what they mean. e.g. :
         Parameters:
-            - how_high (integer): the height you want the dummy to jump
-                in feet
-            - when (datetime instance): a Python datetime instance specifying
-                the moment when you want the dummy to jump
+            - how_high (integer): the height you want the dummy to 
+                jump in feet
+            - when (datetime instance): a Python datetime instance 
+                specifying the moment when you want the dummy to jump
         
         Likewise it is useful to tell what the function returns e.g. :
         Returns:
-            - success (boolean): True if the jump completed successfully
-                False otherwise.
+            - success (boolean): True if the jump completed 
+                successfully False otherwise.
         """
         return True
     

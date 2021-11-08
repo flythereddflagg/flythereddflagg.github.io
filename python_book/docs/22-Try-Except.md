@@ -25,7 +25,8 @@ month_names = [
     "September",
     "October",
     "November",
-    "December"]
+    "December"
+]
 
 running = True
 

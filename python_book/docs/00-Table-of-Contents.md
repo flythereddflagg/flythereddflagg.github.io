@@ -34,3 +34,4 @@
 1. [Branching Out](./33-Branching-Out.md)
 1. [ Getting Started Again](./E01-Getting-Started-Again.md)
 1. [ Pandas ](./E02-Pandas.md)
+1. [ Numpy ](./E03-Numpy.md)

@@ -39,6 +39,7 @@ nav:
     - 33. Branching Out: './33-Branching-Out.md'
     - E1. Getting Started Again: './E01-Getting-Started-Again.md'
     - E2. Pandas : './E02-Pandas.md'
+    - E3. Numpy : './E03-Numpy.md'
 # end nav
 
 extra_javascript: 
