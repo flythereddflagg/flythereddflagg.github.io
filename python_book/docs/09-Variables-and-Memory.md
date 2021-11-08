@@ -152,6 +152,8 @@ Python follows some rules on what a valid variable name can be. The rules are as
 | nonlocal | not     | or    | pass  | raise  |
 | return   | try     | while | with  | yield  |
 
+For a complete explanation of naming see the section in [PEP 8](https://www.python.org/dev/peps/pep-0008/#naming-conventions).
+
 #### Naming Conventions and Guidelines
 
 Within the limits of these rules, you can call your variables any name you want and make them as long or as short as you want. However, there are some conventions you should stick to you make your code better. The following conventions will help make your code easier to write and fix when something goes wrong. (And trust me, something *always* goes wrong.):
