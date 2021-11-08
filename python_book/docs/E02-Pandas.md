@@ -60,7 +60,15 @@ Notice how the values are now in order but the index-value paring is preserved (
 # In[4]:
 another_series = pd.Series(
     data=input_data, 
-    index=['n cheeses', "spam", 32, "the number 36", "ohh a real float!", 22.2, "the last num"]
+    index=[
+        'n cheeses', 
+        "spam", 
+        32, 
+        "the number 36", 
+        "ohh a real float!", 
+        22.2, 
+        "the last num"
+    ]
 )
 another_series
 # Out[4]:

@@ -973,20 +973,28 @@
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># In[4]:</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="n">another_series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
 <span class="linenos" data-linenos=" 3 "></span>    <span class="n">data</span><span class="o">=</span><span class="n">input_data</span><span class="p">,</span> 
-<span class="linenos" data-linenos=" 4 "></span>    <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;n cheeses&#39;</span><span class="p">,</span> <span class="s2">&quot;spam&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">,</span> <span class="s2">&quot;the number 36&quot;</span><span class="p">,</span> <span class="s2">&quot;ohh a real float!&quot;</span><span class="p">,</span> <span class="mf">22.2</span><span class="p">,</span> <span class="s2">&quot;the last num&quot;</span><span class="p">]</span>
-<span class="linenos" data-linenos=" 5 "></span><span class="p">)</span>
-<span class="linenos" data-linenos=" 6 "></span><span class="n">another_series</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="c1"># Out[4]:</span>
-<span class="linenos" data-linenos=" 8 "></span><span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos=" 9 "></span><span class="sd">n cheeses             3.000</span>
-<span class="linenos" data-linenos="10 "></span><span class="sd">spam                  2.000</span>
-<span class="linenos" data-linenos="11 "></span><span class="sd">32                    5.000</span>
-<span class="linenos" data-linenos="12 "></span><span class="sd">the number 36        36.000</span>
-<span class="linenos" data-linenos="13 "></span><span class="sd">ohh a real float!    23.342</span>
-<span class="linenos" data-linenos="14 "></span><span class="sd">22.2                 34.000</span>
-<span class="linenos" data-linenos="15 "></span><span class="sd">the last num         53.300</span>
-<span class="linenos" data-linenos="16 "></span><span class="sd">dtype: float64</span>
-<span class="linenos" data-linenos="17 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">index</span><span class="o">=</span><span class="p">[</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="s1">&#39;n cheeses&#39;</span><span class="p">,</span> 
+<span class="linenos" data-linenos=" 6 "></span>        <span class="s2">&quot;spam&quot;</span><span class="p">,</span> 
+<span class="linenos" data-linenos=" 7 "></span>        <span class="mi">32</span><span class="p">,</span> 
+<span class="linenos" data-linenos=" 8 "></span>        <span class="s2">&quot;the number 36&quot;</span><span class="p">,</span> 
+<span class="linenos" data-linenos=" 9 "></span>        <span class="s2">&quot;ohh a real float!&quot;</span><span class="p">,</span> 
+<span class="linenos" data-linenos="10 "></span>        <span class="mf">22.2</span><span class="p">,</span> 
+<span class="linenos" data-linenos="11 "></span>        <span class="s2">&quot;the last num&quot;</span>
+<span class="linenos" data-linenos="12 "></span>    <span class="p">]</span>
+<span class="linenos" data-linenos="13 "></span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span><span class="n">another_series</span>
+<span class="linenos" data-linenos="15 "></span><span class="c1"># Out[4]:</span>
+<span class="linenos" data-linenos="16 "></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="17 "></span><span class="sd">n cheeses             3.000</span>
+<span class="linenos" data-linenos="18 "></span><span class="sd">spam                  2.000</span>
+<span class="linenos" data-linenos="19 "></span><span class="sd">32                    5.000</span>
+<span class="linenos" data-linenos="20 "></span><span class="sd">the number 36        36.000</span>
+<span class="linenos" data-linenos="21 "></span><span class="sd">ohh a real float!    23.342</span>
+<span class="linenos" data-linenos="22 "></span><span class="sd">22.2                 34.000</span>
+<span class="linenos" data-linenos="23 "></span><span class="sd">the last num         53.300</span>
+<span class="linenos" data-linenos="24 "></span><span class="sd">dtype: float64</span>
+<span class="linenos" data-linenos="25 "></span><span class="sd">&quot;&quot;&quot;</span>
 </code></pre></div>
 <p>The only other thing you need to know right now is that the data type of the values in the Series is displayed in the printed part and may be one of a few types. The types are explained briefly <a href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.dtypes.html">here</a>.</p>
 <p><strong>Your Assignment:</strong> Read about Series in the <a href="https://pandas.pydata.org/docs/reference/api/pandas.Series.html">Pandas Documentation</a>. You do not have to understand every method in the class but do understand all off the examples on that page.</p>
