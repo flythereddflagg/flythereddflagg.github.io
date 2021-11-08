@@ -27,6 +27,8 @@ print(f"You work as a/an {user_job}.")
 
 **Here is what should happen**
 
+(If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
+
 ```
 $ python io_files.py
 Enter your name      : John Doe

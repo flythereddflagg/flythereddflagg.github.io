@@ -50,6 +50,8 @@ print("Here is a greek eta character: \u03b7")
 
 ### Here is what should happen
 
+(If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
+
 ```
 $ python esc_chars.py
 John's character says, "I'd like to buy some cheese."

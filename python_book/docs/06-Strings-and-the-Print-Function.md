@@ -51,6 +51,8 @@ print("mixing "double" and'single' quotes will cause an error.")
 
 #### This is what should happen
 
+(If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
+
 ```
 $ python string_quotes.py
 File "string_quotes.py", line 6

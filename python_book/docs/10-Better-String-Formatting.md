@@ -67,6 +67,8 @@ print(f"{random_number_6:11.3f}")
 
 #### Here is what should happen
 
+(If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
+
 ```
 $ python adv_format.py
 I have a jar of Fantastic brand pickles. 

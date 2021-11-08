@@ -11,16 +11,10 @@
 
 ## Introduction
 
-Python changed my life. Before learning Python, computers intimidated me. Python
-opened up to me a world of programming that made computers into useful tools
-instead of necessary evils. Regardless of the reason you are reading this book
+Python changed my life. Before learning Python, computers intimidated me. Python opened up to me a world of programming that made computers into useful tools instead of necessary evils. Regardless of the reason you are reading this book
 right now, I hope that Python will have a similar impact on you.
 
-I am writing this book to introduce Python to newcomers to programming. If you
-are an experienced programmer and are looking to add Python to your repertoire,
-this may not be the book for you. The intent of this book is, primarily,
-to give a solid introduction to Python, and some introductory computer science, to those
-who are completely new to programming.
+I am writing this book to introduce Python to newcomers to programming. If you are an experienced programmer and are looking to add Python to your repertoire, this may not be the book for you. The intent of this book is, primarily, to give a solid introduction to Python, and some introductory computer science, to those who are completely new to programming.
 
 To that end, I have the following goals in mind while writing this book:
 

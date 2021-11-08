@@ -56,6 +56,8 @@ print(
 
 #### Here is what should happen
 
+(If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
+
 ```bash
 $ python vars_and_mem.py
 Here is some text! This is another string of text.

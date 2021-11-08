@@ -15,7 +15,7 @@ We will begin with the most basic program that actually does something in
 Python. This is common when you want to begin any programming language. As with
 all things, beginning in Python is very simple.
 
-### Making Running Your First Python File
+### Making and Running Your First Python File
 
 - Start by opening your text editor and opening a new file
 - Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend making a new folder, calling it something like `python_exercises` and putting it in your "Documents" folder. However, you can put it wherever makes sense. 

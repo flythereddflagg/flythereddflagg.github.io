@@ -40,6 +40,8 @@ ${:5.2f}/10 oz
 
 ### Here is what should happen
 
+(If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
+
 ```bash
 $ python format_strings.py
 How much will this cost? 23.0 dollars
