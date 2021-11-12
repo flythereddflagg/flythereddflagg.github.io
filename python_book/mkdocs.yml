@@ -40,6 +40,7 @@ nav:
     - E1. Getting Started Again: './E01-Getting-Started-Again.md'
     - E2. Pandas : './E02-Pandas.md'
     - E3. Numpy : './E03-Numpy.md'
+    - E10. Bringing it All Together: './E10-Bringing-it-All-Together.md'
 # end nav
 
 extra_javascript: 

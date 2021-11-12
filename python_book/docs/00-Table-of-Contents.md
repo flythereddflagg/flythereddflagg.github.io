@@ -35,3 +35,4 @@
 1. [ Getting Started Again](./E01-Getting-Started-Again.md)
 1. [ Pandas ](./E02-Pandas.md)
 1. [ Numpy ](./E03-Numpy.md)
+1. [ Bringing it All Together](./E10-Bringing-it-All-Together.md)

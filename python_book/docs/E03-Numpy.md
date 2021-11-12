@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E10 - Bringing it All Together](./E10-Bringing-it-All-Together.md)
 
 ---
 <!-- End Navigation -->
@@ -207,11 +207,12 @@ This is one area where I have to admit that the developers of Numpy do a much be
 - You should use Numpy for calculations involving matrices and element-wise calculations.
 - Numpy software is designed to integrate with Scipy, Pandas, and other STEM-focused libraries.
 
+
 <!-- Navigation -->
 
 ---
 
-[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | 
+[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E10 - Bringing it All Together](./E10-Bringing-it-All-Together.md)
 
 ---
 <!-- End Navigation -->
