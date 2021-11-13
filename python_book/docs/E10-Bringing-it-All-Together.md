@@ -19,7 +19,9 @@ Regression Statistics
 Optimization
 Tank Overflow
 Dynamic Simulation
-Other Tutorials--><!-- Navigation -->
+Other Tutorials--> <!--Maybe just do everything together-->
+
+<!-- Navigation -->
 
 ---
 
