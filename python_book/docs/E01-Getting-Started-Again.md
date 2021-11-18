@@ -106,6 +106,8 @@ Now that you have done the basics. Use the interface tour to familiarize yoursel
 
 - Use the internet to look up "ipython magic commands". What are they and how do they work? Use them in a Jupyter notebook to  run command line arguments and use the help fuction.
 - Look up how to use Markdown in Jupyter. Use the internet to look up Markdown syntax and write some documentation in your notebook.
+- Look up Jupyter Lab. This is a more advanced version of Jupyter Notebook that may suit your needs. We will not get into Jupyter Lab here but you should be aware that it does exist.
+
 <!-- Navigation -->
 
 ---
