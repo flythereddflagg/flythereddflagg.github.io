@@ -45,7 +45,7 @@
 
 ### Brigham Young University
 
-*Doctor of Philosophy, Chemical Engineering | Jul 2016 – 2021*
+*Doctor of Philosophy, Chemical Engineering | Jul 2016 – 2022*
 
 ### Brigham Young University
 

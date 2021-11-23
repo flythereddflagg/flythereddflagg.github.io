@@ -3,7 +3,7 @@ from sys import argv
 bad_lines = [
     "orcid",
     "linkedin",
-    "Github",
+    "GitHub",
     "Printable",
 ]
 
@@ -11,10 +11,10 @@ bad_lines = [
 with open(argv[1], 'r') as f:
     lines = f.readlines()
 
-for i in range(len(lines)):
+for i, line in enumerate(lines):
     for key in bad_lines:
-        if key in lines[i]:
-            lines[i] = "% " + lines[i]
+        if key in line:
+            lines[i] = "% " + line
 
 
 # for line in lines:
