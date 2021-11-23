@@ -76,8 +76,15 @@
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
+-  Mark E. Redd, Ethan Gustafson, Elizabeth Hart, Nathan McDonald, Keturah McQuade, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *Autoignition Temperature Data and Trends for Various Chemical Families* (in preparation)
+
+- Mark E. Redd, Glenn Seaton, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *An Improved Method for Predicting Autoignition Temperatures Based on First Principles* (in preparation)
+
 - Mark E. Redd, Joseph C. Bloxham, Neil F. Giles, Thomas A. Knotts, W. Vincent Wilding, *A study of unexpected autoignition temperature trends for pure* n*-alkanes*, Fuel **2021** 306, 121710. [DOI: 10.1016/j.fuel.2021.121710](https://doi.org/10.1016/j.fuel.2021.121710).
+
 - Joseph C. Bloxham, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, and W. Vincent Wilding, *Proper Use of the DIPPR 801 Database for Creation of Models, Methods, and Processes*, Journal of Chemical & Engineering Data **2021** *66* (1), 3-10. [DOI: 10.1021/acs.jced.0c00641](https://doi.org/10.1021/acs.jced.0c00641)
+
+  
 
 ## Presentations
 
