@@ -14,7 +14,7 @@
 
 - Researched the autoignition temperatures (AIT) of pure compounds for AIChE's DIPPR 801 Database
 - Improved the reliability of AIT values in the 801 Database through evaluating data from 600+ sources 
-- Filled gaps in the 801 Database by measuring AIT for 13 pure compounds
+- Filled gaps in the 801 Database by measuring AIT for 17 pure compounds
 - Designed and constructed an experimental apparatus at ~ 10% of the expected capital cost 
 - Increased reliability and throughput of AIT measurements by automating aspects of the experimental process
 - Wrote custom software to automate data acquisition and analysis using Python and C/C++
