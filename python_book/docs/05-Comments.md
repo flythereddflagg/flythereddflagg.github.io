@@ -11,14 +11,9 @@
 
 The next thing you need to understand that is fundamental to programming is comments in code.
 
+## What is an octothorpe?
 
-### What is an octothorpe?
-You have probably seen this symbol at some point:
-
-```python
-#
-```
-The proper name for this symbol is an octothorpe. However, I have heard the following names for it: Hash, Hashtag, Pound, Tic-tac-toe symbol etc. For the purposes of this book, I will refer to it as a hash. The hash has a special purpose that will be seen in the code you will write below.
+You have probably seen this symbol at some point: `#`. The proper name for this symbol is an octothorpe. However, you have probably heard it called the following: hash, hashtag, hound, tic-tac-toe symbol etc. For the purposes of this book, I will refer to it as a hash. The hash has a special purpose that will be seen in the code you will write below.
 
 ```python
 # octothorpe.py
@@ -55,7 +50,7 @@ print("print")
 
 print("Well I guess we're done here.")
 ```
-#### Here is what should happen
+### Here is what should happen
 
 (If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
 
@@ -70,7 +65,7 @@ $
 
 Again if the result you get isn't *exactly* like the book's, go back in fix it until you get it right.
 
-### About comments
+## About comments
 
 As you may be able to gather from the code, the hash symbol tells Python, "Ignore everything after this on this line". The triple quotes (``` """```  or ```'''```) begin and end a block of text that can span as many lines as you want that Python will likewise ignore. (There are a few exceptions to this but we will cover them later.)
 
@@ -78,7 +73,7 @@ These are generally called "comments" in the code. They let the programmer make 
 
 ***NOTE:*** *Whenever you use quotes in Python, you must be consistent in whether you use single (`'`) or double (`"`) quotes to open or close text. Generally, it does not matter which you choose. The only requirement is that you are consistent.*
 
-### Comment Conventions
+## Comment Conventions
 
 The following rules of thumb apply to code comments and are demonstrated below (don't bother writing this all out, just read it):
 

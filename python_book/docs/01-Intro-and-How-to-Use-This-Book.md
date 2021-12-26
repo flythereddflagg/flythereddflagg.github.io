@@ -11,8 +11,7 @@
 
 ## Introduction
 
-Python changed my life. Before learning Python, computers intimidated me. Python opened up to me a world of programming that made computers into useful tools instead of necessary evils. Regardless of the reason you are reading this book
-right now, I hope that Python will have a similar impact on you.
+Python changed my life. Before learning Python, computers intimidated me. Python opened up to me a world of programming that made computers into useful tools instead of necessary evils. Regardless of the reason you are reading this book right now, I hope that Python will have a similar impact on you.
 
 I am writing this book to introduce Python to newcomers to programming. If you are an experienced programmer and are looking to add Python to your repertoire, this may not be the book for you. The intent of this book is, primarily, to give a solid introduction to Python, and some introductory computer science, to those who are completely new to programming.
 
@@ -26,38 +25,31 @@ To that end, I have the following goals in mind while writing this book:
 
     Computer fundamentals is an area of understanding that is often neglected when teaching Python. In my experience, understanding these fundamentals helps you write better code more quickly and, when things go wrong, fixing your code is easier to do.
 
-
-
  - **Allow the reader to learn at their own pace** 
 
-    I attempt to structure the experience of this book such that you can learn at your own pace. After covering a particular skill or subject, you can move on quickly to the next exercise or, if desired, you can do more to hone your skills and master the subject. 
-
-    This philosophy of learning will hopefully facilitate the depth of your learning. Also, this allows you to pursue your specific interests and flesh out your skill set in a way that benefits you the most.
-
-    When learning programming, I feel the best approach to learning is simply to get in there and start writing some code. Therefore, I aim to get you coding and keep you coding as much as possible. You may have heard it said that it takes 10,000 hours to become proficient at something. I agree with [this guy](https://www.youtube.com/watch?v=5MgBikgcWnY) that this is false. This book is intended to get you reasonably proficient at Python within about 20 hours of coding.
-
-    With that said, you may find that you reach your 20-hour mark and are not finished with the book in terms of learning the basics. That is okay. You may find that a reasonable amount of proficiency is possible in less than 20 hours. That is also okay. Learn at your own pace, but understand that 10,000 hours of coding is NOT required to gain benefits from coding.
+    I attempt to structure the experience of this book such that you can learn at your own pace. After covering a particular skill or subject, you can move on quickly to the next exercise or, if desired, you can do more to hone your skills and master the subject. This philosophy of learning will hopefully facilitate the depth of your learning. Also, this allows you to pursue your specific interests and flesh out your skill set in a way that benefits you the most.
 
 
 ## How to use this book
 
-### Boring Before Interesting
+In this book, I aim to get you coding ASAP and constantly encourage you to try things yourself. You will learn a lot more actually attempting to write code than you will reading about it. With that said, there are some things you should know before beginning.
+
+### You MUST do some boring stuff BEFORE you can do interesting stuff
 
 In the 1984 film "[The Karate Kid](https://www.imdb.com/title/tt0087538/plotsummary?ref_=tt_stry_pl#synopsis)", Mr. Miyagi, the teacher, doesn't start training Daniel, the protagonist, in Karate by teaching him fancy moves but instead begins by having him perform many menial tasks with no apparent point to them. It is in doing these seemingly pointless tasks that Daniel first begins to have skill in Karate.
 
-You will find that anytime you want to learn a new skill you must do many boring and seemingly pointless things before you can do something interesting or useful. Every discipline has this feature. I am telling you this because for me, a person with a very limited attention span, the beginning of programming was agonizingly slow and seemingly pointless and you may feel that way too.
+Anytime you learn a new skill you must do many boring and seemingly pointless things before you can do something interesting or useful. Every discipline has this feature. I am telling you this because for me, a person with a very limited attention span, the beginning of learning programming was agonizingly slow and seemingly pointless. You may feel that way too.
 
-However, if you will do some simple things in every section you will be well on
-your way to becoming a good programmer. The simple things you must do are the 
-following:
+However, if you will do the following simple things in *every* section you will be well on your way:
 
-- Read each section
-- Write the code from each section code **EXACTLY** as it is written **without** copy-pasting it
-- Make it run
+1. Read the section
+2. Write the code from each section code **EXACTLY** as it is written **without** copy-pasting it
+3. Make it run
+4. Understand what the code you wrote does
 
-When things get boring or tedious, remember the Karate Kid. You are building a foundation on which you can move mountains. To that end, I have structured each section to build on what you have learned.
+When things get boring or tedious, remember the Karate Kid. You are building a foundation on which you can move mountains. In addition, each section can include some features that will enhance your ability.
 
-### Sections
+### What is in each section?
 
 In each section of this book, reading and exercises will be ordered by how mandatory they are. If you wish to move as quickly as possible, you may only do the first part of each section where I will cover the essential material. However, I do recommend doing everything under "Hone Your Skills" in every section to get the most out of this book.
 

@@ -1,17 +1,7 @@
-- add bold defintions
+# TODO: Editing the book
 
-- proof read secs 0,1,2
-
+- add bold definitions
 - say to save your first python file
-
-- 
-
-
-
-
-
-
-
 
 
 

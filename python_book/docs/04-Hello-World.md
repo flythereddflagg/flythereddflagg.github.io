@@ -9,17 +9,13 @@
 
 # 4 - Hello World!
 
-If you have successfully installed Python and are able to do basic navigation in the command line, you are ready to begin programming in Python!
+If you have successfully installed Python and are able to do basic navigation in the command line, you are ready to begin programming in Python! We will begin with the most basic program that actually does something in Python. This is common when you want to begin any programming language.
 
-We will begin with the most basic program that actually does something in 
-Python. This is common when you want to begin any programming language. As with
-all things, beginning in Python is very simple.
-
-### Making and Running Your First Python File
+## Making and Running Your First Python File
 
 - Start by opening your text editor and opening a new file
 - Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend making a new folder, calling it something like `python_exercises` and putting it in your "Documents" folder. However, you can put it wherever makes sense. 
-- Use the 'Save as' dialog and navigate to the folder you made.
+- Use the `File -> Save As` dialog and navigate to the folder you made.
 - Give the file the name `hello_world.py` and save it
 
 You will notice the `.py` part of the filename. This is called an extension and is a way of telling the computer or anyone who looks at the file what kind of file it is. Make sure you name all files you make in Python using this extension.
@@ -35,14 +31,13 @@ Also it is good practice to never use spaces when naming files used in programmi
 print("Hello World!")
 ```
 
+- *Make sure you save the file*
 - Go to your terminal and navigate to the folder that holds your Python file. *(if you have trouble doing this, review the previous section until you can navigate the terminal with confidence.)*
-- Enter the following command in your terminal:
+- Enter the following command in your terminal (Remember, **DO NOT** type in the `$` and ignore everything in the terminal before the `$` or the `>`):
 
 ```bash
 $ python hello_world.py
 ```
-
-Remember, **DO NOT** type in the `$` and ignore everything in the terminal before the `$` or the `>`
 
 #### Here is what should happen
 
@@ -58,15 +53,15 @@ If this did not work try the following:
 
 - Look where you saved `hello_world.py` have you navigated to the same folder in the command line? If not navigate to the folder `hello_world.py` is in before trying again.
 - Did you write *exactly* what was written above? Check it carefully before trying again.
-- Check that Python is working. Type "python" or "python3" into the terminal like it says in [Chapter 2](./02-Getting-Started.md). Does it work as it says there? If not check the [Troubleshooting Section](./02-Getting-Started.md/#troubleshooting-your-installation) in Chapter 2.
+- Check that Python is working. Type "python" or "python3" into the terminal like it says in [Section 2](./02-Getting-Started.md). Does it work as it says there? If not check the [Troubleshooting Section](./02-Getting-Started.md/#troubleshooting-your-installation) in Section 2.
 
 #### What is happening here?
 
 Traditionally, displaying "Hello World!" in a console window is the first thing every programmer generally learns to do in a new language. Later, we will get into more detail on how exactly everything works.
 
-### Change Your First Python File
+## Change Your First Python File
 
-Go back to your Python file and add the following under the first line so the whole file looks like this:
+Go back to your Python file and add the following under the first line so the whole file looks like this (Again, type it *exactly* as it is written here):
 
 ```python
 # hello_world.py
