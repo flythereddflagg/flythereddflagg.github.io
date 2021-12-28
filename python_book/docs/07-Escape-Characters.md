@@ -9,8 +9,7 @@
 
 # 7 - Escape Characters
 
-Based on the previous section, you may ask "What do I do if I need a string to have a mixture of double and 
-single quotes?" For example:
+Based on the previous section, you may ask "What do I do if I need a string to have a mixture of double and single quotes?" For example:
 
 ```
 John's character says, "I'd like to buy some cheese."
@@ -82,9 +81,9 @@ Let's examine all the escape characters introduced in this exercise:
 - `\'` and `\"`: These are quote escapes and tell python to treat them as part of the text of the string rather than the beginning or ending of a string. Hence, both times you wrote the mixed quote sentence you could enclose the text with either `"` or `'` and print the same string depending on which escapes you used.
 - `\n`: This is a newline character and printing it makes a newline on which you can continue to write text. The print statement automatically adds this character to the end of the given string. In some languages like C you must explicitly put in this character yourself.
 - `\t`: This is the tab character and printing it inserts 4 or 8 spaces depending on the system you are using.
-- `\r`: This is the carriage return character and it returns the cursor to the beginning of the line. Notice how the first part of the printed line is now overwritten with the "I did it!" part.
+- `\r`: This is the carriage return character and it returns the cursor to the beginning of the line. Once this happens any subsequent characters printed overwrite the previous ones. Notice how the first part of the printed line is now overwritten with the "I did it!" part.
 - `\\`: This is the backslash character and tells python to treat this character as a single backslash. As you can see, the only thing that came out of the print statement was a single backslash.
-- `\u03b7`: This is called a "Unicode escape character". It follows the format `\uhhhh` where `hhhh` references the 4-character hexadecimal code that corresponds to what was printed (in this case, $\eta$). Using that 4-character hexadecimal code you can express over 65000 characters. If you want to know a character's code simply search on the internet for "Unicode *CHARACTER NAME*". (e.g. "Unicode eta" for $ \eta $)
+- `\u03b7`: This is called a "<span title="Unicode: formally the Unicode Standard, an information technology standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems.">**Unicode**</span> escape character". The computer knows that if it encounters a `\` followed by a `u` it will expect a 4-digit <span title="Hexadecimal: A base-16 number system that includes digits 0-9 and the letters A, B, C, D, E, F (case-insensitive) to represent numbers. Often, you will see hexidecimal numbers prepended with '0x' to indicate that they are hexidecimal.">**hexadecimal**</span> code to follow. It follows the format `\uhhhh` where `hhhh` is the 4-digit hexadecimal code that corresponds to what was printed (in this case, $\eta$). Using that 4-digit hexadecimal code you can express over 65000 characters (a massively larger character set than the standard 128 characters used in <span title="ASCII: American Standard Code for Information Interchange; ASCII text: a standardized code in which characters are represented for computer storage and transmission by the numbers 0 through 127.">**ASCII text**</span>). If you want to know a character's code simply search on the internet for "Unicode *CHARACTER NAME*". (e.g. "Unicode eta" for $ \eta $)
 
 These are not all the potential escape characters. You can learn more about these by doing the exercises under [Hone your skills](#Hone-your-skills). For now, understand that these are only a small part of python's printing and display capabilities but what we have covered here are the most useful and used most often in programming. 
 

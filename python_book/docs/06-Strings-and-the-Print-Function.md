@@ -49,7 +49,7 @@ print('with "single" quotes but "double quotes" inside it.')
 print("mixing "double" and'single' quotes will cause an error.")
 ```
 
-#### This is what should happen
+### This is what should happen
 
 (If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
 
@@ -88,7 +88,7 @@ with your use of single and double quotes or you will run into problems.
 
 ## Advanced Mastery
 
-**Remember:** It is not required to figure out everything in these sections. Advanced Mastery is for those who are especially curious or wish to do more to understand the topics explained above. If you want you can skip this part and move on to the next section.
+**Remember:** It is not required to figure out everything in the "Advanced Mastery" sections. Advanced Mastery is for those who are especially curious or wish to do more to understand the topics explained above. If you want, you can skip this part and move on to the next section.
 
 - Look up strings as they relate to computers. How are strings represented by a computer?
 

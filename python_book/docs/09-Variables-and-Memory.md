@@ -54,11 +54,11 @@ print(
 )
 ```
 
-#### Here is what should happen
+### Here is what should happen
 
 (If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
 
-```bash
+```
 $ python vars_and_mem.py
 Here is some text! This is another string of text.
 Here is some text! 1 23 25.34
@@ -68,7 +68,7 @@ $
 
 You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a <span title="Variable: a name assigned to a value. This value may be of any type in Python.">**variable**</span>. Here is how the computer works with variables.
 
-### Computer Bare Essentials
+## Computer Bare Essentials
 
 I want to begin here by saying a few things about computers that hopefully will help you understand them better.
 
@@ -92,7 +92,7 @@ For now, you need to understand that there are three basic parts to the computer
 
 ### Using RAM
 
-The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like
+The RAM is where your variables are stored. You can think of the RAM as a large set of P.O. boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like
 
  `x = 23`
 
@@ -103,7 +103,7 @@ you are executing the following:
 
 Anytime x is referenced after that command, the computer looks up the address associated with 'x' and goes directly to the 'box' with that address and replaces 'x' with whatever is in that 'box'.
 
-### More Practice
+## Type, ID and Value
 
 The python interpreter will illustrate this better. Go to your terminal and enter `python` to start the interpreter.
 
@@ -131,11 +131,13 @@ Run the following commands:
 
 `type` spits out the type of variable between its parentheses (in this case, an integer or `int` as given in the interpreter).  `id` spits out the "address" of the variable in the RAM (***NOTE:** Depending on the Python implementation you are using, this may or may not be the literal address in memory but is always unique to the chunk of memory being used, hence its `id` or identification*). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and `exit()` simply exits the program.
 
-### Naming Variables
+You should know at this point that every variable has these three things, namely, a type, ID, and value. This may not be of any consequence right now but it will matter more and more as we go along.
+
+## Naming Variables
 
 As a programmer you will have to give names to your variables. There are certain rules for naming variables but, within those rules, you can make up any name you want for any variable. However, the guidelines below will help you make smart choices about how you name variables.
 
-#### Naming Rules in Python
+### Naming Rules in Python
 
 Python follows some rules on what a valid variable name can be. The rules are as follows:
 
@@ -154,9 +156,9 @@ Python follows some rules on what a valid variable name can be. The rules are as
 | nonlocal | not     | or    | pass  | raise  |
 | return   | try     | while | with  | yield  |
 
-For a complete explanation of naming see the section in [PEP 8](https://www.python.org/dev/peps/pep-0008/#naming-conventions).
+For a complete explanation of naming, see the section in [PEP 8](https://www.python.org/dev/peps/pep-0008/#naming-conventions).
 
-#### Naming Conventions and Guidelines
+### Naming Conventions and Guidelines
 
 Within the limits of these rules, you can call your variables any name you want and make them as long or as short as you want. However, there are some conventions you should stick to you make your code better. The following conventions will help make your code easier to write and fix when something goes wrong. (And trust me, something *always* goes wrong.):
 
@@ -199,7 +201,7 @@ Within the limits of these rules, you can call your variables any name you want 
 
   After weeks of digging I finally figured out what each of these variables were.
 
-  - `val` was a predicted value of viscosity
+  - `val` was a predicted thermodynamic property
   - `cav` stood for 'compound average value'
   - `wtmcls` was the number of 'water molecules' in the compound
   - `hcpv` was the 'heat capacity value' for that compound
@@ -210,15 +212,13 @@ Within the limits of these rules, you can call your variables any name you want 
   viscosity = a*compound_average + b*h2o_molecules + c*heat_capacity + d 
   ```
 
-  I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before.
-
-  This will take practice but it behooves you to write your variable names (and the rest of your code for that matter) descriptively to avoid issues like the one above. 
+  I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before. This will take practice but it behooves you to write your variable names (and the rest of your code for that matter) descriptively to avoid issues like the one above. 
 
 - **Help your reader understand the code without comments**
 
-  Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. I do not want to diminish the importance of comments in code but writing easily understandable code is better than commenting. Up to now, what your code does should be obvious to anyone that can read Python without needing any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.
+  Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. I do not want to diminish the importance of comments in code but writing easily understandable code is better than commenting. Up to now, what your code does should be obvious to anyone that can read Python without needing any comments. However as we go through the next several exercises, think of ways you could name your variables so your code is more clear.
 
-Any good programmer knows that **the majority of the time spent coding is actually spent reading and not writing**. Python makes it easy for you to write readable code and the first step is write good variable names.
+Any good programmer knows that **the majority of the time spent coding is actually spent reading and not writing**. Python makes it easy for you to write readable code and the first step of writing readable code is to use good variable names.
 
 ## Hone Your Skills
 

@@ -9,7 +9,7 @@
 
 # 8 - Formatted Strings
 
-As you use the `print` function there will be times when you want to "fill in the blank" and you can do this with format statements. Also we will introduce a few more features in addition to these.
+As you use the `print` function there will be times when you need to "fill in the blank" and you can do this with format statements. Also we will introduce a few more features in addition to these.
 
 ```python
 # format_strings.py
@@ -17,17 +17,24 @@ As you use the `print` function there will be times when you want to "fill in th
 # We can print a comma-separated list
 print("How much will this cost?", 23.00, "dollars")
 
-# this is more readable with a .format statement
+# However, this is more readable and flexible 
+# with a .format statement
 print("How much will this cost? {} dollars.".format(23.0))
 
 # The benefits of formatting become more
 # apparent with more blanks to fill in.
 print("Prices for cheese: "
-    "${}/1 oz, ${}/5 oz, ${}/10 oz".format(1.23, 5.35, 9.84))
+    "${}/1 oz, ${}/5 oz, ${}/10 oz".format(1.23, 5.35, 9.84)
+)
 
 # Change the formatting order with indices in the braces
-print("Would you like "
-    "{2}, {0} or {1}?".format("Brie", "Gouda", "Cheddar"))
+print("Would you like {2}, {0} or {1}?".format(
+    "Brie", "Gouda", "Cheddar"
+	)
+)
+# notice the formatting of code  in the previous two examples
+# so each line of code stays short. Always use 4 spaces for 
+# indents in Python.
 
 # line up numbers and decimal places with format codes
 print("""
@@ -42,7 +49,7 @@ ${:5.2f}/10 oz
 
 (If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
 
-```bash
+```
 $ python format_strings.py
 How much will this cost? 23.0 dollars
 How much will this cost? 23.0 dollars.
@@ -57,7 +64,7 @@ $ 9.85/10 oz
 $
 ```
 
-### Formatting and the `.format()` method
+## Formatting and the `.format()` method
 
 We must understand a few things before understanding this code. 
 
@@ -73,7 +80,7 @@ We must understand a few things before understanding this code.
   - If there is text between the braces it interprets the text as format instructions.
   - It then looks at what is given between the parentheses (`.format("Text")`) and puts that text in place of the braces formatting it as per the format instructions.
 
-### Format commands
+## Format commands
 
 Let's look at each example of a `.format`  statement one by one:
 
