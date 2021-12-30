@@ -23,7 +23,8 @@ print(4)
 print(5)
 
 # there is a better way of doing this
-# put an empty line between each example
+
+# first, put an empty line between each example
 print("") 
 
 n = 1
@@ -39,7 +40,7 @@ for n in range(5):
     print(n + 1)
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ python loops.py
@@ -71,7 +72,7 @@ Here we see the concept of a loop. We just did the same thing (i.e. print number
 - A while-loop: The way we have used the while-loop here is not how while-loops should be used. I am only showing it here to introduce the syntax. Again, I have asked you to do it this way once so that we can explore the syntax. After this lesson you should **NEVER** use it this way again. (If you're confused about what "this way" is, don't worry, I'll explain it below.)
 - A for-loop: This is, by far, the optimal way to do this particular task. A for-loop is perfect for when you know exactly how many times you want to loop. I will explain while-loops and for-loops below.
 
-### while-loops
+## while-loops
 
 I consider while-loops to generally be more simple than for loops. The while-loop follows the following syntax:
 
@@ -85,7 +86,7 @@ while truth_expression:
 
 This can be read as "While `truth_expression` evaluates to `True`, `do_things` or else end the loop." The while-loop proceeds as follows:
 
-- The `truth_expression` is some conditional expression like `var > 3` 
+- The `truth_expression` is some conditional expression like `var > 3`
 - If `truth_expression` evaluates to `True`:
   - The statements in the indented block are executed in order until the block ends 
   - The code then returns to the while statement and evaluates the `truth_expression` again and the process starts over. 
@@ -94,9 +95,9 @@ This can be read as "While `truth_expression` evaluates to `True`, `do_things` o
 
 `truth_expression` is sometimes known as the *loop exit condition*. For the while-loop we did in `loops.py`, we wanted to loop a particular number of times so we initialized `n` to `1` and then incremented `n` each time before the loop started again.
 
-### for-loops
+## for-loops
 
-The built-in function `range` produces a range object which produces a sequence of integer numbers starting with 0. (Remember: Python counting *always* starts with 0.) The sequence increments by integers up to but not including the number passed as an argument. (Note: `range` can be modified to do other things but we will get to that later.) In our case, that means that `range(5)` produced the sequence: `0, 1, 2, 3, 4`. This is a common way to say that we want to do something 5 times (as we see the sequence is 5 elements long) or to count up to from 0 to 4. 
+The built-in function `range` produces a range object which produces a sequence of integer numbers starting with 0. (Remember: Python counting *always* starts with 0.) The sequence increments by integers up to but not including the number passed as an argument. In our case, that means that `range(5)` produced the sequence: `0, 1, 2, 3, 4`. This is a common way to say that we want to do something 5 times (as we see the sequence is 5 elements long) or to count up to from 0 to 4. 
 
 A range object is a type of iterable object. In Python, an iterable object is one that can produce a sequence of objects. (We will cover iterables more deeply later on.) A for-loop steps through the sequence the given iterable produces and assigns each element to a variable. 
 
@@ -104,8 +105,7 @@ For-loops follow the following syntax:
 
 ```python
 for i in iterable:
-    do_things1
-    do_things2
+    statements
     ...
 # end of the indented block
 ```

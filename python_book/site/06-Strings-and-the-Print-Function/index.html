@@ -788,8 +788,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -803,8 +803,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -907,21 +952,21 @@
 <!-- How to make text appear on hover <span title="I am hovering over the text">This is the text I want to have a mousover</span> -->
 
 <h1 id="6-strings-and-the-print-function">6 - Strings and the print function</h1>
-<h3 id="the-print-function">The print function</h3>
+<h2 id="the-print-function">The print function</h2>
 <p>Let's talk about the <code>print()</code> statement or, as it is more correctly called, the print function.</p>
 <p><code>print</code> is what is known as a built-in function in Python. Let's get some terminology out of the way before moving on:</p>
 <ul>
-<li><strong>Function</strong>: A chunk of code that you can reuse multiple times with a single line of code.</li>
+<li><strong>Function</strong>: A chunk of code that you can run using a single line of code. This single may be used multiple times to reuse the code in various places.</li>
 </ul>
 <p>We will learn a lot more about functions later on and you will even build your own. But for now, just understand the following:</p>
 <ul>
-<li>There is some chunk of code labeled 'print' in the Python <span title="source code: Text files written in a particular programming language. Not to be confused with the program itself."><strong>source code</strong></span>.</li>
-<li>When you write <code>print(stuff)</code> in your code you are telling the computer, "Activate that chunk of code labeled 'print'!"</li>
+<li>There is some chunk of code labeled <code>print</code> in the Python <span title="source code: Text files written in a particular programming language. Not to be confused with the program itself."><strong>source code</strong></span>.</li>
+<li>When you write <code>print(stuff)</code> in your code you are telling the computer, "Activate that chunk of code labeled <code>print</code>!"</li>
 <li>The chunk of code then comes alive and says, "Okay! My job is to write the <code>stuff</code> between the parentheses in the terminal window!"</li>
 <li>The chunk of code does just that and then becomes dormant awaiting the next time it is called to action. </li>
 </ul>
 <p>When we talk about functions you will see that they have things (such as <code>stuff</code> above) between the parentheses. Sometimes these things are in a comma-separated list. These things between the parentheses are called <span title="arguments: Values and variables passed into a function."><strong>arguments</strong></span>. For now, we have just one argument being fed to the <code>print</code> function and that is simply the text you want printed out to the screen. </p>
-<h3 id="strings">Strings</h3>
+<h2 id="strings">Strings</h2>
 <p>You may have noticed that the text inside the parentheses is also between single or double quotes. It may not be clear why this is. In Python, putting text inside quotes designates it as a string.</p>
 <ul>
 <li><strong>String</strong>: a sequence of characters that is treated as non-code text</li>
@@ -936,7 +981,7 @@
 <span class="linenos" data-linenos="5 "></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;with &quot;single&quot; quotes but &quot;double quotes&quot; inside it.&#39;</span><span class="p">)</span>
 <span class="linenos" data-linenos="6 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mixing &quot;</span><span class="n">double</span><span class="s2">&quot; and&#39;single&#39; quotes will cause an error.&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="this-is-what-should-happen">This is what should happen</h4>
+<h3 id="this-is-what-should-happen">This is what should happen</h3>
 <p>(If needed, see <a href="../04-Hello-World/#making-and-running-your-first-python-file">Section 4</a> to review how to run a script.)</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ python string_quotes.py
 <span class="linenos" data-linenos="2 "></span>File &quot;string_quotes.py&quot;, line 6
@@ -963,7 +1008,7 @@
 <p>When ever you make a string by using quotes always remember to be consistent 
 with your use of single and double quotes or you will run into problems.</p>
 <h2 id="advanced-mastery">Advanced Mastery</h2>
-<p><strong>Remember:</strong> It is not required to figure out everything in these sections. Advanced Mastery is for those who are especially curious or wish to do more to understand the topics explained above. If you want you can skip this part and move on to the next section.</p>
+<p><strong>Remember:</strong> It is not required to figure out everything in the "Advanced Mastery" sections. Advanced Mastery is for those who are especially curious or wish to do more to understand the topics explained above. If you want, you can skip this part and move on to the next section.</p>
 <ul>
 <li>Look up strings as they relate to computers. How are strings represented by a computer?</li>
 </ul>

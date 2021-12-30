@@ -11,13 +11,13 @@
 
 For this section's exercises there will be a short example that you will work in the Python interpreter instead of a Python script. Enter each command from each exercise complete them.
 
-### True and False
+## True and False
 
 One of the most important concepts in programming is that of Boolean logic. On a fundamental level, your computer only knows 2 things: 1 and 0, Yes and No, On and Off, True and False. Everything else in a computer must be constructed from these two things. Within this framework the computer can do many things such as make decisions. However to make a decision, the computer must be able to evaluate a "truth value" of everything. Therefore, everything can be evaluated as True or False using the built-in `bool` function.
 
-This gives rise to a new data type, the **Boolean data type**. The Boolean data type can only have two values, namely `True` or `False`. This makes it among the simplest and most useful of data types.
+This gives rise to a new data type, the <span title="A data type that can only have two values: True and False">**Boolean data type**</span>. The Boolean data type can only have two values, namely `True` or `False`. This makes it among the simplest and most useful of data types.
 
-#### Try this out in the interpreter
+### Try this out in the interpreter
 
 Go to your python interpreter and try running the following commands:
 
@@ -47,9 +47,9 @@ True
 $
 ```
 
-What you should get out of this is that, for the three data types we have covered so far, anything that is a non-empty or non-zero value will evaluate to True and empty or zero values will evaluate to False. `True` and `False` are both key words in Python to express these boolean concepts. And every data type in Python, by default, will evaluate to one or the other. In the next lesson we will explore how we can use this idea to make decisions. Another way to return the boolean value of something is by using the logical comparison operators.
+What you should get out of this is that, for the three data types we have covered so far, anything that is a non-empty or non-zero value will evaluate to True and empty or zero values will evaluate to False. `True` and `False` are both key words in Python to express these Boolean concepts. And every data type in Python, by default, will evaluate to one or the other. In the next lesson we will explore how we can use this idea to make decisions. Another way to return the Boolean value of something is by using the logical comparison operators.
 
-### Comparison Operators
+## Comparison Operators
 
 We will introduce another set of binary operators called comparison operators. For all these operators we will use the example of `x <OPERATOR> y` to demonstrate the meaning of each operator
 
@@ -62,20 +62,14 @@ We will introduce another set of binary operators called comparison operators. F
 | `>=`        | Greater than or equal to |
 | `<=`        | Less than or equal to    |
 
-
-
-#### Try this out in the interpreter
+### Try this out in the interpreter
 
 A few things to do while doing this exercise:
 
 - Note that some of these return errors. Which ones do this and why? 
+- Read each line as you write it as such: "1 is equal to 2: False", "Empty quotes is equal to 0: False" etc.
 
-- Read each line as you write it as such:
-  - "1 is equal to 2: False"
-  - "Empty quotes is equal to 0: False"
-  - etc.
-
-  This will help you learn to think about these logical statements.
+This will help you learn to think about these logical statements.
 
 ```python
 $ python3
@@ -125,7 +119,7 @@ $
 
 You can see from the results of the above exercise that some types are incompatible with others. Also note that in most cases combining numbers and strings returns a not equal condition. 
 
-### Logical operators
+## Logical operators
 
 True and False may be combined using logical operators. This allows many statements to be chained and combined in logical ways. They use the truth value and based on their logic and then return one of the values. In a more useful sense, if you only combine two Boolean values or expressions that evaluate to Boolean values you can pull some logic out of the expression.
 
@@ -151,7 +145,7 @@ Notes:
 
 ---
 
-#### Try this out in the interpreter
+### Try this out in the interpreter
 
 ```python
 $ python

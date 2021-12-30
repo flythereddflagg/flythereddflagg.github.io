@@ -559,6 +559,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#the-try-except-statement" class="md-nav__link">
     The try-except Statement
   </a>
@@ -789,8 +796,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -804,8 +811,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -850,6 +902,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#the-try-except-statement" class="md-nav__link">
@@ -947,7 +1006,7 @@
 <span class="linenos" data-linenos="38 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Invalid Date detected!&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos="39 "></span>        <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Here is what should happen</strong></p>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python try_except.py
 <span class="linenos" data-linenos=" 2 "></span>Enter a date of the format: MM/DD/YYYY
 <span class="linenos" data-linenos=" 3 "></span>--&gt; 100/10/1230
@@ -962,9 +1021,9 @@
 <span class="linenos" data-linenos="12 "></span>The date you entered was December 10 in the year 100 B.C.
 <span class="linenos" data-linenos="13 "></span>$
 </code></pre></div>
-<h3 id="the-try-except-statement">The <code>try-except</code> Statement</h3>
-<p>Most of the time time in programming, you, the programmer, cannot guarantee that an error will not occur or an exception will not be thrown. You could try to prevent every problem with a series of if statements but   that becomes cumbersome and is difficult to cover every eventuality.</p>
-<p>Python deals with this problem with <code>try-except</code> statements. A <code>try</code> statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the <code>try</code> block stops and the <code>except</code> block is executed. If no exceptions are "raised" the except block is skipped. In <code>try_except.py</code>, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:</p>
+<h2 id="the-try-except-statement">The <code>try-except</code> Statement</h2>
+<p>Most of the time time in programming, you, the programmer, cannot guarantee that an error will not occur or an exception will not be thrown. You could try to prevent every problem with a series of if statements but that becomes cumbersome and is difficult to cover every eventuality.</p>
+<p>Python (and many other languages) deals with this problem with <code>try-except</code> statements. A <code>try</code> statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the <code>try</code> block stops and the <code>except</code> block is executed. If no exceptions are "raised" the except block is skipped. In <code>try_except.py</code>, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">try</span><span class="p">:</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="c1"># Block of code you expect may</span>
 <span class="linenos" data-linenos="3 "></span>    <span class="c1"># raise an exception</span>
@@ -985,10 +1044,10 @@
 <span class="linenos" data-linenos="11 "></span>    <span class="c1"># this block runs for all other exceptions</span>
 </code></pre></div>
 <p>Any exception in Python can be handled this way. When writing these statements one should always order them from specific errors to more general errors. This is because Python will execute the first valid <code>except</code> block it comes to. Therefore if you begin your list of except blocks with <code>except Exception:</code> no other <code>except</code> block will ever run.</p>
-<p>These statements allow for writing more secure code that can handle any amount of garbage that is fed to it. Use these judiciously as overuse can clutter your code and silence bugs and issues in your programs. </p>
-<h3 id="raising-exceptions">Raising Exceptions</h3>
+<p>These statements allow for writing more secure code that can handle any amount of bad input that is fed to it. Use these judiciously as overuse can clutter your code and silence bugs and issues in your programs. </p>
+<h2 id="raising-exceptions">Raising Exceptions</h2>
 <p>We saw in <code>try_except.py</code> that we can force an exception to be raised with the <code>raise</code> statement. This is a powerful tool as it allows us to throw exceptions with customized messages. These can be very useful in debugging especially if we are careful about where we raise errors and what message we send. In our case we just wanted to send a general error to the user so a general <code>Exception</code> worked just fine here.</p>
-<h3 id="line-continuation">Line Continuation</h3>
+<h2 id="line-continuation">Line Continuation</h2>
 <p>You may have noticed the snippet of code from <code>try_except.py</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;The date you entered was </span><span class="si">{</span><span class="n">month_names</span><span class="p">[</span><span class="n">month</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>\
 <span class="linenos" data-linenos="2 "></span>              <span class="sa">f</span><span class="s2">&quot; </span><span class="si">{</span><span class="n">day</span><span class="si">}</span><span class="s2"> in the year </span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">era</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>

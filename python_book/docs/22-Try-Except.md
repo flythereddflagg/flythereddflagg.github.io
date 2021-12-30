@@ -53,7 +53,7 @@ while running:
         
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ python try_except.py
@@ -71,11 +71,11 @@ The date you entered was December 10 in the year 100 B.C.
 $
 ```
 
-### The `try-except` Statement
+## The `try-except` Statement
 
-Most of the time time in programming, you, the programmer, cannot guarantee that an error will not occur or an exception will not be thrown. You could try to prevent every problem with a series of if statements but   that becomes cumbersome and is difficult to cover every eventuality.
+Most of the time time in programming, you, the programmer, cannot guarantee that an error will not occur or an exception will not be thrown. You could try to prevent every problem with a series of if statements but that becomes cumbersome and is difficult to cover every eventuality.
 
-Python deals with this problem with `try-except` statements. A `try` statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the `try` block stops and the `except` block is executed. If no exceptions are "raised" the except block is skipped. In `try_except.py`, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:
+Python (and many other languages) deals with this problem with `try-except` statements. A `try` statement will attempt to execute code in its corresponding block of indented code until an exception is "raised" or "thrown". If such is the case, then the `try` block stops and the `except` block is executed. If no exceptions are "raised" the except block is skipped. In `try_except.py`, we used the statement to deal with bad user input and invalid dates. The syntax is as follows:
 
 ```python
 try:
@@ -103,13 +103,13 @@ except Exception as e:
 
 Any exception in Python can be handled this way. When writing these statements one should always order them from specific errors to more general errors. This is because Python will execute the first valid `except` block it comes to. Therefore if you begin your list of except blocks with `except Exception:` no other `except` block will ever run.
 
-These statements allow for writing more secure code that can handle any amount of garbage that is fed to it. Use these judiciously as overuse can clutter your code and silence bugs and issues in your programs. 
+These statements allow for writing more secure code that can handle any amount of bad input that is fed to it. Use these judiciously as overuse can clutter your code and silence bugs and issues in your programs. 
 
-### Raising Exceptions 
+## Raising Exceptions 
 
 We saw in `try_except.py` that we can force an exception to be raised with the `raise` statement. This is a powerful tool as it allows us to throw exceptions with customized messages. These can be very useful in debugging especially if we are careful about where we raise errors and what message we send. In our case we just wanted to send a general error to the user so a general `Exception` worked just fine here.
 
-### Line Continuation
+## Line Continuation
 
 You may have noticed the snippet of code from `try_except.py`:
 

@@ -499,6 +499,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#string" class="md-nav__link">
     String
   </a>
@@ -803,8 +810,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -818,8 +825,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -864,6 +916,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#string" class="md-nav__link">
@@ -1042,7 +1101,7 @@
 <span class="linenos" data-linenos="101 "></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&quot;potatoes&quot; in example_tuple:&#39;</span><span class="p">,</span>
 <span class="linenos" data-linenos="102 "></span>      <span class="s2">&quot;potatoes&quot;</span> <span class="ow">in</span> <span class="n">example_tuple</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Here is what should happen</strong></p>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python iterables.py
 <span class="linenos" data-linenos=" 2 "></span>A string: Hello World!
 <span class="linenos" data-linenos=" 3 "></span>
@@ -1089,11 +1148,11 @@
 </code></pre></div>
 <p><strong>What is happening here?</strong></p>
 <p>We have just dumped a lot of information on you. This is probably the longest script you've written yet. We will go through each step by step. Lets start with each type of iterable.</p>
-<h3 id="string">String</h3>
+<h2 id="string">String</h2>
 <p>We have already covered a lot about strings. It turns out, however, that strings are iterables and have all the properties that we see at the end of the script. We will deal with these in more detail below but just understand that strings have all those common properties.</p>
-<h3 id="range">Range</h3>
+<h2 id="range">Range</h2>
 <p>Ranges can be thought of as a very specific subset of a list. The subset is a list of integers with a set pattern. Ranges are most useful in for-loop construction when you want a loop to run a specific number of times. They have other uses but the for-loop case is most common.</p>
-<h3 id="list">List</h3>
+<h2 id="list">List</h2>
 <p>A list is a very powerful sequence type. Unlike a string which must contain only letters and a range which can only contain integers in a specified order, a list is exactly what it sounds like. A list is an object that holds objects or references to objects in a specified order. A list could be a shopping list where the elements are strings:</p>
 <p><code>shopping_list = ["cheese" "milk", "sugar", "eggs"]</code></p>
 <p>or it could be a list of names of a bunch of file objects:</p>
@@ -1108,9 +1167,9 @@
 <span class="linenos" data-linenos="5 "></span><span class="p">]</span>
 </code></pre></div>
 <p>which is just a list of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.</p>
-<h3 id="tuple">Tuple</h3>
+<h2 id="tuple">Tuple</h2>
 <p>Tuples are interesting beasts in Python. Without getting into gory details, tuples are like lists that cannot be changed once they are created and are fixed in memory. You may think of them as a "read-only" list. You may rightly ask why they even exist if all they appear to be is a less-useful list. The advantage of tuples is that, because they cannot be changed, the computer can use them more efficiently. However, they do have some uses that can be of interest. (See Hone Your Skills for more on this.) </p>
-<h3 id="subscripts-slices-and-concatenation">Subscripts, Slices and Concatenation</h3>
+<h2 id="subscripts-slices-and-concatenation">Subscripts, Slices and Concatenation</h2>
 <p>A useful feature all sequenced iterators have is that of subscripting and slicing.  It may not be clear what this means however. The following two operations allow us to conveniently work with sequenced iterables. </p>
 <ul>
 <li><strong>Subscript</strong> </li>
@@ -1126,7 +1185,7 @@
 <ul>
 <li>Like strings, all sequenced iterators may be concatenated with the <code>+</code> operator and multiplied by integers. (See the section on Math and Data.)</li>
 </ul>
-<h3 id="for-loops-length-and-the-in-operator">For-loops, Length and the <code>in</code> operator</h3>
+<h2 id="for-loops-length-and-the-in-operator">For-loops, Length and the <code>in</code> operator</h2>
 <p>Each of the properties that we used in <code>iterables.py</code>  that are common to all iterables are both useful and easy to understand given the context we now have.</p>
 <ul>
 <li><strong>For-loops:</strong> Any iterable used in the definition of a for-loop is defined (as in the lesson on loops) as <code>for i in iterable:</code> where <code>i</code> can be called the loop variable. In the case of any sequenced iterable the loop variable takes on the next value in the sequence for each loop.</li>

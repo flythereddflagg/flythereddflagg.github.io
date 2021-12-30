@@ -782,8 +782,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -797,8 +797,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -893,8 +938,7 @@
 <!-- End Navigation -->
 
 <h1 id="7-escape-characters">7 - Escape Characters</h1>
-<p>Based on the previous section, you may ask "What do I do if I need a string to have a mixture of double and 
-single quotes?" For example:</p>
+<p>Based on the previous section, you may ask "What do I do if I need a string to have a mixture of double and single quotes?" For example:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>John&#39;s character says, &quot;I&#39;d like to buy some cheese.&quot;
 </code></pre></div>
 <p>This is where escape characters come in handy. An escape character is a text character that can be represented by a backslash (<code>\</code>) followed by a character or series of characters (e.g. <code>\t</code>, <code>\n</code>, <code>\u03b7</code>). Escape characters make possible the mixing of single and double quotes (among many other things) as you will see in this next exercise.</p>
@@ -953,9 +997,9 @@ single quotes?" For example:</p>
 <li><code>\'</code> and <code>\"</code>: These are quote escapes and tell python to treat them as part of the text of the string rather than the beginning or ending of a string. Hence, both times you wrote the mixed quote sentence you could enclose the text with either <code>"</code> or <code>'</code> and print the same string depending on which escapes you used.</li>
 <li><code>\n</code>: This is a newline character and printing it makes a newline on which you can continue to write text. The print statement automatically adds this character to the end of the given string. In some languages like C you must explicitly put in this character yourself.</li>
 <li><code>\t</code>: This is the tab character and printing it inserts 4 or 8 spaces depending on the system you are using.</li>
-<li><code>\r</code>: This is the carriage return character and it returns the cursor to the beginning of the line. Notice how the first part of the printed line is now overwritten with the "I did it!" part.</li>
+<li><code>\r</code>: This is the carriage return character and it returns the cursor to the beginning of the line. Once this happens any subsequent characters printed overwrite the previous ones. Notice how the first part of the printed line is now overwritten with the "I did it!" part.</li>
 <li><code>\\</code>: This is the backslash character and tells python to treat this character as a single backslash. As you can see, the only thing that came out of the print statement was a single backslash.</li>
-<li><code>\u03b7</code>: This is called a "Unicode escape character". It follows the format <code>\uhhhh</code> where <code>hhhh</code> references the 4-character hexadecimal code that corresponds to what was printed (in this case, <span class="arithmatex">\(\eta\)</span>). Using that 4-character hexadecimal code you can express over 65000 characters. If you want to know a character's code simply search on the internet for "Unicode <em>CHARACTER NAME</em>". (e.g. "Unicode eta" for $ \eta $)</li>
+<li><code>\u03b7</code>: This is called a "<span title="Unicode: formally the Unicode Standard, an information technology standard for the consistent encoding, representation, and handling of text expressed in most of the world's writing systems."><strong>Unicode</strong></span> escape character". The computer knows that if it encounters a <code>\</code> followed by a <code>u</code> it will expect a 4-digit <span title="Hexadecimal: A base-16 number system that includes digits 0-9 and the letters A, B, C, D, E, F (case-insensitive) to represent numbers. Often, you will see hexidecimal numbers prepended with '0x' to indicate that they are hexidecimal."><strong>hexadecimal</strong></span> code to follow. It follows the format <code>\uhhhh</code> where <code>hhhh</code> is the 4-digit hexadecimal code that corresponds to what was printed (in this case, <span class="arithmatex">\(\eta\)</span>). Using that 4-digit hexadecimal code you can express over 65000 characters (a massively larger character set than the standard 128 characters used in <span title="ASCII: American Standard Code for Information Interchange; ASCII text: a standardized code in which characters are represented for computer storage and transmission by the numbers 0 through 127."><strong>ASCII text</strong></span>). If you want to know a character's code simply search on the internet for "Unicode <em>CHARACTER NAME</em>". (e.g. "Unicode eta" for $ \eta $)</li>
 </ul>
 <p>These are not all the potential escape characters. You can learn more about these by doing the exercises under <a href="#Hone-your-skills">Hone your skills</a>. For now, understand that these are only a small part of python's printing and display capabilities but what we have covered here are the most useful and used most often in programming. </p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>

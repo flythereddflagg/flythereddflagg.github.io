@@ -782,8 +782,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -797,8 +797,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -893,48 +938,55 @@
 <!-- End Navigation -->
 
 <h1 id="8-formatted-strings">8 - Formatted Strings</h1>
-<p>As you use the <code>print</code> function there will be times when you want to "fill in the blank" and you can do this with format statements. Also we will introduce a few more features in addition to these.</p>
+<p>As you use the <code>print</code> function there will be times when you need to "fill in the blank" and you can do this with format statements. Also we will introduce a few more features in addition to these.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># format_strings.py</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="c1"># We can print a comma-separated list</span>
 <span class="linenos" data-linenos=" 4 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost?&quot;</span><span class="p">,</span> <span class="mf">23.00</span><span class="p">,</span> <span class="s2">&quot;dollars&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 5 "></span>
-<span class="linenos" data-linenos=" 6 "></span><span class="c1"># this is more readable with a .format statement</span>
-<span class="linenos" data-linenos=" 7 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost? </span><span class="si">{}</span><span class="s2"> dollars.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">23.0</span><span class="p">))</span>
-<span class="linenos" data-linenos=" 8 "></span>
-<span class="linenos" data-linenos=" 9 "></span><span class="c1"># The benefits of formatting become more</span>
-<span class="linenos" data-linenos="10 "></span><span class="c1"># apparent with more blanks to fill in.</span>
-<span class="linenos" data-linenos="11 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prices for cheese: &quot;</span>
-<span class="linenos" data-linenos="12 "></span>    <span class="s2">&quot;$</span><span class="si">{}</span><span class="s2">/1 oz, $</span><span class="si">{}</span><span class="s2">/5 oz, $</span><span class="si">{}</span><span class="s2">/10 oz&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">5.35</span><span class="p">,</span> <span class="mf">9.84</span><span class="p">))</span>
-<span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span><span class="c1"># Change the formatting order with indices in the braces</span>
-<span class="linenos" data-linenos="15 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Would you like &quot;</span>
-<span class="linenos" data-linenos="16 "></span>    <span class="s2">&quot;</span><span class="si">{2}</span><span class="s2">, </span><span class="si">{0}</span><span class="s2"> or </span><span class="si">{1}</span><span class="s2">?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span><span class="p">))</span>
-<span class="linenos" data-linenos="17 "></span>
-<span class="linenos" data-linenos="18 "></span><span class="c1"># line up numbers and decimal places with format codes</span>
-<span class="linenos" data-linenos="19 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="20 "></span><span class="s2">Prices for cheese:</span>
-<span class="linenos" data-linenos="21 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 1 oz</span>
-<span class="linenos" data-linenos="22 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 5 oz</span>
-<span class="linenos" data-linenos="23 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/10 oz</span>
-<span class="linenos" data-linenos="24 "></span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23232</span><span class="p">,</span> <span class="mf">5.3593</span><span class="p">,</span> <span class="mf">9.84655</span><span class="p">))</span>
+<span class="linenos" data-linenos=" 6 "></span><span class="c1"># However, this is more readable and flexible </span>
+<span class="linenos" data-linenos=" 7 "></span><span class="c1"># with a .format statement</span>
+<span class="linenos" data-linenos=" 8 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;How much will this cost? </span><span class="si">{}</span><span class="s2"> dollars.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">23.0</span><span class="p">))</span>
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span><span class="c1"># The benefits of formatting become more</span>
+<span class="linenos" data-linenos="11 "></span><span class="c1"># apparent with more blanks to fill in.</span>
+<span class="linenos" data-linenos="12 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prices for cheese: &quot;</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="s2">&quot;$</span><span class="si">{}</span><span class="s2">/1 oz, $</span><span class="si">{}</span><span class="s2">/5 oz, $</span><span class="si">{}</span><span class="s2">/10 oz&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23</span><span class="p">,</span> <span class="mf">5.35</span><span class="p">,</span> <span class="mf">9.84</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span><span class="p">)</span>
+<span class="linenos" data-linenos="15 "></span>
+<span class="linenos" data-linenos="16 "></span><span class="c1"># Change the formatting order with indices in the braces</span>
+<span class="linenos" data-linenos="17 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Would you like </span><span class="si">{2}</span><span class="s2">, </span><span class="si">{0}</span><span class="s2"> or </span><span class="si">{1}</span><span class="s2">?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+<span class="linenos" data-linenos="18 "></span>    <span class="s2">&quot;Brie&quot;</span><span class="p">,</span> <span class="s2">&quot;Gouda&quot;</span><span class="p">,</span> <span class="s2">&quot;Cheddar&quot;</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="p">)</span>
+<span class="linenos" data-linenos="20 "></span><span class="p">)</span>
+<span class="linenos" data-linenos="21 "></span><span class="c1"># notice the formatting of code  in the previous two examples</span>
+<span class="linenos" data-linenos="22 "></span><span class="c1"># so each line of code stays short. Always use 4 spaces for </span>
+<span class="linenos" data-linenos="23 "></span><span class="c1"># indents in Python.</span>
+<span class="linenos" data-linenos="24 "></span>
+<span class="linenos" data-linenos="25 "></span><span class="c1"># line up numbers and decimal places with format codes</span>
+<span class="linenos" data-linenos="26 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="27 "></span><span class="s2">Prices for cheese:</span>
+<span class="linenos" data-linenos="28 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 1 oz</span>
+<span class="linenos" data-linenos="29 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/ 5 oz</span>
+<span class="linenos" data-linenos="30 "></span><span class="s2">$</span><span class="si">{:5.2f}</span><span class="s2">/10 oz</span>
+<span class="linenos" data-linenos="31 "></span><span class="s2">&quot;&quot;&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">1.23232</span><span class="p">,</span> <span class="mf">5.3593</span><span class="p">,</span> <span class="mf">9.84655</span><span class="p">))</span>
 </code></pre></div>
 <h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <p>(If needed, see <a href="../04-Hello-World/#making-and-running-your-first-python-file">Section 4</a> to review how to run a script.)</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python format_strings.py
-<span class="linenos" data-linenos=" 2 "></span>How much will this cost? <span class="m">23</span>.0 dollars
-<span class="linenos" data-linenos=" 3 "></span>How much will this cost? <span class="m">23</span>.0 dollars.
-<span class="linenos" data-linenos=" 4 "></span>Prices <span class="k">for</span> cheese: <span class="nv">$1</span>.23/1 oz, <span class="nv">$5</span>.35/5 oz, <span class="nv">$9</span>.84/10 oz
+<span class="linenos" data-linenos=" 2 "></span>How much will this cost? 23.0 dollars
+<span class="linenos" data-linenos=" 3 "></span>How much will this cost? 23.0 dollars.
+<span class="linenos" data-linenos=" 4 "></span>Prices for cheese: $1.23/1 oz, $5.35/5 oz, $9.84/10 oz
 <span class="linenos" data-linenos=" 5 "></span>Would you like Cheddar, Brie or Gouda?
 <span class="linenos" data-linenos=" 6 "></span>
-<span class="linenos" data-linenos=" 7 "></span>Prices <span class="k">for</span> cheese:
-<span class="linenos" data-linenos=" 8 "></span>$ <span class="m">1</span>.23/ <span class="m">1</span> oz
-<span class="linenos" data-linenos=" 9 "></span>$ <span class="m">5</span>.36/ <span class="m">5</span> oz
-<span class="linenos" data-linenos="10 "></span>$ <span class="m">9</span>.85/10 oz
+<span class="linenos" data-linenos=" 7 "></span>Prices for cheese:
+<span class="linenos" data-linenos=" 8 "></span>$ 1.23/ 1 oz
+<span class="linenos" data-linenos=" 9 "></span>$ 5.36/ 5 oz
+<span class="linenos" data-linenos="10 "></span>$ 9.85/10 oz
 <span class="linenos" data-linenos="11 "></span>
 <span class="linenos" data-linenos="12 "></span>$
 </code></pre></div>
-<h3 id="formatting-and-the-format-method">Formatting and the <code>.format()</code> method</h3>
+<h2 id="formatting-and-the-format-method">Formatting and the <code>.format()</code> method</h2>
 <p>We must understand a few things before understanding this code. </p>
 <ul>
 <li>
@@ -955,7 +1007,7 @@
 <li>If there is text between the braces it interprets the text as format instructions.</li>
 <li>It then looks at what is given between the parentheses (<code>.format("Text")</code>) and puts that text in place of the braces formatting it as per the format instructions.</li>
 </ul>
-<h3 id="format-commands">Format commands</h3>
+<h2 id="format-commands">Format commands</h2>
 <p>Let's look at each example of a <code>.format</code>  statement one by one:</p>
 <ul>
 <li><code>print("Prices for cheese: ${}/1 oz, ${}/5 oz, ${}/10 oz".format(1.23, 5.35, 9.84))</code></li>

@@ -88,7 +88,7 @@ If you can find a text editor that does those two things then you are in busines
 
  - [VSCodium](https://vscodium.com/)
 
-If you can't make this text editor work for you, here are some alternatives: 
+If you can't make this text editor work for you or do not like it , here are some alternatives: 
 
 - [Notepad++](https://notepad-plus-plus.org/) (Windows only)
 - [Atom.io](https://atom.io/)

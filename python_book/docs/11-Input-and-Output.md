@@ -25,7 +25,7 @@ print(f"Hello {user_name}! You are {user_age} years old.")
 print(f"You work as a/an {user_job}.")
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 (If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
 
@@ -42,7 +42,7 @@ $
 
 As you can see the built-in `input` function allows you to take user data and store it in variables. Whatever the user enters into the input is saved as a string and you can then do what you wish with it.
 
-### Do a mini project
+## Do a mini project
 
 With this capability, we can start to write programs that can be used by someone other than the programmer! To get you used to this, I want you to write your own first program.
 
@@ -72,7 +72,7 @@ got a Canned air on his/her guitar and pulled up the greatest germ
 either of the sloths had ever seen. Mark exclaimed, "Now that
 is a gift card!" The cockroaches took it home and made slides.*
 
-### Hone Your Skills
+## Hone Your Skills
 
 - Play with the "Wacky Stories" concept and make other stories and play the game with friends and family! 
 

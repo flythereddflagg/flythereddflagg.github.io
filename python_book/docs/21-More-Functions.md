@@ -61,7 +61,7 @@ print("4!   =", factorial(4))
 print("2.5! =", factorial(2.5))
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ more_functions.py
@@ -74,7 +74,7 @@ Your number is: 1
 $
 ```
 
-### Parameters and Arguments
+## Parameters and Arguments
 
 Parameters are related to arguments. Many times these two terms are used interchangeably. To clarify, a parameter is the variable name that is used in the definition of a function. Whereas, an argument is what actually gets passed into the function call as seen here:
 
@@ -90,11 +90,11 @@ function_name(argument)
 
 Following this logic, the argument replaces the parameter while the function code executes. You have worked with arguments since the first Python program you ran. The simple statement `print("Hello World!")` is just you calling the Python function named `print` and passing in the string `"Hello World!"` as an argument. Somewhere in the Python core code, there is a `print` function defined in a similar manner that executes all the details of printing text out to the command line.
 
-### Default Values for Parameters
+## Default Values for Parameters
 
-We saw in line 29 the following line of code: `def print_a_number(number=1):`. This function definition supplied a default value for the `number` parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value. You may mix and match required and optional parameters like this but you must put the optional parameters with default values **after** the required "positional" parameters.
+We saw in line 29 the following line of code: `def print_a_number(number=1):`. This function definition supplied a default value for the `number` parameter. Any function parameter may have a default value. The effect of this definition is that if no argument is passed that corresponds to that parameter the value for the parameter will be assumed and inserted into the function. However, if the corresponding argument is given then it will override the default value. You may mix and match required and optional parameters like this but you must put the optional parameters with default values *after* the required "positional" parameters.
 
-### Returns and the None type
+## Returns and the None type
 
 You may have found that functions in Python have some practical similarities with mathematical functions. Just as a mathematical function f(x) will evaluate to a number when a value of x is supplied, a Python function that returns a value will evaluate to whatever value is returned. There are a few things to understand about the return statement:
 
@@ -117,15 +117,15 @@ You may have found that functions in Python have some practical similarities wit
 
   This will end the function if it is found that the solution will be imaginary.
 
-- Functions that have no `return` statement return a special data type called `None` by default. The `None` data type is basically Python's way of saying this data is nothing or void. Therefore when we explicit returned `None`  we could have also just written `return` . Both cases would be saying, if the solution will be imaginary return nothing!
+- Functions that have no `return` statement return a special data type called `None` by default. The `None` data type is basically Python's way of saying this data is nothing or void. Therefore when we explicit returned `None`  we could have also just written `return` . Both cases would be saying, if the solution will be imaginary return nothing.
 
 - It is possible to return multiple values (as seen in  `more_functions.py`  in the `quadratic_formula` function). As you saw above, they will simply be returned as a tuple.
 
 Return statements are crucial for effective functions and it is a good idea to experiment with what you can return in a function. 
 
-### Recursion
+## Recursion
 
-Recursion is the idea that a function or some process can reference itself. A great explanation of recursion as a concept can be found on [Wikipedia](https://en.wikipedia.org/wiki/Recursion). We saw this with the factorial example. In mathematics, a factorial is a number being multiplied by all the positive integers below it and is symbolized by an exclamation mark. So the factorial of 4 = 4! = 4 * 3 * 2 * 1. In this case we could do a loop to accomplish this but to demonstrate this principle we can do it with recursion. We set up a base case to end the recursion:
+Recursion is the idea that a function or some process can reference or call itself. A great explanation of recursion as a concept can be found on [Wikipedia](https://en.wikipedia.org/wiki/Recursion). We saw this with the factorial example. In mathematics, a factorial is a number being multiplied by all the positive integers below it and is symbolized by an exclamation mark. So the factorial of 4 = 4! = 4 * 3 * 2 * 1. In this case we could do a loop to accomplish this but to demonstrate this principle we can do it with recursion. We set up a base case to end the recursion:
 
 ```python
     if number <= 0:
@@ -138,7 +138,11 @@ Then we have the function call itself with a small adjustment:
     return number * factorial(number - 1)
 ```
 
-And the function starts over again. This continues until the base case has been reached.
+And the function starts over again with the updated argument. This continues until the base case has been reached.
+
+### Pitfalls of Recursion
+
+Recursion is a powerful tool and, when used judiciously, can easily do things that would otherwise take ridiculous amounts of code to implement without it. However, recursion can get you in to a lot of trouble if you are not careful with it. For example, it is easy to have a base case that will never be reached (imagine if the code read ` return number * factorial(number + 1)`) or forget to put in a base case. If this happens then you can make an infinite recursion that will break your program. (Python thankfully has a feature which detects recursion and limits the depth to which a program can <span title="The verb form of recursion; To execute a procedure that calls itself.">**recurse**</span>.)
 
 ## Hone your Skills
 

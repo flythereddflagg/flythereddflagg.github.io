@@ -53,7 +53,7 @@ z  %= x # same as z = z %  x
 print("z is now:", z)
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ python math_learning.py
@@ -81,9 +81,9 @@ This is a demonstration of mathematical binary operators and assignment operator
 
 or $$z = modulo(\frac{(zx)^x}{x} // x, x)$$
 
-We will explain all of this in this lesson.
+We will explain all of this in this section.
 
-### Data Types
+## Data Types
 
 In the lesson on [Variables and Memory](./09-Variables-and-Memory.md), we talked about a computer can only move and store numbers in "boxes". However, we can represent anything we want as a set of "boxes" with numbers using some clever tricks that we will not get into here. 
 
@@ -117,23 +117,23 @@ number = number * 1.0
 
 - **String**
 
-  A string, is fundamentally a series of numbers in boxes in computer memory that are interpreted as a sequence of letters. Those numbers can be used to express thousands of characters. Strings can interact with floats and integers and be combined using operators but do not act the same way floats and integers do as we will see below.
+  A string, is fundamentally a series of numbers in boxes in computer memory that are interpreted as a sequence of letters. Those numbers can be used to express thousands of characters (Remember the Unicode escape character codes?). Strings can interact with floats and integers and be combined using operators but do not act the same way floats and integers do as we will see below.
 
 There are many more types than these and we will introduce them later on. These are, however, the most common and fundamental types. If you wish to ever know the type of any variable (`var`) you can use `print(type(var))`.
 
-### Math Operators
+## Math Operators
 
 Each set of symbols between x and y is called a binary operator (so called because it operates on two things). Below is a brief description of each binary operator and what it does to a integer, float and string.
 
-| Operator                  | Math Example                                      | Integer and float                  | String                                                       |
-| ------------------------- | ------------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
-| + (plus)                  | `x + y`\(=x + y/)                                 | Addition                           | Concatenate two strings                                      |
-| - (dash)                  | `x -  y`  \(=x - y\)                              | Subtraction                        | No meaning                                                   |
-| * (asterisk)              | `x *  y`  \(= xy = x\cdot y\)                     | Multiplication                     | Multiply a string by a positive integer to concatenate string `y` with itself  `x` times |
-| ** (double asterisk)      | `x ** y ` \(=x^y\)                                | exponentiaion                      | No meaning                                                   |
-| / (forward slash)         | `x /  y` \(=x/y=\frac{x}{y}\)                     | Float (i.e. normal) division       | No meaning                                                   |
-| // (double forward slash) | `x // y` \(=\frac{x}{y}\) rounded down to integer | Integer division or floor division | No meaning                                                   |
-| % (percent character)     | `x %  y = y - x * (x // y)`                       | Modulo or Remainder                | "Old style" string formatting (Not used in this book. See [here](https://docs.python.org/3/library/string.html#format-examples) for details.) |
+| Operator                  | Math Example                                    | Integer and float                  | String                                                       |
+| ------------------------- | ----------------------------------------------- | ---------------------------------- | ------------------------------------------------------------ |
+| + (plus)                  | `x + y`$=x + y$                                 | Addition                           | Concatenate two strings                                      |
+| - (dash)                  | `x -  y`  $=x - y$                              | Subtraction                        | No meaning                                                   |
+| * (asterisk)              | `x *  y`  $= xy = x\cdot y$                     | Multiplication                     | Multiply a string by a positive integer to concatenate string `y` with itself  `x` times |
+| ** (double asterisk)      | `x ** y ` $=x^y$                                | exponentiaion                      | No meaning                                                   |
+| / (forward slash)         | `x /  y` $=x/y=\frac{x}{y}$                     | Float (i.e. conventional) division | No meaning                                                   |
+| // (double forward slash) | `x // y` $=\frac{x}{y}$ rounded down to integer | Integer division or floor division | No meaning                                                   |
+| % (percent character)     | `x %  y = y - x * (x // y)`                     | Modulo or Remainder                | "Old style" string formatting (Not used in this book. See [here](https://docs.python.org/3/library/string.html#format-examples) for details if you are curious.) |
 
 Among the above operators, the less commonly known operators are the last 2 and therefore we will give more details about them below:
 
@@ -143,14 +143,14 @@ Among the above operators, the less commonly known operators are the last 2 and 
 
 - **Modulo**
 
-  This is the same thing as a remainder. For example: how many times does 3 goes into 5 evenly? Answer: 1 but if we subtract the product of 3 and 1 from 5 we get what is left over or the remainder. 
+  This is the same thing as a remainder. For example: how many times does 3 goes into 5 evenly? Answer: 1 but if we subtract the product of 3 and 1 from 5 we get what is left over (2) or the remainder.
 
-### Assignment Operators
+## Assignment Operators
 
 The assignment operator `=` will always evaluate whatever is on the right side of it before storing it in memory. Therefore, an operation like `z = z + x` tells the computer to do the following:
 
 - Take the current value of `z` and add it to `x`
-- Once you have that result, assign that result to the same variable so the variable has been modified "in place"
+- Once you have that result, assign that result to the same variable, `Z` so the variable `z` has been modified "in place"
 
 Python has a shorthand for modifying a variable in place for every operator. These shorthand versions are also called assignment operators.
 
@@ -166,9 +166,9 @@ Below is a summary of the assignment operators and their corresponding string op
 | `//= `Double-divide-equals | `z = z // x` | No meaning                                    |
 | `%=` Modulo-equals         | `z = z % x`  | An expansion of the "old-style" formatting    |
 
-### Order of Operations
+## Order of Operations
 
-Python uses normal math conventions when evaluating math expressions the following order of operations is observed proceeding left to right when conflicts appear:
+Python uses common math conventions when evaluating math expressions the following order of operations is observed proceeding left to right when conflicts appear:
 
 1. Parentheses
 1. Exponents
@@ -177,12 +177,12 @@ Python uses normal math conventions when evaluating math expressions the followi
 
 All Python expressions follow the convention of being evaluated left to right and any order can be broken by using parentheses.
 
-### Built-in Math Functions
+## Built-in Math Functions
 
-Lastly we will talk about some built-in functions (like `print()`) can help us evaluate and convert between math and string types:
+Lastly, we will talk about some built-in functions (like `print()`) can help us evaluate and convert between math and string types:
 
 - `int`
-  This function can be used to turn any type of data into an integer if there is any way to interpret it as such. Therefore expressions like `int("123")`, `int(123.223)` and `int(123)` will all work and return `123` as an integer but `int("a 123")` will throw an error.
+  This function can be used to turn any type of data into an integer if there is any way to interpret it as such. Therefore expressions like `int("123")`, `int(123.223)` and `int(123)` will all work and return the integer `123` as an integer but `int("a 123")` will throw an error.
 
 - `float`
 
@@ -194,7 +194,7 @@ Lastly we will talk about some built-in functions (like `print()`) can help us e
 
 - `abs`
 
-  This gives the absolute value of the number
+  This gives the absolute value of the number (i.e. it makes the number positive if it is negative).
 
 - `pow`
 
@@ -203,7 +203,7 @@ Lastly we will talk about some built-in functions (like `print()`) can help us e
 ## Hone Your Skills
 
 1. Write your own script that uses the built-in functions discussed above. Can you break them? What are their limitations?
-2. Using the `input` function, write a script that asks the user for the parameters `a`, `b` and `c` corresponding to the quadratic equation (\(ax^2+bx+c = 0\)) and calculates the roots of the equation using the [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_equation) with the user providing a, b and c. (Hint: A square root is the same as taking a number to the \(\frac{1}{2}\) power. e.g. \(\sqrt{a+b}\) = \((a+b)^\frac{1}{2}​\)) 
+2. Using the `input` function, write a script that asks the user for the parameters `a`, `b` and `c` corresponding to the quadratic equation (\(ax^2+bx+c = 0\)) and calculates the roots of the equation using the [quadratic formula](https://en.wikipedia.org/wiki/Quadratic_equation) with the user providing a, b and c. (Hint: A square root is the same as taking a number to the $\frac{1}{2}$ power. (e.g. $\sqrt{a+b}=(a+b)^\frac{1}{2}$)
 
 ## Advanced Mastery
 

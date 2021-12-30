@@ -375,25 +375,31 @@
     Computer Bare Essentials
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Computer Bare Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#storing-information" class="md-nav__link">
     Storing Information
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#using-ram" class="md-nav__link">
     Using RAM
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#more-practice" class="md-nav__link">
-    More Practice
+  <a href="#type-id-and-value" class="md-nav__link">
+    Type, ID and Value
   </a>
   
 </li>
@@ -830,8 +836,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -845,8 +851,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -904,25 +955,31 @@
     Computer Bare Essentials
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Computer Bare Essentials">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#storing-information" class="md-nav__link">
     Storing Information
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#using-ram" class="md-nav__link">
     Using RAM
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#more-practice" class="md-nav__link">
-    More Practice
+  <a href="#type-id-and-value" class="md-nav__link">
+    Type, ID and Value
   </a>
   
 </li>
@@ -1031,16 +1088,16 @@
 <span class="linenos" data-linenos="40 "></span>    <span class="n">random_number</span>
 <span class="linenos" data-linenos="41 "></span><span class="p">)</span>
 </code></pre></div>
-<h4 id="here-is-what-should-happen">Here is what should happen</h4>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <p>(If needed, see <a href="../04-Hello-World/#making-and-running-your-first-python-file">Section 4</a> to review how to run a script.)</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ python vars_and_mem.py
 <span class="linenos" data-linenos="2 "></span>Here is some text! This is another string of text.
-<span class="linenos" data-linenos="3 "></span>Here is some text! <span class="m">1</span> <span class="m">23</span> <span class="m">25</span>.34
-<span class="linenos" data-linenos="4 "></span>Here are some more numbers <span class="m">34</span> <span class="m">203</span> <span class="m">3</span>.14159265
+<span class="linenos" data-linenos="3 "></span>Here is some text! 1 23 25.34
+<span class="linenos" data-linenos="4 "></span>Here are some more numbers 34 203 3.14159265
 <span class="linenos" data-linenos="5 "></span>$
 </code></pre></div>
 <p>You can see that each name that is assigned a value can be used multiple times and refers to the same value that gets stored in memory. This name is called a <span title="Variable: a name assigned to a value. This value may be of any type in Python."><strong>variable</strong></span>. Here is how the computer works with variables.</p>
-<h3 id="computer-bare-essentials">Computer Bare Essentials</h3>
+<h2 id="computer-bare-essentials">Computer Bare Essentials</h2>
 <p>I want to begin here by saying a few things about computers that hopefully will help you understand them better.</p>
 <p>Computers, including those that run everything from your desktop to your phone to your car, basically only do 3 things:</p>
 <ol>
@@ -1058,7 +1115,7 @@
 <li>The <strong>persistent memory</strong>: like the RAM, but the information you write here stays until you actively erase it (depending on your hardware). Your program gets stored here and is loaded into RAM to actually run. The persistent memory is generally contained on a drive of some sort (e.g a hard disk drive (HDD) or a solid-state drive (SSD)). We will be doing more with the persistent memory in a later section.</li>
 </ol>
 <h3 id="using-ram">Using RAM</h3>
-<p>The RAM is where your variables are stored. Without oversimplifying, you can think of the RAM as a large set of P.O. boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like</p>
+<p>The RAM is where your variables are stored. You can think of the RAM as a large set of P.O. boxes in a vast post office. Each P.O. box has a number associated with it called an address. When you run code like</p>
 <p><code>x = 23</code></p>
 <p>you are executing the following:</p>
 <ul>
@@ -1066,7 +1123,7 @@
 <li>Get the address of the 'box' and associate it with the name 'x'. (This erases any previous associations x may have had before.)</li>
 </ul>
 <p>Anytime x is referenced after that command, the computer looks up the address associated with 'x' and goes directly to the 'box' with that address and replaces 'x' with whatever is in that 'box'.</p>
-<h3 id="more-practice">More Practice</h3>
+<h2 id="type-id-and-value">Type, ID and Value</h2>
 <p>The python interpreter will illustrate this better. Go to your terminal and enter <code>python</code> to start the interpreter.</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="err">$</span> <span class="n">python</span>
 <span class="linenos" data-linenos="2 "></span><span class="n">Python</span> <span class="n">X</span><span class="o">.</span><span class="n">X</span><span class="o">.</span><span class="n">X</span> <span class="o">...</span>
@@ -1085,9 +1142,10 @@
 </code></pre></div>
 <p><code>type</code> , <code>id</code>  and <code>exit</code> are other built-in functions like <code>print</code> that provide some useful information about <code>x</code>. </p>
 <p><code>type</code> spits out the type of variable between its parentheses (in this case, an integer or <code>int</code> as given in the interpreter).  <code>id</code> spits out the "address" of the variable in the RAM (<em><strong>NOTE:</strong> Depending on the Python implementation you are using, this may or may not be the literal address in memory but is always unique to the chunk of memory being used, hence its <code>id</code> or identification</em>). This address will likely be different for every time you start the Python interpreter. Entering the name of the variable simply prints its value and <code>exit()</code> simply exits the program.</p>
-<h3 id="naming-variables">Naming Variables</h3>
+<p>You should know at this point that every variable has these three things, namely, a type, ID, and value. This may not be of any consequence right now but it will matter more and more as we go along.</p>
+<h2 id="naming-variables">Naming Variables</h2>
 <p>As a programmer you will have to give names to your variables. There are certain rules for naming variables but, within those rules, you can make up any name you want for any variable. However, the guidelines below will help you make smart choices about how you name variables.</p>
-<h4 id="naming-rules-in-python">Naming Rules in Python</h4>
+<h3 id="naming-rules-in-python">Naming Rules in Python</h3>
 <p>Python follows some rules on what a valid variable name can be. The rules are as follows:</p>
 <ul>
 <li>Names must start with a letter <strong>or</strong> an underscore (<code>_</code>) (e.g. <code>Spam</code>, <code>eggs</code>, <code>_cheese</code>)</li>
@@ -1157,8 +1215,8 @@
 </tr>
 </tbody>
 </table>
-<p>For a complete explanation of naming see the section in <a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions">PEP 8</a>.</p>
-<h4 id="naming-conventions-and-guidelines">Naming Conventions and Guidelines</h4>
+<p>For a complete explanation of naming, see the section in <a href="https://www.python.org/dev/peps/pep-0008/#naming-conventions">PEP 8</a>.</p>
+<h3 id="naming-conventions-and-guidelines">Naming Conventions and Guidelines</h3>
 <p>Within the limits of these rules, you can call your variables any name you want and make them as long or as short as you want. However, there are some conventions you should stick to you make your code better. The following conventions will help make your code easier to write and fix when something goes wrong. (And trust me, something <em>always</em> goes wrong.):</p>
 <ul>
 <li><strong>Use lower case and underscores</strong></li>
@@ -1190,7 +1248,7 @@
 <p>The other 3 variables? I had no idea what they were.</p>
 <p>After weeks of digging I finally figured out what each of these variables were.</p>
 <ul>
-<li><code>val</code> was a predicted value of viscosity</li>
+<li><code>val</code> was a predicted thermodynamic property</li>
 <li><code>cav</code> stood for 'compound average value'</li>
 <li><code>wtmcls</code> was the number of 'water molecules' in the compound</li>
 <li><code>hcpv</code> was the 'heat capacity value' for that compound</li>
@@ -1198,13 +1256,12 @@
 <p>Now you don't need to understand all of this perfectly but consider how much easier to understand it would have been if the code had been written like this:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">viscosity</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">compound_average</span> <span class="o">+</span> <span class="n">b</span><span class="o">*</span><span class="n">h2o_molecules</span> <span class="o">+</span> <span class="n">c</span><span class="o">*</span><span class="n">heat_capacity</span> <span class="o">+</span> <span class="n">d</span> 
 </code></pre></div>
-<p>I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before.</p>
-<p>This will take practice but it behooves you to write your variable names (and the rest of your code for that matter) descriptively to avoid issues like the one above. </p>
+<p>I have done this in my own code. I have worked on code and been lazy with naming. I came back to my code later and found I had to rewrite everything because I couldn't understand what I did before. This will take practice but it behooves you to write your variable names (and the rest of your code for that matter) descriptively to avoid issues like the one above. </p>
 <ul>
 <li><strong>Help your reader understand the code without comments</strong></li>
 </ul>
-<p>Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. I do not want to diminish the importance of comments in code but writing easily understandable code is better than commenting. Up to now, what your code does should be obvious to anyone that can read Python without needing any comments. However, as we go through the next several exercises think of ways you could name your variables so your code is more clear.</p>
-<p>Any good programmer knows that <strong>the majority of the time spent coding is actually spent reading and not writing</strong>. Python makes it easy for you to write readable code and the first step is write good variable names.</p>
+<p>Ideally, you want to write code that can be read easily and makes readily apparent what the code does without needing comments explaining it. I do not want to diminish the importance of comments in code but writing easily understandable code is better than commenting. Up to now, what your code does should be obvious to anyone that can read Python without needing any comments. However as we go through the next several exercises, think of ways you could name your variables so your code is more clear.</p>
+<p>Any good programmer knows that <strong>the majority of the time spent coding is actually spent reading and not writing</strong>. Python makes it easy for you to write readable code and the first step of writing readable code is to use good variable names.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>
 <li>Go to the <a href="https://docs.python.org/3/library/functions.html">Python Built-in Function page</a> and experiment with as many functions in the Python interpreter as you can. What does each of these built in functions do?</li>

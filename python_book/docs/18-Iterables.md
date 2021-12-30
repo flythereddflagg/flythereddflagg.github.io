@@ -120,7 +120,7 @@ print('"potatoes" in example_tuple:',
 
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ python iterables.py
@@ -172,15 +172,15 @@ $
 
 We have just dumped a lot of information on you. This is probably the longest script you've written yet. We will go through each step by step. Lets start with each type of iterable.
 
-### String
+## String
 
 We have already covered a lot about strings. It turns out, however, that strings are iterables and have all the properties that we see at the end of the script. We will deal with these in more detail below but just understand that strings have all those common properties.
 
-### Range
+## Range
 
 Ranges can be thought of as a very specific subset of a list. The subset is a list of integers with a set pattern. Ranges are most useful in for-loop construction when you want a loop to run a specific number of times. They have other uses but the for-loop case is most common.
 
-### List
+## List
 
 A list is a very powerful sequence type. Unlike a string which must contain only letters and a range which can only contain integers in a specified order, a list is exactly what it sounds like. A list is an object that holds objects or references to objects in a specified order. A list could be a shopping list where the elements are strings:
 
@@ -206,11 +206,11 @@ matrix_a = [
 
 which is just a list of lists of numbers. They have all sorts of methods tied to them that can be used to manipulate data. For many of the more complex problems we will tackle, lists or list-like object will be our work horse.
 
-### Tuple
+## Tuple
 
 Tuples are interesting beasts in Python. Without getting into gory details, tuples are like lists that cannot be changed once they are created and are fixed in memory. You may think of them as a "read-only" list. You may rightly ask why they even exist if all they appear to be is a less-useful list. The advantage of tuples is that, because they cannot be changed, the computer can use them more efficiently. However, they do have some uses that can be of interest. (See Hone Your Skills for more on this.) 
 
-### Subscripts, Slices and Concatenation
+## Subscripts, Slices and Concatenation
 
 A useful feature all sequenced iterators have is that of subscripting and slicing.  It may not be clear what this means however. The following two operations allow us to conveniently work with sequenced iterables. 
 
@@ -230,7 +230,7 @@ A useful feature all sequenced iterators have is that of subscripting and slicin
   
 - Like strings, all sequenced iterators may be concatenated with the `+` operator and multiplied by integers. (See the section on Math and Data.)
 
-### For-loops, Length and the `in` operator
+## For-loops, Length and the `in` operator
 
 Each of the properties that we used in `iterables.py`  that are common to all iterables are both useful and easy to understand given the context we now have.
 

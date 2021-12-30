@@ -7,7 +7,7 @@
 ---
 <!-- End Navigation -->
 
-# 14 - If, elif and else
+# 14 - If, elif, and else
 
 We will use the concepts of True and False to drive our scripts ability to make decisions. The following exercise will help introduce program decisions and conditionals. 
 
@@ -80,7 +80,7 @@ else:
     print(f"Farmer name \"{farmer_name}\" does not exist in record!")
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 Run this program 3 times as shown below. You should see similar results.
 
@@ -121,7 +121,7 @@ We are using conditional logic to get data for a pair of farmers. We begin by pr
 
 Should the name given match a name in our records we prepare the output by setting appropriate variables and then formatting and printing them out in the absence of an error.
 
-### Conditionals
+## Conditionals
 
 The section about logical operators introduced us to the idea that everything can be evaluated with a value of `True` or `False`. In this section we put that logic to work for us. The conditional or "if" statement in python has the following syntax:
 
@@ -158,7 +158,7 @@ We will explain the syntax step by step. When Python comes to an `if` statement,
 
 Python's conditional syntax allows as many `elif` statements as the programmer wishes. However, the `elif` and `else` parts are not necessary. You may choose to have a conditional block without an `else` or without an `elif` part. We will discuss good practices for conditional statements in the section about errors.
 
-### Indented Blocks
+## Indented Blocks
 
 We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make code more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each `if`, `elif` or `else` statement, the code is executed as normal. An indented block is just a way of Python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to `True`. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:
 
@@ -168,6 +168,34 @@ We have introduced an important syntax in Python. That is the indented block. Th
 - *Nested blocks are allowed.* If you want to have an indented block inside an indented block that is fine. the same rules apply in all cases.
 
 You may not know understand yet why these are so important but as we go along it will be obvious why they exist.
+
+## Match-Case Statements (Python Version 3.10 and later )
+
+This section only applies to Python versions 3.10 and later. This is a new feature introduced in Python version 3.10 that allows functionality similar to a [switch statement in C](https://en.wikipedia.org/wiki/Switch_statement). However, at time of writing (December 2021), I am still using version 3.9 for my work. As soon as I upgrade to 3.10 I will add more about this feature here (as well as update other sections.)
+
+For those that are using version 3.10 or later, here is brief primer on how this feature works:
+
+```python
+match "x":
+    case "y":
+        print("y")
+    case 'x':
+        print('x')
+    case _:
+        print("Err")
+
+# this is equivalent to
+
+var = "x"
+if var == "y":
+    print("y")
+elif var == 'x':
+    print('x')
+else:
+    print("Err")
+```
+
+While the differences between the two examples may seem trivial, this becomes more important as your code base grows larger. This may be treated in more detail in a later version of this book. For now you do not need to use it but you should be aware that it exists.
 
 ## Hone Your Skills
 

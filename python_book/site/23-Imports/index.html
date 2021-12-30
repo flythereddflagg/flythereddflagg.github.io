@@ -574,6 +574,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#imports" class="md-nav__link">
     Imports
   </a>
@@ -782,8 +789,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -797,8 +804,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -843,6 +895,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#imports" class="md-nav__link">
@@ -893,7 +952,7 @@
 <!-- End Navigation -->
 <h1 id="23-imports">23 - Imports</h1>
 <p>This is the last concept we will cover that I would consider the "basics" of Python and programming in general. Up to now, we have been using only the built-in functionality of Python. This is, in fact, a very limited view of what Python can do. To get the full power and utility of Python, we can use libraries of code that other programmers have written to do all sorts of complex and powerful tasks.</p>
-<p>In this lesson we will introduce many different tools that you may want to use. While going through the exercises in this lesson do not worry about learning everything there is to know about each set of tools. The point of this lesson is to get you familiar with how to get what you need for programming.</p>
+<p>In this lesson we will introduce many different tools that you may want to use. While going through the exercises in this lesson, do not worry about learning everything there is to know about each set of tools. The point of this lesson is to get you familiar with how to get what you need for programming.</p>
 <p>With that said let's start!</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># import_practice.py</span>
 <span class="linenos" data-linenos=" 2 "></span>
@@ -950,67 +1009,27 @@
 <span class="linenos" data-linenos="53 "></span><span class="c1"># datetime example</span>
 <span class="linenos" data-linenos="54 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">The exact date and time is:&quot;</span><span class="p">,</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span>
 </code></pre></div>
-<p><strong>Here is what should happen</strong></p>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python import_practice.py
 <span class="linenos" data-linenos=" 2 "></span>Python doing: ls
 <span class="linenos" data-linenos=" 3 "></span>--------------------
 <span class="linenos" data-linenos=" 4 "></span>Folder Name: .
 <span class="linenos" data-linenos=" 5 "></span>----
 <span class="linenos" data-linenos=" 6 "></span>Sub-folders:
-<span class="linenos" data-linenos=" 7 "></span>         .ipynb_checkpoints
-<span class="linenos" data-linenos=" 8 "></span>---
-<span class="linenos" data-linenos=" 9 "></span>Files:
-<span class="linenos" data-linenos="10 "></span>         data.csv
-<span class="linenos" data-linenos="11 "></span>         import_practice.py
-<span class="linenos" data-linenos="12 "></span>         import_text.py
-<span class="linenos" data-linenos="13 "></span>         solution_test_1.py
-<span class="linenos" data-linenos="14 "></span>         test_write.ipynb
-<span class="linenos" data-linenos="15 "></span>         TOC_tba.md
-<span class="linenos" data-linenos="16 "></span>         wacky_story.py
-<span class="linenos" data-linenos="17 "></span>
-<span class="linenos" data-linenos="18 "></span>--------------------
-<span class="linenos" data-linenos="19 "></span>Folder Name: .\.ipynb_checkpoints
-<span class="linenos" data-linenos="20 "></span>----
-<span class="linenos" data-linenos="21 "></span>Sub-folders:
-<span class="linenos" data-linenos="22 "></span>---
-<span class="linenos" data-linenos="23 "></span>Files:
-<span class="linenos" data-linenos="24 "></span>         test_write-checkpoint.ipynb
-<span class="linenos" data-linenos="25 "></span>
-<span class="linenos" data-linenos="26 "></span>--------------------
-<span class="linenos" data-linenos="27 "></span>sin(π/2) = 1.0
-<span class="linenos" data-linenos="28 "></span>ln(23)   = 3.18
-<span class="linenos" data-linenos="29 "></span>
-<span class="linenos" data-linenos="30 "></span>The exact date and time is: 2019-01-05 12:38:55.442190
-<span class="linenos" data-linenos="31 "></span>$ python import_practice.py
-<span class="linenos" data-linenos="32 "></span>Python doing: ls
-<span class="linenos" data-linenos="33 "></span>--------------------
-<span class="linenos" data-linenos="34 "></span>Folder Name: .
-<span class="linenos" data-linenos="35 "></span>----
-<span class="linenos" data-linenos="36 "></span>Sub-folders:
-<span class="linenos" data-linenos="37 "></span>         .ipynb_checkpoints
-<span class="linenos" data-linenos="38 "></span>---
-<span class="linenos" data-linenos="39 "></span>Files:
-<span class="linenos" data-linenos="40 "></span>         data.csv
-<span class="linenos" data-linenos="41 "></span>         import_practice.py
-<span class="linenos" data-linenos="42 "></span>         solution_test_1.py
-<span class="linenos" data-linenos="43 "></span>         test_write.ipynb
-<span class="linenos" data-linenos="44 "></span>         TOC_tba.md
-<span class="linenos" data-linenos="45 "></span>         wacky_story.py
-<span class="linenos" data-linenos="46 "></span>
-<span class="linenos" data-linenos="47 "></span>--------------------
-<span class="linenos" data-linenos="48 "></span>Folder Name: .\.ipynb_checkpoints
-<span class="linenos" data-linenos="49 "></span>----
-<span class="linenos" data-linenos="50 "></span>Sub-folders:
-<span class="linenos" data-linenos="51 "></span>---
-<span class="linenos" data-linenos="52 "></span>Files:
-<span class="linenos" data-linenos="53 "></span>         test_write-checkpoint.ipynb
-<span class="linenos" data-linenos="54 "></span>
-<span class="linenos" data-linenos="55 "></span>--------------------
-<span class="linenos" data-linenos="56 "></span>sin(π/2) = 1.0
-<span class="linenos" data-linenos="57 "></span>ln(23)   = 3.18
-<span class="linenos" data-linenos="58 "></span>
-<span class="linenos" data-linenos="59 "></span>The exact date and time is: 2019-01-05 12:49:54.332969
-<span class="linenos" data-linenos="60 "></span>$
+<span class="linenos" data-linenos=" 7 "></span>---
+<span class="linenos" data-linenos=" 8 "></span>Files:
+<span class="linenos" data-linenos=" 9 "></span>         import_practice.py
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>--------------------
+<span class="linenos" data-linenos="12 "></span>sin(π/2) = 1.0
+<span class="linenos" data-linenos="13 "></span>ln(23)   = 3.18
+<span class="linenos" data-linenos="14 "></span>
+<span class="linenos" data-linenos="15 "></span>The exact date and time is: 2021-12-29 19:55:10.224866
+<span class="linenos" data-linenos="16 "></span>$ cat data.csv
+<span class="linenos" data-linenos="17 "></span>0.6327611697188947,0.15920931769315871,0.45538106691812763
+<span class="linenos" data-linenos="18 "></span>0.1352785816744667,0.8096791360000197,0.2649536587734054
+<span class="linenos" data-linenos="19 "></span>0.5234525507097868,0.7868670128119664,0.7058845080510836
+<span class="linenos" data-linenos="20 "></span>$
 </code></pre></div>
 <h3 id="imports">Imports</h3>
 <p>The main concept we introduced in this exercise is that of an <code>import</code> statement. These statements are how we use code from another script written in Python. The syntax of an import statement follows two basic forms:</p>

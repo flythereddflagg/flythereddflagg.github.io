@@ -529,6 +529,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
     Functions
   </a>
@@ -782,8 +789,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -797,8 +804,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -843,6 +895,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#functions" class="md-nav__link">
@@ -912,7 +971,7 @@
 <span class="linenos" data-linenos=" 5 "></span>
 <span class="linenos" data-linenos=" 6 "></span><span class="c1"># &#39;def&#39; defines a function</span>
 <span class="linenos" data-linenos=" 7 "></span><span class="k">def</span> <span class="nf">count_sandwiches</span><span class="p">():</span>
-<span class="linenos" data-linenos=" 8 "></span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There are </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandchwiches.&quot;</span><span class="p">)</span> 
+<span class="linenos" data-linenos=" 8 "></span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">There are </span><span class="si">{</span><span class="n">number_of_sandwiches</span><span class="si">}</span><span class="s2"> sandwiches.&quot;</span><span class="p">)</span> 
 <span class="linenos" data-linenos=" 9 "></span>
 <span class="linenos" data-linenos="10 "></span>
 <span class="linenos" data-linenos="11 "></span><span class="k">def</span> <span class="nf">make_a_sandwich</span><span class="p">():</span>
@@ -931,87 +990,94 @@
 <span class="linenos" data-linenos="24 "></span>
 <span class="linenos" data-linenos="25 "></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
 <span class="linenos" data-linenos="26 "></span>    <span class="sd">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="27 "></span><span class="sd">    This is the main function of the program.</span>
-<span class="linenos" data-linenos="28 "></span><span class="sd">    It will be the main entry point for all</span>
-<span class="linenos" data-linenos="29 "></span><span class="sd">    the functions.</span>
-<span class="linenos" data-linenos="30 "></span><span class="sd">    &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="31 "></span>    <span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="32 "></span><span class="s2">Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,</span>
-<span class="linenos" data-linenos="33 "></span><span class="s2">&quot;count&quot; your sandchwiches or &quot;quit&quot;?</span>
-<span class="linenos" data-linenos="34 "></span><span class="s2">--&gt; &quot;&quot;&quot;</span>
-<span class="linenos" data-linenos="35 "></span>    <span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="linenos" data-linenos="36 "></span>
-<span class="linenos" data-linenos="37 "></span>    <span class="k">while</span> <span class="n">running</span><span class="p">:</span>
-<span class="linenos" data-linenos="38 "></span>        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
-<span class="linenos" data-linenos="39 "></span>
-<span class="linenos" data-linenos="40 "></span>        <span class="k">if</span> <span class="s2">&quot;count&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-<span class="linenos" data-linenos="41 "></span>            <span class="n">count_sandwiches</span><span class="p">()</span>
-<span class="linenos" data-linenos="42 "></span>
-<span class="linenos" data-linenos="43 "></span>        <span class="k">elif</span> <span class="s2">&quot;make&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-<span class="linenos" data-linenos="44 "></span>            <span class="n">make_a_sandwich</span><span class="p">()</span>
-<span class="linenos" data-linenos="45 "></span>
-<span class="linenos" data-linenos="46 "></span>        <span class="k">elif</span> <span class="s2">&quot;eat&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-<span class="linenos" data-linenos="47 "></span>            <span class="k">if</span> <span class="n">number_of_sandwiches</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="linenos" data-linenos="48 "></span>                <span class="n">eat_a_sandwich</span><span class="p">()</span>
-<span class="linenos" data-linenos="49 "></span>            <span class="k">else</span><span class="p">:</span>
-<span class="linenos" data-linenos="50 "></span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are no sandwiches to eat!&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="51 "></span>
-<span class="linenos" data-linenos="52 "></span>        <span class="k">elif</span> <span class="s2">&quot;quit&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
-<span class="linenos" data-linenos="53 "></span>            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="linenos" data-linenos="54 "></span>
-<span class="linenos" data-linenos="55 "></span>        <span class="k">else</span><span class="p">:</span>
-<span class="linenos" data-linenos="56 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That isn&#39;t an option.&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="57 "></span>
-<span class="linenos" data-linenos="58 "></span><span class="n">main</span><span class="p">()</span>
+<span class="linenos" data-linenos="27 "></span><span class="sd">    The text between these quotes is the &quot;documentation string&quot;.</span>
+<span class="linenos" data-linenos="28 "></span><span class="sd">    Documentation strings are used to explain the function </span>
+<span class="linenos" data-linenos="29 "></span><span class="sd">    they are in. They go before the code of the function but </span>
+<span class="linenos" data-linenos="30 "></span><span class="sd">    after the first line of the function (the line with &quot;def&quot;</span>
+<span class="linenos" data-linenos="31 "></span><span class="sd">    in it). I am explaining this here but usually you will </span>
+<span class="linenos" data-linenos="32 "></span><span class="sd">    just see an explanation like:</span>
+<span class="linenos" data-linenos="33 "></span>
+<span class="linenos" data-linenos="34 "></span><span class="sd">    This is the main function of the program.</span>
+<span class="linenos" data-linenos="35 "></span><span class="sd">    It will be the place from which all other functions </span>
+<span class="linenos" data-linenos="36 "></span><span class="sd">    in this program will be called.</span>
+<span class="linenos" data-linenos="37 "></span><span class="sd">    &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="38 "></span>    <span class="n">prompt</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="39 "></span><span class="s2">Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,</span>
+<span class="linenos" data-linenos="40 "></span><span class="s2">&quot;count&quot; your sandwiches or &quot;quit&quot;?</span>
+<span class="linenos" data-linenos="41 "></span><span class="s2">--&gt; &quot;&quot;&quot;</span>
+<span class="linenos" data-linenos="42 "></span>    <span class="n">running</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="linenos" data-linenos="43 "></span>
+<span class="linenos" data-linenos="44 "></span>    <span class="k">while</span> <span class="n">running</span><span class="p">:</span>
+<span class="linenos" data-linenos="45 "></span>        <span class="n">choice</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
+<span class="linenos" data-linenos="46 "></span>
+<span class="linenos" data-linenos="47 "></span>        <span class="k">if</span> <span class="s2">&quot;count&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="48 "></span>            <span class="n">count_sandwiches</span><span class="p">()</span>
+<span class="linenos" data-linenos="49 "></span>
+<span class="linenos" data-linenos="50 "></span>        <span class="k">elif</span> <span class="s2">&quot;make&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="51 "></span>            <span class="n">make_a_sandwich</span><span class="p">()</span>
+<span class="linenos" data-linenos="52 "></span>
+<span class="linenos" data-linenos="53 "></span>        <span class="k">elif</span> <span class="s2">&quot;eat&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="54 "></span>            <span class="k">if</span> <span class="n">number_of_sandwiches</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="linenos" data-linenos="55 "></span>                <span class="n">eat_a_sandwich</span><span class="p">()</span>
+<span class="linenos" data-linenos="56 "></span>            <span class="k">else</span><span class="p">:</span>
+<span class="linenos" data-linenos="57 "></span>                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are no sandwiches to eat!&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="58 "></span>
+<span class="linenos" data-linenos="59 "></span>        <span class="k">elif</span> <span class="s2">&quot;quit&quot;</span> <span class="ow">in</span> <span class="n">choice</span><span class="p">:</span>
+<span class="linenos" data-linenos="60 "></span>            <span class="n">running</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="linenos" data-linenos="61 "></span>
+<span class="linenos" data-linenos="62 "></span>        <span class="k">else</span><span class="p">:</span>
+<span class="linenos" data-linenos="63 "></span>            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That isn&#39;t an option.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="64 "></span>
+<span class="linenos" data-linenos="65 "></span><span class="n">main</span><span class="p">()</span>
 </code></pre></div>
-<p><strong>Here is what should happen</strong></p>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python3 function_intro.py
 <span class="linenos" data-linenos=" 2 "></span>
-<span class="linenos" data-linenos=" 3 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-<span class="linenos" data-linenos=" 4 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos=" 3 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,
+<span class="linenos" data-linenos=" 4 "></span>&quot;count&quot; your sandwiches or &quot;quit&quot;?
 <span class="linenos" data-linenos=" 5 "></span>--&gt; make
 <span class="linenos" data-linenos=" 6 "></span>
 <span class="linenos" data-linenos=" 7 "></span>A sandwich has been made.
 <span class="linenos" data-linenos=" 8 "></span>There are now 1 sandwiches.
 <span class="linenos" data-linenos=" 9 "></span>
-<span class="linenos" data-linenos="10 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-<span class="linenos" data-linenos="11 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="10 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,
+<span class="linenos" data-linenos="11 "></span>&quot;count&quot; your sandwiches or &quot;quit&quot;?
 <span class="linenos" data-linenos="12 "></span>--&gt; count
 <span class="linenos" data-linenos="13 "></span>
-<span class="linenos" data-linenos="14 "></span>There are 1 sandchwiches.
+<span class="linenos" data-linenos="14 "></span>There are 1 sandwiches.
 <span class="linenos" data-linenos="15 "></span>
-<span class="linenos" data-linenos="16 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-<span class="linenos" data-linenos="17 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="16 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,
+<span class="linenos" data-linenos="17 "></span>&quot;count&quot; your sandwiches or &quot;quit&quot;?
 <span class="linenos" data-linenos="18 "></span>--&gt; make
 <span class="linenos" data-linenos="19 "></span>
 <span class="linenos" data-linenos="20 "></span>A sandwich has been made.
 <span class="linenos" data-linenos="21 "></span>There are now 2 sandwiches.
 <span class="linenos" data-linenos="22 "></span>
-<span class="linenos" data-linenos="23 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-<span class="linenos" data-linenos="24 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="23 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,
+<span class="linenos" data-linenos="24 "></span>&quot;count&quot; your sandwiches or &quot;quit&quot;?
 <span class="linenos" data-linenos="25 "></span>--&gt; eat
 <span class="linenos" data-linenos="26 "></span>
 <span class="linenos" data-linenos="27 "></span>You ate a sandwich.
 <span class="linenos" data-linenos="28 "></span>There are now 1 sandwiches.
 <span class="linenos" data-linenos="29 "></span>
-<span class="linenos" data-linenos="30 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-<span class="linenos" data-linenos="31 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="30 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,
+<span class="linenos" data-linenos="31 "></span>&quot;count&quot; your sandwiches or &quot;quit&quot;?
 <span class="linenos" data-linenos="32 "></span>--&gt; eat
 <span class="linenos" data-linenos="33 "></span>
 <span class="linenos" data-linenos="34 "></span>You ate a sandwich.
 <span class="linenos" data-linenos="35 "></span>There are now 0 sandwiches.
 <span class="linenos" data-linenos="36 "></span>
-<span class="linenos" data-linenos="37 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-<span class="linenos" data-linenos="38 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="37 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,
+<span class="linenos" data-linenos="38 "></span>&quot;count&quot; your sandwiches or &quot;quit&quot;?
 <span class="linenos" data-linenos="39 "></span>--&gt; eat
 <span class="linenos" data-linenos="40 "></span>There are no sandwiches to eat!
 <span class="linenos" data-linenos="41 "></span>
-<span class="linenos" data-linenos="42 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandchwich,
-<span class="linenos" data-linenos="43 "></span>&quot;count&quot; your sandchwiches or &quot;quit&quot;?
+<span class="linenos" data-linenos="42 "></span>Would you like to &quot;make&quot; a sandwich, &quot;eat&quot; a sandwich,
+<span class="linenos" data-linenos="43 "></span>&quot;count&quot; your sandwiches or &quot;quit&quot;?
 <span class="linenos" data-linenos="44 "></span>--&gt; quit
 <span class="linenos" data-linenos="45 "></span>$ 
 </code></pre></div>
-<h3 id="functions">Functions</h3>
+<h2 id="functions">Functions</h2>
 <p>Upon finishing this lesson, you should have made your first functions!</p>
 <p>There will always be times when you code that you will wish to reuse a chunk of code multiple times. A function allows you to reuse that code as many times as you want with a line of code to call the function. We will explore the basic aspects in this and the next lessons.</p>
 <p>Functions follow the following syntax:</p>
@@ -1028,8 +1094,8 @@
 <span class="linenos" data-linenos="11 "></span><span class="c1"># or if there are no arguments</span>
 <span class="linenos" data-linenos="12 "></span><span class="n">function_name</span><span class="p">()</span>
 </code></pre></div>
-<p>We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by <code>&lt;statements ...&gt;</code>). The first example of this was in the <code>count_sandwiches()</code> function. As you saw while executing the script, it simply gets the value of <code>number_of_sandwiches</code> and prints the corresponding text.</p>
-<h3 id="scope">Scope</h3>
+<p>We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by <code>&lt;statements ...&gt;</code>). The first example of this was in the <code>count_sandwiches()</code> function. As you saw while executing the script, it simply gets the value of <code>number_of_sandwiches</code> and prints the corresponding text. <strong>Remember</strong> that when you write a variable name followed by parentheses (e.g. <code>function_name()</code>), you are telling Python, "Run this function!".</p>
+<h2 id="scope">Scope</h2>
 <p>In the second and third functions,  <code>make_a_sandwich()</code> and <code>eat_a_sandwich()</code>, you see the statement <code>global number_of_sandwiches</code>. The word <code>global</code> is a keyword in Python that we have not talked about yet and relates to how Python manages variables and memory.</p>
 <p>Up to this, point we have used only global variables. That is, we have had variables that were visible to every part of the program. Consider the following code:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">egg</span> <span class="o">=</span> <span class="s2">&quot;Brown&quot;</span>
@@ -1059,7 +1125,7 @@
 <p>The line <code>global egg</code> tells Python to treat the <code>egg</code> variable in the function as the same <code>egg</code> variable defined in the global scope. There are many possible scopes that could exist in a Python program but for now the function scope and the global scope are the most important.</p>
 <p>A good thing to bear in mind while writing functions is that every variable that is defined in the context of the function will disappear as soon as the function ends. This means that if you want a variable to hang around after the function ends that variable needs to be defined in a scope outside the function.</p>
 <p>In the case of <code>function_intro.py</code>, you may have noticed that we did not have to use <code>global</code> in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with <code>count_sandwiches()</code>), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in <code>function_intro.py</code> you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!</p>
-<h3 id="main-loops">Main-loops</h3>
+<h2 id="main-loops">Main-loops</h2>
 <p>The code under the <code>main</code> function is what is known as a "main-loop" or a "main-program loop". It uses the model of REPL (Read, Evaluate, Print, then Loop) to execute as many commands as the user needs (the Python interactive prompt uses this same model). Notice, the use of the while-loop and the structure of the function. Understand this part of the program as it will become more important in the following sections.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ul>

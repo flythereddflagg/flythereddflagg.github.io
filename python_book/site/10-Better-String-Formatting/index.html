@@ -386,6 +386,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#what-is-happening-here" class="md-nav__link">
+    What is happening here?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#literal-string-interpolation" class="md-nav__link">
     Literal String Interpolation
   </a>
@@ -775,8 +782,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -790,8 +797,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -840,6 +892,13 @@
         <li class="md-nav__item">
   <a href="#here-is-what-should-happen" class="md-nav__link">
     Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-happening-here" class="md-nav__link">
+    What is happening here?
   </a>
   
 </li>
@@ -905,33 +964,34 @@
 <span class="linenos" data-linenos="24 "></span><span class="nb">print</span><span class="p">(</span><span class="n">pickle_info</span><span class="p">)</span>
 <span class="linenos" data-linenos="25 "></span>
 <span class="linenos" data-linenos="26 "></span><span class="c1"># lets take a bunch of numbers below</span>
-<span class="linenos" data-linenos="27 "></span><span class="n">random_number_1</span> <span class="o">=</span>    <span class="mi">7583</span>        <span class="c1"># integer</span>
-<span class="linenos" data-linenos="28 "></span><span class="n">random_number_2</span> <span class="o">=</span>    <span class="o">-</span><span class="mi">123</span>        <span class="c1"># negative integer</span>
-<span class="linenos" data-linenos="29 "></span><span class="n">random_number_3</span> <span class="o">=</span>      <span class="mf">23.0</span>      <span class="c1"># float number</span>
-<span class="linenos" data-linenos="30 "></span><span class="n">random_number_4</span> <span class="o">=</span> <span class="mf">4838495.23221</span>  <span class="c1"># bigger float number</span>
-<span class="linenos" data-linenos="31 "></span><span class="n">random_number_5</span> <span class="o">=</span>     <span class="mf">483.234</span>    <span class="c1"># medium float number</span>
-<span class="linenos" data-linenos="32 "></span><span class="n">random_number_6</span> <span class="o">=</span>    <span class="mf">1293.0</span>      <span class="c1"># round float number</span>
-<span class="linenos" data-linenos="33 "></span>
-<span class="linenos" data-linenos="34 "></span><span class="c1"># now let&#39;s print them</span>
-<span class="linenos" data-linenos="35 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Printing the numbers without any formatting.&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="36 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="37 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="38 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="39 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="40 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="41 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="42 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="43 "></span>
-<span class="linenos" data-linenos="44 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Notice how this can be hard to read.&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="45 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Let&#39;s try printing them and lining up the decimals.&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="46 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_1</span><span class="si">:</span><span class="s2">7d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>    
-<span class="linenos" data-linenos="47 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_2</span><span class="si">:</span><span class="s2">7d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>    
-<span class="linenos" data-linenos="48 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_3</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> 
-<span class="linenos" data-linenos="49 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_4</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="50 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_5</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="51 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_6</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="27 "></span><span class="c1"># (spaces added for ease of reading)</span>
+<span class="linenos" data-linenos="28 "></span><span class="n">random_number_1</span> <span class="o">=</span>    <span class="mi">7583</span>        <span class="c1"># integer</span>
+<span class="linenos" data-linenos="29 "></span><span class="n">random_number_2</span> <span class="o">=</span>    <span class="o">-</span><span class="mi">123</span>        <span class="c1"># negative integer</span>
+<span class="linenos" data-linenos="30 "></span><span class="n">random_number_3</span> <span class="o">=</span>      <span class="mf">23.0</span>      <span class="c1"># float number</span>
+<span class="linenos" data-linenos="31 "></span><span class="n">random_number_4</span> <span class="o">=</span> <span class="mf">4838495.23221</span>  <span class="c1"># bigger float number</span>
+<span class="linenos" data-linenos="32 "></span><span class="n">random_number_5</span> <span class="o">=</span>     <span class="mf">483.234</span>    <span class="c1"># medium float number</span>
+<span class="linenos" data-linenos="33 "></span><span class="n">random_number_6</span> <span class="o">=</span>    <span class="mf">1293.0</span>      <span class="c1"># round float number</span>
+<span class="linenos" data-linenos="34 "></span>
+<span class="linenos" data-linenos="35 "></span><span class="c1"># now let&#39;s print them</span>
+<span class="linenos" data-linenos="36 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Printing the numbers without any formatting.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="37 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="38 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="39 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_3</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="40 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_4</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="41 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_5</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="42 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_6</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="43 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="44 "></span>
+<span class="linenos" data-linenos="45 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Notice how this can be hard to read.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="46 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Let&#39;s try printing them and lining up the decimals.&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="47 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_1</span><span class="si">:</span><span class="s2">7d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>    
+<span class="linenos" data-linenos="48 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_2</span><span class="si">:</span><span class="s2">7d</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>    
+<span class="linenos" data-linenos="49 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_3</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> 
+<span class="linenos" data-linenos="50 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_4</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="51 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_5</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="52 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">random_number_6</span><span class="si">:</span><span class="s2">11.3f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
-<h4 id="here-is-what-should-happen">Here is what should happen</h4>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <p>(If needed, see <a href="../04-Hello-World/#making-and-running-your-first-python-file">Section 4</a> to review how to run a script.)</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python adv_format.py
 <span class="linenos" data-linenos=" 2 "></span>I have a jar of Fantastic brand pickles. 
@@ -960,24 +1020,21 @@
 <span class="linenos" data-linenos="25 "></span>   1293.000
 <span class="linenos" data-linenos="26 "></span>$
 </code></pre></div>
-<p><strong>What is happening here?</strong></p>
+<h3 id="what-is-happening-here">What is happening here?</h3>
 <p>lets go through each new concept one-by-one:</p>
 <ul>
-<li><em>Lines 8-14:</em>
-  You can have a indented new line in python anytime you have a comma or a
-  open parenthesis also you can assign a multi-line string to a variable in this way.</li>
-</ul>
-<p>You'll notice this was many lines of code to get this to do what we want. And Python has a better way.</p>
-<ul>
+<li>
+<p><em>Lines 8-14:</em>
+  You can have a indented new line in python anytime you have a comma or a open parenthesis also you can assign a multi-line string to a variable in this way. You'll notice this was many lines of code to get this to do what we want. And Python has a better way.</p>
+</li>
 <li>
 <p><em>Lines 19-21 and 33- 50:</em> Notice the <code>f</code> in front of the string. This is known as a "literal string interpolation" and is explained below.</p>
 </li>
 <li>
-<p><em>Lines 43-50 and line 21:</em> These are format instructions. <code>d</code> is the symbol that corresponds 
-  to formatting an integer. <code>f</code> is the symbol for floats. The number before the decimal is the amount of space padding. The number after the decimal is the number of decimal places to show in the number. There are more instructions that can be passed. See "Hone your skills" for more on this subject. The important thing here is that for numbers, changing the padding and decimal places can align the numbers' decimals in an easy-to-read fashion.</p>
+<p><em>Lines 43-50 and line 21:</em> These are format instructions. <code>d</code> is the symbol that corresponds to formatting an integer. <code>f</code> is the symbol for floats. The number before the decimal is the amount of space padding. The number after the decimal is the number of decimal places to show in the number. There are more instructions that can be passed. See "Hone your skills" for more on this subject. The important thing here is that for numbers, changing the padding and decimal places can align the numbers' decimals in an easy-to-read fashion.</p>
 </li>
 </ul>
-<h3 id="literal-string-interpolation">Literal String Interpolation</h3>
+<h2 id="literal-string-interpolation">Literal String Interpolation</h2>
 <p>The <code>f</code> that we put in front of a string is referred to technically as a "literal string interpolation". Colloquially, it is called an "f-string". It tells Python to automatically call <code>format()</code> on the string using the variable names in the braces. The colon and the text following it tells Python to accept format codes that we explored before. This feature was added relatively recently and is now a standard way of string formatting.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ol>

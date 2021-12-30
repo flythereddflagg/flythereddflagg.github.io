@@ -50,7 +50,7 @@ for key, value in player_data.items():
     print(key, ":", value)
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ python dictionary_practice.py
@@ -77,7 +77,7 @@ Wins : 4
 $
 ```
 
-### Dictionaries
+## Dictionaries
 
 A dictionary is an iterable and also a mapping type, that is, a data type that takes one kind of object and connects it to another. In other programming languages this concept of a mapping type is called a "hash map" or a "hash table". Dictionaries are nothing short of magic in programming for their efficiency and usefulness. A dictionary can be like a mini database or a convenient way to describe almost any object.
 
@@ -89,7 +89,7 @@ As we saw above, dictionaries can be thought of as a list of unique keys that, w
 
 ## Advanced Mastery
 
-- Search the Internet and learn about hash maps and how they work. From what you learn, why are dictionaries/hashmaps so efficient? How can you use this to make your code better?
+- Search the Internet and learn about hash maps and how they work. From what you learn, why are dictionaries/hash maps so efficient? How can you use this to make your code better?
 
 <!-- Navigation -->
 

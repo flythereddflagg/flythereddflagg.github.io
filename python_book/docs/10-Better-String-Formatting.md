@@ -37,6 +37,7 @@ weight of {average_pickle_weight:.3f} ounces.\n"""
 print(pickle_info)
 
 # lets take a bunch of numbers below
+# (spaces added for ease of reading)
 random_number_1 =    7583        # integer
 random_number_2 =    -123        # negative integer
 random_number_3 =      23.0      # float number
@@ -65,7 +66,7 @@ print(f"{random_number_6:11.3f}")
 
 ```
 
-#### Here is what should happen
+### Here is what should happen
 
 (If needed, see [Section 4](./04-Hello-World.md#making-and-running-your-first-python-file) to review how to run a script.)
 
@@ -98,23 +99,18 @@ Let's try printing them and lining up the decimals.
 $
 ```
 
-**What is happening here?**
+### What is happening here?
 
 lets go through each new concept one-by-one:
 
 - *Lines 8-14:*
-  You can have a indented new line in python anytime you have a comma or a
-  open parenthesis also you can assign a multi-line string to a variable in this way.
-
-  You'll notice this was many lines of code to get this to do what we want. And Python has a better way.
-
+  You can have a indented new line in python anytime you have a comma or a open parenthesis also you can assign a multi-line string to a variable in this way. You'll notice this was many lines of code to get this to do what we want. And Python has a better way.
+  
 - *Lines 19-21 and 33- 50:* Notice the `f` in front of the string. This is known as a "literal string interpolation" and is explained below.
 
-- *Lines 43-50 and line 21:* These are format instructions. `d` is the symbol that corresponds 
-  to formatting an integer. `f` is the symbol for floats. The number before the decimal is the amount of space padding. The number after the decimal is the number of decimal places to show in the number. There are more instructions that can be passed. See "Hone your skills" for more on this subject. The important thing here is that for numbers, changing the padding and decimal places can align the numbers' decimals in an easy-to-read fashion.
+- *Lines 43-50 and line 21:* These are format instructions. `d` is the symbol that corresponds to formatting an integer. `f` is the symbol for floats. The number before the decimal is the amount of space padding. The number after the decimal is the number of decimal places to show in the number. There are more instructions that can be passed. See "Hone your skills" for more on this subject. The important thing here is that for numbers, changing the padding and decimal places can align the numbers' decimals in an easy-to-read fashion.
 
-
-### Literal String Interpolation
+## Literal String Interpolation
 
 The `f` that we put in front of a string is referred to technically as a "literal string interpolation". Colloquially, it is called an "f-string". It tells Python to automatically call `format()` on the string using the variable names in the braces. The colon and the text following it tells Python to accept format codes that we explored before. This feature was added relatively recently and is now a standard way of string formatting.
 

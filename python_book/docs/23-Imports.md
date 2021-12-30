@@ -10,7 +10,7 @@
 
 This is the last concept we will cover that I would consider the "basics" of Python and programming in general. Up to now, we have been using only the built-in functionality of Python. This is, in fact, a very limited view of what Python can do. To get the full power and utility of Python, we can use libraries of code that other programmers have written to do all sorts of complex and powerful tasks.
 
-In this lesson we will introduce many different tools that you may want to use. While going through the exercises in this lesson do not worry about learning everything there is to know about each set of tools. The point of this lesson is to get you familiar with how to get what you need for programming.
+In this lesson we will introduce many different tools that you may want to use. While going through the exercises in this lesson, do not worry about learning everything there is to know about each set of tools. The point of this lesson is to get you familiar with how to get what you need for programming.
 
 With that said let's start!
 
@@ -72,7 +72,7 @@ print("\nThe exact date and time is:", dt.datetime.now())
 
 ```
 
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ python import_practice.py
@@ -81,59 +81,19 @@ Python doing: ls
 Folder Name: .
 ----
 Sub-folders:
-         .ipynb_checkpoints
 ---
 Files:
-         data.csv
          import_practice.py
-         import_text.py
-         solution_test_1.py
-         test_write.ipynb
-         TOC_tba.md
-         wacky_story.py
-
---------------------
-Folder Name: .\.ipynb_checkpoints
-----
-Sub-folders:
----
-Files:
-         test_write-checkpoint.ipynb
 
 --------------------
 sin(π/2) = 1.0
 ln(23)   = 3.18
 
-The exact date and time is: 2019-01-05 12:38:55.442190
-$ python import_practice.py
-Python doing: ls
---------------------
-Folder Name: .
-----
-Sub-folders:
-         .ipynb_checkpoints
----
-Files:
-         data.csv
-         import_practice.py
-         solution_test_1.py
-         test_write.ipynb
-         TOC_tba.md
-         wacky_story.py
-
---------------------
-Folder Name: .\.ipynb_checkpoints
-----
-Sub-folders:
----
-Files:
-         test_write-checkpoint.ipynb
-
---------------------
-sin(π/2) = 1.0
-ln(23)   = 3.18
-
-The exact date and time is: 2019-01-05 12:49:54.332969
+The exact date and time is: 2021-12-29 19:55:10.224866
+$ cat data.csv
+0.6327611697188947,0.15920931769315871,0.45538106691812763
+0.1352785816744667,0.8096791360000197,0.2649536587734054
+0.5234525507097868,0.7868670128119664,0.7058845080510836
 $
 ```
 

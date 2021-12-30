@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E10 - Bringing it All Together](./E10-Bringing-it-All-Together.md)
+[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E03 - Pandas ](./E03-Pandas.md)
 
 ---
 <!-- End Navigation -->
@@ -212,7 +212,7 @@ This is one area where I have to admit that the developers of Numpy do a much be
 
 ---
 
-[Previous: E02 - Pandas ](./E02-Pandas.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E10 - Bringing it All Together](./E10-Bringing-it-All-Together.md)
+[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E03 - Pandas ](./E03-Pandas.md)
 
 ---
 <!-- End Navigation -->

@@ -36,9 +36,9 @@ data += user_age  + ','
 data += user_job  + "\n" 
 
 # an example of the older/worse way of working with files
-f = open(filename + ext , "w")   # open in write mode 'w'
-f.write("name,age,occupation\n") # write headers to file
-f.write(data)                    # then write it to the file
+f = open(filename + ext , "w")   # open in write mode "w"
+f.write("name,age,occupation\n") # write column headers to file
+f.write(data)                    # then write data to the file
 f.close()                        # save and close the file
     
 print("Done.")
@@ -52,7 +52,7 @@ with open(filename + ext, 'r') as f: # 'r' is for read
     print("---")
 
 ```
-**Here is what should happen**
+### Here is what should happen
 
 ```
 $ python io_files.py
@@ -97,7 +97,7 @@ We are writing and reading files here with a special tool called a file object. 
 
 Some of these topics and nomenclature are new. I will now explain these below.
 
-### Objects
+## Objects
 
 In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence again.
 
@@ -107,7 +107,7 @@ For example, when you have a string variable such as `"Tim {}"`, you have a set 
 
 Other objects we have talked about such as `int` and `float` are also objects but are significantly simpler than strings. These generally have very simple data and methods associated with them but they still have the same fundamental structure as the string objects. 
 
-### File Objects and Methods
+## File Objects and Methods
 
 Now that we have discussed objects lets look specifically at file objects. Lets begin with the `open` built-in function. The basic usage for the open function has the following form and arguments:
 
@@ -125,7 +125,7 @@ where `filename` is the path to the file you want to open and `mode` is the way 
 
  These are not the only options for `mode` and there are ways to combine these that you can experiment with in "Hone Your Skills" below.
 
-### `with` Statements
+## `with` Statements
 
 To save the changes we made to the file we opened in `f = open(filename + ext , "w")`, we need to call `f.close()` on our file object. This ends up being a problem if you forget to call `f.close()` on the object. A better way to deal with files is with a `with` statement. 
 
@@ -154,7 +154,7 @@ with open(filename + ext , "w") as f:
 
 Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The `with` statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a `with` statement (unless you have a *very* good reason not to do so). Also note that working with files is not the only situation in which it is appropriate to use a `with` statement but it is a very common one.
 
-### A Quick Note About Function Arguments
+## A Quick Note About Function Arguments
 
 You may have noticed the following feature of the `print` function on Line 12  that we have not used before:
 
@@ -170,12 +170,12 @@ Remember to use `with` statements in all the following exercises.
 
 - Try using the three basic ways of writing files (`'r','w','a'`). Try to write a paragraph of text to a file, close it and edit it again, putting a line of text at the beginning and end of the file. How would you do this?
 - Experiment with the ways of opening a file by trying the combined and other options (e.g. `r+`,  `'wb+'` etc.) for opening files. You can read about them [here](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files). How do they differ?
-- Research the `open()` function and learn all you can about how it works. The official Python reference is [here](https://docs.python.org/3.7/library/functions.html#open). 
+- Research the `open()` function and learn all you can about how it works. The official Python reference is [here](https://docs.python.org/3.9/library/functions.html#open). 
 
 ## Advanced Mastery
 
 - Try to open and read a non-.txt file with Python. Were you able to read it? Research why or why not.
-- Read about the complete list of methods for working with files [here](https://docs.python.org/3.7/library/io.html#class-hierarchy). How could you use these methods?
+- Read about the complete list of methods for working with files [here](https://docs.python.org/3.9/library/io.html#class-hierarchy). How could you use these methods?
 
 <!-- Navigation -->
 

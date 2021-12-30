@@ -808,8 +808,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -823,8 +823,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -945,15 +990,12 @@
 <!-- End Navigation -->
 
 <h1 id="4-hello-world">4 - Hello World!</h1>
-<p>If you have successfully installed Python and are able to do basic navigation in the command line, you are ready to begin programming in Python!</p>
-<p>We will begin with the most basic program that actually does something in 
-Python. This is common when you want to begin any programming language. As with
-all things, beginning in Python is very simple.</p>
-<h3 id="making-and-running-your-first-python-file">Making and Running Your First Python File</h3>
+<p>If you have successfully installed Python and are able to do basic navigation in the command line, you are ready to begin programming in Python! We will begin with the most basic program that actually does something in Python. This is common when you want to begin any programming language.</p>
+<h2 id="making-and-running-your-first-python-file">Making and Running Your First Python File</h2>
 <ul>
 <li>Start by opening your text editor and opening a new file</li>
 <li>Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend making a new folder, calling it something like <code>python_exercises</code> and putting it in your "Documents" folder. However, you can put it wherever makes sense. </li>
-<li>Use the 'Save as' dialog and navigate to the folder you made.</li>
+<li>Use the <code>File -&gt; Save As</code> dialog and navigate to the folder you made.</li>
 <li>Give the file the name <code>hello_world.py</code> and save it</li>
 </ul>
 <p>You will notice the <code>.py</code> part of the filename. This is called an extension and is a way of telling the computer or anyone who looks at the file what kind of file it is. Make sure you name all files you make in Python using this extension.</p>
@@ -966,12 +1008,12 @@ all things, beginning in Python is very simple.</p>
 <span class="linenos" data-linenos="2 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 </code></pre></div>
 <ul>
+<li><em>Make sure you save the file</em></li>
 <li>Go to your terminal and navigate to the folder that holds your Python file. <em>(if you have trouble doing this, review the previous section until you can navigate the terminal with confidence.)</em></li>
-<li>Enter the following command in your terminal:</li>
+<li>Enter the following command in your terminal (Remember, <strong>DO NOT</strong> type in the <code>$</code> and ignore everything in the terminal before the <code>$</code> or the <code>&gt;</code>):</li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ python hello_world.py
 </code></pre></div>
-<p>Remember, <strong>DO NOT</strong> type in the <code>$</code> and ignore everything in the terminal before the <code>$</code> or the <code>&gt;</code></p>
 <h4 id="here-is-what-should-happen">Here is what should happen</h4>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span>$ python hello_world.py 
 <span class="linenos" data-linenos="2 "></span>Hello World!
@@ -982,12 +1024,12 @@ all things, beginning in Python is very simple.</p>
 <ul>
 <li>Look where you saved <code>hello_world.py</code> have you navigated to the same folder in the command line? If not navigate to the folder <code>hello_world.py</code> is in before trying again.</li>
 <li>Did you write <em>exactly</em> what was written above? Check it carefully before trying again.</li>
-<li>Check that Python is working. Type "python" or "python3" into the terminal like it says in <a href="../02-Getting-Started/">Chapter 2</a>. Does it work as it says there? If not check the <a href="./02-Getting-Started.md/#troubleshooting-your-installation">Troubleshooting Section</a> in Chapter 2.</li>
+<li>Check that Python is working. Type "python" or "python3" into the terminal like it says in <a href="../02-Getting-Started/">Section 2</a>. Does it work as it says there? If not check the <a href="./02-Getting-Started.md/#troubleshooting-your-installation">Troubleshooting Section</a> in Section 2.</li>
 </ul>
 <h4 id="what-is-happening-here">What is happening here?</h4>
 <p>Traditionally, displaying "Hello World!" in a console window is the first thing every programmer generally learns to do in a new language. Later, we will get into more detail on how exactly everything works.</p>
-<h3 id="change-your-first-python-file">Change Your First Python File</h3>
-<p>Go back to your Python file and add the following under the first line so the whole file looks like this:</p>
+<h2 id="change-your-first-python-file">Change Your First Python File</h2>
+<p>Go back to your Python file and add the following under the first line so the whole file looks like this (Again, type it <em>exactly</em> as it is written here):</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># hello_world.py</span>
 <span class="linenos" data-linenos=" 2 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 <span class="linenos" data-linenos=" 3 "></span>

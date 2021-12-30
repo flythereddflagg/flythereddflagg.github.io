@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E03 - Numpy ](./E03-Numpy.md)
+[Previous: E02 - Numpy ](./E02-Numpy.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E04 - Matplotlib ](./E04-Matplotlib.md)
 
 ---
 <!-- End Navigation -->
@@ -232,7 +232,7 @@ I assume if you are reading this section that you already work with some kind of
 
 ---
 
-[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E03 - Numpy ](./E03-Numpy.md)
+[Previous: E02 - Numpy ](./E02-Numpy.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E04 - Matplotlib ](./E04-Matplotlib.md)
 
 ---
 <!-- End Navigation -->

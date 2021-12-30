@@ -439,6 +439,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conditionals" class="md-nav__link">
     Conditionals
   </a>
@@ -448,6 +455,13 @@
         <li class="md-nav__item">
   <a href="#indented-blocks" class="md-nav__link">
     Indented Blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#match-case-statements-python-version-310-and-later" class="md-nav__link">
+    Match-Case Statements (Python Version 3.10 and later )
   </a>
   
 </li>
@@ -782,8 +796,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -797,8 +811,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -845,6 +904,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#conditionals" class="md-nav__link">
     Conditionals
   </a>
@@ -854,6 +920,13 @@
         <li class="md-nav__item">
   <a href="#indented-blocks" class="md-nav__link">
     Indented Blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#match-case-statements-python-version-310-and-later" class="md-nav__link">
+    Match-Case Statements (Python Version 3.10 and later )
   </a>
   
 </li>
@@ -892,7 +965,7 @@
 <hr />
 <!-- End Navigation -->
 
-<h1 id="14-if-elif-and-else">14 - If, elif and else</h1>
+<h1 id="14-if-elif-and-else">14 - If, elif, and else</h1>
 <p>We will use the concepts of True and False to drive our scripts ability to make decisions. The following exercise will help introduce program decisions and conditionals. </p>
 <p><strong>Note:</strong> This will be the first time we see indented blocks of code. Whenever you see an indented line of code, follow the <a href="https://www.python.org/dev/peps/pep-0008/#code-lay-out">Python standard</a> of always indenting 4 spaces (do <em>not</em> use tabs). Your text editor can and should be configured to insert 4 spaces instead of a tab character <code>\t</code> when the "Tab" key is pressed. Using 4 spaces is a convention used in Python that will cause you trouble should you choose to ignore it because all production code in Python has this feature. Furthermore, you are trying to learn Python aren't you?</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1"># if_else.py</span>
@@ -960,7 +1033,7 @@
 <span class="linenos" data-linenos="63 "></span><span class="k">else</span><span class="p">:</span>
 <span class="linenos" data-linenos="64 "></span>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Farmer name </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">farmer_name</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2"> does not exist in record!&quot;</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Here is what should happen</strong></p>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <p>Run this program 3 times as shown below. You should see similar results.</p>
 <p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python if_else.py
 <span class="linenos" data-linenos=" 2 "></span>Enter the name of the farmer
@@ -995,7 +1068,7 @@
 <strong>What is happening Here?</strong></p>
 <p>We are using conditional logic to get data for a pair of farmers. We begin by prompting the user for the farmer's name. We then check the names of the farmers we have data for. If the name does not match any of the farmer's on record we print an error message. (This is the <code>else</code>  part on line 63.) The <code>error</code> variable we set earlier in the script will be set to <code>True</code> on line 42 in the case that we do not find  the name of any farmer in record.</p>
 <p>Should the name given match a name in our records we prepare the output by setting appropriate variables and then formatting and printing them out in the absence of an error.</p>
-<h3 id="conditionals">Conditionals</h3>
+<h2 id="conditionals">Conditionals</h2>
 <p>The section about logical operators introduced us to the idea that everything can be evaluated with a value of <code>True</code> or <code>False</code>. In this section we put that logic to work for us. The conditional or "if" statement in python has the following syntax:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="k">if</span> <span class="n">Expression1</span><span class="p">:</span> <span class="c1"># don&#39;t forget the colon</span>
 <span class="linenos" data-linenos=" 2 "></span>    <span class="n">do_thing_one</span><span class="p">()</span> <span class="c1"># indent 4 spaces</span>
@@ -1027,7 +1100,7 @@
 <li>Finally, if none of the 'if' or <code>elif</code> expressions evaluate to <code>True</code>, the code under the <code>else</code> is executed. </li>
 </ul>
 <p>Python's conditional syntax allows as many <code>elif</code> statements as the programmer wishes. However, the <code>elif</code> and <code>else</code> parts are not necessary. You may choose to have a conditional block without an <code>else</code> or without an <code>elif</code> part. We will discuss good practices for conditional statements in the section about errors.</p>
-<h3 id="indented-blocks">Indented Blocks</h3>
+<h2 id="indented-blocks">Indented Blocks</h2>
 <p>We have introduced an important syntax in Python. That is the indented block. This one feature that Python uses to make code more readable and to avoid cluttering the code page with unnecessary symbols or words. As you saw below each <code>if</code>, <code>elif</code> or <code>else</code> statement, the code is executed as normal. An indented block is just a way of Python separating a chunk of code and executing it in a different context, in this case, the context is that the code is executed if the logical expression evaluates to <code>True</code>. There are many other contexts that we will cover later but for now, memorize the following rules about indented blocks:</p>
 <ul>
 <li><em>Indented blocks must start with a colon <code>:</code>.</em> A colon tells Python in effect, "This is the beginning of a new indented block"</li>
@@ -1036,6 +1109,28 @@
 <li><em>Nested blocks are allowed.</em> If you want to have an indented block inside an indented block that is fine. the same rules apply in all cases.</li>
 </ul>
 <p>You may not know understand yet why these are so important but as we go along it will be obvious why they exist.</p>
+<h2 id="match-case-statements-python-version-310-and-later">Match-Case Statements (Python Version 3.10 and later )</h2>
+<p>This section only applies to Python versions 3.10 and later. This is a new feature introduced in Python version 3.10 that allows functionality similar to a <a href="https://en.wikipedia.org/wiki/Switch_statement">switch statement in C</a>. However, at time of writing (December 2021), I am still using version 3.9 for my work. As soon as I upgrade to 3.10 I will add more about this feature here (as well as update other sections.)</p>
+<p>For those that are using version 3.10 or later, here is brief primer on how this feature works:</p>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="n">match</span> <span class="s2">&quot;x&quot;</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 2 "></span>    <span class="n">case</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 3 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 4 "></span>    <span class="n">case</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 5 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 6 "></span>    <span class="n">case</span> <span class="n">_</span><span class="p">:</span>
+<span class="linenos" data-linenos=" 7 "></span>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Err&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span><span class="c1"># this is equivalent to</span>
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span><span class="n">var</span> <span class="o">=</span> <span class="s2">&quot;x&quot;</span>
+<span class="linenos" data-linenos="12 "></span><span class="k">if</span> <span class="n">var</span> <span class="o">==</span> <span class="s2">&quot;y&quot;</span><span class="p">:</span>
+<span class="linenos" data-linenos="13 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="14 "></span><span class="k">elif</span> <span class="n">var</span> <span class="o">==</span> <span class="s1">&#39;x&#39;</span><span class="p">:</span>
+<span class="linenos" data-linenos="15 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x&#39;</span><span class="p">)</span>
+<span class="linenos" data-linenos="16 "></span><span class="k">else</span><span class="p">:</span>
+<span class="linenos" data-linenos="17 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Err&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>While the differences between the two examples may seem trivial, this becomes more important as your code base grows larger. This may be treated in more detail in a later version of this book. For now you do not need to use it but you should be aware that it exists.</p>
 <h2 id="hone-your-skills">Hone Your Skills</h2>
 <ol>
 <li>Write a script that has several nested <code>if</code> and <code>elif</code> statements. Can you simplify the logic to not need as many nested blocks of code?</li>

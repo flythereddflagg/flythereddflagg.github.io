@@ -484,6 +484,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#while-loops" class="md-nav__link">
     while-loops
   </a>
@@ -775,8 +782,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -790,8 +797,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -836,6 +888,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#while-loops" class="md-nav__link">
@@ -891,22 +950,23 @@
 <span class="linenos" data-linenos="10 "></span><span class="nb">print</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 <span class="linenos" data-linenos="11 "></span>
 <span class="linenos" data-linenos="12 "></span><span class="c1"># there is a better way of doing this</span>
-<span class="linenos" data-linenos="13 "></span><span class="c1"># put an empty line between each example</span>
-<span class="linenos" data-linenos="14 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> 
-<span class="linenos" data-linenos="15 "></span>
-<span class="linenos" data-linenos="16 "></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="linenos" data-linenos="17 "></span><span class="k">while</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
-<span class="linenos" data-linenos="18 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-<span class="linenos" data-linenos="19 "></span>    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="linenos" data-linenos="20 "></span>
-<span class="linenos" data-linenos="21 "></span><span class="c1"># better! that only took 4 lines of code</span>
-<span class="linenos" data-linenos="22 "></span><span class="c1"># but here is an even better way</span>
-<span class="linenos" data-linenos="23 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
-<span class="linenos" data-linenos="24 "></span>
-<span class="linenos" data-linenos="25 "></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
-<span class="linenos" data-linenos="26 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="linenos" data-linenos="13 "></span>
+<span class="linenos" data-linenos="14 "></span><span class="c1"># first, put an empty line between each example</span>
+<span class="linenos" data-linenos="15 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span> 
+<span class="linenos" data-linenos="16 "></span>
+<span class="linenos" data-linenos="17 "></span><span class="n">n</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="linenos" data-linenos="18 "></span><span class="k">while</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
+<span class="linenos" data-linenos="19 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="linenos" data-linenos="20 "></span>    <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="linenos" data-linenos="21 "></span>
+<span class="linenos" data-linenos="22 "></span><span class="c1"># better! that only took 4 lines of code</span>
+<span class="linenos" data-linenos="23 "></span><span class="c1"># but here is an even better way</span>
+<span class="linenos" data-linenos="24 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
+<span class="linenos" data-linenos="25 "></span>
+<span class="linenos" data-linenos="26 "></span><span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="linenos" data-linenos="27 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
 </code></pre></div>
-<p><strong>Here is what should happen</strong></p>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python loops.py
 <span class="linenos" data-linenos=" 2 "></span>1
 <span class="linenos" data-linenos=" 3 "></span>2
@@ -934,7 +994,7 @@
 <li>A while-loop: The way we have used the while-loop here is not how while-loops should be used. I am only showing it here to introduce the syntax. Again, I have asked you to do it this way once so that we can explore the syntax. After this lesson you should <strong>NEVER</strong> use it this way again. (If you're confused about what "this way" is, don't worry, I'll explain it below.)</li>
 <li>A for-loop: This is, by far, the optimal way to do this particular task. A for-loop is perfect for when you know exactly how many times you want to loop. I will explain while-loops and for-loops below.</li>
 </ul>
-<h3 id="while-loops">while-loops</h3>
+<h2 id="while-loops">while-loops</h2>
 <p>I consider while-loops to generally be more simple than for loops. The while-loop follows the following syntax:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">while</span> <span class="n">truth_expression</span><span class="p">:</span>
 <span class="linenos" data-linenos="2 "></span>    <span class="n">do_things1</span>
@@ -944,7 +1004,7 @@
 </code></pre></div>
 <p>This can be read as "While <code>truth_expression</code> evaluates to <code>True</code>, <code>do_things</code> or else end the loop." The while-loop proceeds as follows:</p>
 <ul>
-<li>The <code>truth_expression</code> is some conditional expression like <code>var &gt; 3</code> </li>
+<li>The <code>truth_expression</code> is some conditional expression like <code>var &gt; 3</code></li>
 <li>If <code>truth_expression</code> evaluates to <code>True</code>:</li>
 <li>The statements in the indented block are executed in order until the block ends </li>
 <li>The code then returns to the while statement and evaluates the <code>truth_expression</code> again and the process starts over. </li>
@@ -952,15 +1012,14 @@
 <li>If at any time <code>truth_expression</code> evaluates to <code>False</code>, the indented block is skipped over and the code continues normally.</li>
 </ul>
 <p><code>truth_expression</code> is sometimes known as the <em>loop exit condition</em>. For the while-loop we did in <code>loops.py</code>, we wanted to loop a particular number of times so we initialized <code>n</code> to <code>1</code> and then incremented <code>n</code> each time before the loop started again.</p>
-<h3 id="for-loops">for-loops</h3>
-<p>The built-in function <code>range</code> produces a range object which produces a sequence of integer numbers starting with 0. (Remember: Python counting <em>always</em> starts with 0.) The sequence increments by integers up to but not including the number passed as an argument. (Note: <code>range</code> can be modified to do other things but we will get to that later.) In our case, that means that <code>range(5)</code> produced the sequence: <code>0, 1, 2, 3, 4</code>. This is a common way to say that we want to do something 5 times (as we see the sequence is 5 elements long) or to count up to from 0 to 4. </p>
+<h2 id="for-loops">for-loops</h2>
+<p>The built-in function <code>range</code> produces a range object which produces a sequence of integer numbers starting with 0. (Remember: Python counting <em>always</em> starts with 0.) The sequence increments by integers up to but not including the number passed as an argument. In our case, that means that <code>range(5)</code> produced the sequence: <code>0, 1, 2, 3, 4</code>. This is a common way to say that we want to do something 5 times (as we see the sequence is 5 elements long) or to count up to from 0 to 4. </p>
 <p>A range object is a type of iterable object. In Python, an iterable object is one that can produce a sequence of objects. (We will cover iterables more deeply later on.) A for-loop steps through the sequence the given iterable produces and assigns each element to a variable. </p>
 <p>For-loops follow the following syntax:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">iterable</span><span class="p">:</span>
-<span class="linenos" data-linenos="2 "></span>    <span class="n">do_things1</span>
-<span class="linenos" data-linenos="3 "></span>    <span class="n">do_things2</span>
-<span class="linenos" data-linenos="4 "></span>    <span class="o">...</span>
-<span class="linenos" data-linenos="5 "></span><span class="c1"># end of the indented block</span>
+<span class="linenos" data-linenos="2 "></span>    <span class="n">statements</span>
+<span class="linenos" data-linenos="3 "></span>    <span class="o">...</span>
+<span class="linenos" data-linenos="4 "></span><span class="c1"># end of the indented block</span>
 </code></pre></div>
 <p>Where <code>i</code> is the temporary variable. A for-loop will only repeat as many times as the iterable fed to it allows. (Again in <code>loops.py</code>, this was 5 times.) It also has the feature that, before each time that the loop runs, it defines a variable (which, in the example above, is <code>i</code> but you can name it whatever you want) based on the current element of the iterable. Therefore, <code>i</code> gets redefined for every iteration of the loop based on the next element of <code>iterable</code>. </p>
 <p>Other than that, the statements executed in the indented block are done normally and an un-indentation indicates that the loop block is done and the loop can continue. Once the <code>iterable</code> has run out of values to give to <code>i</code>, the loop terminates and code continues normally.</p>

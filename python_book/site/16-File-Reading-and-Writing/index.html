@@ -469,6 +469,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#objects" class="md-nav__link">
     Objects
   </a>
@@ -796,8 +803,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../E02-Pandas/" class="md-nav__link">
-        E2. Pandas
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
       </a>
     </li>
   
@@ -811,8 +818,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../E03-Numpy/" class="md-nav__link">
-        E3. Numpy
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Matplotlib/" class="md-nav__link">
+        E4. Matplotlib
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E04-Scipy/" class="md-nav__link">
+        E4. Scipy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E05-Units/" class="md-nav__link">
+        E5. Units
       </a>
     </li>
   
@@ -857,6 +909,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#here-is-what-should-happen" class="md-nav__link">
+    Here is what should happen
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#objects" class="md-nav__link">
@@ -928,7 +987,7 @@
 <li>The persistent memory (i.e. the storage drive)</li>
 </ul>
 <p>This lesson is an opportunity to interact with the third part, that is the hard drive. We will learn in this lesson how to read and write files from the storage drive.</p>
-<p><div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">#io_files.py</span>
+<div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span><span class="c1">#io_files.py</span>
 <span class="linenos" data-linenos=" 2 "></span>
 <span class="linenos" data-linenos=" 3 "></span><span class="n">ext</span>       <span class="o">=</span> <span class="s1">&#39;.txt&#39;</span>
 <span class="linenos" data-linenos=" 4 "></span><span class="n">user_name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter your name       : &quot;</span><span class="p">)</span>
@@ -946,9 +1005,9 @@
 <span class="linenos" data-linenos="16 "></span><span class="n">data</span> <span class="o">+=</span> <span class="n">user_job</span>  <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> 
 <span class="linenos" data-linenos="17 "></span>
 <span class="linenos" data-linenos="18 "></span><span class="c1"># an example of the older/worse way of working with files</span>
-<span class="linenos" data-linenos="19 "></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>   <span class="c1"># open in write mode &#39;w&#39;</span>
-<span class="linenos" data-linenos="20 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># write headers to file</span>
-<span class="linenos" data-linenos="21 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                    <span class="c1"># then write it to the file</span>
+<span class="linenos" data-linenos="19 "></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>   <span class="c1"># open in write mode &quot;w&quot;</span>
+<span class="linenos" data-linenos="20 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;name,age,occupation</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># write column headers to file</span>
+<span class="linenos" data-linenos="21 "></span><span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>                    <span class="c1"># then write data to the file</span>
 <span class="linenos" data-linenos="22 "></span><span class="n">f</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>                        <span class="c1"># save and close the file</span>
 <span class="linenos" data-linenos="23 "></span>
 <span class="linenos" data-linenos="24 "></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done.&quot;</span><span class="p">)</span>
@@ -961,7 +1020,7 @@
 <span class="linenos" data-linenos="31 "></span>    <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 <span class="linenos" data-linenos="32 "></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;---&quot;</span><span class="p">)</span>
 </code></pre></div>
-<strong>Here is what should happen</strong></p>
+<h3 id="here-is-what-should-happen">Here is what should happen</h3>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>$ python io_files.py
 <span class="linenos" data-linenos=" 2 "></span>Enter your name       : Mark
 <span class="linenos" data-linenos=" 3 "></span>Enter your age        : 92
@@ -997,12 +1056,12 @@
 <li>Finally, we re-open the file in "read" mode using a <code>with</code> statement and print the contents of the file out to the screen. (Lines 28-32)</li>
 </ul>
 <p>Some of these topics and nomenclature are new. I will now explain these below.</p>
-<h3 id="objects">Objects</h3>
+<h2 id="objects">Objects</h2>
 <p>In Python, every variable you work with is an object. Objects are instances of types just as you are an instance of a human. Read that last sentence again.</p>
 <p>A type, as I explained before, is a marker that a computer puts on a 'box' or set of 'boxes' in the RAM. It is a label that lets the computer know how to work with those boxes. An object is the actual box or set of boxes themselves.</p>
 <p>For example, when you have a string variable such as <code>"Tim {}"</code>, you have a set of 'boxes' in a certain order and each box has a bunch of 1s and 0s that represent each character in "Tim {}". In addition, you have other sets of boxes that contain code that makes the string object's methods work (e.g. <code>"Tim {}".format("The Enchanter")</code>) and any other data the string needs to function properly. Collectively, all these boxes are grouped together in memory and constitute the string object. This nomenclature will be used often so it's important to internalize this concept early.</p>
 <p>Other objects we have talked about such as <code>int</code> and <code>float</code> are also objects but are significantly simpler than strings. These generally have very simple data and methods associated with them but they still have the same fundamental structure as the string objects. </p>
-<h3 id="file-objects-and-methods">File Objects and Methods</h3>
+<h2 id="file-objects-and-methods">File Objects and Methods</h2>
 <p>Now that we have discussed objects lets look specifically at file objects. Lets begin with the <code>open</code> built-in function. The basic usage for the open function has the following form and arguments:</p>
 <ul>
 <li><code>open(filename, mode)</code></li>
@@ -1021,7 +1080,7 @@
 </li>
 </ul>
 <p>These are not the only options for <code>mode</code> and there are ways to combine these that you can experiment with in "Hone Your Skills" below.</p>
-<h3 id="with-statements"><code>with</code> Statements</h3>
+<h2 id="with-statements"><code>with</code> Statements</h2>
 <p>To save the changes we made to the file we opened in <code>f = open(filename + ext , "w")</code>, we need to call <code>f.close()</code> on our file object. This ends up being a problem if you forget to call <code>f.close()</code> on the object. A better way to deal with files is with a <code>with</code> statement. </p>
 <p>To be clear, the following code snippet:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span> <span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span>  
@@ -1041,7 +1100,7 @@
 <span class="linenos" data-linenos="6 "></span>    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>     
 </code></pre></div>
 <p>Not only does the second code snippet use fewer lines of code but it is clear by looking at the indented block when you are working with the file and when you are done. The <code>with</code> statement simply remembers to close the file when the indented block ends. Whenever you work with files you should always use a <code>with</code> statement (unless you have a <em>very</em> good reason not to do so). Also note that working with files is not the only situation in which it is appropriate to use a <code>with</code> statement but it is a very common one.</p>
-<h3 id="a-quick-note-about-function-arguments">A Quick Note About Function Arguments</h3>
+<h2 id="a-quick-note-about-function-arguments">A Quick Note About Function Arguments</h2>
 <p>You may have noticed the following feature of the <code>print</code> function on Line 12  that we have not used before:</p>
 <div class="highlight"><pre><span></span><code><span class="linenos" data-linenos="1 "></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Saving Your Information to </span><span class="se">\&quot;</span><span class="si">{</span><span class="n">filename</span> <span class="o">+</span> <span class="n">ext</span><span class="si">}</span><span class="se">\&quot;</span><span class="s2">...&quot;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
 </code></pre></div>
@@ -1051,12 +1110,12 @@
 <ul>
 <li>Try using the three basic ways of writing files (<code>'r','w','a'</code>). Try to write a paragraph of text to a file, close it and edit it again, putting a line of text at the beginning and end of the file. How would you do this?</li>
 <li>Experiment with the ways of opening a file by trying the combined and other options (e.g. <code>r+</code>,  <code>'wb+'</code> etc.) for opening files. You can read about them <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files">here</a>. How do they differ?</li>
-<li>Research the <code>open()</code> function and learn all you can about how it works. The official Python reference is <a href="https://docs.python.org/3.7/library/functions.html#open">here</a>. </li>
+<li>Research the <code>open()</code> function and learn all you can about how it works. The official Python reference is <a href="https://docs.python.org/3.9/library/functions.html#open">here</a>. </li>
 </ul>
 <h2 id="advanced-mastery">Advanced Mastery</h2>
 <ul>
 <li>Try to open and read a non-.txt file with Python. Were you able to read it? Research why or why not.</li>
-<li>Read about the complete list of methods for working with files <a href="https://docs.python.org/3.7/library/io.html#class-hierarchy">here</a>. How could you use these methods?</li>
+<li>Read about the complete list of methods for working with files <a href="https://docs.python.org/3.9/library/io.html#class-hierarchy">here</a>. How could you use these methods?</li>
 </ul>
 <!-- Navigation -->
 

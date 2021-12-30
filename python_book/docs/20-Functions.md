@@ -30,7 +30,7 @@ number_of_sandwiches = 0
 
 # 'def' defines a function
 def count_sandwiches():
-    print(f"\nThere are {number_of_sandwiches} sandchwiches.") 
+    print(f"\nThere are {number_of_sandwiches} sandwiches.") 
 
 
 def make_a_sandwich():
@@ -49,13 +49,20 @@ def eat_a_sandwich():
 
 def main():
     """
+    The text between these quotes is the "documentation string".
+    Documentation strings are used to explain the function 
+    they are in. They go before the code of the function but 
+    after the first line of the function (the line with "def"
+    in it). I am explaining this here but usually you will 
+    just see an explanation like:
+    
     This is the main function of the program.
-    It will be the main entry point for all
-    the functions.
+    It will be the place from which all other functions 
+    in this program will be called.
     """
     prompt = """
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> """
     running = True
 
@@ -83,58 +90,56 @@ Would you like to "make" a sandwich, "eat" a sandchwich,
 main()
 
 ```
-
-**Here is what should happen**
-
+### Here is what should happen
 ```
 $ python3 function_intro.py
 
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> make
 
 A sandwich has been made.
 There are now 1 sandwiches.
 
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> count
 
-There are 1 sandchwiches.
+There are 1 sandwiches.
 
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> make
 
 A sandwich has been made.
 There are now 2 sandwiches.
 
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> eat
 
 You ate a sandwich.
 There are now 1 sandwiches.
 
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> eat
 
 You ate a sandwich.
 There are now 0 sandwiches.
 
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> eat
 There are no sandwiches to eat!
 
-Would you like to "make" a sandwich, "eat" a sandchwich,
-"count" your sandchwiches or "quit"?
+Would you like to "make" a sandwich, "eat" a sandwich,
+"count" your sandwiches or "quit"?
 --> quit
 $ 
 ```
 
-### Functions
+## Functions
 
 Upon finishing this lesson, you should have made your first functions!
 
@@ -157,9 +162,9 @@ function_name(argument1, argument2)
 function_name()
 ```
 
-We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by `<statements ...>`). The first example of this was in the `count_sandwiches()` function. As you saw while executing the script, it simply gets the value of `number_of_sandwiches` and prints the corresponding text.
+We will talk more about arguments in the next lesson so don't worry too much about them here. As seen from the syntax above, when called the function executes the code in the indented block (this is what is meant by `<statements ...>`). The first example of this was in the `count_sandwiches()` function. As you saw while executing the script, it simply gets the value of `number_of_sandwiches` and prints the corresponding text. **Remember** that when you write a variable name followed by parentheses (e.g. `function_name()`), you are telling Python, "Run this function!".
 
-### Scope
+## Scope
 
 In the second and third functions,  `make_a_sandwich()` and `eat_a_sandwich()`, you see the statement `global number_of_sandwiches`. The word `global` is a keyword in Python that we have not talked about yet and relates to how Python manages variables and memory.
 
@@ -201,7 +206,7 @@ A good thing to bear in mind while writing functions is that every variable that
 
 In the case of `function_intro.py`, you may have noticed that we did not have to use `global` in the first function. Why? This is a nuance of how Python deals with scope. If you are not defining a variable in a function but only referencing it (as was the case with `count_sandwiches()`), Python first searches the function for the referenced name and then then expands the scope of the variable until the variable name is found. For the other two functions we were using assignment operators. Any time an assignment operator is used, Python defines the scope of the variable this way. This means that if you comment out the lines in `function_intro.py` you will get an error because the function variables have not yet been defined in that scope. Try this out for yourself!
 
-### Main-loops
+## Main-loops
 
 The code under the `main` function is what is known as a "main-loop" or a "main-program loop". It uses the model of REPL (Read, Evaluate, Print, then Loop) to execute as many commands as the user needs (the Python interactive prompt uses this same model). Notice, the use of the while-loop and the structure of the function. Understand this part of the program as it will become more important in the following sections.
 

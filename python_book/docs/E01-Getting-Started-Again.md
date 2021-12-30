@@ -2,7 +2,7 @@
 
 ---
 
-[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Pandas ](./E02-Pandas.md)
+[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Numpy ](./E02-Numpy.md)
 
 ---
 <!-- End Navigation -->
@@ -112,7 +112,7 @@ Now that you have done the basics. Use the interface tour to familiarize yoursel
 
 ---
 
-[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Pandas ](./E02-Pandas.md)
+[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Numpy ](./E02-Numpy.md)
 
 ---
 <!-- End Navigation -->

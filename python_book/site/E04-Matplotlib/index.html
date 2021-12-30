@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
     
     
       
-        <title>The Redd Python Book</title>
+        <title>E4. Matplotlib - The Redd Python Book</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.802231af.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.802231af.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f5d1f46.min.css">
         
           
           
@@ -40,7 +40,7 @@
     
     
     
-      <link rel="stylesheet" href="css/default.min.css">
+      <link rel="stylesheet" href="../css/default.min.css">
     
     
       
@@ -59,7 +59,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue-grey" data-md-color-accent="deep-orange">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-redd-python-book-beta" class="md-skip">
+        <a href="#e4-matplotlib" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +78,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="The Redd Python Book" class="md-header__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
+    <a href=".." title="The Redd Python Book" class="md-header__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
@@ -97,7 +97,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              E4. Matplotlib
             
           </span>
         </div>
@@ -162,7 +162,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="The Redd Python Book" class="md-nav__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
+    <a href=".." title="The Redd Python Book" class="md-nav__button md-logo" aria-label="The Redd Python Book" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8h5z"/></svg>
@@ -172,6 +172,576 @@
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../00-Table-of-Contents/" class="md-nav__link">
+        Table of Contents
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-Intro-and-How-to-Use-This-Book/" class="md-nav__link">
+        1. Intro and How to Use This Book
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Getting-Started/" class="md-nav__link">
+        2. Getting Started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-CLI/" class="md-nav__link">
+        3. CLI
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-Hello-World/" class="md-nav__link">
+        4. Hello World
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-Comments/" class="md-nav__link">
+        5. Comments
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Strings-and-the-Print-Function/" class="md-nav__link">
+        6. Strings and the Print Function
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-Escape-Characters/" class="md-nav__link">
+        7. Escape Characters
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-Formatted-Strings/" class="md-nav__link">
+        8. Formatted Strings
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-Variables-and-Memory/" class="md-nav__link">
+        9. Variables and Memory
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-Better-String-Formatting/" class="md-nav__link">
+        10. Better String Formatting
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-Input-and-Output/" class="md-nav__link">
+        11. Input and Output
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-Math-and-Data/" class="md-nav__link">
+        12. Math and Data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-Logic-and-Boolean-Operators/" class="md-nav__link">
+        13. Logic and Boolean Operators
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-If-elif-and-else/" class="md-nav__link">
+        14. If elif and else
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-Errors-Exceptions-and-Bugs/" class="md-nav__link">
+        15. Errors Exceptions and Bugs
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-File-Reading-and-Writing/" class="md-nav__link">
+        16. File Reading and Writing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-Loops/" class="md-nav__link">
+        17. Loops
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-Iterables/" class="md-nav__link">
+        18. Iterables
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-Dictionaries/" class="md-nav__link">
+        19. Dictionaries
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-Functions/" class="md-nav__link">
+        20. Functions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../21-More-Functions/" class="md-nav__link">
+        21. More Functions
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../22-Try-Except/" class="md-nav__link">
+        22. Try Except
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../23-Imports/" class="md-nav__link">
+        23. Imports
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../24-Reading-Code/" class="md-nav__link">
+        24. Reading Code
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../25-Do-a-Project/" class="md-nav__link">
+        25. Do a Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../26-Objects-and-Classes/" class="md-nav__link">
+        26. Objects and Classes
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../27-Inheritance-and-Polymorphism/" class="md-nav__link">
+        27. Inheritance and Polymorphism
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../28-Modules/" class="md-nav__link">
+        28. Modules
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../29-Comments-and-Code-Documentation/" class="md-nav__link">
+        29. Comments and Code Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../30-Packages-and-Project-Structure/" class="md-nav__link">
+        30. Packages and Project Structure
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../31-Automated-Testing/" class="md-nav__link">
+        31. Automated Testing
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../32-Do-Another-Project/" class="md-nav__link">
+        32. Do Another Project
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../33-Branching-Out/" class="md-nav__link">
+        33. Branching Out
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E01-Getting-Started-Again/" class="md-nav__link">
+        E1. Getting Started Again
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E02-Numpy/" class="md-nav__link">
+        E2. Numpy
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../E03-Pandas/" class="md-nav__link">
+        E3. Pandas
+      </a>
+    </li>
+  
+
     
       
       
@@ -190,580 +760,10 @@
         
       
       
-      <a href="." class="md-nav__link md-nav__link--active">
-        Home
-      </a>
-      
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="00-Table-of-Contents/" class="md-nav__link">
-        Table of Contents
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="01-Intro-and-How-to-Use-This-Book/" class="md-nav__link">
-        1. Intro and How to Use This Book
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="02-Getting-Started/" class="md-nav__link">
-        2. Getting Started
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="03-CLI/" class="md-nav__link">
-        3. CLI
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="04-Hello-World/" class="md-nav__link">
-        4. Hello World
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="05-Comments/" class="md-nav__link">
-        5. Comments
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="06-Strings-and-the-Print-Function/" class="md-nav__link">
-        6. Strings and the Print Function
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="07-Escape-Characters/" class="md-nav__link">
-        7. Escape Characters
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="08-Formatted-Strings/" class="md-nav__link">
-        8. Formatted Strings
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="09-Variables-and-Memory/" class="md-nav__link">
-        9. Variables and Memory
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="10-Better-String-Formatting/" class="md-nav__link">
-        10. Better String Formatting
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="11-Input-and-Output/" class="md-nav__link">
-        11. Input and Output
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="12-Math-and-Data/" class="md-nav__link">
-        12. Math and Data
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="13-Logic-and-Boolean-Operators/" class="md-nav__link">
-        13. Logic and Boolean Operators
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="14-If-elif-and-else/" class="md-nav__link">
-        14. If elif and else
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="15-Errors-Exceptions-and-Bugs/" class="md-nav__link">
-        15. Errors Exceptions and Bugs
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="16-File-Reading-and-Writing/" class="md-nav__link">
-        16. File Reading and Writing
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="17-Loops/" class="md-nav__link">
-        17. Loops
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="18-Iterables/" class="md-nav__link">
-        18. Iterables
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="19-Dictionaries/" class="md-nav__link">
-        19. Dictionaries
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="20-Functions/" class="md-nav__link">
-        20. Functions
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="21-More-Functions/" class="md-nav__link">
-        21. More Functions
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="22-Try-Except/" class="md-nav__link">
-        22. Try Except
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="23-Imports/" class="md-nav__link">
-        23. Imports
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="24-Reading-Code/" class="md-nav__link">
-        24. Reading Code
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="25-Do-a-Project/" class="md-nav__link">
-        25. Do a Project
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="26-Objects-and-Classes/" class="md-nav__link">
-        26. Objects and Classes
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="27-Inheritance-and-Polymorphism/" class="md-nav__link">
-        27. Inheritance and Polymorphism
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="28-Modules/" class="md-nav__link">
-        28. Modules
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="29-Comments-and-Code-Documentation/" class="md-nav__link">
-        29. Comments and Code Documentation
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="30-Packages-and-Project-Structure/" class="md-nav__link">
-        30. Packages and Project Structure
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="31-Automated-Testing/" class="md-nav__link">
-        31. Automated Testing
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="32-Do-Another-Project/" class="md-nav__link">
-        32. Do Another Project
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="33-Branching-Out/" class="md-nav__link">
-        33. Branching Out
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="E01-Getting-Started-Again/" class="md-nav__link">
-        E1. Getting Started Again
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="E02-Numpy/" class="md-nav__link">
-        E2. Numpy
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="E03-Pandas/" class="md-nav__link">
-        E3. Pandas
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="E04-Matplotlib/" class="md-nav__link">
+      <a href="./" class="md-nav__link md-nav__link--active">
         E4. Matplotlib
       </a>
+      
     </li>
   
 
@@ -776,7 +776,7 @@
   
   
     <li class="md-nav__item">
-      <a href="E04-Scipy/" class="md-nav__link">
+      <a href="../E04-Scipy/" class="md-nav__link">
         E4. Scipy
       </a>
     </li>
@@ -791,7 +791,7 @@
   
   
     <li class="md-nav__item">
-      <a href="E05-Units/" class="md-nav__link">
+      <a href="../E05-Units/" class="md-nav__link">
         E5. Units
       </a>
     </li>
@@ -806,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="E10-Bringing-it-All-Together/" class="md-nav__link">
+      <a href="../E10-Bringing-it-All-Together/" class="md-nav__link">
         E10. Bringing it All Together
       </a>
     </li>
@@ -843,15 +843,19 @@
               
                 
                 
-                <h1 id="the-redd-python-book-beta">The Redd Python Book (Beta)</h1>
-<p>By Mark Redd</p>
+                <!-- Navigation -->
+
 <hr />
-<p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a></p>
-<p><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">The Redd Python Book</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/flythereddflagg/python_book" property="cc:attributionName" rel="cc:attributionURL">Mark Edward Redd</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. All code examples and source code files are licensed under the <a href="media/LICENSE.txt">MIT License</a>. </p>
+<p><a href="../E03-Pandas/">Previous: E03 - Pandas </a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../E04-Scipy/">Next: E04 - Scipy </a></p>
 <hr />
-<p><a href="https://github.com/flythereddflagg/flythereddflagg.github.io/issues">Input</a> and <a href="https://github.com/flythereddflagg/flythereddflagg.github.io/pulls">contributions</a> welcome! I am adding more sections and tutorials continually. I am also uploading videos to YouTube that you can view <a href="https://youtube.com/playlist?list=PLlL36nxOkEQ_q_en6xot0EC323oktQ9FU">here</a>.</p>
-<p>Go to the <a href="00-Table-of-Contents/">Table of Contents</a> to start reading!</p>
-<p><img alt="" src="media/Cover.png" /></p>
+<!-- End Navigation -->
+<h1 id="e4-matplotlib">E4 - Matplotlib</h1>
+<!-- Navigation -->
+
+<hr />
+<p><a href="../E03-Pandas/">Previous: E03 - Pandas </a> | <a href="../00-Table-of-Contents/">Table of Contents</a> | <a href="../E04-Scipy/">Next: E04 - Scipy </a></p>
+<hr />
+<!-- End Navigation -->
                 
               
               
@@ -870,15 +874,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../E03-Pandas/" class="md-footer__link md-footer__link--prev" aria-label="Previous: E3. Pandas" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              E3. Pandas
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="00-Table-of-Contents/" class="md-footer__link md-footer__link--next" aria-label="Next: Table of Contents" rel="next">
+        <a href="../E04-Scipy/" class="md-footer__link md-footer__link--next" aria-label="Next: E4. Scipy" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Table of Contents
+              E4. Scipy
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -907,18 +926,18 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.756773cc.min.js"></script>
+      <script src="../assets/javascripts/bundle.756773cc.min.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
-        <script src="javascripts/highlight.min.js"></script>
+        <script src="../javascripts/highlight.min.js"></script>
       
-        <script src="javascripts/config.js"></script>
+        <script src="../javascripts/config.js"></script>
       
     
   </body>
