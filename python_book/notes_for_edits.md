@@ -1,8 +1,6 @@
 # TODO: Editing the book
 
-- add bold definitions (done for sections 1-20)
 - Make vocab words explicit. Have its own box. Bolded, with a formal definition that we can refer back to when we forget what that word means. 
-- I like that you use the formal language of the python code instead of dumbing it down.
 - Scaffold the "Hone Your Skills" with example problems, 
 - provide some example code to read for chapter 24, 
 - provide some riddles to solve when defining functions. 

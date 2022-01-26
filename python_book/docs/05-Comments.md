@@ -128,6 +128,9 @@ I will put comments in the code I have you write. You do not need to put these i
 ## Hone Your Skills
 
 1. Comment and uncomment some of the lines in the code you wrote. What can you make happen by uncommenting code?
+
+## Advanced Mastery
+
 1. Look up what Python Docstrings are. Why would you want to use them?
 
 <!-- Navigation -->

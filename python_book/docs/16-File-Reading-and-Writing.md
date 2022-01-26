@@ -170,7 +170,8 @@ Remember to use `with` statements in all the following exercises.
 
 - Try using the three basic ways of writing files (`'r','w','a'`). Try to write a paragraph of text to a file, close it and edit it again, putting a line of text at the beginning and end of the file. How would you do this?
 - Experiment with the ways of opening a file by trying the combined and other options (e.g. `r+`,  `'wb+'` etc.) for opening files. You can read about them [here](https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files). How do they differ?
-- Research the `open()` function and learn all you can about how it works. The official Python reference is [here](https://docs.python.org/3.9/library/functions.html#open). 
+- Research the `open()` function and learn all you can about how it works. The official Python reference is [here](https://docs.python.org/3.9/library/functions.html#open).
+- Look up all the file operation
 
 ## Advanced Mastery
 

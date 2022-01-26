@@ -67,14 +67,12 @@ The story should be a bit longer but for our purposes this will do. You'll notic
 
 Prompt the user for each unique word and save each of these to a variable. Then using what you have learned, print out the complete story with the users words in place of the omitted words so you could get a story like:
 
-*Jill and Mark went farming. While in the needle, Jill
-got a Canned air on his/her guitar and pulled up the greatest germ
-either of the sloths had ever seen. Mark exclaimed, "Now that
-is a gift card!" The cockroaches took it home and made slides.*
+*Jill and Mark went farming. While in the needle, Jill got a Canned air on his/her guitar and pulled up the greatest germ either of the sloths had ever seen. Mark exclaimed, "Now that is a gift card!" The cockroaches took it home and made slides.*
 
 ## Hone Your Skills
 
-- Play with the "Wacky Stories" concept and make other stories and play the game with friends and family! 
+- Play with the "Wacky Stories" concept and make other stories and play the game with friends and family!
+- I use everything you have learned up to now to do a lot of reporting of the output of my programs. Use everything you have learned up to now to print out a data table or receipt. 
 
 <!-- Navigation -->
 

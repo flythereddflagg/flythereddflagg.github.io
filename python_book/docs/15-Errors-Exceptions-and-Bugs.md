@@ -147,6 +147,7 @@ As noted above, the hardest thing to fix is logic errors. Later, we will go into
 
 - Go to the [Python Documentation](https://docs.python.org/3/tutorial/errors.html)  on errors and exceptions and learn about as many of them as you can. How can you avoid each type of exception? If you come to one that you don't understand don't worry, you'll learn more as you go produce more code.
 - Research defensive programming and test-driven development. How do these practices improve code?
+- Try to write a script with buggy code that has all of the problems mentioned in this section. Then try to fix each bug and notice how the program executes differently in each case.
 
 ## Advanced Mastery
 
