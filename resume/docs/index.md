@@ -78,7 +78,7 @@
 
 -  Mark E. Redd, Ethan Gustafson, Elizabeth Hart, Nathan McDonald, Keturah McQuade, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *Autoignition Temperature Data and Trends for Various Chemical Families* (in preparation)
 
-- Mark E. Redd, Glenn Seaton, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *An Improved Method for Predicting Autoignition Temperatures Based on First Principles* (in preparation)
+- Mark E. Redd, Glenn Seaton, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *An Improved Method for Predicting Autoignition Temperatures Based on First Principles* (Submitted to Fuel)
 
 - Mark E. Redd, Joseph C. Bloxham, Neil F. Giles, Thomas A. Knotts, W. Vincent Wilding, *A study of unexpected autoignition temperature trends for pure* n*-alkanes*, Fuel **2021** 306, 121710. [DOI: 10.1016/j.fuel.2021.121710](https://doi.org/10.1016/j.fuel.2021.121710).
 
