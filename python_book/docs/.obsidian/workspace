@@ -1,0 +1,97 @@
+{
+  "main": {
+    "id": "517a320ac74fa824",
+    "type": "split",
+    "children": [
+      {
+        "id": "ce48568481f1fe5e",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "12-Math-and-Data.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2fe5ac98c2e3725d",
+    "type": "split",
+    "children": [
+      {
+        "id": "b96fc51763af9a68",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4c1ed58c0f005b3e",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "71b2b17eae4f36bc",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "870588b07112a7c5",
+    "type": "split",
+    "children": [
+      {
+        "id": "36d9112de2be0b8b",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ae9014a95fff3dcb",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "12-Math-and-Data.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "ce48568481f1fe5e",
+  "lastOpenFiles": [
+    "12-Math-and-Data.md",
+    "02-Getting-Started.md",
+    "01-Intro-and-How-to-Use-This-Book.md",
+    "00-Table-of-Contents.md"
+  ]
+}
