@@ -14,7 +14,7 @@
 
 - Researched the autoignition temperatures (AIT) of pure compounds for AIChE's DIPPR 801 Database
 - Improved the reliability of AIT values in the 801 Database through evaluating data from 600+ sources 
-- Filled gaps in the 801 Database by measuring AIT for 17 pure compounds
+- Filled gaps in the 801 Database by measuring AIT for 20 pure compounds
 - Designed and constructed an experimental apparatus at ~ 10% of the expected capital cost 
 - Increased reliability and throughput of AIT measurements by automating aspects of the experimental process
 - Wrote custom software to automate data acquisition and analysis using Python and C/C++
@@ -76,9 +76,9 @@
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
--  Mark E. Redd, Ethan Gustafson, Elizabeth Hart, Nathan McDonald, Keturah McQuade, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *Autoignition Temperature Data and Trends for Various Chemical Families* (in preparation)
+-  Mark E. Redd, Cassandra Guffey, Ethan Gustafson, Elizabeth Hart, Keturah McQuade, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *Autoignition Temperature Trends for Various Chemical Families* (in preparation)
 
-- Mark E. Redd, Glenn Seaton, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *An Improved Method for Predicting Autoignition Temperatures Based on First Principles* (Submitted to Fuel)
+- Mark E. Redd, W. Glenn Seaton, Neil F. Giles, Thomas A. Knotts,W. Vincent Wilding, *An improved method for predicting autoignition temperatures based on first principles*, Fuel **2022** 323, 124245. [DOI: 10.1016/j.fuel.2022.124245](https://doi.org/10.1016/j.fuel.2022.124245)
 
 - Mark E. Redd, Joseph C. Bloxham, Neil F. Giles, Thomas A. Knotts, W. Vincent Wilding, *A study of unexpected autoignition temperature trends for pure* n*-alkanes*, Fuel **2021** 306, 121710. [DOI: 10.1016/j.fuel.2021.121710](https://doi.org/10.1016/j.fuel.2021.121710).
 
