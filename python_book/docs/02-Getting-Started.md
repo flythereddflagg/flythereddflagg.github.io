@@ -9,13 +9,13 @@
 
 # 2 - Getting started 
 
-## Python the programming language
+## Okay but what even is Python?
 
 Python is a programming language. Essentially, a programming language is a way to 'talk' to your computer and give it instructions.
 
-Many programming languages are designed for specific tasks such as displaying things in a web browser (e.g. HTML, CSS) or doing complex math (e.g. R, MATLAB). These languages are very useful within for their respective use cases but they are generally not functionally complete.
+Many programming languages are designed for specific tasks such as displaying things in a web browser (e.g. HTML, CSS) or doing complex math (e.g. R, MATLAB). These can be useful but are somewhat limited in the scope of what they are meant to do.
 
-Python on the other hand can be considered a functionally complete programming language. That is, Python is designed for writing code to do almost anything a computer can do. In fact, there is very little that Python cannot do! You can write games, make a web server, do complex math, make Graphical User Interfaces (GUIs) and many more things. In a very real sense, the only limits are your imagination.
+Python on the other hand can be considered an all-purpose, functionally complete programming language. That is, Python is designed for writing code to do almost anything a computer can do. In fact, there is very little that Python cannot do! You can write games, make a web server, do complex math, make Graphical User Interfaces (GUIs) and many more things. In a very real sense, the only limits are your imagination. In this book, we will cover some of these things and how you can take the basics you learn here and apply them to your use case of interest.
 
 ## What will I do with Python?
 
@@ -25,9 +25,9 @@ For example, I am a chemical engineer and was introduced to Python in the contex
 
 ![Data Acquisition Software Written in Python](./media/tada_example.png)
 
-I wrote this software in Python and you can too. However, I also am interested in making games as a hobby. This is also possible in Python.
+I wrote this software in Python and you can too. Or you can write something else that interests you! You want to make games? You want to make a web server? You want to do something else, perhaps something you haven't even thought of yet?
 
-Before anything else, take some time to think about what you want out of Python. It is possible at this point that even after serious thought you just don’t know yet what you want out of Python. If this is the case for you don’t worry too much about it right now but **keep this question in your mind as you learn**. You may find something that interests you. I bring this up because your learning will accelerate in a profound way if you have a goal in mind or an idea or project you can be passionate about. Also, you will have an opportunity, before finishing this book, to bring an idea to life in code.
+Before anything else, take some time to think about what you want out of Python. It is possible at this point that even after serious thought you just don’t know yet what you want out of Python. If this is the case for you don’t worry too much about it right now but **keep this question in your mind as you learn**. You may find something that interests you. Your learning will accelerate in a profound way if you have a goal in mind or an idea or project you can be passionate about. Also, you will have an opportunity, before finishing this book, to bring an idea to life in code.
 
 ## What kind of computer do I need?
 
@@ -35,32 +35,30 @@ You may wonder if you computer can handle Python programming. I will simply say 
 
 The only real requirement is that you should have at least 2GB of storage space on your computer to allow space for the Python installation, the code you will write, and your text editor. (This is much more than you will actually need but it is best to be conservative.)
 
-## What you need to know before beginning
+## But I know nothing about computers! What do I need to know for this course?
 
 I do make some assumptions about your knowledge of computers. If any of the following do not apply to you please familiarize yourself with them before proceeding:
 
 - I can use a web browser to follow links and navigate the internet in this book. 
 - I am familiar with and know how to perform a search on a search engine like [google.com](https://www.google.com/).
 
-## Python Installation (Windows)
+## How do I install Python?
 
-See the notes for Linux/Unix and Mac OS X Users below if you are not using Windows.
+*See the notes for Linux/Unix and Mac OS X Users below if you are not using Windows.*
 
-- Let's start by going to <https://www.python.org/downloads/> you will see a button there. Ensure that the correct operating system is selected (e.g. Windows, Mac OS X, Linux/Unix). Click on the "Download Python 3.x.x" button to begin the download. (See image below.)
+1. Let's start by going to <https://www.python.org/downloads/> you will see a button there. Ensure that the correct operating system is selected (e.g. Windows, Mac OS X, Linux/Unix). Click on the "Download Python 3.x.x" button to begin the download. (See image below.)
 
- ![Python_download_site](./media/python_download_site.JPG)
+   ![Python_download_site](./media/python_download_site.JPG)
 
-- Once downloaded, open the file and you will see the following image. Ensure "Add Python X.X to PATH" is checked and click "Install Now". Select "Next" on the next few screens and allow it to install on your computer. (See image below.)
-  - ***Note:*** *If you want to do any custom installation (such as choose between 32 and 64 bit versions) then I'm going to assume you know what you are doing and this tutorial is not necessary for you. If you don't know what any of that means then just do as it says above and you will be fine.*
+2. Once downloaded, open the file and you will see the following image. Ensure "Add Python X.X to PATH" is checked (see highlighted in yellow below) and click "Install Now". Select "Next" on the next few screens and allow it to install on your computer. (See image below.)
 
+   ![install_scrn1](./media/install_scrn1.JPG)
 
-![install_scrn1](./media/install_scrn1.JPG)
+3. Once the installation finishes, open your terminal (for Linux/Unix and Mac OS X users; See the note above.) or Windows PowerShell (press the windows key on your keyboard and type "powershell" then select "Windows PowerShell" or "Terminal" from the list that pops up) and type in `python` into the prompt and press Enter. You should see something like:
 
-- Once the installation finishes, open your terminal (for Linux/Unix and Mac OS X users; See the note above.) or Windows PowerShell (press the windows key on your keyboard and type "powershell" then select "Windows PowerShell" from the list that pops up) and type in `python` into the prompt and press Enter. You should see something like:
+   ![Python_terminal](./media/python_terminal.JPG)
 
-![Python_terminal](./media/python_terminal.JPG)
-
-- Then type `exit()` and exit the terminal.
+4. Then type `exit()` and exit the terminal.
 
 If all of this went as described above, congratulations! You have successfully installed Python on your computer!
 
@@ -74,26 +72,25 @@ The Windows explanation above should apply to you in the same way they apply to 
 - For Linux/Unix users you can usually open your terminal by pressing `ctrl+alt+t`. If this does not work I recommend you use a search engine and find out how to do this. (Some Linux/Unix variants have unusual conventions in this regard and I cannot list all the ways to get into your terminal here.) 
 - You may find that Python 3 is already installed on your system. You can check if this is the case by just opening your terminal and typing "python3". A string of text should appear indicating that Python has started. Also you should see `>>>` at the bottom of the page. If this does not happen then you will need to go through the steps above.
 
-## Text Editor
+## What will I use to write Python code?
 
-The next thing to consider is what you will use to actually write the code. True to my coding upbringing, **I strongly discourage IDEs and IDLEs.** They are not conducive to you learning how to code and will make you dependent on them. I have met too many coders that cannot work on anything but their own **IDE** and therefore are useless if anything even remotely different comes along.
+Good question! You will NOT use something like Word. You will use a text editor. I recommend this one:
 
-I am asking for some faith from you right now. But trust me when I say that if you learn to code without an IDE you will learn better than any of your peers that use an IDE.
+- [VSCodium](https://vscodium.com/)
 
-The question then becomes 'What do I use to code?' I will offer some recommendations but please don't spend too much time agonizing over which text editor to use. They are all largely the same anyway. The only thing that in my mind are must-haves for your text editor are:
- - Syntax Highlighting for Python
- - Line Numbers
-
-If you can find a text editor that does those two things then you are in business. Feel free to use any editor that can do those two things. (Just don't use and IDE or an IDLE.) I recommend the following text editor for all platforms:
-
- - [VSCodium](https://vscodium.com/)
-
-If you can't make this text editor work for you or do not like it , here are some alternatives: 
+This is the editor I use for the majority of my coding projects. It's free and open source. It gets the job done. If you can't make this text editor work for you or do not like it, here are some alternatives: 
 
 - [Notepad++](https://notepad-plus-plus.org/) (Windows only)
-- [Atom.io](https://atom.io/)
 - [Gedit](https://wiki.gnome.org/Apps/Gedit)
-- [VSCode](https://code.visualstudio.com/)
+- [VSCode](https://code.visualstudio.com/) (this will be almost identical to VSCodium)
+
+Honestly, all you need is an editor that can **syntax highlight for Python** and **display line numbers**. So, please don't spend too much time agonizing over which text editor to use. They are all largely the same anyway.
+
+## Should I use an IDE or IDLE?
+
+Some people may try to encourage you to use and IDE or IDLE. However, true to my coding upbringing, **I strongly discourage IDEs and IDLEs.** They are not conducive to you learning how to code and will make you dependent on them. I have met too many coders that cannot work on anything but their own **IDE** and therefore are useless if anything even remotely different comes along.
+
+I am asking for some faith from you right now. But trust me when I say that if you learn to code without an IDE you will learn better than any of your peers that use an IDE.
 
 ## Let's Go!
 

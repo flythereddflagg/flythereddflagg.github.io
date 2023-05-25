@@ -9,8 +9,6 @@
 
 # 1 - Introduction and How to Use this Book
 
-## Introduction
-
 Python changed my life. Before learning Python, computers intimidated me. Python opened up to me a world of programming that made computers into useful tools instead of necessary evils. Regardless of the reason you are reading this book right now, I hope that Python will have a similar impact on you.
 
 I am writing this book to introduce Python to newcomers to programming. If you are an experienced programmer and are looking to add Python to your repertoire, this may not be the book for you. The intent of this book is, primarily, to give a solid introduction to Python, and some introductory computer science, to those who are completely new to programming.
@@ -36,7 +34,7 @@ In this book, I aim to get you coding ASAP and constantly encourage you to try t
 
 ### You MUST do some boring stuff BEFORE you can do interesting stuff
 
-In the 1984 film "[The Karate Kid](https://www.imdb.com/title/tt0087538/plotsummary?ref_=tt_stry_pl#synopsis)", Mr. Miyagi, the teacher, doesn't start training Daniel, the protagonist, in Karate by teaching him fancy moves but instead begins by having him perform many menial tasks with no apparent point to them. It is in doing these seemingly pointless tasks that Daniel first begins to have skill in Karate.
+In the 1984 film "[The Karate Kid](https://www.imdb.com/title/tt0087538/plotsummary?ref_=tt_stry_pl#synopsis)", Mr. Miyagi, the teacher, doesn't start training Daniel in Karate by teaching him fancy moves but instead begins by having him perform many menial tasks with no apparent point to them. It is in doing these seemingly pointless tasks that Daniel first begins to have skill in Karate.
 
 Anytime you learn a new skill you must do many boring and seemingly pointless things before you can do something interesting or useful. Every discipline has this feature. I am telling you this because for me, a person with a very limited attention span, the beginning of learning programming was agonizingly slow and seemingly pointless. You may feel that way too.
 
