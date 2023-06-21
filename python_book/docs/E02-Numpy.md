@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E03 - Pandas ](./E03-Pandas.md)
-
----
-<!-- End Navigation -->
 # E3 - Numpy
 
 This is a shorter section because there is less to explain. At the conclusion of this section, I will refer you to the official Numpy documentation because its way better than this book. (Trust me.) With that said, this should be a nice little introduction to get your feet wet.
@@ -208,11 +200,3 @@ This is one area where I have to admit that the developers of Numpy do a much be
 - Numpy software is designed to integrate with Scipy, Pandas, and other STEM-focused libraries.
 
 
-<!-- Navigation -->
-
----
-
-[Previous: E01 - Getting Started Again](./E01-Getting-Started-Again.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E03 - Pandas ](./E03-Pandas.md)
-
----
-<!-- End Navigation -->

@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 15 - Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md)
-
----
-<!-- End Navigation -->
 
 # 14 - If, elif, and else
 
@@ -206,11 +198,3 @@ While the differences between the two examples may seem trivial, this becomes mo
 1. There is a problem in the above script `if_else.py` that can cause errors if we're not careful. Can you find the problem? How would you fix it? Answer is <span title="Answer: It is possible, with very little editing, to make it so the variables defined between lines 30 and 40 may be referenced without assignment should the `else` block be deleted. This can be fixed by making sure they are defined above before the user is even prompted. There are other ways to fix this as well.">here</span>.
 
 
-<!-- Navigation -->
-
----
-
-[Previous: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 15 - Errors Exceptions and Bugs](./15-Errors-Exceptions-and-Bugs.md)
-
----
-<!-- End Navigation -->

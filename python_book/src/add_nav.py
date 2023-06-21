@@ -46,10 +46,11 @@ def edit_section(
         ]):
             outlines.append(line)
     
-    head_foot = HEAD_FOOT_TEMPLATE.format(
-        previous=previous, 
-        next_=next_
-    )  
+    # head_foot = HEAD_FOOT_TEMPLATE.format(
+        # previous=previous, 
+        # next_=next_
+    # )  
+    head_foot = ""
     out_txt = head_foot + "".join(outlines) + head_foot
     with open(FILE_PATH + TO_DOCS + "/" + cfile, 'w') as f:
         f.write(out_txt)

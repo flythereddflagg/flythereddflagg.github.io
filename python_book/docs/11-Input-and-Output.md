@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 10 - Better String Formatting](./10-Better-String-Formatting.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 12 - Math and Data](./12-Math-and-Data.md)
-
----
-<!-- End Navigation -->
 # 11 - Input and Output
 
 Up to now, we have had our scripts take pre-determined input and turn it into output in the form of text printed to the console screen. Our script does nothing else.  What if we want to be able to do more than that? What if we want to interact with the user? In this lesson we will cover getting and using user input.
@@ -74,11 +66,3 @@ Prompt the user for each unique word and save each of these to a variable. Then 
 - Play with the "Wacky Stories" concept and make other stories and play the game with friends and family!
 - I use everything you have learned up to now to do a lot of reporting of the output of my programs. Use everything you have learned up to now to print out a data table or receipt. 
 
-<!-- Navigation -->
-
----
-
-[Previous: 10 - Better String Formatting](./10-Better-String-Formatting.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 12 - Math and Data](./12-Math-and-Data.md)
-
----
-<!-- End Navigation -->

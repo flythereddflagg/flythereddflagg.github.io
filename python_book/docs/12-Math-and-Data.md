@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 11 - Input and Output](./11-Input-and-Output.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md)
-
----
-<!-- End Navigation -->
 
 # 12 - Math, Operators and Data Types
 
@@ -209,11 +201,3 @@ Lastly, we will talk about some built-in functions (like `print()`) can help us 
 
 1. Notice in the results of `math_learning.py` that you got some answers that were lots of 0s followed by a single digit. Research "round-off error" to understand why this happens.
 
-<!-- Navigation -->
-
----
-
-[Previous: 11 - Input and Output](./11-Input-and-Output.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 13 - Logic and Boolean Operators](./13-Logic-and-Boolean-Operators.md)
-
----
-<!-- End Navigation -->

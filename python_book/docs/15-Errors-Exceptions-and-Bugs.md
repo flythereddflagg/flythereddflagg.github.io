@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 14 - If elif and else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md)
-
----
-<!-- End Navigation -->
 
 # 15 - Errors, Exceptions and Bugs
 
@@ -155,11 +147,3 @@ As noted above, the hardest thing to fix is logic errors. Later, we will go into
 
 - Research debugging strategies and begin to implement them in your programs.
 
-<!-- Navigation -->
-
----
-
-[Previous: 14 - If elif and else](./14-If-elif-and-else.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md)
-
----
-<!-- End Navigation -->

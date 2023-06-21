@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 20 - Functions ](./20-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 22 - Try Except](./22-Try-Except.md)
-
----
-<!-- End Navigation -->
 # 21 - More Functions
 
 There are three more concepts tied to functions that we must understand before moving on. They are each demonstrated in the following exercise:
@@ -149,11 +141,3 @@ Recursion is a powerful tool and, when used judiciously, can easily do things th
 - Try to write a recursive function that acts like a for-loop or a while-loop. Can you do it? What are the pros and cons of doing this?
 - Write a function that returns multiple value and then try to unpack those into variables (see "Hone Your Skills" in the section on Iterables for more on how to do this.)
 
-<!-- Navigation -->
-
----
-
-[Previous: 20 - Functions ](./20-Functions.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 22 - Try Except](./22-Try-Except.md)
-
----
-<!-- End Navigation -->

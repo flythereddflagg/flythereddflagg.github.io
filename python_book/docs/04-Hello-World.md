@@ -1,28 +1,20 @@
-<!-- Navigation -->
-
----
-
-[Previous: 03 - CLI ](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05 - Comments ](./05-Comments.md)
-
----
-<!-- End Navigation -->
 
 # 4 - Hello World!
 
-If you have successfully installed Python and are able to do basic navigation in the command line, you are ready to begin programming in Python! We will begin with the most basic program that actually does something in Python. This is common when you want to begin any programming language.
+If you have successfully installed Python and are able to do basic navigation in the command line, you are ready. Lets actually do some programming now! We will begin with one of the most basic programs in Python which is called the "Hello World" program. This is common when you want to begin any programming language.
 
-## Making and Running Your First Python File
+## Let's make your first program!
 
 - Start by opening your text editor and opening a new file
 - Pick a folder to keep all your Python learning files in. This could be in your home folder but I recommend making a new folder, calling it something like `python_exercises` and putting it in your "Documents" folder. However, you can put it wherever makes sense. 
 - Use the `File -> Save As` dialog and navigate to the folder you made.
 - Give the file the name `hello_world.py` and save it
 
-You will notice the `.py` part of the filename. This is called an extension and is a way of telling the computer or anyone who looks at the file what kind of file it is. Make sure you name all files you make in Python using this extension.
+You will notice the `.py` part of the filename. This is called an **extension** and is a way of indicating what kind of file it is. Make sure you end all Python files you make with this "`.py`" or you will run into problems.
 
-Also it is good practice to never use spaces when naming files used in programming. Use underscores (`_`) instead of spaces. There are reasons for this but, just for now, trust me when I say that you are avoiding a lot of confusion and problems if you just commit to never using spaces in your filenames when you write code.
+Also it is a good idea to *never* use spaces when naming files used in programming. Use underscores (`_`) instead of spaces. There are reasons for this but, just for now, trust me when I say that you are avoiding a lot of confusion and problems if you just commit to never using spaces in your filenames when you write code.
 
-***NOTE:*** *I will give you the name of each filename you should be using for each exercise in this book. When you see an octothorpe (`#`) followed by a filename at the beginning of a code example, it means I want you to make a new file with that name by following the steps above.*
+***NOTE:*** *You can name Python files anything you want to. However for our purposes, I will give you the name of each filename you should be using for each exercise in this book. When you see an octothorpe (`#`) followed by a filename at the beginning of a code example, it means I want you to make a new file with that name by following the steps above.*
 
 - Type the following *exactly* as it is written here. Do *not* copy-paste it.
 
@@ -39,7 +31,7 @@ print("Hello World!")
 $ python hello_world.py
 ```
 
-#### Here is what should happen
+### Here is what should happen
 
 ```bash
 $ python hello_world.py 
@@ -55,11 +47,11 @@ If this did not work try the following:
 - Did you write *exactly* what was written above? Check it carefully before trying again.
 - Check that Python is working. Type "python" or "python3" into the terminal like it says in [Section 2](./02-Getting-Started.md). Does it work as it says there? If not check the [Troubleshooting Section](./02-Getting-Started.md/#troubleshooting-your-installation) in Section 2.
 
-#### What is happening here?
+### So, what did I just do?
 
-Traditionally, displaying "Hello World!" in a console window is the first thing every programmer generally learns to do in a new language. Later, we will get into more detail on how exactly everything works.
+Traditionally, displaying "Hello World!" in a console window is the first thing every programmer learns to do in a new language. Later, we will get into more detail on how exactly everything works.
 
-## Change Your First Python File
+## You made a program! Now do it again.
 
 Go back to your Python file and add the following under the first line so the whole file looks like this (Again, type it *exactly* as it is written here):
 
@@ -81,7 +73,7 @@ print("Twinkle, twinkle little star")
 print("How I wonder what you are.")
 ```
 
-#### Here is what should happen
+### Here is what should happen
 
 Re-run the code as before and you should see the following:
 
@@ -105,7 +97,7 @@ If you did not get the above output *exactly* as it appears above or you got som
 
 Once you see the output appear *exactly* as it appears above, congratulations! You have completed the first exercise!
 
-This is generally how each section in this book will work. In each section, I will have you write some code and then we will go back and try to understand it.
+**Note:** *This is generally how each section in this book will work. In each section, I will have you write some code and then we will go back and try to understand it.*
 
 ## Hone Your Skills
 
@@ -136,11 +128,3 @@ File "hello_world.py", line 8
 
   Look back at the code that you wrote down from this lesson. Does the spacing make sense? How would you change the spacing to be more consistent? Would you add more lines here or fewer there? Rewrite the code to reflect your mental understanding of the code.
 
-<!-- Navigation -->
-
----
-
-[Previous: 03 - CLI ](./03-CLI.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 05 - Comments ](./05-Comments.md)
-
----
-<!-- End Navigation -->

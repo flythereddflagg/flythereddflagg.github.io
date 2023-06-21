@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 04 - Hello World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md)
-
----
-<!-- End Navigation -->
 
 # 5 - Comments 
 
@@ -13,7 +5,7 @@ The next thing you need to understand that is fundamental to programming is comm
 
 ## What is an octothorpe?
 
-You have probably seen this symbol at some point: `#`. The proper name for this symbol is an octothorpe. However, you have probably heard it called the following: hash, hashtag, hound, tic-tac-toe symbol etc. For the purposes of this book, I will refer to it as a hash. The hash has a special purpose that will be seen in the code you will write below.
+You have probably seen this symbol at some point: `#`. The proper name for this symbol is an octothorpe. However, you have probably heard it called the following: hash, hashtag, pound, tic-tac-toe symbol etc. For the purposes of this book, I will refer to it as a hash. The hash has a special purpose that will be seen in the code you will write below.
 
 ```python
 # octothorpe.py
@@ -32,7 +24,7 @@ when I want to do this, Python doesn't care.
 It just ignores me as long as I am consistent.
 '''
 
-print("Here is some text that will appear.") # comment
+print("Here is some text that will appear.") # this comment will not appear
 #print("Here is some text that will not appear.")
 
 print("A good line of code is hard to find.")
@@ -133,11 +125,3 @@ I will put comments in the code I have you write. You do not need to put these i
 
 1. Look up what Python Docstrings are. Why would you want to use them?
 
-<!-- Navigation -->
-
----
-
-[Previous: 04 - Hello World](./04-Hello-World.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md)
-
----
-<!-- End Navigation -->

@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 30 - Packages and Project Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32 - Do Another Project](./32-Do-Another-Project.md)
-
----
-<!-- End Navigation -->
 # 31 - Automated Testing
 
 In some sense, the job of a programmer is to get a computer automatically do a task that someone else would have to do. The best programmers automate everything they can, including programming itself where possible. This section in particular will help you automate what can be one of the most necessary and evil necessary evils of programming. Testing your programs.
@@ -144,11 +136,3 @@ Write more tests in separate functions to ensure that as many parts of the progr
 
 - Write a script that does the same thing as `nose` have it walk through all the subfolders of a folder and catch all the errors it finds and report back to the user.
 
-<!-- Navigation -->
-
----
-
-[Previous: 30 - Packages and Project Structure](./30-Packages-and-Project-Structure.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 32 - Do Another Project](./32-Do-Another-Project.md)
-
----
-<!-- End Navigation -->

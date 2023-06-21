@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 07 - Escape Characters](./07-Escape-Characters.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 09 - Variables and Memory](./09-Variables-and-Memory.md)
-
----
-<!-- End Navigation -->
 
 # 8 - Formatted Strings
 
@@ -128,11 +120,3 @@ print("{0} ".format("No.") * 3)
 - Try rewriting lines of code from `format_strings.py` to make it so all the cheeses are aligned vertically. How can you do this with what we learned in this exercise?
 - Look in the [Python documentation](https://docs.python.org/3.8/library/string.html#custom-string-formatting) for other format commands. Experiment with these and learn how to use them.
 
-<!-- Navigation -->
-
----
-
-[Previous: 07 - Escape Characters](./07-Escape-Characters.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 09 - Variables and Memory](./09-Variables-and-Memory.md)
-
----
-<!-- End Navigation -->

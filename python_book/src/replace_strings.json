@@ -1,0 +1,14 @@
+[
+    [
+        "../media/",
+        "./"
+    ],
+	[
+		"\\includegraphics{",
+		"\\includegraphics[width=0.75\\textwidth]{"
+	],
+	[
+		"\\begin{figure}",
+		"\\begin{figure}[H]"
+	]
+]

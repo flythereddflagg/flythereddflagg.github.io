@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
- | [Table of Contents](./00-Table-of-Contents.md) | [Next: 02 - Getting Started](./02-Getting-Started.md)
-
----
-<!-- End Navigation -->
 
 # 1 - Introduction and How to Use this Book
 
@@ -79,11 +71,3 @@ I will sometimes have you read [The Official Python Documentation](https://docs.
 
 **Remember:** Whenever I tell you to search for something on the Internet, remember that the best way to use a search engine is to type "Python" and then write what you are looking for. This will be a boon to your learning as you go along.
 
-<!-- Navigation -->
-
----
-
- | [Table of Contents](./00-Table-of-Contents.md) | [Next: 02 - Getting Started](./02-Getting-Started.md)
-
----
-<!-- End Navigation -->

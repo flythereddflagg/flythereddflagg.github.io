@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: E02 - Numpy ](./E02-Numpy.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E04 - Matplotlib ](./E04-Matplotlib.md)
-
----
-<!-- End Navigation -->
 
 # E2 - Pandas
 
@@ -228,11 +220,3 @@ I assume if you are reading this section that you already work with some kind of
 - Look up [`sqlalchemy`](https://www.sqlalchemy.org/). If needed download the package using `conda` or `pip`. Find out how you can access a database you may be using.
 - Read the [User Guide](https://pandas.pydata.org/docs/user_guide/index.html) to Pandas and, in particular, focus on the section called "10 Minutes to Pandas".
 
-<!-- Navigation -->
-
----
-
-[Previous: E02 - Numpy ](./E02-Numpy.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E04 - Matplotlib ](./E04-Matplotlib.md)
-
----
-<!-- End Navigation -->

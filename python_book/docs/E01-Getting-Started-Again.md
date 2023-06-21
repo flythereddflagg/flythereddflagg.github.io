@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Numpy ](./E02-Numpy.md)
-
----
-<!-- End Navigation -->
 # E1 - Getting Started...Again
 
 <!--How much math should they know?-->
@@ -108,11 +100,3 @@ Now that you have done the basics. Use the interface tour to familiarize yoursel
 - Look up how to use Markdown in Jupyter. Use the internet to look up Markdown syntax and write some documentation in your notebook.
 - Look up Jupyter Lab. This is a more advanced version of Jupyter Notebook that may suit your needs. We will not get into Jupyter Lab here but you should be aware that it does exist.
 
-<!-- Navigation -->
-
----
-
-[Previous: 33 - Branching Out](./33-Branching-Out.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E02 - Numpy ](./E02-Numpy.md)
-
----
-<!-- End Navigation -->

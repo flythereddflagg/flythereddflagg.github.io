@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 18 - Iterables ](./18-Iterables.md)
-
----
-<!-- End Navigation -->
 # 17 - Loops
 
 We are about to introduce another fundamental aspect of programming that will be used over and over again in programming (no pun intended). We will, as always, introduce the subject in an example script.
@@ -121,11 +113,3 @@ In my estimation, for-loops are one of the most powerful features in programming
 - For the while loop in `loops.py`, there are a number of ways we can change the loop exit condition so that the code is technically different but it does the same thing. What are some ways we can change the  loop exit condition to do the same thing? How would each of these be better or worse than the original?
 - Play around with the code in `loops.py` and try to change what the `range` function does in a for-loop. Can you make it start at a number *other* than 0? Can you make it count by 2s or 3s? Can you make it count down instead of up? (Hint: The documentation [here](https://docs.python.org/3/library/functions.html#func-range) should be helpful.)
 
-<!-- Navigation -->
-
----
-
-[Previous: 16 - File Reading and Writing](./16-File-Reading-and-Writing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 18 - Iterables ](./18-Iterables.md)
-
----
-<!-- End Navigation -->

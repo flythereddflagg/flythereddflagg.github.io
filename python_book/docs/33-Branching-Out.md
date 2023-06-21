@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 32 - Do Another Project](./32-Do-Another-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E01 - Getting Started Again](./E01-Getting-Started-Again.md)
-
----
-<!-- End Navigation -->
 
 # 33 - Branching Out
 
@@ -25,11 +17,3 @@ I gather by the fact you are still reading this that the past 30+ sections have 
 - [Games]() (COMING SOON): Want to make a video game with Python? Here are some resources to get you started!
 - [Hardware Interfacing]() (COMING SOON): Need to talk to a piece of equipment? Python has you covered! This introduction to Serial interfaces will walk you through how to talk to an Arduino!
 
-<!-- Navigation -->
-
----
-
-[Previous: 32 - Do Another Project](./32-Do-Another-Project.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: E01 - Getting Started Again](./E01-Getting-Started-Again.md)
-
----
-<!-- End Navigation -->

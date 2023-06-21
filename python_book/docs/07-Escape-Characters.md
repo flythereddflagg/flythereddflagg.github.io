@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08 - Formatted Strings](./08-Formatted-Strings.md)
-
----
-<!-- End Navigation -->
 
 # 7 - Escape Characters
 
@@ -103,11 +95,3 @@ These are not all the potential escape characters. You can learn more about thes
 
 - Make Python print out the [Navier-Stokes Equations](https://en.wikipedia.org/wiki/Navier%E2%80%93Stokes_equations) for a 3-D system in Cartesian coordinates formatted like a normal math equation using escape sequences and print statements.
 
-<!-- Navigation -->
-
----
-
-[Previous: 06 - Strings and the Print Function](./06-Strings-and-the-Print-Function.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 08 - Formatted Strings](./08-Formatted-Strings.md)
-
----
-<!-- End Navigation -->

@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 19 - Dictionaries ](./19-Dictionaries.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 21 - More Functions](./21-More-Functions.md)
-
----
-<!-- End Navigation -->
 # 20 - Functions
 
 We are nearing the end of the basics of Python programming. Most of the concepts we have covered so far are features in all programming languages. To recap, all complete programing languages have the following basic features or some equivalent:
@@ -215,11 +207,3 @@ The code under the `main` function is what is known as a "main-loop" or a "main-
 - Make a function that calculates the [factorial of a number](https://en.wikipedia.org/wiki/Factorial) (use a for-loop in your function) using a global variable from the user as your input.
 - Experiment with the main-loop or REPL function. How could you use this model to do something useful?
 
-<!-- Navigation -->
-
----
-
-[Previous: 19 - Dictionaries ](./19-Dictionaries.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 21 - More Functions](./21-More-Functions.md)
-
----
-<!-- End Navigation -->

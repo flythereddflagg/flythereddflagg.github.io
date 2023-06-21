@@ -1,11 +1,3 @@
-<!-- Navigation -->
-
----
-
-[Previous: 31 - Automated Testing](./31-Automated-Testing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 33 - Branching Out](./33-Branching-Out.md)
-
----
-<!-- End Navigation -->
 
 # 32 - Do Another Project
 
@@ -38,11 +30,3 @@ Looking back, I found these things to be true for me. I was so excited about eve
 
 Now go out there and make something amazing!
 
-<!-- Navigation -->
-
----
-
-[Previous: 31 - Automated Testing](./31-Automated-Testing.md) | [Table of Contents](./00-Table-of-Contents.md) | [Next: 33 - Branching Out](./33-Branching-Out.md)
-
----
-<!-- End Navigation -->
