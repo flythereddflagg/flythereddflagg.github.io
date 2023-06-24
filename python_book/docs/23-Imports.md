@@ -78,7 +78,7 @@ Files:
          import_practice.py
 
 --------------------
-sin(π/2) = 1.0
+sin(&pi;/2) = 1.0
 ln(23)   = 3.18
 
 The exact date and time is: 2021-12-29 19:55:10.224866

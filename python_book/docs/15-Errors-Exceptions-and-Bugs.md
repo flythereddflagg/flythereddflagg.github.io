@@ -17,7 +17,7 @@ fav_number = float(fav_number)
 
 # there is a line of code missing here
 
-# pi is the same as π and should have a value of 3.14
+# pi should have a value of 3.14
 if fav_number > pi
     print("Your number is bigger than pi!")
 else:
