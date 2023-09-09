@@ -2,15 +2,25 @@
 
 # Mark Edward Redd
 
-<redddogjr@gmail.com> | 552 N 800 W, Provo, UT, 84601 | (435) 760-9452
+<redddogjr@gmail.com> | 100 W Hackberry Dr., Chandler AZ, 85248 | (435) 760-9452
 
 [LinkedIn](https://www.linkedin.com/in/mark-redd-53878880/), [GitHub](https://github.com/flythereddflagg)
 
 ## Experience
 
+### R&D Substrate Packaging Engineer
+
+*Intel Corporation, Chandler, AZ, USA | May 2022 - Present*
+
+- Tool and process owner for multiple acid cleaning and copper etch lithography tools
+- Directed processing, troubleshooting, maintenance, and qualification work on lithography tools
+- Implemented improved safety protocols and standard operating procedures for work with associated corrosive process chemistries
+- Conducted experimental studies to improve process control for copper etching
+- Increased yield by designing and implementing procedures for bench scale processing, which removed defects and improved consistency of processed material 
+
 ### PhD Researcher
 
-  *Brigham Young University, Provo, UT, USA | Advisor: Dr. W. V. Wilding | Jul 2016 – Present*
+  *Brigham Young University, Provo, UT, USA | Advisor: Dr. W. V. Wilding | Jul 2016 – May 2022*
 
 - Researched the autoignition temperatures (AIT) of pure compounds for AIChE's DIPPR 801 Database
 - Improved the reliability of AIT values in the 801 Database through evaluating data from 600+ sources 
@@ -45,7 +55,7 @@
 
 ### Brigham Young University
 
-*Doctor of Philosophy, Chemical Engineering | Jul 2016 – 2022*
+*Doctor of Philosophy, Chemical Engineering | Jul 2016 – Jun 2022*
 
 ### Brigham Young University
 
@@ -63,20 +73,23 @@
 
 ### Programming
 
-- Experience with C/C++, C#, FORTRAN, Java, JavaScript/HTML/CSS, MATLAB, Python, SQL, Microsoft VBA
+- C/C++, C#, FORTRAN, Java, JavaScript/HTML/CSS, MATLAB, Python, SQL, Microsoft VBA
 - Implemented and published the open-source [Leapfrogging Algorithm](https://github.com/flythereddflagg/lpfgopt) with library wrappers for C, C++ and Python
-- Wrote an open-source introductory [book on Python and computer science](https://flythereddflagg.github.io/python_book/site/index.html)
+- Wrote an open-licensed introductory [book on Python and computer science](https://flythereddflagg.github.io/python_book/site/index.html)
 
 ### Software / Platforms
 
-- Experience with Arduino, Autodesk Inventor, GCC and GNU Build Tools, Git, Linux, MathCAD, MATLAB/Simulink, Microsoft Office, Raspberry Pi, SQLite, Microsoft SQL Server
+- Arduino, Autodesk Inventor, GCC and GNU Build Tools, Git, Linux, MathCAD, MATLAB/Simulink, Microsoft Office, Raspberry Pi, Solidworks, SQLite, SQL Pathfinder, Microsoft SQL Server
 - Built custom data acquisition and analysis hardware and corresponding software using Arduino and other open-source platforms
 
 ## Publications
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
--  Mark E. Redd, Cassandra Guffey, Ethan Gustafson, Elizabeth Hart, Keturah McQuade, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *Autoignition Temperature Trends for Various Chemical Families* (in preparation)
+-  Cassandra J. Guffey, Mark E. Redd, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *Radical Isomerization and Volatility Considerations for Improved Autoignition Temperature Prediction* (in preparation)
+
+- Mark E. Redd, Cassandra J. Guffey, Ethan L. Gustafson, Elizabeth H. Hart, Keturah S. McQuade, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding,
+  *Autoignition temperature trends for various chemical families*, Fuel **2024** 355, 129321. [DOI: 10.1016/j.fuel.2023.129321](https://doi.org/10.1016/j.fuel.2023.129321)
 
 - Mark E. Redd, W. Glenn Seaton, Neil F. Giles, Thomas A. Knotts,W. Vincent Wilding, *An improved method for predicting autoignition temperatures based on first principles*, Fuel **2022** 323, 124245. [DOI: 10.1016/j.fuel.2022.124245](https://doi.org/10.1016/j.fuel.2022.124245)
 

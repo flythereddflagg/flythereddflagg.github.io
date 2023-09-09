@@ -3,21 +3,15 @@ SRC_MD = ./docs/index.md
 SRC_TEX = ./build_pdf/Mark_Redd_Resume_Printable
 SRC = ./build_pdf/main
 
-ifeq ($(OS), Windows_NT)
-	RM = del
-	MV = move
-	CLEAN_META = clean-meta-win
-	CLEAN = clean-win
-	MOVE_PDF = move_pdf_win
-else
-	RM = rm -f
-	MV = mv
-	CLEAN_META = clean-meta-unix
-	CLEAN = clean-unix
-	MOVE_PDF = move_pdf_unix
-endif
 
-all: build_site md edit_tex to_pdf clean-meta move_pdf
+RM = rm -f
+MV = mv
+CLEAN_META = clean-meta-unix
+CLEAN = clean-unix
+MOVE_PDF = move_pdf_unix
+
+
+all: build_site md edit_tex to_pdf move_pdf clean-meta 
 	
 md:
 	pandoc -r markdown $(SRC_MD) -o $(SRC_TEX).tex
@@ -34,17 +28,18 @@ build_site:
     
     
 move_pdf_win:
-	$(MV) .\build_pdf\Mark_Redd_Resume_Printable.pdf ..\media
+	$(MV) ./build_pdf/Mark_Redd_Resume_Printable.pdf ../media
 
 move_pdf_unix:
-	$(MV) ./build_pdf/Mark_Redd_Resume_Printable.pdf ../media
+	rm ../media/Mark_Redd_Resume_Printable.pdf 
+	mv ./build_pdf/Mark_Redd_Resume_Printable.pdf ../media
 
 move_pdf: $(MOVE_PDF)
 
 
 clean-meta-win:
-	$(RM) .\build_pdf\*.aux
-	$(RM) .\build_pdf\*.log
+	$(RM) ./build_pdf/*.aux
+	$(RM) ./build_pdf/*.log
 
 clean-meta-unix:
 	$(RM) ./build_pdf/*.aux
@@ -54,7 +49,7 @@ clean-meta: $(CLEAN_META)
 
 
 clean-win:
-	$(RM) ..\media\Mark_Redd_Resume_Printable.pdf
+	$(RM) ../media/Mark_Redd_Resume_Printable.pdf
 
 clean-unix:
 	$(RM) ../media/Mark_Redd_Resume_Printable.pdf
