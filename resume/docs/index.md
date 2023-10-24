@@ -51,6 +51,14 @@
   - Improved experimental efficiency by automating data analysis with Microsoft VBA
   - Trained 2 new employees in safety regulations and standard operating procedures
 
+### Full-time Volunteer Missionary
+
+*The Church of Jesus Christ of Latter-day Saints, Salta, Argentina | Sep 2009 – Sep 2011*
+
+- Taught gospel topics and personally interacted with 100+ individuals on a daily basis
+- Organized and participated in community service events
+- Trained 2 new missionaries
+
 ## Education
 
 ### Brigham Young University

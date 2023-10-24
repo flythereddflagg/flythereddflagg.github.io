@@ -11,7 +11,9 @@ CLEAN = clean-unix
 MOVE_PDF = move_pdf_unix
 
 
-all: build_site md edit_tex to_pdf move_pdf clean-meta 
+all: build_site md edit_tex to_pdf move_pdf clean-meta
+
+pdf: md edit_tex to_pdf move_pdf clean-meta
 	
 md:
 	pandoc -r markdown $(SRC_MD) -o $(SRC_TEX).tex
