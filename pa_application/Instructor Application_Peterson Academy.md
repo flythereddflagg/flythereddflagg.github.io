@@ -32,9 +32,8 @@ PhD, Chemical Engineering, Brigham Young University
 
 - Engineering Intern, 1 year 3 mo. (May 2014 – Aug 2015)
 
-  - Chemical Engineering Laboratory Assistant, 2 years (Jun 2012 – May 2014)
-
-  - Full-time Volunteer Missionary,  2 years (Sep 2009 – Sep 2011)
+- Chemical Engineering Laboratory Assistant, 2 years (Jun 2012 – May 2014)
+- Full-time Volunteer Missionary,  2 years (Sep 2009 – Sep 2011)
 
 **Teaching Awards (Title, Awarding Body, Year)**
 
@@ -42,7 +41,7 @@ n/a
 
 **What would you enjoy teaching at Peterson Academy?***
 
-Chemistry, Chemical Engineering, Physics, Numerical Methods, Programming, Computer Science
+Chemistry, Chemical Engineering, Physics, Thermodynamics, Numerical Methods, Programming, Computer Science
 
 ------
 
