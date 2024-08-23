@@ -12,11 +12,12 @@
 
 *Intel Corporation, Chandler, AZ, USA | May 2022 - Present*
 
-- Tool and process owner for multiple acid cleaning and copper etch lithography tools
-- Directed processing, troubleshooting, maintenance, and qualification work on lithography tools
+- Wet tool and process owner in substrate packaging technology development front-end lithography  
+- Directed processing, troubleshooting, maintenance, and qualification work on multiple acid clean, develop, and copper etch lithography tools
 - Implemented improved safety protocols and standard operating procedures for work with associated corrosive process chemistries
-- Conducted experimental studies to improve process control for copper etching
-- Increased yield by designing and implementing procedures for bench scale processing, which removed defects and improved consistency of processed material 
+- Conducted many experimental studies to improve process control for copper etching and qualify new materials for use in wet lithography chemistries
+- Increased yield by designing and implementing procedures for bench scale processing, which removed defects and improved consistency of processed material
+- Designed bespoke parts to aid in experimental processing at scale which made possible the safe and efficient processing of new materials and substrate package designs
 
 ### PhD Researcher
 
@@ -71,16 +72,40 @@
 
 ## Skills & Accomplishments
 
+### Soft Skills
+
+- Church leadership
+- D&D
+- video game design
+- music
+
+### Teaching
+
+- institute
+- public speaking
+- elders quorum
+
 ### Industrial
 
-- Engineer In Training (Passed the [FE Chemical Exam](https://account.ncees.org/rn/2233456-1459800-66313c5) in Oct 2021)
-- Welding (SMAW, GMAW, Oxy-acetylene welding and brazing, GTAW)
+- Engineer In Training 
+  - Passed the [FE Chemical Exam](https://account.ncees.org/rn/2233456-1459800-66313c5) in Oct 2021
+
+- Welding 
+  - SMAW (Stick) 
+  - GMAW (flux core, MIG and dual-shielded) 
+  - Oxy-acetylene welding, cutting and brazing
+  - GTAW (tig; experience welding 304 stainless steel and mild steel)
+  - Worked as automotive muffler welder in 2006
+
 - Machining processes (i.e. end milling, turning etc.)
 - Automotive repair and maintenance
 - Electronics soldering and wiring
+  - Designed and soldered custom PCB for experimental instrumentation
+
 
 ### Programming
 
+- 
 - C/C++, C#, FORTRAN, Java, JavaScript/HTML/CSS, MATLAB, Python, SQL, Microsoft VBA
 - Implemented and published the open-source [Leapfrogging Algorithm](https://github.com/flythereddflagg/lpfgopt) with library wrappers for C, C++ and Python
 - Wrote an open-licensed introductory [book on Python and computer science](https://flythereddflagg.github.io/python_book/site/index.html)
