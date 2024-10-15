@@ -8,20 +8,20 @@
 
 ## Experience
 
-### R&D Substrate Packaging Engineer
+### Packaging Module Development Engineer
 
 *Intel Corporation, Chandler, AZ, USA | May 2022 - Present*
 
-- Wet tool and process owner in substrate packaging technology development front-end lithography  
-- Directed processing, troubleshooting, maintenance, and qualification work on multiple acid clean, develop, and copper etch lithography tools
+- Wet lithography tool and process owner in substrate packaging technology development 
+- Directed processing, troubleshooting, maintenance, and qualification work on multiple acid clean, develop, strip, and copper etch lithography tools
 - Implemented improved safety protocols and standard operating procedures for work with associated corrosive process chemistries
-- Conducted many experimental studies to improve process control for copper etching and qualify new materials for use in wet lithography chemistries
+- Conducted experimental studies to improve control for copper etching and develop processes, and qualify new materials for use in wet lithography chemistries
 - Increased yield by designing and implementing procedures for bench scale processing, which removed defects and improved consistency of processed material
 - Designed bespoke parts to aid in experimental processing at scale which made possible the safe and efficient processing of new materials and substrate package designs
 
 ### PhD Researcher
 
-  *Brigham Young University, Provo, UT, USA | Advisor: Dr. W. V. Wilding | Jul 2016 – May 2022*
+  *Brigham Young University, Provo, UT, USA | Advisor: Dr. W. V. Wilding | Jul 2016 – May 2022 (5 yr. 11 mo.)*
 
 - Researched the autoignition temperatures (AIT) of pure compounds for AIChE's DIPPR 801 Database
 - Improved the reliability of AIT values in the 801 Database through evaluating data from 600+ sources 
@@ -36,7 +36,7 @@
 
 ### Engineering Intern
 
- *Sustainable Energy Solutions LLC, Orem, UT, USA | May 2014 – Aug 2015*
+ *Sustainable Energy Solutions LLC, Orem, UT, USA | May 2014 – Aug 2015 (1 yr. 3 mo.)*
 
   - Worked with a team of engineers to build an experimental, multi-fuel, combustion reactor
   - Designed and began fabrication of a novel $CO_2$​ separation process
@@ -45,7 +45,7 @@
 
 ### Chemical Engineering Laboratory Assistant
 
-*Brigham Young University, Provo, UT, USA |  Jun 2012 – May 2014*
+*Brigham Young University, Provo, UT, USA |  Jun 2012 – May 2014 (1 year 11 mo.)*
 
   - Aided development of biomass gasification kinetic models by collecting data on more than 70 reactions
   - Managed and carried out all aspects of laboratory work in an independent and unsupervised setting
@@ -54,7 +54,7 @@
 
 ### Full-time Volunteer Missionary
 
-*The Church of Jesus Christ of Latter-day Saints, Salta, Argentina | Sep 2009 – Sep 2011*
+*The Church of Jesus Christ of Latter-day Saints, Salta, Argentina | Sep 2009 – Sep 2011 (2 years)* 
 
 - Taught gospel topics and personally interacted with 100+ individuals on a daily basis
 - Organized and participated in community service events
