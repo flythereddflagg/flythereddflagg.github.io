@@ -5,6 +5,11 @@ bad_lines = [
     "linkedin",
     "GitHub",
     "Printable",
+    "includegraphics",
+    "figure",
+    "caption",
+    "centering"
+    
 ]
 
 

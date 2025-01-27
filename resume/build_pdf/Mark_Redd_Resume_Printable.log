@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1 Portable) (preloaded format=pdflatex 2025.1.27)  27 JAN 2025 10:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1 Portable) (preloaded format=pdflatex 2025.1.27)  27 JAN 2025 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -547,36 +547,37 @@ upp-pdf.mkii
 )
 Package hyperref Info: Link coloring OFF on input line 55.
  (build_pdf/Mark_Redd_Resume_Printable.tex
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
-.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+1.
 
 (C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
-.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+1.
 (C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-5.
+11.
 
 (C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-5.
+11.
 
 (C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 5.
+(Font)              <10> on input line 11.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 5.
+(Font)              <7> on input line 11.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(Font)              <5> on input line 11.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 11.
+
 
 (C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\umsa
 .fd
@@ -586,7 +587,8 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 11.
+
 
 (C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\umsb
 .fd
@@ -597,7 +599,7 @@ msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-2.
+8.
 
 (C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern

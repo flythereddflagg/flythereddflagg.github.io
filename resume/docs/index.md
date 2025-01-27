@@ -1,5 +1,7 @@
 [**Printable CV**](/media/Mark_Redd_Resume_Printable.pdf)
 
+![Profile Pic](assets/profile_pic.png)
+
 # Mark Edward Redd
 
 <redddogjr@gmail.com> | 613 W Park Ave., Chandler AZ, 85225 | (435) 760-9452
