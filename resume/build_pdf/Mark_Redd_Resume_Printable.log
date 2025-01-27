@@ -1,52 +1,52 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.9 Portable) (preloaded format=pdflatex 2023.10.2)  2 OCT 2023 16:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1 Portable) (preloaded format=pdflatex 2025.1.27)  27 JAN 2025 10:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./build_pdf/main.tex
 (build_pdf/main.tex
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-29>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/base\article.
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/base\article.
 cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/base\size10.c
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/base\size10.c
 lo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count185
-\c@section=\count186
-\c@subsection=\count187
-\c@subsubsection=\count188
-\c@paragraph=\count189
-\c@subparagraph=\count190
-\c@figure=\count191
-\c@table=\count192
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/geometry\geom
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/geometry\geom
 etry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics\keyv
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics\keyv
 al.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/iftex\ifvte
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/iftex\ifvte
 x.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/iftex\iftex
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/iftex\iftex
 .sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
-\Gm@cnth=\count193
-\Gm@cntv=\count194
-\c@Gm@tempcnt=\count195
+\Gm@cnth=\count195
+\Gm@cntv=\count196
+\c@Gm@tempcnt=\count197
 \Gm@bindingoffset=\dimen141
 \Gm@wd@mp=\dimen142
 \Gm@odd@mp=\dimen143
@@ -57,42 +57,42 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks18
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/geometry\geom
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/geometry\geom
 etry.cfg))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsma
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsma
 th.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amste
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amste
 xt.sty
 Package: amstext 2021/08/26 v2.01 AMS text
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsge
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsge
 n.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks19
 \ex@=\dimen149
 ))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsbs
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsbs
 y.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen150
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsop
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsmath\amsop
 n.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count196
+\inf@bad=\count198
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count197
-\leftroot@=\count198
+\uproot@=\count199
+\leftroot@=\count266
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count199
-\DOTSCASE@=\count266
+\classnum@=\count267
+\DOTSCASE@=\count268
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
@@ -105,20 +105,20 @@ LaTeX Info: Redefining \Bigg on input line 725.
 \big@size=\dimen151
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count267
+\macc@depth=\count269
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count268
+\c@MaxMatrixCols=\count270
 \dotsspace@=\muskip16
-\c@parentequation=\count269
-\dspbrk@lvl=\count270
+\c@parentequation=\count271
+\dspbrk@lvl=\count272
 \tag@help=\toks20
-\row@=\count271
-\column@=\count272
-\maxfields@=\count273
+\row@=\count273
+\column@=\count274
+\maxfields@=\count275
 \andhelp@=\toks21
 \eqnshift@=\dimen152
 \alignsep@=\dimen153
@@ -133,11 +133,11 @@ LaTeX Info: Redefining \Relbar on input line 971.
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\amss
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\amss
 ymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\amsf
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\amsf
 onts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
@@ -146,7 +146,7 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\lmodern.st
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\lmodern.st
 y
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -182,251 +182,252 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/base\fontenc.
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/base\fontenc.
 sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 11
 2.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\t1lmr.fd
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/base\inputenc
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/base\inputenc
 .sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks24
 \inpenc@posthook=\toks25
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/base\textcomp
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/base\textcomp
 .sty
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/upquote\upquo
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/upquote\upquo
 te.sty
 Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
 tim
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mic
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mic
 rotype.sty
-Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
+Package: microtype 2024/12/12 v3.2 Micro-typographical refinements (RS)
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/etoolbox\etoo
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/etoolbox\etoo
 lbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count274
+\etb@tempcnta=\count276
 )
 \MT@toks=\toks26
 \MT@tempbox=\box53
-\MT@count=\count275
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
-LaTeX Info: Redefining \leftprotrusion on input line 1060.
+\MT@count=\count277
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1075.
+LaTeX Info: Redefining \leftprotrusion on input line 1076.
 \MT@prot@toks=\toks27
-LaTeX Info: Redefining \rightprotrusion on input line 1078.
-LaTeX Info: Redefining \textls on input line 1368.
+LaTeX Info: Redefining \rightprotrusion on input line 1095.
+LaTeX Info: Redefining \textls on input line 1437.
 \MT@outer@kern=\dimen158
-LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
-\MT@listname@count=\count276
+LaTeX Info: Redefining \microtypecontext on input line 2041.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2058.
+\MT@listname@count=\count278
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mic
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mic
 rotype-pdftex.def
-File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
-
-LaTeX Info: Redefining \lsstyle on input line 902.
-LaTeX Info: Redefining \lslig on input line 902.
+File: microtype-pdftex.def 2024/12/12 v3.2 Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip53
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mic
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mic
 rotype.cfg
-File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
-))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/parskip\parsk
+File: microtype.cfg 2024/12/12 v3.2 microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3053.
+)
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/parskip\parsk
 ip.sty
 Package: parskip 2021-03-14 v2.0h non-zero parskip adjustments
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/kvoptions\kvo
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/kvoptions\kvo
 ptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/ltxcmds\ltx
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/ltxcmds\ltx
 cmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/kvsetkeys\kvs
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/kvsetkeys\kvs
 etkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/xcolor\xcolor
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/xcolor\xcolor
 .sty
-Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics-cfg\
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics-cfg\
 color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
-Package xcolor Info: Driver file: pdftex.def on input line 227.
+Package xcolor Info: Driver file: pdftex.def on input line 274.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics-def\
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics-def\
 pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics\math
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/graphics\math
 color.ltx)
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
-Package xcolor Info: Model `RGB' extended on input line 1369.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/xurl\xurl.sty
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/xurl\xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/url\url.sty
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 ))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/bookmark\book
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/bookmark\book
 mark.sty
-Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\hype
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\hype
 rref.sty
-Package: hyperref 2023-07-08 v7.01b Hypertext links for LaTeX
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/pdftexcmds\
-pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/infwarerr\i
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/infwarerr\i
 nfwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/kvdefinekey
+s\kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/pdfescape\p
+dfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/pdftexcmds\
+pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/kvdefinekey
-s\kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-)
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/pdfescape\p
-dfescape.sty
-Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
-)
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/hycolor\hycol
+))
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/hycolor\hycol
 or.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/letltxmacro\l
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/letltxmacro\l
 etltxmacro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/auxhook\auxho
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/auxhook\auxho
 ok.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\name
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\name
 ref.sty
-Package: nameref 2023-08-07 v2.53 Cross-referencing by name of section
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/refcount\refc
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/refcount\refc
 ount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/gettitlestr
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/gettitlestr
 ing\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count277
+\c@section@level=\count279
 )
 \@linkdim=\dimen159
-\Hy@linkcounter=\count278
-\Hy@pagecounter=\count279
+\Hy@linkcounter=\count280
+\Hy@pagecounter=\count281
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\pd1e
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\pd1e
 nc.def
-File: pd1enc.def 2023-07-08 v7.01b Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/intcalc\int
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/intcalc\int
 calc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count280
+\Hy@SavedSpaceFactor=\count282
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\puen
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\puen
 c.def
-File: puenc.def 2023-07-08 v7.01b Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `unicode' set `true' on input line 4050.
-Package hyperref Info: Hyper figures OFF on input line 4167.
-Package hyperref Info: Link nesting OFF on input line 4172.
-Package hyperref Info: Hyper index ON on input line 4175.
-Package hyperref Info: Plain pages OFF on input line 4182.
-Package hyperref Info: Backreferencing OFF on input line 4187.
+Package hyperref Info: Option `unicode' set `true' on input line 4064.
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count281
-LaTeX Info: Redefining \url on input line 4772.
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count283
+LaTeX Info: Redefining \url on input line 4786.
 \XeTeXLinkMargin=\dimen160
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/bitset\bits
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/bitset\bits
 et.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/bigintcalc\
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/bigintcalc\
 bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count282
+\Fld@menulength=\count284
 \Field@Width=\dimen161
 \Fld@charsize=\dimen162
-Package hyperref Info: Hyper figures OFF on input line 6051.
-Package hyperref Info: Link nesting OFF on input line 6056.
-Package hyperref Info: Hyper index ON on input line 6059.
-Package hyperref Info: backreferencing OFF on input line 6066.
-Package hyperref Info: Link coloring OFF on input line 6071.
-Package hyperref Info: Link coloring with OCG OFF on input line 6076.
-Package hyperref Info: PDF/A mode OFF on input line 6081.
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring OFF on input line 6085.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/base\atbegshi
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/base\atbegshi
 -ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count283
-\c@Item=\count284
-\c@Hfootnote=\count285
+\Hy@abspage=\count285
+\c@Item=\count286
+\c@Hfootnote=\count287
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\hpdf
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/hyperref\hpdf
 tex.def
-File: hpdftex.def 2023-07-08 v7.01b Hyperref driver for pdfTeX
+File: hpdftex.def 2023-11-26 v7.01g Hyperref driver for pdfTeX
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/base\atveryen
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/base\atveryen
 d-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count286
-\c@bookmark@seq@number=\count287
+\Fld@listcount=\count288
+\c@bookmark@seq@number=\count289
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/rerunfilechec
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/rerunfilechec
 k\rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/generic/uniquecount
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/generic/uniquecount
 er\uniquecounter.sty
 Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
@@ -435,19 +436,20 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip54
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/bookmark\bkm-
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/bookmark\bkm-
 pdftex.def
-File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count288
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count290
 ))
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/nopageno\nopa
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/nopageno\nopa
 geno.sty
 Package: nopageno 1989/01/01 no page numbers (DPC)
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/l3backend\l3b
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/l3backend\l3b
 ackend-pdftex.def
-File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count289
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count291
 \l__pdf_internal_box=\box54
 ) (build_pdf/Mark_Redd_Resume_Printable.aux)
 \openout1 = `./build_pdf/Mark_Redd_Resume_Printable.aux'.
@@ -511,6 +513,7 @@ Package microtype Info: Applying patch `toc' on input line 55.
 Package microtype Info: Applying patch `eqnum' on input line 55.
 Package microtype Info: Applying patch `footnote' on input line 55.
 Package microtype Info: Applying patch `verbatim' on input line 55.
+LaTeX Info: Redefining \microtypesetup on input line 55.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
@@ -522,24 +525,24 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mt-
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mt-
 cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/context/base/mkii\s
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/context/base/mkii\s
 upp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count290
+\scratchcounter=\count292
 \scratchdimen=\dimen163
 \scratchbox=\box55
-\nofMPsegments=\count291
-\nofMParguments=\count292
+\nofMPsegments=\count293
+\nofMParguments=\count294
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count293
+\MPscratchCnt=\count295
 \MPscratchDim=\dimen164
-\MPnumerator=\count294
-\makeMPintoPDFobject=\count295
+\MPnumerator=\count296
+\makeMPintoPDFobject=\count297
 \everyMPtoPDFconversion=\toks29
 )
 Package hyperref Info: Link coloring OFF on input line 55.
@@ -547,24 +550,24 @@ Package hyperref Info: Link coloring OFF on input line 55.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 5
 .
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\ot1lmr.fd
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 5
 .
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omllmm.fd
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
 5.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omslmsy.fd
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
 5.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omxlmex.fd
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -575,59 +578,59 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 5.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\umsa
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\umsa
 .fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mt-
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mt-
 msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\umsb
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/amsfonts\umsb
 .fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mt-
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/microtype\mt-
 msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-3.
+2.
 
-(C:\Users\reddd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\ts1lmr.fd
+(C:\Users\mredd\scoop\apps\latex\current\texmfs\install\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [1
 
-{C:/Users/reddd/scoop/apps/latex/current/texmfs/data/fonts/map/pdftex/pdftex.ma
-p}{C:/Users/reddd/scoop/apps/latex/current/texmfs/install/fonts/enc/dvips/lm/lm
--ec.enc}{C:/Users/reddd/scoop/apps/latex/current/texmfs/install/fonts/enc/dvips
-/lm/lm-ts1.enc}{C:/Users/reddd/scoop/apps/latex/current/texmfs/install/fonts/en
-c/dvips/lm/lm-mathit.enc}{C:/Users/reddd/scoop/apps/latex/current/texmfs/instal
+{C:/Users/mredd/scoop/apps/latex/current/texmfs/data/fonts/map/pdftex/pdftex.ma
+p}{C:/Users/mredd/scoop/apps/latex/current/texmfs/install/fonts/enc/dvips/lm/lm
+-ec.enc}{C:/Users/mredd/scoop/apps/latex/current/texmfs/install/fonts/enc/dvips
+/lm/lm-ts1.enc}{C:/Users/mredd/scoop/apps/latex/current/texmfs/install/fonts/en
+c/dvips/lm/lm-mathit.enc}{C:/Users/mredd/scoop/apps/latex/current/texmfs/instal
 l/fonts/enc/dvips/lm/lm-rm.enc}] [2]) [3]
 (build_pdf/Mark_Redd_Resume_Printable.aux)
  ***********
-LaTeX2e <2023-06-01> patch level 1
-L3 programming layer <2023-08-29>
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 12963 strings out of 475247
- 205975 string characters out of 5753054
- 1938801 words of memory out of 5000000
- 34209 multiletter control sequences out of 15000+600000
- 596310 words of font info for 97 fonts, out of 8000000 for 9000
+ 12982 strings out of 474486
+ 207809 string characters out of 5739017
+ 1946542 words of memory out of 5000000
+ 34994 multiletter control sequences out of 15000+600000
+ 596097 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,5n,81p,1013b,517s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/reddd/scoop/apps/latex/current/texmfs/install/fonts/type1/public/lm
-/lmbx10.pfb><C:/Users/reddd/scoop/apps/latex/current/texmfs/install/fonts/type1
-/public/lm/lmbx12.pfb><C:/Users/reddd/scoop/apps/latex/current/texmfs/install/f
-onts/type1/public/lm/lmmi10.pfb><C:/Users/reddd/scoop/apps/latex/current/texmfs
-/install/fonts/type1/public/lm/lmr10.pfb><C:/Users/reddd/scoop/apps/latex/curre
-nt/texmfs/install/fonts/type1/public/lm/lmr7.pfb><C:/Users/reddd/scoop/apps/lat
+ 77i,5n,81p,1013b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/mredd/scoop/apps/latex/current/texmfs/install/fonts/type1/public/lm
+/lmbx10.pfb><C:/Users/mredd/scoop/apps/latex/current/texmfs/install/fonts/type1
+/public/lm/lmbx12.pfb><C:/Users/mredd/scoop/apps/latex/current/texmfs/install/f
+onts/type1/public/lm/lmmi10.pfb><C:/Users/mredd/scoop/apps/latex/current/texmfs
+/install/fonts/type1/public/lm/lmr10.pfb><C:/Users/mredd/scoop/apps/latex/curre
+nt/texmfs/install/fonts/type1/public/lm/lmr7.pfb><C:/Users/mredd/scoop/apps/lat
 ex/current/texmfs/install/fonts/type1/public/lm/lmri10.pfb>
-Output written on ./build_pdf/Mark_Redd_Resume_Printable.pdf (3 pages, 158604 b
+Output written on ./build_pdf/Mark_Redd_Resume_Printable.pdf (3 pages, 158452 b
 ytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)

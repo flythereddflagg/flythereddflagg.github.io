@@ -4,6 +4,38 @@ SRC_TEX = ./build_pdf/Mark_Redd_Resume_Printable
 SRC = ./build_pdf/main
 
 
+# ifeq ($(OS),Windows_NT)
+    # CCFLAGS += -D WIN32
+    # ifeq ($(PROCESSOR_ARCHITEW6432),AMD64)
+        # CCFLAGS += -D AMD64
+    # else
+        # ifeq ($(PROCESSOR_ARCHITECTURE),AMD64)
+            # CCFLAGS += -D AMD64
+        # endif
+        # ifeq ($(PROCESSOR_ARCHITECTURE),x86)
+            # CCFLAGS += -D IA32
+        # endif
+    # endif
+# else
+    # UNAME_S := $(shell uname -s)
+    # ifeq ($(UNAME_S),Linux)
+        # CCFLAGS += -D LINUX
+    # endif
+    # ifeq ($(UNAME_S),Darwin)
+        # CCFLAGS += -D OSX
+    # endif
+    # UNAME_P := $(shell uname -p)
+    # ifeq ($(UNAME_P),x86_64)
+        # CCFLAGS += -D AMD64
+    # endif
+    # ifneq ($(filter %86,$(UNAME_P)),)
+        # CCFLAGS += -D IA32
+    # endif
+    # ifneq ($(filter arm%,$(UNAME_P)),)
+        # CCFLAGS += -D ARM
+    # endif
+# endif
+
 RM = rm -f
 MV = mv
 CLEAN_META = clean-meta-unix
@@ -33,7 +65,6 @@ move_pdf_win:
 	$(MV) ./build_pdf/Mark_Redd_Resume_Printable.pdf ../media
 
 move_pdf_unix:
-	rm ../media/Mark_Redd_Resume_Printable.pdf 
 	mv ./build_pdf/Mark_Redd_Resume_Printable.pdf ../media
 
 move_pdf: $(MOVE_PDF)
