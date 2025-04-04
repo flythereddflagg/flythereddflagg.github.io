@@ -1,5 +1,7 @@
 # Thank You for agreeing to play test Red Castle Avenger!
 
+Latest release: v0.2.1 (Released Thu Apr 3, 2025 at 9:00 pm)
+
 ### Dear Player,
 
 I have put together this feedback system to help **Red Castle Avenger** (RCA) be the best I can make it. You are a critical part of that process. If you thought this was the best game you have ever played (unlikely...) I want to hear about it. If you thought this was hot steaming garbage, I ALSO want to hear about it!
@@ -42,10 +44,10 @@ The inventory keys control your inventory, use them with your "Use Item" keys to
 - Move down: ↓
 - Move Left: ←
 - Move Right: →
-- Use Item in Left hand: N
-- Use Item in Right hand: M
-- Inventory cursor up: I
-- Inventory cursor down: K
-- Inventory cursor left: J
-- Inventory cursor right: L
+- Use Item in Left hand: C
+- Use Item in Right hand: V
+- Inventory cursor up: W
+- Inventory cursor down: S
+- Inventory cursor left: A
+- Inventory cursor right: D
 
