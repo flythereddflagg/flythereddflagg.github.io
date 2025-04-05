@@ -1,4 +1,4 @@
-# Thank You for agreeing to play test Red Castle Avenger!
+# Thank You your interest in play testing Red Castle Avenger!
 
 Latest release: v0.2.1 (Released Thu Apr 3, 2025 at 9:00 pm)
 
