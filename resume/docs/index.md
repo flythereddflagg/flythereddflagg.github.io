@@ -97,7 +97,7 @@
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-7269-2155" href="https://orcid.org/0000-0001-7269-2155" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-7269-2155</a></div>
 
--  Cassandra J. Guffey, Mark E. Redd, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding, *Radical Isomerization and Volatility Considerations for Improved Autoignition Temperature Prediction* (under review)
+- Cassandra J. Guffey, Mark E. Redd, Neil F. Giles, Thomas A. Knotts, W. Vincent Wilding, *Radical isomerization and volatility considerations for improved autoignition temperature prediction*, Fuel **2025** 393,135016. [DOI: 10.1016/j.fuel.2025.135016](https://doi.org/10.1016/j.fuel.2025.135016)
 
 - Mark E. Redd, Cassandra J. Guffey, Ethan L. Gustafson, Elizabeth H. Hart, Keturah S. McQuade, Neil F. Giles, Thomas A. Knotts IV, W. Vincent Wilding,
   *Autoignition temperature trends for various chemical families*, Fuel **2024** 355, 129321. [DOI: 10.1016/j.fuel.2023.129321](https://doi.org/10.1016/j.fuel.2023.129321)

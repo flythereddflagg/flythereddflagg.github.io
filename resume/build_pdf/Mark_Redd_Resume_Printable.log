@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1 Portable) (preloaded format=pdflatex 2025.1.27)  27 JAN 2025 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1 Portable) (preloaded format=pdflatex 2025.1.27)  7 MAY 2025 08:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -624,7 +624,7 @@ Here is how much of TeX's memory you used:
  34994 multiletter control sequences out of 15000+600000
  596097 words of font info for 95 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 77i,5n,81p,1013b,522s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 77i,5n,81p,1013b,524s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/mredd/scoop/apps/latex/current/texmfs/install/fonts/type1/public/lm
 /lmbx10.pfb><C:/Users/mredd/scoop/apps/latex/current/texmfs/install/fonts/type1
 /public/lm/lmbx12.pfb><C:/Users/mredd/scoop/apps/latex/current/texmfs/install/f
@@ -632,7 +632,7 @@ onts/type1/public/lm/lmmi10.pfb><C:/Users/mredd/scoop/apps/latex/current/texmfs
 /install/fonts/type1/public/lm/lmr10.pfb><C:/Users/mredd/scoop/apps/latex/curre
 nt/texmfs/install/fonts/type1/public/lm/lmr7.pfb><C:/Users/mredd/scoop/apps/lat
 ex/current/texmfs/install/fonts/type1/public/lm/lmri10.pfb>
-Output written on ./build_pdf/Mark_Redd_Resume_Printable.pdf (3 pages, 158452 b
+Output written on ./build_pdf/Mark_Redd_Resume_Printable.pdf (3 pages, 158638 b
 ytes).
 PDF statistics:
  126 PDF objects out of 1000 (max. 8388607)
