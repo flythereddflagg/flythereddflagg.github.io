@@ -1,6 +1,6 @@
 [**Printable CV**](/media/Mark_Redd_Resume_Printable.pdf)
 
-![Profile Pic](assets/profile_pic.png)
+<img src="assets/professional_profile_pic_edit.png" alt="Profile Pic" style="zoom:30%;" />
 
 # Mark Edward Redd
 
