@@ -22,7 +22,7 @@ You may play multiple times and submit multiple feedback forms if you want. As t
 
 Thanks again and I hope you enjoy!
 
-**Sincerely,<br>Mark **<br>![FlyTheReddFlagg Games Icon](assets/flythereddflagggames_icon.png)<br>**FlyTheReddFlagg Games**
+**Sincerely,<br>Mark **<br><img src="assets/flythereddflagggames_icon.png" alt="FlyTheReddFlagg Games Icon" style="zoom:150%;" /><br>**FlyTheReddFlagg Games**
 
 ## Running the game
 
